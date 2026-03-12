@@ -1,1 +1,24 @@
-site_name: My Docs
+site_name: Character Reference Library
+site_description: AI character pipeline, prompts, references, and metadata
+
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+
+  - Pipeline:
+      - Overview: pipeline/overview.md
+      - Stages: pipeline/stages.md
+
+  - Library:
+      - Folder Structure: library/folder-structure.md
+      - Naming Conventions: library/naming-conventions.md
+
+  - Characters:
+      - Overview: characters/overview.md
+      - Templates: characters/templates.md
+
+  - Prompts:
+      - Overview: prompts/overview.md
+      - Master Blocks: prompts/master-blocks.md

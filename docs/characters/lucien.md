@@ -6,6 +6,18 @@ Lucien is a slender man of average height with refined facial features, an elega
 
 ---
 
+## Quick Reference
+
+| Task     | Best References          |
+| -------- | ------------------------ |
+| Portrait | Face Anchor Sheet        |
+| Anatomy  | Anatomy Sheet            |
+| Outfit   | Signature Outfit Sheet   |
+| Pose     | Pose Sheet               |
+| Scene    | Ultimate Character Sheet |
+
+---
+
 ## Prompt Priority Fields
 
 Height: 170 cm (5'7")  
@@ -13,6 +25,111 @@ Build: lean, elegant
 Aesthetic keywords: occult, gothic, scholarly
 
 These are the three most important traits to preserve in prompts.
+
+---
+
+## Prompt Workflows
+
+These sections list the **best references to attach for common generation tasks**.
+
+---
+
+### Portrait / Face Prompts
+
+Attach:
+
+1. Face Anchor Sheet
+2. 3/4 Face Reference
+3. Front Face Reference
+
+Optional:
+
+- Expression Sheet
+
+Recommended prompt blocks:
+
+- Identity Block (Short)
+- Face Block
+- Expression Block
+
+---
+
+### Anatomy / Physique Prompts
+
+Attach:
+
+1. Anatomy Sheet
+2. Body Proportion Grid
+3. Face Anchor Sheet
+
+Optional:
+
+- Muscle Tension Sheet
+
+Recommended prompt blocks:
+
+- Identity Block (Extended)
+- Body Block
+- Movement Block
+
+---
+
+### Outfit / Style Prompts
+
+Attach:
+
+1. Ultimate Character Sheet
+2. Signature Outfit Sheet
+3. Body Anchor Sheet
+
+Optional:
+
+- Design Language Sheet
+
+Recommended prompt blocks:
+
+- Identity Block (Extended)
+- Style Block
+- Wardrobe Block
+
+---
+
+### Pose / Motion Prompts
+
+Attach:
+
+1. Ultimate Character Sheet
+2. Signature Outfit Sheet
+3. Pose Sheet
+
+Optional:
+
+- Motion Sheet
+
+Recommended prompt blocks:
+
+- Body Block
+- Movement Block
+
+---
+
+### Scene Prompts
+
+Attach:
+
+1. Ultimate Character Sheet
+2. Signature Outfit Sheet
+3. Scene references
+
+Optional:
+
+- Expression Sheet
+
+Recommended prompt blocks:
+
+- Identity Block (Short)
+- Style Block
+- Expression Block
 
 ---
 

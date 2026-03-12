@@ -5,6 +5,12 @@ The `library/` directory contains all generated assets, references, and prompt t
 Documentation explaining how to use these assets lives in `docs/`.  
 The `library/` folder itself stores the **actual files used for generation**.
 
+Preview images for the MkDocs site are stored in:
+
+docs/assets/library/
+
+These are selected copies of reference sheets from the main library.
+
 ---
 
 # Top-Level Library Structure

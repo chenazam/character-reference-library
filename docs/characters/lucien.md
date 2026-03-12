@@ -151,6 +151,10 @@ Suggested prompt attachment priority:
 4. Signature Outfit Sheet
 5. task-specific sheet
 
+### Face Anchor Sheet
+
+![Lucien Face Anchor](../assets/library/10_CHARACTERS/LUCIEN/lucien_face_anchor_v1.png)
+
 ---
 
 ## Core Profile Files

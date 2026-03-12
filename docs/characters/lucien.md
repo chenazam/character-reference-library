@@ -1,149 +1,26 @@
 # Lucien
 
+<div style="display:grid; grid-template-columns: minmax(280px, 420px) 1fr; gap:1.5rem; align-items:start;">
+
+  <div>
+    <img src="../assets/library/10_CHARACTERS/LUCIEN/lucien_ucs.png" alt="Lucien Ultimate Character Sheet" style="width:100%; border-radius:12px; border:1px solid #ddd;" />
+  </div>
+
+  <div>
+
 ## Quick Identity Summary
 
 Lucien is a slender man of average height with refined facial features, an elegant build, and a calm, slightly mysterious presence. His aesthetic is occult, scholarly, and subtly gothic, expressed through dark layered clothing, antique jewelry, and ritual-inspired accessories.
 
----
-
-## Quick Reference
-
-| Task     | Best References          |
-| -------- | ------------------------ |
-| Portrait | Face Anchor Sheet        |
-| Anatomy  | Anatomy Sheet            |
-| Outfit   | Signature Outfit Sheet   |
-| Pose     | Pose Sheet               |
-| Scene    | Ultimate Character Sheet |
-
----
-
 ## Prompt Priority Fields
 
-Height: 170 cm (5'7")  
-Build: slender, elegant  
-Aesthetic keywords: occult, gothic, scholarly
+**Height:** 170 cm (5'7")  
+ **Build:** lean, elegant  
+ **Aesthetic:** occult, gothic, scholarly
 
 These are the three most important traits to preserve in prompts.
 
----
-
-## Prompt Workflows
-
-These sections list the **best references to attach for common generation tasks**.
-
----
-
-### Portrait / Face Prompts
-
-Attach:
-
-1. Face Anchor Sheet
-2. 3/4 Face Reference
-3. Front Face Reference
-
-Optional:
-
-- Expression Sheet
-
-Recommended prompt blocks:
-
-- Identity Block (Short)
-- Face Block
-- Expression Block
-
----
-
-### Anatomy / Physique Prompts
-
-Attach:
-
-1. Anatomy Sheet
-2. Body Proportion Grid
-3. Face Anchor Sheet
-
-Optional:
-
-- Muscle Tension Sheet
-
-Recommended prompt blocks:
-
-- Identity Block (Extended)
-- Body Block
-- Movement Block
-
----
-
-### Outfit / Style Prompts
-
-Attach:
-
-1. Ultimate Character Sheet
-2. Signature Outfit Sheet
-3. Body Anchor Sheet
-
-Optional:
-
-- Design Language Sheet
-
-Recommended prompt blocks:
-
-- Identity Block (Extended)
-- Style Block
-- Wardrobe Block
-
----
-
-### Pose / Motion Prompts
-
-Attach:
-
-1. Ultimate Character Sheet
-2. Signature Outfit Sheet
-3. Pose Sheet
-
-Optional:
-
-- Motion Sheet
-
-Recommended prompt blocks:
-
-- Body Block
-- Movement Block
-
----
-
-### Scene Prompts
-
-Attach:
-
-1. Ultimate Character Sheet
-2. Signature Outfit Sheet
-3. Scene references
-
-Optional:
-
-- Expression Sheet
-
-Recommended prompt blocks:
-
-- Identity Block (Short)
-- Style Block
-- Expression Block
-
----
-
-## Identity Pack
-
-These are the most important reference sheets for Lucien and should be attached whenever possible:
-
-- Face Anchor Sheet
-- Anatomy Sheet
-- Body Anchor Sheet
-- Ultimate Character Sheet
-- Signature Outfit Sheet
-
-Suggested prompt attachment priority:
+## Best Starting References
 
 1. Face Anchor Sheet
 2. Anatomy Sheet
@@ -151,15 +28,152 @@ Suggested prompt attachment priority:
 4. Signature Outfit Sheet
 5. task-specific sheet
 
-### Face Anchor Sheet
+  </div>
 
-![Lucien Face Anchor](../assets/library/10_CHARACTERS/LUCIEN/lucien_face_anchor_v1.png)
+</div>
+
+---
+
+## Prompt Workflows
+
+<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:1rem;">
+
+  <div style="border:1px solid #ddd; border-radius:12px; padding:1rem;">
+    <h3 style="margin-top:0;">Portrait / Face Prompts</h3>
+    <p><strong>Attach:</strong></p>
+    <ul>
+      <li>Face Anchor Sheet</li>
+      <li>3/4 Face Reference</li>
+      <li>Front Face Reference</li>
+    </ul>
+    <p><strong>Optional:</strong></p>
+    <ul>
+      <li>Expression Sheet</li>
+    </ul>
+    <p><strong>Prompt blocks:</strong></p>
+    <ul>
+      <li>Identity Block (Short)</li>
+      <li>Face Block</li>
+      <li>Expression Block</li>
+    </ul>
+  </div>
+
+  <div style="border:1px solid #ddd; border-radius:12px; padding:1rem;">
+    <h3 style="margin-top:0;">Anatomy / Physique Prompts</h3>
+    <p><strong>Attach:</strong></p>
+    <ul>
+      <li>Anatomy Sheet</li>
+      <li>Body Proportion Grid</li>
+      <li>Face Anchor Sheet</li>
+    </ul>
+    <p><strong>Optional:</strong></p>
+    <ul>
+      <li>Muscle Tension Sheet</li>
+    </ul>
+    <p><strong>Prompt blocks:</strong></p>
+    <ul>
+      <li>Identity Block (Extended)</li>
+      <li>Body Block</li>
+      <li>Movement Block</li>
+    </ul>
+  </div>
+
+  <div style="border:1px solid #ddd; border-radius:12px; padding:1rem;">
+    <h3 style="margin-top:0;">Outfit / Style Prompts</h3>
+    <p><strong>Attach:</strong></p>
+    <ul>
+      <li>Ultimate Character Sheet</li>
+      <li>Signature Outfit Sheet</li>
+      <li>Body Anchor Sheet</li>
+    </ul>
+    <p><strong>Optional:</strong></p>
+    <ul>
+      <li>Design Language Sheet</li>
+    </ul>
+    <p><strong>Prompt blocks:</strong></p>
+    <ul>
+      <li>Identity Block (Extended)</li>
+      <li>Style Block</li>
+      <li>Wardrobe Block</li>
+    </ul>
+  </div>
+
+  <div style="border:1px solid #ddd; border-radius:12px; padding:1rem;">
+    <h3 style="margin-top:0;">Pose / Motion Prompts</h3>
+    <p><strong>Attach:</strong></p>
+    <ul>
+      <li>Ultimate Character Sheet</li>
+      <li>Signature Outfit Sheet</li>
+      <li>Pose Sheet</li>
+    </ul>
+    <p><strong>Optional:</strong></p>
+    <ul>
+      <li>Motion Sheet</li>
+    </ul>
+    <p><strong>Prompt blocks:</strong></p>
+    <ul>
+      <li>Body Block</li>
+      <li>Movement Block</li>
+    </ul>
+  </div>
+
+  <div style="border:1px solid #ddd; border-radius:12px; padding:1rem;">
+    <h3 style="margin-top:0;">Scene Prompts</h3>
+    <p><strong>Attach:</strong></p>
+    <ul>
+      <li>Ultimate Character Sheet</li>
+      <li>Signature Outfit Sheet</li>
+      <li>scene-specific references</li>
+    </ul>
+    <p><strong>Optional:</strong></p>
+    <ul>
+      <li>Expression Sheet</li>
+    </ul>
+    <p><strong>Prompt blocks:</strong></p>
+    <ul>
+      <li>Identity Block (Short)</li>
+      <li>Style Block</li>
+      <li>Expression Block</li>
+    </ul>
+  </div>
+
+</div>
+
+---
+
+## Identity Pack
+
+These are Lucien’s most important reference sheets and should be attached whenever possible.
+
+<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1rem;">
+
+  <div style="border:1px solid #ddd; border-radius:12px; padding:0.75rem;">
+    <img src="../assets/library/10_CHARACTERS/LUCIEN/lucien_face_anchor.png" alt="Lucien Face Anchor" style="width:100%; border-radius:8px; margin-bottom:0.75rem;" />
+    <strong>Face Anchor Sheet</strong>
+  </div>
+
+  <div style="border:1px solid #ddd; border-radius:12px; padding:0.75rem;">
+    <img src="../assets/library/10_CHARACTERS/LUCIEN/lucien_anatomy_sheet.png" alt="Lucien Anatomy Sheet" style="width:100%; border-radius:8px; margin-bottom:0.75rem;" />
+    <strong>Anatomy Sheet</strong>
+  </div>
+
+  <div style="border:1px solid #ddd; border-radius:12px; padding:0.75rem;">
+    <img src="../assets/library/10_CHARACTERS/LUCIEN/lucien_ucs.png" alt="Lucien UCS" style="width:100%; border-radius:8px; margin-bottom:0.75rem;" />
+    <strong>Ultimate Character Sheet</strong>
+  </div>
+
+  <div style="border:1px solid #ddd; border-radius:12px; padding:0.75rem;">
+    <img src="../assets/library/10_CHARACTERS/LUCIEN/lucien_signature_outfit.png" alt="Lucien Signature Outfit" style="width:100%; border-radius:8px; margin-bottom:0.75rem;" />
+    <strong>Signature Outfit Sheet</strong>
+  </div>
+
+</div>
 
 ---
 
 ## Core Profile Files
 
-These files define Lucien conceptually:
+These files define Lucien conceptually.
 
 - `library/10_CHARACTERS/LUCIEN/00_PROFILE/metadata.yaml`
 - `library/10_CHARACTERS/LUCIEN/00_PROFILE/character_summary.md`
@@ -168,119 +182,8 @@ These files define Lucien conceptually:
 Recommended use:
 
 - `metadata.yaml` → structured reference data
-- `character_summary.md` → quick human-readable overview
-- `prompt_blocks.md` → reusable prompt text fragments
-
----
-
-## Core Reference Sheets
-
-### Face Identity
-
-Folder:
-`library/10_CHARACTERS/LUCIEN/01_FACE/`
-
-Key files:
-
-- face front
-- face 3/4
-- face profile
-- face anchor sheet
-
----
-
-### Hair Identity
-
-Folder:
-`library/10_CHARACTERS/LUCIEN/02_HAIR/`
-
-Key files:
-
-- hair reference sheet
-
----
-
-### Physique
-
-Folder:
-`library/10_CHARACTERS/LUCIEN/03_ANATOMY/`
-
-Key files:
-
-- anatomy front
-- anatomy side
-- anatomy back
-- anatomy sheet
-
-Additional structure anchors:
-
-- `04_PROPORTIONS/` → body proportion grid
-- `05_MUSCLE/` → muscle tension sheet
-- `06_BODY/` → body anchor sheet
-- `07_SILHOUETTE/` → silhouette sheet
-- `08_TURNAROUND/` → turnaround sheet
-
----
-
-### Expression and Gesture
-
-Folders:
-
-- `09_EXPRESSIONS/`
-- `10_HANDS/`
-
-Key files:
-
-- expression sheet
-- hand reference sheet
-
----
-
-### Master Identity
-
-Folder:
-`11_UCS/`
-
-Key files:
-
-- UCS panels
-- assembled Ultimate Character Sheet
-
----
-
-### Style
-
-Folders:
-
-- `12_SIGNATURE_OUTFIT/`
-- `13_DESIGN_LANGUAGE/`
-- `14_WARDROBE/`
-
-Key files:
-
-- signature outfit sheet
-- design language sheet
-- wardrobe sheets
-
----
-
-### Motion and Scene Use
-
-Folders:
-
-- `15_POSES/`
-- `16_MOTION/`
-- `17_SCALE/`
-- `18_SCENES/`
-- `19_PROPS/`
-
-Key files:
-
-- pose sheet
-- motion anchor sheet
-- height / scale references
-- scene anchors
-- prop interaction references
+- `character_summary.md` → quick identity overview
+- `prompt_blocks.md` → reusable character-specific prompt text
 
 ---
 
@@ -305,45 +208,48 @@ Typical style elements:
 
 Avoid:
 
-- generic modern casual styling
-- bright sporty aesthetics
-- bulky or athletic-heavy styling
-- overly theatrical “costume” treatment
+- generic sporty styling
+- bright casual fashion
+- bulky silhouettes
+- exaggerated costume treatment
 
 ---
 
-## Prompting Notes
+## Reference Sheet Categories
 
-For anatomy or body prompts, prioritize:
+### Core identity
 
-- Anatomy Sheet
-- Body Proportion Grid
-- Face Anchor Sheet
+- `01_FACE/`
+- `02_HAIR/`
+- `03_ANATOMY/`
+- `06_BODY/`
+- `07_SILHOUETTE/`
+- `08_TURNAROUND/`
+- `11_UCS/`
 
-For outfit or style prompts, prioritize:
+### Style
 
-- Ultimate Character Sheet
-- Signature Outfit Sheet
-- Design Language Sheet
+- `12_SIGNATURE_OUTFIT/`
+- `13_DESIGN_LANGUAGE/`
+- `14_WARDROBE/`
 
-For scene prompts, prioritize:
+### Motion and scenes
 
-- Ultimate Character Sheet
-- Signature Outfit Sheet
-- scene-specific references
+- `15_POSES/`
+- `16_MOTION/`
+- `17_SCALE/`
+- `18_SCENES/`
+- `19_PROPS/`
 
 ---
 
-## Library Path
+## Library Paths
 
-Main folder:
-
+**Main folder:**  
 `library/10_CHARACTERS/LUCIEN/`
 
-Profile folder:
-
+**Profile folder:**  
 `library/10_CHARACTERS/LUCIEN/00_PROFILE/`
 
-Identity pack folder:
-
+**Identity pack folder:**  
 `library/10_CHARACTERS/LUCIEN/IDENTITY_PACK/`

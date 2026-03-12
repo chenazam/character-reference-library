@@ -8,11 +8,12 @@ project: Lucien and the Eternal Blade
 height_cm: 170
 height_imperial: '5''7"'
 
-build_category: slender
+build_category: soft_slender
 build_tags:
   - slender
   - soft_build
   - narrow_frame
+build_notes: slender physique with soft musculature and refined proportions
 
 age_appearance: '24–26'
 

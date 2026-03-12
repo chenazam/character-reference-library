@@ -57,7 +57,7 @@ Use for:
 
 ## Body Block
 
-## Body Block
+Build category: soft_slender
 
 Lucien has a slender, lightly built physique with refined proportions.  
 His shoulders are narrow to moderate, his torso slim but not athletic, and his overall silhouette reads as graceful and understated rather than muscular or lean.

@@ -9,6 +9,7 @@ The `library/` folder itself stores the **actual files used for generation**.
 
 # Top-Level Library Structure
 
+```
 library/
 
 10_CHARACTERS
@@ -17,6 +18,7 @@ library/
 40_ENVIRONMENTS
 50_PROMPT_TEMPLATES
 60_INSPIRATION
+```
 
 ## 10_CHARACTERS
 

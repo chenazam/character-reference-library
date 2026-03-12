@@ -13,30 +13,9 @@ theme:
 nav:
   - Home: index.md
 
-  - Prompt System:
-      - Overview: prompts/overview.md
-      - Master Blocks: prompts/master-blocks.md
-      - Prompt Recipes: prompts/prompt-recipes.md
-      - Reference Attachments: prompts/reference-attachments.md
-
-  - Pipeline Prompts:
-      - Face Identity: prompts/pipeline/01-face-prompts.md
-      - Hair Identity: prompts/pipeline/02-hair-prompts.md
-      - Anatomy: prompts/pipeline/03-anatomy-prompts.md
-      - Proportions: prompts/pipeline/04-proportion-prompts.md
-      - Body Anchors: prompts/pipeline/05-body-prompts.md
-      - Silhouette: prompts/pipeline/06-silhouette-prompts.md
-      - Turnaround: prompts/pipeline/07-turnaround-prompts.md
-      - Expressions: prompts/pipeline/08-expression-prompts.md
-      - Hands: prompts/pipeline/09-hand-prompts.md
-      - Ultimate Character Sheet: prompts/pipeline/10-ucs-prompts.md
-      - Style Anchoring: prompts/pipeline/11-style-prompts.md
-      - Wardrobe: prompts/pipeline/12-wardrobe-prompts.md
-      - Pose Sheets: prompts/pipeline/13-pose-prompts.md
-      - Motion: prompts/pipeline/14-motion-prompts.md
-      - Scale: prompts/pipeline/15-scale-prompts.md
-      - Interaction: prompts/pipeline/16-interaction-prompts.md
-      - Scenes: prompts/pipeline/17-scene-prompts.md
+  - Pipeline:
+      - Overview: pipeline/overview.md
+      - Stages: pipeline/stages.md
 
   - Library:
       - Folder Structure: library/folder-structure.md
@@ -45,3 +24,9 @@ nav:
   - Characters:
       - Overview: characters/overview.md
       - Templates: characters/templates.md
+
+  - Prompts:
+      - Overview: prompts/overview.md
+      - Master Blocks: prompts/master-blocks.md
+      - Prompt Recipes: prompts/prompt-recipes.md
+      - Reference Attachments: prompts/reference-attachments.md

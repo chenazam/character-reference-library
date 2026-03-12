@@ -1,0 +1,994 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="AI character pipeline, prompts, references, and metadata">
+      
+      
+      
+        <link rel="canonical" href="https://charreflib.chenazam.com/library/folder-structure/">
+      
+      
+        <link rel="prev" href="../../pipeline/stages/">
+      
+      
+        <link rel="next" href="../naming-conventions/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.12">
+    
+    
+      
+        <title>Folder Structure - Character Reference Library</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#library-folder-structure" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Character Reference Library" class="md-header__button md-logo" aria-label="Character Reference Library" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Character Reference Library
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Folder Structure
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Character Reference Library" class="md-nav__button md-logo" aria-label="Character Reference Library" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Character Reference Library
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Pipeline
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Pipeline
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipeline/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipeline/stages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Stages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Library
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Library
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Folder Structure
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../naming-conventions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Naming Conventions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Characters
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Characters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../characters/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../characters/templates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Prompts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Prompts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/master-blocks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Master Blocks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/prompt-recipes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt Recipes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/reference-attachments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reference Attachments
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="library-folder-structure">Library Folder Structure</h1>
+<p>The <code>library/</code> directory contains all generated assets, references, and prompt templates used in the character pipeline.</p>
+<p>Documentation explaining how to use these assets lives in <code>docs/</code>.<br />
+The <code>library/</code> folder itself stores the <strong>actual files used for generation</strong>.</p>
+<hr />
+<h1 id="top-level-library-structure">Top-Level Library Structure</h1>
+<pre><code>library/
+
+10_CHARACTERS
+20_CHARACTER_PAIRS
+30_CHARACTER_GROUPS
+40_ENVIRONMENTS
+50_PROMPT_TEMPLATES
+60_INSPIRATION
+</code></pre>
+<h2 id="10_characters">10_CHARACTERS</h2>
+<p>Contains the full reference pipeline for each individual character.</p>
+<p>Each character receives its own folder with all reference sheets generated through the pipeline.</p>
+<p>Example:</p>
+<pre><code>10_CHARACTERS/
+LUCIEN/
+RAGNAR/
+JONAH/
+</code></pre>
+<p>Each character folder contains anatomy references, style sheets, pose sheets, and other generated resources.</p>
+<hr />
+<h2 id="20_character_pairs">20_CHARACTER_PAIRS</h2>
+<p>Contains resources for <strong>two-character relationships</strong>.</p>
+<p>This includes reference sheets used when two characters frequently appear together.</p>
+<p>Typical contents:</p>
+<ul>
+<li>height comparison sheets</li>
+<li>interaction anchors</li>
+<li>couple pose sheets</li>
+<li>scene anchors involving both characters</li>
+</ul>
+<p>Example:</p>
+<pre><code>20_CHARACTER_PAIRS/
+LUCIEN__RAGNAR/
+JASPER__BLAKE/
+</code></pre>
+<hr />
+<h2 id="30_character_groups">30_CHARACTER_GROUPS</h2>
+<p>Contains resources for <strong>groups of three or more characters</strong>.</p>
+<p>Useful for teams, families, ensembles, or story casts.</p>
+<p>Typical contents:</p>
+<ul>
+<li>group lineup sheets</li>
+<li>group pose sheets</li>
+<li>interaction scenes</li>
+<li>group scene anchors</li>
+</ul>
+<p>Example:</p>
+<pre><code>30_CHARACTER_GROUPS/
+WITCH_COVEN/
+GYM_CREW/
+</code></pre>
+<hr />
+<h2 id="40_environments">40_ENVIRONMENTS</h2>
+<p>Contains reference sheets for <strong>locations and environments</strong> where characters appear.</p>
+<p>These act as scene anchors to keep locations visually consistent.</p>
+<p>Typical environment sheets include:</p>
+<ul>
+<li>room layouts</li>
+<li>lighting references</li>
+<li>architectural details</li>
+<li>environmental mood references</li>
+</ul>
+<p>Example environments:</p>
+<pre><code>40_ENVIRONMENTS/
+
+LUCIEN_APARTMENT/
+RITUAL_CHAMBER/
+GYM_INTERIOR/
+CITY_STREET/
+</code></pre>
+<p>Environment anchors are often attached to prompts when generating <strong>scene images</strong>.</p>
+<hr />
+<h2 id="50_prompt_templates">50_PROMPT_TEMPLATES</h2>
+<p>Contains reusable prompt templates used throughout the pipeline.</p>
+<p>Templates are organized by generation stage.</p>
+<p>Example:</p>
+<pre><code>50_PROMPT_TEMPLATES/
+
+FACE/
+ANATOMY/
+BODY/
+UCS/
+WARDROBE/
+POSE/
+SCENE/
+</code></pre>
+<p>Each template should include placeholders such as:</p>
+<pre><code>[CHARACTER BLOCK]
+[GLOBAL STYLE BLOCK]
+</code></pre>
+<p>These allow prompts to be reused across multiple characters.</p>
+<hr />
+<h2 id="60_inspiration">60_INSPIRATION</h2>
+<p>Contains reference images used as <strong>design inspiration</strong>.</p>
+<p>These are not generated assets, but visual references that influence character design.</p>
+<p>Examples:</p>
+<ul>
+<li>fashion references</li>
+<li>architecture references</li>
+<li>lighting references</li>
+<li>pose inspiration</li>
+<li>color palette inspiration</li>
+</ul>
+<p>Example structure:</p>
+<pre><code>60_INSPIRATION/
+
+FASHION/
+LIGHTING/
+POSES/
+COLOR_PALETTES/
+ARCHITECTURE/
+</code></pre>
+<p>These images are sometimes attached to prompts to guide visual style.</p>
+<hr />
+<h1 id="character-folder-structure">Character Folder Structure</h1>
+<p>Each character folder contains the complete reference pipeline for that character.</p>
+<p>Example:</p>
+<pre><code>10_CHARACTERS/
+└── LUCIEN/
+</code></pre>
+<p>Inside each character folder:</p>
+<pre><code>00_PROFILE
+01_FACE
+02_HAIR
+03_ANATOMY
+04_PROPORTIONS
+05_MUSCLE
+06_BODY
+07_SILHOUETTE
+08_TURNAROUND
+09_EXPRESSIONS
+10_HANDS
+11_UCS
+12_SIGNATURE_OUTFIT
+13_DESIGN_LANGUAGE
+14_WARDROBE
+15_POSES
+16_MOTION
+17_SCALE
+18_SCENES
+19_PROPS
+
+IDENTITY_PACK
+SOURCE_REFERENCES
+</code></pre>
+<hr />
+<h1 id="character-folder-explanations">Character Folder Explanations</h1>
+<h2 id="00_profile">00_PROFILE</h2>
+<p>Contains descriptive information about the character.</p>
+<p>Typical files:</p>
+<pre><code>metadata.yaml
+character_summary.md
+prompt_blocks.md
+prompt_recipes.md
+</code></pre>
+<p>These files define the character concept and reusable prompt components.</p>
+<hr />
+<h2 id="01_face">01_FACE</h2>
+<p>Contains all face identity references.</p>
+<p>Examples:</p>
+<pre><code>face_front.png
+face_34.png
+face_profile.png
+face_anchor_sheet.png
+</code></pre>
+<p>These images establish the character’s facial identity.</p>
+<hr />
+<h2 id="02_hair">02_HAIR</h2>
+<p>Hair structure references.</p>
+<p>Examples:</p>
+<pre><code>hair_reference_sheet.png
+</code></pre>
+<p>Used to prevent hairstyle drift.</p>
+<hr />
+<h2 id="03_anatomy">03_ANATOMY</h2>
+<p>Bare-torso anatomy references used to define physique and proportions.</p>
+<p>Examples:</p>
+<pre><code>anatomy_front.png
+anatomy_side.png
+anatomy_back.png
+anatomy_sheet.png
+</code></pre>
+<hr />
+<h2 id="04_proportions">04_PROPORTIONS</h2>
+<p>Contains body proportion grid sheets.</p>
+<p>Used to anchor limb lengths and body ratios.</p>
+<hr />
+<h2 id="05_muscle">05_MUSCLE</h2>
+<p>Contains muscle tension references.</p>
+<p>Shows how musculature appears when relaxed vs engaged.</p>
+<hr />
+<h2 id="06_body">06_BODY</h2>
+<p>Contains the <strong>body anchor sheet</strong>, which introduces neutral clothing.</p>
+<p>This becomes the main body reference used for most later prompts.</p>
+<hr />
+<h2 id="07_silhouette">07_SILHOUETTE</h2>
+<p>Contains silhouette references used to stabilize character shape.</p>
+<hr />
+<h2 id="08_turnaround">08_TURNAROUND</h2>
+<p>Contains the multi-angle turnaround sheet used to define how the character looks from different angles.</p>
+<hr />
+<h2 id="09_expressions">09_EXPRESSIONS</h2>
+<p>Contains the character’s expression sheet.</p>
+<p>Defines emotional range while preserving facial structure.</p>
+<hr />
+<h2 id="10_hands">10_HANDS</h2>
+<p>Contains hand reference sheets used to stabilize finger proportions and gestures.</p>
+<hr />
+<h2 id="11_ucs">11_UCS</h2>
+<p>Contains the Ultimate Character Sheet and its individual panels.</p>
+<p>This is the master identity reference for the character.</p>
+<hr />
+<h2 id="12_signature_outfit">12_SIGNATURE_OUTFIT</h2>
+<p>Contains the character’s canonical outfit reference.</p>
+<p>This sheet defines the character’s primary visual style.</p>
+<hr />
+<h2 id="13_design_language">13_DESIGN_LANGUAGE</h2>
+<p>Contains sheets that define materials, accessories, color palette, and stylistic motifs.</p>
+<p>These help maintain consistent aesthetic across outfits and scenes.</p>
+<hr />
+<h2 id="14_wardrobe">14_WARDROBE</h2>
+<p>Contains additional outfit sheets for the character.</p>
+<p>Examples:</p>
+<ul>
+<li>casual outfit</li>
+<li>work outfit</li>
+<li>formal outfit</li>
+<li>relaxed home outfit</li>
+</ul>
+<hr />
+<h2 id="15_poses">15_POSES</h2>
+<p>Contains pose sheets used to demonstrate body language and movement.</p>
+<hr />
+<h2 id="16_motion">16_MOTION</h2>
+<p>Contains motion anchor sheets.</p>
+<p>These stabilize movement such as walking, running, turning, and reaching.</p>
+<hr />
+<h2 id="17_scale">17_SCALE</h2>
+<p>Contains height comparison sheets and scale references.</p>
+<p>Used when characters appear together.</p>
+<hr />
+<h2 id="18_scenes">18_SCENES</h2>
+<p>Contains scene anchors involving the character.</p>
+<p>Examples:</p>
+<ul>
+<li>domestic scene</li>
+<li>workplace scene</li>
+<li>social interaction</li>
+<li>action scene</li>
+</ul>
+<hr />
+<h2 id="19_props">19_PROPS</h2>
+<p>Contains prop interaction references.</p>
+<p>Examples include the character handling:</p>
+<ul>
+<li>phones</li>
+<li>books</li>
+<li>weapons</li>
+<li>tools</li>
+<li>bags</li>
+</ul>
+<hr />
+<h2 id="identity_pack">IDENTITY_PACK</h2>
+<p>Contains the small set of core identity references most commonly attached to prompts.</p>
+<p>Typical contents:</p>
+<pre><code>face_anchor_sheet.png
+anatomy_sheet.png
+body_anchor_sheet.png
+ultimate_character_sheet.png
+signature_outfit_sheet.png
+</code></pre>
+<hr />
+<h2 id="source_references">SOURCE_REFERENCES</h2>
+<p>Contains original source images used during character creation.</p>
+<p>Examples:</p>
+<ul>
+<li>face inspiration photos</li>
+<li>clothing inspiration</li>
+<li>hairstyle references</li>
+<li>pose references</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -46,7 +46,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/library/controlled-vocabulary/</loc>
+         <lastmod>2026-03-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/library/folder-structure/</loc>
+         <lastmod>2026-03-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/library/metadata-schema/</loc>
          <lastmod>2026-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>

@@ -1,8 +1,21 @@
 # Prompt Blocks — Lucien
 
-## Short Identity Block
+This file contains reusable prompt fragments for Lucien.
+Use these blocks when building prompts for character sheets, outfits, scenes, and other image generation tasks.
 
-Lucien is a slender young modern-day witch with soft, expressive features, dark brown curls, and subtle freckles. His aesthetic blends contemporary urban casual clothing with subtle occult elements and dark academia influences.
+---
+
+## Prompt Priority Fields
+
+Height: 170 cm (5'7")  
+Build: soft-slender, lightly built, refined proportions  
+Aesthetic keywords: occult, gothic, scholarly
+
+These are the highest-priority traits to preserve in prompts.
+
+---
+
+## Identity Block (Short)
 
 Use for:
 
@@ -10,172 +23,147 @@ Use for:
 - scene prompts
 - interaction prompts
 
+Lucien is a slender man of average height with refined facial features, a lightly built physique, and a calm, slightly mysterious presence. His aesthetic is occult, scholarly, and subtly gothic, expressed through dark layered clothing, antique jewelry, and ritual-inspired accessories.
+
 ---
 
-## Extended Identity Block
-
-Lucien is a young adult man in his mid-twenties with a slender, softly built physique and light, narrow frame. He stands about 5'7" (170 cm) tall. His shoulders are narrow and gently sloped, and his torso is slim with minimal visible musculature. His abdomen is smooth and natural, and his waist is narrow, tapering into relatively narrow hips and notably rounded glutes that create a pronounced but natural curve in his silhouette. His legs are long and slim with soft contours rather than strong muscular definition.
-
-His face has balanced, softly mature features with gently defined cheekbones, a smooth jawline, and a slightly narrower chin. His eyes are dark brown and expressive, often appearing thoughtful or quietly amused. His skin is light with subtle freckles across the cheeks and nose.
-
-Lucien has dark brown naturally curly hair with soft volume and a slightly tousled texture. His hairline is natural and irregular rather than sharply angular. He is clean-shaven and occasionally wears simple modern glasses.
-
-Visually, Lucien blends modern casual fashion with subtle occult symbolism. His overall aesthetic combines contemporary urban clothing, dark academia influences, and understated mystical accessories.
+## Identity Block (Extended)
 
 Use for:
 
 - character setup
+- detailed prompts
 - new chat initialization
-- style-sensitive prompts
+- outfit and scene prompts
+
+Lucien is a slender man of average height, standing 170 cm (5'7"), with refined facial features, a lightly built physique, and understated, graceful proportions. His body is soft-slender rather than lean or athletic, with a slim torso, moderate shoulders, and an overall silhouette that reads as refined and controlled rather than muscular. His visual identity combines occult symbolism, scholarly elegance, and subtle gothic styling. Dark layered clothing, antique jewelry, rings, talismans, and softly textured fabrics are central to his design language.
 
 ---
 
 ## Face Block
 
-Lucien has a softly structured face with balanced proportions and gentle features.
-
-His face shape is slightly narrow with softly defined cheekbones and a smooth jawline that tapers toward a subtly narrow chin. His eyes are dark brown, expressive, and slightly thoughtful in appearance. His eyebrows are natural and softly shaped.
-
-His skin tone is light with subtle freckles across the cheeks and nose. His hair is dark brown and naturally curly with soft volume and a slightly tousled texture, framed by a natural irregular hairline.
-
-He is clean-shaven and occasionally wears simple modern glasses.
-
-Include:
-
-- face shape: slender and softly balanced
-- jawline: smooth and gently tapered
-- eyes: dark brown, expressive
-- distinctive traits: freckles across cheeks and nose, curly hair, soft facial structure
-
 Use for:
 
 - face anchor prompts
-- expression prompts
 - portrait prompts
+- expression sheets
+- close-up scene prompts
+
+Lucien has refined facial features with a narrow, elegant face shape and a clearly defined jawline. His overall facial impression should read as composed, intelligent, and slightly mysterious rather than rugged or openly expressive. His eyes should feel calm and observant. Preserve facial refinement, symmetry, and restraint in expression.
 
 ---
 
 ## Body Block
 
-Build category: soft_slender
-
-Lucien has a slender, lightly built physique with refined proportions.  
-His shoulders are narrow to moderate, his torso slim but not athletic, and his overall silhouette reads as graceful and understated rather than muscular or lean.
-
-He stands approximately 5'7" (170 cm) tall. His shoulders are narrow and gently sloped, giving his upper body a slim and slightly delicate appearance. His chest is modest with minimal visible pectoral definition.
-
-His abdomen is smooth with no visible abdominal segmentation, and his waist is narrow and softly tapered. His hips remain relatively narrow but transition into notably full, rounded glutes that create a pronounced but natural curve in the silhouette.
-
-His arms are slender with light natural tone, and his legs are long and slim with soft contours rather than strong muscular definition.
-
-Include:
-
-- height: 5'7" (170 cm)
-- build: slender, soft build
-- posture: upright but relaxed
-- limb proportions: long slim legs, slender arms
-
 Use for:
 
 - anatomy prompts
-- pose prompts
 - body anchor prompts
+- pose prompts
+- scale prompts
+
+Lucien is 170 cm (5'7") tall with a soft-slender, lightly built physique and refined proportions. His frame is slender rather than lean-athletic, with a slim torso, moderate shoulders, and an understated silhouette. His build should read as graceful and lightly built rather than toned, bulky, or physically imposing. Preserve a refined overall shape and avoid adding obvious athletic musculature.
 
 ---
 
-## Style / Vibe Block
-
-Lucien’s aesthetic combines modern urban casual clothing with subtle occult symbolism and dark academia influences.
-
-His wardrobe tends toward neutral colors and simple silhouettes, often including fitted shirts, simple jackets, dark jeans, or layered clothing. Materials lean toward natural fabrics, leather accents, and understated accessories.
-
-Occult elements appear subtly through jewelry, talismans, or symbolic accessories rather than overt magical costume elements.
-
-The overall palette favors dark neutrals such as black, charcoal, deep gray, and muted tones, occasionally accented with silver or subtle metallic details.
+## Style Block
 
 Use for:
 
+- signature outfit prompts
 - wardrobe prompts
-- outfit sheets
 - scene prompts
+- design language prompts
+
+Lucien’s aesthetic is occult, scholarly, and subtly gothic. His style should feel intelligent, restrained, and ritual-aware rather than flashy or theatrical. Good design elements include dark layered garments, antique jewelry, rings, talismans, soft textured materials, high collars, elegant silhouettes, and symbolic accessories. His look should feel arcane and refined rather than costume-like.
 
 ---
 
-## Movement / Posture Block
-
-Lucien moves with relaxed, natural ease. His posture is upright but casual, often shifting his weight slightly when standing. His gestures are expressive but not exaggerated.
-
-His movements feel thoughtful and deliberate rather than forceful. He tends to move lightly and fluidly, with a quiet confidence that reflects his introspective personality rather than physical dominance.
+## Movement Block
 
 Use for:
 
 - pose sheets
-- motion sheets
+- motion prompts
 - dynamic scenes
+- interaction prompts
+
+Lucien moves with deliberate precision and controlled grace. His posture is upright, composed, and restrained rather than loose or casual. His gestures should feel intentional, measured, and slightly reserved. Even in dynamic poses, his body language should retain a sense of control and quiet self-possession.
 
 ---
 
-## Expression / Demeanor Block
-
-Lucien’s expressions tend to be subtle and expressive rather than dramatic.
-
-His neutral expression is calm and attentive. He often shows small, natural smiles or quiet amusement. His demeanor can read as thoughtful, curious, slightly mischievous, or quietly confident.
-
-Even when emotional, his expressions remain natural and grounded rather than exaggerated.
+## Expression Block
 
 Use for:
 
 - expression sheets
 - portraits
-- scenes
+- close-up scenes
+- interaction prompts
+
+Lucien’s default expression is calm, reserved, and slightly distant. His smile should be subtle and understated rather than broad or exuberant. His emotional presentation should feel controlled, observant, and intelligent. Avoid exaggerated or cartoonish expressions unless explicitly requested.
 
 ---
 
-## Wardrobe Language Block
-
-Lucien’s clothing should be described using modern, minimal, and slightly intellectual fashion language.
-
-Preferred descriptions include:
-
-- fitted t-shirts
-- simple jackets or hoodies
-- dark jeans or slim pants
-- layered casual clothing
-- subtle occult jewelry
-- understated accessories
-
-Avoid elaborate fantasy clothing unless the scene explicitly requires magical or ceremonial attire.
+## Wardrobe Block
 
 Use for:
 
-- outfit prompts
+- outfit sheets
+- wardrobe prompts
 - style prompts
+- scene prompts
+
+Lucien’s wardrobe should reflect an occult and scholarly design language with subtle gothic influence. Preferred clothing elements include dark layered fabrics, tailored but soft silhouettes, elegant long outer layers, high collars, antique jewelry, rings, talismans, and muted ritual-inspired details. His wardrobe should feel refined, arcane, and wearable rather than theatrical or costume-heavy.
 
 ---
 
 ## Anti-Drift Rules
 
-Never change:
+Use for:
 
-• dark brown naturally curly hair  
-• subtle freckles across cheeks and nose  
-• slender, softly built physique with rounded glutes
+- nearly all prompts
+
+Always preserve:
+
+• average height with a slender, lightly built silhouette  
+• refined facial structure  
+• calm, restrained presence  
+• occult, scholarly, subtly gothic style direction  
+• dark layered styling with antique accessories
 
 Avoid:
 
-• athletic or muscular body types  
-• teenage or underage facial proportions
+• making him lean-athletic  
+• making him muscular or broad-framed  
+• turning the style into generic modern casualwear  
+• making the look too flashy or theatrical  
+• exaggerating facial expressions
 
 ---
 
-## Short Prompt-Ready Version
+## Short Prompt Description
 
-Lucien is a slender young modern-day witch with dark brown curly hair, expressive dark eyes, and subtle freckles across his cheeks. His aesthetic blends modern urban clothing with understated occult symbolism and dark academia influences.
+Copy this directly into short prompts.
+
+Lucien is a slender man of average height with refined facial features, a lightly built physique, and a calm, slightly mysterious presence. His aesthetic is occult, scholarly, and subtly gothic, with dark layered clothing, antique jewelry, rings, and talismanic accessories.
 
 ---
 
-## Long Prompt-Ready Version
+## Full Prompt Description
 
-Lucien is a slender young man in his mid-twenties with soft, expressive features and dark brown naturally curly hair. His face has balanced proportions with gently defined cheekbones, a smooth jawline, and a slightly narrow chin. His dark brown eyes are thoughtful and observant, and his light skin carries subtle freckles across the cheeks and nose.
+Copy this into prompts that need a full character description.
 
-He stands about 5'7" with a slender, softly built physique, narrow shoulders, and long slim legs. His waist is narrow and tapers into notably rounded glutes that create a distinctive curve in his silhouette. His aesthetic combines modern casual clothing with subtle occult elements and dark academia style, reflecting his identity as a contemporary witch.
+Lucien is a slender man of average height, 170 cm (5'7"), with refined facial features, a lightly built physique, and graceful, understated proportions. His body should read as soft-slender rather than lean-athletic, with a slim torso, moderate shoulders, and an elegant, controlled silhouette. His visual identity combines occult symbolism, scholarly refinement, and subtle gothic styling. His wardrobe should feature dark layered garments, antique jewelry, rings, talismans, and soft textured fabrics, creating an arcane, intelligent, and slightly mysterious overall presence.
+
+---
+
+## Identity Pack Reminder
+
+When possible, attach these references first:
+
+1. Face Anchor Sheet
+2. Anatomy Sheet
+3. Ultimate Character Sheet
+4. Signature Outfit Sheet
+5. task-specific reference

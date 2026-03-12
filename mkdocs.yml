@@ -20,6 +20,8 @@ nav:
   - Library:
       - Folder Structure: library/folder-structure.md
       - Naming Conventions: library/naming-conventions.md
+      - Metadata Schema: library/metadata-schema.md
+      - Controlled Vocabulary: library/controlled-vocabulary.md
 
   - Characters:
       - Overview: characters/overview.md

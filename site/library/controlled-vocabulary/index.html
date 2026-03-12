@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://charreflib.chenazam.com/pipeline/overview/">
+        <link rel="canonical" href="https://charreflib.chenazam.com/library/controlled-vocabulary/">
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../metadata-schema/">
       
       
-        <link rel="next" href="../stages/">
+        <link rel="next" href="../../characters/overview/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Overview - Character Reference Library</title>
+        <title>Controlled Vocabulary - Character Reference Library</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pipeline-overview" class="md-skip">
+        <a href="#controlled-vocabulary" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Controlled Vocabulary
             
           </span>
         </div>
@@ -212,8 +212,6 @@
       
   
   
-    
-  
   
   
     
@@ -225,11 +223,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -243,7 +241,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Pipeline
@@ -254,19 +252,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../pipeline/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -275,7 +264,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -288,7 +276,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../stages/" class="md-nav__link">
+      <a href="../../pipeline/stages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -313,8 +301,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -324,11 +314,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -342,7 +332,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Library
@@ -356,7 +346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../library/folder-structure/" class="md-nav__link">
+      <a href="../folder-structure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -377,7 +367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../library/naming-conventions/" class="md-nav__link">
+      <a href="../naming-conventions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -398,7 +388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../library/metadata-schema/" class="md-nav__link">
+      <a href="../metadata-schema/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -416,10 +406,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../library/controlled-vocabulary/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -428,6 +427,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -735,18 +735,560 @@
                   
 
 
-<h1 id="pipeline-overview">Pipeline Overview</h1>
-<p>This library uses a staged character pipeline:</p>
-<ol>
-<li>Face Identity</li>
-<li>Hair Identity</li>
-<li>Physique Anchoring</li>
-<li>Structural Anchors</li>
-<li>Master Identity</li>
-<li>Style Anchoring</li>
-<li>Motion and Scene Use</li>
-</ol>
-<p>Each stage adds a specific type of stability to the character.</p>
+<h1 id="controlled-vocabulary">Controlled Vocabulary</h1>
+<p>This page defines standardized values used in character metadata.</p>
+<p>The purpose of this vocabulary is to keep character descriptions consistent across:</p>
+<ul>
+<li>metadata files</li>
+<li>summary pages</li>
+<li>prompt blocks</li>
+<li>gallery pages</li>
+<li>future automation</li>
+</ul>
+<p>Use these values whenever possible instead of inventing new terms for each character.</p>
+<hr />
+<h1 id="build-categories">Build Categories</h1>
+<p>Use these values for <code>physical.build_category</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>soft_slender</code></td>
+<td>slender frame with soft musculature and refined proportions</td>
+</tr>
+<tr>
+<td><code>narrow_slender</code></td>
+<td>slender build with a narrow frame and delicate body structure</td>
+</tr>
+<tr>
+<td><code>elongated_slender</code></td>
+<td>slender build with visibly long limbs and elongated proportions</td>
+</tr>
+<tr>
+<td><code>light_athletic</code></td>
+<td>lightly toned body with visible fitness but little bulk</td>
+</tr>
+<tr>
+<td><code>runner_build</code></td>
+<td>athletic build with lower-body emphasis and lean overall mass</td>
+</tr>
+<tr>
+<td><code>balanced_athletic</code></td>
+<td>proportional athletic build with moderate tone and balanced mass</td>
+</tr>
+<tr>
+<td><code>athletic_muscular</code></td>
+<td>clearly defined muscular physique without extreme bulk</td>
+</tr>
+<tr>
+<td><code>heavy_muscular</code></td>
+<td>thick muscular body with strong mass and visible density</td>
+</tr>
+<tr>
+<td><code>power_build</code></td>
+<td>very broad and powerful build with heavy upper-body presence</td>
+</tr>
+<tr>
+<td><code>broad_heavy</code></td>
+<td>broad frame with substantial overall body mass</td>
+</tr>
+<tr>
+<td><code>thick_set</code></td>
+<td>dense body build with strong torso mass and compact power</td>
+</tr>
+<tr>
+<td><code>large_frame</code></td>
+<td>naturally large skeletal frame regardless of muscle level</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="shoulder-profiles">Shoulder Profiles</h1>
+<p>Use these values for <code>physical.shoulder_profile</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>narrow_shoulders</code></td>
+<td>visibly narrow shoulder width</td>
+</tr>
+<tr>
+<td><code>moderate_shoulders</code></td>
+<td>balanced shoulder width</td>
+</tr>
+<tr>
+<td><code>broad_shoulders</code></td>
+<td>visibly wide shoulder width</td>
+</tr>
+<tr>
+<td><code>heavy_shoulders</code></td>
+<td>thick, mass-heavy shoulder construction</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="torso-profiles">Torso Profiles</h1>
+<p>Use these values for <code>physical.torso_profile</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>slim_torso</code></td>
+<td>narrow torso with low bulk</td>
+</tr>
+<tr>
+<td><code>soft_torso</code></td>
+<td>lightly built torso with soft definition</td>
+</tr>
+<tr>
+<td><code>athletic_torso</code></td>
+<td>toned torso with visible definition</td>
+</tr>
+<tr>
+<td><code>broad_torso</code></td>
+<td>wide torso with strong width</td>
+</tr>
+<tr>
+<td><code>thick_torso</code></td>
+<td>dense, heavy torso mass</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="limb-profiles">Limb Profiles</h1>
+<p>Use these values for <code>physical.limb_profile</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>delicate_limbs</code></td>
+<td>slim, fine-boned limb structure</td>
+</tr>
+<tr>
+<td><code>slender_limbs</code></td>
+<td>narrow limbs with understated mass</td>
+</tr>
+<tr>
+<td><code>long_limbs</code></td>
+<td>visibly elongated limbs</td>
+</tr>
+<tr>
+<td><code>athletic_limbs</code></td>
+<td>toned limbs with moderate definition</td>
+</tr>
+<tr>
+<td><code>thick_limbs</code></td>
+<td>limbs with strong width and density</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="posture-profiles">Posture Profiles</h1>
+<p>Use these values for <code>physical.posture_profile</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>upright_controlled</code></td>
+<td>straight, composed posture with control</td>
+</tr>
+<tr>
+<td><code>relaxed_neutral</code></td>
+<td>natural, relaxed standing posture</td>
+</tr>
+<tr>
+<td><code>grounded_stable</code></td>
+<td>heavy, planted posture with strong balance</td>
+</tr>
+<tr>
+<td><code>soft_reserved</code></td>
+<td>slightly inward, gentle posture</td>
+</tr>
+<tr>
+<td><code>confident_open</code></td>
+<td>open posture with visible confidence</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="face-shapes">Face Shapes</h1>
+<p>Use these values for <code>face.face_shape</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>oval</code></td>
+<td>balanced oval face shape</td>
+</tr>
+<tr>
+<td><code>long_oval</code></td>
+<td>elongated oval face</td>
+</tr>
+<tr>
+<td><code>heart_shaped</code></td>
+<td>wider upper face tapering to a narrower chin</td>
+</tr>
+<tr>
+<td><code>square</code></td>
+<td>strong, angular shape with straight edges</td>
+</tr>
+<tr>
+<td><code>narrow_angular</code></td>
+<td>slim face with defined planes and angularity</td>
+</tr>
+<tr>
+<td><code>soft_round</code></td>
+<td>rounded shape with softer structure</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="jawline-types">Jawline Types</h1>
+<p>Use these values for <code>face.jawline</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>soft_jawline</code></td>
+<td>gentle jaw structure with low angularity</td>
+</tr>
+<tr>
+<td><code>defined_jawline</code></td>
+<td>clearly structured but not overly sharp</td>
+</tr>
+<tr>
+<td><code>sharp_jawline</code></td>
+<td>visibly angular and pronounced</td>
+</tr>
+<tr>
+<td><code>broad_jawline</code></td>
+<td>wide jaw structure with strong base</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="primary-aesthetic-tags">Primary Aesthetic Tags</h1>
+<p>Use these values for <code>style.primary_aesthetic</code> or <code>core_identity.aesthetic_tags</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>occult</code></td>
+<td>ritual, arcane, symbolic, mystical design language</td>
+</tr>
+<tr>
+<td><code>gothic</code></td>
+<td>dark, moody, dramatic, ornate visual styling</td>
+</tr>
+<tr>
+<td><code>scholarly</code></td>
+<td>intellectual, academic, bookish, refined styling</td>
+</tr>
+<tr>
+<td><code>royal</code></td>
+<td>noble, aristocratic, elevated styling</td>
+</tr>
+<tr>
+<td><code>luxury</code></td>
+<td>polished, expensive, high-end fashion language</td>
+</tr>
+<tr>
+<td><code>athletic</code></td>
+<td>sport-influenced or activewear-informed styling</td>
+</tr>
+<tr>
+<td><code>military</code></td>
+<td>uniformed, structured, disciplined style language</td>
+</tr>
+<tr>
+<td><code>streetwear</code></td>
+<td>modern casual urban styling</td>
+</tr>
+<tr>
+<td><code>domestic_soft</code></td>
+<td>cozy, warm, home-oriented styling</td>
+</tr>
+<tr>
+<td><code>romantic</code></td>
+<td>soft, elegant, intimate styling</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="materials">Materials</h1>
+<p>Use these values for <code>style.materials</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>wool</code></td>
+<td>matte, soft woven fabric</td>
+</tr>
+<tr>
+<td><code>velvet</code></td>
+<td>rich soft pile fabric with subtle sheen</td>
+</tr>
+<tr>
+<td><code>linen</code></td>
+<td>light natural woven material</td>
+</tr>
+<tr>
+<td><code>cotton</code></td>
+<td>basic soft everyday fabric</td>
+</tr>
+<tr>
+<td><code>leather</code></td>
+<td>structured leather material</td>
+</tr>
+<tr>
+<td><code>antique_metal</code></td>
+<td>aged metal, jewelry, clasps, symbolic objects</td>
+</tr>
+<tr>
+<td><code>silk</code></td>
+<td>smooth elegant fabric with soft sheen</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="expression-defaults">Expression Defaults</h1>
+<p>Use these values for <code>expression.default_expression</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>calm_reserved</code></td>
+<td>composed and restrained neutral expression</td>
+</tr>
+<tr>
+<td><code>soft_neutral</code></td>
+<td>gentle, open neutral expression</td>
+</tr>
+<tr>
+<td><code>serious_controlled</code></td>
+<td>focused and emotionally contained</td>
+</tr>
+<tr>
+<td><code>confident_neutral</code></td>
+<td>self-assured neutral expression</td>
+</tr>
+<tr>
+<td><code>watchful_distant</code></td>
+<td>observant and slightly emotionally removed</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="smile-types">Smile Types</h1>
+<p>Use these values for <code>expression.smile_type</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>subtle_smile</code></td>
+<td>understated, restrained smile</td>
+</tr>
+<tr>
+<td><code>warm_smile</code></td>
+<td>gentle open smile</td>
+</tr>
+<tr>
+<td><code>playful_smile</code></td>
+<td>teasing, lively smile</td>
+</tr>
+<tr>
+<td><code>rare_broad_smile</code></td>
+<td>broad smile that appears infrequently</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="emotional-tone">Emotional Tone</h1>
+<p>Use these values for <code>expression.emotional_tone</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>controlled</code></td>
+<td>emotions feel measured and contained</td>
+</tr>
+<tr>
+<td><code>open_warm</code></td>
+<td>emotions read easily and warmly</td>
+</tr>
+<tr>
+<td><code>guarded</code></td>
+<td>emotional presentation feels partially protected</td>
+</tr>
+<tr>
+<td><code>intense</code></td>
+<td>emotions read strongly and directly</td>
+</tr>
+<tr>
+<td><code>gentle</code></td>
+<td>emotional presentation feels soft and mild</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="movement-styles">Movement Styles</h1>
+<p>Use these values for <code>movement.movement_style</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>deliberate_precise</code></td>
+<td>careful, intentional movement</td>
+</tr>
+<tr>
+<td><code>fluid_graceful</code></td>
+<td>smooth, elegant movement</td>
+</tr>
+<tr>
+<td><code>relaxed_natural</code></td>
+<td>easy, ordinary movement</td>
+</tr>
+<tr>
+<td><code>grounded_powerful</code></td>
+<td>strong, planted movement</td>
+</tr>
+<tr>
+<td><code>restless_quick</code></td>
+<td>quick, energetic, shifting movement</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="gesture-styles">Gesture Styles</h1>
+<p>Use these values for <code>movement.gesture_style</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>restrained</code></td>
+<td>minimal, controlled gestures</td>
+</tr>
+<tr>
+<td><code>expressive</code></td>
+<td>clear visible hand/body gestures</td>
+</tr>
+<tr>
+<td><code>precise</code></td>
+<td>sharp, intentional gestures</td>
+</tr>
+<tr>
+<td><code>soft_gentle</code></td>
+<td>mild, low-force gestures</td>
+</tr>
+<tr>
+<td><code>broad_confident</code></td>
+<td>larger, open, confident gestures</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="body-language-types">Body Language Types</h1>
+<p>Use these values for <code>movement.body_language</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>calm_composed</code></td>
+<td>physically controlled and poised</td>
+</tr>
+<tr>
+<td><code>guarded_reserved</code></td>
+<td>slightly closed or protected body language</td>
+</tr>
+<tr>
+<td><code>open_confident</code></td>
+<td>accessible, confident, expanded body language</td>
+</tr>
+<tr>
+<td><code>soft_withdrawn</code></td>
+<td>quiet, inward, gentle physical presentation</td>
+</tr>
+<tr>
+<td><code>intense_focused</code></td>
+<td>strong concentration and directed physicality</td>
+</tr>
+</tbody>
+</table>
 
 
 

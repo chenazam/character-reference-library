@@ -24,6 +24,8 @@ nav:
   - Characters:
       - Overview: characters/overview.md
       - Templates: characters/templates.md
+      - Character Index: characters/index.md
+      - Lucien: characters/lucien.md
 
   - Prompts:
       - Overview: prompts/overview.md

@@ -21,7 +21,7 @@ Lucien is a slender man of average height with refined facial features, an elega
 ## Prompt Priority Fields
 
 Height: 170 cm (5'7")  
-Build: lean, elegant  
+Build: slender, elegant  
 Aesthetic keywords: occult, gothic, scholarly
 
 These are the three most important traits to preserve in prompts.

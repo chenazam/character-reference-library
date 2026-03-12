@@ -1,0 +1,78 @@
+name: Lucien
+slug: lucien
+
+status: active
+
+project: Lucien and the Eternal Blade
+
+height_cm: 170
+height_imperial: '5''7"'
+
+build_category: slender
+build_tags:
+  - slender
+  - soft_build
+  - narrow_frame
+
+age_appearance: '24–26'
+
+gender_presentation: masculine
+
+ethnicity_notes: 'English and Irish heritage'
+
+tags:
+  - modern occult
+  - urban fantasy
+  - witch
+
+style_keywords:
+  - dark academia
+  - modern occultist
+  - urban witch
+
+color_palette:
+  primary:
+    - black
+    - charcoal
+
+  accent:
+    - silver
+
+signature_accessories:
+  - crescent moon necklace
+  - simple round-frame glasses
+
+identity_rules:
+  preserve:
+    - dark brown naturally curly hair with soft volume
+    - subtle freckles across cheeks and nose
+
+  avoid:
+    - overly muscular physique
+    - teenage facial proportions
+
+reference_files:
+  face_anchor: lucien_face_anchor.png
+  anatomy_sheet: lucien_anatomy_sheet.png
+  body_anchor: lucien_body_anchor.png
+  ultimate_character_sheet: lucien_ucs.png
+  signature_outfit_sheet: lucien_signature_outfit.png
+
+pipeline_status:
+  face_anchor: false
+  hair_sheet: false
+  anatomy_sheet: false
+  body_anchor: false
+  silhouette_sheet: false
+  turnaround_sheet: false
+  expression_sheet: false
+  hand_sheet: false
+  ucs: false
+  signature_outfit: false
+  wardrobe: false
+  pose_sheet: false
+  motion_sheet: false
+  scene_anchors: false
+
+nnotes: 'Lucien has a slender, softly built physique with a narrow frame, minimal visible musculature, and notably rounded glutes. His visual identity relies on curly dark hair, subtle freckles, expressive dark brown eyes, and a clearly adult but soft facial structure.'
+last_updated: ''

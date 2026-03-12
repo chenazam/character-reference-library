@@ -8,7 +8,7 @@ Use the character pages for detailed prompt workflows, reference priorities, and
     <img src="../assets/library/10_CHARACTERS/LUCIEN/lucien_face_anchor_v1.png" alt="Lucien preview" style="width:100%; display:block;" />
     <div style="padding:1rem;">
       <h2 style="margin-top:0;">Lucien</h2>
-      <p><strong>170 cm (5'7")</strong> · lean, elegant · occult, gothic, scholarly</p>
+      <p><strong>170 cm (5'7")</strong> · slender, lightly built · occult, gothic, scholarly</p>
       <p>Refined, slender, and quietly mysterious, with an occult and scholarly visual identity.</p>
       <p><a href="lucien.md">Open character page</a></p>
     </div>

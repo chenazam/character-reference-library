@@ -57,7 +57,10 @@ Use for:
 
 ## Body Block
 
-Lucien has a slender, softly built physique with a narrow frame and light proportions.
+## Body Block
+
+Lucien has a slender, lightly built physique with refined proportions.  
+His shoulders are narrow to moderate, his torso slim but not athletic, and his overall silhouette reads as graceful and understated rather than muscular or lean.
 
 He stands approximately 5'7" (170 cm) tall. His shoulders are narrow and gently sloped, giving his upper body a slim and slightly delicate appearance. His chest is modest with minimal visible pectoral definition.
 

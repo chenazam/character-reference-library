@@ -31,10 +31,14 @@ identity preservation, prompt construction, reference browsing
 
 Use these references first when the goal is strong character consistency.
 
+<div class="character-gallery>
+
 [![Blake face anchor](../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_face_anchor_v1.png)](../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_face_anchor_v1.png)
 [![Blake body anchor](../assets/library/10_CHARACTERS/BLAKE/06_BODY/blake_body_anchor_v1.png)](../assets/library/10_CHARACTERS/BLAKE/06_BODY/blake_body_anchor_v1.png)
 [![Blake silhouette](../assets/library/10_CHARACTERS/BLAKE/07_SILHOUETTE/blake_silhouette_v1.png)](../assets/library/10_CHARACTERS/BLAKE/07_SILHOUETTE/blake_silhouette_v1.png)
 [![Blake turnaround](../assets/library/10_CHARACTERS/BLAKE/08_TURNAROUND/blake_turnaround_v1.png)](../assets/library/10_CHARACTERS/BLAKE/08_TURNAROUND/blake_turnaround_v1.png)
+
+</div>
 
 ---
 
@@ -44,19 +48,35 @@ These references define facial identity, angle consistency, and portrait fidelit
 
 ### Face Anchor
 
+<div class="character-gallery>
+
 [![Blake face anchor](../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_face_anchor_v1.png)](../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_face_anchor_v1.png)>
+
+</div>
 
 ### Front Face
 
+<div class="character-gallery>
+
 [![Blake front face](../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_front_face_v1.png)](../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_front_face_v1.png)
+
+</div>
 
 ### Three-Quarter Face
 
+<div class="character-gallery>
+
 [![Blake three-quarter face](../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_three_quarter_face_v1.png)](../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_three_quarter_face_v1.png)
+
+</div>
 
 ### Profile Face
 
+<div class="character-gallery>
+
 [![Blake profile face](../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_profile_face_v1.png)](../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_profile_face_v1.png)
+
+</div>
 
 ---
 

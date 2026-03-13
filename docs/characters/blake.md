@@ -31,10 +31,9 @@ identity preservation, prompt construction, reference browsing
 
 Use these references first when the goal is strong character consistency.
 
+![Blake face anchor](../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_face_anchor_v1.png)
+
 <div class="character-gallery">
-  <a href="../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_face_anchor_v1.png" target="_blank">
-    <img src="../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_face_anchor_v1.png" alt="Blake face anchor">
-  </a>
   <a href="../assets/library/10_CHARACTERS/BLAKE/06_BODY/blake_body_anchor_v1.png" target="_blank">
     <img src="../assets/library/10_CHARACTERS/BLAKE/06_BODY/blake_body_anchor_v1.png" alt="Blake body anchor">
   </a>

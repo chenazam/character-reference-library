@@ -1,0 +1,126 @@
+name: Hudson
+slug: hudson
+
+status: active
+project: core_cast
+
+core_identity:
+  short_summary: Tall athletic man with a broad-shouldered muscular build and confident composed presence.
+  role_archetype:
+    - athletic_lead
+  aesthetic_tags:
+    - athletic
+    - athletic_luxury
+
+physical:
+  height_cm: 188
+  height_imperial: "6'2"
+  height_visual_category: tall
+
+  build_category: athletic_muscular
+  frame_proportion: balanced_frame
+  body_fat_range: athletic
+  body_softness_distribution: firm_all
+
+  build_notes: >
+    Broad-shouldered athletic physique with visible muscular definition.
+    Upper body is strong with defined chest, shoulders, and arms while
+    maintaining balanced athletic proportions. Body reads as trained,
+    powerful, and physically confident rather than bulky or heavy.
+
+  shoulder_profile: broad_shoulders
+  torso_profile: athletic_torso
+  limb_profile: athletic_limbs
+  posture_profile: confident_open
+
+  silhouette_anchor: power_athlete
+  silhouette_keywords:
+    - tall
+    - broad
+    - agile
+
+face:
+  face_shape: narrow_angular
+  jawline: defined_jawline
+
+  eye_description: light blue-green eyes with focused, confident gaze
+  hair_description: short brown hair with natural texture and slightly tousled volume
+  skin_description: light warm skin tone with even complexion
+
+  distinctive_features:
+    - strong cheekbones
+    - defined jaw structure
+
+hair_color: brown
+
+style:
+  primary_aesthetic: athletic_luxury
+
+  secondary_aesthetic:
+    - athletic
+
+  materials:
+    - cotton
+
+  primary_colors:
+    - black
+    - white
+
+  accent_colors:
+    - grey
+
+  recurring_accessories:
+    - none
+
+expression:
+  default_expression: confident_neutral
+  smile_type: subtle_smile
+  emotional_tone: controlled
+
+movement:
+  movement_style: relaxed_natural
+  gesture_style: broad_confident
+  body_language: open_confident
+  spatial_presence: expansive_presence
+
+identity_rules:
+  preserve:
+    - maintain broad shoulder silhouette and athletic muscular build
+    - preserve narrow angular facial structure with defined jawline
+
+  avoid:
+    - avoid slender or narrow body proportions
+    - avoid soft facial structure or rounded jaw
+
+reference_files:
+  face_anchor: hudson_face_anchor.png
+  anatomy_sheet: ''
+  body_anchor: ''
+  turnaround_sheet: hudson_turnaround_sheet.png
+  ultimate_character_sheet: ''
+  signature_outfit_sheet: ''
+
+pipeline_status:
+  face_anchor: complete
+  hair_sheet: not_started
+  anatomy_sheet: not_started
+  proportion_grid: not_started
+  muscle_tension: not_started
+  body_anchor: not_started
+  silhouette_sheet: not_started
+  turnaround_sheet: complete
+  expression_sheet: not_started
+  hand_sheet: not_started
+  ucs: not_started
+  signature_outfit: not_started
+  design_language: not_started
+  wardrobe: not_started
+  pose_sheet: not_started
+  motion_sheet: not_started
+  scale_sheet: not_started
+  scene_anchors: not_started
+  prop_sheet: not_started
+
+notes: 'Metadata reconstructed from visual references only; corrected for known character identity.'
+
+last_updated: '2026-03-13'

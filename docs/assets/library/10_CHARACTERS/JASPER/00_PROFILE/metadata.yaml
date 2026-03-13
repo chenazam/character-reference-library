@@ -16,8 +16,12 @@ core_identity:
 physical:
   height_cm: 170
   height_imperial: '5''7"'
+  height_visual_category: medium
 
   build_category: runner_build
+  frame_proportion: leg_dominant
+  body_fat_range: athletic
+  body_softness_distribution: glute_dominant
 
   build_notes: >
     Lean endurance-athlete physique with strong lower-body development.
@@ -31,11 +35,12 @@ physical:
   limb_profile: athletic_limbs
   posture_profile: relaxed_neutral
 
+  silhouette_anchor: runner_silhouette
   silhouette_keywords:
-    - lean
     - compact
-    - athletic
+    - agile
     - leg_dominant
+    - glute_emphasis
 
 face:
   face_shape: oval
@@ -84,6 +89,7 @@ movement:
   movement_style: restless_quick
   gesture_style: expressive
   body_language: open_confident
+  spatial_presence: energetic
 
 identity_rules:
   preserve:

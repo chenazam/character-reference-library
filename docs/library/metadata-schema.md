@@ -11,85 +11,89 @@ The goal of the metadata system is to make character information:
 
 ---
 
-## Top-Level Fields
+# Top-Level Fields
 
-### `name`
+## `name`
 
 Character display name.
 
 Example:
 
-`Lucien`
+Lucien
 
 ---
 
-### `slug`
+## `slug`
 
 Lowercase identifier used in filenames and automation.
 
 Example:
 
-`lucien`
+lucien
 
 ---
 
-### `status`
+## `status`
 
 Current status of the character.
 
 Recommended values:
 
-- `active`
-- `draft`
-- `archived`
+- active
+- draft
+- archived
 
 ---
 
-### `project`
+## `project`
 
 Optional project or setting label.
 
 Example:
 
-`Occult City`
+Occult City
 
 ---
 
-## `core_identity`
+# `core_identity`
 
-Stores the character’s most important high-level identity tags.
+Stores the character’s most important identity descriptors.
 
-### `short_summary`
+## `short_summary`
 
-One-sentence summary of the character.
+One-sentence identity summary.
 
-### `role_archetype`
+## `role_archetype`
 
 Narrative or design archetypes.
 
 Examples:
 
 - scholar
-- rival
 - protector
+- athlete
+- rival
 - aristocrat
 
-### `aesthetic_tags`
+## `aesthetic_tags`
 
-Main aesthetic descriptors.
+Primary aesthetic descriptors.
 
 Examples:
 
-- occult
 - gothic
+- athletic
+- streetwear
 - scholarly
-- royal
+- occult
 
 ---
 
-## `physical`
+# `physical`
 
-Stores body and silhouette information.
+Stores detailed body and silhouette identity.
+
+## Height
 
 ### `height_cm`
 
@@ -99,177 +103,345 @@ Height in centimeters.
 
 Height in feet and inches.
 
-### `build_category`
+### `height_visual_category`
 
-Controlled vocabulary field describing body type.
-
-See the controlled vocabulary page.
-
-### `build_notes`
-
-Short natural-language expansion of the build.
-
-### `shoulder_profile`
-
-Short descriptor for shoulder width / shape.
-
-### `torso_profile`
-
-Short descriptor for torso construction.
-
-### `limb_profile`
-
-Short descriptor for limb length / thickness.
-
-### `posture_profile`
-
-Short descriptor for posture.
-
-### `silhouette_keywords`
-
-Short tags describing the overall silhouette.
+Relative visual category used for scale comparison.
 
 Examples:
 
-- slender
-- long-limbed
-- compact
-- broad
+- short
+- average
+- tall
+- very_tall
 
 ---
 
-## `face`
+## Body Construction
 
-Stores facial identity information.
+### `build_category`
 
-### `face_shape`
+Primary body-type classification.
+
+See controlled vocabulary.
+
+Examples:
+
+- runner_build
+- athletic_muscular
+- slender
+- heavyset
+
+### `frame_proportion`
+
+Describes the dominant body mass distribution.
+
+Examples:
+
+- leg_dominant
+- upper_body_dominant
+- balanced_frame
+
+### `body_fat_range`
+
+Approximate body-fat presentation.
+
+Examples:
+
+- very_lean
+- athletic_lean
+- athletic_average
+- soft_average
+
+### `body_softness_distribution`
+
+Where softness or firmness appears on the body.
+
+Examples:
+
+- firm_all
+- soft_lower_body
+- soft_upper_body
+
+---
+
+## Structural Profiles
+
+### `build_notes`
+
+Natural-language description of the body.
+
+### `shoulder_profile`
+
+Descriptor for shoulder width or shape.
+
+Examples:
+
+- narrow_shoulders
+- moderate_shoulders
+- broad_shoulders
+
+### `torso_profile`
+
+Descriptor for torso construction.
+
+Examples:
+
+- slender_torso
+- athletic_torso
+- thick_torso
+
+### `limb_profile`
+
+Descriptor for limbs.
+
+Examples:
+
+- long_limbs
+- athletic_limbs
+- thick_limbs
+
+### `posture_profile`
+
+General posture type.
+
+Examples:
+
+- relaxed_neutral
+- confident_open
+- upright_formal
+
+---
+
+### `silhouette_anchor`
+
+Primary silhouette classification used for identity anchoring.
+
+This value captures the character's most recognizable body structure.
+
+Examples:
+
+- runner_silhouette
+- power_athlete
+- elongated_slender
+
+---
+
+## `silhouette_keywords`
+
+Keywords describing the overall body silhouette.
+
+Examples:
+
+- compact
+- broad
+- slender
+- leg_dominant
+- imposing
+
+---
+
+# `face`
+
+Stores facial identity.
+
+## `face_shape`
 
 General face shape.
 
-### `jawline`
+Examples:
 
-Jawline description.
+- oval
+- square
+- heart
 
-### `eye_description`
+## `jawline`
 
-Short eye description.
+Jawline structure.
 
-### `hair_description`
+Examples:
+
+- defined_jawline
+- soft_jawline
+- sharp_jawline
+
+## `eye_description`
+
+Short natural-language description.
+
+## `hair_description`
 
 Short hairstyle description.
 
-### `skin_description`
+## `skin_description`
 
 Short skin description.
 
-### `distinctive_features`
+## `distinctive_features`
 
-List of notable facial identity markers.
+List of notable visual traits.
+
+Examples:
+
+- freckles
+- strong jawline
+- expressive eyes
 
 ---
 
-## `style`
+## `hair_color`
 
-Stores style and design-language information.
+Controlled vocabulary for hair color.
 
-### `primary_aesthetic`
+Examples:
 
-Main aesthetic label.
+- dark_brown
+- black
+- blonde
+- light_brown_dark_blonde
 
-### `secondary_aesthetic`
+---
+
+# `style`
+
+Stores design-language and wardrobe information.
+
+## `primary_aesthetic`
+
+Primary design aesthetic.
+
+Examples:
+
+- athletic
+- athletic_luxury
+- gothic
+- scholarly
+- exhibitionist
+
+## `secondary_aesthetic`
 
 Supporting aesthetics.
 
-### `materials`
+## `materials`
 
-Common clothing/material descriptors.
+Common clothing materials.
 
-### `primary_colors`
+Examples:
 
-Main palette colors.
+- cotton
+- wool
+- mesh
+- linen
 
-### `accent_colors`
+## `primary_colors`
 
-Accent colors.
+Main color palette.
 
-### `recurring_accessories`
+## `accent_colors`
 
-Accessories or objects that recur often.
+Accent palette.
+
+## `recurring_accessories`
+
+Recurring wardrobe items.
 
 ---
 
-## `expression`
+# `expression`
 
-Stores emotional presentation defaults.
+Stores emotional presentation.
 
-### `default_expression`
+## `default_expression`
 
-Typical resting expression.
+Neutral resting expression.
 
-### `smile_type`
+## `smile_type`
 
-Typical smile description.
+Typical smile.
 
-### `emotional_tone`
+## `emotional_tone`
 
 General emotional read.
 
----
+Examples:
 
-## `movement`
-
-Stores movement and body-language information.
-
-### `movement_style`
-
-How the character moves overall.
-
-### `gesture_style`
-
-How the character uses hands / gestures.
-
-### `body_language`
-
-General physical demeanor.
+- open_warm
+- controlled
+- reserved
+- playful
 
 ---
 
-## `identity_rules`
+# `movement`
+
+Stores motion and body-language identity.
+
+## `movement_style`
+
+Overall movement pattern.
+
+Examples:
+
+- restless_quick
+- grounded_powerful
+- graceful
+
+## `gesture_style`
+
+How the character gestures.
+
+## `body_language`
+
+General body language.
+
+## `spatial_presence`
+
+How the character occupies space.
+
+Examples:
+
+- expansive
+- grounded
+- compact
+- energetic
+
+---
+
+# `identity_rules`
 
 Stores anti-drift rules.
 
-### `preserve`
+## `preserve`
 
-Traits that should remain stable.
+Traits that must remain stable.
 
-### `avoid`
+## `avoid`
 
-Common failure modes to avoid.
-
----
-
-## `reference_files`
-
-Stores the filenames of the character’s most important anchor sheets.
-
-These files form the character’s core identity pack.
+Common generation failures to prevent.
 
 ---
 
-## `pipeline_status`
+# `reference_files`
 
-Tracks which parts of the reference pipeline are complete.
+Stores filenames for core reference sheets.
 
-This is useful for workflow management and future automation.
+These form the character’s **identity pack**.
 
 ---
 
-## `notes`
+# `pipeline_status`
+
+Tracks completion of the reference pipeline.
+
+Used for workflow tracking and automation.
+
+---
+
+# `notes`
 
 Optional freeform notes.
 
 ---
 
-## `last_updated`
+# `last_updated`
 
-Date of last metadata update.
+Date of the last metadata update.

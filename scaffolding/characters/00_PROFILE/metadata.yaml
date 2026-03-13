@@ -15,8 +15,12 @@ core_identity:
 physical:
   height_cm: [HEIGHT_CM]
   height_imperial: '[HEIGHT_IMPERIAL]'
+  height_visual_category: [profile_keyword]
 
   build_category: [build_type]
+  frame_proportion: [profile_keyword]
+  body_fat_range: [profile_keyword]
+  body_softness_distribution: [profile_keyword]
 
   build_notes: >
     [Brief description of physique and how it should read.]
@@ -26,6 +30,7 @@ physical:
   limb_profile: [profile_keyword]
   posture_profile: [profile_keyword]
 
+  silhouette_anchor: [profile_keyword]
   silhouette_keywords:
     - [keyword]
     - [keyword]
@@ -74,6 +79,7 @@ movement:
   movement_style: [movement_keyword]
   gesture_style: [gesture_keyword]
   body_language: [body_language_keyword]
+  spatial_presence: [movement_keyword]
 
 identity_rules:
   preserve:

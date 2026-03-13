@@ -1,12 +1,19 @@
 # Character Templates
 
-This page explains how to create a new character using the project’s folder and file templates.
+This page explains how to create and organize **individual characters** in the reference library.
 
-The goal is to ensure that all characters follow the same structure, follow the same reference pipeline, and remain easy to browse inside the MkDocs library.
+Character folders represent the **core unit of the library**. Each character stores their profile information, generated reference sheets, identity packs, and source references.
+
+The purpose of the character template system is to ensure that all characters:
+
+- follow the same folder structure
+- use the same profile file schema
+- move through the same reference pipeline
+- remain easy to browse in the MkDocs frontend
 
 ---
 
-## Character Page Layout
+# Character Page Layout
 
 Character pages in the MkDocs site serve as **visual reference hubs** for browsing a character’s generated sheets.
 
@@ -28,7 +35,7 @@ Each character page aggregates thumbnail previews of the character’s reference
 docs/assets/library/10_CHARACTERS/
 ```
 
-A reusable template for these pages is provided here:
+A reusable page template is provided here:
 
 ```text
 docs/characters/character-page-template.md
@@ -36,630 +43,323 @@ docs/characters/character-page-template.md
 
 When creating a new character page:
 
-1. Copy the template.
-2. Rename it to the character name.
-3. Replace placeholder paths.
-4. Add thumbnails for the character’s available sheets.
+1. copy the template
+2. rename it to the character name
+3. replace placeholder paths
+4. add gallery snippets or thumbnails for the character’s available sheets
 
-These pages are optimized for **visual browsing and prompt construction**, rather than for pipeline documentation.
+These pages are optimized for **visual browsing and prompt construction**, rather than for template storage.
 
 ---
 
-## Creating a New Character
+# Character Folder Structure
+
+Characters are stored in:
+
+```text
+docs/assets/library/10_CHARACTERS/
+```
+
+Each character has its own folder.
+
+Example:
+
+```text
+10_CHARACTERS/
+  LUCIEN/
+```
+
+Inside that folder the structure is:
+
+```text
+LUCIEN/
+  00_PROFILE
+  01_FACE
+  02_HAIR
+  03_ANATOMY
+  04_PROPORTIONS
+  05_MUSCLE
+  06_BODY
+  07_SILHOUETTE
+  08_TURNAROUND
+  09_EXPRESSIONS
+  10_HANDS
+  11_UCS
+  12_SIGNATURE_OUTFIT
+  13_DESIGN_LANGUAGE
+  14_WARDROBE
+  15_POSES
+  16_MOTION
+  17_SCALE
+  18_SCENES
+  19_PROPS
+
+  IDENTITY_PACK
+  SOURCE_REFERENCES
+```
+
+Each numbered folder corresponds to a stage in the character generation pipeline.
+
+---
+
+# Creating a New Character
 
 To create a new character:
 
-1. Copy the character template folder.
-2. Rename the folder to the character’s name.
-3. Fill out the files in `00_PROFILE`.
-4. Begin generating the reference sheets following the pipeline.
-
-Example asset folder:
+1. copy the character scaffolding folder:
 
 ```text
-docs/assets/library/10_CHARACTERS/LUCIEN
+scaffolding/character/
 ```
+
+2. rename it to the character name
+3. place it inside:
+
+```text
+docs/assets/library/10_CHARACTERS/
+```
+
+4. fill out the files in `00_PROFILE`
+5. begin generating the character’s reference sheets following the pipeline
+
+This is preferred over copying an existing character folder and deleting old assets.
 
 ---
 
-## Character Folder Template
+# 00_PROFILE
 
-Every character asset folder follows the same structure.
-
-```text
-CHARACTER_NAME/
-
-00_PROFILE
-01_FACE
-02_HAIR
-03_ANATOMY
-04_PROPORTIONS
-05_MUSCLE
-06_BODY
-07_SILHOUETTE
-08_TURNAROUND
-09_EXPRESSIONS
-10_HANDS
-11_UCS
-12_SIGNATURE_OUTFIT
-13_DESIGN_LANGUAGE
-14_WARDROBE
-15_POSES
-16_MOTION
-17_SCALE
-18_SCENES
-19_PROPS
-
-IDENTITY_PACK
-SOURCE_REFERENCES
-```
-
-Each folder corresponds to a stage in the character generation pipeline.
-
----
-
-## The Profile Folder
-
-The `00_PROFILE` folder contains the conceptual definition of the character.
+The `00_PROFILE` folder contains the **conceptual definition of the character**.
 
 ```text
 00_PROFILE/
-
-metadata.yaml
-character_summary.md
-prompt_blocks.md
+  metadata.yaml
+  character_summary.md
+  prompt_blocks.md
+  identity_guardrails.md
 ```
 
 These files define the character before reference sheets are generated.
 
 ---
 
-## `metadata.yaml` Template
+## metadata.yaml
 
-```yaml
-name: [CHARACTER_NAME]
-slug: [character_slug]
+Structured metadata describing the character.
 
-height_cm: [HEIGHT_CM]
-height_imperial: '[HEIGHT_IMPERIAL]'
+Typical contents include:
 
-build_category: [build_type]
+- core identity summary
+- physical information
+- facial information
+- style information
+- expression and movement traits
+- identity rules
+- reference file links
+- pipeline progress
 
-tags:
-  - [style_tag]
-  - [archetype]
+This file is used for:
 
-style_keywords:
-  - [style_word]
-  - [style_word]
+- structured character data
+- indexing
+- future automation
+- library maintenance
 
-signature_accessories:
-  - [item]
+The canonical template lives in:
 
-reference_files:
-  face_anchor: ''
-  anatomy_sheet: ''
-  body_anchor: ''
-  ultimate_character_sheet: ''
-  signature_outfit_sheet: ''
+```text
+scaffolding/character/00_PROFILE/metadata.yaml
 ```
 
-This file stores structured metadata for the character.
-
 ---
 
-## `character_summary.md` Template
+## character_summary.md
 
-This file contains a human-readable overview of the character.
+Human-readable overview of the character.
 
-Example structure:
+This file typically includes:
 
-```markdown
-# Character Summary — [CHARACTER_NAME]
+- core identity
+- short and full visual identity descriptions
+- silhouette summary
+- style identity
+- body language
+- expression profile
+- identity preservation rules
+- core reference sheets
 
-## Core Identity
+This file acts as a **condensed character reference document**.
 
-Name: [CHARACTER_NAME]
+The canonical template lives in:
 
-Height: [HEIGHT_CM] cm ([HEIGHT_IMPERIAL])
-
-Build Type: [lean / athletic / muscular / heavyset / etc.]
-
-Age Appearance: [approximate age range]
-
-Gender Presentation: [optional]
-
----
-
-## Visual Identity (Short Prompt Version)
-
-Use this block when a prompt needs a **short character description**.
-
-[CHARACTER_NAME] is a [height + build description] with [key facial features].
-Their aesthetic is [style description].
-
----
-
-## Visual Identity (Full Prompt Version)
-
-Use this block when a prompt needs a **complete character description**.
-
-[CHARACTER_NAME] is [height description] with [body description].
-
-Key features:
-
-- face shape: [description]
-- jawline: [description]
-- eyes: [description]
-- hair: [description]
-- skin tone: [description]
-
-Body proportions:
-
-- shoulder width: [description]
-- torso shape: [description]
-- limb proportions: [description]
-- posture: [description]
-
-Overall silhouette:
-
-[describe the recognizable shape of the character]
-
----
-
-## Style Identity
-
-Aesthetic keywords:
-
-- [style keyword]
-- [style keyword]
-- [style keyword]
-
-Typical clothing elements:
-
-- [element]
-- [element]
-- [element]
-
-Typical materials:
-
-- [material]
-- [material]
-
-Typical colors:
-
-Primary colors:
-
-- [color]
-- [color]
-
-Accent colors:
-
-- [color]
-
----
-
-## Accessories
-
-Recurring items that often appear with the character:
-
-- [item]
-- [item]
-- [item]
-
----
-
-## Body Language
-
-Posture:
-
-[description]
-
-Movement style:
-
-[description]
-
-Gesture style:
-
-[description]
-
----
-
-## Expression Profile
-
-Default expression:
-
-[description]
-
-Typical smile:
-
-[description]
-
-Emotional range:
-
-[description]
-
----
-
-## Personality Snapshot
-
-Short personality description used for scene prompts.
-
-[description]
-
----
-
-## Identity Preservation Rules
-
-These traits should **never drift in generated images**.
-
-Always preserve:
-
-- height range
-- body proportions
-- facial structure
-- hairstyle silhouette
-- core aesthetic
-
-Avoid:
-
-- [common drift issue]
-- [common drift issue]
-
----
-
-## Core Reference Sheets
-
-These sheets define the character’s visual identity.
-
-- Face Anchor Sheet
-- Anatomy Sheet
-- Body Anchor Sheet
-- Ultimate Character Sheet
-- Signature Outfit Sheet
-
-These should be attached whenever possible.
-
----
-
-## Identity Pack
-
-The **core reference pack** for prompts:
-
-1. Face Anchor Sheet
-2. Anatomy Sheet
-3. Ultimate Character Sheet
-4. Signature Outfit Sheet
-
----
-
-## Prompt Identity Block
-
-This block is designed to be **copied directly into prompts**.
-
-[CHARACTER_NAME] is a [height + build] character with [distinctive facial features] and [visual style].
-Their aesthetic includes [style keywords], [typical clothing elements], and [accessories].
-Maintain consistent facial identity, body proportions, and style across all views.
+```text
+scaffolding/character/00_PROFILE/character_summary.md
 ```
 
-This file acts as a condensed character reference.
+---
+
+## prompt_blocks.md
+
+Reusable prompt fragments describing the character.
+
+Typical blocks include:
+
+- Character Block
+- Identity Block (Short)
+- Identity Block (Extended)
+- Face Block
+- Body Block
+- Style Block
+- Movement Block
+- Expression Block
+- Wardrobe Description Block
+- Anti-Drift Rules
+- Short Prompt Description
+- Full Prompt Description
+
+These blocks are used when building prompts for reference generation and later scenes.
+
+The canonical template lives in:
+
+```text
+scaffolding/character/00_PROFILE/prompt_blocks.md
+```
 
 ---
 
-## `prompt_blocks.md` Template
+## identity_guardrails.md
 
-This file contains reusable prompt fragments that describe the character.
+Defines **non-negotiable identity constraints** for the character.
 
-Example structure:
+This file is used when:
 
-```markdown
-# Prompt Blocks — [CHARACTER_NAME]
+- generating new reference sheets
+- creating outfits or scenes
+- troubleshooting generator drift
+- reviewing whether an image still reads as the same character
 
-This file contains reusable prompt fragments describing the character.
-Each block can be copied into prompts depending on the generation task.
+Typical contents include:
+
+- core identity locks
+- silhouette guardrails
+- facial guardrails
+- style guardrails
+- expression guardrails
+- movement guardrails
+- known generator drift risks
+- reference hierarchy
+- identity test checklist
+
+This file should be concise but clear. Some characters may need only a short version, while others benefit from more detailed guardrails.
+
+The canonical template lives in:
+
+```text
+scaffolding/character/00_PROFILE/identity_guardrails.md
+```
 
 ---
 
-## Character Block
+# Identity Pack
 
-Use for:
+```text
+IDENTITY_PACK/
+```
 
-- reference sheet prompts
-- anatomy prompts
+This folder stores the **most important identity-stabilizing references** for the character.
+
+Examples:
+
+- face anchors
 - body anchors
-- general character prompts
+- turnaround sheets
+- signature outfit references
 
-[CHARACTER_NAME] is a [height + build description]
-
-[short character description summary, 2-3 paragraphs]
-
----
-
-## Identity Block (Short)
-
-Use for:
-
-- quick prompts
-- scene prompts
-- interaction prompts
-
-[CHARACTER_NAME] is a [height + build description] with [distinctive facial features].
-Their aesthetic is [style keywords] with [typical clothing elements].
+These are the assets most likely to be attached during prompt generation.
 
 ---
 
-## Identity Block (Extended)
+# Source References
 
-Use for:
-
-- character setup
-- detailed prompts
-- new chat initialization
-
-[CHARACTER_NAME] is [height description] with [body description].
-
-Key facial traits:
-
-- face shape: [description]
-- jawline: [description]
-- eyes: [description]
-- hair: [description]
-- skin tone: [description]
-
-Body proportions:
-
-- shoulder width: [description]
-- torso shape: [description]
-- limb proportions: [description]
-- posture: [description]
-
-Overall silhouette:
-
-[describe the character's recognizable body shape]
-
----
-
-## Face Block
-
-Use for:
-
-- face anchor prompts
-- portrait prompts
-- expression sheets
-
-Facial description:
-
-- face shape: [description]
-- jawline: [description]
-- cheekbones: [description]
-- eye shape: [description]
-- eyebrow style: [description]
-- hairstyle framing the face: [description]
-
-Maintain consistent facial proportions and identity.
-
----
-
-## Body Block
-
-Use for:
-
-- anatomy prompts
-- body anchor prompts
-- pose prompts
-- scale prompts
-
-[CHARACTER_NAME] is [height description] with a [build description].
-
-Body proportions:
-
-- shoulders: [description]
-- torso: [description]
-- waist: [description]
-- hips: [description]
-- limbs: [description]
-
-Posture:
-
-[describe typical posture]
-
-Overall silhouette should read as:
-
-[describe the character's recognizable shape]
-
----
-
-## Style Block
-
-Use for:
-
-- wardrobe prompts
-- outfit generation
-- scene prompts
-
-Aesthetic keywords:
-
-- [style keyword]
-- [style keyword]
-- [style keyword]
-
-Typical clothing elements:
-
-- [element]
-- [element]
-- [element]
-
-Typical materials:
-
-- [material]
-- [material]
-
-Typical color palette:
-
-Primary:
-
-- [color]
-- [color]
-
-Accent:
-
-- [color]
-
----
-
-## Movement Block
-
-Use for:
-
-- pose sheets
-- motion anchors
-- dynamic scenes
-
-Movement style:
-
-[describe how the character moves]
-
-Posture tendencies:
-
-[describe typical stance]
-
-Gesture style:
-
-[describe how the character uses their hands or body]
-
----
-
-## Expression Block
-
-Use for:
-
-- expression sheets
-- portraits
-- interaction scenes
-
-Default expression:
-
-[description]
-
-Typical smile:
-
-[description]
-
-Emotional range:
-
-[description]
-
-Avoid exaggerated or cartoonish expressions unless explicitly requested.
-
----
-
-## Wardrobe Description Block
-
-Use for:
-
-- outfit sheets
-- wardrobe generation
-- style prompts
-
-Clothing should reflect:
-
-[aesthetic description]
-
-Common elements:
-
-- [element]
-- [element]
-- [element]
-
-Accessories may include:
-
-- [item]
-- [item]
-
-Avoid styles that conflict with the character’s core aesthetic.
-
----
-
-## Anti-Drift Rules
-
-These traits must remain consistent across generated images.
-
-Always preserve:
-
-- height and body proportions
-- facial structure and identity
-- hairstyle silhouette
-- core aesthetic style
-
-Avoid:
-
-- [common drift issue]
-- [common drift issue]
-
----
-
-## Short Prompt Description
-
-Copy this block directly into short prompts.
-
-[CHARACTER_NAME] is a [height + build] character with [distinctive facial features].
-Their style combines [style keywords] with [typical clothing elements].
-
----
-
-## Full Prompt Description
-
-Copy this block into prompts that require a full character description.
-
-[CHARACTER_NAME] is [height description] with [body description] and [facial description].
-Their aesthetic includes [style keywords], [typical clothing elements], and [accessories].
-Maintain consistent facial identity, body proportions, and style across all views.
+```text
+SOURCE_REFERENCES/
 ```
 
-These blocks are combined with prompt templates when generating images.
+This folder stores external references and non-canonical source material.
+
+Examples:
+
+```text
+SOURCE_REFERENCES/
+  legacy_pipeline/
+  inspiration/
+  raw/
+```
+
+This may include:
+
+- cropped legacy images
+- older pipeline outputs
+- inspiration images
+- raw generation outputs
+
+These assets do not need to follow the current sheet layout to remain useful.
 
 ---
 
-## Minimum Character Setup
+# Character Pipeline Overview
+
+The individual character pipeline focuses on defining the character’s **own identity and structure**.
+
+Typical stages include:
+
+| Stage                           | Purpose                                    |
+| ------------------------------- | ------------------------------------------ |
+| Face                            | establish facial identity                  |
+| Hair                            | define hairstyle consistency               |
+| Anatomy                         | define body construction                   |
+| Body / Silhouette / Turnaround  | stabilize full-body identity               |
+| Expression / Hands              | define expressive range                    |
+| UCS                             | consolidate identity into one master sheet |
+| Outfit / Design Language        | define style and wardrobe                  |
+| Poses / Motion / Scale / Scenes | expand character usage                     |
+
+---
+
+# Minimum Character Setup
 
 Before starting image generation, each character should have:
 
-- a character folder
+- a character folder created from scaffolding
 - completed `metadata.yaml`
 - completed `character_summary.md`
-- initial `prompt_blocks.md`
+- completed `prompt_blocks.md`
+- an initial `identity_guardrails.md`
 
-Once these are complete, the image generation pipeline can begin.
-
----
-
-### identity_guardrails.md (optional but recommended)
-
-Defines non-negotiable identity constraints for the character.
-
-This file helps prevent identity drift when generating images and serves as a troubleshooting guide when outputs begin to diverge from the intended design.
-
-Typical contents:
-
-- core identity traits
-- silhouette guardrails
-- facial guardrails
-- expression rules
-- known generator drift risks
-- reference hierarchy
-- identity verification checklist
-
-This file is primarily used by humans when generating prompts and reviewing results.
+Once these are in place, the visual reference pipeline can begin.
 
 ---
 
-## Recommended Workflow
+# Recommended Workflow
 
-1. Create character folder.
-2. Fill profile files.
-3. Generate face anchors.
-4. Generate anatomy sheets.
-5. Generate body anchors.
-6. Generate UCS.
-7. Introduce style with signature outfit.
-8. Expand into wardrobe, poses, and scenes.
+1. create the character folder from scaffolding
+2. fill in `00_PROFILE`
+3. generate face references
+4. generate anatomy references
+5. generate body identity sheets
+6. generate UCS
+7. generate signature outfit and design language
+8. expand into wardrobe, poses, motion, scale, scenes, and props
+
+---
+
+# Relationship to Other Template Pages
+
+This page documents **individual character templates**.
+
+Related pages:
+
+- `docs/pairs/templates.md` for character pairs
+- `docs/groups/templates.md` for groups
+- `docs/prompts/templates-index.md` for prompt template browsing
+
+Character templates define the **individual unit** of the library. Pairs and groups define **relationship-focused units** built on top of those individual characters.

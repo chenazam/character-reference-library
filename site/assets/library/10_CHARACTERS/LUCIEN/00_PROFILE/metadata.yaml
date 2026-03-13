@@ -5,55 +5,76 @@ status: active
 project: Lucien & Ragnar
 
 core_identity:
-  short_summary: 'A slender, refined man of average height with a calm, slightly mysterious presence and an occult-scholarly aesthetic.'
+  short_summary: 'A slender modern occultist with refined features, expressive dark eyes, and a quietly confident, slightly mischievous presence.'
   role_archetype:
     - scholar
   aesthetic_tags:
     - occult
-    - gothic
     - scholarly
+    - gothic
 
 physical:
   height_cm: 170
   height_imperial: '5''7"'
-  build_category: soft_slender
-  build_notes: 'Slender, lightly built physique with refined proportions and a soft, understated silhouette.'
-  shoulder_profile: moderate_shoulders
+  height_visual_category: medium
+
+  build_category: narrow_slender
+  frame_proportion: leg_dominant
+  body_fat_range: soft_average
+  body_softness_distribution: glute_dominant
+
+  build_notes: >
+    Slender narrow-framed physique with soft natural musculature.
+    Upper body appears lightly built with minimal muscle definition.
+    Lower body shows more visual volume, especially in the glutes,
+    creating a distinct rounded silhouette despite the otherwise slim frame.
+
+  shoulder_profile: narrow_shoulders
   torso_profile: soft_torso
   limb_profile: slender_limbs
   posture_profile: upright_controlled
+
+  silhouette_anchor: glute_slender
   silhouette_keywords:
     - slender
-    - refined
-    - understated
+    - leg_dominant
+    - glute_emphasis
 
 face:
   face_shape: narrow_angular
   jawline: defined_jawline
-  eye_description: 'calm, observant eyes'
-  hair_description: 'dark hair with a controlled, refined silhouette'
-  skin_description: 'pale skin'
+
+  eye_description: dark brown, observant and expressive
+  hair_description: dark brown naturally curly hair with soft volume and an irregular natural hairline
+  skin_description: light skin with subtle freckles across cheeks and nose
+
   distinctive_features:
-    - refined facial structure
-    - calm, slightly mysterious expression
+    - subtle freckles across cheeks and nose
+    - natural irregular hairline
+    - soft youthful but mature facial structure
 
 hair_color: dark
 
 style:
   primary_aesthetic: occult
+
   secondary_aesthetic:
-    - gothic
     - scholarly
+    - gothic
+
   materials:
     - wool
     - velvet
     - antique_metal
+
   primary_colors:
     - black
     - charcoal
+
   accent_colors:
     - deep_plum
     - silver
+
   recurring_accessories:
     - rings
     - talisman necklace
@@ -68,20 +89,22 @@ movement:
   movement_style: deliberate_precise
   gesture_style: restrained
   body_language: calm_composed
+  spatial_presence: neutral_presence
 
 identity_rules:
   preserve:
-    - average height with a slender, lightly built silhouette
-    - refined facial structure
-    - occult and scholarly aesthetic
-    - restrained, composed presence
-    - dark layered styling with antique accessories
+    - slender narrow-framed physique with a soft torso and minimal upper-body musculature
+    - rounded glute-dominant lower body silhouette
+    - dark brown curly hair with a natural irregular hairline
+    - subtle freckles across cheeks and nose
+    - occult and scholarly aesthetic with understated accessories
+
   avoid:
-    - making him lean-athletic
-    - making him bulky or broad-framed
-    - turning the style into generic modern casualwear
-    - making the aesthetic too theatrical or costume-like
-    - exaggerating expressions into something cartoonish
+    - making him athletic or visibly muscular
+    - widening his shoulders or torso frame
+    - flattening or reducing glute projection
+    - turning the aesthetic into generic casual streetwear
+    - exaggerating expressions or making him cartoonish
 
 reference_files:
   face_anchor: 'lucien_face_anchor_sheet_v1.png'
@@ -111,5 +134,9 @@ pipeline_status:
   scene_anchors: not_started
   prop_sheet: not_started
 
-notes: 'Core body read should be slender and refined, not lean-athletic. Style should feel occult, scholarly, and subtly gothic rather than flashy or costume-like.'
-last_updated: '2026-03-12'
+notes: >
+  Lucien’s body should read as slender and lightly built rather than athletic.
+  The silhouette should emphasize the contrast between his narrow torso and
+  the rounded glute-dominant lower body.
+
+last_updated: '2026-03-13'

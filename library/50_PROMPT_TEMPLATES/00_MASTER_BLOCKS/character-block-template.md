@@ -4,7 +4,7 @@ Replace this block with character-specific information from the character’s `p
 
 ```
 Character:
-[CHARACTER_BLOCK
+[CHARACTER_BLOCK]
 ```
 
 Example:

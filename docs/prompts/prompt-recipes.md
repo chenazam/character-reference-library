@@ -56,7 +56,7 @@ Use blocks:
 
 Attach references:
 
-• source face reference  
+• source face reference
 • existing face anchors (if available)
 
 ---

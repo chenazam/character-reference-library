@@ -5,7 +5,6 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 CHARACTERS_ROOT = ROOT / "docs/assets/library/10_CHARACTERS"
 SNIPPETS_ROOT = ROOT / "docs/snippets/galleries"
 
-# pipeline folders we want snippet galleries for
 PIPELINE_STAGES = {
     "01_FACE": "face",
     "02_HAIR": "hair",
@@ -37,11 +36,7 @@ def generate_gallery(images):
     lines.append("")
 
     for img in images:
-
-        # path relative to docs/
         rel = img.relative_to(ROOT / "docs").as_posix()
-
-        # convert to site-root path
         rel = "/" + rel
 
         lines.append(f'  <a href="{rel}" target="_blank">')
@@ -59,12 +54,17 @@ def main():
 
     SNIPPETS_ROOT.mkdir(parents=True, exist_ok=True)
 
-    for character_dir in CHARACTERS_ROOT.iterdir():
+    for character_dir in sorted(CHARACTERS_ROOT.iterdir()):
 
         if not character_dir.is_dir():
             continue
 
         character = character_dir.name.lower()
+
+        character_snippet_dir = SNIPPETS_ROOT / character
+        character_snippet_dir.mkdir(parents=True, exist_ok=True)
+
+        print(f"\nProcessing {character_dir.name}")
 
         for stage_folder, stage_name in PIPELINE_STAGES.items():
 
@@ -79,15 +79,16 @@ def main():
             ]
 
             if not images:
+                print(f"  Skipping {stage_folder} (no images)")
                 continue
 
-            snippet_path = SNIPPETS_ROOT / f"{character}-{stage_name}.md"
+            snippet_path = character_snippet_dir / f"{stage_name}.md"
 
             gallery = generate_gallery(images)
 
             snippet_path.write_text(gallery, encoding="utf-8")
 
-            print(f"Generated {snippet_path}")
+            print(f"  Generated {snippet_path.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":

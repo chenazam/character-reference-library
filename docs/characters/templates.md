@@ -2,11 +2,50 @@
 
 This page explains how to create a new character using the project’s folder and file templates.
 
-The goal is to ensure that all characters follow the same structure and reference pipeline.
+The goal is to ensure that all characters follow the same structure, follow the same reference pipeline, and remain easy to browse inside the MkDocs library.
 
 ---
 
-# Creating a New Character
+## Character Page Layout
+
+Character pages in the MkDocs site serve as **visual reference hubs** for browsing a character’s generated sheets.
+
+These pages are separate from the character asset folders and are located in:
+
+```text
+docs/characters/
+```
+
+Example:
+
+```text
+docs/characters/lucien.md
+```
+
+Each character page aggregates thumbnail previews of the character’s reference sheets and links to the full-size images stored in:
+
+```text
+docs/assets/library/10_CHARACTERS/
+```
+
+A reusable template for these pages is provided here:
+
+```text
+docs/characters/character-page-template.md
+```
+
+When creating a new character page:
+
+1. Copy the template.
+2. Rename it to the character name.
+3. Replace placeholder paths.
+4. Add thumbnails for the character’s available sheets.
+
+These pages are optimized for **visual browsing and prompt construction**, rather than for pipeline documentation.
+
+---
+
+## Creating a New Character
 
 To create a new character:
 
@@ -15,19 +54,19 @@ To create a new character:
 3. Fill out the files in `00_PROFILE`.
 4. Begin generating the reference sheets following the pipeline.
 
-Example:
+Example asset folder:
 
-```
-library/10_CHARACTERS/LUCIEN
+```text
+docs/assets/library/10_CHARACTERS/LUCIEN
 ```
 
 ---
 
-# Character Folder Template
+## Character Folder Template
 
-Every character folder follows the same structure.
+Every character asset folder follows the same structure.
 
-```
+```text
 CHARACTER_NAME/
 
 00_PROFILE
@@ -59,11 +98,11 @@ Each folder corresponds to a stage in the character generation pipeline.
 
 ---
 
-# The Profile Folder
+## The Profile Folder
 
 The `00_PROFILE` folder contains the conceptual definition of the character.
 
-```
+```text
 00_PROFILE/
 
 metadata.yaml
@@ -75,53 +114,47 @@ These files define the character before reference sheets are generated.
 
 ---
 
-# metadata.yaml Template
+## `metadata.yaml` Template
 
-```
+```yaml
 name: [CHARACTER_NAME]
 slug: [character_slug]
 
 height_cm: [HEIGHT_CM]
-height_imperial: "[HEIGHT_IMPERIAL]"
+height_imperial: '[HEIGHT_IMPERIAL]'
 
 build_category: [build_type]
 
 tags:
-
-[style_tag]
-
-[archetype]
+  - [style_tag]
+  - [archetype]
 
 style_keywords:
-
-[style_word]
-
-[style_word]
+  - [style_word]
+  - [style_word]
 
 signature_accessories:
-
-[item]
+  - [item]
 
 reference_files:
-
-face_anchor: ""
-anatomy_sheet: ""
-body_anchor: ""
-ultimate_character_sheet: ""
-signature_outfit_sheet: ""
+  face_anchor: ''
+  anatomy_sheet: ''
+  body_anchor: ''
+  ultimate_character_sheet: ''
+  signature_outfit_sheet: ''
 ```
 
 This file stores structured metadata for the character.
 
 ---
 
-# character_summary.md Template
+## `character_summary.md` Template
 
 This file contains a human-readable overview of the character.
 
 Example structure:
 
-```
+```markdown
 # Character Summary — [CHARACTER_NAME]
 
 ## Core Identity
@@ -130,7 +163,7 @@ Name: [CHARACTER_NAME]
 
 Height: [HEIGHT_CM] cm ([HEIGHT_IMPERIAL])
 
-Build Type: [lean / athletic / muscular / heavyset / etc]
+Build Type: [lean / athletic / muscular / heavyset / etc.]
 
 Age Appearance: [approximate age range]
 
@@ -155,18 +188,18 @@ Use this block when a prompt needs a **complete character description**.
 
 Key features:
 
-• face shape: [description]
-• jawline: [description]
-• eyes: [description]
-• hair: [description]
-• skin tone: [description]
+- face shape: [description]
+- jawline: [description]
+- eyes: [description]
+- hair: [description]
+- skin tone: [description]
 
 Body proportions:
 
-• shoulder width: [description]
-• torso shape: [description]
-• limb proportions: [description]
-• posture: [description]
+- shoulder width: [description]
+- torso shape: [description]
+- limb proportions: [description]
+- posture: [description]
 
 Overall silhouette:
 
@@ -178,31 +211,31 @@ Overall silhouette:
 
 Aesthetic keywords:
 
-• [style keyword]
-• [style keyword]
-• [style keyword]
+- [style keyword]
+- [style keyword]
+- [style keyword]
 
 Typical clothing elements:
 
-• [element]
-• [element]
-• [element]
+- [element]
+- [element]
+- [element]
 
 Typical materials:
 
-• [material]
-• [material]
+- [material]
+- [material]
 
 Typical colors:
 
 Primary colors:
 
-• [color]
-• [color]
+- [color]
+- [color]
 
 Accent colors:
 
-• [color]
+- [color]
 
 ---
 
@@ -210,9 +243,9 @@ Accent colors:
 
 Recurring items that often appear with the character:
 
-• [item]
-• [item]
-• [item]
+- [item]
+- [item]
+- [item]
 
 ---
 
@@ -262,16 +295,16 @@ These traits should **never drift in generated images**.
 
 Always preserve:
 
-• height range
-• body proportions
-• facial structure
-• hairstyle silhouette
-• core aesthetic
+- height range
+- body proportions
+- facial structure
+- hairstyle silhouette
+- core aesthetic
 
 Avoid:
 
-• [common drift issue]
-• [common drift issue]
+- [common drift issue]
+- [common drift issue]
 
 ---
 
@@ -279,11 +312,11 @@ Avoid:
 
 These sheets define the character’s visual identity.
 
-• Face Anchor Sheet
-• Anatomy Sheet
-• Body Anchor Sheet
-• Ultimate Character Sheet
-• Signature Outfit Sheet
+- Face Anchor Sheet
+- Anatomy Sheet
+- Body Anchor Sheet
+- Ultimate Character Sheet
+- Signature Outfit Sheet
 
 These should be attached whenever possible.
 
@@ -313,13 +346,13 @@ This file acts as a condensed character reference.
 
 ---
 
-# prompt_blocks.md Template
+## `prompt_blocks.md` Template
 
 This file contains reusable prompt fragments that describe the character.
 
 Example structure:
 
-```
+```markdown
 # Prompt Blocks — [CHARACTER_NAME]
 
 This file contains reusable prompt fragments describing the character.
@@ -330,6 +363,7 @@ Each block can be copied into prompts depending on the generation task.
 ## Identity Block (Short)
 
 Use for:
+
 - quick prompts
 - scene prompts
 - interaction prompts
@@ -342,6 +376,7 @@ Their aesthetic is [style keywords] with [typical clothing elements].
 ## Identity Block (Extended)
 
 Use for:
+
 - character setup
 - detailed prompts
 - new chat initialization
@@ -350,18 +385,18 @@ Use for:
 
 Key facial traits:
 
-• face shape: [description]
-• jawline: [description]
-• eyes: [description]
-• hair: [description]
-• skin tone: [description]
+- face shape: [description]
+- jawline: [description]
+- eyes: [description]
+- hair: [description]
+- skin tone: [description]
 
 Body proportions:
 
-• shoulder width: [description]
-• torso shape: [description]
-• limb proportions: [description]
-• posture: [description]
+- shoulder width: [description]
+- torso shape: [description]
+- limb proportions: [description]
+- posture: [description]
 
 Overall silhouette:
 
@@ -372,18 +407,19 @@ Overall silhouette:
 ## Face Block
 
 Use for:
+
 - face anchor prompts
 - portrait prompts
 - expression sheets
 
 Facial description:
 
-• face shape: [description]
-• jawline: [description]
-• cheekbones: [description]
-• eye shape: [description]
-• eyebrow style: [description]
-• hairstyle framing the face: [description]
+- face shape: [description]
+- jawline: [description]
+- cheekbones: [description]
+- eye shape: [description]
+- eyebrow style: [description]
+- hairstyle framing the face: [description]
 
 Maintain consistent facial proportions and identity.
 
@@ -392,6 +428,7 @@ Maintain consistent facial proportions and identity.
 ## Body Block
 
 Use for:
+
 - anatomy prompts
 - body anchor prompts
 - pose prompts
@@ -401,11 +438,11 @@ Use for:
 
 Body proportions:
 
-• shoulders: [description]
-• torso: [description]
-• waist: [description]
-• hips: [description]
-• limbs: [description]
+- shoulders: [description]
+- torso: [description]
+- waist: [description]
+- hips: [description]
+- limbs: [description]
 
 Posture:
 
@@ -420,43 +457,45 @@ Overall silhouette should read as:
 ## Style Block
 
 Use for:
+
 - wardrobe prompts
 - outfit generation
 - scene prompts
 
 Aesthetic keywords:
 
-• [style keyword]
-• [style keyword]
-• [style keyword]
+- [style keyword]
+- [style keyword]
+- [style keyword]
 
 Typical clothing elements:
 
-• [element]
-• [element]
-• [element]
+- [element]
+- [element]
+- [element]
 
 Typical materials:
 
-• [material]
-• [material]
+- [material]
+- [material]
 
 Typical color palette:
 
 Primary:
 
-• [color]
-• [color]
+- [color]
+- [color]
 
 Accent:
 
-• [color]
+- [color]
 
 ---
 
 ## Movement Block
 
 Use for:
+
 - pose sheets
 - motion anchors
 - dynamic scenes
@@ -478,6 +517,7 @@ Gesture style:
 ## Expression Block
 
 Use for:
+
 - expression sheets
 - portraits
 - interaction scenes
@@ -501,6 +541,7 @@ Avoid exaggerated or cartoonish expressions unless explicitly requested.
 ## Wardrobe Description Block
 
 Use for:
+
 - outfit sheets
 - wardrobe generation
 - style prompts
@@ -511,14 +552,14 @@ Clothing should reflect:
 
 Common elements:
 
-• [element]
-• [element]
-• [element]
+- [element]
+- [element]
+- [element]
 
 Accessories may include:
 
-• [item]
-• [item]
+- [item]
+- [item]
 
 Avoid styles that conflict with the character’s core aesthetic.
 
@@ -530,15 +571,15 @@ These traits must remain consistent across generated images.
 
 Always preserve:
 
-• height and body proportions
-• facial structure and identity
-• hairstyle silhouette
-• core aesthetic style
+- height and body proportions
+- facial structure and identity
+- hairstyle silhouette
+- core aesthetic style
 
 Avoid:
 
-• [common drift issue]
-• [common drift issue]
+- [common drift issue]
+- [common drift issue]
 
 ---
 
@@ -564,7 +605,7 @@ These blocks are combined with prompt templates when generating images.
 
 ---
 
-# Minimum Character Setup
+## Minimum Character Setup
 
 Before starting image generation, each character should have:
 
@@ -577,13 +618,13 @@ Once these are complete, the image generation pipeline can begin.
 
 ---
 
-# Recommended Workflow
+## Recommended Workflow
 
-1. Create character folder
-2. Fill profile files
-3. Generate face anchors
-4. Generate anatomy sheets
-5. Generate body anchors
-6. Generate UCS
-7. Introduce style with signature outfit
-8. Expand into wardrobe, poses, and scenes
+1. Create character folder.
+2. Fill profile files.
+3. Generate face anchors.
+4. Generate anatomy sheets.
+5. Generate body anchors.
+6. Generate UCS.
+7. Introduce style with signature outfit.
+8. Expand into wardrobe, poses, and scenes.

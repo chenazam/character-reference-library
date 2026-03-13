@@ -1,0 +1,20 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Publish Docs and Deploy",
+      "type": "shell",
+      "command": "mkdocs build && git add . && (git diff --cached --quiet || git commit -m \"Update docs\") && git push && mkdocs gh-deploy --clean",
+      "options": {
+        "shell": {
+          "executable": "C:\\Program Files\\Git\\bin\\bash.exe"
+        }
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}

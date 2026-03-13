@@ -66,7 +66,7 @@ These references are most useful for full-body prompting, pose consistency, and 
 
 These references are useful for facial acting, emotional range, and hand-sensitive prompts.
 
-<!-- --8<-- "snippets/galleries/lucien-expression-gesture.md" -->
+--8<-- "snippets/galleries/lucien-expressions.md"
 
 ---
 

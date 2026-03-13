@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#library-folder-structure" class="md-skip">
+        <a href="#reference-library-folder-structure" class="md-skip">
           Skip to content
         </a>
       
@@ -735,16 +735,19 @@
                   
 
 
-<h1 id="library-folder-structure">Library Folder Structure</h1>
-<p>The <code>library/</code> directory contains all generated assets, references, and prompt templates used in the character pipeline.</p>
-<p>Documentation explaining how to use these assets lives in <code>docs/</code>.<br />
-The <code>library/</code> folder itself stores the <strong>actual files used for generation</strong>.</p>
-<p>Preview images for the MkDocs site are stored in:</p>
-<p>docs/assets/library/</p>
-<p>These are selected copies of reference sheets from the main library.</p>
+<h1 id="reference-library-folder-structure">Reference Library Folder Structure</h1>
+<p>The reference library is stored inside:</p>
+<pre><code>docs/assets/library/
+</code></pre>
+<p>This folder contains <strong>all generated assets, reference images, and prompt templates</strong> used in the character generation pipeline.</p>
+<p>Unlike many documentation projects, this system intentionally stores the full asset library directly inside <code>docs/assets/</code> so that all files are immediately accessible through the MkDocs site.</p>
+<p>Documentation explaining how the system works lives in:</p>
+<pre><code>docs/
+</code></pre>
+<p>The <code>docs/assets/library/</code> folder stores the <strong>actual reference images and generation resources</strong>.</p>
 <hr />
 <h1 id="top-level-library-structure">Top-Level Library Structure</h1>
-<pre><code>library/
+<pre><code>docs/assets/library/
 
 10_CHARACTERS
 20_CHARACTER_PAIRS
@@ -753,18 +756,19 @@ The <code>library/</code> folder itself stores the <strong>actual files used for
 50_PROMPT_TEMPLATES
 60_INSPIRATION
 </code></pre>
-<h2 id="10_characters">10_CHARACTERS</h2>
+<hr />
+<h1 id="10_characters">10_CHARACTERS</h1>
 <p>Contains the full reference pipeline for each individual character.</p>
 <p>Each character receives its own folder with all reference sheets generated through the pipeline.</p>
 <p>Example:</p>
 <pre><code>10_CHARACTERS/
-LUCIEN/
-RAGNAR/
-JONAH/
+├── LUCIEN/
+├── RAGNAR/
+└── JONAH/
 </code></pre>
 <p>Each character folder contains anatomy references, style sheets, pose sheets, and other generated resources.</p>
 <hr />
-<h2 id="20_character_pairs">20_CHARACTER_PAIRS</h2>
+<h1 id="20_character_pairs">20_CHARACTER_PAIRS</h1>
 <p>Contains resources for <strong>two-character relationships</strong>.</p>
 <p>This includes reference sheets used when two characters frequently appear together.</p>
 <p>Typical contents:</p>
@@ -776,11 +780,11 @@ JONAH/
 </ul>
 <p>Example:</p>
 <pre><code>20_CHARACTER_PAIRS/
-LUCIEN__RAGNAR/
-JASPER__BLAKE/
+├── LUCIEN__RAGNAR/
+└── JASPER__BLAKE/
 </code></pre>
 <hr />
-<h2 id="30_character_groups">30_CHARACTER_GROUPS</h2>
+<h1 id="30_character_groups">30_CHARACTER_GROUPS</h1>
 <p>Contains resources for <strong>groups of three or more characters</strong>.</p>
 <p>Useful for teams, families, ensembles, or story casts.</p>
 <p>Typical contents:</p>
@@ -792,11 +796,11 @@ JASPER__BLAKE/
 </ul>
 <p>Example:</p>
 <pre><code>30_CHARACTER_GROUPS/
-WITCH_COVEN/
-GYM_CREW/
+├── WITCH_COVEN/
+└── GYM_CREW/
 </code></pre>
 <hr />
-<h2 id="40_environments">40_ENVIRONMENTS</h2>
+<h1 id="40_environments">40_ENVIRONMENTS</h1>
 <p>Contains reference sheets for <strong>locations and environments</strong> where characters appear.</p>
 <p>These act as scene anchors to keep locations visually consistent.</p>
 <p>Typical environment sheets include:</p>
@@ -816,30 +820,27 @@ CITY_STREET/
 </code></pre>
 <p>Environment anchors are often attached to prompts when generating <strong>scene images</strong>.</p>
 <hr />
-<h2 id="50_prompt_templates">50_PROMPT_TEMPLATES</h2>
+<h1 id="50_prompt_templates">50_PROMPT_TEMPLATES</h1>
 <p>Contains reusable prompt templates used throughout the pipeline.</p>
 <p>Templates are organized by generation stage.</p>
 <p>Example:</p>
 <pre><code>50_PROMPT_TEMPLATES/
 
-FACE/
-ANATOMY/
-BODY/
-UCS/
-WARDROBE/
-POSE/
-SCENE/
+00_MASTER_BLOCKS
+01_FACE_ANCHORS
+03_ANATOMY
+11_UCS
 </code></pre>
-<p>Each template should include placeholders such as:</p>
+<p>Each template should include reusable placeholder blocks such as:</p>
 <pre><code>[CHARACTER BLOCK]
 [GLOBAL STYLE BLOCK]
 </code></pre>
 <p>These allow prompts to be reused across multiple characters.</p>
 <hr />
-<h2 id="60_inspiration">60_INSPIRATION</h2>
+<h1 id="60_inspiration">60_INSPIRATION</h1>
 <p>Contains reference images used as <strong>design inspiration</strong>.</p>
 <p>These are not generated assets, but visual references that influence character design.</p>
-<p>Examples:</p>
+<p>Examples include:</p>
 <ul>
 <li>fashion references</li>
 <li>architecture references</li>
@@ -912,11 +913,10 @@ face_anchor_sheet.png
 <p>These images establish the character’s facial identity.</p>
 <hr />
 <h2 id="02_hair">02_HAIR</h2>
-<p>Hair structure references.</p>
-<p>Examples:</p>
+<p>Hair structure references used to stabilize hairstyle.</p>
+<p>Example:</p>
 <pre><code>hair_reference_sheet.png
 </code></pre>
-<p>Used to prevent hairstyle drift.</p>
 <hr />
 <h2 id="03_anatomy">03_ANATOMY</h2>
 <p>Bare-torso anatomy references used to define physique and proportions.</p>
@@ -971,7 +971,7 @@ anatomy_sheet.png
 <li>casual outfit</li>
 <li>work outfit</li>
 <li>formal outfit</li>
-<li>relaxed home outfit</li>
+<li>home outfit</li>
 </ul>
 <hr />
 <h2 id="15_poses">15_POSES</h2>
@@ -1015,6 +1015,7 @@ body_anchor_sheet.png
 ultimate_character_sheet.png
 signature_outfit_sheet.png
 </code></pre>
+<p>These images are the <strong>most important visual anchors for the character</strong>.</p>
 <hr />
 <h2 id="source_references">SOURCE_REFERENCES</h2>
 <p>Contains original source images used during character creation.</p>

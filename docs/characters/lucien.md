@@ -3,10 +3,10 @@
 <div style="display:grid; grid-template-columns: minmax(280px, 420px) 1fr; gap:1.5rem; align-items:start;">
 
   <div>
-    <img src="../assets/library/10_CHARACTERS/LUCIEN/lucien_ucs.png" alt="Lucien Ultimate Character Sheet" style="width:100%; border-radius:12px; border:1px solid #ddd;" />
+    <img src="/docs/assets/library/10_CHARACTERS/LUCIEN/11_UCS/lucien_ucs_v1.png" alt="Lucien Ultimate Character Sheet" style="width:100%; border-radius:12px; border:1px solid #ddd;" />
   </div>
 
-  <div>
+  <div markdown="1">
 
 ## Quick Identity Summary
 
@@ -148,22 +148,22 @@ These are Lucien’s most important reference sheets and should be attached when
 <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1rem;">
 
   <div style="border:1px solid #ddd; border-radius:12px; padding:0.75rem;">
-    <img src="../assets/library/10_CHARACTERS/LUCIEN/lucien_face_anchor.png" alt="Lucien Face Anchor" style="width:100%; border-radius:8px; margin-bottom:0.75rem;" />
+    <img src="../assets/library/10_CHARACTERS/LUCIEN/01_FACE/lucien_face_anchor_v1.png" alt="Lucien Face Anchor" style="width:100%; border-radius:8px; margin-bottom:0.75rem;" />
     <strong>Face Anchor Sheet</strong>
   </div>
 
   <div style="border:1px solid #ddd; border-radius:12px; padding:0.75rem;">
-    <img src="../assets/library/10_CHARACTERS/LUCIEN/lucien_anatomy_sheet.png" alt="Lucien Anatomy Sheet" style="width:100%; border-radius:8px; margin-bottom:0.75rem;" />
+    <img src="../assets/library/10_CHARACTERS/LUCIEN/03_ANATOMY/lucien_anatomy_sheet_v1.png" alt="Lucien Anatomy Sheet" style="width:100%; border-radius:8px; margin-bottom:0.75rem;" />
     <strong>Anatomy Sheet</strong>
   </div>
 
   <div style="border:1px solid #ddd; border-radius:12px; padding:0.75rem;">
-    <img src="../assets/library/10_CHARACTERS/LUCIEN/lucien_ucs.png" alt="Lucien UCS" style="width:100%; border-radius:8px; margin-bottom:0.75rem;" />
+    <img src="/docs/assets/library/10_CHARACTERS/LUCIEN/11_UCS/lucien_ucs_v1.png" alt="Lucien UCS" style="width:100%; border-radius:8px; margin-bottom:0.75rem;" />
     <strong>Ultimate Character Sheet</strong>
   </div>
 
   <div style="border:1px solid #ddd; border-radius:12px; padding:0.75rem;">
-    <img src="../assets/library/10_CHARACTERS/LUCIEN/lucien_signature_outfit.png" alt="Lucien Signature Outfit" style="width:100%; border-radius:8px; margin-bottom:0.75rem;" />
+    <img src="/docs/assets/library/10_CHARACTERS/LUCIEN/12_SIGNATURE_OUTFIT/lucien_signature_outfit_v1.png" alt="Lucien Signature Outfit" style="width:100%; border-radius:8px; margin-bottom:0.75rem;" />
     <strong>Signature Outfit Sheet</strong>
   </div>
 
@@ -175,9 +175,9 @@ These are Lucien’s most important reference sheets and should be attached when
 
 These files define Lucien conceptually.
 
-- `library/10_CHARACTERS/LUCIEN/00_PROFILE/metadata.yaml`
-- `library/10_CHARACTERS/LUCIEN/00_PROFILE/character_summary.md`
-- `library/10_CHARACTERS/LUCIEN/00_PROFILE/prompt_blocks.md`
+- `docs/assets/library/10_CHARACTERS/LUCIEN/00_PROFILE/metadata.yaml`
+- `docs/assets/library/10_CHARACTERS/LUCIEN/00_PROFILE/character_summary.md`
+- `docs/assets/library/10_CHARACTERS/LUCIEN/00_PROFILE/prompt_blocks.md`
 
 Recommended use:
 
@@ -246,10 +246,10 @@ Avoid:
 ## Library Paths
 
 **Main folder:**  
-`library/10_CHARACTERS/LUCIEN/`
+`docs/assets/library/10_CHARACTERS/LUCIEN/`
 
 **Profile folder:**  
-`library/10_CHARACTERS/LUCIEN/00_PROFILE/`
+`docs/assets/library/10_CHARACTERS/LUCIEN/00_PROFILE/`
 
 **Identity pack folder:**  
-`library/10_CHARACTERS/LUCIEN/IDENTITY_PACK/`
+`docs/assets/library/10_CHARACTERS/LUCIEN/IDENTITY_PACK/`

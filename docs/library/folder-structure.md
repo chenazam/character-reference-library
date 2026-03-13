@@ -1,22 +1,29 @@
-# Library Folder Structure
+# Reference Library Folder Structure
 
-The `library/` directory contains all generated assets, references, and prompt templates used in the character pipeline.
+The reference library is stored inside:
 
-Documentation explaining how to use these assets lives in `docs/`.  
-The `library/` folder itself stores the **actual files used for generation**.
-
-Preview images for the MkDocs site are stored in:
-
+```
 docs/assets/library/
+```
 
-These are selected copies of reference sheets from the main library.
+This folder contains **all generated assets, reference images, and prompt templates** used in the character generation pipeline.
+
+Unlike many documentation projects, this system intentionally stores the full asset library directly inside `docs/assets/` so that all files are immediately accessible through the MkDocs site.
+
+Documentation explaining how the system works lives in:
+
+```
+docs/
+```
+
+The `docs/assets/library/` folder stores the **actual reference images and generation resources**.
 
 ---
 
 # Top-Level Library Structure
 
 ```
-library/
+docs/assets/library/
 
 10_CHARACTERS
 20_CHARACTER_PAIRS
@@ -26,7 +33,9 @@ library/
 60_INSPIRATION
 ```
 
-## 10_CHARACTERS
+---
+
+# 10_CHARACTERS
 
 Contains the full reference pipeline for each individual character.
 
@@ -36,16 +45,16 @@ Example:
 
 ```
 10_CHARACTERS/
-LUCIEN/
-RAGNAR/
-JONAH/
+├── LUCIEN/
+├── RAGNAR/
+└── JONAH/
 ```
 
 Each character folder contains anatomy references, style sheets, pose sheets, and other generated resources.
 
 ---
 
-## 20_CHARACTER_PAIRS
+# 20_CHARACTER_PAIRS
 
 Contains resources for **two-character relationships**.
 
@@ -62,13 +71,13 @@ Example:
 
 ```
 20_CHARACTER_PAIRS/
-LUCIEN__RAGNAR/
-JASPER__BLAKE/
+├── LUCIEN__RAGNAR/
+└── JASPER__BLAKE/
 ```
 
 ---
 
-## 30_CHARACTER_GROUPS
+# 30_CHARACTER_GROUPS
 
 Contains resources for **groups of three or more characters**.
 
@@ -85,13 +94,13 @@ Example:
 
 ```
 30_CHARACTER_GROUPS/
-WITCH_COVEN/
-GYM_CREW/
+├── WITCH_COVEN/
+└── GYM_CREW/
 ```
 
 ---
 
-## 40_ENVIRONMENTS
+# 40_ENVIRONMENTS
 
 Contains reference sheets for **locations and environments** where characters appear.
 
@@ -119,7 +128,7 @@ Environment anchors are often attached to prompts when generating **scene images
 
 ---
 
-## 50_PROMPT_TEMPLATES
+# 50_PROMPT_TEMPLATES
 
 Contains reusable prompt templates used throughout the pipeline.
 
@@ -130,16 +139,13 @@ Example:
 ```
 50_PROMPT_TEMPLATES/
 
-FACE/
-ANATOMY/
-BODY/
-UCS/
-WARDROBE/
-POSE/
-SCENE/
+00_MASTER_BLOCKS
+01_FACE_ANCHORS
+03_ANATOMY
+11_UCS
 ```
 
-Each template should include placeholders such as:
+Each template should include reusable placeholder blocks such as:
 
 ```
 [CHARACTER BLOCK]
@@ -150,13 +156,13 @@ These allow prompts to be reused across multiple characters.
 
 ---
 
-## 60_INSPIRATION
+# 60_INSPIRATION
 
 Contains reference images used as **design inspiration**.
 
 These are not generated assets, but visual references that influence character design.
 
-Examples:
+Examples include:
 
 - fashion references
 - architecture references
@@ -259,15 +265,13 @@ These images establish the character’s facial identity.
 
 ## 02_HAIR
 
-Hair structure references.
+Hair structure references used to stabilize hairstyle.
 
-Examples:
+Example:
 
 ```
 hair_reference_sheet.png
 ```
-
-Used to prevent hairstyle drift.
 
 ---
 
@@ -369,7 +373,7 @@ Examples:
 - casual outfit
 - work outfit
 - formal outfit
-- relaxed home outfit
+- home outfit
 
 ---
 
@@ -435,6 +439,8 @@ body_anchor_sheet.png
 ultimate_character_sheet.png
 signature_outfit_sheet.png
 ```
+
+These images are the **most important visual anchors for the character**.
 
 ---
 

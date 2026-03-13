@@ -1,0 +1,113 @@
+name: Lucien
+slug: lucien
+
+status: active
+project: ''
+
+core_identity:
+  short_summary: 'A slender, refined man of average height with a calm, slightly mysterious presence and an occult-scholarly aesthetic.'
+  role_archetype:
+    - scholar
+  aesthetic_tags:
+    - occult
+    - gothic
+    - scholarly
+
+physical:
+  height_cm: 170
+  height_imperial: '5''7"'
+  build_category: soft_slender
+  build_notes: 'Slender, lightly built physique with refined proportions and a soft, understated silhouette.'
+  shoulder_profile: moderate_shoulders
+  torso_profile: soft_torso
+  limb_profile: slender_limbs
+  posture_profile: upright_controlled
+  silhouette_keywords:
+    - slender
+    - refined
+    - understated
+
+face:
+  face_shape: narrow_angular
+  jawline: defined_jawline
+  eye_description: 'calm, observant eyes'
+  hair_description: 'dark hair with a controlled, refined silhouette'
+  skin_description: 'pale skin'
+  distinctive_features:
+    - refined facial structure
+    - calm, slightly mysterious expression
+
+style:
+  primary_aesthetic: occult
+  secondary_aesthetic:
+    - gothic
+    - scholarly
+  materials:
+    - wool
+    - velvet
+    - antique_metal
+  primary_colors:
+    - black
+    - charcoal
+  accent_colors:
+    - deep_plum
+    - silver
+  recurring_accessories:
+    - rings
+    - talisman necklace
+    - antique jewelry
+
+expression:
+  default_expression: calm_reserved
+  smile_type: subtle_smile
+  emotional_tone: controlled
+
+movement:
+  movement_style: deliberate_precise
+  gesture_style: restrained
+  body_language: calm_composed
+
+identity_rules:
+  preserve:
+    - average height with a slender, lightly built silhouette
+    - refined facial structure
+    - occult and scholarly aesthetic
+    - restrained, composed presence
+    - dark layered styling with antique accessories
+  avoid:
+    - making him lean-athletic
+    - making him bulky or broad-framed
+    - turning the style into generic modern casualwear
+    - making the aesthetic too theatrical or costume-like
+    - exaggerating expressions into something cartoonish
+
+reference_files:
+  face_anchor: 'lucien_face_anchor_sheet_v1.png'
+  anatomy_sheet: 'lucien_anatomy_sheet_v1.png'
+  body_anchor: 'lucien_body_anchor_v1.png'
+  ultimate_character_sheet: ''
+  signature_outfit_sheet: ''
+
+pipeline_status:
+  face_anchor: false
+  hair_sheet: false
+  anatomy_sheet: false
+  proportion_grid: false
+  muscle_tension: false
+  body_anchor: false
+  silhouette_sheet: false
+  turnaround_sheet: false
+  expression_sheet: false
+  hand_sheet: false
+  ucs: false
+  signature_outfit: false
+  design_language: false
+  wardrobe: false
+  pose_sheet: false
+  motion_sheet: false
+  scale_sheet: false
+  scene_anchors: false
+  prop_sheet: false
+
+notes: 'Core body read should be slender and refined, not lean-athletic. Style should feel occult, scholarly, and subtly gothic rather than flashy or costume-like.'
+last_updated: '2026-03-12'

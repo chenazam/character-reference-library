@@ -4,6 +4,10 @@ theme:
   name: material
 site_description: AI character pipeline, prompts, references, and metadata
 
+markdown_extensions:
+  - attr_list
+  - md_in_html
+
 theme:
   name: material
   features:

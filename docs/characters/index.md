@@ -10,7 +10,7 @@ Use the character pages for detailed prompt workflows, reference priorities, and
       <h2 style="margin-top:0;">Lucien</h2>
       <p><strong>170 cm (5'7")</strong> · soft-slender · occult, gothic, scholarly</p>
       <p>Refined, slender, and quietly mysterious, with an occult and scholarly visual identity.</p>
-      <p><a href="lucien.md">Open character page</a></p>
+      <p><a href="lucien">Open character page</a></p>
     </div>
   </div>
 
@@ -20,7 +20,7 @@ Use the character pages for detailed prompt workflows, reference priorities, and
       <h2 style="margin-top:0;">Jonah</h2>
       <p><strong>178 cm (5'10")</strong> · lean, elegant · refined, composed</p>
       <p>Tall and long-proportioned, with a graceful silhouette and calm, controlled presence.</p>
-      <p><a href="jonah.md">Open character page</a></p>
+      <p><a href="jonah">Open character page</a></p>
     </div>
   </div>
 

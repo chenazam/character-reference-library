@@ -11,6 +11,36 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/BLAKE/00_PROFILE/character_summary/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/BLAKE/00_PROFILE/identity_guardrails/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/BLAKE/00_PROFILE/prompt_blocks/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/JASPER/00_PROFILE/character_summary/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/JASPER/00_PROFILE/identity_guardrails/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/JASPER/00_PROFILE/prompt_blocks/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/JONAH/00_PROFILE/character_summary/</loc>
          <lastmod>2026-03-13</lastmod>
          <changefreq>daily</changefreq>
@@ -37,6 +67,21 @@
     </url>
     <url>
          <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/LUCIEN/00_PROFILE/prompt_blocks/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/20_CHARACTER_PAIRS/BLAKE_JASPER/00_PROFILE/identity_guardrails/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/20_CHARACTER_PAIRS/BLAKE_JASPER/00_PROFILE/pair_summary/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/20_CHARACTER_PAIRS/BLAKE_JASPER/00_PROFILE/prompt_blocks/</loc>
          <lastmod>2026-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -301,6 +346,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/characters/jasper/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/characters/jonah/</loc>
          <lastmod>2026-03-13</lastmod>
          <changefreq>daily</changefreq>
@@ -367,6 +417,11 @@
     </url>
     <url>
          <loc>https://charreflib.chenazam.com/pairs/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/pairs/templates/</loc>
          <lastmod>2026-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>

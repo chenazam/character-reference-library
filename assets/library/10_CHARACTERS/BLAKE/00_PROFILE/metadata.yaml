@@ -1,0 +1,122 @@
+name: Blake
+slug: blake
+
+status: active
+project: Blake & Jasper
+
+core_identity:
+  short_summary: Tall muscular athlete with confident presence and polished athletic style.
+  role_archetype:
+    - protector
+    - athlete
+  aesthetic_tags:
+    - athletic
+    - luxury
+
+physical:
+  height_cm: 191
+  height_imperial: '6''3"'
+
+  build_category: athletic_muscular
+
+  build_notes: >
+    Large muscular athletic build with broad shoulders, thick arms,
+    and powerful upper-body development. His physique is visibly larger
+    and heavier than Jasper’s, emphasizing chest, shoulders, and arms
+    rather than leg-dominant athleticism.
+
+  shoulder_profile: broad_shoulders
+  torso_profile: athletic_torso
+  limb_profile: thick_limbs
+  posture_profile: confident_open
+
+  silhouette_keywords:
+    - tall
+    - broad
+    - muscular
+    - imposing
+
+face:
+  face_shape: square
+  jawline: defined_jawline
+
+  eye_description: calm confident eyes
+  hair_description: short dark brown hair with clean athletic styling
+  skin_description: light skin with warm athletic tone
+
+  distinctive_features:
+    - strong jawline
+    - broad shoulders
+    - thick muscular arms
+    - large athletic frame
+
+hair_color: dark_brown
+
+style:
+  primary_aesthetic: athletic_luxury
+
+  secondary_aesthetic:
+    - luxury
+    - streetwear
+
+  materials:
+    - cotton
+    - mesh
+    - wool
+
+  primary_colors:
+    - black
+    - charcoal
+    - dark_navy
+
+  accent_colors:
+    - white
+
+  recurring_accessories: []
+
+expression:
+  default_expression: confident_neutral
+  smile_type: warm_smile
+  emotional_tone: controlled
+
+movement:
+  movement_style: grounded_powerful
+  gesture_style: broad_confident
+  body_language: open_confident
+
+identity_rules:
+  preserve:
+    - tall muscular frame
+    - broad shoulders and strong chest
+    - dark hair
+    - confident relaxed posture
+    - visibly larger physique than Jasper
+
+  avoid:
+    - slim or runner-style build
+    - narrow shoulders
+    - delicate limbs
+    - small or lightweight silhouette
+
+reference_files:
+  face_anchor: blk_face_anchor.png
+  anatomy_sheet: blk_anatomy_sheet.png
+  body_anchor: blk_body_anchor.png
+  ultimate_character_sheet: blk_ucs.png
+  signature_outfit_sheet: blk_outfit_signature.png
+
+pipeline_status:
+  face_anchor: complete
+  anatomy_reference: complete
+  body_anchor: complete
+  pose_sheet: complete
+  wardrobe_sheet: complete
+  interaction_anchor: complete
+  environment_anchors: partial
+
+notes: >
+  Blake’s visual identity is defined by a tall, powerful athletic frame
+  and confident relaxed demeanor. His style favors fitted athletic clothing
+  that emphasizes his upper-body strength and broad shoulders.
+
+last_updated: 2026-03-14

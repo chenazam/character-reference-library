@@ -2,6 +2,7 @@ name: Jonah
 slug: jonah
 
 status: active
+project: Danny & Hudson & Jonah & Luca
 
 core_identity:
   short_summary: Tall, playful, expressive cheerleader with a lean elegant silhouette and confident modern urban style.
@@ -41,6 +42,8 @@ face:
     - soft side-swept wave at the front
     - balanced features
     - defined but not harsh jawline
+
+hair_color: dark_blonde
 
 style:
   primary_aesthetic: playful_athletic

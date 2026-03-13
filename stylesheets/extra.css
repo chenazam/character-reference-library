@@ -39,3 +39,24 @@
 .character-gallery a:hover img {
   transform: scale(1.03);
 }
+
+.character-index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.character-card {
+  text-align: center;
+  text-decoration: none;
+}
+
+.character-card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.character-card h3 {
+  margin-top: 0.5rem;
+}

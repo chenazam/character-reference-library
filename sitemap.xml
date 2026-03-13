@@ -426,12 +426,32 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/characters/daimon/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/characters/danny/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/characters/hudson/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/characters/jasper/</loc>
          <lastmod>2026-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://charreflib.chenazam.com/characters/jonah/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/characters/luca/</loc>
          <lastmod>2026-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -447,6 +467,11 @@
     </url>
     <url>
          <loc>https://charreflib.chenazam.com/characters/templates/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/characters/tommy/</loc>
          <lastmod>2026-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>

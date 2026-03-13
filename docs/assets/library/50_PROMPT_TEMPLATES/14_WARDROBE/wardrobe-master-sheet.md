@@ -31,10 +31,6 @@ each panel shows a different outfit
 consistent body proportions across panels
 
 Use:
-[GLOBAL_STYLE_BLOCK]
-[LAYOUT_BLOCK]
-[LABELS_BLOCK]
-[CAMERA_BLOCK]
-[LIGHTING_BLOCK]
-[BACKGROUND_BLOCK]
+[REFERENCE_SHEET_BLOCK_STACK]
+[LANDSCAPE_SHEET_FORMAT_BLOCK]
 ```

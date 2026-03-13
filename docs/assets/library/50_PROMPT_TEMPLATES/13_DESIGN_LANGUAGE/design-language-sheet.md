@@ -32,10 +32,6 @@ clearly readable design components
 consistent character identity
 
 Use:
-[GLOBAL_STYLE_BLOCK]
-[LAYOUT_BLOCK]
-[LABELS_BLOCK]
-[CAMERA_BLOCK]
-[LIGHTING_BLOCK]
-[BACKGROUND_BLOCK]
+[REFERENCE_SHEET_BLOCK_STACK]
+[PORTRAIT_SHEET_FORMAT_BLOCK]
 ```

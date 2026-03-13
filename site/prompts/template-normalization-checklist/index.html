@@ -1,0 +1,1488 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="AI character pipeline, prompts, references, and metadata">
+      
+      
+      
+        <link rel="canonical" href="https://charreflib.chenazam.com/prompts/template-normalization-checklist/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.12">
+    
+    
+      
+        <title>Prompt Template Normalization Checklist - Character Reference Library</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#prompt-template-normalization-checklist" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Character Reference Library" class="md-header__button md-logo" aria-label="Character Reference Library" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Character Reference Library
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Prompt Template Normalization Checklist
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Character Reference Library" class="md-nav__button md-logo" aria-label="Character Reference Library" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Character Reference Library
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Browse Library
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Browse Library
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Characters
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Characters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../characters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Character Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../characters/lucien/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lucien
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../characters/jonah/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jonah
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Prompt Templates
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Prompt Templates
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../templates-index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Templates Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../templates/face/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Face
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../templates/anatomy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hair and Anatomy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../templates/body/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Body Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../templates/ucs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UCS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../templates/outfits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Outfits and Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../templates/scenes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Motion and Scenes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pairs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pairs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../groups/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Groups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../environments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Environments
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../inspiration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inspiration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pipeline
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Pipeline
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipeline/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipeline/stages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Stages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Prompt System
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Prompt System
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../master-blocks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Master Blocks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prompt-recipes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt Recipes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference-attachments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reference Attachments
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Characters
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Characters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../characters/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../characters/templates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Library Standards
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Library Standards
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../library/folder-structure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Folder Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../library/naming-conventions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Naming Conventions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../library/metadata-schema/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metadata Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../library/controlled-vocabulary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controlled Vocabulary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../library/gallery-snippet-conventions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gallery Snippet Conventions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="prompt-template-normalization-checklist">Prompt Template Normalization Checklist</h1>
+<p>This checklist ensures that all prompt templates in the library use the correct master blocks and format blocks.</p>
+<p>The goal is to maintain:</p>
+<ul>
+<li>consistent prompt structure</li>
+<li>stable output formats</li>
+<li>predictable image aspect ratios</li>
+<li>reusable block stacks</li>
+</ul>
+<p>When reviewing a template:</p>
+<ol>
+<li>Replace duplicated blocks with the correct block stack.</li>
+<li>Ensure exactly one format block is used when appropriate.</li>
+<li>Remove redundant or outdated block placeholders.</li>
+<li>Verify the template uses the canonical placeholder names.</li>
+</ol>
+<hr />
+<h1 id="general-rules">General Rules</h1>
+<h3 id="single-panel-references">Single-panel references</h3>
+<p>Use:</p>
+<pre><code>[REFERENCE_PANEL_BLOCK_STACK]
+</code></pre>
+<p>Add a format block if needed:</p>
+<pre><code>[SQUARE_REFERENCE_FORMAT_BLOCK]
+</code></pre>
+<p>or</p>
+<pre><code>[PORTRAIT_SHEET_FORMAT_BLOCK]
+</code></pre>
+<hr />
+<h3 id="multi-panel-reference-sheets">Multi-panel reference sheets</h3>
+<p>Use:</p>
+<pre><code>[REFERENCE_SHEET_BLOCK_STACK]
+</code></pre>
+<p>Add one format block:</p>
+<pre><code>[PORTRAIT_SHEET_FORMAT_BLOCK]
+</code></pre>
+<p>or</p>
+<pre><code>[LANDSCAPE_SHEET_FORMAT_BLOCK]
+</code></pre>
+<hr />
+<h3 id="scene-or-environment-prompts">Scene or environment prompts</h3>
+<p>Use:</p>
+<pre><code>[SCENE_BLOCK_STACK]
+</code></pre>
+<p>Format blocks are usually <strong>not required</strong>.</p>
+<hr />
+<h1 id="template-review-checklist">Template Review Checklist</h1>
+<hr />
+<h1 id="01_face_anchors">01_FACE_ANCHORS</h1>
+<h3 id="face-anchor-sheetmd">face-anchor-sheet.md</h3>
+<ul>
+<li>[ ] Uses <code>[REFERENCE_SHEET_BLOCK_STACK]</code></li>
+<li>[ ] Uses <code>[PORTRAIT_SHEET_FORMAT_BLOCK]</code></li>
+<li>[ ] Does NOT manually list individual style/layout blocks</li>
+</ul>
+<hr />
+<h3 id="front-face-referencemd">front-face-reference.md</h3>
+<ul>
+<li>[ ] Uses <code>[REFERENCE_PANEL_BLOCK_STACK]</code></li>
+<li>[ ] Uses <code>[SQUARE_REFERENCE_FORMAT_BLOCK]</code></li>
+<li>[ ] No layout or label blocks</li>
+</ul>
+<hr />
+<h3 id="three-quarter-face-referencemd">three-quarter-face-reference.md</h3>
+<ul>
+<li>[ ] Uses <code>[REFERENCE_PANEL_BLOCK_STACK]</code></li>
+<li>[ ] Uses <code>[SQUARE_REFERENCE_FORMAT_BLOCK]</code></li>
+</ul>
+<hr />
+<h3 id="profile-face-referencemd">profile-face-reference.md</h3>
+<ul>
+<li>[ ] Uses <code>[REFERENCE_PANEL_BLOCK_STACK]</code></li>
+<li>[ ] Uses <code>[SQUARE_REFERENCE_FORMAT_BLOCK]</code></li>
+</ul>
+<hr />
+<h1 id="02_hair">02_HAIR</h1>
+<h3 id="hair-reference-sheetmd">hair-reference-sheet.md</h3>
+<ul>
+<li>[ ] Uses <code>[REFERENCE_SHEET_BLOCK_STACK]</code></li>
+<li>[ ] Uses <code>[PORTRAIT_SHEET_FORMAT_BLOCK]</code></li>
+</ul>
+<hr />
+<h1 id="03_anatomy">03_ANATOMY</h1>
+<h3 id="anatomy-frontmd">anatomy-front.md</h3>
+<ul>
+<li>[ ] Uses <code>[REFERENCE_PANEL_BLOCK_STACK]</code></li>
+<li>[ ] Uses <code>[PORTRAIT_SHEET_FORMAT_BLOCK]</code></li>
+</ul>
+<hr />
+<h3 id="anatomy-sidemd">anatomy-side.md</h3>
+<ul>
+<li>[ ] Uses <code>[REFERENCE_PANEL_BLOCK_STACK]</code></li>
+<li>[ ] Uses <code>[PORTRAIT_SHEET_FORMAT_BLOCK]</code></li>
+</ul>
+<hr />
+<h3 id="anatomy-backmd">anatomy-back.md</h3>
+<ul>
+<li>[ ] Uses <code>[REFERENCE_PANEL_BLOCK_STACK]</code></li>
+<li>[ ] Uses <code>[PORTRAIT_SHEET_FORMAT_BLOCK]</code></li>
+</ul>
+<hr />
+<h3 id="anatomy-sheetmd">anatomy-sheet.md</h3>
+<ul>
+<li>[ ] Uses <code>[REFERENCE_SHEET_BLOCK_STACK]</code></li>
+<li>[ ] Uses <code>[PORTRAIT_SHEET_FORMAT_BLOCK]</code></li>
+</ul>
+<hr />
+<h1 id="04_proportions">04_PROPORTIONS</h1>
+<h3 id="body-proportions-gridmd">body-proportions-grid.md</h3>
+<ul>
+<li>[ ] Uses <code>[REFERENCE_PANEL_BLOCK_STACK]</code></li>
+<li>[ ] Uses <code>[PORTRAIT_SHEET_FORMAT_BLOCK]</code></li>
+</ul>
+<hr />
+<h1 id="05_muscle">05_MUSCLE</h1>
+<h3 id="muscle-tension-sheetmd">muscle-tension-sheet.md</h3>
+<ul>
+<li>[ ] Uses <code>[REFERENCE_SHEET_BLOCK_STACK]</code></li>
+<li>[ ] Uses <code>[PORTRAIT_SHEET_FORMAT_BLOCK]</code></li>
+</ul>
+<hr />
+<h1 id="06_body">06_BODY</h1>
+<h3 id="body-anchor-sheetmd">body-anchor-sheet.md</h3>
+<ul>
+<li>[ ] Uses <code>[REFERENCE_SHEET_BLOCK_STACK]</code></li>
+<li>[ ] Uses <code>[PORTRAIT_SHEET_FORMAT_BLOCK]</code></li>
+</ul>
+<hr />
+<h1 id="07_silhouette">07_SILHOUETTE</h1>
+<h3 id="silhouette-sheetmd">silhouette-sheet.md</h3>
+<ul>
+<li>[ ] Uses layout and label blocks</li>
+<li>[ ] Uses <code>[PORTRAIT_SHEET_FORMAT_BLOCK]</code></li>
+<li>[ ] Does NOT rely on the full style block stack</li>
+</ul>
+<p>Recommended block set:</p>
+<pre><code>[LAYOUT_BLOCK]
+[LABELS_BLOCK]
+[CAMERA_BLOCK]
+[LIGHTING_BLOCK]
+[BACKGROUND_BLOCK]
+[PORTRAIT_SHEET_FORMAT_BLOCK]
+</code></pre>
+<hr />
+<h1 id="08_turnaround">08_TURNAROUND</h1>
+<h3 id="turnaround-sheetmd">turnaround-sheet.md</h3>
+<ul>
+<li>[ ] Uses <code>[REFERENCE_SHEET_BLOCK_STACK]</code></li>
+<li>[ ] Uses <code>[LANDSCAPE_SHEET_FORMAT_BLOCK]</code></li>
+</ul>
+<hr />
+<h1 id="09_expressions">09_EXPRESSIONS</h1>
+<h3 id="expression-sheetmd">expression-sheet.md</h3>
+<ul>
+<li>[ ] Uses <code>[REFERENCE_SHEET_BLOCK_STACK]</code></li>
+<li>[ ] Uses <code>[PORTRAIT_SHEET_FORMAT_BLOCK]</code></li>
+</ul>
+<hr />
+<h1 id="10_hands">10_HANDS</h1>
+<h3 id="hand-reference-sheetmd">hand-reference-sheet.md</h3>
+<ul>
+<li>[ ] Uses <code>[REFERENCE_SHEET_BLOCK_STACK]</code></li>
+<li>[ ] Uses <code>[PORTRAIT_SHEET_FORMAT_BLOCK]</code></li>
+</ul>
+<hr />
+<h1 id="11_ucs">11_UCS</h1>
+<h3 id="ucs-face-frontmd">ucs-face-front.md</h3>
+<ul>
+<li>[ ] Uses <code>[REFERENCE_PANEL_BLOCK_STACK]</code></li>
+<li>[ ] Uses <code>[SQUARE_REFERENCE_FORMAT_BLOCK]</code></li>
+</ul>
+<hr />
+<h3 id="ucs-face-three-quartermd">ucs-face-three-quarter.md</h3>
+<ul>
+<li>[ ] Uses <code>[REFERENCE_PANEL_BLOCK_STACK]</code></li>
+<li>[ ] Uses <code>[SQUARE_REFERENCE_FORMAT_BLOCK]</code></li>
+</ul>
+<hr />
+<h3 id="ucs-face-profilemd">ucs-face-profile.md</h3>
+<ul>
+<li>[ ] Uses <code>[REFERENCE_PANEL_BLOCK_STACK]</code></li>
+<li>[ ] Uses <code>[SQUARE_REFERENCE_FORMAT_BLOCK]</code></li>
+</ul>
+<hr />
+<h3 id="ucs-body-frontmd">ucs-body-front.md</h3>
+<ul>
+<li>[ ] Uses <code>[REFERENCE_PANEL_BLOCK_STACK]</code></li>
+<li>[ ] Uses <code>[PORTRAIT_SHEET_FORMAT_BLOCK]</code></li>
+</ul>
+<hr />
+<h3 id="ucs-body-sidemd">ucs-body-side.md</h3>
+<ul>
+<li>[ ] Uses <code>[REFERENCE_PANEL_BLOCK_STACK]</code></li>
+<li>[ ] Uses <code>[PORTRAIT_SHEET_FORMAT_BLOCK]</code></li>
+</ul>
+<hr />
+<h3 id="ucs-silhouettemd">ucs-silhouette.md</h3>
+<ul>
+<li>[ ] Uses camera, lighting, and background blocks</li>
+<li>[ ] Uses <code>[PORTRAIT_SHEET_FORMAT_BLOCK]</code></li>
+</ul>
+<hr />
+<h3 id="ucs-expressionmd">ucs-expression.md</h3>
+<ul>
+<li>[ ] Uses <code>[REFERENCE_PANEL_BLOCK_STACK]</code></li>
+<li>[ ] Uses <code>[SQUARE_REFERENCE_FORMAT_BLOCK]</code></li>
+</ul>
+<hr />
+<h3 id="ucs-dynamic-posemd">ucs-dynamic-pose.md</h3>
+<ul>
+<li>[ ] Uses <code>[REFERENCE_PANEL_BLOCK_STACK]</code></li>
+<li>[ ] Uses <code>[PORTRAIT_SHEET_FORMAT_BLOCK]</code></li>
+</ul>
+<hr />
+<h3 id="ucs-assembly-notesmd">ucs-assembly-notes.md</h3>
+<ul>
+<li>[ ] No prompt blocks used</li>
+<li>[ ] Pure documentation</li>
+</ul>
+<hr />
+<h1 id="12_signature_outfit">12_SIGNATURE_OUTFIT</h1>
+<h3 id="signature-outfit-sheetmd">signature-outfit-sheet.md</h3>
+<ul>
+<li>[ ] Uses <code>[REFERENCE_SHEET_BLOCK_STACK]</code></li>
+<li>[ ] Uses <code>[PORTRAIT_SHEET_FORMAT_BLOCK]</code></li>
+</ul>
+<hr />
+<h1 id="13_design_language">13_DESIGN_LANGUAGE</h1>
+<h3 id="design-language-sheetmd">design-language-sheet.md</h3>
+<ul>
+<li>[ ] Uses <code>[REFERENCE_SHEET_BLOCK_STACK]</code></li>
+<li>[ ] Uses <code>[PORTRAIT_SHEET_FORMAT_BLOCK]</code></li>
+</ul>
+<hr />
+<h1 id="14_wardrobe">14_WARDROBE</h1>
+<h3 id="outfit-sheetmd">outfit-sheet.md</h3>
+<ul>
+<li>[ ] Uses <code>[REFERENCE_SHEET_BLOCK_STACK]</code></li>
+<li>[ ] Uses <code>[PORTRAIT_SHEET_FORMAT_BLOCK]</code></li>
+</ul>
+<hr />
+<h3 id="wardrobe-master-sheetmd">wardrobe-master-sheet.md</h3>
+<ul>
+<li>[ ] Uses <code>[REFERENCE_SHEET_BLOCK_STACK]</code></li>
+<li>[ ] Uses <code>[LANDSCAPE_SHEET_FORMAT_BLOCK]</code></li>
+</ul>
+<hr />
+<h1 id="15_poses">15_POSES</h1>
+<h3 id="pose-sheetmd">pose-sheet.md</h3>
+<ul>
+<li>[ ] Uses <code>[REFERENCE_SHEET_BLOCK_STACK]</code></li>
+<li>[ ] Uses <code>[PORTRAIT_SHEET_FORMAT_BLOCK]</code></li>
+</ul>
+<hr />
+<h1 id="16_motion">16_MOTION</h1>
+<h3 id="motion-anchor-sheetmd">motion-anchor-sheet.md</h3>
+<ul>
+<li>[ ] Uses <code>[REFERENCE_SHEET_BLOCK_STACK]</code></li>
+<li>[ ] Uses <code>[LANDSCAPE_SHEET_FORMAT_BLOCK]</code></li>
+</ul>
+<hr />
+<h1 id="17_scale">17_SCALE</h1>
+<h3 id="height-scale-sheetmd">height-scale-sheet.md</h3>
+<ul>
+<li>[ ] Uses <code>[REFERENCE_SHEET_BLOCK_STACK]</code></li>
+<li>[ ] Uses <code>[PORTRAIT_SHEET_FORMAT_BLOCK]</code></li>
+</ul>
+<hr />
+<h1 id="18_interactions">18_INTERACTIONS</h1>
+<h3 id="interaction-anchor-sheetmd">interaction-anchor-sheet.md</h3>
+<ul>
+<li>[ ] Uses <code>[SCENE_BLOCK_STACK]</code></li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li>[ ] Uses <code>[LANDSCAPE_SHEET_FORMAT_BLOCK]</code></li>
+</ul>
+<hr />
+<h1 id="19_scenes">19_SCENES</h1>
+<h3 id="lifestyle-scene-anchor-sheetmd">lifestyle-scene-anchor-sheet.md</h3>
+<ul>
+<li>[ ] Uses <code>[SCENE_BLOCK_STACK]</code></li>
+<li>[ ] No sheet layout blocks</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      
+    
+  </body>
+</html>

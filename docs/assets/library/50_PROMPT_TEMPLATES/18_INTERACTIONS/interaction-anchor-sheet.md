@@ -27,10 +27,6 @@ consistent identity for each character
 clear spatial relationship
 
 Use:
-[GLOBAL_STYLE_BLOCK]
-[LAYOUT_BLOCK]
-[LABELS_BLOCK]
-[CAMERA_BLOCK]
-[LIGHTING_BLOCK]
-[BACKGROUND_BLOCK]
+[SCENE_BLOCK_STACK]
+[LANDSCAPE_SHEET_FORMAT_BLOCK]
 ```

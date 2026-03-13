@@ -41,10 +41,6 @@ facial identity should remain consistent
 hair must read naturally on the character's head shape
 
 Use:
-[GLOBAL_STYLE_BLOCK]
-[IDENTITY_PRESERVATION_BLOCK]
-[LAYOUT_BLOCK]
-[LABELS_BLOCK]
-[CAMERA_BLOCK]
-[BACKGROUND_BLOCK]
+[REFERENCE_SHEET_BLOCK_STACK]
+[PORTRAIT_SHEET_FORMAT_BLOCK]
 ```

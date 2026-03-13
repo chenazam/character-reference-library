@@ -32,8 +32,8 @@ clearly readable outline
 consistent body proportions
 
 Use:
-[LAYOUT_BLOCK]
 [CAMERA_BLOCK]
 [LIGHTING_BLOCK]
 [BACKGROUND_BLOCK]
+[PORTRAIT_SHEET_FORMAT_BLOCK]
 ```

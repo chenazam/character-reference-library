@@ -35,9 +35,6 @@ identity must remain consistent with front and three-quarter references
 no expressive pose or stylized camera treatment
 
 Use:
-[GLOBAL_STYLE_BLOCK]
-[IDENTITY_PRESERVATION_BLOCK]
-[CAMERA_BLOCK]
-[LIGHTING_BLOCK]
-[BACKGROUND_BLOCK]
+[REFERENCE_SHEET_BLOCK_STACK]
+[SQUARE_REFERENCE_FORMAT_BLOCK]
 ```

@@ -7,6 +7,8 @@ It ensures consistent rendering, lighting, layout, and identity preservation acr
 ```
 [GLOBAL_STYLE_BLOCK]
 
+[REFERENCE_FIDELITY_BLOCK]
+
 [IDENTITY_PRESERVATION_BLOCK]
 
 [LAYOUT_BLOCK]

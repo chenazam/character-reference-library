@@ -27,9 +27,5 @@ character clearly readable
 environment supports the character
 
 Use:
-[GLOBAL_STYLE_BLOCK]
-[IDENTITY_PRESERVATION_BLOCK]
-[CAMERA_BLOCK]
-[LIGHTING_BLOCK]
-[BACKGROUND_BLOCK]
+[SCENE_BLOCK_STACK]
 ```

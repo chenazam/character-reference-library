@@ -32,9 +32,6 @@ consistent identity with face anchor sheet
 no dramatic perspective distortion
 
 Use:
-[GLOBAL_STYLE_BLOCK]
-[IDENTITY_PRESERVATION_BLOCK]
-[CAMERA_BLOCK]
-[LIGHTING_BLOCK]
-[BACKGROUND_BLOCK]
+[REFERENCE_PANEL_BLOCK_STACK]
+[SQUARE_REFERENCE_FORMAT_BLOCK]
 ```

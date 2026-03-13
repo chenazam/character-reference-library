@@ -51,6 +51,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/landscape-sheet-format-block/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/layout-block/</loc>
          <lastmod>2026-03-13</lastmod>
          <changefreq>daily</changefreq>
@@ -61,7 +66,37 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/portrait-sheet-format-block/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/reference-attachment-block/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/reference-fidelity-block/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/reference-panel-block-stack/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/reference-sheet-block-stack/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/scene-block-stack/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/square-reference-format-block/</loc>
          <lastmod>2026-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -306,6 +341,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/library/output-format-standards/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/pairs/</loc>
          <lastmod>2026-03-13</lastmod>
          <changefreq>daily</changefreq>
@@ -337,6 +377,11 @@
     </url>
     <url>
          <loc>https://charreflib.chenazam.com/prompts/reference-attachments/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/prompts/template-normalization-checklist/</loc>
          <lastmod>2026-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>

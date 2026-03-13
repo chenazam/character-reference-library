@@ -9,15 +9,18 @@ Each block can be copied into prompts depending on the generation task.
 
 Use for:
 
-- general character prompts
-- identity definition
 - reference sheet prompts
+- anatomy prompts
+- body anchors
+- general character prompts
 
-Jonah is a tall lean athletic man (178 cm / 5'10") with long elegant proportions, expressive green eyes, and dark blonde wavy hair with soft side-swept volume.
+Jonah is a tall man (178 cm / 5'10") with a lean athletic build and naturally elongated proportions that give him a graceful, elegant presence.
 
-His aesthetic combines playful athletic fashion with sporty expressive clothing such as crop tops, athletic shorts, and mesh fabrics.
+He has expressive green eyes, refined balanced facial features, and dark blonde medium-length wavy hair with soft side-swept volume.
 
-Maintain consistent facial identity, body proportions, and style across all views.
+His silhouette reads as tall and slender with long limbs, a narrow waist, and moderately broad but balanced shoulders that emphasize an elongated athletic frame.
+
+His aesthetic centers on playful athletic fashion with sporty expressive clothing such as crop tops, athletic shorts, and bold casual outfits. Maintain consistent facial identity, hairstyle, body proportions, and overall silhouette across all views.
 
 ---
 

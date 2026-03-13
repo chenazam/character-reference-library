@@ -20,18 +20,17 @@ These are the highest-priority traits to preserve in prompts.
 Use for:
 
 - reference sheet prompts
-- face anchors
 - anatomy prompts
 - body anchors
 - general character prompts
 
-Lucien is a young adult man in his mid-twenties with a slender lightly built physique, soft mature facial features, and a calm, slightly mysterious presence.
+Lucien is a young adult man in his mid-twenties with a slender lightly built physique and refined facial features that give him a calm, thoughtful presence.
 
-He has dark brown expressive eyes, short to medium-length naturally curly dark brown hair with soft volume, and light skin with subtle freckles across the nose and cheeks.
+He has dark brown expressive eyes, short to medium-length naturally curly dark brown hair with loose soft volume, and light skin with subtle freckles across the nose and cheeks.
 
-His silhouette is slim and balanced with narrow gently sloped shoulders and soft natural proportions rather than pronounced musculature.
+His silhouette is slim and balanced with narrow gently sloped shoulders, a soft natural waist, and lightly built proportions rather than pronounced musculature.
 
-His aesthetic feels scholarly, occult, and subtly witchy. Maintain consistent facial identity, hairstyle, body proportions, and overall silhouette across all views.
+His aesthetic blends scholarly and occult influences, creating a quiet witchy tone that feels thoughtful, composed, and slightly enigmatic. Maintain consistent facial identity, hairstyle, body proportions, and overall silhouette across all views.
 
 ---
 

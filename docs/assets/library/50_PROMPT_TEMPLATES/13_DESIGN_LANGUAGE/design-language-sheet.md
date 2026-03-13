@@ -2,23 +2,40 @@
 
 Attach:
 
-- Signature Outfit Sheet
 - Ultimate Character Sheet
+- Signature Outfit Sheet
+- Body Anchor Sheet
 
 ```
-Create a design language sheet defining the character’s aesthetic style.
+Create a design language reference sheet explaining the visual logic of a character.
+
+Character:
+[CHARACTER_BLOCK]
 
 Panels:
+silhouette breakdown
+shape language reference
+material palette
+accessory breakdown
 color palette
-material references
-accessories
-motif references
 
-Purpose:
-document the visual design language of the character.
+Focus:
+recurring shapes
+design motifs
+material choices
+accessory logic
+color relationships
+
+Output requirements:
+clean professional design reference sheet
+clearly readable design components
+consistent character identity
 
 Use:
 [GLOBAL_STYLE_BLOCK]
 [LAYOUT_BLOCK]
+[LABELS_BLOCK]
+[CAMERA_BLOCK]
+[LIGHTING_BLOCK]
 [BACKGROUND_BLOCK]
 ```

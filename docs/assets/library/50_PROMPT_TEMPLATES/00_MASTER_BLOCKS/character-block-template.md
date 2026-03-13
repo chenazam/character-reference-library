@@ -1,6 +1,13 @@
 # Character Block Template
 
-Replace this block with character-specific information from the character’s `prompt_blocks.md`.
+Replace this block with the most appropriate character-specific block from the character's `prompt_blocks.md`.
+
+Use:
+
+- face-focused block for face reference prompts
+- body-focused block for anatomy and body prompts
+- style-focused block for wardrobe and outfit prompts
+- extended identity block only when broader context is necessary
 
 ```
 Character:

@@ -5,29 +5,46 @@ Attach:
 - Face Anchor Sheet
 
 ```
-Create a hairstyle reference sheet.
+Create a hairstyle reference sheet for a character design pipeline.
 
 Character:
 [CHARACTER_BLOCK]
 
 Panels:
 front hair
-3/4 hair
+three-quarter hair
 side hair
 back hair
 hair texture detail
 
 Focus:
-hair volume
-curl or strand structure
-hairline
-layering
-silhouette of hairstyle
+overall hairstyle silhouette
+hairline consistency
+parting and volume distribution
+curl, wave, or strand structure
+layering and massing
+how the hairstyle frames the face
+how the hairstyle reads from all major angles
+
+Output requirements:
+clean professional hairstyle reference sheet
+all panels depict the same hairstyle on the same character
+consistent hair length, density, and silhouette across views
+clear readable hair mass
+no dramatic wind effects
+no stylized motion
+no haircut drift between panels
+
+Head presentation:
+head and upper neck visible where needed for structure clarity
+facial identity should remain consistent
+hair must read naturally on the character's head shape
 
 Use:
 [GLOBAL_STYLE_BLOCK]
 [IDENTITY_PRESERVATION_BLOCK]
 [LAYOUT_BLOCK]
-[PANEL_LABEL_BLOCK]
+[LABELS_BLOCK]
+[CAMERA_BLOCK]
 [BACKGROUND_BLOCK]
 ```

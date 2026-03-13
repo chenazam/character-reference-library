@@ -24,31 +24,41 @@ no contrapposto
 View:
 perfect front view
 orthographic reference perspective
+eye-level camera
 
 Focus:
 clear anatomical proportions
 accurate limb length
 balanced shoulder width
 natural torso structure
+canonical body type
+stable head-to-body relationship
 
 Clothing:
-
 shirtless
 neutral fitted shorts
 barefoot
 no accessories
 
 Body presentation:
-
 natural anatomy
 no exaggerated musculature
 no stylization
 no bodybuilder physique
 maintain the character's canonical body type
 
+Output requirements:
+single clean anatomical reference image
+full body fully visible
+clear readable silhouette
+consistent identity with established face and hair references
+no dramatic posing
+no perspective distortion
+
 Use:
 [GLOBAL_STYLE_BLOCK]
 [IDENTITY_PRESERVATION_BLOCK]
-[CAMERA_RULES_BLOCK]
+[CAMERA_BLOCK]
+[LIGHTING_BLOCK]
 [BACKGROUND_BLOCK]
 ```

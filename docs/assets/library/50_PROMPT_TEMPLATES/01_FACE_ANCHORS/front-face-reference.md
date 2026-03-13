@@ -1,8 +1,8 @@
-# 1A Front-face reference
+# 1A Front Face Reference
 
 Attach:
 
-- 1-3 source face references
+- 1–3 source face references
 - hairstyle reference (optional)
 
 ```
@@ -12,18 +12,33 @@ Character:
 [CHARACTER_BLOCK]
 
 View:
-perfectly front-facing neutral expression
+perfectly front-facing head view
+neutral expression
+level head position
+eyes looking straight forward
 
 Focus:
 facial proportions
 eye spacing
-jawline
-nose structure
-hairline
+nose width and shape
+mouth placement
+jawline and chin shape
+hairline and forehead structure
+overall facial symmetry and asymmetry
+
+Output requirements:
+single clean facial reference image
+head centered in frame
+full face clearly visible
+no dramatic perspective distortion
+no expressive acting
+no beauty-shot styling
+identity must read clearly and naturally
 
 Use:
 [GLOBAL_STYLE_BLOCK]
 [IDENTITY_PRESERVATION_BLOCK]
-[CAMERA_RULES_BLOCK]
+[CAMERA_BLOCK]
+[LIGHTING_BLOCK]
 [BACKGROUND_BLOCK]
 ```

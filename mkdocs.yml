@@ -10,7 +10,10 @@ theme:
 markdown_extensions:
   - attr_list
   - md_in_html
-  - pymdownx.snippets
+  - pymdownx.snippets:
+      base_path:
+        - docs
+      check_paths: true
 
 extra_css:
   - stylesheets/extra.css
@@ -18,24 +21,39 @@ extra_css:
 nav:
   - Home: index.md
 
-  - Pipeline:
-      - Overview: pipeline/overview.md
-      - Stages: pipeline/stages.md
+  - Browse Library:
+      - Characters:
+          - Character Index: characters/index.md
+          - Lucien: characters/lucien.md
+          - Jonah: characters/jonah.md
+      - Prompt Templates:
+          - Templates Index: prompts/templates-index.md
+          - Face: prompts/templates/face.md
+          - Hair and Anatomy: prompts/templates/anatomy.md
+          - Body Structure: prompts/templates/body.md
+          - UCS: prompts/templates/ucs.md
+          - Outfits and Design: prompts/templates/outfits.md
+          - Motion and Scenes: prompts/templates/scenes.md
+      - Pairs: pairs/index.md
+      - Groups: groups/index.md
+      - Environments: environments/index.md
+      - Inspiration: inspiration/index.md
 
-  - Library:
-      - Folder Structure: library/folder-structure.md
-      - Naming Conventions: library/naming-conventions.md
-      - Metadata Schema: library/metadata-schema.md
-      - Controlled Vocabulary: library/controlled-vocabulary.md
-
-  - Characters:
-      - Overview: characters/overview.md
-      - Templates: characters/templates.md
-      - Character Index: characters/index.md
-      - Lucien: characters/lucien.md
-
-  - Prompts:
-      - Overview: prompts/overview.md
-      - Master Blocks: prompts/master-blocks.md
-      - Prompt Recipes: prompts/prompt-recipes.md
-      - Reference Attachments: prompts/reference-attachments.md
+  - Documentation:
+      - Pipeline:
+          - Overview: pipeline/overview.md
+          - Stages: pipeline/stages.md
+      - Prompt System:
+          - Overview: prompts/overview.md
+          - Master Blocks: prompts/master-blocks.md
+          - Prompt Recipes: prompts/prompt-recipes.md
+          - Reference Attachments: prompts/reference-attachments.md
+      - Characters:
+          - Overview: characters/overview.md
+          - Templates: characters/templates.md
+      - Library Standards:
+          - Folder Structure: library/folder-structure.md
+          - Naming Conventions: library/naming-conventions.md
+          - Metadata Schema: library/metadata-schema.md
+          - Controlled Vocabulary: library/controlled-vocabulary.md
+          - Gallery Snippet Conventions: library/gallery-snippet-conventions.md

@@ -1,10 +1,58 @@
 # Master Prompt Blocks
 
-These blocks are reusable components used in prompt templates across the character pipeline.
+These files define reusable prompt fragments used across the character generation pipeline.
+
+Templates reference these blocks using placeholder names.
+
+| Placeholder                     | Block File                     |
+| ------------------------------- | ------------------------------ | --- |
+| `[CHARACTER_BLOCK]`             | character-block-template.md    |
+| `[GLOBAL_STYLE_BLOCK]`          | global-style-block.md          |
+| `[IDENTITY_PRESERVATION_BLOCK]` | identity-preservation-block.md |
+| `[LAYOUT_BLOCK]`                | layout-block.md                |
+| `[LABELS_BLOCK]`                | labels-block.md                |
+| `[CAMERA_BLOCK]`                | camera-block.md                |
+| `[LIGHTING_BLOCK]`              | lighting-block.md              |
+| `[BACKGROUND_BLOCK]`            | background-block.md            |
+| `[REFERENCE_SHEET_BLOCK_STACK]` | reference-sheet-block-stack.md |     |
+
+Do not duplicate these blocks in templates.  
+Templates should reference them instead.
 
 ---
 
-# Character Block Template
+## Block Placeholder Names
+
+Prompt templates reference reusable blocks using standardized placeholders.
+
+These placeholders correspond to files stored in:
+
+assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/
+
+Templates should always use these canonical placeholder names.
+
+| Placeholder                     | Block File                     |
+| ------------------------------- | ------------------------------ |
+| `[CHARACTER_BLOCK]`             | character-block-template.md    |
+| `[GLOBAL_STYLE_BLOCK]`          | global-style-block.md          |
+| `[IDENTITY_PRESERVATION_BLOCK]` | identity-preservation-block.md |
+| `[LAYOUT_BLOCK]`                | layout-block.md                |
+| `[LABELS_BLOCK]`                | labels-block.md                |
+| `[CAMERA_BLOCK]`                | camera-block.md                |
+| `[LIGHTING_BLOCK]`              | lighting-block.md              |
+| `[BACKGROUND_BLOCK]`            | background-block.md            |
+
+When writing prompt templates:
+
+• always reference the canonical placeholder names  
+• avoid inventing new block names  
+• reuse the existing master blocks whenever possible
+
+This ensures prompt templates remain consistent across the pipeline.
+
+---
+
+## Character Block Template
 
 This block is replaced with the character-specific description.
 
@@ -16,7 +64,7 @@ Lucien is a slender man of average height (170 cm / 5'7") with refined facial fe
 
 ---
 
-# Global Style Block
+## Global Style Block
 
 Use this block in most reference sheet prompts.
 
@@ -47,7 +95,7 @@ clean professional design lines
 
 ---
 
-# Identity Preservation Block
+## Identity Preservation Block
 
 Use this in prompts where identity drift may occur.
 
@@ -62,7 +110,7 @@ Important constraints:
 
 ---
 
-# Layout Block
+## Layout Block
 
 Use this block when generating reference sheets.
 
@@ -80,7 +128,7 @@ all panels fully visible
 
 ---
 
-# Panel Label Block
+## Labels Block
 
 Standard label style for reference sheets.
 
@@ -93,7 +141,7 @@ centered under panels
 
 ---
 
-# Camera Rules Block
+## Camera Block
 
 Ensures consistent orthographic views.
 
@@ -106,7 +154,22 @@ no dramatic perspective distortion
 
 ---
 
-# Background Block
+## Lighting Block
+
+Standard lighting used in most reference sheets.
+
+```
+Lighting:
+neutral studio lighting
+soft even illumination
+no dramatic shadows
+no directional spotlighting
+consistent lighting across panels
+```
+
+---
+
+## Background Block
 
 Standard background used in most sheets.
 

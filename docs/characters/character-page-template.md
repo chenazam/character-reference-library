@@ -32,17 +32,17 @@ identity preservation, prompt construction, reference browsing
 Use these references first when the goal is strong character consistency.
 
 <div class="character-gallery">
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/01_FACE/[character]_face_anchor_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/01_FACE/[character]_face_anchor_v1.png" alt="[CHARACTER NAME] face anchor">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/01_FACE/[character]_face_anchor_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/01_FACE/[character]_face_anchor_v1.png" alt="[CHARACTER NAME] face anchor">
   </a>
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/06_BODY/[character]_body_anchor_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/06_BODY/[character]_body_anchor_v1.png" alt="[CHARACTER NAME] body anchor">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/06_BODY/[character]_body_anchor_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/06_BODY/[character]_body_anchor_v1.png" alt="[CHARACTER NAME] body anchor">
   </a>
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/07_SILHOUETTE/[character]_silhouette_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/07_SILHOUETTE/[character]_silhouette_v1.png" alt="[CHARACTER NAME] silhouette">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/07_SILHOUETTE/[character]_silhouette_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/07_SILHOUETTE/[character]_silhouette_v1.png" alt="[CHARACTER NAME] silhouette">
   </a>
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/08_TURNAROUND/[character]_turnaround_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/08_TURNAROUND/[character]_turnaround_v1.png" alt="[CHARACTER NAME] turnaround">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/08_TURNAROUND/[character]_turnaround_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/08_TURNAROUND/[character]_turnaround_v1.png" alt="[CHARACTER NAME] turnaround">
   </a>
 </div>
 
@@ -55,32 +55,32 @@ These references define facial identity, angle consistency, and portrait fidelit
 ### Face Anchor
 
 <div class="character-gallery">
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/01_FACE/[character]_face_anchor_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/01_FACE/[character]_face_anchor_v1.png" alt="[CHARACTER NAME] face anchor">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/01_FACE/[character]_face_anchor_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/01_FACE/[character]_face_anchor_v1.png" alt="[CHARACTER NAME] face anchor">
   </a>
 </div>
 
 ### Front Face
 
 <div class="character-gallery">
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/01_FACE/[character]_front_face_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/01_FACE/[character]_front_face_v1.png" alt="[CHARACTER NAME] front face">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/01_FACE/[character]_front_face_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/01_FACE/[character]_front_face_v1.png" alt="[CHARACTER NAME] front face">
   </a>
 </div>
 
 ### Three-Quarter Face
 
 <div class="character-gallery">
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/01_FACE/[character]_three_quarter_face_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/01_FACE/[character]_three_quarter_face_v1.png" alt="[CHARACTER NAME] three-quarter face">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/01_FACE/[character]_three_quarter_face_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/01_FACE/[character]_three_quarter_face_v1.png" alt="[CHARACTER NAME] three-quarter face">
   </a>
 </div>
 
 ### Profile Face
 
 <div class="character-gallery">
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/01_FACE/[character]_profile_face_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/01_FACE/[character]_profile_face_v1.png" alt="[CHARACTER NAME] profile face">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/01_FACE/[character]_profile_face_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/01_FACE/[character]_profile_face_v1.png" alt="[CHARACTER NAME] profile face">
   </a>
 </div>
 
@@ -91,8 +91,8 @@ These references define facial identity, angle consistency, and portrait fidelit
 ### Hair Sheet
 
 <div class="character-gallery">
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/02_HAIR/[character]_hair_sheet_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/02_HAIR/[character]_hair_sheet_v1.png" alt="[CHARACTER NAME] hair sheet">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/02_HAIR/[character]_hair_sheet_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/02_HAIR/[character]_hair_sheet_v1.png" alt="[CHARACTER NAME] hair sheet">
   </a>
 </div>
 
@@ -105,32 +105,32 @@ These references establish body construction, proportions, and anatomical consis
 ### Anatomy Front
 
 <div class="character-gallery">
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/03_ANATOMY/[character]_anatomy_front_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/03_ANATOMY/[character]_anatomy_front_v1.png" alt="[CHARACTER NAME] anatomy front">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/03_ANATOMY/[character]_anatomy_front_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/03_ANATOMY/[character]_anatomy_front_v1.png" alt="[CHARACTER NAME] anatomy front">
   </a>
 </div>
 
 ### Anatomy Side
 
 <div class="character-gallery">
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/03_ANATOMY/[character]_anatomy_side_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/03_ANATOMY/[character]_anatomy_side_v1.png" alt="[CHARACTER NAME] anatomy side">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/03_ANATOMY/[character]_anatomy_side_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/03_ANATOMY/[character]_anatomy_side_v1.png" alt="[CHARACTER NAME] anatomy side">
   </a>
 </div>
 
 ### Anatomy Back
 
 <div class="character-gallery">
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/03_ANATOMY/[character]_anatomy_back_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/03_ANATOMY/[character]_anatomy_back_v1.png" alt="[CHARACTER NAME] anatomy back">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/03_ANATOMY/[character]_anatomy_back_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/03_ANATOMY/[character]_anatomy_back_v1.png" alt="[CHARACTER NAME] anatomy back">
   </a>
 </div>
 
 ### Anatomy Sheet
 
 <div class="character-gallery">
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/03_ANATOMY/[character]_anatomy_sheet_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/03_ANATOMY/[character]_anatomy_sheet_v1.png" alt="[CHARACTER NAME] anatomy sheet">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/03_ANATOMY/[character]_anatomy_sheet_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/03_ANATOMY/[character]_anatomy_sheet_v1.png" alt="[CHARACTER NAME] anatomy sheet">
   </a>
 </div>
 
@@ -143,40 +143,40 @@ These references are most useful for full-body prompting, pose consistency, and 
 ### Body Anchor
 
 <div class="character-gallery">
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/06_BODY/[character]_body_anchor_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/06_BODY/[character]_body_anchor_v1.png" alt="[CHARACTER NAME] body anchor">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/06_BODY/[character]_body_anchor_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/06_BODY/[character]_body_anchor_v1.png" alt="[CHARACTER NAME] body anchor">
   </a>
 </div>
 
 ### Proportion Grid
 
 <div class="character-gallery">
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/04_PROPORTIONS/[character]_proportion_grid_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/04_PROPORTIONS/[character]_proportion_grid_v1.png" alt="[CHARACTER NAME] proportion grid">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/04_PROPORTIONS/[character]_proportion_grid_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/04_PROPORTIONS/[character]_proportion_grid_v1.png" alt="[CHARACTER NAME] proportion grid">
   </a>
 </div>
 
 ### Muscle Tension
 
 <div class="character-gallery">
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/05_MUSCLE/[character]_muscle_tension_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/05_MUSCLE/[character]_muscle_tension_v1.png" alt="[CHARACTER NAME] muscle tension">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/05_MUSCLE/[character]_muscle_tension_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/05_MUSCLE/[character]_muscle_tension_v1.png" alt="[CHARACTER NAME] muscle tension">
   </a>
 </div>
 
 ### Silhouette
 
 <div class="character-gallery">
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/07_SILHOUETTE/[character]_silhouette_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/07_SILHOUETTE/[character]_silhouette_v1.png" alt="[CHARACTER NAME] silhouette">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/07_SILHOUETTE/[character]_silhouette_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/07_SILHOUETTE/[character]_silhouette_v1.png" alt="[CHARACTER NAME] silhouette">
   </a>
 </div>
 
 ### Turnaround
 
 <div class="character-gallery">
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/08_TURNAROUND/[character]_turnaround_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/08_TURNAROUND/[character]_turnaround_v1.png" alt="[CHARACTER NAME] turnaround">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/08_TURNAROUND/[character]_turnaround_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/08_TURNAROUND/[character]_turnaround_v1.png" alt="[CHARACTER NAME] turnaround">
   </a>
 </div>
 
@@ -189,16 +189,16 @@ These references are useful for facial acting, emotional range, and hand-sensiti
 ### Expression Sheet
 
 <div class="character-gallery">
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/09_EXPRESSIONS/[character]_expression_sheet_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/09_EXPRESSIONS/[character]_expression_sheet_v1.png" alt="[CHARACTER NAME] expression sheet">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/09_EXPRESSIONS/[character]_expression_sheet_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/09_EXPRESSIONS/[character]_expression_sheet_v1.png" alt="[CHARACTER NAME] expression sheet">
   </a>
 </div>
 
 ### Hand Sheet
 
 <div class="character-gallery">
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/10_HANDS/[character]_hand_sheet_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/10_HANDS/[character]_hand_sheet_v1.png" alt="[CHARACTER NAME] hand sheet">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/10_HANDS/[character]_hand_sheet_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/10_HANDS/[character]_hand_sheet_v1.png" alt="[CHARACTER NAME] hand sheet">
   </a>
 </div>
 
@@ -211,84 +211,84 @@ Add additional references here as they become available.
 ### Ultimate Character Sheet
 
 <div class="character-gallery">
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/11_UCS/[character]_ucs_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/11_UCS/[character]_ucs_v1.png" alt="[CHARACTER NAME] ultimate character sheet">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/11_UCS/[character]_ucs_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/11_UCS/[character]_ucs_v1.png" alt="[CHARACTER NAME] ultimate character sheet">
   </a>
 </div>
 
 ### Signature Outfit
 
 <div class="character-gallery">
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/12_SIGNATURE_OUTFIT/[character]_signature_outfit_sheet_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/12_SIGNATURE_OUTFIT/[character]_signature_outfit_sheet_v1.png" alt="[CHARACTER NAME] signature outfit sheet">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/12_SIGNATURE_OUTFIT/[character]_signature_outfit_sheet_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/12_SIGNATURE_OUTFIT/[character]_signature_outfit_sheet_v1.png" alt="[CHARACTER NAME] signature outfit sheet">
   </a>
 </div>
 
 ### Design Language
 
 <div class="character-gallery">
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/13_DESIGN_LANGUAGE/[character]_design_language_sheet_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/13_DESIGN_LANGUAGE/[character]_design_language_sheet_v1.png" alt="[CHARACTER NAME] design language sheet">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/13_DESIGN_LANGUAGE/[character]_design_language_sheet_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/13_DESIGN_LANGUAGE/[character]_design_language_sheet_v1.png" alt="[CHARACTER NAME] design language sheet">
   </a>
 </div>
 
 ### Wardrobe
 
 <div class="character-gallery">
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/14_WARDROBE/[character]_casual_outfit_sheet_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/14_WARDROBE/[character]_casual_outfit_sheet_v1.png" alt="[CHARACTER NAME] casual outfit sheet">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/14_WARDROBE/[character]_casual_outfit_sheet_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/14_WARDROBE/[character]_casual_outfit_sheet_v1.png" alt="[CHARACTER NAME] casual outfit sheet">
   </a>
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/14_WARDROBE/[character]_formal_outfit_sheet_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/14_WARDROBE/[character]_formal_outfit_sheet_v1.png" alt="[CHARACTER NAME] formal outfit sheet">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/14_WARDROBE/[character]_formal_outfit_sheet_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/14_WARDROBE/[character]_formal_outfit_sheet_v1.png" alt="[CHARACTER NAME] formal outfit sheet">
   </a>
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/14_WARDROBE/[character]_home_outfit_sheet_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/14_WARDROBE/[character]_home_outfit_sheet_v1.png" alt="[CHARACTER NAME] home outfit sheet">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/14_WARDROBE/[character]_home_outfit_sheet_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/14_WARDROBE/[character]_home_outfit_sheet_v1.png" alt="[CHARACTER NAME] home outfit sheet">
   </a>
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/14_WARDROBE/[character]_work_outfit_sheet_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/14_WARDROBE/[character]_work_outfit_sheet_v1.png" alt="[CHARACTER NAME] work outfit sheet">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/14_WARDROBE/[character]_work_outfit_sheet_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/14_WARDROBE/[character]_work_outfit_sheet_v1.png" alt="[CHARACTER NAME] work outfit sheet">
   </a>
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/14_WARDROBE/[character]_activity_outfit_sheet_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/14_WARDROBE/[character]_activity_outfit_sheet_v1.png" alt="[CHARACTER NAME] activity outfit sheet">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/14_WARDROBE/[character]_activity_outfit_sheet_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/14_WARDROBE/[character]_activity_outfit_sheet_v1.png" alt="[CHARACTER NAME] activity outfit sheet">
   </a>
 </div>
 
 ### Poses
 
 <div class="character-gallery">
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/15_POSES/[character]_pose_sheet_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/15_POSES/[character]_pose_sheet_v1.png" alt="[CHARACTER NAME] pose sheet">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/15_POSES/[character]_pose_sheet_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/15_POSES/[character]_pose_sheet_v1.png" alt="[CHARACTER NAME] pose sheet">
   </a>
 </div>
 
 ### Motion
 
 <div class="character-gallery">
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/16_MOTION/[character]_motion_anchor_sheet_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/16_MOTION/[character]_motion_anchor_sheet_v1.png" alt="[CHARACTER NAME] motion anchor sheet">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/16_MOTION/[character]_motion_anchor_sheet_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/16_MOTION/[character]_motion_anchor_sheet_v1.png" alt="[CHARACTER NAME] motion anchor sheet">
   </a>
 </div>
 
 ### Scale
 
 <div class="character-gallery">
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/17_SCALE/[character]_height_scale_sheet_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/17_SCALE/[character]_height_scale_sheet_v1.png" alt="[CHARACTER NAME] height scale sheet">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/17_SCALE/[character]_height_scale_sheet_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/17_SCALE/[character]_height_scale_sheet_v1.png" alt="[CHARACTER NAME] height scale sheet">
   </a>
 </div>
 
 ### Scenes
 
 <div class="character-gallery">
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/18_SCENES/[character]_lifestyle_scene_anchor_sheet_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/18_SCENES/[character]_lifestyle_scene_anchor_sheet_v1.png" alt="[CHARACTER NAME] lifestyle scene anchor sheet">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/18_SCENES/[character]_lifestyle_scene_anchor_sheet_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/18_SCENES/[character]_lifestyle_scene_anchor_sheet_v1.png" alt="[CHARACTER NAME] lifestyle scene anchor sheet">
   </a>
 </div>
 
 ### Props
 
 <div class="character-gallery">
-  <a href="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/19_PROPS/[character]_prop_sheet_v1.png" target="_blank">
-    <img src="/docs/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/19_PROPS/[character]_prop_sheet_v1.png" alt="[CHARACTER NAME] prop sheet">
+  <a href="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/19_PROPS/[character]_prop_sheet_v1.png" target="_blank">
+    <img src="/assets/library/10_CHARACTERS/[CHARACTER_FOLDER]/19_PROPS/[character]_prop_sheet_v1.png" alt="[CHARACTER NAME] prop sheet">
   </a>
 </div>
 

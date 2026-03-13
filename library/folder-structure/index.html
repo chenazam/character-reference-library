@@ -10,6 +10,8 @@
       
       
       
+        <link rel="canonical" href="https://charreflib.chenazam.com/library/folder-structure/">
+      
       
         <link rel="prev" href="../../pipeline/stages/">
       
@@ -45,6 +47,8 @@
       
     
     
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -62,6 +66,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#reference-library-folder-structure" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -335,6 +344,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -363,6 +374,48 @@
   
   <span class="md-ellipsis">
     Naming Conventions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metadata-schema/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metadata Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../controlled-vocabulary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controlled Vocabulary
   </span>
   
 
@@ -456,6 +509,48 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../characters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Character Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../characters/lucien/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lucien
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -540,6 +635,48 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/prompt-recipes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt Recipes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/reference-attachments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reference Attachments
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -564,6 +701,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -578,9 +717,297 @@
                   
 
 
-  <h1>Folder Structure</h1>
+<h1 id="reference-library-folder-structure">Reference Library Folder Structure</h1>
+<p>The reference library is stored inside:</p>
+<pre><code>docs/assets/library/
+</code></pre>
+<p>This folder contains <strong>all generated assets, reference images, and prompt templates</strong> used in the character generation pipeline.</p>
+<p>Unlike many documentation projects, this system intentionally stores the full asset library directly inside <code>docs/assets/</code> so that all files are immediately accessible through the MkDocs site.</p>
+<p>Documentation explaining how the system works lives in:</p>
+<pre><code>docs/
+</code></pre>
+<p>The <code>docs/assets/library/</code> folder stores the <strong>actual reference images and generation resources</strong>.</p>
+<hr />
+<h1 id="top-level-library-structure">Top-Level Library Structure</h1>
+<pre><code>docs/assets/library/
 
+10_CHARACTERS
+20_CHARACTER_PAIRS
+30_CHARACTER_GROUPS
+40_ENVIRONMENTS
+50_PROMPT_TEMPLATES
+60_INSPIRATION
+</code></pre>
+<hr />
+<h1 id="10_characters">10_CHARACTERS</h1>
+<p>Contains the full reference pipeline for each individual character.</p>
+<p>Each character receives its own folder with all reference sheets generated through the pipeline.</p>
+<p>Example:</p>
+<pre><code>10_CHARACTERS/
+├── LUCIEN/
+├── RAGNAR/
+└── JONAH/
+</code></pre>
+<p>Each character folder contains anatomy references, style sheets, pose sheets, and other generated resources.</p>
+<hr />
+<h1 id="20_character_pairs">20_CHARACTER_PAIRS</h1>
+<p>Contains resources for <strong>two-character relationships</strong>.</p>
+<p>This includes reference sheets used when two characters frequently appear together.</p>
+<p>Typical contents:</p>
+<ul>
+<li>height comparison sheets</li>
+<li>interaction anchors</li>
+<li>couple pose sheets</li>
+<li>scene anchors involving both characters</li>
+</ul>
+<p>Example:</p>
+<pre><code>20_CHARACTER_PAIRS/
+├── LUCIEN__RAGNAR/
+└── JASPER__BLAKE/
+</code></pre>
+<hr />
+<h1 id="30_character_groups">30_CHARACTER_GROUPS</h1>
+<p>Contains resources for <strong>groups of three or more characters</strong>.</p>
+<p>Useful for teams, families, ensembles, or story casts.</p>
+<p>Typical contents:</p>
+<ul>
+<li>group lineup sheets</li>
+<li>group pose sheets</li>
+<li>interaction scenes</li>
+<li>group scene anchors</li>
+</ul>
+<p>Example:</p>
+<pre><code>30_CHARACTER_GROUPS/
+├── WITCH_COVEN/
+└── GYM_CREW/
+</code></pre>
+<hr />
+<h1 id="40_environments">40_ENVIRONMENTS</h1>
+<p>Contains reference sheets for <strong>locations and environments</strong> where characters appear.</p>
+<p>These act as scene anchors to keep locations visually consistent.</p>
+<p>Typical environment sheets include:</p>
+<ul>
+<li>room layouts</li>
+<li>lighting references</li>
+<li>architectural details</li>
+<li>environmental mood references</li>
+</ul>
+<p>Example environments:</p>
+<pre><code>40_ENVIRONMENTS/
 
+LUCIEN_APARTMENT/
+RITUAL_CHAMBER/
+GYM_INTERIOR/
+CITY_STREET/
+</code></pre>
+<p>Environment anchors are often attached to prompts when generating <strong>scene images</strong>.</p>
+<hr />
+<h1 id="50_prompt_templates">50_PROMPT_TEMPLATES</h1>
+<p>Contains reusable prompt templates used throughout the pipeline.</p>
+<p>Templates are organized by generation stage.</p>
+<p>Example:</p>
+<pre><code>50_PROMPT_TEMPLATES/
+
+00_MASTER_BLOCKS
+01_FACE_ANCHORS
+03_ANATOMY
+11_UCS
+</code></pre>
+<p>Each template should include reusable placeholder blocks such as:</p>
+<pre><code>[CHARACTER BLOCK]
+[GLOBAL STYLE BLOCK]
+</code></pre>
+<p>These allow prompts to be reused across multiple characters.</p>
+<hr />
+<h1 id="60_inspiration">60_INSPIRATION</h1>
+<p>Contains reference images used as <strong>design inspiration</strong>.</p>
+<p>These are not generated assets, but visual references that influence character design.</p>
+<p>Examples include:</p>
+<ul>
+<li>fashion references</li>
+<li>architecture references</li>
+<li>lighting references</li>
+<li>pose inspiration</li>
+<li>color palette inspiration</li>
+</ul>
+<p>Example structure:</p>
+<pre><code>60_INSPIRATION/
+
+FASHION/
+LIGHTING/
+POSES/
+COLOR_PALETTES/
+ARCHITECTURE/
+</code></pre>
+<p>These images are sometimes attached to prompts to guide visual style.</p>
+<hr />
+<h1 id="character-folder-structure">Character Folder Structure</h1>
+<p>Each character folder contains the complete reference pipeline for that character.</p>
+<p>Example:</p>
+<pre><code>10_CHARACTERS/
+└── LUCIEN/
+</code></pre>
+<p>Inside each character folder:</p>
+<pre><code>00_PROFILE
+01_FACE
+02_HAIR
+03_ANATOMY
+04_PROPORTIONS
+05_MUSCLE
+06_BODY
+07_SILHOUETTE
+08_TURNAROUND
+09_EXPRESSIONS
+10_HANDS
+11_UCS
+12_SIGNATURE_OUTFIT
+13_DESIGN_LANGUAGE
+14_WARDROBE
+15_POSES
+16_MOTION
+17_SCALE
+18_SCENES
+19_PROPS
+
+IDENTITY_PACK
+SOURCE_REFERENCES
+</code></pre>
+<hr />
+<h1 id="character-folder-explanations">Character Folder Explanations</h1>
+<h2 id="00_profile">00_PROFILE</h2>
+<p>Contains descriptive information about the character.</p>
+<p>Typical files:</p>
+<pre><code>metadata.yaml
+character_summary.md
+prompt_blocks.md
+prompt_recipes.md
+</code></pre>
+<p>These files define the character concept and reusable prompt components.</p>
+<hr />
+<h2 id="01_face">01_FACE</h2>
+<p>Contains all face identity references.</p>
+<p>Examples:</p>
+<pre><code>face_front.png
+face_34.png
+face_profile.png
+face_anchor_sheet.png
+</code></pre>
+<p>These images establish the character’s facial identity.</p>
+<hr />
+<h2 id="02_hair">02_HAIR</h2>
+<p>Hair structure references used to stabilize hairstyle.</p>
+<p>Example:</p>
+<pre><code>hair_reference_sheet.png
+</code></pre>
+<hr />
+<h2 id="03_anatomy">03_ANATOMY</h2>
+<p>Bare-torso anatomy references used to define physique and proportions.</p>
+<p>Examples:</p>
+<pre><code>anatomy_front.png
+anatomy_side.png
+anatomy_back.png
+anatomy_sheet.png
+</code></pre>
+<hr />
+<h2 id="04_proportions">04_PROPORTIONS</h2>
+<p>Contains body proportion grid sheets.</p>
+<p>Used to anchor limb lengths and body ratios.</p>
+<hr />
+<h2 id="05_muscle">05_MUSCLE</h2>
+<p>Contains muscle tension references.</p>
+<p>Shows how musculature appears when relaxed vs engaged.</p>
+<hr />
+<h2 id="06_body">06_BODY</h2>
+<p>Contains the <strong>body anchor sheet</strong>, which introduces neutral clothing.</p>
+<p>This becomes the main body reference used for most later prompts.</p>
+<hr />
+<h2 id="07_silhouette">07_SILHOUETTE</h2>
+<p>Contains silhouette references used to stabilize character shape.</p>
+<hr />
+<h2 id="08_turnaround">08_TURNAROUND</h2>
+<p>Contains the multi-angle turnaround sheet used to define how the character looks from different angles.</p>
+<hr />
+<h2 id="09_expressions">09_EXPRESSIONS</h2>
+<p>Contains the character’s expression sheet.</p>
+<p>Defines emotional range while preserving facial structure.</p>
+<hr />
+<h2 id="10_hands">10_HANDS</h2>
+<p>Contains hand reference sheets used to stabilize finger proportions and gestures.</p>
+<hr />
+<h2 id="11_ucs">11_UCS</h2>
+<p>Contains the Ultimate Character Sheet and its individual panels.</p>
+<p>This is the master identity reference for the character.</p>
+<hr />
+<h2 id="12_signature_outfit">12_SIGNATURE_OUTFIT</h2>
+<p>Contains the character’s canonical outfit reference.</p>
+<p>This sheet defines the character’s primary visual style.</p>
+<hr />
+<h2 id="13_design_language">13_DESIGN_LANGUAGE</h2>
+<p>Contains sheets that define materials, accessories, color palette, and stylistic motifs.</p>
+<p>These help maintain consistent aesthetic across outfits and scenes.</p>
+<hr />
+<h2 id="14_wardrobe">14_WARDROBE</h2>
+<p>Contains additional outfit sheets for the character.</p>
+<p>Examples:</p>
+<ul>
+<li>casual outfit</li>
+<li>work outfit</li>
+<li>formal outfit</li>
+<li>home outfit</li>
+</ul>
+<hr />
+<h2 id="15_poses">15_POSES</h2>
+<p>Contains pose sheets used to demonstrate body language and movement.</p>
+<hr />
+<h2 id="16_motion">16_MOTION</h2>
+<p>Contains motion anchor sheets.</p>
+<p>These stabilize movement such as walking, running, turning, and reaching.</p>
+<hr />
+<h2 id="17_scale">17_SCALE</h2>
+<p>Contains height comparison sheets and scale references.</p>
+<p>Used when characters appear together.</p>
+<hr />
+<h2 id="18_scenes">18_SCENES</h2>
+<p>Contains scene anchors involving the character.</p>
+<p>Examples:</p>
+<ul>
+<li>domestic scene</li>
+<li>workplace scene</li>
+<li>social interaction</li>
+<li>action scene</li>
+</ul>
+<hr />
+<h2 id="19_props">19_PROPS</h2>
+<p>Contains prop interaction references.</p>
+<p>Examples include the character handling:</p>
+<ul>
+<li>phones</li>
+<li>books</li>
+<li>weapons</li>
+<li>tools</li>
+<li>bags</li>
+</ul>
+<hr />
+<h2 id="identity_pack">IDENTITY_PACK</h2>
+<p>Contains the small set of core identity references most commonly attached to prompts.</p>
+<p>Typical contents:</p>
+<pre><code>face_anchor_sheet.png
+anatomy_sheet.png
+body_anchor_sheet.png
+ultimate_character_sheet.png
+signature_outfit_sheet.png
+</code></pre>
+<p>These images are the <strong>most important visual anchors for the character</strong>.</p>
+<hr />
+<h2 id="source_references">SOURCE_REFERENCES</h2>
+<p>Contains original source images used during character creation.</p>
+<p>Examples:</p>
+<ul>
+<li>face inspiration photos</li>
+<li>clothing inspiration</li>
+<li>hairstyle references</li>
+<li>pose references</li>
+</ul>
 
 
 
@@ -627,7 +1054,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>

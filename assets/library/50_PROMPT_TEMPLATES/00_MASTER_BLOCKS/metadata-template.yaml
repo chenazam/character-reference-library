@@ -1,0 +1,105 @@
+name: [CHARACTER_NAME]
+slug: [character_slug]
+
+status: active
+project: [PROJECT_NAME]
+
+core_identity:
+  short_summary: [one_sentence_identity_summary]
+  role_archetype:
+    - [archetype_tag]
+  aesthetic_tags:
+    - [aesthetic_tag_1]
+    - [aesthetic_tag_2]
+    - [aesthetic_tag_3]
+
+physical:
+  height_cm: [HEIGHT_CM]
+  height_imperial: '[HEIGHT_IMPERIAL]'
+  build_category: [build_category]
+  build_notes: [short_build_description]
+  shoulder_profile: [shoulder_profile]
+  torso_profile: [torso_profile]
+  limb_profile: [limb_profile]
+  posture_profile: [posture_profile]
+  silhouette_keywords:
+    - [silhouette_keyword_1]
+    - [silhouette_keyword_2]
+
+face:
+  face_shape: [face_shape]
+  jawline: [jawline_type]
+  eye_description: [short_eye_description]
+  hair_description: [short_hair_description]
+  skin_description: [short_skin_description]
+  distinctive_features:
+    - [feature_1]
+    - [feature_2]
+
+style:
+  primary_aesthetic: [primary_aesthetic]
+  secondary_aesthetic:
+    - [secondary_aesthetic_1]
+    - [secondary_aesthetic_2]
+  materials:
+    - [material_1]
+    - [material_2]
+  primary_colors:
+    - [color_1]
+    - [color_2]
+  accent_colors:
+    - [accent_color_1]
+  recurring_accessories:
+    - [accessory_1]
+    - [accessory_2]
+
+expression:
+  default_expression: [default_expression]
+  smile_type: [smile_type]
+  emotional_tone: [emotional_tone]
+
+movement:
+  movement_style: [movement_style]
+  gesture_style: [gesture_style]
+  body_language: [body_language]
+
+identity_rules:
+  preserve:
+    - [preserve_rule_1]
+    - [preserve_rule_2]
+    - [preserve_rule_3]
+  avoid:
+    - [avoid_rule_1]
+    - [avoid_rule_2]
+    - [avoid_rule_3]
+
+reference_files:
+  face_anchor: [filename]
+  anatomy_sheet: [filename]
+  body_anchor: [filename]
+  ultimate_character_sheet: [filename]
+  signature_outfit_sheet: [filename]
+
+pipeline_status:
+  face_anchor: false
+  hair_sheet: false
+  anatomy_sheet: false
+  proportion_grid: false
+  muscle_tension: false
+  body_anchor: false
+  silhouette_sheet: false
+  turnaround_sheet: false
+  expression_sheet: false
+  hand_sheet: false
+  ucs: false
+  signature_outfit: false
+  design_language: false
+  wardrobe: false
+  pose_sheet: false
+  motion_sheet: false
+  scale_sheet: false
+  scene_anchors: false
+  prop_sheet: false
+
+notes: ''
+last_updated: ''

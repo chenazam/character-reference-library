@@ -10,9 +10,13 @@
       
       
       
+        <link rel="canonical" href="https://charreflib.chenazam.com/prompts/master-blocks/">
+      
       
         <link rel="prev" href="../overview/">
       
+      
+        <link rel="next" href="../prompt-recipes/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -43,6 +47,8 @@
       
     
     
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -60,6 +66,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#master-prompt-blocks" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -360,6 +371,48 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../library/metadata-schema/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metadata Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../library/controlled-vocabulary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controlled Vocabulary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -435,6 +488,48 @@
   
   <span class="md-ellipsis">
     Templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../characters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Character Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../characters/lucien/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lucien
   </span>
   
 
@@ -522,6 +617,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -533,6 +630,48 @@
 
       </a>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prompt-recipes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt Recipes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference-attachments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reference Attachments
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -562,6 +701,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -576,9 +717,86 @@
                   
 
 
-  <h1>Master Blocks</h1>
+<h1 id="master-prompt-blocks">Master Prompt Blocks</h1>
+<p>These blocks are reusable components used in prompt templates across the character pipeline.</p>
+<hr />
+<h1 id="character-block-template">Character Block Template</h1>
+<p>This block is replaced with the character-specific description.</p>
+<pre><code>Character:
 
+Lucien is a slender man of average height (170 cm / 5'7&quot;) with refined facial features and a calm, slightly mysterious presence. His aesthetic is occult and scholarly with subtle gothic influences.
+</code></pre>
+<hr />
+<h1 id="global-style-block">Global Style Block</h1>
+<p>Use this block in most reference sheet prompts.</p>
+<pre><code>Style:
+clean professional character design reference sheet
 
+Rendering:
+high detail illustration
+consistent anatomy
+
+Lighting:
+neutral studio lighting
+
+Background:
+pure white
+
+Camera:
+orthographic reference camera
+no dramatic perspective
+
+Color:
+natural realistic colors
+
+Linework:
+clean professional design lines
+</code></pre>
+<hr />
+<h1 id="identity-preservation-block">Identity Preservation Block</h1>
+<p>Use this in prompts where identity drift may occur.</p>
+<pre><code>Important constraints:
+
+• preserve exact facial identity
+• maintain body proportions
+• maintain hairstyle consistency
+• ensure all panels clearly depict the same character
+</code></pre>
+<hr />
+<h1 id="layout-block">Layout Block</h1>
+<p>Use this block when generating reference sheets.</p>
+<pre><code>Layout:
+professional animation reference sheet layout
+even spacing
+clean grid alignment
+
+Important:
+no panel cropping
+no overlapping panels
+all panels fully visible
+</code></pre>
+<hr />
+<h1 id="panel-label-block">Panel Label Block</h1>
+<p>Standard label style for reference sheets.</p>
+<pre><code>Labels:
+small clean sans-serif labels
+dark gray text
+centered under panels
+</code></pre>
+<hr />
+<h1 id="camera-rules-block">Camera Rules Block</h1>
+<p>Ensures consistent orthographic views.</p>
+<pre><code>Camera:
+orthographic reference camera
+eye-level perspective
+no dramatic perspective distortion
+</code></pre>
+<hr />
+<h1 id="background-block">Background Block</h1>
+<p>Standard background used in most sheets.</p>
+<pre><code>Background:
+pure white
+</code></pre>
 
 
 
@@ -625,7 +843,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>

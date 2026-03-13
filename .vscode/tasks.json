@@ -4,7 +4,7 @@
     {
       "label": "Publish Docs and Deploy",
       "type": "shell",
-      "command": "set -e && python -m mkdocs build && git add . && (git diff --cached --quiet || git commit -m \"Update docs\") && git push && python -m mkdocs gh-deploy --clean",
+      "command": "set -e && echo \"[1/5] Building MkDocs\" && python -m mkdocs build && echo \"[2/5] Staging changes\" && git add . && echo \"[3/5] Committing if needed\" && (git diff --cached --quiet || git commit -m \"Update docs\") && echo \"[4/5] Pushing source branch\" && git push && echo \"[5/5] Deploying site\" && python -m mkdocs gh-deploy --clean",
       "options": {
         "cwd": "${workspaceFolder}",
         "shell": {

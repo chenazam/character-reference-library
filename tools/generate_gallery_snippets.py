@@ -39,10 +39,10 @@ def generate_gallery(images):
     for img in images:
 
         # path relative to docs/
-        rel = img.relative_to(ROOT / "docs")
+        rel = img.relative_to(ROOT / "docs").as_posix()
 
-        # convert for use inside docs/characters pages
-        rel = "../" + rel.as_posix()
+        # convert to site-root path
+        rel = "/" + rel
 
         lines.append(f'  <a href="{rel}" target="_blank">')
         lines.append(f'    <img src="{rel}" alt="">')

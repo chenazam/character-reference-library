@@ -1,0 +1,109 @@
+name: Jonah
+slug: jonah
+
+status: active
+
+core_identity:
+  short_summary: Tall, playful, expressive cheerleader with a lean elegant silhouette and confident modern urban style.
+  role_archetype:
+    - cheerleader
+  aesthetic_tags:
+    - playful_athletic
+    - athletic
+    - romantic
+
+physical:
+  height_cm: 178
+  height_imperial: '5''10"'
+
+  build_category: elongated_slender
+  build_notes: Lean athletic build with long natural proportions, moderate visible tone, and an elegant elongated silhouette.
+  shoulder_profile: moderate_shoulders
+  torso_profile: athletic_torso
+  limb_profile: long_limbs
+  posture_profile: confident_open
+
+  silhouette_keywords:
+    - slender
+    - long-limbed
+    - elegant
+    - athletic
+
+face:
+  face_shape: long_oval
+  jawline: defined_jawline
+  eye_description: expressive green eyes
+  hair_description: dark blonde medium-length wavy hair with soft side-swept volume
+  skin_description: light skin with a natural tone
+  distinctive_features:
+    - expressive green eyes
+    - refined facial structure
+    - soft side-swept wave at the front
+    - balanced features
+    - defined but not harsh jawline
+
+style:
+  primary_aesthetic: playful_athletic
+  secondary_aesthetic:
+    - athletic
+    - romantic
+
+  materials:
+    - cotton
+    - mesh
+
+  primary_colors:
+    - black
+    - white
+    - pink
+    - red
+
+  accent_colors:
+    - silver
+
+expression:
+  default_expression: soft_neutral
+  smile_type: warm_smile
+  emotional_tone: open_warm
+
+movement:
+  movement_style: relaxed_natural
+  gesture_style: expressive
+  body_language: open_confident
+
+identity_rules:
+  preserve:
+    - tall elongated silhouette
+    - lean athletic build without bulky mass
+    - dark blonde wavy hair with soft side-swept volume
+    - expressive green eyes
+    - playful confident presentation
+    - comfortable slightly feminine or provocative styling
+  avoid:
+    - bulky musculature
+    - heavy torso mass
+    - overly rugged facial structure
+    - severe or emotionally closed presentation
+    - muted conservative styling that removes his playful confidence
+
+reference_files:
+  face_anchor: ''
+  anatomy_sheet: ''
+  body_anchor: ''
+  ultimate_character_sheet: ''
+  signature_outfit_sheet: ''
+
+pipeline_status:
+  face_anchor: complete
+  anatomy_sheet: complete
+  body_anchor: complete
+  turnaround_sheet: complete
+  expression_sheet: complete
+  hand_sheet: complete
+  pose_sheet: complete
+  height_comparison: complete
+  outfit_sheet: complete
+
+notes: ''
+
+last_updated: 2026-03-13

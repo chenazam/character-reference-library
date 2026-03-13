@@ -618,6 +618,26 @@ Once these are complete, the image generation pipeline can begin.
 
 ---
 
+### identity_guardrails.md (optional but recommended)
+
+Defines non-negotiable identity constraints for the character.
+
+This file helps prevent identity drift when generating images and serves as a troubleshooting guide when outputs begin to diverge from the intended design.
+
+Typical contents:
+
+- core identity traits
+- silhouette guardrails
+- facial guardrails
+- expression rules
+- known generator drift risks
+- reference hierarchy
+- identity verification checklist
+
+This file is primarily used by humans when generating prompts and reviewing results.
+
+---
+
 ## Recommended Workflow
 
 1. Create character folder.

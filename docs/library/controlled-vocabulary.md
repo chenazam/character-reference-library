@@ -122,18 +122,19 @@ Use these values for `face.jawline`.
 
 Use these values for `style.primary_aesthetic` or `core_identity.aesthetic_tags`.
 
-| Value           | Description                                        |
-| --------------- | -------------------------------------------------- |
-| `occult`        | ritual, arcane, symbolic, mystical design language |
-| `gothic`        | dark, moody, dramatic, ornate visual styling       |
-| `scholarly`     | intellectual, academic, bookish, refined styling   |
-| `royal`         | noble, aristocratic, elevated styling              |
-| `luxury`        | polished, expensive, high-end fashion language     |
-| `athletic`      | sport-influenced or activewear-informed styling    |
-| `military`      | uniformed, structured, disciplined style language  |
-| `streetwear`    | modern casual urban styling                        |
-| `domestic_soft` | cozy, warm, home-oriented styling                  |
-| `romantic`      | soft, elegant, intimate styling                    |
+| Value              | Description                                        |
+| ------------------ | -------------------------------------------------- |
+| `occult`           | ritual, arcane, symbolic, mystical design language |
+| `gothic`           | dark, moody, dramatic, ornate visual styling       |
+| `scholarly`        | intellectual, academic, bookish, refined styling   |
+| `royal`            | noble, aristocratic, elevated styling              |
+| `luxury`           | polished, expensive, high-end fashion language     |
+| `athletic`         | sport-influenced or activewear-informed styling    |
+| `military`         | uniformed, structured, disciplined style language  |
+| `streetwear`       | modern casual urban styling                        |
+| `domestic_soft`    | cozy, warm, home-oriented styling                  |
+| `romantic`         | soft, elegant, intimate styling                    |
+| `playful_athletic` | sporty, expressive, bold, flirtatious styling      |
 
 ---
 
@@ -150,6 +151,7 @@ Use these values for `style.materials`.
 | `leather`       | structured leather material                   |
 | `antique_metal` | aged metal, jewelry, clasps, symbolic objects |
 | `silk`          | smooth elegant fabric with soft sheen         |
+| `mesh`          | lightweight open-weave fabric                 |
 
 ---
 

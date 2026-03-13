@@ -15,6 +15,26 @@ These are the highest-priority traits to preserve in prompts.
 
 ---
 
+## Character Block
+
+Use for:
+
+- reference sheet prompts
+- face anchors
+- anatomy prompts
+- body anchors
+- general character prompts
+
+Lucien is a young adult man in his mid-twenties with a slender lightly built physique, soft mature facial features, and a calm, slightly mysterious presence.
+
+He has dark brown expressive eyes, short to medium-length naturally curly dark brown hair with soft volume, and light skin with subtle freckles across the nose and cheeks.
+
+His silhouette is slim and balanced with narrow gently sloped shoulders and soft natural proportions rather than pronounced musculature.
+
+His aesthetic feels scholarly, occult, and subtly witchy. Maintain consistent facial identity, hairstyle, body proportions, and overall silhouette across all views.
+
+---
+
 ## Identity Block (Short)
 
 Use for:

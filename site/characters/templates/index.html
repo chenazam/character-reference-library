@@ -1061,6 +1061,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Minimum Character Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#identity_guardrailsmd-optional-but-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      identity_guardrails.md (optional but recommended)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1339,6 +1354,21 @@
       Minimum Character Setup
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Minimum Character Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#identity_guardrailsmd-optional-but-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      identity_guardrails.md (optional but recommended)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1926,6 +1956,21 @@ Maintain consistent facial identity, body proportions, and style across all view
 <li>initial <code>prompt_blocks.md</code></li>
 </ul>
 <p>Once these are complete, the image generation pipeline can begin.</p>
+<hr />
+<h3 id="identity_guardrailsmd-optional-but-recommended">identity_guardrails.md (optional but recommended)</h3>
+<p>Defines non-negotiable identity constraints for the character.</p>
+<p>This file helps prevent identity drift when generating images and serves as a troubleshooting guide when outputs begin to diverge from the intended design.</p>
+<p>Typical contents:</p>
+<ul>
+<li>core identity traits</li>
+<li>silhouette guardrails</li>
+<li>facial guardrails</li>
+<li>expression rules</li>
+<li>known generator drift risks</li>
+<li>reference hierarchy</li>
+<li>identity verification checklist</li>
+</ul>
+<p>This file is primarily used by humans when generating prompts and reviewing results.</p>
 <hr />
 <h2 id="recommended-workflow">Recommended Workflow</h2>
 <ol>

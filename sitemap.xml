@@ -21,6 +21,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/background-block/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/camera-block/</loc>
          <lastmod>2026-03-13</lastmod>
          <changefreq>daily</changefreq>
@@ -196,27 +201,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/14_WARDROBE/activity-outfit-sheet/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/14_WARDROBE/outfit-sheet/</loc>
          <lastmod>2026-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/14_WARDROBE/casual-outfit-sheet/</loc>
-         <lastmod>2026-03-13</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/14_WARDROBE/formal-outfit-sheet/</loc>
-         <lastmod>2026-03-13</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/14_WARDROBE/home-outfit-sheet/</loc>
-         <lastmod>2026-03-13</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/14_WARDROBE/work-outfit-sheet/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/14_WARDROBE/wardrobe-master-sheet/</loc>
          <lastmod>2026-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -301,6 +291,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/library/gallery-snippet-conventions/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/library/metadata-schema/</loc>
          <lastmod>2026-03-13</lastmod>
          <changefreq>daily</changefreq>
@@ -347,6 +342,36 @@
     </url>
     <url>
          <loc>https://charreflib.chenazam.com/prompts/templates-index/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/prompts/templates/anatomy/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/prompts/templates/body/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/prompts/templates/face/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/prompts/templates/outfits/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/prompts/templates/scenes/</loc>
+         <lastmod>2026-03-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/prompts/templates/ucs/</loc>
          <lastmod>2026-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>

@@ -25,6 +25,7 @@ Use these values for `physical.build_category`.
 | `elongated_slender` | slender build with visibly long limbs and elongated proportions  |
 | `light_athletic`    | lightly toned body with visible fitness but little bulk          |
 | `runner_build`      | athletic build with lower-body emphasis and lean overall mass    |
+| `lower_athletic`    | athletic build with noticeable lower-body dominance              |
 | `balanced_athletic` | proportional athletic build with moderate tone and balanced mass |
 | `athletic_muscular` | clearly defined muscular physique without extreme bulk           |
 | `heavy_muscular`    | thick muscular body with strong mass and visible density         |
@@ -32,6 +33,23 @@ Use these values for `physical.build_category`.
 | `broad_heavy`       | broad frame with substantial overall body mass                   |
 | `thick_set`         | dense body build with strong torso mass and compact power        |
 | `large_frame`       | naturally large skeletal frame regardless of muscle level        |
+
+---
+
+# Silhouette Keywords
+
+Use these values for `physical.silhouette_keywords`.
+
+| Value          | Description                                  |
+| -------------- | -------------------------------------------- |
+| leg_dominant   | lower body visually emphasized               |
+| upper_dominant | upper body visually emphasized               |
+| compact        | tight, condensed body proportions            |
+| tall           | visually tall vertical silhouette            |
+| broad          | wide shoulder silhouette                     |
+| imposing       | large presence with strong physical scale    |
+| agile          | light, athletic movement-oriented silhouette |
+| heavy_set      | dense mass-focused silhouette                |
 
 ---
 
@@ -130,11 +148,13 @@ Use these values for `style.primary_aesthetic` or `core_identity.aesthetic_tags`
 | `royal`            | noble, aristocratic, elevated styling              |
 | `luxury`           | polished, expensive, high-end fashion language     |
 | `athletic`         | sport-influenced or activewear-informed styling    |
+| `athletic_luxury`  | high-end athletic lifestyle aesthetic              |
 | `military`         | uniformed, structured, disciplined style language  |
 | `streetwear`       | modern casual urban styling                        |
 | `domestic_soft`    | cozy, warm, home-oriented styling                  |
 | `romantic`         | soft, elegant, intimate styling                    |
 | `playful_athletic` | sporty, expressive, bold, flirtatious styling      |
+| `exhibitionist`    | styling that intentionally shows body or skin      |
 
 ---
 

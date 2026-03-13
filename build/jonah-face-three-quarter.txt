@@ -1,0 +1,132 @@
+Create a three-quarter facial reference for a character design pipeline.
+
+Character:
+Jonah is a tall man (178 cm / 5'10") with a lean athletic build and naturally elongated proportions that give him a graceful, elegant presence.
+
+He has expressive green eyes, refined balanced facial features, and dark blonde medium-length wavy hair with soft side-swept volume.
+
+His silhouette reads as tall and slender with long limbs, a narrow waist, and moderately broad but balanced shoulders that emphasize an elongated athletic frame.
+
+His aesthetic centers on playful athletic fashion with sporty expressive clothing such as crop tops, athletic shorts, and bold casual outfits. Maintain consistent facial identity, hairstyle, body proportions, and overall silhouette across all views.
+
+---
+
+View:
+clean 45-degree three-quarter head view
+neutral expression
+natural head alignment
+
+Focus:
+depth of facial structure
+cheekbone form
+nose projection
+jaw curvature
+brow-to-cheek transition
+how the hairstyle frames the face from an angled view
+
+Output requirements:
+single clean facial reference image
+consistent identity with the front face reference
+full head clearly visible
+no dramatic perspective distortion
+no stylized pose or expression
+facial structure must remain stable and recognizable
+Style:
+clean professional character design reference sheet
+
+Rendering:
+high-detail illustration
+accurate anatomy
+
+Linework:
+clean professional design lines
+
+Color:
+natural realistic colors
+consistent palette
+
+Background:
+pure white
+
+Reference fidelity:
+
+The attached reference images define the canonical appearance of the character.
+
+Strictly preserve:
+
+• facial identity
+• hairstyle
+• body proportions
+• silhouette
+• age and facial maturity
+• recognizable facial features
+
+The generated image must clearly depict the same character as the references.
+
+Do not reinterpret or redesign the character.
+Do not change facial structure or body proportions.
+
+Important constraints:
+
+• preserve exact facial identity
+• maintain consistent body proportions
+• maintain hairstyle and hairline
+• ensure all panels clearly depict the same character
+
+Layout:
+professional animation reference sheet layout
+even panel spacing
+clean grid alignment
+
+Camera consistency:
+the same camera distance should be used for comparable views
+character size should remain consistent across panels
+
+Sheet structure:
+all panels belong to a single unified reference sheet
+panels must be evenly spaced and aligned
+consistent margins around the sheet
+
+Panel consistency:
+each panel must show the same character
+the character scale must remain consistent across panels
+camera distance should remain consistent unless a specific view requires otherwise
+
+Important:
+no panel cropping
+no overlapping panels
+all panels fully visible
+
+Labels:
+small clean sans-serif labels
+dark gray text
+centered under panels
+
+Label behavior:
+each panel must have a clear label
+labels must not overlap panels
+labels should align consistently across the sheet
+
+Camera:
+orthographic reference camera
+eye-level perspective
+no dramatic perspective distortion
+consistent camera distance across panels
+
+Lighting:
+neutral studio lighting
+soft even illumination
+no dramatic shadows
+consistent lighting across panels
+
+Background:
+pure white
+clean empty background
+no environmental elements
+no texture
+Output format:
+square reference canvas
+consistent square aspect ratio
+head or subject centered
+clean margins
+intended for uniform gallery display

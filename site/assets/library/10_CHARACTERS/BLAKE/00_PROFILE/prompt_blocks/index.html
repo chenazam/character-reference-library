@@ -1,0 +1,1529 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="AI character pipeline, prompts, references, and metadata">
+      
+      
+      
+        <link rel="canonical" href="https://charreflib.chenazam.com/assets/library/10_CHARACTERS/BLAKE/00_PROFILE/prompt_blocks/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.12">
+    
+    
+      
+        <title>Prompt Blocks — Blake - Character Reference Library</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/main.7e359304.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#prompt-blocks-blake" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../../.." title="Character Reference Library" class="md-header__button md-logo" aria-label="Character Reference Library" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Character Reference Library
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Prompt Blocks — Blake
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="Character Reference Library" class="md-nav__button md-logo" aria-label="Character Reference Library" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Character Reference Library
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Browse Library
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Browse Library
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Characters
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Characters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../characters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Character Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../characters/lucien/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lucien
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../characters/jonah/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jonah
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Prompt Templates
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Prompt Templates
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../prompts/templates-index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Templates Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../prompts/templates/face/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Face
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../prompts/templates/anatomy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hair and Anatomy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../prompts/templates/body/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Body Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../prompts/templates/ucs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UCS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../prompts/templates/outfits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Outfits and Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../prompts/templates/scenes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Motion and Scenes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../pairs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pairs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../groups/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Groups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../environments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Environments
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../inspiration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inspiration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pipeline
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Pipeline
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../pipeline/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../pipeline/stages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Stages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Prompt System
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Prompt System
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../prompts/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../prompts/master-blocks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Master Blocks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../prompts/prompt-recipes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt Recipes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../prompts/reference-attachments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reference Attachments
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Characters
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Characters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../characters/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../characters/templates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Library Standards
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Library Standards
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../library/folder-structure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Folder Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../library/naming-conventions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Naming Conventions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../library/metadata-schema/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metadata Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../library/controlled-vocabulary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controlled Vocabulary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../library/gallery-snippet-conventions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gallery Snippet Conventions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#character-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      Character Block
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identity-block-short" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identity Block (Short)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identity-block-extended" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identity Block (Extended)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#face-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      Face Block
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#body-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      Body Block
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#style-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      Style Block
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#movement-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      Movement Block
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expression-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expression Block
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wardrobe-description-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wardrobe Description Block
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anti-drift-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anti-Drift Rules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#short-prompt-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Short Prompt Description
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-prompt-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Full Prompt Description
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="prompt-blocks-blake">Prompt Blocks — Blake</h1>
+<p>This file contains reusable prompt fragments describing the character.
+Each block can be copied into prompts depending on the generation task.</p>
+<hr />
+<h2 id="character-block">Character Block</h2>
+<p>Use for:</p>
+<ul>
+<li>reference sheet prompts</li>
+<li>anatomy prompts</li>
+<li>body anchors</li>
+<li>general character prompts</li>
+</ul>
+<p>Blake is a 6'3" tall, muscular athletic man with a broad, powerful frame and strong upper-body development.</p>
+<p>His physique is defined by wide shoulders, a strong chest, and thick arms, giving him a visibly larger and more imposing presence than most people around him. His body reads as strength and stability rather than agility, with a powerful athletic silhouette that emphasizes upper-body mass and broad proportions.</p>
+<p>Blake’s overall presence is calm, confident, and grounded. His posture is naturally upright and controlled, and his relaxed body language conveys quiet authority and physical confidence without the need for exaggerated movement.</p>
+<hr />
+<h2 id="identity-block-short">Identity Block (Short)</h2>
+<p>Use for:</p>
+<ul>
+<li>quick prompts</li>
+<li>scene prompts</li>
+<li>interaction prompts</li>
+</ul>
+<p>Blake is a 6'3" tall muscular athlete with a broad-shouldered frame, strong chest, and short dark brown hair.<br />
+Their aesthetic is athletic-luxury styling with fitted clothing, dark neutral colors, and clean minimalist design.</p>
+<hr />
+<h2 id="identity-block-extended">Identity Block (Extended)</h2>
+<p>Use for:</p>
+<ul>
+<li>character setup</li>
+<li>detailed prompts</li>
+<li>new chat initialization</li>
+</ul>
+<p>Blake is 6'3" with a tall, muscular athletic build and strong upper-body mass.</p>
+<p>Key facial traits:</p>
+<ul>
+<li>face shape: square face with strong masculine structure</li>
+<li>jawline: defined masculine jawline</li>
+<li>eyes: calm confident eyes</li>
+<li>hair: short dark brown hair with clean athletic styling</li>
+<li>skin tone: light skin with a warm natural tone</li>
+</ul>
+<p>Body proportions:</p>
+<ul>
+<li>shoulder width: broad shoulders with strong upper-body presence</li>
+<li>torso shape: muscular torso with solid chest development</li>
+<li>limb proportions: thick arms and strong athletic legs</li>
+<li>posture: upright, grounded, and confident</li>
+</ul>
+<p>Overall silhouette:</p>
+<p>A tall, broad, upper-body-dominant athletic silhouette defined by wide shoulders, strong arms, and a powerful frame.</p>
+<hr />
+<h2 id="face-block">Face Block</h2>
+<p>Use for:</p>
+<ul>
+<li>face anchor prompts</li>
+<li>portrait prompts</li>
+<li>expression sheets</li>
+</ul>
+<p>Facial description:</p>
+<ul>
+<li>face shape: square masculine face</li>
+<li>jawline: defined jawline with strong structure</li>
+<li>cheekbones: moderately defined</li>
+<li>eye shape: calm focused eyes</li>
+<li>eyebrow style: strong natural brows</li>
+<li>hairstyle framing the face: short dark brown athletic hairstyle</li>
+</ul>
+<p>Maintain consistent facial proportions and identity.</p>
+<hr />
+<h2 id="body-block">Body Block</h2>
+<p>Use for:</p>
+<ul>
+<li>anatomy prompts</li>
+<li>body anchor prompts</li>
+<li>pose prompts</li>
+<li>scale prompts</li>
+</ul>
+<p>Blake is 6'3" with a tall muscular athletic build.</p>
+<p>Body proportions:</p>
+<ul>
+<li>shoulders: broad and powerful</li>
+<li>torso: muscular chest and upper body</li>
+<li>waist: solid athletic waist</li>
+<li>hips: balanced athletic structure</li>
+<li>limbs: thick arms and strong legs</li>
+</ul>
+<p>Posture:</p>
+<p>Upright and grounded with relaxed but controlled confidence.</p>
+<p>Overall silhouette should read as:</p>
+<p>A tall, broad, powerful athletic frame with strong upper-body dominance.</p>
+<hr />
+<h2 id="style-block">Style Block</h2>
+<p>Use for:</p>
+<ul>
+<li>wardrobe prompts</li>
+<li>outfit generation</li>
+<li>scene prompts</li>
+</ul>
+<p>Aesthetic keywords:</p>
+<ul>
+<li>athletic</li>
+<li>luxury</li>
+<li>streetwear</li>
+</ul>
+<p>Typical clothing elements:</p>
+<ul>
+<li>fitted athletic shirts or tanks</li>
+<li>tapered joggers or athletic shorts</li>
+<li>structured jackets or coats</li>
+</ul>
+<p>Typical materials:</p>
+<ul>
+<li>cotton</li>
+<li>mesh</li>
+<li>wool</li>
+</ul>
+<p>Typical color palette:</p>
+<p>Primary:</p>
+<ul>
+<li>black</li>
+<li>charcoal</li>
+<li>navy</li>
+<li>olive</li>
+</ul>
+<p>Accent:</p>
+<ul>
+<li>white</li>
+</ul>
+<hr />
+<h2 id="movement-block">Movement Block</h2>
+<p>Use for:</p>
+<ul>
+<li>pose sheets</li>
+<li>motion anchors</li>
+<li>dynamic scenes</li>
+</ul>
+<p>Movement style:</p>
+<p>Strong, deliberate movement with grounded physical presence.</p>
+<p>Posture tendencies:</p>
+<p>Upright stance with relaxed stability.</p>
+<p>Gesture style:</p>
+<p>Confident, open gestures with controlled physical movement.</p>
+<hr />
+<h2 id="expression-block">Expression Block</h2>
+<p>Use for:</p>
+<ul>
+<li>expression sheets</li>
+<li>portraits</li>
+<li>interaction scenes</li>
+</ul>
+<p>Default expression:</p>
+<p>Confident neutral expression with calm focus.</p>
+<p>Typical smile:</p>
+<p>Warm, slightly amused smile.</p>
+<p>Emotional range:</p>
+<p>Controlled emotional presence with steady confidence.</p>
+<p>Avoid exaggerated or cartoonish expressions unless explicitly requested.</p>
+<hr />
+<h2 id="wardrobe-description-block">Wardrobe Description Block</h2>
+<p>Use for:</p>
+<ul>
+<li>outfit sheets</li>
+<li>wardrobe generation</li>
+<li>style prompts</li>
+</ul>
+<p>Clothing should reflect:</p>
+<p>Polished athletic styling that emphasizes his strong upper body.</p>
+<p>Common elements:</p>
+<ul>
+<li>fitted athletic shirts or tanks</li>
+<li>tapered joggers or athletic shorts</li>
+<li>clean minimalist jackets</li>
+</ul>
+<p>Accessories may include:</p>
+<ul>
+<li>athletic trainers</li>
+<li>casual sneakers</li>
+<li>minimal watch</li>
+</ul>
+<p>Avoid styles that conflict with the character’s core aesthetic.</p>
+<hr />
+<h2 id="anti-drift-rules">Anti-Drift Rules</h2>
+<p>These traits must remain consistent across generated images.</p>
+<p>Always preserve:</p>
+<ul>
+<li>height and body proportions</li>
+<li>broad shoulders and strong chest</li>
+<li>tall muscular athletic frame</li>
+<li>facial structure and hairstyle silhouette</li>
+<li>dark athletic clothing palette</li>
+</ul>
+<p>Avoid:</p>
+<ul>
+<li>slim runner-style build</li>
+<li>narrow shoulders</li>
+<li>delicate physique</li>
+</ul>
+<hr />
+<h2 id="short-prompt-description">Short Prompt Description</h2>
+<p>Copy this block directly into short prompts.</p>
+<p>Blake is a 6'3" tall muscular athlete with broad shoulders, a strong chest, and short dark brown hair.<br />
+Their style combines athletic luxury with fitted clothing and dark neutral colors.</p>
+<hr />
+<h2 id="full-prompt-description">Full Prompt Description</h2>
+<p>Copy this block into prompts that require a full character description.</p>
+<p>Blake is 6'3" with a tall muscular athletic build, broad shoulders, thick arms, and short dark brown hair with a strong masculine face.<br />
+Their aesthetic includes athletic-luxury styling, fitted athletic clothing, and dark neutral colors.<br />
+Maintain consistent facial identity, body proportions, and style across all views.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["content.code.copy"], "search": "../../../../../javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../../javascripts/bundle.c8d2eff1.min.js"></script>
+      
+    
+  </body>
+</html>

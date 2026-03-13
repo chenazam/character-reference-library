@@ -2,7 +2,7 @@ name: Lucien
 slug: lucien
 
 status: active
-project: ''
+project: Lucien & Ragnar
 
 core_identity:
   short_summary: 'A slender, refined man of average height with a calm, slightly mysterious presence and an occult-scholarly aesthetic.'
@@ -36,6 +36,8 @@ face:
   distinctive_features:
     - refined facial structure
     - calm, slightly mysterious expression
+
+hair_color: dark
 
 style:
   primary_aesthetic: occult

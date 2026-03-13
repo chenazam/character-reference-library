@@ -26,7 +26,7 @@ Lucien is a young adult male character with soft mature facial structure, dark b
 
 Use these references first when the goal is strong character consistency.
 
---8<-- "snippets/galleries/lucien-core-identity.md"
+<!-- --8<-- "snippets/galleries/lucien-core-identity.md" -->
 
 ---
 
@@ -66,7 +66,7 @@ These references are most useful for full-body prompting, pose consistency, and 
 
 These references are useful for facial acting, emotional range, and hand-sensitive prompts.
 
---8<-- "snippets/galleries/lucien-expression-gesture.md"
+<!-- --8<-- "snippets/galleries/lucien-expression-gesture.md" -->
 
 ---
 

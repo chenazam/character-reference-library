@@ -31,14 +31,7 @@ identity preservation, prompt construction, reference browsing
 
 Use these references first when the goal is strong character consistency.
 
-<div class="character-gallery>
-
-[![Blake face anchor](../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_face_anchor_v1.png)](../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_face_anchor_v1.png)
-[![Blake body anchor](../assets/library/10_CHARACTERS/BLAKE/06_BODY/blake_body_anchor_v1.png)](../assets/library/10_CHARACTERS/BLAKE/06_BODY/blake_body_anchor_v1.png)
-[![Blake silhouette](../assets/library/10_CHARACTERS/BLAKE/07_SILHOUETTE/blake_silhouette_v1.png)](../assets/library/10_CHARACTERS/BLAKE/07_SILHOUETTE/blake_silhouette_v1.png)
-[![Blake turnaround](../assets/library/10_CHARACTERS/BLAKE/08_TURNAROUND/blake_turnaround_v1.png)](../assets/library/10_CHARACTERS/BLAKE/08_TURNAROUND/blake_turnaround_v1.png)
-
-</div>
+<!-- --8<-- "snippets/galleries/blake-core-identity.md" -->
 
 ---
 
@@ -46,37 +39,7 @@ Use these references first when the goal is strong character consistency.
 
 These references define facial identity, angle consistency, and portrait fidelity.
 
-### Face Anchor
-
-<div class="character-gallery>
-
-[![Blake face anchor](../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_face_anchor_v1.png)](../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_face_anchor_v1.png)>
-
-</div>
-
-### Front Face
-
-<div class="character-gallery>
-
-[![Blake front face](../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_front_face_v1.png)](../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_front_face_v1.png)
-
-</div>
-
-### Three-Quarter Face
-
-<div class="character-gallery>
-
-[![Blake three-quarter face](../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_three_quarter_face_v1.png)](../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_three_quarter_face_v1.png)
-
-</div>
-
-### Profile Face
-
-<div class="character-gallery>
-
-[![Blake profile face](../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_profile_face_v1.png)](../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_profile_face_v1.png)
-
-</div>
+--8<-- "snippets/galleries/blake-face.md"
 
 ---
 
@@ -84,11 +47,7 @@ These references define facial identity, angle consistency, and portrait fidelit
 
 ### Hair Sheet
 
-<div class="character-gallery">
-  <a href="../assets/library/10_CHARACTERS/BLAKE/02_HAIR/blake_hair_sheet_v1.png" target="_blank">
-    <img src="../assets/library/10_CHARACTERS/BLAKE/02_HAIR/blake_hair_sheet_v1.png" alt="Blake hair sheet">
-  </a>
-</div>
+<!-- --8<-- "snippets/galleries/blake-hair.md" -->
 
 ---
 
@@ -96,37 +55,7 @@ These references define facial identity, angle consistency, and portrait fidelit
 
 These references establish body construction, proportions, and anatomical consistency.
 
-### Anatomy Front
-
-<div class="character-gallery">
-  <a href="../assets/library/10_CHARACTERS/BLAKE/03_ANATOMY/blake_anatomy_front_v1.png" target="_blank">
-    <img src="../assets/library/10_CHARACTERS/BLAKE/03_ANATOMY/blake_anatomy_front_v1.png" alt="Blake anatomy front">
-  </a>
-</div>
-
-### Anatomy Side
-
-<div class="character-gallery">
-  <a href="../assets/library/10_CHARACTERS/BLAKE/03_ANATOMY/blake_anatomy_side_v1.png" target="_blank">
-    <img src="../assets/library/10_CHARACTERS/BLAKE/03_ANATOMY/blake_anatomy_side_v1.png" alt="Blake anatomy side">
-  </a>
-</div>
-
-### Anatomy Back
-
-<div class="character-gallery">
-  <a href="../assets/library/10_CHARACTERS/BLAKE/03_ANATOMY/blake_anatomy_back_v1.png" target="_blank">
-    <img src="../assets/library/10_CHARACTERS/BLAKE/03_ANATOMY/blake_anatomy_back_v1.png" alt="Blake anatomy back">
-  </a>
-</div>
-
-### Anatomy Sheet
-
-<div class="character-gallery">
-  <a href="../assets/library/10_CHARACTERS/BLAKE/03_ANATOMY/blake_anatomy_sheet_v1.png" target="_blank">
-    <img src="../assets/library/10_CHARACTERS/BLAKE/03_ANATOMY/blake_anatomy_sheet_v1.png" alt="Blake anatomy sheet">
-  </a>
-</div>
+<!-- --8<-- "snippets/galleries/blake-anatomy.md" -->
 
 ---
 
@@ -134,45 +63,7 @@ These references establish body construction, proportions, and anatomical consis
 
 These references are most useful for full-body prompting, pose consistency, and scale stability.
 
-### Body Anchor
-
-<div class="character-gallery">
-  <a href="../assets/library/10_CHARACTERS/BLAKE/06_BODY/blake_body_anchor_v1.png" target="_blank">
-    <img src="../assets/library/10_CHARACTERS/BLAKE/06_BODY/blake_body_anchor_v1.png" alt="Blake body anchor">
-  </a>
-</div>
-
-### Proportion Grid
-
-<div class="character-gallery">
-  <a href="../assets/library/10_CHARACTERS/BLAKE/04_PROPORTIONS/blake_proportion_grid_v1.png" target="_blank">
-    <img src="../assets/library/10_CHARACTERS/BLAKE/04_PROPORTIONS/blake_proportion_grid_v1.png" alt="Blake proportion grid">
-  </a>
-</div>
-
-### Muscle Tension
-
-<div class="character-gallery">
-  <a href="../assets/library/10_CHARACTERS/BLAKE/05_MUSCLE/blake_muscle_tension_v1.png" target="_blank">
-    <img src="../assets/library/10_CHARACTERS/BLAKE/05_MUSCLE/blake_muscle_tension_v1.png" alt="Blake muscle tension">
-  </a>
-</div>
-
-### Silhouette
-
-<div class="character-gallery">
-  <a href="../assets/library/10_CHARACTERS/BLAKE/07_SILHOUETTE/blake_silhouette_v1.png" target="_blank">
-    <img src="../assets/library/10_CHARACTERS/BLAKE/07_SILHOUETTE/blake_silhouette_v1.png" alt="Blake silhouette">
-  </a>
-</div>
-
-### Turnaround
-
-<div class="character-gallery">
-  <a href="../assets/library/10_CHARACTERS/BLAKE/08_TURNAROUND/blake_turnaround_v1.png" target="_blank">
-    <img src="../assets/library/10_CHARACTERS/BLAKE/08_TURNAROUND/blake_turnaround_v1.png" alt="Blake turnaround">
-  </a>
-</div>
+--8<-- "snippets/galleries/blake-body.md"
 
 ---
 
@@ -180,21 +71,7 @@ These references are most useful for full-body prompting, pose consistency, and 
 
 These references are useful for facial acting, emotional range, and hand-sensitive prompts.
 
-### Expression Sheet
-
-<div class="character-gallery">
-  <a href="../assets/library/10_CHARACTERS/BLAKE/09_EXPRESSIONS/blake_expression_sheet_v1.png" target="_blank">
-    <img src="../assets/library/10_CHARACTERS/BLAKE/09_EXPRESSIONS/blake_expression_sheet_v1.png" alt="Blake expression sheet">
-  </a>
-</div>
-
-### Hand Sheet
-
-<div class="character-gallery">
-  <a href="../assets/library/10_CHARACTERS/BLAKE/10_HANDS/blake_hand_sheet_v1.png" target="_blank">
-    <img src="../assets/library/10_CHARACTERS/BLAKE/10_HANDS/blake_hand_sheet_v1.png" alt="Blake hand sheet">
-  </a>
-</div>
+<!-- --8<-- "snippets/galleries/blake-expression-gesture.md" -->
 
 ---
 

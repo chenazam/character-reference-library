@@ -1,18 +1,15 @@
 site_name: Character Reference Library
 site_url: https://charreflib.chenazam.com
-theme:
-  name: material
 site_description: AI character pipeline, prompts, references, and metadata
-
-markdown_extensions:
-  - attr_list
-  - md_in_html
 
 theme:
   name: material
   features:
-    - navigation.sections
     - content.code.copy
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
 
 nav:
   - Home: index.md

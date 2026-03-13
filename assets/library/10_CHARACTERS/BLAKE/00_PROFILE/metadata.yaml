@@ -16,6 +16,10 @@ core_identity:
 physical:
   height_cm: 191
   height_imperial: '6''3"'
+  height_visual_category: imposing
+  frame_proportion: upper_body_dominant
+  body_fat_range: athletic
+  body_softness_distribution: firm_all
 
   build_category: athletic_muscular
 
@@ -30,6 +34,7 @@ physical:
   limb_profile: thick_limbs
   posture_profile: confident_open
 
+  silhouette_anchor: power_athlete
   silhouette_keywords:
     - tall
     - broad
@@ -83,6 +88,7 @@ movement:
   movement_style: grounded_powerful
   gesture_style: broad_confident
   body_language: open_confident
+  spatial_presence: dominant_presence
 
 identity_rules:
   preserve:

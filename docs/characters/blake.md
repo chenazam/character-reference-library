@@ -31,19 +31,10 @@ identity preservation, prompt construction, reference browsing
 
 Use these references first when the goal is strong character consistency.
 
-![Blake face anchor](../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_face_anchor_v1.png)
-
-<div class="character-gallery">
-  <a href="../assets/library/10_CHARACTERS/BLAKE/06_BODY/blake_body_anchor_v1.png" target="_blank">
-    <img src="../assets/library/10_CHARACTERS/BLAKE/06_BODY/blake_body_anchor_v1.png" alt="Blake body anchor">
-  </a>
-  <a href="../assets/library/10_CHARACTERS/BLAKE/07_SILHOUETTE/blake_silhouette_v1.png" target="_blank">
-    <img src="../assets/library/10_CHARACTERS/BLAKE/07_SILHOUETTE/blake_silhouette_v1.png" alt="Blake silhouette">
-  </a>
-  <a href="../assets/library/10_CHARACTERS/BLAKE/08_TURNAROUND/blake_turnaround_v1.png" target="_blank">
-    <img src="../assets/library/10_CHARACTERS/BLAKE/08_TURNAROUND/blake_turnaround_v1.png" alt="Blake turnaround">
-  </a>
-</div>
+[![Blake face anchor](../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_face_anchor_v1.png)](../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_face_anchor_v1.png)
+[![Blake body anchor](../assets/library/10_CHARACTERS/BLAKE/06_BODY/blake_body_anchor_v1.png)](../assets/library/10_CHARACTERS/BLAKE/06_BODY/blake_body_anchor_v1.png)
+[![Blake silhouette](../assets/library/10_CHARACTERS/BLAKE/07_SILHOUETTE/blake_silhouette_v1.png)](../assets/library/10_CHARACTERS/BLAKE/07_SILHOUETTE/blake_silhouette_v1.png)
+[![Blake turnaround](../assets/library/10_CHARACTERS/BLAKE/08_TURNAROUND/blake_turnaround_v1.png)](../assets/library/10_CHARACTERS/BLAKE/08_TURNAROUND/blake_turnaround_v1.png)
 
 ---
 
@@ -53,35 +44,19 @@ These references define facial identity, angle consistency, and portrait fidelit
 
 ### Face Anchor
 
-<div class="character-gallery">
-  <a href="/docs../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_face_anchor_v1.png" target="_blank">
-    <img src="../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_face_anchor_v1.png" alt="Blake face anchor">
-  </a>
-</div>
+[![Blake face anchor](../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_face_anchor_v1.png)](../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_face_anchor_v1.png)>
 
 ### Front Face
 
-<div class="character-gallery">
-  <a href="../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_front_face_v1.png" target="_blank">
-    <img src="../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_front_face_v1.png" alt="Blake front face">
-  </a>
-</div>
+[![Blake front face](../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_front_face_v1.png)](../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_front_face_v1.png)
 
 ### Three-Quarter Face
 
-<div class="character-gallery">
-  <a href="../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_three_quarter_face_v1.png" target="_blank">
-    <img src="../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_three_quarter_face_v1.png" alt="Blake three-quarter face">
-  </a>
-</div>
+[![Blake three-quarter face](../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_three_quarter_face_v1.png)](../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_three_quarter_face_v1.png)
 
 ### Profile Face
 
-<div class="character-gallery">
-  <a href="../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_profile_face_v1.png" target="_blank">
-    <img src="../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_profile_face_v1.png" alt="Blake profile face">
-  </a>
-</div>
+[![Blake profile face](../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_profile_face_v1.png)](../assets/library/10_CHARACTERS/BLAKE/01_FACE/blake_profile_face_v1.png)
 
 ---
 

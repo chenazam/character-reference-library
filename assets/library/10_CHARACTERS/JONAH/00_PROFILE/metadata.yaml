@@ -98,14 +98,24 @@ reference_files:
 
 pipeline_status:
   face_anchor: complete
+  hair_sheet: not_started
   anatomy_sheet: complete
+  proportion_grid: not_started
+  muscle_tension: not_started
   body_anchor: complete
+  silhouette_sheet: not_started
   turnaround_sheet: complete
   expression_sheet: complete
   hand_sheet: complete
+  ucs: not_started
+  signature_outfit: not_started
+  design_language: not_started
+  wardrobe: partial
   pose_sheet: complete
-  height_comparison: complete
-  outfit_sheet: complete
+  motion_sheet: not_started
+  scale_sheet: complete
+  scene_anchors: not_started
+  prop_sheet: not_started
 
 notes: ''
 

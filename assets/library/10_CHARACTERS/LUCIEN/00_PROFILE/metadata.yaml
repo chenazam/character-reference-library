@@ -91,25 +91,25 @@ reference_files:
   signature_outfit_sheet: ''
 
 pipeline_status:
-  face_anchor: false
-  hair_sheet: false
-  anatomy_sheet: false
-  proportion_grid: false
-  muscle_tension: false
-  body_anchor: false
-  silhouette_sheet: false
-  turnaround_sheet: false
-  expression_sheet: false
-  hand_sheet: false
-  ucs: false
-  signature_outfit: false
-  design_language: false
-  wardrobe: false
-  pose_sheet: false
-  motion_sheet: false
-  scale_sheet: false
-  scene_anchors: false
-  prop_sheet: false
+  face_anchor: complete
+  hair_sheet: not_started
+  anatomy_sheet: complete
+  proportion_grid: complete
+  muscle_tension: complete
+  body_anchor: complete
+  silhouette_sheet: complete
+  turnaround_sheet: complete
+  expression_sheet: complete
+  hand_sheet: complete
+  ucs: not_started
+  signature_outfit: not_started
+  design_language: not_started
+  wardrobe: not_started
+  pose_sheet: not_started
+  motion_sheet: not_started
+  scale_sheet: not_started
+  scene_anchors: not_started
+  prop_sheet: not_started
 
 notes: 'Core body read should be slender and refined, not lean-athletic. Style should feel occult, scholarly, and subtly gothic rather than flashy or costume-like.'
 last_updated: '2026-03-12'

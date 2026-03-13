@@ -107,12 +107,24 @@ reference_files:
 
 pipeline_status:
   face_anchor: complete
-  anatomy_reference: complete
+  hair_sheet: not_started
+  anatomy_sheet: complete
+  proportion_grid: not_started
+  muscle_tension: not_started
   body_anchor: complete
+  silhouette_sheet: not_started
+  turnaround_sheet: not_started
+  expression_sheet: not_started
+  hand_sheet: not_started
+  ucs: not_started
+  signature_outfit: not_started
+  design_language: not_started
+  wardrobe: complete
   pose_sheet: complete
-  wardrobe_sheet: complete
-  interaction_anchor: complete
-  environment_anchors: partial
+  motion_sheet: not_started
+  scale_sheet: not_started
+  scene_anchors: partial
+  prop_sheet: not_started
 
 notes: >
   Blake’s visual identity is defined by a tall, powerful athletic frame

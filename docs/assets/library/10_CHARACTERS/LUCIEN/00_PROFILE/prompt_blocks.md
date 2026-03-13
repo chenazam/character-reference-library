@@ -5,16 +5,6 @@ Use these blocks when building prompts for character sheets, outfits, scenes, an
 
 ---
 
-## Prompt Priority Fields
-
-Height: 170 cm (5'7")  
-Build: soft-slender, lightly built, refined proportions  
-Aesthetic keywords: occult, gothic, scholarly
-
-These are the highest-priority traits to preserve in prompts.
-
----
-
 ## Character Block
 
 Use for:
@@ -124,7 +114,7 @@ Lucien’s default expression is calm, reserved, and slightly distant. His smile
 
 ---
 
-## Wardrobe Block
+## Wardrobe Identity Block
 
 Use for:
 

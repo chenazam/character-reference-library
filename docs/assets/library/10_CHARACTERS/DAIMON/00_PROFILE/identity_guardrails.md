@@ -1,25 +1,25 @@
-# Identity Guardrails — Blake
+# Identity Guardrails — Daimon
 
-These rules define traits that must remain consistent when generating images of Blake.
+These rules define traits that must remain consistent when generating images of Daimon.
 
 ## Core Physical Identity
 
 Always preserve:
 
-- Height approximately 6'3" (191 cm)
-- Tall, muscular athletic build
-- Broad shoulders
-- Thick arms
-- Strong chest and upper-body mass
-- Large athletic frame
+- Height approximately 6'5" (196 cm)
+- Extremely tall and imposing physical presence
+- Heavy muscular build with dense upper-body mass
+- Very broad shoulders and thick torso
+- Powerful arms and legs with heavy musculature
+- Strong upper-body-dominant silhouette
 
 Avoid:
 
-- Slim runner-style build
-- Narrow shoulders
+- Average or short height appearance
+- Slim or lean runner-style physique
+- Narrow shoulders or lightweight frame
 - Delicate limb proportions
-- Lightweight or narrow silhouette
-- Short body proportions
+- Small or compact silhouette
 
 ---
 
@@ -27,17 +27,20 @@ Avoid:
 
 Always preserve:
 
-- Square or strong facial structure
-- Defined masculine jawline
-- Short dark brown hair
-- Confident masculine appearance
+- Square masculine facial structure
+- Broad powerful jawline
+- Dark brown short hair
+- Intense hazel eyes
+- Heavy brow and strong facial proportions
+- Mature masculine appearance (late 30s to early 40s)
 
 Avoid:
 
-- Soft or rounded facial structure
-- Long narrow face
+- Soft rounded facial structure
+- Narrow or delicate facial proportions
+- Youthful teenage appearance
 - Very long hairstyles
-- Dramatic aging or heavy facial hair unless intentional
+- Dramatic aging beyond intended age
 
 ---
 
@@ -45,17 +48,20 @@ Avoid:
 
 Always preserve:
 
-- Athletic or athletic-luxury aesthetic
-- Fitted clothing emphasizing chest and shoulders
-- Dark neutral color palette
-- Minimalist masculine styling
+- Rugged utilitarian aesthetic
+- Practical durable clothing
+- Leather elements such as jackets or accessories
+- Dark neutral color palette (black, dark grey)
+- Minimal decoration or fashion styling
+- Visible tattoos as a recurring visual element
 
 Avoid:
 
-- Bright playful color palettes
-- Revealing or flamboyant clothing
-- Oversized baggy silhouettes
-- Excessive accessories
+- Bright colorful fashion
+- Flamboyant or decorative clothing
+- Soft domestic clothing styles
+- Highly fashionable or trendy outfits
+- Oversized baggy silhouettes that hide body structure
 
 ---
 
@@ -65,16 +71,19 @@ Typical movement:
 
 - grounded
 - deliberate
-- physically confident
+- controlled
+- physically dominant
 
 Typical posture:
 
 - upright
 - stable
-- relaxed but controlled
+- wide physical stance
+- confident and imposing
 
 Avoid:
 
+- timid or withdrawn body language
 - jittery or restless movement
 - overly delicate gestures
-- exaggerated expressive posing
+- exaggerated theatrical posing

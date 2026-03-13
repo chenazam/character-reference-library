@@ -1,16 +1,16 @@
-# Character Summary — [CHARACTER_NAME]
+# Character Summary — Tommy
 
 ## Core Identity
 
-Name: [CHARACTER_NAME]
+Name: Tommy
 
-Height: [HEIGHT_CM] cm ([HEIGHT_IMPERIAL])
+Height: 175 cm (5'9")
 
-Build Type: [lean / athletic / muscular / heavyset / etc.]
+Build Type: soft slender build with natural body softness
 
-Age Appearance: [approximate age range]
+Age Appearance: early to mid-20s
 
-Gender Presentation: [optional]
+Gender Presentation: masculine with soft, gentle physical presence
 
 ---
 
@@ -18,8 +18,9 @@ Gender Presentation: [optional]
 
 Use this block when a prompt needs a **short character description**.
 
-[CHARACTER_NAME] is a [height + build description] with [key facial features].
-Their aesthetic is [style description].
+Tommy is a medium-height young man with a soft, slightly curvy natural build and gentle facial features.  
+He has light brown hair, warm blue eyes, and a relaxed approachable presence.  
+His aesthetic is cozy, casual, and softly romantic.
 
 ---
 
@@ -27,26 +28,27 @@ Their aesthetic is [style description].
 
 Use this block when a prompt needs a **complete character description**.
 
-[CHARACTER_NAME] is [height description] with [body description].
+Tommy is a medium-height young man with a soft, naturally untrained physique and a gentle overall presence.
 
 Key features:
 
-- face shape: [description]
-- jawline: [description]
-- eyes: [description]
-- hair: [description]
-- skin tone: [description]
+- face shape: soft round facial structure with youthful proportions
+- jawline: soft jawline with low angularity
+- eyes: clear blue eyes with a warm, open expression
+- hair: light to medium brown hair, typically worn as a short textured crop with a slight fringe
+- skin tone: light skin with smooth youthful appearance
 
 Body proportions:
 
-- shoulder width: [description]
-- torso shape: [description]
-- limb proportions: [description]
-- posture: [description]
+- shoulder width: narrow to moderate shoulders
+- torso shape: lightly built torso with gentle natural softness and a mostly flat stomach
+- limb proportions: slender limbs with minimal muscle definition
+- posture: slightly inward relaxed posture with gentle reserved body language
 
 Overall silhouette:
 
-[describe the recognizable shape of the character]
+A compact, leg-dominant silhouette with subtle curves through the hips and thighs.  
+The lower body carries most of his natural softness, creating fuller glutes and thicker soft thighs while the upper body remains lighter and less defined.
 
 ---
 
@@ -54,31 +56,32 @@ Overall silhouette:
 
 Aesthetic keywords:
 
-- [style keyword]
-- [style keyword]
-- [style keyword]
+- domestic_soft
+- romantic
+- casual
+- cozy
 
 Typical clothing elements:
 
-- [element]
-- [element]
-- [element]
+- soft casual shirts or sweaters
+- relaxed everyday clothing
+- comfortable homewear or casual outfits
 
 Typical materials:
 
-- [material]
-- [material]
+- cotton
+- linen
 
 Typical colors:
 
 Primary colors:
 
-- [color]
-- [color]
+- cream
+- soft_blue
 
 Accent colors:
 
-- [color]
+- muted_green
 
 ---
 
@@ -86,9 +89,7 @@ Accent colors:
 
 Recurring items that often appear with the character:
 
-- [item]
-- [item]
-- [item]
+- none
 
 ---
 
@@ -96,15 +97,15 @@ Recurring items that often appear with the character:
 
 Posture:
 
-[description]
+Tommy tends to stand with a relaxed, slightly inward posture that reads as gentle and reserved rather than confident or assertive.
 
 Movement style:
 
-[description]
+His movement is relaxed and natural, without sharp or forceful motion.
 
 Gesture style:
 
-[description]
+Soft, gentle gestures with minimal physical force.
 
 ---
 
@@ -112,23 +113,22 @@ Gesture style:
 
 Default expression:
 
-[description]
+A soft neutral expression with a calm and approachable presence.
 
 Typical smile:
 
-[description]
+A warm, open smile that reads friendly and sincere.
 
 Emotional range:
 
-[description]
+Tommy’s emotional presentation is open and warm, with expressions that read easily and feel genuine.
 
 ---
 
 ## Personality Snapshot
 
-Short personality description used for scene prompts.
-
-[description]
+Tommy is a gentle, empathetic young man whose emotional intelligence and warmth make him deeply attentive to the people around him.  
+He has a naturally caring personality and tends to respond to situations with understanding and compassion rather than aggression or confrontation.
 
 ---
 
@@ -138,16 +138,20 @@ These traits should **never drift in generated images**.
 
 Always preserve:
 
-- height range
-- body proportions
-- facial structure
-- hairstyle silhouette
-- core aesthetic
+- medium height range
+- soft slender body proportions
+- fuller hips, thighs, and glutes relative to upper body
+- gentle facial structure
+- light brown hair with textured crop hairstyle
+- relaxed, soft posture
 
 Avoid:
 
-- [common drift issue]
-- [common drift issue]
+- visible abdominal definition
+- heavily muscular or athletic physique
+- broad shoulders
+- extremely thin or fragile body type
+- sharp angular facial structure
 
 ---
 
@@ -180,6 +184,7 @@ The **core reference pack** for prompts:
 
 This block is designed to be **copied directly into prompts**.
 
-[CHARACTER_NAME] is a [height + build] character with [distinctive facial features] and [visual style].
-Their aesthetic includes [style keywords], [typical clothing elements], and [accessories].
+Tommy is a medium-height young man with a soft, slightly curvy natural build, gentle facial features, and light brown hair.  
+His physique is healthy but untrained, with narrow to moderate shoulders, a lightly soft torso, and fuller hips, glutes, and thighs.  
+His aesthetic is cozy and casual with soft domestic elements and relaxed everyday clothing.  
 Maintain consistent facial identity, body proportions, and style across all views.

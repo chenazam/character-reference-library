@@ -31,7 +31,7 @@ Use for:
 - interaction prompts
 
 Blake is a 6'3" tall muscular athlete with a broad-shouldered frame, strong chest, and short dark brown hair.  
-Their aesthetic is athletic-luxury styling with fitted clothing, dark neutral colors, and clean minimalist design.
+His aesthetic is athletic-luxury styling with fitted clothing, dark neutral colors, and clean minimalist design.
 
 ---
 
@@ -256,7 +256,7 @@ Avoid:
 Copy this block directly into short prompts.
 
 Blake is a 6'3" tall muscular athlete with broad shoulders, a strong chest, and short dark brown hair.  
-Their style combines athletic luxury with fitted clothing and dark neutral colors.
+His style combines athletic luxury with fitted clothing and dark neutral colors.
 
 ---
 
@@ -265,5 +265,5 @@ Their style combines athletic luxury with fitted clothing and dark neutral color
 Copy this block into prompts that require a full character description.
 
 Blake is 6'3" with a tall muscular athletic build, broad shoulders, thick arms, and short dark brown hair with a strong masculine face.  
-Their aesthetic includes athletic-luxury styling, fitted athletic clothing, and dark neutral colors.  
+His aesthetic includes athletic-luxury styling, fitted athletic clothing, and dark neutral colors.  
 Maintain consistent facial identity, body proportions, and style across all views.

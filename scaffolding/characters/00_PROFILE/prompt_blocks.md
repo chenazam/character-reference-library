@@ -1,7 +1,21 @@
 # Prompt Blocks — [CHARACTER_NAME]
 
 This file contains reusable prompt fragments describing the character.
+
 Each block can be copied into prompts depending on the generation task.
+
+---
+
+## Character Block
+
+Use for:
+
+- reference sheet prompts
+- anatomy prompts
+- body anchors
+- general character prompts
+
+[Brief full-body description of the character including build, facial identity, and overall aesthetic.]
 
 ---
 
@@ -13,8 +27,7 @@ Use for:
 - scene prompts
 - interaction prompts
 
-[CHARACTER_NAME] is a [height + build description] with [distinctive facial features].
-Their aesthetic is [style keywords] with [typical clothing elements].
+[One or two sentence visual summary of the character.]
 
 ---
 
@@ -23,29 +36,10 @@ Their aesthetic is [style keywords] with [typical clothing elements].
 Use for:
 
 - character setup
-- detailed prompts
 - new chat initialization
+- style-sensitive prompts
 
-[CHARACTER_NAME] is [height description] with [body description].
-
-Key facial traits:
-
-- face shape: [description]
-- jawline: [description]
-- eyes: [description]
-- hair: [description]
-- skin tone: [description]
-
-Body proportions:
-
-- shoulder width: [description]
-- torso shape: [description]
-- limb proportions: [description]
-- posture: [description]
-
-Overall silhouette:
-
-[describe the character's recognizable body shape]
+[Full visual description of the character including build, facial features, proportions, and aesthetic.]
 
 ---
 
@@ -55,18 +49,16 @@ Use for:
 
 - face anchor prompts
 - portrait prompts
-- expression sheets
+- expression prompts
 
-Facial description:
+[Describe facial features only.]
 
-- face shape: [description]
-- jawline: [description]
-- cheekbones: [description]
-- eye shape: [description]
-- eyebrow style: [description]
-- hairstyle framing the face: [description]
+Include:
 
-Maintain consistent facial proportions and identity.
+- face shape
+- jawline
+- eyes
+- distinctive traits
 
 ---
 
@@ -75,27 +67,17 @@ Maintain consistent facial proportions and identity.
 Use for:
 
 - anatomy prompts
-- body anchor prompts
 - pose prompts
-- scale prompts
+- body anchor prompts
 
-[CHARACTER_NAME] is [height description] with a [build description].
+[Describe body proportions and physique.]
 
-Body proportions:
+Include:
 
-- shoulders: [description]
-- torso: [description]
-- waist: [description]
-- hips: [description]
-- limbs: [description]
-
-Posture:
-
-[describe typical posture]
-
-Overall silhouette should read as:
-
-[describe the character's recognizable shape]
+- height
+- build
+- posture
+- limb proportions
 
 ---
 
@@ -103,37 +85,18 @@ Overall silhouette should read as:
 
 Use for:
 
+- outfit prompts
+- design language sheets
 - wardrobe prompts
-- outfit generation
-- scene prompts
 
-Aesthetic keywords:
+[Describe the character's fashion and aesthetic identity.]
 
-- [style keyword]
-- [style keyword]
-- [style keyword]
+Include:
 
-Typical clothing elements:
-
-- [element]
-- [element]
-- [element]
-
-Typical materials:
-
-- [material]
-- [material]
-
-Typical color palette:
-
-Primary:
-
-- [color]
-- [color]
-
-Accent:
-
-- [color]
+- clothing style
+- materials
+- accessories
+- palette
 
 ---
 
@@ -141,21 +104,11 @@ Accent:
 
 Use for:
 
-- pose sheets
-- motion anchors
+- motion prompts
+- pose prompts
 - dynamic scenes
 
-Movement style:
-
-[describe how the character moves]
-
-Posture tendencies:
-
-[describe typical stance]
-
-Gesture style:
-
-[describe how the character uses their hands or body]
+[Describe posture, movement style, and physical energy.]
 
 ---
 
@@ -164,22 +117,10 @@ Gesture style:
 Use for:
 
 - expression sheets
-- portraits
-- interaction scenes
+- portrait prompts
+- emotional scenes
 
-Default expression:
-
-[description]
-
-Typical smile:
-
-[description]
-
-Emotional range:
-
-[description]
-
-Avoid exaggerated or cartoonish expressions unless explicitly requested.
+[Describe default expression style and emotional tone.]
 
 ---
 
@@ -188,38 +129,34 @@ Avoid exaggerated or cartoonish expressions unless explicitly requested.
 Use for:
 
 - outfit sheets
-- wardrobe generation
-- style prompts
+- design language sheets
+- wardrobe prompts
 
-Clothing should reflect:
+[Describe how the character typically dresses.]
 
-[aesthetic description]
+Include:
 
-Common elements:
-
-- [element]
-- [element]
-- [element]
-
-Accessories may include:
-
-- [item]
-- [item]
-
-Avoid styles that conflict with the character’s core aesthetic.
+- silhouettes
+- layering style
+- typical outfit combinations
+- recurring clothing elements
 
 ---
 
 ## Anti-Drift Rules
 
-These traits must remain consistent across generated images.
+Use for:
+
+- identity preservation prompts
+- difficult scenes
+- regeneration corrections
 
 Always preserve:
 
-- height and body proportions
-- facial structure and identity
-- hairstyle silhouette
-- core aesthetic style
+- recognizable face structure
+- consistent body proportions
+- stable hairstyle
+- core aesthetic
 
 Avoid:
 
@@ -232,8 +169,7 @@ Avoid:
 
 Copy this block directly into short prompts.
 
-[CHARACTER_NAME] is a [height + build] character with [distinctive facial features].
-Their style combines [style keywords] with [typical clothing elements].
+[One concise visual description of the character.]
 
 ---
 
@@ -241,6 +177,4 @@ Their style combines [style keywords] with [typical clothing elements].
 
 Copy this block into prompts that require a full character description.
 
-[CHARACTER_NAME] is [height description] with [body description] and [facial description].
-Their aesthetic includes [style keywords], [typical clothing elements], and [accessories].
-Maintain consistent facial identity, body proportions, and style across all views.
+[Full character description combining body, face, and style identity.]

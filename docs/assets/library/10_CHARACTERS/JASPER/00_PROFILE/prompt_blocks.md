@@ -31,7 +31,7 @@ Use for:
 - interaction prompts
 
 Jasper is a 5'7" lean runner-built man with expressive youthful features and short light brown / dark blonde hair.  
-Their aesthetic is playful athletic styling with very short athletic shorts, fitted tanks, and lightweight casual sportswear.
+His aesthetic is playful athletic styling with very short athletic shorts, fitted tanks, and lightweight casual sportswear.
 
 ---
 
@@ -252,7 +252,7 @@ Avoid:
 Copy this block directly into short prompts.
 
 Jasper is a 5'7" lean runner-built man with expressive youthful features and short light brown / dark blonde hair.  
-Their style combines playful athletic fashion with very short athletic shorts and fitted tanks.
+His style combines playful athletic fashion with very short athletic shorts and fitted tanks.
 
 ---
 
@@ -261,5 +261,5 @@ Their style combines playful athletic fashion with very short athletic shorts an
 Copy this block into prompts that require a full character description.
 
 Jasper is 5'7" with a lean runner-style athletic build, strong thighs, and prominent rounded glutes, with expressive youthful facial features and short light brown / dark blonde hair.  
-Their aesthetic includes playful athletic styling, short athletic shorts, fitted tanks, and lightweight casual sportswear.  
+His aesthetic includes playful athletic styling, short athletic shorts, fitted tanks, and lightweight casual sportswear.  
 Maintain consistent facial identity, body proportions, and style across all views.

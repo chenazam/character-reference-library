@@ -1,25 +1,25 @@
-# Identity Guardrails — Blake
+# Identity Guardrails — Tommy
 
-These rules define traits that must remain consistent when generating images of Blake.
+These rules define traits that must remain consistent when generating images of Tommy.
 
 ## Core Physical Identity
 
 Always preserve:
 
-- Height approximately 6'3" (191 cm)
-- Tall, muscular athletic build
-- Broad shoulders
-- Thick arms
-- Strong chest and upper-body mass
-- Large athletic frame
+- Height approximately 5'9" (175 cm)
+- Soft slender build with natural body softness
+- Narrow to moderate shoulders
+- Slender arms and lighter upper body
+- Fuller hips, glutes, and thighs relative to shoulders
+- Compact leg-dominant silhouette
 
 Avoid:
 
-- Slim runner-style build
-- Narrow shoulders
-- Delicate limb proportions
-- Lightweight or narrow silhouette
-- Short body proportions
+- Heavily muscular or athletic body
+- Visible abdominal definition
+- Broad shoulders or thick torso
+- Extremely thin or fragile body type
+- Large imposing silhouette
 
 ---
 
@@ -27,17 +27,20 @@ Avoid:
 
 Always preserve:
 
-- Square or strong facial structure
-- Defined masculine jawline
-- Short dark brown hair
-- Confident masculine appearance
+- Soft youthful facial structure
+- Rounded facial proportions
+- Soft jawline with low angularity
+- Light to medium brown hair
+- Blue eyes with a warm open expression
+- Short textured crop hairstyle with a slight fringe
 
 Avoid:
 
-- Soft or rounded facial structure
-- Long narrow face
-- Very long hairstyles
-- Dramatic aging or heavy facial hair unless intentional
+- Strong angular jawline
+- Square or rugged facial structure
+- Very sharp cheekbones
+- Dark heavy facial hair
+- Dramatic aging or rough weathered skin
 
 ---
 
@@ -45,17 +48,19 @@ Avoid:
 
 Always preserve:
 
-- Athletic or athletic-luxury aesthetic
-- Fitted clothing emphasizing chest and shoulders
-- Dark neutral color palette
-- Minimalist masculine styling
+- Cozy casual aesthetic
+- Soft domestic or romantic styling
+- Relaxed everyday clothing
+- Light, comfortable materials like cotton or linen
+- Soft neutral or muted color palettes
 
 Avoid:
 
-- Bright playful color palettes
-- Revealing or flamboyant clothing
-- Oversized baggy silhouettes
-- Excessive accessories
+- Harsh or aggressive styling
+- Tactical, military, or heavy streetwear aesthetics
+- Very flashy or flamboyant fashion
+- Heavy leather or intimidating wardrobe styles
+- Highly structured or rigid silhouettes
 
 ---
 
@@ -63,18 +68,19 @@ Avoid:
 
 Typical movement:
 
-- grounded
-- deliberate
-- physically confident
+- relaxed
+- natural
+- gentle
 
 Typical posture:
 
-- upright
-- stable
-- relaxed but controlled
+- slightly inward
+- soft and relaxed
+- calm and non-dominant
 
 Avoid:
 
-- jittery or restless movement
-- overly delicate gestures
-- exaggerated expressive posing
+- aggressive or dominant stance
+- wide intimidating posture
+- rigid militaristic posture
+- overly dramatic or exaggerated posing

@@ -17,6 +17,7 @@
 .character-gallery img {
   display: block;
   width: 220px;
+  max-width: 100%;
   height: auto;
 }
 
@@ -32,4 +33,12 @@
 
 .character-gallery a:hover {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.character-gallery a:hover img {
+  transform: scale(1.03);
+}
+
+.character-gallery img {
+  transition: transform 0.15s ease;
 }

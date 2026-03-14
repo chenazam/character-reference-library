@@ -5,6 +5,8 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 CHARACTERS_ROOT = ROOT / "docs/assets/library/10_CHARACTERS"
 OUTPUT_FILE = ROOT / "docs/characters/index.md"
+DOCS_ROOT = ROOT / "docs"
+OUTPUT_DIR = OUTPUT_FILE.parent
 
 
 def find_thumbnail(character_dir):
@@ -18,27 +20,25 @@ def find_thumbnail(character_dir):
         if p.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp"}
     ]
 
-
     # Priority 1 — gallery image
     for f in images:
         name = f.name.lower()
-        if f.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp"} and "gallery" in name:
+        if "gallery" in name:
             return f
 
     # Priority 2 — face anchor
     for f in images:
         name = f.name.lower()
-        if f.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp"} and "face_anchor" in name:
+        if "face_anchor" in name:
             return f
 
     # Priority 3 — front face
     for f in images:
         name = f.name.lower()
-        if f.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp"} and "front" in name:
+        if "front" in name:
             return f
 
     return None
-
 
 
 def load_metadata(character_dir):
@@ -95,6 +95,12 @@ def should_list_in_character_index(character_dir):
     return resolved
 
 
+def to_output_relative_url(path_under_docs: pathlib.Path) -> str:
+    """Return a POSIX URL path relative to the generated index page location."""
+    rel = path_under_docs.relative_to(DOCS_ROOT)
+    return pathlib.PurePosixPath(pathlib.Path.relpath(rel, OUTPUT_DIR)).as_posix()
+
+
 def main():
     lines = []
 
@@ -118,12 +124,9 @@ def main():
         slug = metadata.get("slug", character_dir.name.lower())
 
         face = find_thumbnail(character_dir)
-
+        rel = ""
         if face:
-            rel = face.relative_to(ROOT / "docs").as_posix()
-            rel = "/" + rel
-        else:
-            rel = ""
+            rel = to_output_relative_url(face)
 
         lines.append(f'<a class="character-card" href="../characters/{slug}/">')
         lines.append("")

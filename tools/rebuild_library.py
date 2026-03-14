@@ -40,8 +40,15 @@ def run_mkdocs_gh_deploy():
 
 
 def main():
+    args = set(sys.argv[1:])
 
-    deploy = "--deploy" in sys.argv
+    # Default behavior: rebuild + deploy.
+    # Use --no-deploy when a local-only build is desired.
+    deploy = True
+    if "--no-deploy" in args:
+        deploy = False
+    elif "--deploy" in args:
+        deploy = True
 
     print("\n===== REBUILDING REFERENCE LIBRARY =====\n")
 

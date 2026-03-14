@@ -5,7 +5,7 @@
       "label": "Rebuild & Deploy Reference Library",
       "type": "shell",
       "command": "python",
-      "args": ["tools/rebuild_library.py", "--deploy"],
+      "args": ["tools/rebuild_library.py"],
       "group": {
         "kind": "build",
         "isDefault": true
@@ -22,7 +22,7 @@
       "label": "Rebuild Reference Library (Local Build)",
       "type": "shell",
       "command": "python",
-      "args": ["tools/rebuild_library.py"],
+      "args": ["tools/rebuild_library.py", "--no-deploy"],
       "problemMatcher": [],
       "presentation": {
         "reveal": "never",
@@ -35,7 +35,7 @@
       "label": "Rebuild Reference Library (Debug)",
       "type": "shell",
       "command": "python",
-      "args": ["tools/rebuild_library.py"],
+      "args": ["tools/rebuild_library.py", "--no-deploy"],
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",

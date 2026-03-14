@@ -17,6 +17,11 @@ ASSET_FAMILIES = {
 
 IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".webp"}
 
+# Character pages are emitted from docs/characters/<slug>.md and typically build to
+# site/characters/<slug>/index.html with MkDocs' default directory_urls=True.
+# From there, the correct relative path back to site root is ../../
+PAGE_TO_SITE_ROOT = "../../"
+
 
 def generate_gallery(images):
     lines = []
@@ -25,7 +30,7 @@ def generate_gallery(images):
 
     for img in images:
         rel = img.relative_to(ROOT / "docs").as_posix()
-        rel = "/" + rel
+        rel = f"{PAGE_TO_SITE_ROOT}{rel}"
 
         lines.append(f'  <a href="{rel}" target="_blank">')
         lines.append(f'    <img src="{rel}" alt="">')
@@ -49,11 +54,9 @@ def collect_images(folder):
 
 
 def main():
-
     SNIPPETS_ROOT.mkdir(parents=True, exist_ok=True)
 
     for character_dir in sorted(CHARACTERS_ROOT.iterdir()):
-
         if not character_dir.is_dir():
             continue
 
@@ -65,7 +68,6 @@ def main():
         print(f"\nProcessing {character_dir.name}")
 
         for family_folder, family_name in ASSET_FAMILIES.items():
-
             family_path = character_dir / family_folder
 
             if not family_path.exists():
@@ -78,9 +80,7 @@ def main():
                 continue
 
             snippet_path = character_snippet_dir / f"{family_name}.md"
-
             gallery = generate_gallery(images)
-
             snippet_path.write_text(gallery, encoding="utf-8")
 
             print(f"  Generated {snippet_path.relative_to(ROOT)}")

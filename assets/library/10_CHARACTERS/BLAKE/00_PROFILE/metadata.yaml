@@ -2,6 +2,11 @@ name: Blake
 slug: blake
 status: active
 project: Blake & Jasper
+site_visibility:
+  list_in_character_index: true
+  include_in_nav: true
+  generate_page: true
+  include_in_prompt_builder: true
 core_identity:
   short_summary: Tall muscular athlete with confident presence and polished athletic
     style.
@@ -19,15 +24,17 @@ physical:
   body_fat_range: athletic
   body_softness_distribution: firm_all
   build_category: athletic_muscular
-  build_notes: "Large muscular athletic build with broad shoulders, thick arms, and\
-    \ powerful upper-body development. His physique is visibly larger and heavier\
-    \ than Jasper\xE2\u20AC\u2122s, emphasizing chest, shoulders, and arms rather\
-    \ than leg-dominant athleticism.\n"
+  build_notes: 'Large muscular athletic build with broad shoulders, thick arms, and
+    powerful upper-body development. His physique is visibly larger and heavier than
+    Jasperâ€™s, emphasizing chest, shoulders, and arms rather than leg-dominant athleticism.
+
+    '
   shoulder_profile: broad_shoulders
   torso_profile: athletic_torso
   limb_profile: thick_limbs
   posture_profile: confident_open
   silhouette_anchor: power_athlete
+  silhouette_emphasis: upper_body
   silhouette_keywords:
   - tall
   - broad
@@ -94,7 +101,7 @@ pipeline_status:
   anatomy_sheet: not_started
   proportion_grid: not_started
   muscle_tension: not_started
-  body_anchor: partial
+  body_anchor: complete
   silhouette_sheet: not_started
   turnaround_sheet: not_started
   expression_sheet: not_started
@@ -108,7 +115,10 @@ pipeline_status:
   scale_sheet: not_started
   scene_anchors: not_started
   prop_sheet: not_started
-notes: "Blake\xE2\u20AC\u2122s visual identity is defined by a tall, powerful athletic\
-  \ frame and confident relaxed demeanor. His style favors fitted athletic clothing\
-  \ that emphasizes his upper-body strength and broad shoulders.\n"
+  gallery_image: not_started
+notes: 'Blakeâ€™s visual identity is defined by a tall, powerful athletic frame and
+  confident relaxed demeanor. His style favors fitted athletic clothing that emphasizes
+  his upper-body strength and broad shoulders.
+
+  '
 last_updated: 2026-03-14

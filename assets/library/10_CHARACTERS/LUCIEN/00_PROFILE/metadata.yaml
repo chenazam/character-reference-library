@@ -2,6 +2,11 @@ name: Lucien
 slug: lucien
 status: active
 project: Lucien & Ragnar
+site_visibility:
+  list_in_character_index: true
+  include_in_nav: true
+  generate_page: true
+  include_in_prompt_builder: true
 core_identity:
   short_summary: A slender modern occultist with refined features, expressive dark
     eyes, and a quietly confident, slightly mischievous presence.
@@ -30,6 +35,7 @@ physical:
   limb_profile: slender_limbs
   posture_profile: upright_controlled
   silhouette_anchor: glute_slender
+  silhouette_emphasis: glutes
   silhouette_keywords:
   - slender
   - leg_dominant
@@ -95,15 +101,15 @@ reference_files:
   signature_outfit_sheet: ''
 pipeline_status:
   face_anchor: complete
-  hair_sheet: partial
+  hair_sheet: complete
   anatomy_sheet: complete
-  proportion_grid: partial
-  muscle_tension: partial
-  body_anchor: partial
-  silhouette_sheet: partial
-  turnaround_sheet: partial
-  expression_sheet: partial
-  hand_sheet: partial
+  proportion_grid: complete
+  muscle_tension: complete
+  body_anchor: complete
+  silhouette_sheet: complete
+  turnaround_sheet: complete
+  expression_sheet: complete
+  hand_sheet: complete
   ucs: not_started
   signature_outfit: not_started
   design_language: not_started
@@ -113,7 +119,10 @@ pipeline_status:
   scale_sheet: not_started
   scene_anchors: not_started
   prop_sheet: not_started
-notes: "Lucien\xE2\u20AC\u2122s body should read as slender and lightly built rather\
-  \ than athletic. The silhouette should emphasize the contrast between his narrow\
-  \ torso and the rounded glute-dominant lower body.\n"
+  gallery_image: not_started
+notes: 'Lucienâ€™s body should read as slender and lightly built rather than athletic.
+  The silhouette should emphasize the contrast between his narrow torso and the rounded
+  glute-dominant lower body.
+
+  '
 last_updated: '2026-03-13'

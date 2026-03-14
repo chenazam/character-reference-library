@@ -56,6 +56,21 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/DENNIS/00_PROFILE/character_summary/</loc>
+         <lastmod>2026-03-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/DENNIS/00_PROFILE/identity_guardrails/</loc>
+         <lastmod>2026-03-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/DENNIS/00_PROFILE/prompt_blocks/</loc>
+         <lastmod>2026-03-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/HUDSON/00_PROFILE/character_summary/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
@@ -446,6 +461,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/characters/dennis/</loc>
+         <lastmod>2026-03-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/characters/hudson/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
@@ -541,7 +561,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/pipeline/generation_queue/</loc>
+         <lastmod>2026-03-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/pipeline/overview/</loc>
+         <lastmod>2026-03-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/pipeline/progress/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -762,6 +792,11 @@
     </url>
     <url>
          <loc>https://charreflib.chenazam.com/snippets/galleries/lucien/turnaround/</loc>
+         <lastmod>2026-03-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/galleries/tommy/anatomy/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>

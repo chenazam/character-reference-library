@@ -1228,7 +1228,49 @@
         
   
   <span class="md-ellipsis">
-    Stages
+    Pipeline Stages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipeline/progress/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Progress Dashboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipeline/generation_queue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generation Queue
   </span>
   
 
@@ -1532,6 +1574,10 @@
 <td><code>large_frame</code></td>
 <td>naturally large skeletal frame regardless of muscle level</td>
 </tr>
+<tr>
+<td><code>soft_heavy</code></td>
+<td>body with noticeable softness and weight without strong muscular structure; mass reads as natural body fat rather than muscle density</td>
+</tr>
 </tbody>
 </table>
 <hr />
@@ -1564,6 +1610,79 @@
 <tr>
 <td><code>glute_slender</code></td>
 <td>slender silhouette where the lower body is visually defined by rounded glutes relative to a narrow waist and slim upper body</td>
+</tr>
+<tr>
+<td><code>glute_heavy</code></td>
+<td>silhouette strongly defined by prominent glutes relative to waist and thighs, creating a visually rear-weighted lower-body shape</td>
+</tr>
+<tr>
+<td><code>hip_dominant_soft</code></td>
+<td>silhouette defined by fuller hips, glutes, and thighs with soft contours, producing a lower-body-weighted shape rather than a shoulder-dominant frame</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="silhouette-emphasis">Silhouette Emphasis</h1>
+<p>Use these values for <code>physical.silhouette_emphasis</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>balanced</code></td>
+<td>silhouette mass appears evenly distributed across the body with no strongly dominant region</td>
+</tr>
+<tr>
+<td><code>shoulders</code></td>
+<td>shoulder width strongly defines the silhouette relative to hips and torso</td>
+</tr>
+<tr>
+<td><code>chest</code></td>
+<td>chest mass or structure visually defines the upper-body silhouette</td>
+</tr>
+<tr>
+<td><code>upper_body</code></td>
+<td>shoulders, chest, and upper torso dominate the silhouette relative to hips and legs</td>
+</tr>
+<tr>
+<td><code>torso</code></td>
+<td>the midsection or abdominal area visually defines the body mass distribution</td>
+</tr>
+<tr>
+<td><code>waist</code></td>
+<td>a narrow waist strongly defines the silhouette by creating a visible taper between shoulders and hips</td>
+</tr>
+<tr>
+<td><code>hips</code></td>
+<td>hip width strongly defines the silhouette relative to shoulders</td>
+</tr>
+<tr>
+<td><code>glutes</code></td>
+<td>rounded glutes visually define the silhouette relative to waist and thighs</td>
+</tr>
+<tr>
+<td><code>thighs</code></td>
+<td>thigh mass or width visually defines the lower-body silhouette</td>
+</tr>
+<tr>
+<td><code>hips_glutes</code></td>
+<td>hips and glutes together define the lower-body silhouette</td>
+</tr>
+<tr>
+<td><code>glutes_thighs</code></td>
+<td>glutes and thighs form the primary mass and shape of the silhouette</td>
+</tr>
+<tr>
+<td><code>hips_glutes_thighs</code></td>
+<td>hips, glutes, and thighs together create the dominant silhouette mass relative to the upper body</td>
+</tr>
+<tr>
+<td><code>legs</code></td>
+<td>overall leg length or leg mass defines the silhouette relative to the torso</td>
 </tr>
 </tbody>
 </table>

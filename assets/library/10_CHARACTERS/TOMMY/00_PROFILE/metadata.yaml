@@ -2,6 +2,11 @@ name: Tommy
 slug: tommy
 status: active
 project: Angel_Demon
+site_visibility:
+  list_in_character_index: true
+  include_in_nav: true
+  generate_page: true
+  include_in_prompt_builder: true
 core_identity:
   short_summary: Soft-featured young man with a gentle presence and slightly curvy,
     natural build.
@@ -29,7 +34,8 @@ physical:
   torso_profile: soft_torso
   limb_profile: slender_limbs
   posture_profile: soft_reserved
-  silhouette_anchor: runner_silhouette
+  silhouette_anchor: hip_dominant_soft
+  silhouette_emphasis: hips_glutes_thighs
   silhouette_keywords:
   - compact
   - leg_dominant
@@ -110,5 +116,6 @@ pipeline_status:
   scale_sheet: not_started
   scene_anchors: not_started
   prop_sheet: not_started
+  gallery_image: not_started
 notes: ''
 last_updated: '2026-03-13'

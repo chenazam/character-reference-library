@@ -15,7 +15,7 @@
         "reveal": "never",
         "panel": "shared",
         "clear": false,
-        "close": false
+        "close": true
       }
     },
     {

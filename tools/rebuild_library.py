@@ -19,7 +19,6 @@ SCRIPTS = [
 def run_command(command, label):
     print(f"\n\n========== {label} ==========\n")
     result = subprocess.run(command, cwd=ROOT)
-
     if result.returncode != 0:
         sys.exit(result.returncode)
 
@@ -40,15 +39,8 @@ def run_mkdocs_gh_deploy():
 
 
 def main():
-    args = set(sys.argv[1:])
-
-    # Default behavior: rebuild + deploy.
-    # Use --no-deploy when a local-only build is desired.
-    deploy = True
-    if "--no-deploy" in args:
-        deploy = False
-    elif "--deploy" in args:
-        deploy = True
+    # Deploy by default; use --no-deploy for local-only builds.
+    deploy = "--no-deploy" not in sys.argv
 
     print("\n===== REBUILDING REFERENCE LIBRARY =====\n")
 

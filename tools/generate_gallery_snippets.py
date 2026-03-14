@@ -1,11 +1,12 @@
+import os
 import pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
+DOCS_ROOT = ROOT / "docs"
 
 CHARACTERS_ROOT = ROOT / "docs/assets/library/10_CHARACTERS"
 SNIPPETS_ROOT = ROOT / "docs/snippets/galleries"
 
-# New asset-family folders
 ASSET_FAMILIES = {
     "01_IDENTITY": "identity",
     "02_BODY": "body",
@@ -17,21 +18,19 @@ ASSET_FAMILIES = {
 
 IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".webp"}
 
-# Character pages are emitted from docs/characters/<slug>.md and typically build to
-# site/characters/<slug>/index.html with MkDocs' default directory_urls=True.
-# From there, the correct relative path back to site root is ../../
-PAGE_TO_SITE_ROOT = "../../"
+
+def docs_rel_url(from_markdown_file: pathlib.Path, target_under_docs: pathlib.Path) -> str:
+    rel = os.path.relpath(target_under_docs, start=from_markdown_file.parent)
+    return pathlib.PurePosixPath(rel).as_posix()
 
 
-def generate_gallery(images):
+def generate_gallery(images, snippet_path: pathlib.Path):
     lines = []
     lines.append('<div class="character-gallery">')
     lines.append("")
 
     for img in images:
-        rel = img.relative_to(ROOT / "docs").as_posix()
-        rel = f"{PAGE_TO_SITE_ROOT}{rel}"
-
+        rel = docs_rel_url(snippet_path, img)
         lines.append(f'  <a href="{rel}" target="_blank">')
         lines.append(f'    <img src="{rel}" alt="">')
         lines.append("  </a>")
@@ -39,17 +38,14 @@ def generate_gallery(images):
 
     lines.append("</div>")
     lines.append("")
-
     return "\n".join(lines)
 
 
 def collect_images(folder):
     images = []
-
     for p in folder.rglob("*"):
         if p.suffix.lower() in IMAGE_EXTENSIONS:
             images.append(p)
-
     return sorted(images)
 
 
@@ -61,7 +57,6 @@ def main():
             continue
 
         character = character_dir.name.lower()
-
         character_snippet_dir = SNIPPETS_ROOT / character
         character_snippet_dir.mkdir(parents=True, exist_ok=True)
 
@@ -80,7 +75,7 @@ def main():
                 continue
 
             snippet_path = character_snippet_dir / f"{family_name}.md"
-            gallery = generate_gallery(images)
+            gallery = generate_gallery(images, snippet_path)
             snippet_path.write_text(gallery, encoding="utf-8")
 
             print(f"  Generated {snippet_path.relative_to(ROOT)}")

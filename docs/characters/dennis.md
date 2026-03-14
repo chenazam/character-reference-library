@@ -11,3 +11,9 @@ Dennis is a character in the reference library.
 --8<-- "snippets/galleries/dennis/identity.md"
 
 ---
+
+## Body
+
+--8<-- "snippets/galleries/dennis/body.md"
+
+---

@@ -16,7 +16,7 @@ Reference assets that still need to be generated.
 
 ## DENNIS
 
-- next: anatomy_sheet
+- next: ucs_core
 
 ## HUDSON
 

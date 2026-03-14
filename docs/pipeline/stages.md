@@ -45,3 +45,4 @@
 - 17 Height / Scale
 - 18 Interaction Anchors
 - 19 Lifestyle Scenes
+- 20 Gallery Image

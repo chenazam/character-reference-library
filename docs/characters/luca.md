@@ -14,7 +14,7 @@ LUCA is a character in the reference library.
 
 ## Face References
 
-<!-- snippet missing: snippets/galleries/luca/face.md -->
+--8<-- "snippets/galleries/luca/face.md"
 
 ## Hair References
 

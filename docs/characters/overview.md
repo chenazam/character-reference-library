@@ -61,6 +61,7 @@ A typical character folder contains the following subfolders:
 - `17_SCALE`
 - `18_SCENES`
 - `19_PROPS`
+- `20_GALLERY`
 - `IDENTITY_PACK`
 - `SOURCE_REFERENCES`
 

@@ -18,7 +18,7 @@ JASPER is a character in the reference library.
 
 ## Hair References
 
-<!-- snippet missing: snippets/galleries/jasper/hair.md -->
+--8<-- "snippets/galleries/jasper/hair.md"
 
 ## Anatomy
 

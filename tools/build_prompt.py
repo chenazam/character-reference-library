@@ -43,6 +43,8 @@ TEMPLATE_ALIASES = {
 
     "interaction-anchor": "docs/assets/library/50_PROMPT_TEMPLATES/18_INTERACTIONS/interaction-anchor-sheet.md",
     "scene-sheet": "docs/assets/library/50_PROMPT_TEMPLATES/19_SCENES/lifestyle-scene-anchor-sheet.md",
+
+    "gallery-image": "docs/assets/library/50_PROMPT_TEMPLATES/20_THUMBNAIL/gallery-image.md",
 }
 
 

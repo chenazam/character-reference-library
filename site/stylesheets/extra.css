@@ -60,3 +60,8 @@
 .character-card h3 {
   margin-top: 0.5rem;
 }
+
+.character-card img {
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}

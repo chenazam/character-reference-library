@@ -6,20 +6,21 @@ CHARACTERS_ROOT = ROOT / "docs/assets/library/10_CHARACTERS"
 OUTPUT_FILE = ROOT / "docs/characters/index.md"
 
 
-def find_face_anchor(character_dir):
+def find_thumbnail(character_dir):
+
+    gallery_dir = character_dir / "20_THUMBNAIL"
+
+    if gallery_dir.exists():
+        for f in gallery_dir.iterdir():
+            if "gallery" in f.name:
+                return f
 
     face_dir = character_dir / "01_FACE"
 
-    if not face_dir.exists():
-        return None
-
-    for f in face_dir.iterdir():
-        if "face_anchor" in f.name:
-            return f
-
-    for f in face_dir.iterdir():
-        if f.suffix.lower() in [".png", ".jpg", ".jpeg", ".webp"]:
-            return f
+    if face_dir.exists():
+        for f in face_dir.iterdir():
+            if "face_anchor" in f.name:
+                return f
 
     return None
 
@@ -43,7 +44,7 @@ def main():
         name = character_dir.name
         slug = name.lower()
 
-        face = find_face_anchor(character_dir)
+        face = find_thumbnail(character_dir)
 
         if face:
             rel = face.relative_to(ROOT / "docs").as_posix()

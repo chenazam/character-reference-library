@@ -44,6 +44,14 @@ Defines anatomical structure from the back view.
 
 ---
 
+## Glute Anatomy Reference
+
+Defines anatomical structure of the glutes area from a 3/4 back view.
+
+--8<-- "assets/library/50_PROMPT_TEMPLATES/03_ANATOMY/anatomy-glutes.md"
+
+---
+
 ## Anatomy Reference Sheet
 
 Combines multiple anatomy views into a structured sheet.

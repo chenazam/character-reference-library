@@ -6,8 +6,30 @@
       "type": "shell",
       "command": "python",
       "args": ["tools/rebuild_library.py"],
-      "group": "build",
-      "problemMatcher": []
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "never",
+        "panel": "shared",
+        "clear": false,
+        "close": true
+      }
+    },
+    {
+      "label": "Rebuild Reference Library (Debug)",
+      "type": "shell",
+      "command": "python",
+      "args": ["tools/rebuild_library.py"],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": false,
+        "close": false
+      }
     }
   ]
 }

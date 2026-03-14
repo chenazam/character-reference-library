@@ -14,40 +14,10 @@ The goal is a clean anatomical reference panel that preserves the character’s 
 
 ---
 
-## Character Identity
-
-Tommy is a medium-height young man with a soft, slightly curvy natural build and a gentle overall presence.
-He has light brown hair, warm blue eyes, and soft youthful facial features.
-His physique is naturally untrained with narrow to moderate shoulders, a lightly soft torso, and fuller hips, glutes, and thighs that create a compact leg-dominant silhouette.
-His aesthetic is cozy, casual, and softly romantic.
+Character:
+[CHARACTER_BLOCK]
 
 ---
-
-Maintain consistent facial identity when visible.
-
-Facial traits:
-
-- face shape: soft round face with youthful proportions
-- jawline: soft jawline with low angularity
-- eyes: clear blue eyes with a warm open expression
-- distinctive traits: gentle facial structure and approachable expression
-
----
-
-## Body
-
-Tommy is approximately **175 cm (5'9") tall** with a soft slender build and natural body softness.
-
-Body proportions:
-
-- shoulders: narrow to moderate shoulders
-- torso: lightly built torso with soft natural muscle tone
-- posture: relaxed and slightly inward
-- limb proportions: slender limbs with fuller soft thighs and glutes
-
-Overall silhouette:
-
-A **compact leg-dominant silhouette** with fuller hips, glutes, and thighs and a lighter upper body.
 
 Focus strongly on accurate:
 

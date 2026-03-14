@@ -16,7 +16,8 @@
 - 3A Anatomy Front
 - 3B Anatomy Side
 - 3C Anatomy Back
-- 3D Anatomy Sheet
+- 3D Anatomy Glutes
+- 3E Anatomy Sheet
 
 ## Stage 4 — Structural Anchors
 
@@ -30,7 +31,15 @@
 
 - 9 Expression Sheet
 - 10 Hand Sheet
-- 11 Ultimate Character Sheet
+- 11A Ultimate Character Sheet - Front Face Panel
+- 11B Ultimate Character Sheet - 3/4 Face Panel
+- 11C Ultimate Character Sheet - Profile Face Panel
+- 11D Ultimate Character Sheet - Expression Panel
+- 11E Ultimate Character Sheet - Body Front Panel
+- 11F Ultimate Character Sheet - Body Side Panel
+- 11G Ultimate Character Sheet - Silhouette Panel
+- 11H Ultimate Character Sheet - Dynamic Pose Panel
+- 11I Ultimate Character Sheet - Sheet Assembly
 
 ## Stage 6 — Style Anchoring
 

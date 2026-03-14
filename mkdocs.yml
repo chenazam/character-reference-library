@@ -1,80 +1,67 @@
 site_name: Character Reference Library
 site_url: https://charreflib.chenazam.com
 site_description: AI character pipeline, prompts, references, and metadata
-
 theme:
   name: material
   features:
-    - content.code.copy
-
+  - content.code.copy
 markdown_extensions:
-  - attr_list
-  - md_in_html
-  - pymdownx.snippets:
-      base_path:
-        - docs
-      check_paths: true
-
+- attr_list
+- md_in_html
+- pymdownx.snippets:
+    base_path:
+    - docs
+    check_paths: true
 extra_css:
-  - stylesheets/extra.css
-
+- stylesheets/extra.css
 nav:
-  - Home: index.md
-
-  - Browse Library:
-      - Characters:
-          - Overview: characters/overview.md
-          - Character Index: characters/index.md
-          - Blake: characters/blake.md
-          - Daimon: characters/daimon.md
-          - Danny: characters/danny.md
-          - Hudson: characters/hudson.md
-          - Jasper: characters/jasper.md
-          - Jonah: characters/jonah.md
-          - Luca: characters/luca.md
-          - Lucien: characters/lucien.md
-          - Tommy: characters/tommy.md
-          - Character Page Template: characters/character-page-template.md
-
-      - Character Pairs:
-          - Index: pairs/index.md
-          - Templates: pairs/templates.md
-
-      - Character Groups:
-          - Index: groups/index.md
-
-      - Environments:
-          - Index: environments/index.md
-
-      - Inspiration:
-          - Index: inspiration/index.md
-
-  - Prompt System:
-      - Overview: prompts/overview.md
-      - Master Blocks: prompts/master-blocks.md
-      - Prompt Recipes: prompts/prompt-recipes.md
-      - Reference Attachments: prompts/reference-attachments.md
-      - Template Normalization Checklist: prompts/template-normalization-checklist.md
-
-      - Prompt Templates:
-          - Templates Index: prompts/templates-index.md
-          - Face Templates: prompts/templates/face.md
-          - Anatomy Templates: prompts/templates/anatomy.md
-          - Body Templates: prompts/templates/body.md
-          - UCS Templates: prompts/templates/ucs.md
-          - Outfit Templates: prompts/templates/outfits.md
-          - Scene Templates: prompts/templates/scenes.md
-
-  - Pipeline:
-      - Overview: pipeline/overview.md
-      - Pipeline Stages: pipeline/stages.md
-      - Progress Dashboard: pipeline/progress.md
-      - Generation Queue: pipeline/generation_queue.md
-
-  - Library Standards:
-      - Folder Structure: library/folder-structure.md
-      - Naming Conventions: library/naming-conventions.md
-      - Metadata Schema: library/metadata-schema.md
-      - Controlled Vocabulary: library/controlled-vocabulary.md
-      - Gallery Snippet Conventions: library/gallery-snippet-conventions.md
-      - Output Format Standards: library/output-format-standards.md
+- Home: index.md
+- Browse Library:
+  - Characters:
+    - Overview: characters/overview.md
+    - Character Index: characters/index.md
+    - Blake: characters/blake.md
+    - Daimon: characters/daimon.md
+    - Danny: characters/danny.md
+    - Hudson: characters/hudson.md
+    - Jasper: characters/jasper.md
+    - Jonah: characters/jonah.md
+    - Luca: characters/luca.md
+    - Lucien: characters/lucien.md
+    - Tommy: characters/tommy.md
+    - Character Page Template: characters/character-page-template.md
+  - Character Pairs:
+    - Index: pairs/index.md
+    - Templates: pairs/templates.md
+  - Character Groups:
+    - Index: groups/index.md
+  - Environments:
+    - Index: environments/index.md
+  - Inspiration:
+    - Index: inspiration/index.md
+- Prompt System:
+  - Overview: prompts/overview.md
+  - Master Blocks: prompts/master-blocks.md
+  - Prompt Recipes: prompts/prompt-recipes.md
+  - Reference Attachments: prompts/reference-attachments.md
+  - Template Normalization Checklist: prompts/template-normalization-checklist.md
+  - Prompt Templates:
+    - Templates Index: prompts/templates-index.md
+    - Face Templates: prompts/templates/face.md
+    - Anatomy Templates: prompts/templates/anatomy.md
+    - Body Templates: prompts/templates/body.md
+    - UCS Templates: prompts/templates/ucs.md
+    - Outfit Templates: prompts/templates/outfits.md
+    - Scene Templates: prompts/templates/scenes.md
+- Pipeline:
+  - Overview: pipeline/overview.md
+  - Pipeline Stages: pipeline/stages.md
+  - Progress Dashboard: pipeline/progress.md
+  - Generation Queue: pipeline/generation_queue.md
+- Library Standards:
+  - Folder Structure: library/folder-structure.md
+  - Naming Conventions: library/naming-conventions.md
+  - Metadata Schema: library/metadata-schema.md
+  - Controlled Vocabulary: library/controlled-vocabulary.md
+  - Gallery Snippet Conventions: library/gallery-snippet-conventions.md
+  - Output Format Standards: library/output-format-standards.md

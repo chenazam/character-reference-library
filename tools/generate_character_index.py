@@ -26,28 +26,57 @@ def find_thumbnail(character_dir):
 
 
 def load_metadata(character_dir):
-    metadata_file = character_dir / "metadata.yaml"
+    metadata_file = character_dir / "00_PROFILE" / "metadata.yaml"
 
     if not metadata_file.exists():
-        return {}
+        print(f"No metadata found for {character_dir.name}: {metadata_file}")
+        return {}, metadata_file
 
     try:
         with metadata_file.open("r", encoding="utf-8") as f:
             data = yaml.safe_load(f) or {}
-            return data if isinstance(data, dict) else {}
+            if isinstance(data, dict):
+                return data, metadata_file
+            print(f"Metadata is not a dict for {character_dir.name}: {metadata_file}")
+            return {}, metadata_file
     except Exception as e:
         print(f"Warning: failed to read {metadata_file}: {e}")
-        return {}
+        return {}, metadata_file
+
+
+def parse_bool(value, default=True):
+    if value is None:
+        return default
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, str):
+        normalized = value.strip().lower()
+        if normalized in {"true", "yes", "1", "on"}:
+            return True
+        if normalized in {"false", "no", "0", "off"}:
+            return False
+    if isinstance(value, (int, float)):
+        return bool(value)
+    return default
 
 
 def should_list_in_character_index(character_dir):
-    metadata = load_metadata(character_dir)
+    metadata, metadata_file = load_metadata(character_dir)
     site_visibility = metadata.get("site_visibility", {})
 
     if not isinstance(site_visibility, dict):
+        print(f"{character_dir.name}: no valid site_visibility in {metadata_file}, defaulting to True")
         return True
 
-    return site_visibility.get("list_in_character_index", True)
+    raw_value = site_visibility.get("list_in_character_index", True)
+    resolved = parse_bool(raw_value, True)
+
+    print(
+        f"{character_dir.name}: list_in_character_index={raw_value!r} "
+        f"-> {resolved} (from {metadata_file})"
+    )
+
+    return resolved
 
 
 def main():
@@ -68,8 +97,9 @@ def main():
             print(f"Skipping {character_dir.name} (list_in_character_index: false)")
             continue
 
-        name = character_dir.name
-        slug = name.lower()
+        metadata, _ = load_metadata(character_dir)
+        name = metadata.get("name", character_dir.name)
+        slug = metadata.get("slug", character_dir.name.lower())
 
         face = find_thumbnail(character_dir)
 
@@ -94,7 +124,6 @@ def main():
     lines.append("")
 
     OUTPUT_FILE.write_text("\n".join(lines), encoding="utf-8")
-
     print(f"Generated {OUTPUT_FILE}")
 
 

@@ -118,7 +118,6 @@ Reference assets that still need to be generated.
 ## JASPER
 
 - hair_sheet
-- anatomy_sheet
 - proportion_grid
 - muscle_tension
 - body_anchor

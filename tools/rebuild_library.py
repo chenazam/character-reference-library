@@ -8,6 +8,7 @@ SCRIPTS = [
     "tools/generate_gallery_snippets.py",
     "tools/generate_character_pages.py",
     "tools/generate_character_index.py",
+    "tools/generate_nav_characters.py",
     "tools/generate_pipeline_dashboard.py",
     "tools/update_pipeline_status.py",
     "tools/validate_library.py",
@@ -15,40 +16,39 @@ SCRIPTS = [
 ]
 
 
-def run_python(script):
-    print(f"\n=== Running {script} ===\n")
-
-    result = subprocess.run(
-        [sys.executable, script],
-        cwd=ROOT
-    )
+def run_command(command, label):
+    print(f"\n=== {label} ===\n")
+    result = subprocess.run(command, cwd=ROOT)
 
     if result.returncode != 0:
         sys.exit(result.returncode)
+
+
+def run_python(script):
+    run_command([sys.executable, script], f"Running {script}")
 
 
 def run_mkdocs_build():
-    print("\n=== Running mkdocs build ===\n")
+    run_command([sys.executable, "-m", "mkdocs", "build"], "Running mkdocs build")
 
-    result = subprocess.run(
-        [sys.executable, "-m", "mkdocs", "build"],
-        cwd=ROOT
+
+def run_mkdocs_gh_deploy():
+    run_command(
+        [sys.executable, "-m", "mkdocs", "gh-deploy", "--clean"],
+        "Running mkdocs gh-deploy",
     )
-
-    if result.returncode != 0:
-        sys.exit(result.returncode)
 
 
 def main():
-
     print("\n===== REBUILDING REFERENCE LIBRARY =====\n")
 
     for script in SCRIPTS:
         run_python(script)
 
     run_mkdocs_build()
+    run_mkdocs_gh_deploy()
 
-    print("\n===== BUILD COMPLETE =====\n")
+    print("\n===== BUILD + DEPLOY COMPLETE =====\n")
 
 
 if __name__ == "__main__":

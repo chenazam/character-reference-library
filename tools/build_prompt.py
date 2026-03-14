@@ -27,7 +27,7 @@ TEMPLATE_ALIASES = {
     "anatomy-front": "docs/assets/library/50_PROMPT_TEMPLATES/03_ANATOMY/anatomy-front.md",
     "anatomy-side": "docs/assets/library/50_PROMPT_TEMPLATES/03_ANATOMY/anatomy-side.md",
     "anatomy-back": "docs/assets/library/50_PROMPT_TEMPLATES/03_ANATOMY/anatomy-back.md",
-    "anatomy-glutes": "docs/assets/library/50_PROMPT_TEMPLATES/03_ANATOMA/anatomy-glutes.md",
+    "anatomy-glutes": "docs/assets/library/50_PROMPT_TEMPLATES/03_ANATOMY/anatomy-glutes.md",
     "anatomy-sheet": "docs/assets/library/50_PROMPT_TEMPLATES/03_ANATOMY/anatomy-sheet.md",
 
     "body-anchor": "docs/assets/library/50_PROMPT_TEMPLATES/06_BODY/body-anchor-sheet.md",
@@ -237,7 +237,7 @@ def main():
         description="Build prompt from template + blocks"
     )
 
-    parser.add_argument("--template", required=True)
+    parser.add_argument("--template")
 
     parser.add_argument("--character")
     parser.add_argument("--characters", nargs="+")
@@ -248,7 +248,25 @@ def main():
 
     parser.add_argument("--param", action="append")
 
+    parser.add_argument(
+        "--list-templates",
+        action="store_true",
+        help="List available template aliases and exit",
+    )
+
     args = parser.parse_args()
+
+    if args.list_templates:
+        print("Available template aliases:\n")
+
+        for alias, path in sorted(TEMPLATE_ALIASES.items()):
+            print(f"{alias:<20} -> {path}")
+
+        sys.exit(0)
+
+    if not args.template:
+        print("Error: Provide --template", file=sys.stderr)
+        sys.exit(1)
 
     if not args.character and not args.characters:
         print("Error: Provide --character or --characters", file=sys.stderr)

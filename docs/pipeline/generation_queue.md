@@ -16,7 +16,7 @@ Reference assets that still need to be generated.
 
 ## DENNIS
 
-- next: face_anchor
+- next: anatomy_sheet
 
 ## HUDSON
 

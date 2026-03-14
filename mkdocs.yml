@@ -47,11 +47,11 @@ nav:
   - Template Normalization Checklist: prompts/template-normalization-checklist.md
   - Prompt Templates:
     - Templates Index: prompts/templates-index.md
-    - Face Templates: prompts/templates/face.md
-    - Anatomy Templates: prompts/templates/anatomy.md
+    - Identity Templates: prompts/templates/identity.md
     - Body Templates: prompts/templates/body.md
     - UCS Templates: prompts/templates/ucs.md
-    - Outfit Templates: prompts/templates/outfits.md
+    - Style Templates: prompts/templates/style.md
+    - Motion Templates: prompts/templates/motion.md
     - Scene Templates: prompts/templates/scenes.md
 - Pipeline:
   - Overview: pipeline/overview.md

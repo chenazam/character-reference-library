@@ -24,7 +24,7 @@ Reference assets that still need to be generated.
 
 ## JASPER
 
-- next: hair_sheet
+- next: body_anchor
 
 ## JONAH
 

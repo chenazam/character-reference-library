@@ -15,6 +15,12 @@ SCRIPTS = [
     "tools/generate_generation_queue.py",
 ]
 
+def commit_generated_changes():
+    run_command(["git", "add", "."], "Staging generated files")
+    run_command(
+        ["git", "commit", "-m", "Auto-update generated reference library"],
+        "Committing generated files",
+    )
 
 def run_command(command, label):
     print(f"\n\n========== {label} ==========\n")
@@ -46,6 +52,8 @@ def main():
 
     for script in SCRIPTS:
         run_python(script)
+
+    commit_generated_changes()
 
     run_mkdocs_build()
 

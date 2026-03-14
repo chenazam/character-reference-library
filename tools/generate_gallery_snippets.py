@@ -6,6 +6,7 @@ DOCS_ROOT = ROOT / "docs"
 
 CHARACTERS_ROOT = ROOT / "docs/assets/library/10_CHARACTERS"
 SNIPPETS_ROOT = ROOT / "docs/snippets/galleries"
+CHARACTER_PAGES = ROOT / "docs/characters"
 
 ASSET_FAMILIES = {
     "01_IDENTITY": "identity",
@@ -24,13 +25,16 @@ def docs_rel_url(from_markdown_file: pathlib.Path, target_under_docs: pathlib.Pa
     return pathlib.PurePosixPath(rel).as_posix()
 
 
-def generate_gallery(images, snippet_path: pathlib.Path):
+def generate_gallery(images, snippet_path: pathlib.Path, character_slug: str):
     lines = []
     lines.append('<div class="character-gallery">')
     lines.append("")
 
+    character_page = CHARACTER_PAGES / f"{character_slug}.md"
+
     for img in images:
-        rel = docs_rel_url(snippet_path, img)
+        rel = docs_rel_url(character_page, img)
+
         lines.append(f'  <a href="{rel}" target="_blank">')
         lines.append(f'    <img src="{rel}" alt="">')
         lines.append("  </a>")
@@ -38,6 +42,7 @@ def generate_gallery(images, snippet_path: pathlib.Path):
 
     lines.append("</div>")
     lines.append("")
+
     return "\n".join(lines)
 
 
@@ -75,7 +80,8 @@ def main():
                 continue
 
             snippet_path = character_snippet_dir / f"{family_name}.md"
-            gallery = generate_gallery(images, snippet_path)
+
+            gallery = generate_gallery(images, snippet_path, character)
             snippet_path.write_text(gallery, encoding="utf-8")
 
             print(f"  Generated {snippet_path.relative_to(ROOT)}")

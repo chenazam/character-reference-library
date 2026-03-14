@@ -2,6 +2,11 @@ name: Daimon
 slug: daimon
 status: active
 project: Angel_Demon
+site_visibility:
+  list_in_character_index: true
+  include_in_nav: true
+  generate_page: true
+  include_in_prompt_builder: true
 core_identity:
   short_summary: Imposing career criminal with a powerful physique and dangerous,
     controlled presence.
@@ -29,6 +34,7 @@ physical:
   limb_profile: thick_limbs
   posture_profile: grounded_stable
   silhouette_anchor: power_frame
+  silhouette_emphasis: shoulders
   silhouette_keywords:
   - tall
   - broad
@@ -107,5 +113,6 @@ pipeline_status:
   scale_sheet: not_started
   scene_anchors: not_started
   prop_sheet: not_started
+  gallery_image: not_started
 notes: ''
 last_updated: '2026-03-13'

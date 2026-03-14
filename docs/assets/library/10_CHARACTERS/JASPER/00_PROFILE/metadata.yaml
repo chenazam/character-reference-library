@@ -2,6 +2,11 @@ name: Jasper
 slug: jasper
 status: active
 project: Blake & Jasper
+site_visibility:
+  list_in_character_index: true
+  include_in_nav: true
+  generate_page: true
+  include_in_prompt_builder: true
 core_identity:
   short_summary: Lean runner-built man with playful athletic energy and expressive
     charm.
@@ -19,16 +24,19 @@ physical:
   frame_proportion: leg_dominant
   body_fat_range: athletic
   body_softness_distribution: glute_dominant
-  build_notes: "Lean endurance-athlete physique with strong lower-body development.\
-    \ Narrow waist, compact torso, and powerful thighs typical of a runner. Jasper\xE2\
-    \u20AC\u2122s most visually distinctive feature is his prominent, rounded glutes\
-    \ and strong runner\xE2\u20AC\u2122s legs, which create a leg-dominant silhouette.\
-    \ Muscle tone is defined but not bulky, emphasizing agility and speed.\n"
+  build_notes: 'Lean endurance-athlete physique with strong lower-body development.
+    Narrow waist, compact torso, and powerful thighs typical of a runner. Jasperâ€™s
+    most visually distinctive feature is his prominent, rounded glutes and strong
+    runnerâ€™s legs, which create a leg-dominant silhouette. Muscle tone is defined
+    but not bulky, emphasizing agility and speed.
+
+    '
   shoulder_profile: moderate_shoulders
   torso_profile: athletic_torso
   limb_profile: athletic_limbs
   posture_profile: relaxed_neutral
   silhouette_anchor: runner_silhouette
+  silhouette_emphasis: glutes_thighs
   silhouette_keywords:
   - compact
   - agile
@@ -93,8 +101,8 @@ reference_files:
   signature_outfit_sheet: jas_outfit_signature.png
 pipeline_status:
   face_anchor: complete
-  hair_sheet: partial
-  anatomy_sheet: complete
+  hair_sheet: not_started
+  anatomy_sheet: partial
   proportion_grid: not_started
   muscle_tension: not_started
   body_anchor: not_started
@@ -111,6 +119,7 @@ pipeline_status:
   scale_sheet: not_started
   scene_anchors: not_started
   prop_sheet: not_started
+  gallery_image: not_started
 notes: 'Jasper is defined by a runner-style physique with strong legs and a playful,
   energetic demeanor. His body language tends to be relaxed and expressive, often
   leaning casually or shifting weight easily.

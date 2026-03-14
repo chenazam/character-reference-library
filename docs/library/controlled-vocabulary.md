@@ -18,21 +18,22 @@ Use these values whenever possible instead of inventing new terms for each chara
 
 Use these values for `physical.build_category`.
 
-| Value               | Description                                                      |
-| ------------------- | ---------------------------------------------------------------- |
-| `soft_slender`      | slender frame with soft musculature and refined proportions      |
-| `narrow_slender`    | slender build with a narrow frame and delicate body structure    |
-| `elongated_slender` | slender build with visibly long limbs and elongated proportions  |
-| `light_athletic`    | lightly toned body with visible fitness but little bulk          |
-| `runner_build`      | athletic build with lower-body emphasis and lean overall mass    |
-| `lower_athletic`    | athletic build with noticeable lower-body dominance              |
-| `balanced_athletic` | proportional athletic build with moderate tone and balanced mass |
-| `athletic_muscular` | clearly defined muscular physique without extreme bulk           |
-| `heavy_muscular`    | thick muscular body with strong mass and visible density         |
-| `power_build`       | very broad and powerful build with heavy upper-body presence     |
-| `broad_heavy`       | broad frame with substantial overall body mass                   |
-| `thick_set`         | dense body build with strong torso mass and compact power        |
-| `large_frame`       | naturally large skeletal frame regardless of muscle level        |
+| Value               | Description                                                                                                                           |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `soft_slender`      | slender frame with soft musculature and refined proportions                                                                           |
+| `narrow_slender`    | slender build with a narrow frame and delicate body structure                                                                         |
+| `elongated_slender` | slender build with visibly long limbs and elongated proportions                                                                       |
+| `light_athletic`    | lightly toned body with visible fitness but little bulk                                                                               |
+| `runner_build`      | athletic build with lower-body emphasis and lean overall mass                                                                         |
+| `lower_athletic`    | athletic build with noticeable lower-body dominance                                                                                   |
+| `balanced_athletic` | proportional athletic build with moderate tone and balanced mass                                                                      |
+| `athletic_muscular` | clearly defined muscular physique without extreme bulk                                                                                |
+| `heavy_muscular`    | thick muscular body with strong mass and visible density                                                                              |
+| `power_build`       | very broad and powerful build with heavy upper-body presence                                                                          |
+| `broad_heavy`       | broad frame with substantial overall body mass                                                                                        |
+| `thick_set`         | dense body build with strong torso mass and compact power                                                                             |
+| `large_frame`       | naturally large skeletal frame regardless of muscle level                                                                             |
+| `soft_heavy`        | body with noticeable softness and weight without strong muscular structure; mass reads as natural body fat rather than muscle density |
 
 ---
 
@@ -40,13 +41,37 @@ Use these values for `physical.build_category`.
 
 Use these values for `physical.silhouette_anchor`.
 
-| Value               | Description                                                                                                                  |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `runner_silhouette` | lean athletic silhouette with strong lower-body emphasis and light upper-body mass                                           |
-| `power_athlete`     | broad, muscular athletic silhouette with dominant shoulders and chest                                                        |
-| `elongated_slender` | slender silhouette defined by long limbs and extended vertical proportions                                                   |
-| `power_frame`       | extremely broad, dense, muscular silhouette defined by heavy upper-body mass                                                 |
-| `glute_slender`     | slender silhouette where the lower body is visually defined by rounded glutes relative to a narrow waist and slim upper body |
+| Value               | Description                                                                                                                                           |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `runner_silhouette` | lean athletic silhouette with strong lower-body emphasis and light upper-body mass                                                                    |
+| `power_athlete`     | broad, muscular athletic silhouette with dominant shoulders and chest                                                                                 |
+| `elongated_slender` | slender silhouette defined by long limbs and extended vertical proportions                                                                            |
+| `power_frame`       | extremely broad, dense, muscular silhouette defined by heavy upper-body mass                                                                          |
+| `glute_slender`     | slender silhouette where the lower body is visually defined by rounded glutes relative to a narrow waist and slim upper body                          |
+| `glute_heavy`       | silhouette strongly defined by prominent glutes relative to waist and thighs, creating a visually rear-weighted lower-body shape                      |
+| `hip_dominant_soft` | silhouette defined by fuller hips, glutes, and thighs with soft contours, producing a lower-body-weighted shape rather than a shoulder-dominant frame |
+
+---
+
+# Silhouette Emphasis
+
+Use these values for `physical.silhouette_emphasis`.
+
+| Value                | Description                                                                                           |
+| -------------------- | ----------------------------------------------------------------------------------------------------- |
+| `balanced`           | silhouette mass appears evenly distributed across the body with no strongly dominant region           |
+| `shoulders`          | shoulder width strongly defines the silhouette relative to hips and torso                             |
+| `chest`              | chest mass or structure visually defines the upper-body silhouette                                    |
+| `upper_body`         | shoulders, chest, and upper torso dominate the silhouette relative to hips and legs                   |
+| `torso`              | the midsection or abdominal area visually defines the body mass distribution                          |
+| `waist`              | a narrow waist strongly defines the silhouette by creating a visible taper between shoulders and hips |
+| `hips`               | hip width strongly defines the silhouette relative to shoulders                                       |
+| `glutes`             | rounded glutes visually define the silhouette relative to waist and thighs                            |
+| `thighs`             | thigh mass or width visually defines the lower-body silhouette                                        |
+| `hips_glutes`        | hips and glutes together define the lower-body silhouette                                             |
+| `glutes_thighs`      | glutes and thighs form the primary mass and shape of the silhouette                                   |
+| `hips_glutes_thighs` | hips, glutes, and thighs together create the dominant silhouette mass relative to the upper body      |
+| `legs`               | overall leg length or leg mass defines the silhouette relative to the torso                           |
 
 ---
 

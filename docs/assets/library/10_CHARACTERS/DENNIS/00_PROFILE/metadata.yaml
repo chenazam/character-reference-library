@@ -1,0 +1,117 @@
+name: Dennis
+slug: dennis
+status: active
+project: personal_reference
+site_visibility:
+  list_in_character_index: false
+  include_in_nav: false
+  generate_page: true
+  include_in_prompt_builder: true
+core_identity:
+  short_summary: Soft-built man in his early 30s with a gentle face and a naturally
+    hip-dominant physique.
+  role_archetype:
+  - everyday_person
+  aesthetic_tags:
+  - domestic_soft
+  - soft_masculine
+physical:
+  height_cm: 175
+  height_imperial: 5 ft 9 in
+  height_visual_category: medium
+  build_category: soft_heavy
+  frame_proportion: hip_dominant
+  body_fat_range: soft_heavy
+  body_softness_distribution: soft_lower_body
+  build_notes: 'Medium-height man with a soft, naturally untrained physique. Body
+    mass is concentrated in the abdomen, hips, glutes, and thighs, creating a clear
+    lower-body emphasis. The upper body appears softer and lighter relative to the
+    hips and legs, producing a hip-dominant silhouette with rounded contours rather
+    than visible muscular definition.
+
+    '
+  shoulder_profile: moderate_shoulders
+  torso_profile: soft_torso
+  limb_profile: thick_limbs
+  posture_profile: relaxed_neutral
+  silhouette_anchor: hip_dominant_soft
+  silhouette_emphasis: hips_glutes_thighs
+  silhouette_keywords:
+  - leg_dominant
+  - glute_emphasis
+  - heavy_set
+face:
+  face_shape: soft_round
+  jawline: soft_jawline
+  eye_description: medium eyes behind rectangular glasses with a calm neutral gaze
+  hair_description: short dark hair with natural parting and light texture
+  skin_description: light skin tone with freckles across the nose and cheeks
+  distinctive_features:
+  - freckles across nose
+  - rectangular eyeglasses
+hair_color: dark_brown
+style:
+  primary_aesthetic: domestic_soft
+  secondary_aesthetic:
+  - casual
+  - minimal
+  materials:
+  - cotton
+  - wool
+  primary_colors:
+  - navy
+  - neutral
+  accent_colors:
+  - earth_tones
+  recurring_accessories:
+  - rectangular_glasses
+expression:
+  default_expression: soft_neutral
+  smile_type: subtle_smile
+  emotional_tone: gentle
+movement:
+  movement_style: relaxed_natural
+  gesture_style: restrained
+  body_language: guarded_reserved
+  spatial_presence: grounded
+identity_rules:
+  preserve:
+  - soft rounded facial structure with gentle jawline
+  - hip-dominant body proportions with fuller hips and glutes
+  - natural soft torso and stomach contour
+  avoid:
+  - avoid athletic V-shaped torso
+  - avoid exaggerated shoulder width or muscular definition
+reference_files:
+  face_anchor: ''
+  anatomy_sheet: ''
+  body_anchor: ''
+  ultimate_character_sheet: ''
+  signature_outfit_sheet: ''
+pipeline_status:
+  face_anchor: not_started
+  hair_sheet: not_started
+  anatomy_sheet: not_started
+  proportion_grid: not_started
+  muscle_tension: not_started
+  body_anchor: not_started
+  silhouette_sheet: not_started
+  turnaround_sheet: not_started
+  expression_sheet: not_started
+  hand_sheet: not_started
+  ucs: not_started
+  signature_outfit: not_started
+  design_language: not_started
+  wardrobe: not_started
+  pose_sheet: not_started
+  motion_sheet: not_started
+  scale_sheet: not_started
+  scene_anchors: not_started
+  prop_sheet: not_started
+  gallery_image: not_started
+notes: 'Reference images show a naturally soft male physique with visible lower-body
+  dominance in hips, glutes, and thighs. Facial features are gentle with a soft round
+  structure, freckles across the nose, and rectangular glasses.
+
+  '
+last_updated: '2026-03-14'

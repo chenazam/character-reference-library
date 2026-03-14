@@ -22,7 +22,7 @@ TOMMY is a character in the reference library.
 
 ## Anatomy
 
-<!-- snippet missing: snippets/galleries/tommy/anatomy.md -->
+--8<-- "snippets/galleries/tommy/anatomy.md"
 
 ## Body / Proportions
 

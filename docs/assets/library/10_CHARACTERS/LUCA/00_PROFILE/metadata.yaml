@@ -2,6 +2,11 @@ name: Luca
 slug: luca
 status: active
 project: core_cast
+site_visibility:
+  list_in_character_index: true
+  include_in_nav: true
+  generate_page: true
+  include_in_prompt_builder: true
 core_identity:
   short_summary: Compact lean athletic young man with relaxed natural presence and
     soft approachable facial features.
@@ -28,6 +33,7 @@ physical:
   limb_profile: slender_limbs
   posture_profile: relaxed_neutral
   silhouette_anchor: runner_silhouette
+  silhouette_emphasis: legs
   silhouette_keywords:
   - compact
   - agile
@@ -99,6 +105,7 @@ pipeline_status:
   scale_sheet: not_started
   scene_anchors: not_started
   prop_sheet: not_started
+  gallery_image: not_started
 notes: Metadata reconstructed from visual reference sheets and corrected for confirmed
   character identity.
 last_updated: '2026-03-13'

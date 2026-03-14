@@ -1,4 +1,5 @@
 import pathlib
+import yaml
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
@@ -7,7 +8,6 @@ OUTPUT_FILE = ROOT / "docs/characters/index.md"
 
 
 def find_thumbnail(character_dir):
-
     gallery_dir = character_dir / "20_THUMBNAIL"
 
     if gallery_dir.exists():
@@ -25,8 +25,32 @@ def find_thumbnail(character_dir):
     return None
 
 
-def main():
+def load_metadata(character_dir):
+    metadata_file = character_dir / "metadata.yaml"
 
+    if not metadata_file.exists():
+        return {}
+
+    try:
+        with metadata_file.open("r", encoding="utf-8") as f:
+            data = yaml.safe_load(f) or {}
+            return data if isinstance(data, dict) else {}
+    except Exception as e:
+        print(f"Warning: failed to read {metadata_file}: {e}")
+        return {}
+
+
+def should_list_in_character_index(character_dir):
+    metadata = load_metadata(character_dir)
+    site_visibility = metadata.get("site_visibility", {})
+
+    if not isinstance(site_visibility, dict):
+        return True
+
+    return site_visibility.get("list_in_character_index", True)
+
+
+def main():
     lines = []
 
     lines.append("# Characters")
@@ -37,8 +61,11 @@ def main():
     lines.append("")
 
     for character_dir in sorted(CHARACTERS_ROOT.iterdir()):
-
         if not character_dir.is_dir():
+            continue
+
+        if not should_list_in_character_index(character_dir):
+            print(f"Skipping {character_dir.name} (list_in_character_index: false)")
             continue
 
         name = character_dir.name

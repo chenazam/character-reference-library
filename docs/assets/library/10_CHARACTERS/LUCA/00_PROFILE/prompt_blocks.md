@@ -1,7 +1,21 @@
 # Prompt Blocks — Luca
 
 This file contains reusable prompt fragments describing the character.
+
 Each block can be copied into prompts depending on the generation task.
+
+---
+
+## Character Block
+
+Use for:
+
+- reference sheet prompts
+- anatomy prompts
+- body anchors
+- general character prompts
+
+Luca is a short, compact lean athletic young man with soft rounded facial features, grey-green eyes, and medium-short tousled brown hair. His smaller runner-style frame and relaxed posture give him a gentle approachable presence. His aesthetic blends domestic-soft comfort with relaxed athletic casualwear and cozy everyday clothing.
 
 ---
 
@@ -23,8 +37,8 @@ His aesthetic blends domestic-soft comfort with relaxed athletic styling and coz
 Use for:
 
 - character setup
-- detailed prompts
 - new chat initialization
+- style-sensitive prompts
 
 Luca is a short, compact young man with a lean athletic build and a relaxed natural presence.
 
@@ -55,7 +69,7 @@ Use for:
 
 - face anchor prompts
 - portrait prompts
-- expression sheets
+- expression prompts
 
 Facial description:
 
@@ -66,6 +80,11 @@ Facial description:
 - eyebrow style: natural soft brows
 - hairstyle framing the face: medium-short tousled brown hair with soft natural volume
 
+Include distinctive traits:
+
+- grey-green eyes
+- soft approachable expression
+
 Maintain consistent facial proportions and identity.
 
 ---
@@ -75,11 +94,10 @@ Maintain consistent facial proportions and identity.
 Use for:
 
 - anatomy prompts
-- body anchor prompts
 - pose prompts
-- scale prompts
+- body anchor prompts
 
-Luca is a short 168 cm (5'6") character with a lean athletic build.
+Luca is 5'6" (168 cm) with a compact lean athletic build.
 
 Body proportions:
 
@@ -91,11 +109,11 @@ Body proportions:
 
 Posture:
 
-Luca stands with a relaxed natural posture that reads calm, comfortable, and slightly reserved.
+Luca typically stands with relaxed natural posture that feels calm and slightly reserved.
 
 Overall silhouette should read as:
 
-A compact agile runner-style silhouette with a smaller frame and balanced athletic proportions.
+A compact agile runner-style silhouette with a smaller balanced athletic frame.
 
 ---
 
@@ -103,37 +121,34 @@ A compact agile runner-style silhouette with a smaller frame and balanced athlet
 
 Use for:
 
+- outfit prompts
+- design language sheets
 - wardrobe prompts
-- outfit generation
-- scene prompts
 
-Aesthetic keywords:
+Luca’s aesthetic blends domestic-soft comfort with relaxed athletic casualwear.
 
-- domestic_soft
-- athletic
-- cozy
+Include:
 
-Typical clothing elements:
+Clothing style:
 
-- oversized hoodies or sweaters
-- casual athletic basics
-- relaxed fitted casual clothing
+- oversized hoodies
+- casual sweaters
+- relaxed athletic basics
 
-Typical materials:
+Materials:
 
 - cotton
 - linen
 
-Typical color palette:
+Accessories:
 
-Primary:
+- minimal or none
+
+Palette:
 
 - black
 - grey
-
-Accent:
-
-- white
+- white accents
 
 ---
 
@@ -141,21 +156,19 @@ Accent:
 
 Use for:
 
-- pose sheets
-- motion anchors
+- motion prompts
+- pose prompts
 - dynamic scenes
 
-Movement style:
+Luca moves with relaxed natural agility.
 
-Luca moves with relaxed natural agility and light athletic fluidity.
+His movement reads:
 
-Posture tendencies:
+- fluid
+- light
+- gentle
 
-His posture tends to be relaxed and neutral with an easy natural stance.
-
-Gesture style:
-
-Luca uses soft gentle gestures and tends to move calmly and subtly.
+His physical presence feels approachable and calm rather than dominant.
 
 ---
 
@@ -164,22 +177,20 @@ Luca uses soft gentle gestures and tends to move calmly and subtly.
 Use for:
 
 - expression sheets
-- portraits
-- interaction scenes
+- portrait prompts
+- emotional scenes
 
 Default expression:
 
-A soft neutral expression with relaxed eyes and a gentle approachable demeanor.
+A soft neutral expression with relaxed eyes and gentle demeanor.
 
 Typical smile:
 
 A warm gentle smile that appears easily and naturally.
 
-Emotional range:
+Emotional tone:
 
-Luca’s emotional presentation is open, warm, and expressive while remaining soft and calm.
-
-Avoid exaggerated or cartoonish expressions unless explicitly requested.
+Luca’s emotional presence reads open, warm, and nurturing.
 
 ---
 
@@ -188,43 +199,46 @@ Avoid exaggerated or cartoonish expressions unless explicitly requested.
 Use for:
 
 - outfit sheets
-- wardrobe generation
-- style prompts
+- design language sheets
+- wardrobe prompts
 
-Clothing should reflect:
-
-cozy domestic-soft styling mixed with relaxed athletic casualwear.
+Luca typically dresses in cozy domestic casual clothing.
 
 Common elements:
 
 - oversized hoodies
 - casual sweaters
-- relaxed athletic basics
+- soft athletic basics
 
-Accessories may include:
+Silhouette:
 
-- none
-- simple everyday items if needed
+- relaxed comfortable clothing that follows a compact body shape
 
-Avoid styles that conflict with the character’s cozy domestic aesthetic.
+Layering style:
+
+- simple cozy layering rather than fashion-forward styling
 
 ---
 
 ## Anti-Drift Rules
 
-These traits must remain consistent across generated images.
+Use for:
+
+- identity preservation prompts
+- difficult scenes
+- regeneration corrections
 
 Always preserve:
 
-- compact height and body proportions
+- compact height and smaller body scale
 - soft rounded facial structure
-- tousled brown hairstyle silhouette
-- domestic-soft cozy aesthetic
+- tousled brown hairstyle
+- domestic-soft aesthetic
 
 Avoid:
 
-- tall or broad body proportions
-- heavy muscular builds or sharp angular facial structure
+- tall body proportions
+- heavy muscular or broad bodybuilder builds
 
 ---
 
@@ -232,8 +246,7 @@ Avoid:
 
 Copy this block directly into short prompts.
 
-Luca is a short compact lean athletic young man with soft rounded facial features and grey-green eyes.  
-His style combines domestic-soft comfort with relaxed athletic casual clothing.
+Luca is a short compact lean athletic young man with soft rounded facial features, grey-green eyes, and tousled brown hair.
 
 ---
 
@@ -241,6 +254,4 @@ His style combines domestic-soft comfort with relaxed athletic casual clothing.
 
 Copy this block into prompts that require a full character description.
 
-Luca is a 5'6" compact lean athletic young man with soft rounded facial features, grey-green eyes, and medium-short tousled brown hair.  
-His aesthetic blends cozy domestic-soft styling with relaxed athletic casualwear.  
-Maintain consistent facial identity, compact body proportions, and style across all views.
+Luca is a 5'6" compact lean athletic young man with soft rounded facial features, grey-green eyes, and medium-short tousled brown hair. His aesthetic blends cozy domestic-soft clothing with relaxed athletic casualwear while maintaining a gentle approachable presence.

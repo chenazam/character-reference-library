@@ -1,7 +1,12 @@
 name: Jonah
 slug: jonah
 status: active
-project: Danny & Hudson & Jonah & Luca
+project: core_cast
+site_visibility:
+  list_in_character_index: true
+  include_in_nav: true
+  generate_page: true
+  include_in_prompt_builder: true
 core_identity:
   short_summary: Tall, playful, expressive cheerleader with a lean elegant silhouette
     and confident modern urban style.
@@ -21,6 +26,8 @@ physical:
   torso_profile: athletic_torso
   limb_profile: long_limbs
   posture_profile: confident_open
+  silhouette_anchor: runner_silhouette
+  silhouette_emphasis: legs
   silhouette_keywords:
   - slender
   - long-limbed
@@ -102,5 +109,6 @@ pipeline_status:
   scale_sheet: not_started
   scene_anchors: not_started
   prop_sheet: not_started
+  gallery_image: not_started
 notes: ''
 last_updated: 2026-03-13

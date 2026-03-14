@@ -1,3 +1,11 @@
+# Glutes Anatomy Reference
+
+Attach:
+
+- Body Anchor Sheet or Turnaround Sheet (head cropped)
+- Additional Body References (optional)
+
+```
 Create a **single-panel glute anatomy reference image** for the character reference library.
 
 This image is used to clearly document the **glute structure, hip contour, and lower-back-to-thigh transition** for the character.
@@ -8,13 +16,46 @@ The goal is a clean anatomical reference panel that preserves the character’s 
 
 ## Character Identity
 
-[CHARACTER_BLOCK]
+Tommy is a medium-height young man with a soft, slightly curvy natural build and a gentle overall presence.
+He has light brown hair, warm blue eyes, and soft youthful facial features.
+His physique is naturally untrained with narrow to moderate shoulders, a lightly soft torso, and fuller hips, glutes, and thighs that create a compact leg-dominant silhouette.
+His aesthetic is cozy, casual, and softly romantic.
 
-[FACE_BLOCK]
+---
 
-[BODY_BLOCK]
+Maintain consistent facial identity when visible.
 
-Focus strongly on accurate hip width, glute projection, and glute-to-thigh transition consistent with the character's body proportions.
+Facial traits:
+
+- face shape: soft round face with youthful proportions
+- jawline: soft jawline with low angularity
+- eyes: clear blue eyes with a warm open expression
+- distinctive traits: gentle facial structure and approachable expression
+
+---
+
+## Body
+
+Tommy is approximately **175 cm (5'9") tall** with a soft slender build and natural body softness.
+
+Body proportions:
+
+- shoulders: narrow to moderate shoulders
+- torso: lightly built torso with soft natural muscle tone
+- posture: relaxed and slightly inward
+- limb proportions: slender limbs with fuller soft thighs and glutes
+
+Overall silhouette:
+
+A **compact leg-dominant silhouette** with fuller hips, glutes, and thighs and a lighter upper body.
+
+Focus strongly on accurate:
+
+- hip width
+- glute projection
+- glute-to-thigh transition
+
+consistent with the character's body proportions.
 
 ---
 
@@ -24,42 +65,62 @@ The image must present the character in a **clean studio-style anatomy reference
 
 Requirements:
 
-• single character only  
-• landscape orientation  
-• **rear three-quarter body view**  
-• camera positioned slightly behind the character  
-• hips centered in frame  
-• lower back and upper thighs visible  
-• glutes clearly readable  
-• natural relaxed stance  
+• single character only
+• landscape orientation
+• **rear three-quarter body view**
+• camera positioned slightly behind the character
+• **tight anatomical crop focused on the hip region**
 
-The pose should feel neutral and anatomical rather than posed or stylized.
+The image should read as a **glute anatomy study**, not a portrait.
+
+Framing:
+
+• **top of frame: waist / lower back (mid-back at most)**
+• **bottom of frame: just above the knees**
+• **the head and shoulders must NOT be visible**
+
+The **hips and glutes must sit at the visual center of the frame**.
+
+Only the following anatomy should be visible:
+
+• lower back
+• waist
+• hips
+• glutes
+• upper thighs
+
+The pose should feel **neutral and anatomical**, not posed or stylized.
+
+Composition prioritizes the **hip and glute region rather than the full body**.
 
 ---
 
 ## Camera
 
-orthographic reference camera  
-rear **3/4 perspective**  
-slight natural body angle  
-no dramatic perspective distortion  
-consistent professional reference framing  
+orthographic reference camera
+rear **three-quarter perspective**
+slight natural body angle
+no dramatic perspective distortion
+
+**tight anatomical crop centered on hips and glutes**
 
 The camera should clearly show:
 
-• glute projection  
-• hip width  
-• glute-to-thigh transition  
-• lower back curve  
+• glute projection
+• hip width
+• glute-to-thigh transition
+• lower back curve
+
+The crop must read as a **body anatomy reference study focused on the glutes**, similar to professional figure reference photography.
 
 ---
 
 ## Lighting
 
-neutral studio lighting  
-soft even illumination  
-no dramatic shadows  
-clean professional reference lighting  
+neutral studio lighting
+soft even illumination
+no dramatic shadows
+clean professional reference lighting
 
 Lighting must **clearly reveal muscle and contour structure**.
 
@@ -69,10 +130,10 @@ Avoid strong top lighting or darkness that hides form.
 
 ## Styling
 
-neutral studio background  
-subtle grounded shadow  
-clean presentation  
-natural realistic colors  
+neutral studio background
+subtle grounded shadow
+clean presentation
+natural realistic colors
 
 No environmental elements.
 
@@ -84,9 +145,9 @@ The character should wear **minimal fitted athletic shorts or simple underwear**
 
 Requirements:
 
-• snug fit that clearly shows body contours  
-• neutral light colors (grey, light blue, beige, soft neutral tones)  
-• matte fabric  
+• snug fit that clearly shows body contours
+• neutral light colors (grey, light blue, beige, soft neutral tones)
+• matte fabric
 
 Avoid:
 
@@ -107,3 +168,4 @@ The clothing must **not obscure glute shape or hip contour**.
 • **no text**
 • **no labels**
 • **no multi-panel layouts**
+```

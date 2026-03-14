@@ -1224,7 +1224,49 @@
         
   
   <span class="md-ellipsis">
-    Stages
+    Pipeline Stages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../pipeline/progress/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Progress Dashboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../pipeline/generation_queue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generation Queue
   </span>
   
 
@@ -1436,6 +1478,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#character-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      Character Block
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#identity-block-short" class="md-nav__link">
     <span class="md-ellipsis">
       Identity Block (Short)
@@ -1550,8 +1601,18 @@
 
 
 <h1 id="prompt-blocks-hudson">Prompt Blocks — Hudson</h1>
-<p>This file contains reusable prompt fragments describing the character.
-Each block can be copied into prompts depending on the generation task.</p>
+<p>This file contains reusable prompt fragments describing the character.</p>
+<p>Each block can be copied into prompts depending on the generation task.</p>
+<hr />
+<h2 id="character-block">Character Block</h2>
+<p>Use for:</p>
+<ul>
+<li>reference sheet prompts</li>
+<li>anatomy prompts</li>
+<li>body anchors</li>
+<li>general character prompts</li>
+</ul>
+<p>Hudson is a tall broad-shouldered athletic man with a muscular build, narrow angular facial structure, and short brown hair. His confident physical presence and controlled posture give him a calm, dominant aura. His aesthetic blends athletic luxury with clean sport-influenced clothing and minimalist styling.</p>
 <hr />
 <h2 id="identity-block-short">Identity Block (Short)</h2>
 <p>Use for:</p>
@@ -1567,8 +1628,8 @@ His aesthetic blends athletic luxury with clean sport-influenced styling and con
 <p>Use for:</p>
 <ul>
 <li>character setup</li>
-<li>detailed prompts</li>
 <li>new chat initialization</li>
+<li>style-sensitive prompts</li>
 </ul>
 <p>Hudson is a tall athletic man with a broad-shouldered muscular build and confident composed physical presence.</p>
 <p>Key facial traits:</p>
@@ -1587,14 +1648,14 @@ His aesthetic blends athletic luxury with clean sport-influenced styling and con
 <li>posture: open confident posture with relaxed physical control</li>
 </ul>
 <p>Overall silhouette:</p>
-<p>A tall athletic power-athlete silhouette defined by broad shoulders, a strong chest, and balanced muscular proportions that create a confident physically capable presence.</p>
+<p>A tall athletic power-athlete silhouette defined by broad shoulders, strong chest, and balanced muscular proportions.</p>
 <hr />
 <h2 id="face-block">Face Block</h2>
 <p>Use for:</p>
 <ul>
 <li>face anchor prompts</li>
 <li>portrait prompts</li>
-<li>expression sheets</li>
+<li>expression prompts</li>
 </ul>
 <p>Facial description:</p>
 <ul>
@@ -1602,8 +1663,13 @@ His aesthetic blends athletic luxury with clean sport-influenced styling and con
 <li>jawline: defined masculine jawline</li>
 <li>cheekbones: strong cheekbone structure</li>
 <li>eye shape: focused almond-shaped eyes</li>
-<li>eyebrow style: straight masculine brows with subtle intensity</li>
+<li>eyebrow style: straight masculine brows</li>
 <li>hairstyle framing the face: short textured brown hair with slightly tousled volume</li>
+</ul>
+<p>Include distinctive traits:</p>
+<ul>
+<li>calm intense gaze</li>
+<li>controlled expression</li>
 </ul>
 <p>Maintain consistent facial proportions and identity.</p>
 <hr />
@@ -1611,136 +1677,135 @@ His aesthetic blends athletic luxury with clean sport-influenced styling and con
 <p>Use for:</p>
 <ul>
 <li>anatomy prompts</li>
-<li>body anchor prompts</li>
 <li>pose prompts</li>
-<li>scale prompts</li>
+<li>body anchor prompts</li>
 </ul>
-<p>Hudson is a tall 188 cm (6'2") character with a muscular athletic build.</p>
+<p>Hudson is 6'2" (188 cm) with a muscular athletic build.</p>
 <p>Body proportions:</p>
 <ul>
 <li>shoulders: broad athletic shoulders</li>
 <li>torso: defined athletic torso with visible musculature</li>
-<li>waist: athletic waist tapering from the chest</li>
+<li>waist: athletic waist tapering from chest</li>
 <li>hips: balanced athletic hips</li>
 <li>limbs: strong athletic limbs with balanced muscle definition</li>
 </ul>
 <p>Posture:</p>
-<p>Hudson stands with relaxed open posture and natural physical confidence.</p>
+<p>Hudson stands with relaxed upright posture and quiet physical confidence.</p>
 <p>Overall silhouette should read as:</p>
-<p>A tall power-athlete silhouette with broad shoulders, strong chest, and balanced muscular proportions.</p>
+<p>A tall power-athlete silhouette with broad shoulders and balanced muscular proportions.</p>
 <hr />
 <h2 id="style-block">Style Block</h2>
 <p>Use for:</p>
 <ul>
+<li>outfit prompts</li>
+<li>design language sheets</li>
 <li>wardrobe prompts</li>
-<li>outfit generation</li>
-<li>scene prompts</li>
 </ul>
-<p>Aesthetic keywords:</p>
+<p>Hudson’s aesthetic blends athletic luxury with clean sport-influenced styling.</p>
+<p>Include:</p>
+<p>Clothing style:</p>
 <ul>
-<li>athletic_luxury</li>
-<li>athletic</li>
-<li>confident</li>
-</ul>
-<p>Typical clothing elements:</p>
-<ul>
-<li>fitted athletic wear</li>
+<li>fitted athletic clothing</li>
 <li>casual luxury sportswear</li>
-<li>minimal clean streetwear</li>
+<li>minimalist modern streetwear</li>
 </ul>
-<p>Typical materials:</p>
+<p>Materials:</p>
 <ul>
 <li>cotton</li>
 <li>performance fabrics</li>
 </ul>
-<p>Typical color palette:</p>
-<p>Primary:</p>
+<p>Accessories:</p>
+<ul>
+<li>minimal or none</li>
+</ul>
+<p>Palette:</p>
 <ul>
 <li>black</li>
 <li>white</li>
-</ul>
-<p>Accent:</p>
-<ul>
 <li>grey</li>
 </ul>
 <hr />
 <h2 id="movement-block">Movement Block</h2>
 <p>Use for:</p>
 <ul>
-<li>pose sheets</li>
-<li>motion anchors</li>
+<li>motion prompts</li>
+<li>pose prompts</li>
 <li>dynamic scenes</li>
 </ul>
-<p>Movement style:</p>
-<p>Hudson moves with relaxed natural confidence, controlled and physically grounded.</p>
-<p>Posture tendencies:</p>
-<p>He naturally stands upright with open confident posture and relaxed control of his body.</p>
-<p>Gesture style:</p>
-<p>Hudson uses broad confident gestures that reinforce calm authority and physical presence.</p>
+<p>Hudson moves with calm controlled confidence.</p>
+<p>His movement reads:</p>
+<ul>
+<li>relaxed</li>
+<li>grounded</li>
+<li>deliberate</li>
+</ul>
+<p>His physical presence often feels authoritative without being aggressive.</p>
 <hr />
 <h2 id="expression-block">Expression Block</h2>
 <p>Use for:</p>
 <ul>
 <li>expression sheets</li>
-<li>portraits</li>
-<li>interaction scenes</li>
+<li>portrait prompts</li>
+<li>emotional scenes</li>
 </ul>
 <p>Default expression:</p>
 <p>A confident neutral expression with focused attentive eyes.</p>
 <p>Typical smile:</p>
 <p>A subtle restrained smile that appears when he relaxes around people he trusts.</p>
-<p>Emotional range:</p>
-<p>Hudson’s emotional tone is controlled and composed, with warmth emerging selectively rather than constantly.</p>
-<p>Avoid exaggerated or cartoonish expressions unless explicitly requested.</p>
+<p>Emotional tone:</p>
+<p>Hudson’s emotional presence is composed and controlled, with warmth emerging selectively.</p>
 <hr />
 <h2 id="wardrobe-description-block">Wardrobe Description Block</h2>
 <p>Use for:</p>
 <ul>
 <li>outfit sheets</li>
-<li>wardrobe generation</li>
-<li>style prompts</li>
+<li>design language sheets</li>
+<li>wardrobe prompts</li>
 </ul>
-<p>Clothing should reflect:</p>
-<p>athletic luxury styling with clean, confident sport-influenced clothing.</p>
+<p>Hudson typically dresses in clean athletic-luxury clothing.</p>
 <p>Common elements:</p>
 <ul>
-<li>fitted athletic clothing</li>
-<li>casual luxury sportswear</li>
-<li>minimalist modern streetwear</li>
+<li>fitted athletic shirts</li>
+<li>modern sportswear</li>
+<li>minimalist streetwear</li>
 </ul>
-<p>Accessories may include:</p>
+<p>Silhouette:</p>
 <ul>
-<li>none</li>
-<li>minimal functional items if necessary</li>
+<li>fitted clothing emphasizing shoulders and torso</li>
 </ul>
-<p>Avoid styles that conflict with the character’s core aesthetic.</p>
+<p>Layering style:</p>
+<ul>
+<li>simple clean layering rather than complex outfits</li>
+</ul>
 <hr />
 <h2 id="anti-drift-rules">Anti-Drift Rules</h2>
-<p>These traits must remain consistent across generated images.</p>
+<p>Use for:</p>
+<ul>
+<li>identity preservation prompts</li>
+<li>difficult scenes</li>
+<li>regeneration corrections</li>
+</ul>
 <p>Always preserve:</p>
 <ul>
-<li>tall athletic height and body proportions</li>
+<li>tall athletic height</li>
 <li>broad shoulder silhouette</li>
 <li>narrow angular facial structure</li>
-<li>short brown textured hairstyle</li>
+<li>short brown hairstyle</li>
 <li>athletic luxury aesthetic</li>
 </ul>
 <p>Avoid:</p>
 <ul>
-<li>slender or narrow body proportions</li>
+<li>slender runner-style body</li>
 <li>rounded or soft facial structure</li>
 </ul>
 <hr />
 <h2 id="short-prompt-description">Short Prompt Description</h2>
 <p>Copy this block directly into short prompts.</p>
-<p>Hudson is a tall broad-shouldered athletic man with a muscular build, narrow angular facial features, and short textured brown hair.<br />
-His style combines athletic luxury and clean sport-influenced clothing.</p>
+<p>Hudson is a tall broad-shouldered athletic man with a muscular build, narrow angular facial structure, light blue-green eyes, and short brown hair.</p>
 <hr />
 <h2 id="full-prompt-description">Full Prompt Description</h2>
 <p>Copy this block into prompts that require a full character description.</p>
-<p>Hudson is a tall 6'2" athletic man with a broad-shouldered muscular build, narrow angular facial structure, light blue-green eyes, and short textured brown hair.<br />
-His aesthetic blends athletic luxury with clean sport-influenced styling.<br />
-Maintain consistent facial identity, body proportions, and style across all views.</p>
+<p>Hudson is a tall 6'2" athletic man with a broad-shouldered muscular build, narrow angular facial structure, light blue-green eyes, and short brown hair. His aesthetic blends athletic luxury with clean sport-influenced clothing while maintaining a calm confident presence.</p>
 
 
 

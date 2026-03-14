@@ -1,0 +1,16 @@
+group_name: [GROUP_NAME]
+
+members:
+  - [CHARACTER_1]
+  - [CHARACTER_2]
+  - [CHARACTER_3]
+
+description: >
+  Short description of the group and its dynamic.
+
+primary_dynamic: [GROUP_DYNAMIC]
+
+pipeline_status:
+  scale_sheet: not_started
+  interaction_sheet: not_started
+  scene_anchors: not_started

@@ -25,6 +25,12 @@ Browse characters in the reference library.
 
 </a>
 
+<a class="character-card" href="../characters/dennis/">
+
+  <h3>DENNIS</h3>
+
+</a>
+
 <a class="character-card" href="../characters/hudson/">
 
   <img src="/assets/library/10_CHARACTERS/HUDSON/20_THUMBNAIL/hudson_gallery_image_v1.png" alt="HUDSON">

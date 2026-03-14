@@ -1,7 +1,21 @@
 # Prompt Blocks — Hudson
 
 This file contains reusable prompt fragments describing the character.
+
 Each block can be copied into prompts depending on the generation task.
+
+---
+
+## Character Block
+
+Use for:
+
+- reference sheet prompts
+- anatomy prompts
+- body anchors
+- general character prompts
+
+Hudson is a tall broad-shouldered athletic man with a muscular build, narrow angular facial structure, and short brown hair. His confident physical presence and controlled posture give him a calm, dominant aura. His aesthetic blends athletic luxury with clean sport-influenced clothing and minimalist styling.
 
 ---
 
@@ -23,8 +37,8 @@ His aesthetic blends athletic luxury with clean sport-influenced styling and con
 Use for:
 
 - character setup
-- detailed prompts
 - new chat initialization
+- style-sensitive prompts
 
 Hudson is a tall athletic man with a broad-shouldered muscular build and confident composed physical presence.
 
@@ -45,7 +59,7 @@ Body proportions:
 
 Overall silhouette:
 
-A tall athletic power-athlete silhouette defined by broad shoulders, a strong chest, and balanced muscular proportions that create a confident physically capable presence.
+A tall athletic power-athlete silhouette defined by broad shoulders, strong chest, and balanced muscular proportions.
 
 ---
 
@@ -55,7 +69,7 @@ Use for:
 
 - face anchor prompts
 - portrait prompts
-- expression sheets
+- expression prompts
 
 Facial description:
 
@@ -63,8 +77,13 @@ Facial description:
 - jawline: defined masculine jawline
 - cheekbones: strong cheekbone structure
 - eye shape: focused almond-shaped eyes
-- eyebrow style: straight masculine brows with subtle intensity
+- eyebrow style: straight masculine brows
 - hairstyle framing the face: short textured brown hair with slightly tousled volume
+
+Include distinctive traits:
+
+- calm intense gaze
+- controlled expression
 
 Maintain consistent facial proportions and identity.
 
@@ -75,27 +94,26 @@ Maintain consistent facial proportions and identity.
 Use for:
 
 - anatomy prompts
-- body anchor prompts
 - pose prompts
-- scale prompts
+- body anchor prompts
 
-Hudson is a tall 188 cm (6'2") character with a muscular athletic build.
+Hudson is 6'2" (188 cm) with a muscular athletic build.
 
 Body proportions:
 
 - shoulders: broad athletic shoulders
 - torso: defined athletic torso with visible musculature
-- waist: athletic waist tapering from the chest
+- waist: athletic waist tapering from chest
 - hips: balanced athletic hips
 - limbs: strong athletic limbs with balanced muscle definition
 
 Posture:
 
-Hudson stands with relaxed open posture and natural physical confidence.
+Hudson stands with relaxed upright posture and quiet physical confidence.
 
 Overall silhouette should read as:
 
-A tall power-athlete silhouette with broad shoulders, strong chest, and balanced muscular proportions.
+A tall power-athlete silhouette with broad shoulders and balanced muscular proportions.
 
 ---
 
@@ -103,36 +121,33 @@ A tall power-athlete silhouette with broad shoulders, strong chest, and balanced
 
 Use for:
 
+- outfit prompts
+- design language sheets
 - wardrobe prompts
-- outfit generation
-- scene prompts
 
-Aesthetic keywords:
+Hudson’s aesthetic blends athletic luxury with clean sport-influenced styling.
 
-- athletic_luxury
-- athletic
-- confident
+Include:
 
-Typical clothing elements:
+Clothing style:
 
-- fitted athletic wear
+- fitted athletic clothing
 - casual luxury sportswear
-- minimal clean streetwear
+- minimalist modern streetwear
 
-Typical materials:
+Materials:
 
 - cotton
 - performance fabrics
 
-Typical color palette:
+Accessories:
 
-Primary:
+- minimal or none
+
+Palette:
 
 - black
 - white
-
-Accent:
-
 - grey
 
 ---
@@ -141,21 +156,19 @@ Accent:
 
 Use for:
 
-- pose sheets
-- motion anchors
+- motion prompts
+- pose prompts
 - dynamic scenes
 
-Movement style:
+Hudson moves with calm controlled confidence.
 
-Hudson moves with relaxed natural confidence, controlled and physically grounded.
+His movement reads:
 
-Posture tendencies:
+- relaxed
+- grounded
+- deliberate
 
-He naturally stands upright with open confident posture and relaxed control of his body.
-
-Gesture style:
-
-Hudson uses broad confident gestures that reinforce calm authority and physical presence.
+His physical presence often feels authoritative without being aggressive.
 
 ---
 
@@ -164,8 +177,8 @@ Hudson uses broad confident gestures that reinforce calm authority and physical 
 Use for:
 
 - expression sheets
-- portraits
-- interaction scenes
+- portrait prompts
+- emotional scenes
 
 Default expression:
 
@@ -175,11 +188,9 @@ Typical smile:
 
 A subtle restrained smile that appears when he relaxes around people he trusts.
 
-Emotional range:
+Emotional tone:
 
-Hudson’s emotional tone is controlled and composed, with warmth emerging selectively rather than constantly.
-
-Avoid exaggerated or cartoonish expressions unless explicitly requested.
+Hudson’s emotional presence is composed and controlled, with warmth emerging selectively.
 
 ---
 
@@ -188,43 +199,46 @@ Avoid exaggerated or cartoonish expressions unless explicitly requested.
 Use for:
 
 - outfit sheets
-- wardrobe generation
-- style prompts
+- design language sheets
+- wardrobe prompts
 
-Clothing should reflect:
-
-athletic luxury styling with clean, confident sport-influenced clothing.
+Hudson typically dresses in clean athletic-luxury clothing.
 
 Common elements:
 
-- fitted athletic clothing
-- casual luxury sportswear
-- minimalist modern streetwear
+- fitted athletic shirts
+- modern sportswear
+- minimalist streetwear
 
-Accessories may include:
+Silhouette:
 
-- none
-- minimal functional items if necessary
+- fitted clothing emphasizing shoulders and torso
 
-Avoid styles that conflict with the character’s core aesthetic.
+Layering style:
+
+- simple clean layering rather than complex outfits
 
 ---
 
 ## Anti-Drift Rules
 
-These traits must remain consistent across generated images.
+Use for:
+
+- identity preservation prompts
+- difficult scenes
+- regeneration corrections
 
 Always preserve:
 
-- tall athletic height and body proportions
+- tall athletic height
 - broad shoulder silhouette
 - narrow angular facial structure
-- short brown textured hairstyle
+- short brown hairstyle
 - athletic luxury aesthetic
 
 Avoid:
 
-- slender or narrow body proportions
+- slender runner-style body
 - rounded or soft facial structure
 
 ---
@@ -233,8 +247,7 @@ Avoid:
 
 Copy this block directly into short prompts.
 
-Hudson is a tall broad-shouldered athletic man with a muscular build, narrow angular facial features, and short textured brown hair.  
-His style combines athletic luxury and clean sport-influenced clothing.
+Hudson is a tall broad-shouldered athletic man with a muscular build, narrow angular facial structure, light blue-green eyes, and short brown hair.
 
 ---
 
@@ -242,6 +255,4 @@ His style combines athletic luxury and clean sport-influenced clothing.
 
 Copy this block into prompts that require a full character description.
 
-Hudson is a tall 6'2" athletic man with a broad-shouldered muscular build, narrow angular facial structure, light blue-green eyes, and short textured brown hair.  
-His aesthetic blends athletic luxury with clean sport-influenced styling.  
-Maintain consistent facial identity, body proportions, and style across all views.
+Hudson is a tall 6'2" athletic man with a broad-shouldered muscular build, narrow angular facial structure, light blue-green eyes, and short brown hair. His aesthetic blends athletic luxury with clean sport-influenced clothing while maintaining a calm confident presence.

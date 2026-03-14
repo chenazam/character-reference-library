@@ -67,7 +67,9 @@ nav:
 
   - Pipeline:
       - Overview: pipeline/overview.md
-      - Stages: pipeline/stages.md
+      - Pipeline Stages: pipeline/stages.md
+      - Progress Dashboard: pipeline/progress.md
+      - Generation Queue: pipeline/generation_queue.md
 
   - Library Standards:
       - Folder Structure: library/folder-structure.md

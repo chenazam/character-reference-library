@@ -1,7 +1,21 @@
 # Prompt Blocks — Danny
 
 This file contains reusable prompt fragments describing the character.
+
 Each block can be copied into prompts depending on the generation task.
+
+---
+
+## Character Block
+
+Use for:
+
+- reference sheet prompts
+- anatomy prompts
+- body anchors
+- general character prompts
+
+Danny is an extremely tall, broad-shouldered, heavily muscular man with a square face, broad jawline, light blue eyes, and short light-brown hair with light stubble. His massive football-player physique gives him a dominant physical presence, while his expression and posture often carry warm, approachable “gentle giant” energy. His aesthetic blends rugged utilitarian clothing with practical athletic wear.
 
 ---
 
@@ -23,8 +37,8 @@ His aesthetic combines rugged utilitarian practicality with athletic masculinity
 Use for:
 
 - character setup
-- detailed prompts
 - new chat initialization
+- style-sensitive prompts
 
 Danny is an imposing 6'4" man with an extremely broad, heavily muscular build and a grounded physically powerful presence.
 
@@ -45,7 +59,7 @@ Body proportions:
 
 Overall silhouette:
 
-A towering power-frame silhouette defined by massive shoulders, a thick chest and torso, and a dense muscular build that visually dominates surrounding space.
+A towering power-frame silhouette defined by massive shoulders, a thick chest and torso, and dense muscular mass.
 
 ---
 
@@ -55,7 +69,7 @@ Use for:
 
 - face anchor prompts
 - portrait prompts
-- expression sheets
+- expression prompts
 
 Facial description:
 
@@ -66,6 +80,11 @@ Facial description:
 - eyebrow style: strong masculine brows
 - hairstyle framing the face: short light-brown hair with natural texture
 
+Include distinctive traits:
+
+- light blue eyes
+- light facial stubble
+
 Maintain consistent facial proportions and identity.
 
 ---
@@ -75,27 +94,26 @@ Maintain consistent facial proportions and identity.
 Use for:
 
 - anatomy prompts
-- body anchor prompts
 - pose prompts
-- scale prompts
+- body anchor prompts
 
-Danny is an extremely tall 193 cm (6'4") character with a heavy muscular build.
+Danny is 6'4" (193 cm) with a massive heavily muscular build.
 
 Body proportions:
 
 - shoulders: extremely broad heavy shoulders
-- torso: thick powerful torso with strong chest and dense musculature
-- waist: solid athletic waist beneath a large chest
+- torso: thick powerful torso with dense muscular chest
+- waist: strong athletic waist beneath a large chest
 - hips: balanced powerful hips supporting a large frame
 - limbs: thick muscular limbs with visible strength
 
 Posture:
 
-Danny typically stands with grounded stable posture that emphasizes strength and security.
+Danny typically stands with grounded stable posture that emphasizes strength and physical security.
 
 Overall silhouette should read as:
 
-A massive power-frame silhouette with towering height, dominant shoulders, and a dense muscular build.
+A towering power-athlete silhouette with dominant shoulders and dense muscular mass.
 
 ---
 
@@ -103,37 +121,34 @@ A massive power-frame silhouette with towering height, dominant shoulders, and a
 
 Use for:
 
+- outfit prompts
+- design language sheets
 - wardrobe prompts
-- outfit generation
-- scene prompts
 
-Aesthetic keywords:
+Danny’s aesthetic blends rugged utilitarian practicality with athletic masculinity.
 
-- rugged_utilitarian
-- athletic
-- masculine
+Include:
 
-Typical clothing elements:
+Clothing style:
 
-- durable casual clothing such as hoodies or heavy shirts
-- practical athletic wear
-- simple rugged everyday clothing
+- durable casual clothing
+- athletic basics
+- practical everyday wear
 
-Typical materials:
+Materials:
 
 - cotton
 - leather
 
-Typical color palette:
+Accessories:
 
-Primary:
+- minimal or none
+
+Palette:
 
 - black
 - charcoal
-
-Accent:
-
-- dark_red
+- dark red accents
 
 ---
 
@@ -141,21 +156,19 @@ Accent:
 
 Use for:
 
-- pose sheets
-- motion anchors
+- motion prompts
+- pose prompts
 - dynamic scenes
 
-Movement style:
+Danny moves with grounded power and deliberate physical confidence.
 
-Danny moves with grounded powerful motion and controlled physical strength.
+His movement reads:
 
-Posture tendencies:
+- strong
+- stable
+- controlled
 
-He naturally holds a stable planted stance that reflects physical security and strength.
-
-Gesture style:
-
-Danny tends to use broad confident gestures and often expresses warmth through physical closeness or protective body language.
+His physical presence often feels protective and reassuring.
 
 ---
 
@@ -164,22 +177,20 @@ Danny tends to use broad confident gestures and often expresses warmth through p
 Use for:
 
 - expression sheets
-- portraits
-- interaction scenes
+- portrait prompts
+- emotional scenes
 
 Default expression:
 
-A soft neutral expression that balances his intimidating size with an approachable demeanor.
+A soft neutral expression that balances his intimidating size with warmth.
 
 Typical smile:
 
-A warm open smile that appears easily and communicates friendliness and affection.
+A wide warm smile that communicates friendliness and affection.
 
-Emotional range:
+Emotional tone:
 
-Danny’s emotions read openly warm and sincere, giving him a gentle giant presence despite his imposing build.
-
-Avoid exaggerated or cartoonish expressions unless explicitly requested.
+Danny often reads as emotionally open, warm, and protective despite his imposing physique.
 
 ---
 
@@ -188,44 +199,47 @@ Avoid exaggerated or cartoonish expressions unless explicitly requested.
 Use for:
 
 - outfit sheets
-- wardrobe generation
-- style prompts
+- design language sheets
+- wardrobe prompts
 
-Clothing should reflect:
-
-rugged utilitarian styling combined with practical athletic clothing.
+Danny typically dresses in rugged athletic casual clothing.
 
 Common elements:
 
-- heavy hoodies or durable shirts
-- athletic basics
-- simple rugged everyday clothing
+- heavy hoodies
+- simple athletic shirts
+- durable casual clothing
 
-Accessories may include:
+Silhouette:
 
-- none
-- practical everyday items if needed
+- fitted or relaxed athletic clothing emphasizing shoulders and chest
 
-Avoid styles that conflict with the character’s rugged athletic aesthetic.
+Layering style:
+
+- simple practical layering rather than fashion-focused styling
 
 ---
 
 ## Anti-Drift Rules
 
-These traits must remain consistent across generated images.
+Use for:
+
+- identity preservation prompts
+- difficult scenes
+- regeneration corrections
 
 Always preserve:
 
 - extremely tall height and large physical scale
 - broad muscular power-frame silhouette
-- square facial structure with broad jawline
-- short light-brown hairstyle silhouette
+- square facial structure and broad jawline
+- short light-brown hairstyle
 - rugged utilitarian aesthetic
 
 Avoid:
 
 - slender or lightly athletic builds
-- narrow faces or delicate jawlines
+- narrow or delicate facial structure
 
 ---
 
@@ -233,8 +247,7 @@ Avoid:
 
 Copy this block directly into short prompts.
 
-Danny is a 6'4" extremely broad-shouldered heavily muscular man with a square face, broad jawline, light blue eyes, and short light-brown hair.  
-His style combines rugged utilitarian clothing with athletic masculinity.
+Danny is a 6'4" extremely broad-shouldered heavily muscular man with a square face, broad jawline, light blue eyes, and short light-brown hair.
 
 ---
 
@@ -242,6 +255,4 @@ His style combines rugged utilitarian clothing with athletic masculinity.
 
 Copy this block into prompts that require a full character description.
 
-Danny is a towering 6'4" man with an extremely broad, heavily muscular build, square facial structure, light blue eyes, and short light-brown hair with light stubble.  
-His aesthetic combines rugged utilitarian practicality with athletic masculinity.  
-Maintain his imposing size, power-frame silhouette, and warm approachable presence across all views.
+Danny is a towering 6'4" man with an extremely broad, heavily muscular build, square facial structure, light blue eyes, and short light-brown hair with light stubble. His aesthetic blends rugged utilitarian clothing with athletic masculinity while maintaining a warm approachable presence.

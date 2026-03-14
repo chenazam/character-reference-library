@@ -27,6 +27,7 @@ TEMPLATE_ALIASES = {
     "anatomy-front": "docs/assets/library/50_PROMPT_TEMPLATES/03_ANATOMY/anatomy-front.md",
     "anatomy-side": "docs/assets/library/50_PROMPT_TEMPLATES/03_ANATOMY/anatomy-side.md",
     "anatomy-back": "docs/assets/library/50_PROMPT_TEMPLATES/03_ANATOMY/anatomy-back.md",
+    "anatomy-glutes": "docs/assets/library/50_PROMPT_TEMPLATES/03_ANATOMA/anatomy-glutes.md",
     "anatomy-sheet": "docs/assets/library/50_PROMPT_TEMPLATES/03_ANATOMY/anatomy-sheet.md",
 
     "body-anchor": "docs/assets/library/50_PROMPT_TEMPLATES/06_BODY/body-anchor-sheet.md",

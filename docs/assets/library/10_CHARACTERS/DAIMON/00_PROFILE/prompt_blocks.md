@@ -1,7 +1,24 @@
 # Prompt Blocks — Daimon
 
 This file contains reusable prompt fragments describing the character.
+
 Each block can be copied into prompts depending on the generation task.
+
+---
+
+## Character Block
+
+Use for:
+
+- reference sheet prompts
+- anatomy prompts
+- body anchors
+- general character prompts
+
+Daimon is an extremely tall man with a massive muscular build and a powerful physical presence.  
+He has broad shoulders, thick limbs, and a dense upper-body-dominant frame that creates an imposing silhouette.  
+His face is square with a strong jawline, dark short hair, and intense hazel eyes.  
+His aesthetic is rugged and utilitarian, featuring practical clothing, leather materials, dark colors, and visible tattoos.
 
 ---
 
@@ -13,9 +30,8 @@ Use for:
 - scene prompts
 - interaction prompts
 
-Daimon is an extremely tall, heavily muscular man with broad shoulders, thick limbs, and an imposing presence.
+Daimon is an extremely tall, heavily muscular man with broad shoulders, thick limbs, and an imposing presence.  
 He has a square face with a strong jawline, dark hair, and intense hazel eyes.
-His aesthetic is rugged_utilitarian and intimidating with practical clothing and leather outerwear.
 
 ---
 
@@ -24,17 +40,17 @@ His aesthetic is rugged_utilitarian and intimidating with practical clothing and
 Use for:
 
 - character setup
-- detailed prompts
 - new chat initialization
+- style-sensitive prompts
 
-Daimon is an extremely tall man with a massive muscular build and a powerful, physically dominant presence.
+Daimon is an extremely tall man with a massive muscular build and a powerful physical presence.
 
 Key facial traits:
 
 - face shape: square face with strong structural features
 - jawline: broad powerful jawline
 - eyes: intense hazel eyes capable of appearing warm or dangerously cold
-- hair: dark brown hair kept short and practical, often slightly rough or unstyled
+- hair: dark brown hair kept short and practical
 - skin tone: light skin with a weathered appearance suggesting a hard life
 
 Body proportions:
@@ -56,18 +72,14 @@ Use for:
 
 - face anchor prompts
 - portrait prompts
-- expression sheets
+- expression prompts
 
 Facial description:
 
 - face shape: square masculine facial structure
 - jawline: broad powerful jawline
-- cheekbones: strong but not sharp, reinforcing a heavy masculine face
-- eye shape: deep-set intense eyes with a focused gaze
-- eyebrow style: thick natural brows that contribute to a stern expression
-- hairstyle framing the face: short dark hair kept practical and slightly rough
-
-Maintain consistent facial proportions and identity.
+- eyes: intense hazel eyes with a focused gaze
+- distinctive traits: heavy brow, intense stare, mature masculine features
 
 ---
 
@@ -76,27 +88,21 @@ Maintain consistent facial proportions and identity.
 Use for:
 
 - anatomy prompts
-- body anchor prompts
 - pose prompts
-- scale prompts
+- body anchor prompts
 
-Daimon is an extremely tall man with a heavy muscular build.
+Daimon is approximately 196 cm (6'5") tall with a heavy muscular build.
 
 Body proportions:
 
 - shoulders: extremely broad shoulders creating an upper-body-dominant frame
-- torso: thick powerful torso with heavy chest and back musculature
-- waist: thick waist supporting a dense powerful frame
-- hips: relatively narrower hips compared to shoulders
-- limbs: thick muscular arms and legs with heavy physical strength
+- torso: thick powerful torso with dense chest and back musculature
+- posture: grounded stable posture conveying weight and strength
+- limb proportions: thick muscular arms and legs with heavy physical power
 
-Posture:
+Overall silhouette:
 
-Daimon stands with a grounded stable posture that conveys weight, power, and physical dominance.
-
-Overall silhouette should read as:
-
-A towering power-frame silhouette defined by massive shoulders, dense musculature, and an intimidating physical presence.
+A towering power-frame silhouette defined by massive shoulders, dense musculature, and an intimidating presence.
 
 ---
 
@@ -104,37 +110,18 @@ A towering power-frame silhouette defined by massive shoulders, dense musculatur
 
 Use for:
 
+- outfit prompts
+- design language sheets
 - wardrobe prompts
-- outfit generation
-- scene prompts
 
-Aesthetic keywords:
+Daimon’s style is rugged and utilitarian with a practical intimidating edge.
 
-- rugged_utilitarian
-- intimidating
-- utilitarian
+Include:
 
-Typical clothing elements:
-
-- simple dark shirts or tank tops
-- heavy jackets or leather outerwear
-- practical durable clothing with minimal decoration
-
-Typical materials:
-
-- leather
-- cotton
-
-Typical color palette:
-
-Primary:
-
-- black
-- dark_grey
-
-Accent:
-
-- silver
+- clothing style: practical durable clothing
+- materials: leather and cotton
+- accessories: visible tattoos and minimal metal jewelry
+- palette: dark neutral tones such as black, dark grey, and silver accents
 
 ---
 
@@ -142,21 +129,15 @@ Accent:
 
 Use for:
 
-- pose sheets
-- motion anchors
+- motion prompts
+- pose prompts
 - dynamic scenes
 
-Movement style:
+Daimon moves with deliberate controlled motion and heavy physical presence.
 
-Daimon moves with deliberate powerful motion, conserving energy and projecting physical control.
+His posture is grounded and stable with a wide physical stance.
 
-Posture tendencies:
-
-His stance is grounded and stable with a wide physical footprint.
-
-Gesture style:
-
-Restrained gestures with controlled movement, often minimal but purposeful.
+Gestures are restrained and purposeful rather than expressive.
 
 ---
 
@@ -165,22 +146,14 @@ Restrained gestures with controlled movement, often minimal but purposeful.
 Use for:
 
 - expression sheets
-- portraits
-- interaction scenes
+- portrait prompts
+- emotional scenes
 
-Default expression:
+Daimon’s default expression is serious and controlled with an intense watchful gaze.
 
-Serious controlled expression with a watchful intense gaze.
+His smile is rare but strong and intense when it appears.
 
-Typical smile:
-
-Rare broad smile that appears powerful and intense when it does.
-
-Emotional range:
-
-Daimon’s emotional expression shifts between quiet control and intense focus or anger.
-
-Avoid exaggerated or cartoonish expressions unless explicitly requested.
+His emotional expressions tend to shift between quiet restraint and powerful intensity.
 
 ---
 
@@ -189,47 +162,50 @@ Avoid exaggerated or cartoonish expressions unless explicitly requested.
 Use for:
 
 - outfit sheets
-- wardrobe generation
-- style prompts
+- design language sheets
+- wardrobe prompts
 
-Clothing should reflect:
+Daimon typically dresses in practical durable clothing that emphasizes toughness rather than fashion.
 
-A rugged utilitarian aesthetic emphasizing practicality, intimidation, and durability.
-
-Common elements:
+Typical wardrobe traits:
 
 - simple dark shirts
 - leather jackets
-- durable practical clothing
+- durable everyday clothing
+- minimal decoration
 
-Accessories may include:
+Recurring clothing elements:
 
-- large black tattoos across torso and arms
+- leather outerwear
+- dark shirts or tank tops
 - heavy boots
-- simple metal jewelry or chain
-
-Avoid styles that conflict with the character’s core aesthetic.
 
 ---
 
 ## Anti-Drift Rules
 
-These traits must remain consistent across generated images.
+Use for:
+
+- identity preservation prompts
+- difficult scenes
+- regeneration corrections
 
 Always preserve:
 
 - extremely tall height
-- heavy muscular build with broad shoulders
-- square facial structure with strong jawline
+- broad shoulders and heavy muscular frame
+- square masculine facial structure
+- short dark hair
 - intense hazel eyes
 - rugged utilitarian aesthetic
+- visible tattoos
 
 Avoid:
 
-- slim or narrow body types
+- slim or lightweight body types
 - average height appearance
 - youthful soft facial features
-- light athletic builds
+- fashionable or decorative clothing styles
 
 ---
 
@@ -237,8 +213,7 @@ Avoid:
 
 Copy this block directly into short prompts.
 
-Daimon is an extremely tall, heavily muscular man with broad shoulders, a square jawline, dark hair, and intense hazel eyes.
-His style combines rugged_utilitarian aesthetics with practical dark clothing and leather outerwear.
+Daimon is an extremely tall heavily muscular man with broad shoulders, a square jawline, dark hair, and intense hazel eyes.
 
 ---
 
@@ -246,7 +221,6 @@ His style combines rugged_utilitarian aesthetics with practical dark clothing an
 
 Copy this block into prompts that require a full character description.
 
-Daimon is an extremely tall man with a massive muscular build, broad shoulders, thick limbs, and a powerful upper-body-dominant frame.
-He has a square face with a strong jawline, dark short hair, and intense hazel eyes.
-His aesthetic includes rugged_utilitarian elements, durable clothing, leather materials, and visible tattoos.
-Maintain consistent facial identity, body proportions, and imposing presence across all views.
+Daimon is an extremely tall man with a massive muscular build, broad shoulders, thick limbs, and a powerful upper-body-dominant frame.  
+He has a square face with a strong jawline, short dark hair, and intense hazel eyes.  
+His aesthetic is rugged and utilitarian with dark clothing, leather elements, and visible tattoos.

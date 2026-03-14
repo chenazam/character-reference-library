@@ -2,20 +2,11 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Publish Docs and Deploy",
+      "label": "Rebuild Reference Library",
       "type": "shell",
-      "command": "set -e && echo \"[1/5] Building MkDocs\" && python -m mkdocs build && echo \"[2/5] Staging changes\" && git add . && echo \"[3/5] Committing if needed\" && (git diff --cached --quiet || git commit -m \"Update docs\") && echo \"[4/5] Pushing source branch\" && git push && echo \"[5/5] Deploying site\" && python -m mkdocs gh-deploy --clean",
-      "options": {
-        "cwd": "${workspaceFolder}",
-        "shell": {
-          "executable": "C:\\Program Files\\Git\\bin\\bash.exe",
-          "args": ["-c"]
-        }
-      },
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
+      "command": "python",
+      "args": ["tools/rebuild_library.py"],
+      "group": "build",
       "problemMatcher": []
     }
   ]

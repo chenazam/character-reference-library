@@ -2,6 +2,11 @@ name: Hudson
 slug: hudson
 status: active
 project: core_cast
+site_visibility:
+  list_in_character_index: true
+  include_in_nav: true
+  generate_page: true
+  include_in_prompt_builder: true
 core_identity:
   short_summary: Tall athletic man with a broad-shouldered muscular build and confident
     composed presence.
@@ -29,6 +34,7 @@ physical:
   limb_profile: athletic_limbs
   posture_profile: confident_open
   silhouette_anchor: power_athlete
+  silhouette_emphasis: shoulders
   silhouette_keywords:
   - tall
   - broad
@@ -99,6 +105,7 @@ pipeline_status:
   scale_sheet: not_started
   scene_anchors: not_started
   prop_sheet: not_started
+  gallery_image: not_started
 notes: Metadata reconstructed from visual references only; corrected for known character
   identity.
 last_updated: '2026-03-13'

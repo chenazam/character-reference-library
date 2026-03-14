@@ -101,7 +101,7 @@ reference_files:
   signature_outfit_sheet: jas_outfit_signature.png
 pipeline_status:
   face_anchor: complete
-  hair_sheet: not_started
+  hair_sheet: complete
   anatomy_sheet: complete
   proportion_grid: not_started
   muscle_tension: not_started

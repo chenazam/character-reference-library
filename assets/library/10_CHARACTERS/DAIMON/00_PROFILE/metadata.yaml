@@ -1,111 +1,92 @@
 name: Daimon
 slug: daimon
-
 status: active
 project: Angel_Demon
-
 core_identity:
-  short_summary: Imposing career criminal with a powerful physique and dangerous, controlled presence.
+  short_summary: Imposing career criminal with a powerful physique and dangerous,
+    controlled presence.
   role_archetype:
-    - protector
-    - rival
+  - protector
+  - rival
   aesthetic_tags:
-    - streetwear
-    - exhibitionist
-
+  - streetwear
+  - exhibitionist
 physical:
   height_cm: 196
-  height_imperial: '6''5"'
+  height_imperial: 6'5"
   height_visual_category: imposing
-
   build_category: heavy_muscular
   frame_proportion: shoulder_dominant
   body_fat_range: athletic
   body_softness_distribution: firm_all
+  build_notes: 'Very tall, heavily built man with powerful muscular mass.  Broad shoulders,
+    thick arms, dense chest, and strong legs create a physically imposing silhouette.  Musculature
+    is heavy and dense rather than lean, giving him a visibly dominant physical presence.
 
-  build_notes: >
-    Very tall, heavily built man with powerful muscular mass. 
-    Broad shoulders, thick arms, dense chest, and strong legs create a physically imposing silhouette. 
-    Musculature is heavy and dense rather than lean, giving him a visibly dominant physical presence.
-
+    '
   shoulder_profile: heavy_shoulders
   torso_profile: thick_torso
   limb_profile: thick_limbs
   posture_profile: grounded_stable
-
   silhouette_anchor: power_frame
   silhouette_keywords:
-    - tall
-    - broad
-    - imposing
-    - upper_dominant
-
+  - tall
+  - broad
+  - imposing
+  - upper_dominant
 face:
   face_shape: square
   jawline: broad_jawline
-
-  eye_description: hazel eyes that can shift from warm to intensely cold depending on mood
+  eye_description: hazel eyes that can shift from warm to intensely cold depending
+    on mood
   hair_description: dark hair worn short and practical, often slightly rough or unstyled
-  skin_description: lightly weathered skin with visible toughness and signs of a hard life
-
+  skin_description: lightly weathered skin with visible toughness and signs of a hard
+    life
   distinctive_features:
-    - heavy brow
-    - intense gaze
-    - prison-style tattoos
-
+  - heavy brow
+  - intense gaze
+  - prison-style tattoos
 hair_color: dark_brown
-
 style:
   primary_aesthetic: rugged_utilitarian
-
   secondary_aesthetic:
-    - streetwear
-
+  - streetwear
   materials:
-    - cotton
-    - leather
-
+  - cotton
+  - leather
   primary_colors:
-    - black
-    - dark_grey
-
+  - black
+  - dark_grey
   accent_colors:
-    - silver
-
+  - silver
   recurring_accessories:
-    - tattoos
-
+  - tattoos
 expression:
   default_expression: serious_controlled
   smile_type: rare_broad_smile
   emotional_tone: intense
-
 movement:
   movement_style: grounded_powerful
   gesture_style: restrained
   body_language: calm_composed
   spatial_presence: dominant_presence
-
 identity_rules:
   preserve:
-    - extremely tall imposing height
-    - broad shoulders and thick muscular torso
-    - heavy powerful limbs
-    - intense watchful gaze
-
+  - extremely tall imposing height
+  - broad shoulders and thick muscular torso
+  - heavy powerful limbs
+  - intense watchful gaze
   avoid:
-    - slim or narrow build
-    - small shoulder width
-    - youthful soft facial features
-    - light athletic body
-
+  - slim or narrow build
+  - small shoulder width
+  - youthful soft facial features
+  - light athletic body
 reference_files:
   face_anchor: ''
   anatomy_sheet: ''
   body_anchor: ''
   ultimate_character_sheet: ''
   signature_outfit_sheet: ''
-
 pipeline_status:
   face_anchor: not_started
   hair_sheet: not_started
@@ -126,6 +107,5 @@ pipeline_status:
   scale_sheet: not_started
   scene_anchors: not_started
   prop_sheet: not_started
-
 notes: ''
 last_updated: '2026-03-13'

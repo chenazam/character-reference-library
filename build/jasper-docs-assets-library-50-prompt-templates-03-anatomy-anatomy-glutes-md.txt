@@ -1,0 +1,144 @@
+Create a **single-panel glute anatomy reference image** for the character reference library.
+
+This image is used to clearly document the **glute structure, hip contour, and lower-back-to-thigh transition** for the character.
+
+The goal is a clean anatomical reference panel that preserves the character’s identity while emphasizing the glute silhouette.
+
+---
+
+## Character Identity
+
+Jasper is a 5'7" lean runner-built man with a compact athletic physique and strong lower-body development.
+
+He has a leg-dominant athletic silhouette with powerful runner thighs and prominent rounded glutes, while his upper body remains lighter and more agile in appearance. His narrow waist and balanced proportions give him a naturally athletic but not bulky build that reads fast, energetic, and physically expressive.
+
+Jasper’s overall appearance conveys youthful confidence and playful charisma. His relaxed posture, expressive body language, and easy smile create the impression of someone socially confident, athletic, and comfortable in his own body.
+
+---
+
+Facial description:
+
+- face shape: balanced oval
+- jawline: defined but soft masculine structure
+- cheekbones: moderately defined
+- eye shape: expressive almond-shaped eyes
+- eyebrow style: natural and relaxed
+- hairstyle framing the face: short light brown / dark blonde hair with soft texture
+
+Maintain consistent facial proportions and identity.
+
+---
+
+Jasper is 5'7" with a lean runner-style athletic build.
+
+Body proportions:
+
+- shoulders: moderate width
+- torso: lean athletic torso with light upper-body mass
+- waist: narrow and defined
+- hips: balanced with strong glute development
+- limbs: long athletic legs with powerful runner thighs
+
+Posture:
+
+Relaxed and casual with natural weight shifts and fluid stance.
+
+Overall silhouette should read as:
+
+A compact, agile runner build with a leg-dominant athletic silhouette.
+
+---
+
+Focus strongly on accurate hip width, glute projection, and glute-to-thigh transition consistent with the character's body proportions.
+
+---
+
+## Reference Presentation
+
+The image must present the character in a **clean studio-style anatomy reference pose** that clearly shows the glutes and hip structure.
+
+Requirements:
+
+• single character only  
+• landscape orientation  
+• **rear three-quarter body view**  
+• camera positioned slightly behind the character  
+• hips centered in frame  
+• lower back and upper thighs visible  
+• glutes clearly readable  
+• natural relaxed stance  
+
+The pose should feel neutral and anatomical rather than posed or stylized.
+
+---
+
+## Camera
+
+orthographic reference camera  
+rear **3/4 perspective**  
+slight natural body angle  
+no dramatic perspective distortion  
+consistent professional reference framing  
+
+The camera should clearly show:
+
+• glute projection  
+• hip width  
+• glute-to-thigh transition  
+• lower back curve  
+
+---
+
+## Lighting
+
+neutral studio lighting  
+soft even illumination  
+no dramatic shadows  
+clean professional reference lighting  
+
+Lighting must **clearly reveal muscle and contour structure**.
+
+Avoid strong top lighting or darkness that hides form.
+
+---
+
+## Styling
+
+neutral studio background  
+subtle grounded shadow  
+clean presentation  
+natural realistic colors  
+
+No environmental elements.
+
+---
+
+## Clothing
+
+The character should wear **minimal fitted athletic shorts or simple underwear**.
+
+Requirements:
+
+• snug fit that clearly shows body contours  
+• neutral light colors (grey, light blue, beige, soft neutral tones)  
+• matte fabric  
+
+Avoid:
+
+• black fabric (too dark, hides contour)
+• baggy clothing
+• patterns
+• logos
+• accessories
+
+The clothing must **not obscure glute shape or hip contour**.
+
+---
+
+## Output Constraints
+
+• **single image only**
+• **landscape orientation**
+• **no text**
+• **no labels**
+• **no multi-panel layouts**

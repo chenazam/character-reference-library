@@ -22,7 +22,7 @@ JASPER is a character in the reference library.
 
 ## Anatomy
 
-<!-- snippet missing: snippets/galleries/jasper/anatomy.md -->
+--8<-- "snippets/galleries/jasper/anatomy.md"
 
 ## Body / Proportions
 

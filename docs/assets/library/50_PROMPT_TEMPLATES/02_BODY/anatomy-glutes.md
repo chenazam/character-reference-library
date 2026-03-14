@@ -1,0 +1,150 @@
+# 3D Anatomy Glutes
+
+Required inputs
+
+- 3A Anatomy Front
+- 3B Anatomy Side
+- 3C Anatomy Back
+
+Optional inputs
+
+- athletic reference photos
+
+Avoid by default
+
+- UCS sheets
+
+```
+Create a **single-panel glute anatomy reference image** for the character reference library.
+
+This image is used to clearly document the **glute structure, hip contour, and lower-back-to-thigh transition** for the character.
+
+The goal is a clean anatomical reference panel that preserves the character’s identity while emphasizing the glute silhouette.
+
+---
+
+Character:
+[CHARACTER_BLOCK]
+
+---
+
+Focus strongly on accurate:
+
+- hip width
+- glute projection
+- glute-to-thigh transition
+
+consistent with the character's body proportions.
+
+---
+
+## Reference Presentation
+
+The image must present the character in a **clean studio-style anatomy reference pose** that clearly shows the glutes and hip structure.
+
+Requirements:
+
+• single character only
+• landscape orientation
+• **rear three-quarter body view**
+• camera positioned slightly behind the character
+• **tight anatomical crop focused on the hip region**
+
+The image should read as a **glute anatomy study**, not a portrait.
+
+Framing:
+
+• **top of frame: waist / lower back (mid-back at most)**
+• **bottom of frame: just above the knees**
+• **the head and shoulders must NOT be visible**
+
+The **hips and glutes must sit at the visual center of the frame**.
+
+Only the following anatomy should be visible:
+
+• lower back
+• waist
+• hips
+• glutes
+• upper thighs
+
+The pose should feel **neutral and anatomical**, not posed or stylized.
+
+Composition prioritizes the **hip and glute region rather than the full body**.
+
+---
+
+## Camera
+
+orthographic reference camera
+rear **three-quarter perspective**
+slight natural body angle
+no dramatic perspective distortion
+
+**tight anatomical crop centered on hips and glutes**
+
+The camera should clearly show:
+
+• glute projection
+• hip width
+• glute-to-thigh transition
+• lower back curve
+
+The crop must read as a **body anatomy reference study focused on the glutes**, similar to professional figure reference photography.
+
+---
+
+## Lighting
+
+neutral studio lighting
+soft even illumination
+no dramatic shadows
+clean professional reference lighting
+
+Lighting must **clearly reveal muscle and contour structure**.
+
+Avoid strong top lighting or darkness that hides form.
+
+---
+
+## Styling
+
+neutral studio background
+subtle grounded shadow
+clean presentation
+natural realistic colors
+
+No environmental elements.
+
+---
+
+## Clothing
+
+The character should wear **minimal fitted athletic shorts or simple underwear**.
+
+Requirements:
+
+• snug fit that clearly shows body contours
+• neutral light colors (grey, light blue, beige, soft neutral tones)
+• matte fabric
+
+Avoid:
+
+• black fabric (too dark, hides contour)
+• baggy clothing
+• patterns
+• logos
+• accessories
+
+The clothing must **not obscure glute shape or hip contour**.
+
+---
+
+## Output Constraints
+
+• **single image only**
+• **landscape orientation**
+• **no text**
+• **no labels**
+• **no multi-panel layouts**
+```

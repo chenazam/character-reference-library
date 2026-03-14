@@ -10,46 +10,44 @@ STAGES = [
     "face_anchor",
     "hair_sheet",
     "anatomy_sheet",
+    "body_anchor",
     "proportion_grid",
     "muscle_tension",
-    "body_anchor",
     "silhouette_sheet",
     "turnaround_sheet",
     "expression_sheet",
     "hand_sheet",
-    "ucs",
+    "gallery_image",
+    "ucs_core",
     "signature_outfit",
     "design_language",
     "wardrobe",
     "pose_sheet",
-    "motion_sheet",
-    "scale_sheet",
-    "scene_anchors",
-    "prop_sheet",
-    "gallery_image"
+    "motion_anchor",
+    "height_scale",
+    "interaction_anchor",
+    "scene_anchor",
+    "dynamic_pose",
+    "final_ucs",
 ]
 
 
 def load_metadata(character_dir):
-
     path = character_dir / "00_PROFILE" / "metadata.yaml"
 
     if not path.exists():
         return None
 
-    return yaml.safe_load(path.read_text())
+    return yaml.safe_load(path.read_text(encoding="utf-8"))
 
 
 def progress_bar(percent):
-
     total = 20
     filled = int(total * percent)
-
     return "█" * filled + "░" * (total - filled)
 
 
 def main():
-
     lines = []
 
     lines.append("# Pipeline Progress")
@@ -61,12 +59,10 @@ def main():
     lines.append("")
 
     for char_dir in sorted(CHAR_ROOT.iterdir()):
-
         if not char_dir.is_dir():
             continue
 
         metadata = load_metadata(char_dir)
-
         if not metadata:
             continue
 
@@ -75,14 +71,12 @@ def main():
         completed = sum(1 for s in STAGES if status.get(s) == "complete")
         percent = completed / len(STAGES)
 
-        bar = progress_bar(percent)
-
-        name = char_dir.name
+        name = metadata.get("name", char_dir.name)
 
         lines.append(f"### {name}")
         lines.append("")
-        lines.append(f'<div class="pipeline-bar"><div style="width:{round(percent*100)}%"></div></div>')
-        lines.append(f"{round(percent*100)}%")
+        lines.append(f'<div class="pipeline-bar"><div style="width:{round(percent * 100)}%"></div></div>')
+        lines.append(f"{round(percent * 100)}%")
         lines.append("")
 
     lines.append("---")
@@ -97,21 +91,19 @@ def main():
     lines.append(sep)
 
     for char_dir in sorted(CHAR_ROOT.iterdir()):
-
         if not char_dir.is_dir():
             continue
 
         metadata = load_metadata(char_dir)
-
         if not metadata:
             continue
 
         status = metadata.get("pipeline_status", {})
+        name = metadata.get("name", char_dir.name)
 
-        row = [char_dir.name]
+        row = [name]
 
         for stage in STAGES:
-
             state = status.get(stage)
 
             if state == "complete":

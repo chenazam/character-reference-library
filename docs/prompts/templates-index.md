@@ -9,47 +9,87 @@ These templates are designed to be:
 - consistent in structure and terminology
 - optimized for AI image generation workflows
 
-Templates are grouped by pipeline stage so they can be browsed in the same order the reference library is typically built.
+Templates are grouped by **asset family** so they align with the character folder structure and the major reference types used throughout the pipeline.
+
+This makes it easier to browse templates in the same way character assets are organized.
+
+---
+
+## Pipeline Overview
+
+Template groups correspond to the major asset families used in the pipeline:
+
+1. Identity → face, hair, expressions, hands, gallery image
+2. Body → anatomy and structural body references
+3. UCS → canonical character sheets
+4. Style → clothing and design language
+5. Motion → poses and interaction references
+6. Scenes → lifestyle and environment usage
 
 ---
 
 ## Template Groups
 
-### Facial Identity
+### Identity
 
-Templates used to establish facial identity and neutral face references.
+Templates used to establish and extend core character identity.
 
-- [Face Templates](templates/face.md)
+Includes templates for early identity references such as:
 
-### Hair and Anatomy
+- face identity views
+- hair sheet
+- expression sheet
+- hand sheet
+- gallery image
 
-Templates used to define hairstyle identity and anatomical construction.
+- [Identity Templates](templates/identity.md)
 
-- [Hair and Anatomy Templates](templates/anatomy.md)
+### Body
 
-### Body Structure
+Templates used to define anatomy, structure, silhouette, turnaround, and scale.
 
-Templates used to define full-body proportions, musculature, silhouette, and turnaround references.
+Includes:
 
-- [Body Structure Templates](templates/body.md)
+- anatomy views and anatomy sheet
+- body anchor
+- proportion grid
+- muscle tension
+- silhouette
+- turnaround
+- height scale
 
-### Ultimate Character Sheet
+- [Body Templates](templates/body.md)
 
-Templates used to build UCS panel prompts and assembly guidance.
+### UCS
+
+Templates used to generate UCS panels and assemble the UCS reference sheets.
+
+Includes:
+
+- UCS core panels
+- UCS core assembly
+- dynamic pose panel
+- final UCS assembly
 
 - [UCS Templates](templates/ucs.md)
 
-### Outfit and Design
+### Style
 
-Templates used to define signature outfits, wardrobe variants, and design language references.
+Templates used to define signature outfit, design language, wardrobe variants, and wardrobe master assembly.
 
-- [Outfit and Design Templates](templates/outfits.md)
+- [Style Templates](templates/style.md)
 
-### Motion and Scenes
+### Motion
 
-Templates used for poses, motion references, interactions, scale, and scene-based character usage.
+Templates used for pose, motion, and interaction-oriented character usage.
 
-- [Motion and Scene Templates](templates/scenes.md)
+- [Motion Templates](templates/motion.md)
+
+### Scenes
+
+Templates used for lifestyle scene anchors and scene-oriented character application.
+
+- [Scene Templates](templates/scenes.md)
 
 ---
 

@@ -8,21 +8,37 @@ OUTPUT_FILE = ROOT / "docs/characters/index.md"
 
 
 def find_thumbnail(character_dir):
-    gallery_dir = character_dir / "20_THUMBNAIL"
+    identity_dir = character_dir / "01_IDENTITY"
 
-    if gallery_dir.exists():
-        for f in gallery_dir.iterdir():
-            if "gallery" in f.name:
-                return f
+    if not identity_dir.exists():
+        return None
 
-    face_dir = character_dir / "01_FACE"
+    images = [
+        p for p in identity_dir.rglob("*")
+        if p.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp"}
+    ]
 
-    if face_dir.exists():
-        for f in face_dir.iterdir():
-            if "face_anchor" in f.name:
-                return f
+
+    # Priority 1 — gallery image
+    for f in images:
+        name = f.name.lower()
+        if f.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp"} and "gallery" in name:
+            return f
+
+    # Priority 2 — face anchor
+    for f in images:
+        name = f.name.lower()
+        if f.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp"} and "face_anchor" in name:
+            return f
+
+    # Priority 3 — front face
+    for f in images:
+        name = f.name.lower()
+        if f.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp"} and "front" in name:
+            return f
 
     return None
+
 
 
 def load_metadata(character_dir):

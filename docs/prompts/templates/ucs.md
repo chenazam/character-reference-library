@@ -8,9 +8,14 @@ UCS panels typically include:
 - body views
 - silhouette reference
 - expression example
-- dynamic pose
+
+Additional panels such as the dynamic pose are added when assembling the final UCS.
 
 These templates define the prompts used to generate each panel and the guidance for assembling the full UCS.
+
+---
+
+## UCS Core Panels
 
 ---
 
@@ -18,7 +23,7 @@ These templates define the prompts used to generate each panel and the guidance 
 
 Defines the front face panel used in the UCS.
 
---8<-- "assets/library/50_PROMPT_TEMPLATES/11_UCS/ucs-face-front.md"
+--8<-- "assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-face-front.md"
 
 ---
 
@@ -26,7 +31,7 @@ Defines the front face panel used in the UCS.
 
 Defines the three-quarter face panel used in the UCS.
 
---8<-- "assets/library/50_PROMPT_TEMPLATES/11_UCS/ucs-face-three-quarter.md"
+--8<-- "assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-face-three-quarter.md"
 
 ---
 
@@ -34,31 +39,7 @@ Defines the three-quarter face panel used in the UCS.
 
 Defines the side-profile face panel used in the UCS.
 
---8<-- "assets/library/50_PROMPT_TEMPLATES/11_UCS/ucs-face-profile.md"
-
----
-
-## UCS Front Body Panel
-
-Defines the front full-body panel used in the UCS.
-
---8<-- "assets/library/50_PROMPT_TEMPLATES/11_UCS/ucs-body-front.md"
-
----
-
-## UCS Side Body Panel
-
-Defines the side full-body panel used in the UCS.
-
---8<-- "assets/library/50_PROMPT_TEMPLATES/11_UCS/ucs-body-side.md"
-
----
-
-## UCS Silhouette Panel
-
-Defines the silhouette panel used in the UCS.
-
---8<-- "assets/library/50_PROMPT_TEMPLATES/11_UCS/ucs-silhouette.md"
+--8<-- "assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-face-profile.md"
 
 ---
 
@@ -66,7 +47,35 @@ Defines the silhouette panel used in the UCS.
 
 Defines the facial expression panel used in the UCS.
 
---8<-- "assets/library/50_PROMPT_TEMPLATES/11_UCS/ucs-expression.md"
+--8<-- "assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-expression.md"
+
+---
+
+## UCS Body Front Panel
+
+Defines the front full-body panel used in the UCS.
+
+--8<-- "assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-body-front.md"
+
+---
+
+## UCS Body Side Panel
+
+Defines the side full-body panel used in the UCS.
+
+--8<-- "assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-body-side.md"
+
+---
+
+## UCS Silhouette Panel
+
+Defines the silhouette panel used in the UCS.
+
+--8<-- "assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-silhouette.md"
+
+---
+
+## Extended Panels
 
 ---
 
@@ -74,12 +83,12 @@ Defines the facial expression panel used in the UCS.
 
 Defines the dynamic pose panel used in the UCS.
 
---8<-- "assets/library/50_PROMPT_TEMPLATES/11_UCS/ucs-dynamic-pose.md"
+--8<-- "assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-dynamic-pose.md"
 
 ---
 
-## UCS Assembly Notes
+## UCS Assembly
 
 Provides guidance for assembling the full UCS from its component panels.
 
---8<-- "assets/library/50_PROMPT_TEMPLATES/11_UCS/ucs-assembly-notes.md"
+--8<-- "assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-assembly-notes.md"

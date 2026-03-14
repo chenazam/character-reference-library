@@ -5,26 +5,14 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 CHARACTERS_ROOT = ROOT / "docs/assets/library/10_CHARACTERS"
 SNIPPETS_ROOT = ROOT / "docs/snippets/galleries"
 
-PIPELINE_STAGES = {
-    "01_FACE": "face",
-    "02_HAIR": "hair",
-    "03_ANATOMY": "anatomy",
-    "04_PROPORTIONS": "proportions",
-    "05_MUSCLE": "muscle",
-    "06_BODY": "body",
-    "07_SILHOUETTE": "silhouette",
-    "08_TURNAROUND": "turnaround",
-    "09_EXPRESSIONS": "expressions",
-    "10_HANDS": "hands",
-    "11_UCS": "ucs",
-    "12_SIGNATURE_OUTFIT": "signature-outfit",
-    "13_DESIGN_LANGUAGE": "design-language",
-    "14_WARDROBE": "wardrobe",
-    "15_POSES": "poses",
-    "16_MOTION": "motion",
-    "17_SCALE": "scale",
-    "18_SCENES": "scenes",
-    "19_PROPS": "props",
+# New asset-family folders
+ASSET_FAMILIES = {
+    "01_IDENTITY": "identity",
+    "02_BODY": "body",
+    "03_UCS": "ucs",
+    "04_STYLE": "style",
+    "05_MOTION": "motion",
+    "06_SCENES": "scenes",
 }
 
 IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".webp"}
@@ -50,6 +38,16 @@ def generate_gallery(images):
     return "\n".join(lines)
 
 
+def collect_images(folder):
+    images = []
+
+    for p in folder.rglob("*"):
+        if p.suffix.lower() in IMAGE_EXTENSIONS:
+            images.append(p)
+
+    return sorted(images)
+
+
 def main():
 
     SNIPPETS_ROOT.mkdir(parents=True, exist_ok=True)
@@ -66,23 +64,20 @@ def main():
 
         print(f"\nProcessing {character_dir.name}")
 
-        for stage_folder, stage_name in PIPELINE_STAGES.items():
+        for family_folder, family_name in ASSET_FAMILIES.items():
 
-            stage_path = character_dir / stage_folder
+            family_path = character_dir / family_folder
 
-            if not stage_path.exists():
+            if not family_path.exists():
                 continue
 
-            images = [
-                p for p in sorted(stage_path.iterdir())
-                if p.suffix.lower() in IMAGE_EXTENSIONS
-            ]
+            images = collect_images(family_path)
 
             if not images:
-                print(f"  Skipping {stage_folder} (no images)")
+                print(f"  Skipping {family_folder} (no images)")
                 continue
 
-            snippet_path = character_snippet_dir / f"{stage_name}.md"
+            snippet_path = character_snippet_dir / f"{family_name}.md"
 
             gallery = generate_gallery(images)
 

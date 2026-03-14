@@ -4,69 +4,69 @@ Overview of character reference completion.
 
 ## Overall Progress
 
-### BLAKE
+### Blake
 
-<div class="pipeline-bar"><div style="width:10%"></div></div>
-10%
+<div class="pipeline-bar"><div style="width:14%"></div></div>
+14%
 
-### DAIMON
-
-<div class="pipeline-bar"><div style="width:0%"></div></div>
-0%
-
-### DANNY
-
-<div class="pipeline-bar"><div style="width:0%"></div></div>
-0%
-
-### DENNIS
-
-<div class="pipeline-bar"><div style="width:0%"></div></div>
-0%
-
-### HUDSON
-
-<div class="pipeline-bar"><div style="width:0%"></div></div>
-0%
-
-### JASPER
+### Daimon
 
 <div class="pipeline-bar"><div style="width:5%"></div></div>
 5%
 
-### JONAH
+### Danny
 
 <div class="pipeline-bar"><div style="width:5%"></div></div>
 5%
 
-### LUCA
+### Dennis
 
 <div class="pipeline-bar"><div style="width:0%"></div></div>
 0%
 
-### LUCIEN
+### Hudson
+
+<div class="pipeline-bar"><div style="width:5%"></div></div>
+5%
+
+### Jasper
+
+<div class="pipeline-bar"><div style="width:14%"></div></div>
+14%
+
+### Jonah
+
+<div class="pipeline-bar"><div style="width:32%"></div></div>
+32%
+
+### Luca
+
+<div class="pipeline-bar"><div style="width:9%"></div></div>
+9%
+
+### Lucien
 
 <div class="pipeline-bar"><div style="width:50%"></div></div>
 50%
 
-### TOMMY
+### Tommy
 
-<div class="pipeline-bar"><div style="width:0%"></div></div>
-0%
+<div class="pipeline-bar"><div style="width:5%"></div></div>
+5%
 
 ---
 
 ## Stage Completion
 
-| Character | face_anchor | hair_sheet | anatomy_sheet | proportion_grid | muscle_tension | body_anchor | silhouette_sheet | turnaround_sheet | expression_sheet | hand_sheet | ucs | signature_outfit | design_language | wardrobe | pose_sheet | motion_sheet | scale_sheet | scene_anchors | prop_sheet | gallery_image |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| BLAKE | <span class="stage-complete">✓</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-complete">✓</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> |
-| DAIMON | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> |
-| DANNY | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> |
-| DENNIS | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> |
-| HUDSON | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> |
-| JASPER | <span class="stage-complete">✓</span> | <span class="stage-missing">✗</span> | <span class="stage-partial">~</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> |
-| JONAH | <span class="stage-complete">✓</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> |
-| LUCA | <span class="stage-partial">~</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> |
-| LUCIEN | <span class="stage-complete">✓</span> | <span class="stage-complete">✓</span> | <span class="stage-complete">✓</span> | <span class="stage-complete">✓</span> | <span class="stage-complete">✓</span> | <span class="stage-complete">✓</span> | <span class="stage-complete">✓</span> | <span class="stage-complete">✓</span> | <span class="stage-complete">✓</span> | <span class="stage-complete">✓</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> |
-| TOMMY | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> |
+| Character | face_anchor | hair_sheet | anatomy_sheet | body_anchor | proportion_grid | muscle_tension | silhouette_sheet | turnaround_sheet | expression_sheet | hand_sheet | gallery_image | ucs_core | signature_outfit | design_language | wardrobe | pose_sheet | motion_anchor | height_scale | interaction_anchor | scene_anchor | dynamic_pose | final_ucs |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Blake | <span class="stage-complete">✓</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-complete">✓</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-complete">✓</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> |
+| Daimon | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-complete">✓</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> |
+| Danny | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-complete">✓</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> |
+| Dennis | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> |
+| Hudson | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-complete">✓</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> |
+| Jasper | <span class="stage-complete">✓</span> | <span class="stage-missing">✗</span> | <span class="stage-complete">✓</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-complete">✓</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> |
+| Jonah | <span class="stage-complete">✓</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-complete">✓</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-complete">✓</span> | <span class="stage-complete">✓</span> | <span class="stage-complete">✓</span> | <span class="stage-complete">✓</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-complete">✓</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> |
+| Luca | <span class="stage-complete">✓</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-complete">✓</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> |
+| Lucien | <span class="stage-complete">✓</span> | <span class="stage-complete">✓</span> | <span class="stage-complete">✓</span> | <span class="stage-complete">✓</span> | <span class="stage-complete">✓</span> | <span class="stage-complete">✓</span> | <span class="stage-complete">✓</span> | <span class="stage-complete">✓</span> | <span class="stage-complete">✓</span> | <span class="stage-complete">✓</span> | <span class="stage-complete">✓</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> |
+| Tommy | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-complete">✓</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> | <span class="stage-missing">✗</span> |

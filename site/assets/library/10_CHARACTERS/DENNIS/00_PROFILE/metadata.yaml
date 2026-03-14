@@ -109,6 +109,13 @@ pipeline_status:
   scene_anchors: not_started
   prop_sheet: not_started
   gallery_image: not_started
+  ucs_core: not_started
+  motion_anchor: not_started
+  height_scale: not_started
+  interaction_anchor: not_started
+  scene_anchor: not_started
+  dynamic_pose: not_started
+  final_ucs: not_started
 notes: 'Reference images show a naturally soft male physique with visible lower-body
   dominance in hips, glutes, and thighs. Facial features are gentle with a soft round
   structure, freckles across the nose, and rectangular glasses.

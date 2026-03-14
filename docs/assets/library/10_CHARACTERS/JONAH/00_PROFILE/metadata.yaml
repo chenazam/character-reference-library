@@ -95,20 +95,27 @@ pipeline_status:
   anatomy_sheet: not_started
   proportion_grid: not_started
   muscle_tension: not_started
-  body_anchor: not_started
+  body_anchor: complete
   silhouette_sheet: not_started
-  turnaround_sheet: not_started
-  expression_sheet: not_started
-  hand_sheet: not_started
+  turnaround_sheet: complete
+  expression_sheet: complete
+  hand_sheet: complete
   ucs: not_started
   signature_outfit: not_started
   design_language: not_started
   wardrobe: not_started
-  pose_sheet: not_started
+  pose_sheet: complete
   motion_sheet: not_started
   scale_sheet: not_started
   scene_anchors: not_started
   prop_sheet: not_started
-  gallery_image: not_started
+  gallery_image: complete
+  ucs_core: not_started
+  motion_anchor: not_started
+  height_scale: not_started
+  interaction_anchor: not_started
+  scene_anchor: not_started
+  dynamic_pose: not_started
+  final_ucs: not_started
 notes: ''
 last_updated: 2026-03-13

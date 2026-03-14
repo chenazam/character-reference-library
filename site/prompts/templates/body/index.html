@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://charreflib.chenazam.com/prompts/templates/body/">
       
       
-        <link rel="prev" href="../anatomy/">
+        <link rel="prev" href="../../templates-index/">
       
       
         <link rel="next" href="../ucs/">
@@ -1031,7 +1031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../face/" class="md-nav__link">
+      <a href="../face.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1052,7 +1052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../anatomy/" class="md-nav__link">
+      <a href="../anatomy.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1119,9 +1119,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#body-proportions-grid" class="md-nav__link">
+  <a href="#anatomy-front" class="md-nav__link">
     <span class="md-ellipsis">
-      Body Proportions Grid
+      Anatomy Front
     </span>
   </a>
   
@@ -1164,7 +1164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../outfits/" class="md-nav__link">
+      <a href="../outfits.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1535,9 +1535,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#body-proportions-grid" class="md-nav__link">
+  <a href="#anatomy-front" class="md-nav__link">
     <span class="md-ellipsis">
-      Body Proportions Grid
+      Anatomy Front
     </span>
   </a>
   
@@ -1559,24 +1559,500 @@
 
 
 <h1 id="body-structure-templates">Body Structure Templates</h1>
-<p>These templates establish the <strong>overall body identity and proportions</strong> of a character.</p>
-<p>They define:</p>
-<ul>
-<li>body proportions</li>
-<li>musculature behavior</li>
-<li>body identity anchors</li>
-<li>silhouette readability</li>
-<li>turnaround views</li>
-</ul>
-<p>Together they create the complete structural reference of the character.</p>
+<p>Templates used to define the character’s anatomical structure, body proportions, and structural reference sheets.
+These assets establish the stable physical identity used throughout the pipeline.</p>
 <hr />
-<h2 id="body-proportions-grid">Body Proportions Grid</h2>
-<p>Defines body proportions using a head-count grid.</p>
-<h1 id="body-proportions-grid_1">Body Proportions Grid</h1>
-<p>Attach:</p>
+<h2 id="anatomy-front">Anatomy Front</h2>
+<p>Defines anatomical structure from the front view.</p>
+<h1 id="3a-anatomy-front">3A Anatomy Front</h1>
+<p>Required inputs</p>
 <ul>
-<li>Anatomy Sheet</li>
-<li>Body Anchor Sheet (if available)</li>
+<li>1D Face Anchor</li>
+<li>2 Hair Sheet</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>body reference images</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>UCS sheets</li>
+<li>outfit references</li>
+</ul>
+<pre><code>Create a front-view anatomical reference for a character design pipeline.
+
+Character:
+[CHARACTER_BLOCK]
+
+Pose:
+neutral anatomical stance
+arms relaxed slightly away from the torso
+legs shoulder-width apart
+standing upright
+symmetrical stance
+weight evenly distributed
+no contrapposto
+
+View:
+perfect front view
+orthographic reference perspective
+eye-level camera
+
+Focus:
+clear anatomical proportions
+accurate limb length
+balanced shoulder width
+natural torso structure
+canonical body type
+stable head-to-body relationship
+
+Clothing:
+shirtless
+neutral fitted shorts
+barefoot
+no accessories
+
+Body presentation:
+natural anatomy
+no exaggerated musculature
+no stylization
+no bodybuilder physique
+maintain the character's canonical body type
+
+Output requirements:
+single clean anatomical reference image
+full body fully visible
+clear readable silhouette
+consistent identity with established face and hair references
+no dramatic posing
+no perspective distortion
+
+Use:
+[REFERENCE_PANEL_BLOCK_STACK]
+[PORTRAIT_SHEET_FORMAT_BLOCK]
+</code></pre>
+<hr />
+<h2 id="anatomy-side">Anatomy Side</h2>
+<p>Defines anatomical structure from the side view.</p>
+<h1 id="3b-anatomy-side">3B Anatomy Side</h1>
+<p>Required inputs</p>
+<ul>
+<li>3A Anatomy Front</li>
+<li>1D Face Anchor</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>body references</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>UCS sheets</li>
+</ul>
+<pre><code>Create a side-view anatomical reference for a character design pipeline.
+
+Character:
+[CHARACTER_BLOCK]
+
+Pose:
+neutral anatomical stance
+arms relaxed slightly away from the torso
+legs shoulder-width apart
+standing upright
+symmetrical stance
+weight evenly distributed
+no contrapposto
+
+View:
+perfect left-facing side view
+orthographic reference perspective
+eye-level camera
+
+Focus:
+accurate posture
+clear spine alignment
+natural chest projection
+correct head-to-torso proportion
+balanced hip alignment
+leg and foot structure from the side
+
+Clothing:
+shirtless
+neutral fitted shorts
+barefoot
+no accessories
+
+Body presentation:
+natural anatomy
+no exaggerated musculature
+no stylization
+no bodybuilder physique
+maintain the character's canonical body type
+
+Output requirements:
+single clean anatomical reference image
+full body fully visible
+strict side readability
+consistent identity with front anatomy reference
+no dramatic posing
+no perspective distortion
+
+Use:
+[REFERENCE_PANEL_BLOCK_STACK]
+[PORTRAIT_SHEET_FORMAT_BLOCK]
+</code></pre>
+<hr />
+<h2 id="anatomy-back">Anatomy Back</h2>
+<p>Defines anatomical structure from the back view.</p>
+<h1 id="3c-anatomy-back">3C Anatomy Back</h1>
+<p>Required inputs</p>
+<ul>
+<li>3A Anatomy Front</li>
+<li>3B Anatomy Side</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>body references</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>UCS sheets</li>
+</ul>
+<pre><code>Create a back-view anatomical reference for a character design pipeline.
+
+Character:
+[CHARACTER_BLOCK]
+
+Pose:
+neutral anatomical stance
+arms relaxed slightly away from the torso
+legs shoulder-width apart
+standing upright
+symmetrical stance
+weight evenly distributed
+no contrapposto
+
+View:
+perfect back view
+orthographic reference perspective
+eye-level camera
+
+Focus:
+shoulder blade placement
+back anatomy structure
+natural waist taper
+balanced leg alignment
+clear back silhouette
+consistent body width and proportion
+
+Clothing:
+shirtless
+neutral fitted shorts
+barefoot
+no accessories
+
+Body presentation:
+natural anatomy
+no exaggerated musculature
+no stylization
+no bodybuilder physique
+maintain the character's canonical body type
+
+Output requirements:
+single clean anatomical reference image
+full body fully visible
+strict back view readability
+consistent identity with front and side anatomy references
+no dramatic posing
+no perspective distortion
+
+Use:
+[REFERENCE_PANEL_BLOCK_STACK]
+[PORTRAIT_SHEET_FORMAT_BLOCK]
+</code></pre>
+<hr />
+<h2 id="anatomy-glutes">Anatomy Glutes</h2>
+<p>Defines anatomical structure of the glutes area from a 3/4 back view.</p>
+<h1 id="3d-anatomy-glutes">3D Anatomy Glutes</h1>
+<p>Required inputs</p>
+<ul>
+<li>3A Anatomy Front</li>
+<li>3B Anatomy Side</li>
+<li>3C Anatomy Back</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>athletic reference photos</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>UCS sheets</li>
+</ul>
+<pre><code>Create a **single-panel glute anatomy reference image** for the character reference library.
+
+This image is used to clearly document the **glute structure, hip contour, and lower-back-to-thigh transition** for the character.
+
+The goal is a clean anatomical reference panel that preserves the character’s identity while emphasizing the glute silhouette.
+
+---
+
+Character:
+[CHARACTER_BLOCK]
+
+---
+
+Focus strongly on accurate:
+
+- hip width
+- glute projection
+- glute-to-thigh transition
+
+consistent with the character's body proportions.
+
+---
+
+## Reference Presentation
+
+The image must present the character in a **clean studio-style anatomy reference pose** that clearly shows the glutes and hip structure.
+
+Requirements:
+
+• single character only
+• landscape orientation
+• **rear three-quarter body view**
+• camera positioned slightly behind the character
+• **tight anatomical crop focused on the hip region**
+
+The image should read as a **glute anatomy study**, not a portrait.
+
+Framing:
+
+• **top of frame: waist / lower back (mid-back at most)**
+• **bottom of frame: just above the knees**
+• **the head and shoulders must NOT be visible**
+
+The **hips and glutes must sit at the visual center of the frame**.
+
+Only the following anatomy should be visible:
+
+• lower back
+• waist
+• hips
+• glutes
+• upper thighs
+
+The pose should feel **neutral and anatomical**, not posed or stylized.
+
+Composition prioritizes the **hip and glute region rather than the full body**.
+
+---
+
+## Camera
+
+orthographic reference camera
+rear **three-quarter perspective**
+slight natural body angle
+no dramatic perspective distortion
+
+**tight anatomical crop centered on hips and glutes**
+
+The camera should clearly show:
+
+• glute projection
+• hip width
+• glute-to-thigh transition
+• lower back curve
+
+The crop must read as a **body anatomy reference study focused on the glutes**, similar to professional figure reference photography.
+
+---
+
+## Lighting
+
+neutral studio lighting
+soft even illumination
+no dramatic shadows
+clean professional reference lighting
+
+Lighting must **clearly reveal muscle and contour structure**.
+
+Avoid strong top lighting or darkness that hides form.
+
+---
+
+## Styling
+
+neutral studio background
+subtle grounded shadow
+clean presentation
+natural realistic colors
+
+No environmental elements.
+
+---
+
+## Clothing
+
+The character should wear **minimal fitted athletic shorts or simple underwear**.
+
+Requirements:
+
+• snug fit that clearly shows body contours
+• neutral light colors (grey, light blue, beige, soft neutral tones)
+• matte fabric
+
+Avoid:
+
+• black fabric (too dark, hides contour)
+• baggy clothing
+• patterns
+• logos
+• accessories
+
+The clothing must **not obscure glute shape or hip contour**.
+
+---
+
+## Output Constraints
+
+• **single image only**
+• **landscape orientation**
+• **no text**
+• **no labels**
+• **no multi-panel layouts**
+</code></pre>
+<hr />
+<h2 id="anatomy-sheet">Anatomy Sheet</h2>
+<p>Combines multiple anatomy views into a structured sheet.</p>
+<h1 id="3e-anatomy-sheet">3E Anatomy Sheet</h1>
+<p>Required inputs</p>
+<ul>
+<li>3A Anatomy Front</li>
+<li>3B Anatomy Side</li>
+<li>3C Anatomy Back</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>3D Anatomy Glutes</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>clothing references</li>
+</ul>
+<pre><code>Create a full anatomy reference sheet for a character design pipeline.
+
+Character:
+[CHARACTER_BLOCK]
+
+Panels:
+front anatomy
+side anatomy
+back anatomy
+
+Purpose:
+define anatomical structure and body proportions
+establish stable full-body construction for later pipeline stages
+
+Clothing:
+shirtless
+neutral fitted shorts
+barefoot
+no accessories
+
+Body presentation:
+natural anatomy
+no exaggerated musculature
+no stylization
+no bodybuilder physique
+maintain the character's canonical body type
+
+Output requirements:
+clean professional anatomy reference sheet
+all panels depict the same character
+all panels fully visible
+consistent body proportions across views
+clear readable anatomical structure
+no panel cropping
+no overlapping panels
+no perspective distortion
+
+Use:
+[REFERENCE_SHEET_BLOCK_STACK]
+[PORTRAIT_SHEET_FORMAT_BLOCK]
+</code></pre>
+<hr />
+<h2 id="body-anchor-sheet">Body Anchor Sheet</h2>
+<p>Defines the stable full-body identity anchor used for later prompts.</p>
+<h1 id="4-body-anchor">4 Body Anchor</h1>
+<p>Required inputs</p>
+<ul>
+<li>1D Face Anchor</li>
+<li>2 Hair Sheet</li>
+<li>3E Anatomy Sheet</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>3D Anatomy Glutes</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>UCS sheets</li>
+<li>outfit references</li>
+</ul>
+<pre><code>Create a body anchor sheet used to lock the character's full-body identity.
+
+Character:
+[CHARACTER_BLOCK]
+
+Panels:
+front body
+side body
+three-quarter body
+
+Focus:
+stable full-body proportions
+natural posture
+clear silhouette readability
+consistent head-to-body relationship
+recognizable overall body shape
+
+Clothing:
+neutral fitted shorts
+barefoot
+no accessories
+
+Body presentation:
+natural anatomy
+no exaggerated musculature
+maintain canonical body type
+consistent with anatomy reference
+
+Output requirements:
+clean professional body reference sheet
+all panels depict the same character
+full body fully visible in each panel
+consistent proportions across panels
+no dramatic perspective distortion
+
+Use:
+[REFERENCE_SHEET_BLOCK_STACK]
+[PORTRAIT_SHEET_FORMAT_BLOCK]
+</code></pre>
+<hr />
+<h2 id="proportions-grid">Proportions Grid</h2>
+<p>Defines body proportions using a head-count grid.</p>
+<h1 id="5-proportion-grid">5 Proportion Grid</h1>
+<p>Required inputs</p>
+<ul>
+<li>4 Body Anchor</li>
+<li>3E Anatomy Sheet</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>none</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>UCS sheets</li>
 </ul>
 <pre><code>Create a body proportions grid reference for a character design pipeline.
 
@@ -1630,13 +2106,21 @@ Use:
 [PORTRAIT_SHEET_FORMAT_BLOCK]
 </code></pre>
 <hr />
-<h2 id="muscle-tension-sheet">Muscle Tension Sheet</h2>
+<h2 id="muscle-tension">Muscle Tension</h2>
 <p>Shows how the body behaves under different tension states.</p>
-<h1 id="muscle-tension-sheet_1">Muscle Tension Sheet</h1>
-<p>Attach:</p>
+<h1 id="6-muscle-tension">6 Muscle Tension</h1>
+<p>Required inputs</p>
 <ul>
-<li>Anatomy Sheet</li>
-<li>Body Anchor Sheet</li>
+<li>4 Body Anchor</li>
+<li>3E Anatomy Sheet</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>athletic reference images</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>UCS sheets</li>
 </ul>
 <pre><code>Create a muscle tension reference sheet for a character design pipeline.
 
@@ -1682,62 +2166,22 @@ Use:
 [PORTRAIT_SHEET_FORMAT_BLOCK]
 </code></pre>
 <hr />
-<h2 id="body-anchor-sheet">Body Anchor Sheet</h2>
-<p>Defines the stable full-body identity anchor used for later prompts.</p>
-<h1 id="body-anchor-sheet_1">Body Anchor Sheet</h1>
-<p>Attach:</p>
-<ul>
-<li>Anatomy Sheet</li>
-<li>Face Anchor Sheet</li>
-<li>Hair Reference Sheet</li>
-</ul>
-<pre><code>Create a body anchor sheet used to lock the character's full-body identity.
-
-Character:
-[CHARACTER_BLOCK]
-
-Panels:
-front body
-side body
-three-quarter body
-
-Focus:
-stable full-body proportions
-natural posture
-clear silhouette readability
-consistent head-to-body relationship
-recognizable overall body shape
-
-Clothing:
-neutral fitted shorts
-barefoot
-no accessories
-
-Body presentation:
-natural anatomy
-no exaggerated musculature
-maintain canonical body type
-consistent with anatomy reference
-
-Output requirements:
-clean professional body reference sheet
-all panels depict the same character
-full body fully visible in each panel
-consistent proportions across panels
-no dramatic perspective distortion
-
-Use:
-[REFERENCE_SHEET_BLOCK_STACK]
-[PORTRAIT_SHEET_FORMAT_BLOCK]
-</code></pre>
-<hr />
-<h2 id="silhouette-sheet">Silhouette Sheet</h2>
+<h2 id="silhouette">Silhouette</h2>
 <p>Defines the character’s readable outer shape and body outline.</p>
-<h1 id="silhouette-sheet_1">Silhouette Sheet</h1>
-<p>Attach:</p>
+<h1 id="7-silhouette">7 Silhouette</h1>
+<p>Required inputs</p>
 <ul>
-<li>Body Anchor Sheet</li>
-<li>Anatomy Sheet</li>
+<li>4 Body Anchor</li>
+<li>3E Anatomy Sheet</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>5 Proportion Grid</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>outfit sheets</li>
+<li>UCS sheets</li>
 </ul>
 <pre><code>Create a silhouette reference sheet for a character design pipeline.
 
@@ -1779,14 +2223,22 @@ Use:
 [PORTRAIT_SHEET_FORMAT_BLOCK]
 </code></pre>
 <hr />
-<h2 id="turnaround-sheet">Turnaround Sheet</h2>
+<h2 id="turnaround">Turnaround</h2>
 <p>Shows the character from multiple angles in a structured reference layout.</p>
-<h1 id="turnaround-sheet_1">Turnaround Sheet</h1>
-<p>Attach:</p>
+<h1 id="8-turnaround">8 Turnaround</h1>
+<p>Required inputs</p>
 <ul>
-<li>Body Anchor Sheet</li>
-<li>Silhouette Sheet</li>
-<li>Face Anchor Sheet</li>
+<li>4 Body Anchor</li>
+<li>7 Silhouette</li>
+<li>1D Face Anchor</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>3E Anatomy Sheet</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>outfit sheets</li>
 </ul>
 <pre><code>Create a full character turnaround sheet for a character design pipeline.
 
@@ -1825,6 +2277,45 @@ no dramatic posing
 Use:
 [REFERENCE_SHEET_BLOCK_STACK]
 [LANDSCAPE_SHEET_FORMAT_BLOCK]
+</code></pre>
+<hr />
+<h2 id="height-scale-sheet">Height Scale Sheet</h2>
+<p>Shows the character’s height in a structured measurement reference.</p>
+<h1 id="18-height-scale-sheet">18 Height Scale Sheet</h1>
+<p>Required inputs</p>
+<ul>
+<li>8 Turnaround</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>4 Body Anchor</li>
+<li>5 Proportion Grid</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>UCS sheets</li>
+</ul>
+<pre><code>Create a height scale reference sheet.
+
+Character:
+[CHARACTER_BLOCK]
+
+Panels:
+character height reference
+height markers
+
+Focus:
+clear height measurement
+body proportion readability
+
+Output requirements:
+clean scale reference sheet
+character standing upright
+height clearly indicated
+
+Use:
+[REFERENCE_SHEET_BLOCK_STACK]
+[PORTRAIT_SHEET_FORMAT_BLOCK]
 </code></pre>
 
 

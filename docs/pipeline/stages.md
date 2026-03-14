@@ -2,56 +2,92 @@
 
 ## Stage 1 — Face Identity
 
-- 1A Front Face
-- 1B 3/4 Face
-- 1C Profile Face
-- 1D Face Anchor
+Establish stable facial identity.
+
+- 1A — Front Face
+- 1B — 3/4 Face
+- 1C — Profile Face
+- 1D — Face Anchor
 
 ## Stage 2 — Hair Identity
 
-- 2 Hair Sheet
+Lock hairstyle and framing.
+
+- 2 — Hair Sheet
 
 ## Stage 3 — Physique Anchoring
 
-- 3A Anatomy Front
-- 3B Anatomy Side
-- 3C Anatomy Back
-- 3D Anatomy Glutes
-- 3E Anatomy Sheet
+Define anatomical structure.
+
+- 3A — Anatomy Front
+- 3B — Anatomy Side
+- 3C — Anatomy Back
+- 3D — Anatomy Glutes (optional specialization)
+- 3E — Anatomy Sheet
 
 ## Stage 4 — Structural Anchors
 
-- 4 Proportion Grid
-- 5 Muscle Tension
-- 6 Body Anchor
-- 7 Silhouette
-- 8 Turnaround
+Establish structural body references.
 
-## Stage 5 — Master Identity
+- 4 — Body Anchor
+- 5 — Proportion Grid
+- 6 — Muscle Tension
+- 7 — Silhouette
+- 8 — Turnaround
 
-- 9 Expression Sheet
-- 10 Hand Sheet
-- 11A Ultimate Character Sheet - Front Face Panel
-- 11B Ultimate Character Sheet - 3/4 Face Panel
-- 11C Ultimate Character Sheet - Profile Face Panel
-- 11D Ultimate Character Sheet - Expression Panel
-- 11E Ultimate Character Sheet - Body Front Panel
-- 11F Ultimate Character Sheet - Body Side Panel
-- 11G Ultimate Character Sheet - Silhouette Panel
-- 11H Ultimate Character Sheet - Dynamic Pose Panel
-- 11I Ultimate Character Sheet - Sheet Assembly
+## Stage 5 — Identity Extension
 
-## Stage 6 — Style Anchoring
+Additional identity references that do not require UCS.
 
-- 12 Signature Outfit
-- 13 Design Language Sheet
-- 14 Additional Wardrobes
+- 9 — Expression Sheet
+- 10 — Hand Sheet
+- 11 — Gallery Image
 
-## Stage 7 — Motion and Scene Use
+## Stage 6 — UCS Core Generation
 
-- 15 Pose Sheet
-- 16 Motion Anchor Sheet
-- 17 Height / Scale
-- 18 Interaction Anchors
-- 19 Lifestyle Scenes
-- 20 Gallery Image
+Create the canonical identity pack.
+
+- 12A — UCS Front Face Panel
+- 12B — UCS 3/4 Face Panel
+- 12C — UCS Profile Face Panel
+
+- 12D — UCS Body Front Panel
+- 12E — UCS Body Side Panel
+- 12F — UCS Silhouette Panel
+
+- 12G — UCS Expression Panel
+
+- 12H — UCS Core Sheet _(manual assembly)_
+
+This becomes the central consolidated reference pack.
+
+## Stage 7 — Style Anchoring
+
+Define clothing identity and wardrobe.
+
+- 13 — Signature Outfit
+- 14 — Design Language Sheet
+
+- 15A-15E — Additional Outfit Sheets
+- 15F — Wardrobe Master Sheet _(manual assembly)_
+
+## Stage 8 — Motion & Character Use
+
+- 16 — Pose Sheet
+- 17 — Motion Anchor Sheet
+
+- 18 — Height Scale Sheet
+
+- 19 — Interaction Anchor Sheet
+- 20 — Lifestyle Scene Anchor Sheet
+
+## Stage 9 — Final UCS Enrichment
+
+- 21 — UCS Dynamic Pose Panel
+- 22 — Final UCS _(manual assembly)_
+
+This step merges:
+
+- UCS Core
+- Dynamic Pose Panel
+- any other future additions

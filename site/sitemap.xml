@@ -136,7 +136,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/LUCIEN/00_PROFILE/identity-guardrails/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/LUCIEN/00_PROFILE/identity_guardrails/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -256,182 +256,182 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/01_FACE_ANCHORS/face-anchor-sheet/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/expression-sheet/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/01_FACE_ANCHORS/front-face-reference/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/face-anchor-sheet/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/01_FACE_ANCHORS/profile-face-reference/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/front-face-reference/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/01_FACE_ANCHORS/three-quarter-face-reference/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/gallery-image/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/02_HAIR/hair-reference-sheet/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/hair-reference-sheet/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/03_ANATOMY/anatomy-back/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/hand-reference-sheet/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/03_ANATOMY/anatomy-front/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/profile-face-reference/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/03_ANATOMY/anatomy-glutes/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/three-quarter-face-reference/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/03_ANATOMY/anatomy-sheet/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/02_BODY/anatomy-back/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/03_ANATOMY/anatomy-side/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/02_BODY/anatomy-front/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/04_PROPORTIONS/body-proportions-grid/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/02_BODY/anatomy-glutes/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/05_MUSCLE/muscle-tension-sheet/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/02_BODY/anatomy-sheet/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/06_BODY/body-anchor-sheet/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/02_BODY/anatomy-side/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/07_SILHOUETTE/silhouette-sheet/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/02_BODY/body-anchor-sheet/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/08_TURNAROUND/turnaround-sheet/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/02_BODY/body-proportions-grid/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/09_EXPRESSIONS/expression-sheet/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/02_BODY/height-scale-sheet/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/10_HANDS/hand-reference-sheet/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/02_BODY/muscle-tension-sheet/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/11_UCS/ucs-assembly-notes/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/02_BODY/silhouette-sheet/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/11_UCS/ucs-body-front/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/02_BODY/turnaround-sheet/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/11_UCS/ucs-body-side/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-assembly-notes/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/11_UCS/ucs-dynamic-pose/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-body-front/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/11_UCS/ucs-expression/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-body-side/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/11_UCS/ucs-face-front/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-dynamic-pose/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/11_UCS/ucs-face-profile/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-expression/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/11_UCS/ucs-face-three-quarter/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-face-front/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/11_UCS/ucs-silhouette/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-face-profile/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/12_SIGNATURE_OUTFIT/signature-outfit-sheet/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-face-three-quarter/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/13_DESIGN_LANGUAGE/design-language-sheet/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-silhouette/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/14_WARDROBE/outfit-sheet/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/04_STYLE/design-language-sheet/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/14_WARDROBE/wardrobe-master-sheet/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/04_STYLE/outfit-sheet/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/15_POSES/pose-sheet/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/04_STYLE/signature-outfit-sheet/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/16_MOTION/motion-anchor-sheet/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/04_STYLE/wardrobe-master-sheet/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/17_SCALE/height-scale-sheet/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/05_MOTION/interaction-anchor-sheet/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/18_INTERACTIONS/interaction-anchor-sheet/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/05_MOTION/motion-anchor-sheet/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/19_SCENES/lifestyle-scene-anchor-sheet/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/05_MOTION/pose-sheet/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/20_THUMBNAIL/gallery-image/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/06_SCENES/lifestyle-scene-anchor-sheet/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -611,27 +611,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/prompts/templates/anatomy/</loc>
-         <lastmod>2026-03-14</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://charreflib.chenazam.com/prompts/templates/body/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/prompts/templates/face/</loc>
+         <loc>https://charreflib.chenazam.com/prompts/templates/identity/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/prompts/templates/outfits/</loc>
+         <loc>https://charreflib.chenazam.com/prompts/templates/motion/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://charreflib.chenazam.com/prompts/templates/scenes/</loc>
+         <lastmod>2026-03-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/prompts/templates/style/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -721,7 +721,37 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/snippets/galleries/blake/identity/</loc>
+         <lastmod>2026-03-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/galleries/daimon/identity/</loc>
+         <lastmod>2026-03-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/galleries/daimon/scenes/</loc>
+         <lastmod>2026-03-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/galleries/danny/identity/</loc>
+         <lastmod>2026-03-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/galleries/hudson/identity/</loc>
+         <lastmod>2026-03-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/snippets/galleries/jasper/anatomy/</loc>
+         <lastmod>2026-03-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/galleries/jasper/body/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -736,12 +766,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/snippets/galleries/jasper/identity/</loc>
+         <lastmod>2026-03-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/snippets/galleries/jonah/face/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/snippets/galleries/jonah/identity/</loc>
+         <lastmod>2026-03-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/snippets/galleries/luca/face/</loc>
+         <lastmod>2026-03-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/galleries/luca/identity/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -776,6 +821,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/snippets/galleries/lucien/identity/</loc>
+         <lastmod>2026-03-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/snippets/galleries/lucien/muscle/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
@@ -797,6 +847,21 @@
     </url>
     <url>
          <loc>https://charreflib.chenazam.com/snippets/galleries/tommy/anatomy/</loc>
+         <lastmod>2026-03-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/galleries/tommy/body/</loc>
+         <lastmod>2026-03-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/galleries/tommy/identity/</loc>
+         <lastmod>2026-03-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/galleries/tommy/scenes/</loc>
          <lastmod>2026-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>

@@ -19,34 +19,109 @@ PLACEHOLDER_PATTERN = re.compile(r"\[([A-Z0-9_]+)\]")
 
 
 TEMPLATE_ALIASES = {
-    "face-front": "docs/assets/library/50_PROMPT_TEMPLATES/01_FACE_ANCHORS/front-face-reference.md",
-    "face-profile": "docs/assets/library/50_PROMPT_TEMPLATES/01_FACE_ANCHORS/profile-face-reference.md",
-    "face-three-quarter": "docs/assets/library/50_PROMPT_TEMPLATES/01_FACE_ANCHORS/three-quarter-face-reference.md",
-    "face-anchor": "docs/assets/library/50_PROMPT_TEMPLATES/01_FACE_ANCHORS/face-anchor-sheet.md",
+    # Identity
+    "face-front": "docs/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/front-face-reference.md",
+    "front-face": "docs/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/front-face-reference.md",
 
-    "anatomy-front": "docs/assets/library/50_PROMPT_TEMPLATES/03_ANATOMY/anatomy-front.md",
-    "anatomy-side": "docs/assets/library/50_PROMPT_TEMPLATES/03_ANATOMY/anatomy-side.md",
-    "anatomy-back": "docs/assets/library/50_PROMPT_TEMPLATES/03_ANATOMY/anatomy-back.md",
-    "anatomy-glutes": "docs/assets/library/50_PROMPT_TEMPLATES/03_ANATOMY/anatomy-glutes.md",
-    "anatomy-sheet": "docs/assets/library/50_PROMPT_TEMPLATES/03_ANATOMY/anatomy-sheet.md",
+    "face-three-quarter": "docs/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/three-quarter-face-reference.md",
+    "three-quarter-face": "docs/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/three-quarter-face-reference.md",
 
-    "body-anchor": "docs/assets/library/50_PROMPT_TEMPLATES/06_BODY/body-anchor-sheet.md",
-    "silhouette": "docs/assets/library/50_PROMPT_TEMPLATES/07_SILHOUETTE/silhouette-sheet.md",
-    "turnaround": "docs/assets/library/50_PROMPT_TEMPLATES/08_TURNAROUND/turnaround-sheet.md",
+    "face-profile": "docs/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/profile-face-reference.md",
+    "profile-face": "docs/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/profile-face-reference.md",
 
-    "expressions": "docs/assets/library/50_PROMPT_TEMPLATES/09_EXPRESSIONS/expression-sheet.md",
-    "hand-sheet": "docs/assets/library/50_PROMPT_TEMPLATES/10_HANDS/hand-reference-sheet.md",
+    "face-anchor": "docs/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/face-anchor-sheet.md",
 
-    "pose-sheet": "docs/assets/library/50_PROMPT_TEMPLATES/15_POSES/pose-sheet.md",
-    "motion-sheet": "docs/assets/library/50_PROMPT_TEMPLATES/16_MOTION/motion-anchor-sheet.md",
+    "hair-sheet": "docs/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/hair-reference-sheet.md",
 
-    "height-scale": "docs/assets/library/50_PROMPT_TEMPLATES/17_SCALE/height-scale-sheet.md",
+    "expression-sheet": "docs/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/expression-sheet.md",
+    "expressions": "docs/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/expression-sheet.md",
 
-    "interaction-anchor": "docs/assets/library/50_PROMPT_TEMPLATES/18_INTERACTIONS/interaction-anchor-sheet.md",
-    "scene-sheet": "docs/assets/library/50_PROMPT_TEMPLATES/19_SCENES/lifestyle-scene-anchor-sheet.md",
+    "hand-sheet": "docs/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/hand-reference-sheet.md",
+    "hands": "docs/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/hand-reference-sheet.md",
 
-    "gallery-image": "docs/assets/library/50_PROMPT_TEMPLATES/20_THUMBNAIL/gallery-image.md",
+    "gallery-image": "docs/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/gallery-image.md",
+    "thumbnail": "docs/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/gallery-image.md",
+
+    # Body
+    "anatomy-front": "docs/assets/library/50_PROMPT_TEMPLATES/02_BODY/anatomy-front.md",
+    "anatomy-side": "docs/assets/library/50_PROMPT_TEMPLATES/02_BODY/anatomy-side.md",
+    "anatomy-back": "docs/assets/library/50_PROMPT_TEMPLATES/02_BODY/anatomy-back.md",
+    "anatomy-glutes": "docs/assets/library/50_PROMPT_TEMPLATES/02_BODY/anatomy-glutes.md",
+    "anatomy-sheet": "docs/assets/library/50_PROMPT_TEMPLATES/02_BODY/anatomy-sheet.md",
+
+    "body-anchor": "docs/assets/library/50_PROMPT_TEMPLATES/02_BODY/body-anchor-sheet.md",
+
+    "proportion-grid": "docs/assets/library/50_PROMPT_TEMPLATES/02_BODY/body-proportions-grid.md",
+    "body-proportions-grid": "docs/assets/library/50_PROMPT_TEMPLATES/02_BODY/body-proportions-grid.md",
+
+    "muscle-tension": "docs/assets/library/50_PROMPT_TEMPLATES/02_BODY/muscle-tension-sheet.md",
+    "muscle-tension-sheet": "docs/assets/library/50_PROMPT_TEMPLATES/02_BODY/muscle-tension-sheet.md",
+
+    "silhouette": "docs/assets/library/50_PROMPT_TEMPLATES/02_BODY/silhouette-sheet.md",
+    "silhouette-sheet": "docs/assets/library/50_PROMPT_TEMPLATES/02_BODY/silhouette-sheet.md",
+
+    "turnaround": "docs/assets/library/50_PROMPT_TEMPLATES/02_BODY/turnaround-sheet.md",
+    "turnaround-sheet": "docs/assets/library/50_PROMPT_TEMPLATES/02_BODY/turnaround-sheet.md",
+
+    "height-scale": "docs/assets/library/50_PROMPT_TEMPLATES/02_BODY/height-scale-sheet.md",
+    "height-scale-sheet": "docs/assets/library/50_PROMPT_TEMPLATES/02_BODY/height-scale-sheet.md",
+
+    # UCS
+    "ucs-face-front": "docs/assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-face-front.md",
+    "ucs-front-face": "docs/assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-face-front.md",
+
+    "ucs-face-three-quarter": "docs/assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-face-three-quarter.md",
+    "ucs-three-quarter-face": "docs/assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-face-three-quarter.md",
+
+    "ucs-face-profile": "docs/assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-face-profile.md",
+    "ucs-profile-face": "docs/assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-face-profile.md",
+
+    "ucs-expression": "docs/assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-expression.md",
+    "ucs-expression-panel": "docs/assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-expression.md",
+
+    "ucs-body-front": "docs/assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-body-front.md",
+    "ucs-body-front-panel": "docs/assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-body-front.md",
+
+    "ucs-body-side": "docs/assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-body-side.md",
+    "ucs-body-side-panel": "docs/assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-body-side.md",
+
+    "ucs-silhouette": "docs/assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-silhouette.md",
+    "ucs-silhouette-panel": "docs/assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-silhouette.md",
+
+    "ucs-dynamic-pose": "docs/assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-dynamic-pose.md",
+    "dynamic-pose": "docs/assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-dynamic-pose.md",
+
+    "ucs-assembly-notes": "docs/assets/library/50_PROMPT_TEMPLATES/03_UCS/ucs-assembly-notes.md",
+
+    # Style
+    "signature-outfit": "docs/assets/library/50_PROMPT_TEMPLATES/04_STYLE/signature-outfit-sheet.md",
+    "signature-outfit-sheet": "docs/assets/library/50_PROMPT_TEMPLATES/04_STYLE/signature-outfit-sheet.md",
+
+    "design-language": "docs/assets/library/50_PROMPT_TEMPLATES/04_STYLE/design-language-sheet.md",
+    "design-language-sheet": "docs/assets/library/50_PROMPT_TEMPLATES/04_STYLE/design-language-sheet.md",
+
+    "outfit-sheet": "docs/assets/library/50_PROMPT_TEMPLATES/04_STYLE/outfit-sheet.md",
+    "outfit": "docs/assets/library/50_PROMPT_TEMPLATES/04_STYLE/outfit-sheet.md",
+
+    "wardrobe-master": "docs/assets/library/50_PROMPT_TEMPLATES/04_STYLE/wardrobe-master-sheet.md",
+    "wardrobe-master-sheet": "docs/assets/library/50_PROMPT_TEMPLATES/04_STYLE/wardrobe-master-sheet.md",
+
+    # Motion
+    "pose-sheet": "docs/assets/library/50_PROMPT_TEMPLATES/05_MOTION/pose-sheet.md",
+
+    "motion-anchor": "docs/assets/library/50_PROMPT_TEMPLATES/05_MOTION/motion-anchor-sheet.md",
+    "motion-sheet": "docs/assets/library/50_PROMPT_TEMPLATES/05_MOTION/motion-anchor-sheet.md",
+    "motion-anchor-sheet": "docs/assets/library/50_PROMPT_TEMPLATES/05_MOTION/motion-anchor-sheet.md",
+
+    "interaction-anchor": "docs/assets/library/50_PROMPT_TEMPLATES/05_MOTION/interaction-anchor-sheet.md",
+    "interaction-anchor-sheet": "docs/assets/library/50_PROMPT_TEMPLATES/05_MOTION/interaction-anchor-sheet.md",
+
+    # Scenes
+    "scene-sheet": "docs/assets/library/50_PROMPT_TEMPLATES/06_SCENES/lifestyle-scene-anchor-sheet.md",
+    "lifestyle-scene-anchor": "docs/assets/library/50_PROMPT_TEMPLATES/06_SCENES/lifestyle-scene-anchor-sheet.md",
+    "lifestyle-scene-anchor-sheet": "docs/assets/library/50_PROMPT_TEMPLATES/06_SCENES/lifestyle-scene-anchor-sheet.md",
 }
+
 
 
 def read_text(path: pathlib.Path) -> str:

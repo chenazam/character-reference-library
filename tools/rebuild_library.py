@@ -5,19 +5,19 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 SCRIPTS = [
+    "tools/update_pipeline_status.py",
+    "tools/validate_library.py",
     "tools/generate_gallery_snippets.py",
     "tools/generate_character_pages.py",
     "tools/generate_character_index.py",
     "tools/generate_nav_characters.py",
     "tools/generate_pipeline_dashboard.py",
-    "tools/update_pipeline_status.py",
-    "tools/validate_library.py",
     "tools/generate_generation_queue.py",
 ]
 
 
 def run_command(command, label):
-    print(f"\n=== {label} ===\n")
+    print(f"\n\n========== {label} ==========\n")
     result = subprocess.run(command, cwd=ROOT)
 
     if result.returncode != 0:
@@ -40,15 +40,20 @@ def run_mkdocs_gh_deploy():
 
 
 def main():
+
+    deploy = "--deploy" in sys.argv
+
     print("\n===== REBUILDING REFERENCE LIBRARY =====\n")
 
     for script in SCRIPTS:
         run_python(script)
 
     run_mkdocs_build()
-    run_mkdocs_gh_deploy()
 
-    print("\n===== BUILD + DEPLOY COMPLETE =====\n")
+    if deploy:
+        run_mkdocs_gh_deploy()
+
+    print("\n===== BUILD COMPLETE =====\n")
 
 
 if __name__ == "__main__":

@@ -1027,7 +1027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../prompts/templates/face/" class="md-nav__link">
+      <a href="../../prompts/templates/face.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1048,7 +1048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../prompts/templates/anatomy/" class="md-nav__link">
+      <a href="../../prompts/templates/anatomy.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1111,7 +1111,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../prompts/templates/outfits/" class="md-nav__link">
+      <a href="../../prompts/templates/outfits.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1631,166 +1631,240 @@ ARCHITECTURE/
 └── LUCIEN/
 </code></pre>
 <p>Inside each character folder:</p>
-<pre><code>00_PROFILE
-01_FACE
-02_HAIR
-03_ANATOMY
-04_PROPORTIONS
-05_MUSCLE
-06_BODY
-07_SILHOUETTE
-08_TURNAROUND
-09_EXPRESSIONS
-10_HANDS
-11_UCS
-12_SIGNATURE_OUTFIT
-13_DESIGN_LANGUAGE
-14_WARDROBE
-15_POSES
-16_MOTION
-17_SCALE
-18_SCENES
-19_PROPS
-
-IDENTITY_PACK
-SOURCE_REFERENCES
+<pre><code class="language-text">[CHARACTER_NAME]/
+├── 00_SOURCE_REFERENCES/
+│   ├── face/
+│   │   ├── actor_reference_01.jpg
+│   │   ├── facial_structure_example.jpg
+│   │   └── notes.md
+│   ├── hair/
+│   │   ├── hairstyle_reference_01.jpg
+│   │   └── notes.md
+│   ├── body/
+│   │   ├── physique_reference.jpg
+│   │   └── notes.md
+│   ├── clothing/
+│   │   ├── jacket_reference.jpg
+│   │   ├── outfit_style_reference.jpg
+│   │   └── notes.md
+│   ├── poses/
+│   │   ├── running_pose.jpg
+│   │   ├── relaxed_pose_reference.jpg
+│   │   └── notes.md
+│   ├── scenes/
+│   │   ├── cozy_lifestyle_reference.jpg
+│   │   └── notes.md
+│   └── misc/
+│   └── notes.md
+├── 00_PROFILE/
+│   ├── metadata.yaml
+│   ├── character_summary.md
+│   ├── prompt_blocks.md
+│   ├── identity_guardrails.md
+│   └── notes.md
+├── 01_IDENTITY/
+│   ├── face/
+│   │   ├── 1A_front_face.png
+│   │   ├── 1B_three_quarter_face.png
+│   │   ├── 1C_profile_face.png
+│   │   ├── 1D_face_anchor_sheet.png
+│   │   └── notes.md
+│   ├── hair/
+│   │   ├── 2_hair_sheet.png
+│   │   └── notes.md
+│   ├── expression/
+│   │   ├── 9_expression_sheet.png
+│   │   └── notes.md
+│   ├── hands/
+│   │   ├── 10_hand_sheet.png
+│   │   └── notes.md
+│   └── gallery/
+│       ├── 11_gallery_image.png
+│       └── notes.md
+├── 02_BODY/
+│   ├── anatomy/
+│   │   ├── 3A_anatomy_front.png
+│   │   ├── 3B_anatomy_side.png
+│   │   ├── 3C_anatomy_back.png
+│   │   ├── 3D_anatomy_glutes.png
+│   │   ├── 3E_anatomy_sheet.png
+│   │   └── notes.md
+│   ├── structure/
+│   │   ├── 4_body_anchor.png
+│   │   ├── 5_proportion_grid.png
+│   │   ├── 6_muscle_tension.png
+│   │   ├── 7_silhouette.png
+│   │   ├── 8_turnaround.png
+│   │   └── notes.md
+│   ├── scale/
+│   │   ├── 18_height_scale_sheet.png
+│   │   └── notes.md
+│   └── notes.md
+├── 03_UCS/
+│   ├── core_panels/
+│   │   ├── 12A_ucs_front_face_panel.png
+│   │   ├── 12B_ucs_three_quarter_face_panel.png
+│   │   ├── 12C_ucs_profile_face_panel.png
+│   │   ├── 12D_ucs_body_front_panel.png
+│   │   ├── 12E_ucs_body_side_panel.png
+│   │   ├── 12F_ucs_silhouette_panel.png
+│   │   ├── 12G_ucs_expression_panel.png
+│   │   └── notes.md
+│   ├── core/
+│   │   ├── 12H_ucs_core_assembly.png
+│   │   └── notes.md
+│   ├── extended/
+│   │   ├── 21_ucs_dynamic_pose_panel.png
+│   │   ├── 22_final_ucs_assembly.png
+│   │   └── notes.md
+│   ├── assembly_notes.md
+│   └── notes.md
+├── 04_STYLE/
+│   ├── signature/
+│   │   ├── 13_signature_outfit.png
+│   │   └── notes.md
+│   ├── design_language/
+│   │   ├── 14_design_language_sheet.png
+│   │   └── notes.md
+│   ├── wardrobes/
+│   │   ├── 15A_outfit_01.png
+│   │   ├── 15B_outfit_02.png
+│   │   ├── 15C_outfit_03.png
+│   │   ├── 15D_outfit_04.png
+│   │   ├── 15E_outfit_05.png
+│   │   ├── 15F_wardrobe_master_sheet.png
+│   │   └── notes.md
+│   └── notes.md
+├── 05_MOTION/
+│   ├── poses/
+│   │   ├── 16_pose_sheet.png
+│   │   └── notes.md
+│   ├── motion/
+│   │   ├── 17_motion_anchor_sheet.png
+│   │   └── notes.md
+│   ├── interaction/
+│   │   ├── 19_interaction_anchor_sheet.png
+│   │   └── notes.md
+│   └── notes.md
+├── 06_SCENES/
+│   ├── lifestyle/
+│   │   ├── 20_lifestyle_scene_anchor_sheet.png
+│   │   └── notes.md
+│   └── notes.md
+└── 07_EXPORTS/
+    ├── thumbnails/
+    │   └── .gitkeep
+    ├── sheets/
+    │   └── .gitkeep
+    ├── web/
+    │   └── .gitkeep
+    ├── print/
+    │   └── .gitkeep
+    └── notes.md
 </code></pre>
 <hr />
-<h1 id="character-folder-explanations">Character Folder Explanations</h1>
-<h2 id="00_profile">00_PROFILE</h2>
-<p>Contains descriptive information about the character.</p>
-<p>Typical files:</p>
-<pre><code>metadata.yaml
-character_summary.md
-prompt_blocks.md
-prompt_recipes.md
-</code></pre>
-<p>These files define the character concept and reusable prompt components.</p>
-<hr />
-<h2 id="01_face">01_FACE</h2>
-<p>Contains all face identity references.</p>
-<p>Examples:</p>
-<pre><code>face_front.png
-face_34.png
-face_profile.png
-face_anchor_sheet.png
-</code></pre>
-<p>These images establish the character’s facial identity.</p>
-<hr />
-<h2 id="02_hair">02_HAIR</h2>
-<p>Hair structure references used to stabilize hairstyle.</p>
-<p>Example:</p>
-<pre><code>hair_reference_sheet.png
-</code></pre>
-<hr />
-<h2 id="03_anatomy">03_ANATOMY</h2>
-<p>Bare-torso anatomy references used to define physique and proportions.</p>
-<p>Examples:</p>
-<pre><code>anatomy_front.png
-anatomy_side.png
-anatomy_back.png
-anatomy_sheet.png
-</code></pre>
-<hr />
-<h2 id="04_proportions">04_PROPORTIONS</h2>
-<p>Contains body proportion grid sheets.</p>
-<p>Used to anchor limb lengths and body ratios.</p>
-<hr />
-<h2 id="05_muscle">05_MUSCLE</h2>
-<p>Contains muscle tension references.</p>
-<p>Shows how musculature appears when relaxed vs engaged.</p>
-<hr />
-<h2 id="06_body">06_BODY</h2>
-<p>Contains the <strong>body anchor sheet</strong>, which introduces neutral clothing.</p>
-<p>This becomes the main body reference used for most later prompts.</p>
-<hr />
-<h2 id="07_silhouette">07_SILHOUETTE</h2>
-<p>Contains silhouette references used to stabilize character shape.</p>
-<hr />
-<h2 id="08_turnaround">08_TURNAROUND</h2>
-<p>Contains the multi-angle turnaround sheet used to define how the character looks from different angles.</p>
-<hr />
-<h2 id="09_expressions">09_EXPRESSIONS</h2>
-<p>Contains the character’s expression sheet.</p>
-<p>Defines emotional range while preserving facial structure.</p>
-<hr />
-<h2 id="10_hands">10_HANDS</h2>
-<p>Contains hand reference sheets used to stabilize finger proportions and gestures.</p>
-<hr />
-<h2 id="11_ucs">11_UCS</h2>
-<p>Contains the Ultimate Character Sheet and its individual panels.</p>
-<p>This is the master identity reference for the character.</p>
-<hr />
-<h2 id="12_signature_outfit">12_SIGNATURE_OUTFIT</h2>
-<p>Contains the character’s canonical outfit reference.</p>
-<p>This sheet defines the character’s primary visual style.</p>
-<hr />
-<h2 id="13_design_language">13_DESIGN_LANGUAGE</h2>
-<p>Contains sheets that define materials, accessories, color palette, and stylistic motifs.</p>
-<p>These help maintain consistent aesthetic across outfits and scenes.</p>
-<hr />
-<h2 id="14_wardrobe">14_WARDROBE</h2>
-<p>Contains additional outfit sheets for the character.</p>
-<p>Examples:</p>
-<ul>
-<li>casual outfit</li>
-<li>work outfit</li>
-<li>formal outfit</li>
-<li>home outfit</li>
-</ul>
-<hr />
-<h2 id="15_poses">15_POSES</h2>
-<p>Contains pose sheets used to demonstrate body language and movement.</p>
-<hr />
-<h2 id="16_motion">16_MOTION</h2>
-<p>Contains motion anchor sheets.</p>
-<p>These stabilize movement such as walking, running, turning, and reaching.</p>
-<hr />
-<h2 id="17_scale">17_SCALE</h2>
-<p>Contains height comparison sheets and scale references.</p>
-<p>Used when characters appear together.</p>
-<hr />
-<h2 id="18_scenes">18_SCENES</h2>
-<p>Contains scene anchors involving the character.</p>
-<p>Examples:</p>
-<ul>
-<li>domestic scene</li>
-<li>workplace scene</li>
-<li>social interaction</li>
-<li>action scene</li>
-</ul>
-<hr />
-<h2 id="19_props">19_PROPS</h2>
-<p>Contains prop interaction references.</p>
-<p>Examples include the character handling:</p>
-<ul>
-<li>phones</li>
-<li>books</li>
-<li>weapons</li>
-<li>tools</li>
-<li>bags</li>
-</ul>
-<hr />
-<h2 id="identity_pack">IDENTITY_PACK</h2>
-<p>Contains the small set of core identity references most commonly attached to prompts.</p>
-<p>Typical contents:</p>
-<pre><code>face_anchor_sheet.png
-anatomy_sheet.png
-body_anchor_sheet.png
-ultimate_character_sheet.png
-signature_outfit_sheet.png
-</code></pre>
-<p>These images are the <strong>most important visual anchors for the character</strong>.</p>
-<hr />
-<h2 id="source_references">SOURCE_REFERENCES</h2>
-<p>Contains original source images used during character creation.</p>
-<p>Examples:</p>
+<h2 id="folder-purpose-notes">Folder Purpose Notes</h2>
+<h3 id="07_source_references"><code>07_SOURCE_REFERENCES/</code></h3>
+<p>Original source images used during character creation.</p>
+<p>Use for:</p>
 <ul>
 <li>face inspiration photos</li>
 <li>clothing inspiration</li>
 <li>hairstyle references</li>
 <li>pose references</li>
 </ul>
+<hr />
+<h3 id="00_profile"><code>00_PROFILE/</code></h3>
+<p>Core character metadata and reference documents.</p>
+<p>Use for:</p>
+<ul>
+<li>metadata</li>
+<li>character summary</li>
+<li>prompt blocks</li>
+<li>identity guardrails</li>
+<li>character-specific notes</li>
+</ul>
+<p>This folder should remain highly stable.</p>
+<hr />
+<h3 id="01_identity"><code>01_IDENTITY/</code></h3>
+<p>Face-first and early identity assets.</p>
+<p>Use for:</p>
+<ul>
+<li>face identity views</li>
+<li>face anchor</li>
+<li>hair sheet</li>
+<li>expression sheet</li>
+<li>hand sheet</li>
+<li>gallery image</li>
+</ul>
+<p>This groups all the “who is this character?” assets that are not primarily body-structural.</p>
+<hr />
+<h3 id="02_body"><code>02_BODY/</code></h3>
+<p>Anatomy, structural body references, and scale.</p>
+<p>Use for:</p>
+<ul>
+<li>anatomy views and anatomy sheet</li>
+<li>body anchor</li>
+<li>proportion grid</li>
+<li>muscle tension</li>
+<li>silhouette</li>
+<li>turnaround</li>
+<li>height/scale sheet</li>
+</ul>
+<p>This is the main body-reference family.</p>
+<hr />
+<h3 id="03_ucs"><code>03_UCS/</code></h3>
+<p>All UCS-related panels and assemblies.</p>
+<p>Use for:</p>
+<ul>
+<li>UCS core panels</li>
+<li>UCS core assembly</li>
+<li>dynamic pose panel</li>
+<li>final UCS assembly</li>
+<li>assembly notes</li>
+</ul>
+<p>This makes the UCS Core / Final UCS split explicit.</p>
+<hr />
+<h3 id="04_style"><code>04_STYLE/</code></h3>
+<p>Clothing and style-definition assets.</p>
+<p>Use for:</p>
+<ul>
+<li>signature outfit</li>
+<li>design language</li>
+<li>wardrobe variations</li>
+<li>wardrobe master sheet</li>
+</ul>
+<p>This is the style / costume family.</p>
+<hr />
+<h3 id="05_motion"><code>05_MOTION/</code></h3>
+<p>Pose, movement, and interaction assets.</p>
+<p>Use for:</p>
+<ul>
+<li>pose sheet</li>
+<li>motion anchor</li>
+<li>interaction anchor</li>
+</ul>
+<p>This is the body-language / applied-character-use family.</p>
+<hr />
+<h3 id="06_scenes"><code>06_SCENES/</code></h3>
+<p>Scene-oriented character-use assets.</p>
+<p>Use for:</p>
+<ul>
+<li>lifestyle scene anchor sheet</li>
+<li>future scene-oriented expansions</li>
+</ul>
+<p>This keeps scene-use separate from motion references.</p>
+<hr />
+<h3 id="07_exports"><code>07_EXPORTS/</code></h3>
+<p>Derived outputs intended for presentation or publishing rather than generation.</p>
+<p>Use for:</p>
+<ul>
+<li>thumbnails</li>
+<li>web-ready exports</li>
+<li>print-ready exports</li>
+<li>assembled output sheets</li>
+</ul>
+<p>This separates reference-source assets from delivery artifacts.</p>
 
 
 

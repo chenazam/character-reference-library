@@ -1,57 +1,56 @@
 import argparse
 import pathlib
+import fnmatch
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 CHARACTERS_ROOT = ROOT / "docs/assets/library/10_CHARACTERS"
 
+
 ATTACHMENT_RULES = {
 
     "face-anchor": [
-        "01_FACE/*front*",
-        "01_FACE/*three_quarter*",
-        "01_FACE/*profile*",
+        "*front_face*",
+        "*three_quarter_face*",
+        "*profile_face*",
     ],
 
     "gallery-image": [
-        "01_FACE/*face_anchor*",
-        "06_BODY/*body_anchor*",
-        "07_SILHOUETTE/*",
-        "08_TURNAROUND/*",
+        "*face_anchor*",
+        "*body_anchor*",
+        "*silhouette*",
+        "*turnaround*",
+        "*expression_sheet*",
     ],
 
     "anatomy-front": [
-        "01_FACE/*face_anchor*",
-        "06_BODY/*body_anchor*",
-        "07_SILHOUETTE/*",
+        "*face_anchor*",
+        "*hair_sheet*",
     ],
 
     "anatomy-side": [
-        "01_FACE/*face_anchor*",
-        "06_BODY/*body_anchor*",
-        "07_SILHOUETTE/*",
+        "*anatomy_front*",
     ],
 
-    "turnaround": [
-        "01_FACE/*face_anchor*",
-        "06_BODY/*body_anchor*",
-        "07_SILHOUETTE/*",
+    "anatomy-back": [
+        "*anatomy_front*",
+        "*anatomy_side*",
     ],
 
     "expression-sheet": [
-        "01_FACE/*face_anchor*",
+        "*face_anchor*",
+        "*hair_sheet*",
     ],
 
     "pose-sheet": [
-        "06_BODY/*body_anchor*",
-        "07_SILHOUETTE/*",
-        "08_TURNAROUND/*",
+        "*signature_outfit*",
+        "*turnaround*",
     ],
 
     "scene-sheet": [
-        "01_FACE/*face_anchor*",
-        "06_BODY/*body_anchor*",
-        "08_TURNAROUND/*",
+        "*signature_outfit*",
+        "*pose_sheet*",
+        "*interaction_anchor*",
     ],
 }
 
@@ -60,7 +59,13 @@ def find_files(character, pattern):
 
     base = CHARACTERS_ROOT / character
 
-    return list(base.glob(pattern))
+    matches = []
+
+    for p in base.rglob("*"):
+        if fnmatch.fnmatch(p.name.lower(), pattern.lower()):
+            matches.append(p)
+
+    return matches
 
 
 def main():

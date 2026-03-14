@@ -9,26 +9,18 @@ CHARACTER_ASSETS = ROOT / "docs/assets/library/10_CHARACTERS"
 
 
 def load_metadata_for_slug(slug: str) -> dict:
-    candidates = [
-        CHARACTER_ASSETS / slug / "00_PROFILE" / "metadata.yaml",
-        CHARACTER_ASSETS / slug.upper() / "00_PROFILE" / "metadata.yaml",
-        CHARACTER_ASSETS / slug.capitalize() / "00_PROFILE" / "metadata.yaml",
-    ]
+    metadata_file = CHARACTER_ASSETS / slug.upper() / "00_PROFILE" / "metadata.yaml"
 
-    for metadata_file in candidates:
-        if not metadata_file.exists():
-            continue
+    if not metadata_file.exists():
+        return {}
 
-        try:
-            with metadata_file.open("r", encoding="utf-8") as f:
-                data = yaml.safe_load(f) or {}
-                if isinstance(data, dict):
-                    return data
-        except Exception as e:
-            print(f"Warning: failed to read {metadata_file}: {e}")
-            return {}
-
-    return {}
+    try:
+        with metadata_file.open("r", encoding="utf-8") as f:
+            data = yaml.safe_load(f) or {}
+            return data if isinstance(data, dict) else {}
+    except Exception as e:
+        print(f"Warning: failed to read {metadata_file}: {e}")
+        return {}
 
 
 def parse_bool(value, default=True):
@@ -63,13 +55,17 @@ def display_name_for_slug(slug: str) -> str:
 
 
 def build_character_entries() -> list[dict]:
-    entries = [{"Overview": "characters/overview.md"},
-               {"Character Index": "characters/index.md"}]
+    entries = [
+        {"Overview": "characters/overview.md"},
+        {"Character Index": "characters/index.md"},
+    ]
 
-    pages = sorted(
+    pages = [
         p for p in CHARACTER_PAGES.glob("*.md")
         if p.name not in {"index.md", "overview.md", "templates.md", "character-page-template.md"}
-    )
+    ]
+
+    pages.sort(key=lambda p: display_name_for_slug(p.stem))
 
     for page in pages:
         slug = page.stem
@@ -81,7 +77,6 @@ def build_character_entries() -> list[dict]:
         name = display_name_for_slug(slug)
         entries.append({name: f"characters/{slug}.md"})
 
-    # Keep your manual/static pages at the end
     template_page = CHARACTER_PAGES / "character-page-template.md"
     if template_page.exists():
         entries.append({"Character Page Template": "characters/character-page-template.md"})
@@ -117,7 +112,6 @@ def main():
 
     new_entries = build_character_entries()
 
-    # Replace contents of the Characters section in place
     characters.clear()
     characters.extend(new_entries)
 

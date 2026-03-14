@@ -16,7 +16,7 @@
         <link rel="prev" href="../template-normalization-checklist/">
       
       
-        <link rel="next" href="../templates/face/">
+        <link rel="next" href="../templates/body/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -1056,6 +1056,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#pipeline-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#template-groups" class="md-nav__link">
     <span class="md-ellipsis">
       Template Groups
@@ -1066,54 +1075,54 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#facial-identity" class="md-nav__link">
+  <a href="#identity" class="md-nav__link">
     <span class="md-ellipsis">
-      Facial Identity
+      Identity
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#hair-and-anatomy" class="md-nav__link">
+  <a href="#body" class="md-nav__link">
     <span class="md-ellipsis">
-      Hair and Anatomy
+      Body
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#body-structure" class="md-nav__link">
+  <a href="#ucs" class="md-nav__link">
     <span class="md-ellipsis">
-      Body Structure
+      UCS
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ultimate-character-sheet" class="md-nav__link">
+  <a href="#style" class="md-nav__link">
     <span class="md-ellipsis">
-      Ultimate Character Sheet
+      Style
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#outfit-and-design" class="md-nav__link">
+  <a href="#motion" class="md-nav__link">
     <span class="md-ellipsis">
-      Outfit and Design
+      Motion
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#motion-and-scenes" class="md-nav__link">
+  <a href="#scenes" class="md-nav__link">
     <span class="md-ellipsis">
-      Motion and Scenes
+      Scenes
     </span>
   </a>
   
@@ -1167,7 +1176,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../templates/face/" class="md-nav__link">
+      <a href="../templates/face.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1188,7 +1197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../templates/anatomy/" class="md-nav__link">
+      <a href="../templates/anatomy.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1251,7 +1260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../templates/outfits/" class="md-nav__link">
+      <a href="../templates/outfits.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1622,6 +1631,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#pipeline-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#template-groups" class="md-nav__link">
     <span class="md-ellipsis">
       Template Groups
@@ -1632,54 +1650,54 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#facial-identity" class="md-nav__link">
+  <a href="#identity" class="md-nav__link">
     <span class="md-ellipsis">
-      Facial Identity
+      Identity
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#hair-and-anatomy" class="md-nav__link">
+  <a href="#body" class="md-nav__link">
     <span class="md-ellipsis">
-      Hair and Anatomy
+      Body
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#body-structure" class="md-nav__link">
+  <a href="#ucs" class="md-nav__link">
     <span class="md-ellipsis">
-      Body Structure
+      UCS
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ultimate-character-sheet" class="md-nav__link">
+  <a href="#style" class="md-nav__link">
     <span class="md-ellipsis">
-      Ultimate Character Sheet
+      Style
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#outfit-and-design" class="md-nav__link">
+  <a href="#motion" class="md-nav__link">
     <span class="md-ellipsis">
-      Outfit and Design
+      Motion
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#motion-and-scenes" class="md-nav__link">
+  <a href="#scenes" class="md-nav__link">
     <span class="md-ellipsis">
-      Motion and Scenes
+      Scenes
     </span>
   </a>
   
@@ -1741,38 +1759,81 @@
 <li>consistent in structure and terminology</li>
 <li>optimized for AI image generation workflows</li>
 </ul>
-<p>Templates are grouped by pipeline stage so they can be browsed in the same order the reference library is typically built.</p>
+<p>Templates are grouped by <strong>asset family</strong> so they align with the character folder structure and the major reference types used throughout the pipeline.</p>
+<p>This makes it easier to browse templates in the same way character assets are organized.</p>
+<hr />
+<h2 id="pipeline-overview">Pipeline Overview</h2>
+<p>Template groups correspond to the major asset families used in the pipeline:</p>
+<ol>
+<li>Identity → face, hair, expressions, hands, gallery image</li>
+<li>Body → anatomy and structural body references</li>
+<li>UCS → canonical character sheets</li>
+<li>Style → clothing and design language</li>
+<li>Motion → poses and interaction references</li>
+<li>Scenes → lifestyle and environment usage</li>
+</ol>
 <hr />
 <h2 id="template-groups">Template Groups</h2>
-<h3 id="facial-identity">Facial Identity</h3>
-<p>Templates used to establish facial identity and neutral face references.</p>
+<h3 id="identity">Identity</h3>
+<p>Templates used to establish and extend core character identity.</p>
+<p>Includes templates for early identity references such as:</p>
 <ul>
-<li><a href="../templates/face/">Face Templates</a></li>
+<li>face identity views</li>
+<li>hair sheet</li>
+<li>expression sheet</li>
+<li>hand sheet</li>
+<li>
+<p>gallery image</p>
+</li>
+<li>
+<p><a href="../templates/identity/">Identity Templates</a></p>
+</li>
 </ul>
-<h3 id="hair-and-anatomy">Hair and Anatomy</h3>
-<p>Templates used to define hairstyle identity and anatomical construction.</p>
+<h3 id="body">Body</h3>
+<p>Templates used to define anatomy, structure, silhouette, turnaround, and scale.</p>
+<p>Includes:</p>
 <ul>
-<li><a href="../templates/anatomy/">Hair and Anatomy Templates</a></li>
+<li>anatomy views and anatomy sheet</li>
+<li>body anchor</li>
+<li>proportion grid</li>
+<li>muscle tension</li>
+<li>silhouette</li>
+<li>turnaround</li>
+<li>
+<p>height scale</p>
+</li>
+<li>
+<p><a href="../templates/body/">Body Templates</a></p>
+</li>
 </ul>
-<h3 id="body-structure">Body Structure</h3>
-<p>Templates used to define full-body proportions, musculature, silhouette, and turnaround references.</p>
+<h3 id="ucs">UCS</h3>
+<p>Templates used to generate UCS panels and assemble the UCS reference sheets.</p>
+<p>Includes:</p>
 <ul>
-<li><a href="../templates/body/">Body Structure Templates</a></li>
+<li>UCS core panels</li>
+<li>UCS core assembly</li>
+<li>dynamic pose panel</li>
+<li>
+<p>final UCS assembly</p>
+</li>
+<li>
+<p><a href="../templates/ucs/">UCS Templates</a></p>
+</li>
 </ul>
-<h3 id="ultimate-character-sheet">Ultimate Character Sheet</h3>
-<p>Templates used to build UCS panel prompts and assembly guidance.</p>
+<h3 id="style">Style</h3>
+<p>Templates used to define signature outfit, design language, wardrobe variants, and wardrobe master assembly.</p>
 <ul>
-<li><a href="../templates/ucs/">UCS Templates</a></li>
+<li><a href="../templates/style/">Style Templates</a></li>
 </ul>
-<h3 id="outfit-and-design">Outfit and Design</h3>
-<p>Templates used to define signature outfits, wardrobe variants, and design language references.</p>
+<h3 id="motion">Motion</h3>
+<p>Templates used for pose, motion, and interaction-oriented character usage.</p>
 <ul>
-<li><a href="../templates/outfits/">Outfit and Design Templates</a></li>
+<li><a href="../templates/motion/">Motion Templates</a></li>
 </ul>
-<h3 id="motion-and-scenes">Motion and Scenes</h3>
-<p>Templates used for poses, motion references, interactions, scale, and scene-based character usage.</p>
+<h3 id="scenes">Scenes</h3>
+<p>Templates used for lifestyle scene anchors and scene-oriented character application.</p>
 <ul>
-<li><a href="../templates/scenes/">Motion and Scene Templates</a></li>
+<li><a href="../templates/scenes/">Scene Templates</a></li>
 </ul>
 <hr />
 <h2 id="how-templates-are-built">How Templates Are Built</h2>

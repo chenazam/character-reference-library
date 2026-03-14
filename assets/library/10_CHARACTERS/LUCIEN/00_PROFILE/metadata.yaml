@@ -119,7 +119,14 @@ pipeline_status:
   scale_sheet: not_started
   scene_anchors: not_started
   prop_sheet: not_started
-  gallery_image: not_started
+  gallery_image: complete
+  ucs_core: not_started
+  motion_anchor: not_started
+  height_scale: not_started
+  interaction_anchor: not_started
+  scene_anchor: not_started
+  dynamic_pose: not_started
+  final_ucs: not_started
 notes: 'Lucienâ€™s body should read as slender and lightly built rather than athletic.
   The silhouette should emphasize the contrast between his narrow torso and the rounded
   glute-dominant lower body.

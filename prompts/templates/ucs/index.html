@@ -16,7 +16,7 @@
         <link rel="prev" href="../body/">
       
       
-        <link rel="next" href="../outfits/">
+        <link rel="next" href="../scenes/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -1031,7 +1031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../face/" class="md-nav__link">
+      <a href="../face.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1052,7 +1052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../anatomy/" class="md-nav__link">
+      <a href="../anatomy.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1140,6 +1140,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#ucs-core-panels" class="md-nav__link">
+    <span class="md-ellipsis">
+      UCS Core Panels
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ucs-front-face-panel" class="md-nav__link">
     <span class="md-ellipsis">
       UCS Front Face Panel
@@ -1164,7 +1173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../outfits/" class="md-nav__link">
+      <a href="../outfits.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1535,6 +1544,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#ucs-core-panels" class="md-nav__link">
+    <span class="md-ellipsis">
+      UCS Core Panels
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ucs-front-face-panel" class="md-nav__link">
     <span class="md-ellipsis">
       UCS Front Face Panel
@@ -1566,17 +1584,27 @@
 <li>body views</li>
 <li>silhouette reference</li>
 <li>expression example</li>
-<li>dynamic pose</li>
 </ul>
+<p>Additional panels such as the dynamic pose are added when assembling the final UCS.</p>
 <p>These templates define the prompts used to generate each panel and the guidance for assembling the full UCS.</p>
+<hr />
+<h2 id="ucs-core-panels">UCS Core Panels</h2>
 <hr />
 <h2 id="ucs-front-face-panel">UCS Front Face Panel</h2>
 <p>Defines the front face panel used in the UCS.</p>
-<h1 id="ucs-panel-front-face">UCS Panel – Front Face</h1>
-<p>Attach:</p>
+<h1 id="12a-ucs-front-face-panel">12A UCS Front Face Panel</h1>
+<p>Required inputs</p>
 <ul>
-<li>Face Anchor Sheet</li>
-<li>Expression Sheet</li>
+<li>1D Face Anchor</li>
+<li>2 Hair Sheet</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>9 Expression Sheet</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>body sheets</li>
 </ul>
 <pre><code>Character:
 [CHARACTER_BLOCK]
@@ -1610,11 +1638,19 @@ Use:
 <hr />
 <h2 id="ucs-three-quarter-face-panel">UCS Three-Quarter Face Panel</h2>
 <p>Defines the three-quarter face panel used in the UCS.</p>
-<h1 id="ucs-panel-three-quarter-face">UCS Panel – Three-Quarter Face</h1>
-<p>Attach:</p>
+<h1 id="12b-ucs-34-face-panel">12B UCS 3/4 Face Panel</h1>
+<p>Required inputs</p>
 <ul>
-<li>Face Anchor Sheet</li>
-<li>Front Face Reference</li>
+<li>12A UCS Front Face Panel</li>
+<li>1D Face Anchor</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>2 Hair Sheet</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>body sheets</li>
 </ul>
 <pre><code>Character:
 [CHARACTER_BLOCK]
@@ -1646,12 +1682,20 @@ Use:
 <hr />
 <h2 id="ucs-profile-face-panel">UCS Profile Face Panel</h2>
 <p>Defines the side-profile face panel used in the UCS.</p>
-<h1 id="ucs-panel-profile-face">UCS Panel – Profile Face</h1>
-<p>Attach:</p>
+<h1 id="12c-ucs-profile-face-panel">12C UCS Profile Face Panel</h1>
+<p>Required inputs</p>
 <ul>
-<li>Face Anchor Sheet</li>
-<li>Front Face Reference</li>
-<li>Three-Quarter Face Reference</li>
+<li>12A UCS Front Face Panel</li>
+<li>12B UCS 3/4 Face Panel</li>
+<li>1D Face Anchor</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>2 Hair Sheet</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>body sheets</li>
 </ul>
 <pre><code>Character:
 [CHARACTER_BLOCK]
@@ -1681,14 +1725,61 @@ Use:
 [SQUARE_REFERENCE_FORMAT_BLOCK]
 </code></pre>
 <hr />
-<h2 id="ucs-front-body-panel">UCS Front Body Panel</h2>
-<p>Defines the front full-body panel used in the UCS.</p>
-<h1 id="ucs-panel-body-front">UCS Panel – Body Front</h1>
-<p>Attach:</p>
+<h2 id="ucs-expression-panel">UCS Expression Panel</h2>
+<p>Defines the facial expression panel used in the UCS.</p>
+<h1 id="12g-ucs-expression-panel">12G UCS Expression Panel</h1>
+<p>Required inputs</p>
 <ul>
-<li>Body Anchor Sheet</li>
-<li>Anatomy Sheet</li>
-<li>Turnaround Sheet</li>
+<li>1D Face Anchor</li>
+<li>9 Expression Sheet</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>2 Hair Sheet</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>body sheets</li>
+</ul>
+<pre><code>Character:
+[CHARACTER_BLOCK]
+
+Panel:
+expressive portrait
+
+View:
+three-quarter face view
+
+Focus:
+character personality
+facial expression range
+maintaining facial identity during expression
+
+Output requirements:
+clean professional reference panel
+expression clearly readable
+identity consistent with face anchor
+
+Use:
+[REFERENCE_PANEL_BLOCK_STACK]
+[SQUARE_REFERENCE_FORMAT_BLOCK]
+</code></pre>
+<hr />
+<h2 id="ucs-body-front-panel">UCS Body Front Panel</h2>
+<p>Defines the front full-body panel used in the UCS.</p>
+<h1 id="12d-ucs-body-front-panel">12D UCS Body Front Panel</h1>
+<p>Required inputs</p>
+<ul>
+<li>4 Body Anchor</li>
+<li>8 Turnaround</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>3E Anatomy Sheet</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>outfit sheets</li>
 </ul>
 <pre><code>Character:
 [CHARACTER_BLOCK]
@@ -1723,13 +1814,21 @@ Use:
 [PORTRAIT_SHEET_FORMAT_BLOCK]
 </code></pre>
 <hr />
-<h2 id="ucs-side-body-panel">UCS Side Body Panel</h2>
+<h2 id="ucs-body-side-panel">UCS Body Side Panel</h2>
 <p>Defines the side full-body panel used in the UCS.</p>
-<h1 id="ucs-panel-body-side">UCS Panel – Body Side</h1>
-<p>Attach:</p>
+<h1 id="12e-ucs-body-side-panel">12E UCS Body Side Panel</h1>
+<p>Required inputs</p>
 <ul>
-<li>Body Anchor Sheet</li>
-<li>Turnaround Sheet</li>
+<li>4 Body Anchor</li>
+<li>8 Turnaround</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>3E Anatomy Sheet</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>outfit sheets</li>
 </ul>
 <pre><code>Character:
 [CHARACTER_BLOCK]
@@ -1763,11 +1862,19 @@ Use:
 <hr />
 <h2 id="ucs-silhouette-panel">UCS Silhouette Panel</h2>
 <p>Defines the silhouette panel used in the UCS.</p>
-<h1 id="ucs-panel-silhouette">UCS Panel – Silhouette</h1>
-<p>Attach:</p>
+<h1 id="12f-ucs-silhouette-panel">12F UCS Silhouette Panel</h1>
+<p>Required inputs</p>
 <ul>
-<li>Silhouette Sheet</li>
-<li>Body Anchor Sheet</li>
+<li>4 Body Anchor</li>
+<li>7 Silhouette</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>none</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>outfit sheets</li>
 </ul>
 <pre><code>Character:
 [CHARACTER_BLOCK]
@@ -1801,46 +1908,24 @@ Use:
 [PORTRAIT_SHEET_FORMAT_BLOCK]
 </code></pre>
 <hr />
-<h2 id="ucs-expression-panel">UCS Expression Panel</h2>
-<p>Defines the facial expression panel used in the UCS.</p>
-<h1 id="ucs-panel-expression">UCS Panel – Expression</h1>
-<p>Attach:</p>
-<ul>
-<li>Expression Sheet</li>
-<li>Face Anchor Sheet</li>
-</ul>
-<pre><code>Character:
-[CHARACTER_BLOCK]
-
-Panel:
-expressive portrait
-
-View:
-three-quarter face view
-
-Focus:
-character personality
-facial expression range
-maintaining facial identity during expression
-
-Output requirements:
-clean professional reference panel
-expression clearly readable
-identity consistent with face anchor
-
-Use:
-[REFERENCE_PANEL_BLOCK_STACK]
-[SQUARE_REFERENCE_FORMAT_BLOCK]
-</code></pre>
+<h2 id="extended-panels">Extended Panels</h2>
 <hr />
 <h2 id="ucs-dynamic-pose-panel">UCS Dynamic Pose Panel</h2>
 <p>Defines the dynamic pose panel used in the UCS.</p>
-<h1 id="ucs-panel-dynamic-pose">UCS Panel – Dynamic Pose</h1>
-<p>Attach:</p>
+<h1 id="21-ucs-dynamic-pose-panel">21 UCS Dynamic Pose Panel</h1>
+<p>Required inputs</p>
 <ul>
-<li>Pose Sheet</li>
-<li>Body Anchor Sheet</li>
-<li>Signature Outfit Sheet</li>
+<li>4 Body Anchor</li>
+<li>13 Signature Outfit</li>
+<li>16 Pose Sheet</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>6 Muscle Tension</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>UCS Core</li>
 </ul>
 <pre><code>Character:
 [CHARACTER_BLOCK]
@@ -1870,7 +1955,7 @@ Use:
 [PORTRAIT_SHEET_FORMAT_BLOCK]
 </code></pre>
 <hr />
-<h2 id="ucs-assembly-notes">UCS Assembly Notes</h2>
+<h2 id="ucs-assembly">UCS Assembly</h2>
 <p>Provides guidance for assembling the full UCS from its component panels.</p>
 <h1 id="ultimate-character-sheet-ucs">Ultimate Character Sheet (UCS)</h1>
 <p>The UCS combines the most important character reference panels into a single sheet.</p>
@@ -1900,6 +1985,33 @@ Use:
 <li>Expression</li>
 <li>Dynamic pose</li>
 </ol>
+<h2 id="12h-ucs-core-assembly">12H UCS Core Assembly</h2>
+<p>Required inputs</p>
+<ul>
+<li>12A–12G panels</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>none</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>dynamic pose panels</li>
+</ul>
+<h2 id="22-final-ucs-assembly">22 Final UCS Assembly</h2>
+<p>Required inputs</p>
+<ul>
+<li>12H UCS Core</li>
+<li>21 Dynamic Pose Panel</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>none</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>additional panels</li>
+</ul>
 
 
 

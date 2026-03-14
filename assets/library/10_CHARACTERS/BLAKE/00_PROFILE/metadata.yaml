@@ -115,7 +115,14 @@ pipeline_status:
   scale_sheet: not_started
   scene_anchors: not_started
   prop_sheet: not_started
-  gallery_image: not_started
+  gallery_image: complete
+  ucs_core: not_started
+  motion_anchor: not_started
+  height_scale: not_started
+  interaction_anchor: not_started
+  scene_anchor: not_started
+  dynamic_pose: not_started
+  final_ucs: not_started
 notes: 'Blakeâ€™s visual identity is defined by a tall, powerful athletic frame and
   confident relaxed demeanor. His style favors fitted athletic clothing that emphasizes
   his upper-body strength and broad shoulders.

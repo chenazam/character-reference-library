@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://charreflib.chenazam.com/prompts/templates/scenes/">
       
       
-        <link rel="prev" href="../outfits/">
+        <link rel="prev" href="../ucs/">
       
       
         <link rel="next" href="../../../pipeline/overview/">
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#motion-and-scene-templates" class="md-skip">
+        <a href="#scene-templates" class="md-skip">
           Skip to content
         </a>
       
@@ -1031,7 +1031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../face/" class="md-nav__link">
+      <a href="../face.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1052,7 +1052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../anatomy/" class="md-nav__link">
+      <a href="../anatomy.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1115,7 +1115,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../outfits/" class="md-nav__link">
+      <a href="../outfits.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1182,9 +1182,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pose-sheet" class="md-nav__link">
+  <a href="#lifestyle-scene-anchor-sheet" class="md-nav__link">
     <span class="md-ellipsis">
-      Pose Sheet
+      Lifestyle Scene Anchor Sheet
     </span>
   </a>
   
@@ -1535,9 +1535,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pose-sheet" class="md-nav__link">
+  <a href="#lifestyle-scene-anchor-sheet" class="md-nav__link">
     <span class="md-ellipsis">
-      Pose Sheet
+      Lifestyle Scene Anchor Sheet
     </span>
   </a>
   
@@ -1558,150 +1558,26 @@
                   
 
 
-<h1 id="motion-and-scene-templates">Motion and Scene Templates</h1>
-<p>These templates show how the character behaves in motion, in relation to scale, with other characters, and inside environments.</p>
-<p>They are typically generated <strong>after the core reference pipeline is complete</strong>.</p>
-<hr />
-<h2 id="pose-sheet">Pose Sheet</h2>
-<p>Shows a range of body poses for the character.</p>
-<h1 id="pose-sheet_1">Pose Sheet</h1>
-<p>Attach:</p>
-<ul>
-<li>Ultimate Character Sheet</li>
-<li>Signature Outfit Sheet</li>
-</ul>
-<pre><code>Create a pose reference sheet for a character design pipeline.
-
-Character:
-[CHARACTER_BLOCK]
-
-Panels:
-standing pose
-walking pose
-sitting pose
-action pose
-gesture pose
-
-Focus:
-natural body mechanics
-gesture readability
-maintaining character proportions in motion
-
-Output requirements:
-clean professional pose sheet
-clear readable poses
-consistent identity across panels
-
-Use:
-[REFERENCE_SHEET_BLOCK_STACK]
-[PORTRAIT_SHEET_FORMAT_BLOCK]
-</code></pre>
-<hr />
-<h2 id="motion-anchor-sheet">Motion Anchor Sheet</h2>
-<p>Shows the character in basic movement sequences.</p>
-<h1 id="motion-anchor-sheet_1">Motion Anchor Sheet</h1>
-<p>Attach:</p>
-<ul>
-<li>Pose Sheet</li>
-<li>Ultimate Character Sheet</li>
-</ul>
-<pre><code>Create a motion reference sheet showing how the character moves.
-
-Character:
-[CHARACTER_BLOCK]
-
-Panels:
-walking motion
-running motion
-turning motion
-gesture motion
-
-Focus:
-body mechanics
-weight shift
-movement rhythm
-
-Output requirements:
-clean motion reference sheet
-consistent character identity
-clear readable movement
-
-Use:
-[REFERENCE_SHEET_BLOCK_STACK]
-[LANDSCAPE_SHEET_FORMAT_BLOCK]
-</code></pre>
-<hr />
-<h2 id="height-scale-sheet">Height Scale Sheet</h2>
-<p>Shows the character’s height in a structured measurement reference.</p>
-<h1 id="height-scale-sheet_1">Height Scale Sheet</h1>
-<p>Attach:</p>
-<ul>
-<li>Ultimate Character Sheet</li>
-<li>Turnaround Sheet</li>
-</ul>
-<pre><code>Create a height scale reference sheet.
-
-Character:
-[CHARACTER_BLOCK]
-
-Panels:
-character height reference
-height markers
-
-Focus:
-clear height measurement
-body proportion readability
-
-Output requirements:
-clean scale reference sheet
-character standing upright
-height clearly indicated
-
-Use:
-[REFERENCE_SHEET_BLOCK_STACK]
-[PORTRAIT_SHEET_FORMAT_BLOCK]
-</code></pre>
-<hr />
-<h2 id="interaction-anchor-sheet">Interaction Anchor Sheet</h2>
-<p>Shows multiple characters interacting in a controlled reference setup.</p>
-<h1 id="interaction-anchor-sheet_1">Interaction Anchor Sheet</h1>
-<p>Attach:</p>
-<ul>
-<li>Ultimate Character Sheet (each character)</li>
-<li>Signature Outfit Sheet</li>
-</ul>
-<pre><code>Create a character interaction reference sheet.
-
-Characters:
-[CHARACTER_BLOCKS]
-
-Panels:
-conversation interaction
-shared action
-cooperative gesture
-
-Focus:
-character scale relationship
-body language interaction
-gesture clarity
-
-Output requirements:
-clean interaction reference sheet
-consistent identity for each character
-clear spatial relationship
-
-Use:
-[SCENE_BLOCK_STACK]
-[LANDSCAPE_SHEET_FORMAT_BLOCK]
-</code></pre>
+<h1 id="scene-templates">Scene Templates</h1>
+<p>Templates used to place the character into environment-driven scenes.
+These references help establish how the character appears in contextual settings.</p>
 <hr />
 <h2 id="lifestyle-scene-anchor-sheet">Lifestyle Scene Anchor Sheet</h2>
 <p>Shows the character in an environment-driven scene reference.</p>
-<h1 id="lifestyle-scene-anchor-sheet_1">Lifestyle Scene Anchor Sheet</h1>
-<p>Attach:</p>
+<h1 id="20-lifestyle-scene-anchor">20 Lifestyle Scene Anchor</h1>
+<p>Required inputs</p>
 <ul>
-<li>Ultimate Character Sheet</li>
-<li>Signature Outfit Sheet</li>
+<li>13 Signature Outfit</li>
+<li>16 Pose Sheet</li>
+<li>19 Interaction Anchor</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>environment reference images</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>UCS sheets</li>
 </ul>
 <pre><code>Create a lifestyle scene reference for a character.
 

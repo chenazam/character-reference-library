@@ -1039,7 +1039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../templates/face/" class="md-nav__link">
+      <a href="../templates/face.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1060,7 +1060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../templates/anatomy/" class="md-nav__link">
+      <a href="../templates/anatomy.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1123,7 +1123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../templates/outfits/" class="md-nav__link">
+      <a href="../templates/outfits.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1501,123 +1501,717 @@
 
 
 <h1 id="reference-attachment-guide">Reference Attachment Guide</h1>
-<p>This page explains which reference sheets should be attached when generating new images.</p>
-<p>Attaching the correct references significantly improves character consistency and reduces identity drift.</p>
+<p>This page defines which reference sheets should be attached when generating new images in the character pipeline.</p>
+<p>Attaching the correct references significantly improves:</p>
+<ul>
+<li>character consistency</li>
+<li>anatomical stability</li>
+<li>clothing continuity</li>
+<li>pose realism</li>
+<li>identity preservation</li>
+</ul>
+<p>The goal is <strong>not to attach every available reference</strong>, but to attach the <strong>most relevant references</strong> for the task.</p>
 <hr />
-<h1 id="identity-pack">Identity Pack</h1>
-<p>The most important references for a character are:</p>
-<p>• Face Anchor Sheet<br />
-• Anatomy Sheet<br />
-• Body Anchor Sheet<br />
-• Ultimate Character Sheet<br />
-• Signature Outfit Sheet</p>
-<p>Whenever possible, attach these references when generating new images.</p>
+<h1 id="reference-categories">Reference Categories</h1>
+<p>References fall into three categories.</p>
+<h2 id="required-inputs">Required Inputs</h2>
+<p>These references are necessary to generate the asset reliably.</p>
+<p>They define core identity or structural constraints.</p>
+<hr />
+<h2 id="optional-inputs">Optional Inputs</h2>
+<p>These references may improve results but are not strictly necessary.</p>
+<p>Attach them when:</p>
+<ul>
+<li>identity drift occurs</li>
+<li>the generator struggles with proportions</li>
+<li>more guidance is beneficial</li>
+</ul>
+<hr />
+<h2 id="avoid-by-default">Avoid by Default</h2>
+<p>These references should normally <strong>not be attached</strong>, because they can:</p>
+<ul>
+<li>introduce conflicting information</li>
+<li>overload the prompt</li>
+<li>bias the generator toward unrelated visual elements</li>
+</ul>
+<p>Only attach them if they are explicitly needed.</p>
+<hr />
+<h1 id="identity-anchor-hierarchy">Identity Anchor Hierarchy</h1>
+<p>The following sheets act as identity anchors for the character.</p>
+<p>They should override conflicting information from later assets.</p>
+<ol>
+<li><strong>Face Anchor (1D)</strong> — authoritative for facial structure</li>
+<li><strong>Body Anchor (4)</strong> — authoritative for body proportions</li>
+<li><strong>UCS Core (12H)</strong> — authoritative for consolidated character identity</li>
+<li><strong>Signature Outfit (13)</strong> — authoritative for clothing identity</li>
+</ol>
+<p>If identity drift occurs, prioritize earlier anchors.</p>
 <hr />
 <h1 id="pipeline-reference-attachments">Pipeline Reference Attachments</h1>
-<h2 id="face-identity">Face Identity</h2>
-<p>Attach:</p>
-<p>• source face reference<br />
-• existing face anchors (if available)</p>
+<h2 id="quick-reference-map">Quick Reference Map</h2>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Main purpose</th>
+<th>Best primary references</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4 Body Anchor</td>
+<td>stable body identity</td>
+<td>1D, 2, 3E</td>
+</tr>
+<tr>
+<td>8 Turnaround</td>
+<td>canonical full-body reference</td>
+<td>4, 7, 1D</td>
+</tr>
+<tr>
+<td>9 Expression Sheet</td>
+<td>expressive facial identity</td>
+<td>1D, 2</td>
+</tr>
+<tr>
+<td>10 Hand Sheet</td>
+<td>hand anatomy/style</td>
+<td>3E, 4</td>
+</tr>
+<tr>
+<td>11 Gallery Image</td>
+<td>early presentation image</td>
+<td>1D, 2, 7, 8, 9</td>
+</tr>
+<tr>
+<td>12H UCS Core</td>
+<td>consolidated character identity</td>
+<td>12A–12G</td>
+</tr>
+<tr>
+<td>13 Signature Outfit</td>
+<td>canonical clothing identity</td>
+<td>12H, 8</td>
+</tr>
+<tr>
+<td>16 Pose Sheet</td>
+<td>clothed body language</td>
+<td>13, 8</td>
+</tr>
+<tr>
+<td>22 Final UCS</td>
+<td>enriched final character sheet</td>
+<td>12H, 21</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h2 id="hair-sheet">Hair Sheet</h2>
-<p>Attach:</p>
-<p>• Face Anchor Sheet</p>
+<h2 id="dependency-backbone">Dependency Backbone</h2>
+<pre><code class="language-text">1D Face Anchor
+  ↓
+2 Hair Sheet
+  ↓
+3E Anatomy Sheet
+  ↓
+4 Body Anchor
+  ├─ 5 Proportion Grid
+  ├─ 6 Muscle Tension
+  └─ 7 Silhouette
+        ↓
+        8 Turnaround
+          ├─ 9 Expression Sheet
+          ├─ 10 Hand Sheet
+          ├─ 11 Gallery Image
+          └─ 12A–12G UCS Panels
+                   ↓
+                  12H UCS Core
+                    ↓
+                   13 Signature Outfit
+                    ↓
+             14 Design Language / 15 Wardrobes
+                    ↓
+         16 Pose / 17 Motion / 18 Scale / 19 Interaction / 20 Scenes
+                    ↓
+              21 Dynamic Pose Panel
+                    ↓
+                22 Final UCS
+</code></pre>
 <hr />
-<h2 id="anatomy-generation">Anatomy Generation</h2>
-<p>Attach:</p>
-<p>• Face Anchor Sheet<br />
-• Hair Sheet</p>
+<h1 id="stage-1-face-identity">STAGE 1 — Face Identity</h1>
+<h2 id="1a-front-face">1A Front Face</h2>
+<p>Required inputs</p>
+<ul>
+<li>face source references (if available)</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>none</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>other character sheets</li>
+</ul>
 <hr />
-<h2 id="body-anchor-generation">Body Anchor Generation</h2>
-<p>Attach:</p>
-<p>• Anatomy Sheet<br />
-• Face Anchor Sheet</p>
+<h2 id="1b-34-face">1B 3/4 Face</h2>
+<p>Required inputs</p>
+<ul>
+<li>1A Front Face</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>face source references</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>anatomy sheets</li>
+<li>UCS panels</li>
+</ul>
 <hr />
-<h2 id="silhouette-sheet">Silhouette Sheet</h2>
-<p>Attach:</p>
-<p>• Body Anchor Sheet<br />
-• Anatomy Sheet</p>
+<h2 id="1c-profile-face">1C Profile Face</h2>
+<p>Required inputs</p>
+<ul>
+<li>1A Front Face</li>
+<li>1B 3/4 Face</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>face source references</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>body references</li>
+</ul>
 <hr />
-<h2 id="turnaround-sheet">Turnaround Sheet</h2>
-<p>Attach:</p>
-<p>• Body Anchor Sheet<br />
-• Silhouette Sheet<br />
-• Face Anchor Sheet</p>
+<h2 id="1d-face-anchor">1D Face Anchor</h2>
+<p>Required inputs</p>
+<ul>
+<li>1A Front Face</li>
+<li>1B 3/4 Face</li>
+<li>1C Profile Face</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>none</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>UCS sheets</li>
+<li>style sheets</li>
+</ul>
 <hr />
-<h2 id="expression-sheet">Expression Sheet</h2>
-<p>Attach:</p>
-<p>• Face Anchor Sheet<br />
-• Turnaround Sheet</p>
+<h1 id="stage-2-hair-identity">STAGE 2 — Hair Identity</h1>
+<h2 id="2-hair-sheet">2 Hair Sheet</h2>
+<p>Required inputs</p>
+<ul>
+<li>1D Face Anchor</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>hair reference photos</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>anatomy sheets</li>
+<li>UCS sheets</li>
+</ul>
 <hr />
-<h2 id="hand-sheet">Hand Sheet</h2>
-<p>Attach:</p>
-<p>• Anatomy Sheet<br />
-• Turnaround Sheet</p>
+<h1 id="stage-3-physique-anchoring">STAGE 3 — Physique Anchoring</h1>
+<h2 id="3a-anatomy-front">3A Anatomy Front</h2>
+<p>Required inputs</p>
+<ul>
+<li>1D Face Anchor</li>
+<li>2 Hair Sheet</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>body reference images</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>UCS sheets</li>
+<li>outfit references</li>
+</ul>
 <hr />
-<h2 id="ultimate-character-sheet">Ultimate Character Sheet</h2>
-<p>Attach:</p>
-<p>• Face Anchor Sheet<br />
-• Anatomy Sheet<br />
-• Body Anchor Sheet<br />
-• Silhouette Sheet<br />
-• Turnaround Sheet</p>
+<h2 id="3b-anatomy-side">3B Anatomy Side</h2>
+<p>Required inputs</p>
+<ul>
+<li>3A Anatomy Front</li>
+<li>1D Face Anchor</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>body references</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>UCS sheets</li>
+</ul>
 <hr />
-<h2 id="signature-outfit-sheet">Signature Outfit Sheet</h2>
-<p>Attach:</p>
-<p>• Ultimate Character Sheet<br />
-• Body Anchor Sheet<br />
-• Turnaround Sheet</p>
+<h2 id="3c-anatomy-back">3C Anatomy Back</h2>
+<p>Required inputs</p>
+<ul>
+<li>3A Anatomy Front</li>
+<li>3B Anatomy Side</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>body references</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>UCS sheets</li>
+</ul>
 <hr />
-<h2 id="wardrobe-sheets">Wardrobe Sheets</h2>
-<p>Attach:</p>
-<p>• Ultimate Character Sheet<br />
-• Signature Outfit Sheet</p>
+<h2 id="3d-anatomy-glutes-optional">3D Anatomy Glutes (optional)</h2>
+<p>Required inputs</p>
+<ul>
+<li>3A Anatomy Front</li>
+<li>3B Anatomy Side</li>
+<li>3C Anatomy Back</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>athletic reference photos</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>UCS sheets</li>
+</ul>
 <hr />
-<h2 id="design-language-sheets">Design Language Sheets</h2>
-<p>Attach:</p>
-<p>• Ultimate Character Sheet<br />
-• Signature Outfit Sheet
-• Body Anchor Sheet
-• style inspiration references (optional)</p>
+<h2 id="3e-anatomy-sheet">3E Anatomy Sheet</h2>
+<p>Required inputs</p>
+<ul>
+<li>3A Anatomy Front</li>
+<li>3B Anatomy Side</li>
+<li>3C Anatomy Back</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>3D Anatomy Glutes</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>clothing references</li>
+</ul>
 <hr />
-<h2 id="pose-sheets">Pose Sheets</h2>
-<p>Attach:</p>
-<p>• Ultimate Character Sheet<br />
-• Signature Outfit Sheet</p>
+<h1 id="stage-4-structural-anchors">STAGE 4 — Structural Anchors</h1>
+<h2 id="4-body-anchor">4 Body Anchor</h2>
+<p>Required inputs</p>
+<ul>
+<li>1D Face Anchor</li>
+<li>2 Hair Sheet</li>
+<li>3E Anatomy Sheet</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>3D Anatomy Glutes</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>UCS sheets</li>
+<li>outfit references</li>
+</ul>
 <hr />
-<h2 id="motion-sheets">Motion Sheets</h2>
-<p>Attach:</p>
-<p>• Pose Sheet<br />
-• Ultimate Character Sheet</p>
+<h2 id="5-proportion-grid">5 Proportion Grid</h2>
+<p>Required inputs</p>
+<ul>
+<li>4 Body Anchor</li>
+<li>3E Anatomy Sheet</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>none</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>UCS sheets</li>
+</ul>
 <hr />
-<h2 id="height-scale-sheets">Height / Scale Sheets</h2>
-<p>Attach:</p>
-<p>• Ultimate Character Sheet
-• Turnaround Sheet</p>
-<p>If comparing characters, attach UCS for each character.</p>
+<h2 id="6-muscle-tension">6 Muscle Tension</h2>
+<p>Required inputs</p>
+<ul>
+<li>4 Body Anchor</li>
+<li>3E Anatomy Sheet</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>athletic reference images</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>UCS sheets</li>
+</ul>
 <hr />
-<h2 id="interaction-anchors">Interaction Anchors</h2>
-<p>Attach:</p>
-<p>• Ultimate Character Sheet for each character
-• Signature Outfit Sheet for each character
-• Pose Sheets (optional)</p>
-<p>--</p>
-<h2 id="lifestyle-scene-anchors">Lifestyle Scene Anchors</h2>
-<p>Attach:</p>
-<p>• Ultimate Character Sheet<br />
-• Signature Outfit Sheet<br />
-• environment references if available</p>
+<h2 id="7-silhouette">7 Silhouette</h2>
+<p>Required inputs</p>
+<ul>
+<li>4 Body Anchor</li>
+<li>3E Anatomy Sheet</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>5 Proportion Grid</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>outfit sheets</li>
+<li>UCS sheets</li>
+</ul>
+<hr />
+<h2 id="8-turnaround">8 Turnaround</h2>
+<p>Required inputs</p>
+<ul>
+<li>4 Body Anchor</li>
+<li>7 Silhouette</li>
+<li>1D Face Anchor</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>3E Anatomy Sheet</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>outfit sheets</li>
+</ul>
+<hr />
+<h1 id="stage-5-identity-extensions">STAGE 5 — Identity Extensions</h1>
+<h2 id="9-expression-sheet">9 Expression Sheet</h2>
+<p>Required inputs</p>
+<ul>
+<li>1D Face Anchor</li>
+<li>2 Hair Sheet</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>8 Turnaround</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>UCS sheets</li>
+</ul>
+<hr />
+<h2 id="10-hand-sheet">10 Hand Sheet</h2>
+<p>Required inputs</p>
+<ul>
+<li>3E Anatomy Sheet</li>
+<li>4 Body Anchor</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>8 Turnaround</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>UCS sheets</li>
+</ul>
+<hr />
+<h2 id="11-gallery-image">11 Gallery Image</h2>
+<p>Required inputs</p>
+<ul>
+<li>1D Face Anchor</li>
+<li>2 Hair Sheet</li>
+<li>7 Silhouette</li>
+<li>8 Turnaround</li>
+<li>9 Expression Sheet</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>4 Body Anchor</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>UCS sheets</li>
+<li>wardrobe sheets</li>
+</ul>
+<hr />
+<h1 id="stage-6-ucs-core-generation">STAGE 6 — UCS Core Generation</h1>
+<h2 id="12a-ucs-front-face-panel">12A UCS Front Face Panel</h2>
+<p>Required inputs</p>
+<ul>
+<li>1D Face Anchor</li>
+<li>2 Hair Sheet</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>9 Expression Sheet</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>body sheets</li>
+</ul>
+<hr />
+<h2 id="12b-ucs-34-face-panel">12B UCS 3/4 Face Panel</h2>
+<p>Required inputs</p>
+<ul>
+<li>12A UCS Front Face Panel</li>
+<li>1D Face Anchor</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>2 Hair Sheet</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>body sheets</li>
+</ul>
+<hr />
+<h2 id="12c-ucs-profile-face-panel">12C UCS Profile Face Panel</h2>
+<p>Required inputs</p>
+<ul>
+<li>12A UCS Front Face Panel</li>
+<li>12B UCS 3/4 Face Panel</li>
+<li>1D Face Anchor</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>2 Hair Sheet</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>body sheets</li>
+</ul>
+<hr />
+<h2 id="12d-ucs-body-front-panel">12D UCS Body Front Panel</h2>
+<p>Required inputs</p>
+<ul>
+<li>4 Body Anchor</li>
+<li>8 Turnaround</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>3E Anatomy Sheet</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>outfit sheets</li>
+</ul>
+<hr />
+<h2 id="12e-ucs-body-side-panel">12E UCS Body Side Panel</h2>
+<p>Required inputs</p>
+<ul>
+<li>4 Body Anchor</li>
+<li>8 Turnaround</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>3E Anatomy Sheet</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>outfit sheets</li>
+</ul>
+<hr />
+<h2 id="12f-ucs-silhouette-panel">12F UCS Silhouette Panel</h2>
+<p>Required inputs</p>
+<ul>
+<li>4 Body Anchor</li>
+<li>7 Silhouette</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>none</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>outfit sheets</li>
+</ul>
+<hr />
+<h2 id="12g-ucs-expression-panel">12G UCS Expression Panel</h2>
+<p>Required inputs</p>
+<ul>
+<li>1D Face Anchor</li>
+<li>9 Expression Sheet</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>2 Hair Sheet</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>body sheets</li>
+</ul>
+<hr />
+<h2 id="12h-ucs-core-assembly">12H UCS Core Assembly</h2>
+<p>Required inputs</p>
+<ul>
+<li>12A–12G panels</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>none</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>dynamic pose panels</li>
+</ul>
+<hr />
+<h1 id="stage-7-style-anchoring">STAGE 7 — Style Anchoring</h1>
+<h2 id="13-signature-outfit">13 Signature Outfit</h2>
+<p>Required inputs</p>
+<ul>
+<li>12H UCS Core</li>
+<li>8 Turnaround</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>4 Body Anchor</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>wardrobe sheets</li>
+</ul>
+<hr />
+<h2 id="14-design-language-sheet">14 Design Language Sheet</h2>
+<p>Required inputs</p>
+<ul>
+<li>13 Signature Outfit</li>
+<li>7 Silhouette</li>
+<li>8 Turnaround</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>style reference images</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>UCS panels</li>
+</ul>
+<hr />
+<h2 id="15-additional-wardrobes">15 Additional Wardrobes</h2>
+<p>Required inputs</p>
+<ul>
+<li>13 Signature Outfit</li>
+<li>8 Turnaround</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>14 Design Language Sheet</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>UCS sheets</li>
+</ul>
+<hr />
+<h1 id="stage-8-motion-character-use">STAGE 8 — Motion &amp; Character Use</h1>
+<h2 id="16-pose-sheet">16 Pose Sheet</h2>
+<p>Required inputs</p>
+<ul>
+<li>13 Signature Outfit</li>
+<li>8 Turnaround</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>4 Body Anchor</li>
+<li>6 Muscle Tension</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>UCS sheets</li>
+</ul>
+<hr />
+<h2 id="17-motion-anchor">17 Motion Anchor</h2>
+<p>Required inputs</p>
+<ul>
+<li>16 Pose Sheet</li>
+<li>4 Body Anchor</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>6 Muscle Tension</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>UCS sheets</li>
+</ul>
+<hr />
+<h2 id="18-height-scale-sheet">18 Height Scale Sheet</h2>
+<p>Required inputs</p>
+<ul>
+<li>8 Turnaround</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>4 Body Anchor</li>
+<li>5 Proportion Grid</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>UCS sheets</li>
+</ul>
+<hr />
+<h2 id="19-interaction-anchor">19 Interaction Anchor</h2>
+<p>Required inputs</p>
+<ul>
+<li>13 Signature Outfit</li>
+<li>16 Pose Sheet</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>10 Hand Sheet</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>UCS sheets</li>
+</ul>
+<hr />
+<h2 id="20-lifestyle-scene-anchor">20 Lifestyle Scene Anchor</h2>
+<p>Required inputs</p>
+<ul>
+<li>13 Signature Outfit</li>
+<li>16 Pose Sheet</li>
+<li>19 Interaction Anchor</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>environment reference images</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>UCS sheets</li>
+</ul>
+<hr />
+<h1 id="stage-9-final-ucs">STAGE 9 — Final UCS</h1>
+<h2 id="21-ucs-dynamic-pose-panel">21 UCS Dynamic Pose Panel</h2>
+<p>Required inputs</p>
+<ul>
+<li>4 Body Anchor</li>
+<li>13 Signature Outfit</li>
+<li>16 Pose Sheet</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>6 Muscle Tension</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>UCS Core</li>
+</ul>
+<hr />
+<h2 id="22-final-ucs-assembly">22 Final UCS Assembly</h2>
+<p>Required inputs</p>
+<ul>
+<li>12H UCS Core</li>
+<li>21 Dynamic Pose Panel</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>none</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>additional panels</li>
+</ul>
 <hr />
 <h1 id="reference-priority">Reference Priority</h1>
 <p>If the number of references must be limited, prioritize them in this order:</p>
 <ol>
-<li>Face Anchor Sheet</li>
-<li>Ultimate Character Sheet</li>
-<li>Anatomy Sheet</li>
-<li>Signature Outfit Sheet</li>
-<li>task-specific sheets</li>
+<li>Face Anchor (1D)</li>
+<li>UCS Core (12H)</li>
+<li>Body Anchor (4)</li>
+<li>Signature Outfit (13)</li>
+<li>task-specific references</li>
 </ol>
-<p>This order preserves character identity as strongly as possible.</p>
+<p>This priority order preserves character identity and structural consistency.</p>
 
 
 

@@ -15,18 +15,15 @@ SCRIPTS = [
     "tools/generate_generation_queue.py",
 ]
 
-def commit_generated_changes():
-    run_command(["git", "add", "."], "Staging generated files")
-    run_command(
-        ["git", "commit", "-m", "Auto-update generated reference library"],
-        "Committing generated files",
-    )
 
-def run_command(command, label):
+def run_command(command, label, allow_failure=False):
     print(f"\n\n========== {label} ==========\n")
     result = subprocess.run(command, cwd=ROOT)
-    if result.returncode != 0:
+
+    if result.returncode != 0 and not allow_failure:
         sys.exit(result.returncode)
+
+    return result.returncode
 
 
 def run_python(script):
@@ -41,6 +38,31 @@ def run_mkdocs_gh_deploy():
     run_command(
         [sys.executable, "-m", "mkdocs", "gh-deploy", "--clean"],
         "Running mkdocs gh-deploy",
+    )
+
+
+def has_git_changes():
+    result = subprocess.run(
+        ["git", "status", "--porcelain"],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+    )
+    return bool(result.stdout.strip())
+
+
+def commit_generated_changes():
+    if not has_git_changes():
+        print("\nNo generated changes to commit.\n")
+        return
+
+    run_command(["git", "add", "-A"], "Staging generated changes")
+
+    # Commit all generated updates before build/deploy.
+    # If commit fails for any real reason, stop the pipeline.
+    run_command(
+        ["git", "commit", "-m", "Auto-update generated reference library"],
+        "Committing generated changes",
     )
 
 

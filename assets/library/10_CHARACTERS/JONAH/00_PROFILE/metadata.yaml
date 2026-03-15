@@ -92,7 +92,7 @@ reference_files:
 pipeline_status:
   face_anchor: complete
   hair_sheet: complete
-  anatomy_sheet: not_started
+  anatomy_sheet: complete
   proportion_grid: not_started
   muscle_tension: not_started
   body_anchor: complete

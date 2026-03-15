@@ -1,9 +1,19 @@
 #!/usr/bin/env python3
+"""
+Generate a metadata-driven character height comparison page.
+
+This v1 generator:
+- compares two characters by height and build metadata
+- renders a markdown page
+- includes optional paired asset comparison sections when matching assets exist
+- includes fallback available-reference sections for unmatched assets
+"""
 
 import argparse
-import math
 import pathlib
-import yaml
+import subprocess
+import sys
+
 
 try:
     from tools.library_index import build_library_index
@@ -12,7 +22,38 @@ except ModuleNotFoundError:
 
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-OUTPUT_DIR = ROOT / "docs" / "characters" / "comparisons"
+OUTPUT_DIR = ROOT / "docs" / "comparisons"
+NAV_SCRIPT = ROOT / "tools" / "generate_nav_comparisons.py"
+
+
+COMPARISON_ASSET_TYPES = [
+    ("Body Anchor", "body_anchor"),
+    ("Anatomy Sheet", "anatomy_sheet"),
+    ("Silhouette Sheet", "silhouette_sheet"),
+]
+
+
+def update_comparison_nav() -> None:
+    if not NAV_SCRIPT.exists():
+        print(f"Warning: comparison nav script not found: {NAV_SCRIPT}")
+        return
+
+    result = subprocess.run(
+        [sys.executable, str(NAV_SCRIPT)],
+        capture_output=True,
+        text=True,
+    )
+
+    if result.returncode != 0:
+        print("Warning: failed to update comparison nav.")
+        if result.stdout:
+            print(result.stdout)
+        if result.stderr:
+            print(result.stderr)
+        return
+
+    if result.stdout:
+        print(result.stdout.strip())
 
 
 def load_library():
@@ -20,7 +61,7 @@ def load_library():
 
 
 def get_character_record(library: dict, slug: str) -> dict:
-    for _, record in library.items():
+    for record in library.values():
         metadata = record.get("metadata") or {}
         if metadata.get("slug") == slug:
             return record
@@ -56,11 +97,31 @@ def format_inches_as_feet_and_inches(total_inches: float) -> str:
     return f"{feet}'{inches}\""
 
 
-def height_difference_summary(height_a: int, height_b: int) -> tuple[int, float, str]:
+def prettify_value(value: str) -> str:
+    if not value:
+        return ""
+    return str(value).replace("_", " ").title()
+
+
+def format_list_as_phrase(values) -> str:
+    if not values:
+        return ""
+    if isinstance(values, str):
+        return values.replace("_", " ")
+    cleaned = [str(v).replace("_", " ") for v in values if v]
+    if not cleaned:
+        return ""
+    if len(cleaned) == 1:
+        return cleaned[0]
+    if len(cleaned) == 2:
+        return f"{cleaned[0]} and {cleaned[1]}"
+    return ", ".join(cleaned[:-1]) + f", and {cleaned[-1]}"
+
+
+def height_difference_summary(height_a: int, height_b: int) -> tuple[int, str]:
     diff_cm = abs(height_a - height_b)
-    diff_in = cm_to_inches(diff_cm)
-    diff_label = format_inches_as_feet_and_inches(diff_in)
-    return diff_cm, diff_in, diff_label
+    diff_label = format_inches_as_feet_and_inches(cm_to_inches(diff_cm))
+    return diff_cm, diff_label
 
 
 def ratio_summary(height_a: int, height_b: int) -> tuple[float, str]:
@@ -91,7 +152,6 @@ def make_image_link(record: dict, filename: str) -> str:
     if not matches:
         return ""
 
-    # Prefer stable alphabetical ordering
     matches.sort()
     candidate = matches[0]
 
@@ -111,38 +171,201 @@ def get_reference_links(record: dict, metadata: dict) -> dict:
     }
 
 
-def build_identity_summary(metadata: dict) -> str:
-    build_category = get_nested(metadata, "physical", "build_category", default="")
-    silhouette_anchor = get_nested(metadata, "physical", "silhouette_anchor", default="")
-    silhouette_emphasis = get_nested(metadata, "physical", "silhouette_emphasis", default="")
-    silhouette_keywords = get_nested(metadata, "physical", "silhouette_keywords", default=[]) or []
-
-    parts = []
-    if build_category:
-        parts.append(build_category)
-    if silhouette_anchor:
-        parts.append(silhouette_anchor)
-    if silhouette_emphasis:
-        parts.append(f"{silhouette_emphasis}-emphasis")
-    if silhouette_keywords:
-        parts.append(", ".join(silhouette_keywords))
-
-    return " | ".join(parts) if parts else "No additional build metadata available."
-
-
-def build_optional_section(title: str, char_a_name: str, char_a_link: str, char_b_name: str, char_b_link: str) -> str:
+def build_optional_section(
+    title: str,
+    char_a_name: str,
+    char_a_link: str,
+    char_b_name: str,
+    char_b_link: str,
+) -> str:
     if not char_a_link or not char_b_link:
         return ""
 
     return f"""## {title}
 
-**{char_a_name}**  
-![{char_a_name} {title}]({char_a_link})
-
-**{char_b_name}**  
-![{char_b_name} {title}]({char_b_link})
+<div class="comparison-grid comparison-grid-2">
+  <div class="comparison-item">
+    <div class="comparison-label">{char_a_name}</div>
+    <img src="{char_a_link}" alt="{char_a_name} {title}">
+  </div>
+  <div class="comparison-item">
+    <div class="comparison-label">{char_b_name}</div>
+    <img src="{char_b_link}" alt="{char_b_name} {title}">
+  </div>
+</div>
 
 """
+
+
+def build_available_references_section(name_a: str, refs_a: dict, name_b: str, refs_b: dict) -> str:
+    def item(label: str, link: str, char_name: str) -> str:
+        if not link:
+            return ""
+        return f"""
+  <div class="comparison-item">
+    <div class="comparison-label">{char_name} — {label}</div>
+    <img src="{link}" alt="{char_name} {label}">
+  </div>"""
+
+    items = []
+
+    for label, key in COMPARISON_ASSET_TYPES:
+        a_link = refs_a.get(key, "")
+        b_link = refs_b.get(key, "")
+
+        # If both exist, they are already shown in the dedicated comparison section.
+        if a_link and b_link:
+            continue
+
+        if a_link:
+            items.append(item(label, a_link, name_a))
+        if b_link:
+            items.append(item(label, b_link, name_b))
+
+    if not items:
+        return ""
+
+    return (
+        "## Available References\n\n"
+        "<div class=\"comparison-grid comparison-grid-2\">\n"
+        + "".join(items)
+        + "\n</div>\n\n"
+    )
+
+
+def build_height_chart_section(
+    name_a: str,
+    height_a: int,
+    imperial_a: str,
+    name_b: str,
+    height_b: int,
+    imperial_b: str,
+) -> str:
+    max_height = max(height_a, height_b)
+    if max_height <= 0:
+        return ""
+
+    def pct(height: int) -> float:
+        return (height / max_height) * 100
+
+    a_pct = pct(height_a)
+    b_pct = pct(height_b)
+
+    return f"""## Visual Height Chart
+
+<div class="height-chart">
+  <div class="height-chart__figure">
+    <div class="height-chart__bar-wrap">
+      <div class="height-chart__bar" style="height: {a_pct:.2f}%"></div>
+    </div>
+    <div class="height-chart__label">{name_a}</div>
+    <div class="height-chart__meta">{height_a} cm / {imperial_a}</div>
+  </div>
+
+  <div class="height-chart__figure">
+    <div class="height-chart__bar-wrap">
+      <div class="height-chart__bar" style="height: {b_pct:.2f}%"></div>
+    </div>
+    <div class="height-chart__label">{name_b}</div>
+    <div class="height-chart__meta">{height_b} cm / {imperial_b}</div>
+  </div>
+</div>
+
+"""
+
+
+def build_difference_badges(meta_a: dict, meta_b: dict, diff_category: str) -> str:
+    build_a = prettify_value(get_nested(meta_a, "physical", "build_category", default=""))
+    build_b = prettify_value(get_nested(meta_b, "physical", "build_category", default=""))
+
+    silhouette_a = prettify_value(get_nested(meta_a, "physical", "silhouette_anchor", default=""))
+    silhouette_b = prettify_value(get_nested(meta_b, "physical", "silhouette_anchor", default=""))
+
+    return f"""<div class="comparison-badges">
+  <div class="comparison-badge">
+    <div class="comparison-badge__label">Height Contrast</div>
+    <div class="comparison-badge__value">{prettify_value(diff_category)}</div>
+  </div>
+  <div class="comparison-badge">
+    <div class="comparison-badge__label">Build Contrast</div>
+    <div class="comparison-badge__value">{build_a} vs {build_b}</div>
+  </div>
+  <div class="comparison-badge">
+    <div class="comparison-badge__label">Silhouette Contrast</div>
+    <div class="comparison-badge__value">{silhouette_a} vs {silhouette_b}</div>
+  </div>
+</div>
+
+"""
+
+
+def build_comparison_summary(
+    meta_a: dict,
+    meta_b: dict,
+    diff_cm: int,
+    diff_category: str,
+    taller_name: str,
+    shorter_name: str,
+    refs_a: dict,
+    refs_b: dict,
+) -> str:
+    name_a = meta_a["name"]
+    name_b = meta_b["name"]
+
+    build_a = prettify_value(get_nested(meta_a, "physical", "build_category", default=""))
+    build_b = prettify_value(get_nested(meta_b, "physical", "build_category", default=""))
+
+    anchor_a = prettify_value(get_nested(meta_a, "physical", "silhouette_anchor", default=""))
+    anchor_b = prettify_value(get_nested(meta_b, "physical", "silhouette_anchor", default=""))
+
+    emphasis_a = prettify_value(get_nested(meta_a, "physical", "silhouette_emphasis", default=""))
+    emphasis_b = prettify_value(get_nested(meta_b, "physical", "silhouette_emphasis", default=""))
+
+    keywords_a = format_list_as_phrase(get_nested(meta_a, "physical", "silhouette_keywords", default=[]))
+    keywords_b = format_list_as_phrase(get_nested(meta_b, "physical", "silhouette_keywords", default=[]))
+
+    height_sentence = (
+        f"**{name_a}** and **{name_b}** show a **{prettify_value(diff_category)} height contrast**, "
+        f"with **{taller_name}** standing **{diff_cm} cm** taller than **{shorter_name}**."
+    )
+
+    build_sentence = (
+        f"In terms of build, **{name_a}** reads as **{build_a}**, while **{name_b}** reads as **{build_b}**."
+    )
+
+    silhouettes_exist = bool(refs_a.get("silhouette_sheet") and refs_b.get("silhouette_sheet"))
+    silhouette_sentence = ""
+
+    if silhouettes_exist and anchor_a and anchor_b:
+        silhouette_sentence = (
+            f"Their silhouettes reinforce this contrast: "
+            f"**{name_a}** has a **{anchor_a} silhouette"
+        )
+
+        if emphasis_a:
+            silhouette_sentence += f" with **{emphasis_a} emphasis**"
+
+        if keywords_a:
+            silhouette_sentence += f", characterized by {keywords_a}"
+
+        silhouette_sentence += ", while "
+
+        silhouette_sentence += f"**{name_b}** presents a **{anchor_b} silhouette"
+
+        if emphasis_b:
+            silhouette_sentence += f" with **{emphasis_b} emphasis**"
+
+        if keywords_b:
+            silhouette_sentence += f", characterized by {keywords_b}"
+
+        silhouette_sentence += "."
+
+    sentences = [height_sentence, build_sentence]
+
+    if silhouette_sentence:
+        sentences.append(silhouette_sentence)
+
+    return "## Comparison Summary\n\n" + "\n\n".join(sentences) + "\n\n"
 
 
 def build_markdown(meta_a: dict, meta_b: dict, record_a: dict, record_b: dict) -> str:
@@ -155,22 +378,52 @@ def build_markdown(meta_a: dict, meta_b: dict, record_a: dict, record_b: dict) -
     imperial_a = get_nested(meta_a, "physical", "height_imperial", default="")
     imperial_b = get_nested(meta_b, "physical", "height_imperial", default="")
 
-    diff_cm, diff_in, diff_label = height_difference_summary(height_a, height_b)
+    diff_cm, diff_label = height_difference_summary(height_a, height_b)
     _, pct_label = ratio_summary(height_a, height_b)
     diff_category = difference_category(diff_cm)
 
     taller_name = name_a if height_a > height_b else name_b
     shorter_name = name_b if height_a > height_b else name_a
 
-    summary_a = build_identity_summary(meta_a)
-    summary_b = build_identity_summary(meta_b)
-
     refs_a = get_reference_links(record_a, meta_a)
     refs_b = get_reference_links(record_b, meta_b)
 
-    body_section = build_optional_section("Body Anchor Comparison", name_a, refs_a["body_anchor"], name_b, refs_b["body_anchor"])
-    anatomy_section = build_optional_section("Anatomy Sheet Comparison", name_a, refs_a["anatomy_sheet"], name_b, refs_b["anatomy_sheet"])
-    silhouette_section = build_optional_section("Silhouette Comparison", name_a, refs_a["silhouette_sheet"], name_b, refs_b["silhouette_sheet"])
+    difference_badges_section = build_difference_badges(meta_a, meta_b, diff_category)
+
+    height_chart_section = build_height_chart_section(
+        name_a, height_a, imperial_a,
+        name_b, height_b, imperial_b
+    )
+
+    comparison_summary_section = build_comparison_summary(
+        meta_a,
+        meta_b,
+        diff_cm,
+        diff_category,
+        taller_name,
+        shorter_name,
+        refs_a,
+        refs_b,
+    )
+
+    body_section = build_optional_section(
+        "Body Anchor Comparison",
+        name_a, refs_a["body_anchor"],
+        name_b, refs_b["body_anchor"],
+    )
+    anatomy_section = build_optional_section(
+        "Anatomy Sheet Comparison",
+        name_a, refs_a["anatomy_sheet"],
+        name_b, refs_b["anatomy_sheet"],
+    )
+    silhouette_section = build_optional_section(
+        "Silhouette Comparison",
+        name_a, refs_a["silhouette_sheet"],
+        name_b, refs_b["silhouette_sheet"],
+    )
+    available_references_section = build_available_references_section(
+        name_a, refs_a, name_b, refs_b
+    )
 
     return f"""# {name_a} vs {name_b}
 
@@ -182,16 +435,8 @@ def build_markdown(meta_a: dict, meta_b: dict, record_a: dict, record_b: dict) -
 - **Category:** {diff_category}
 - **Relative scale:** {taller_name} is approximately {pct_label} taller than {shorter_name}
 
-## Physical Contrast
+{difference_badges_section}{height_chart_section}{comparison_summary_section}{body_section}{anatomy_section}{silhouette_section}{available_references_section}"""
 
-### {name_a}
-{summary_a}
-
-### {name_b}
-{summary_b}
-
-{body_section}{anatomy_section}{silhouette_section}"""
-    
 
 def write_output(slug_a: str, slug_b: str, markdown: str) -> pathlib.Path:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -202,7 +447,9 @@ def write_output(slug_a: str, slug_b: str, markdown: str) -> pathlib.Path:
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Generate a simple metadata-driven height comparison page.")
+    parser = argparse.ArgumentParser(
+        description="Generate a simple metadata-driven height comparison page."
+    )
     parser.add_argument("slug_a", help="Slug of the first character")
     parser.add_argument("slug_b", help="Slug of the second character")
     return parser.parse_args()
@@ -222,6 +469,8 @@ def main():
     output_path = write_output(args.slug_a, args.slug_b, markdown)
 
     print(f"Generated comparison page: {output_path}")
+    update_comparison_nav()
+
 
 
 if __name__ == "__main__":

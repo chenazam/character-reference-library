@@ -2,10 +2,13 @@
 
 <div class="character-header">
 
+--8<-- "snippets/galleries/ragnar/hero.md"
+
 <div class="character-overview-text">
 
-<p>1–2 paragraphs of natural prose describing the character’s overall appearance, silhouette, presence, and vibe.  
-This text is used directly for the character page overview.</p>
+<p>Ragnar is an extremely tall warrior whose presence is defined by overwhelming physical scale and dense muscular mass. His frame is broad and heavily shoulder-dominant, with a thick chest, powerful arms, and a solid, grounded stance that makes him appear immovable. Even at rest, his posture carries the calm weight of someone used to physical dominance and battlefield control.</p>
+
+<p>His face is square and strongly structured, with a sharp jawline, calm blue eyes, and a short blond beard that reinforces his rugged masculinity. Long blond hair falls to his shoulders in natural waves, framing a composed and watchful expression. Ragnar’s overall visual identity blends towering warrior strength with stoic restraint, creating a silhouette that reads as massive, controlled, and quietly intimidating.</p>
 
 <p>---</p>
 
@@ -29,6 +32,12 @@ This text is used directly for the character page overview.</p>
 </div>
 
 </div>
+
+---
+
+## Identity
+
+--8<-- "snippets/galleries/ragnar/identity.md"
 
 ---
 

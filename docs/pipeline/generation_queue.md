@@ -40,7 +40,7 @@ Reference assets that still need to be generated.
 
 ## RAGNAR
 
-- next: face_anchor
+- next: proportion_grid
 
 ## TOMMY
 

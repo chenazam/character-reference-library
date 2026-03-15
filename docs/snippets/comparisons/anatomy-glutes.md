@@ -56,4 +56,11 @@
     </a>
   </div>
 
+  <div class="comparison-card">
+    <h3><a href="/characters/ragnar/">Ragnar</a></h3>
+    <a href="/assets/library/10_CHARACTERS/RAGNAR/02_BODY/anatomy/ragnar_anatomy_glutes_v1.png" target="_blank">
+      <img src="/assets/library/10_CHARACTERS/RAGNAR/02_BODY/anatomy/ragnar_anatomy_glutes_v1.png" alt="Ragnar anatomy-glutes">
+    </a>
+  </div>
+
 </div>

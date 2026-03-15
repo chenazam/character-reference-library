@@ -4,20 +4,21 @@
 
 Name: Ragnar
 
-Height: [HEIGHT_CM] cm ([HEIGHT_IMPERIAL])
+Height: 208 cm (6'10")
 
-Build Type: [lean / athletic / muscular / heavyset / etc.]
+Build Type: heavy muscular, shoulder-dominant power frame
 
-Age Appearance: [approximate age range]
+Age Appearance: early–mid 30s
 
-Gender Presentation: [optional]
+Gender Presentation: masculine
 
 ---
 
 ## Overview Paragraph
 
-1–2 paragraphs of natural prose describing the character’s overall appearance, silhouette, presence, and vibe.  
-This text is used directly for the character page overview.
+Ragnar is an extremely tall warrior whose presence is defined by overwhelming physical scale and dense muscular mass. His frame is broad and heavily shoulder-dominant, with a thick chest, powerful arms, and a solid, grounded stance that makes him appear immovable. Even at rest, his posture carries the calm weight of someone used to physical dominance and battlefield control.
+
+His face is square and strongly structured, with a sharp jawline, calm blue eyes, and a short blond beard that reinforces his rugged masculinity. Long blond hair falls to his shoulders in natural waves, framing a composed and watchful expression. Ragnar’s overall visual identity blends towering warrior strength with stoic restraint, creating a silhouette that reads as massive, controlled, and quietly intimidating.
 
 ---
 
@@ -25,8 +26,8 @@ This text is used directly for the character page overview.
 
 Use this block when a prompt needs a **short character description**.
 
-Ragnar is a [height + build description] with [key facial features].
-Their aesthetic is [style description].
+Ragnar is an extremely tall, massively muscular warrior with a broad shoulder-dominant frame, square facial structure, calm blue eyes, and long blond hair with a short beard.  
+His aesthetic blends rugged utilitarian armor with military and gothic elements, emphasizing durability, battle wear, and physical power.
 
 ---
 
@@ -34,26 +35,26 @@ Their aesthetic is [style description].
 
 Use this block when a prompt needs a **complete character description**.
 
-Ragnar is [height description] with [body description].
+Ragnar is an extremely tall man with a dense, heavily muscular build and a strongly upper-body-dominant frame.
 
 Key features:
 
-- face shape: [description]
-- jawline: [description]
-- eyes: [description]
-- hair: [description]
-- skin tone: [description]
+- face shape: square facial structure with strong bone planes
+- jawline: sharp, defined jawline with a solid chin
+- eyes: calm blue eyes with a steady, watchful focus
+- hair: long blond hair with natural volume, falling to the shoulders
+- skin tone: light skin with rugged masculine texture
 
 Body proportions:
 
-- shoulder width: [description]
-- torso shape: [description]
-- limb proportions: [description]
-- posture: [description]
+- shoulder width: extremely broad shoulders dominating the silhouette
+- torso shape: thick, dense torso with a heavy chest and powerful upper-body mass
+- limb proportions: thick muscular arms and strong athletic legs, with upper body visually dominant
+- posture: grounded, stable stance with balanced weight and controlled physical presence
 
 Overall silhouette:
 
-[describe the recognizable shape of the character]
+Ragnar’s silhouette reads as tall, broad, and massively powerful. The shoulders and chest define the overall shape, creating a towering power-frame silhouette that immediately communicates strength and dominance.
 
 ---
 
@@ -61,31 +62,32 @@ Overall silhouette:
 
 Aesthetic keywords:
 
-- [style keyword]
-- [style keyword]
-- [style keyword]
+- rugged_utilitarian
+- military
+- gothic
 
 Typical clothing elements:
 
-- [element]
-- [element]
-- [element]
+- heavy armor pieces
+- long weathered cloaks
+- reinforced leather garments
 
 Typical materials:
 
-- [material]
-- [material]
+- leather
+- antique metal
 
 Typical colors:
 
 Primary colors:
 
-- [color]
-- [color]
+- black
+- dark brown
 
 Accent colors:
 
-- [color]
+- deep red
+- steel
 
 ---
 
@@ -93,9 +95,9 @@ Accent colors:
 
 Recurring items that often appear with the character:
 
-- [item]
-- [item]
-- [item]
+- longsword
+- armored gauntlets
+- weathered cloak
 
 ---
 
@@ -103,15 +105,15 @@ Recurring items that often appear with the character:
 
 Posture:
 
-[description]
+Ragnar stands with a heavy, grounded stance. His shoulders are naturally squared and relaxed, conveying strength without needing visible tension.
 
 Movement style:
 
-[description]
+Slow, deliberate, and powerful. His movements feel controlled and efficient rather than quick or agile.
 
 Gesture style:
 
-[description]
+Minimal and restrained. Ragnar rarely gestures broadly; his physical presence alone dominates the space around him.
 
 ---
 
@@ -119,23 +121,21 @@ Gesture style:
 
 Default expression:
 
-[description]
+Serious and controlled, with calm focus.
 
 Typical smile:
 
-[description]
+Rare, but when it appears it is a broad, genuine smile that softens his otherwise stoic demeanor.
 
 Emotional range:
 
-[description]
+Emotionally contained. Ragnar typically communicates through subtle changes in expression rather than dramatic reactions.
 
 ---
 
 ## Personality Snapshot
 
-Short personality description used for scene prompts.
-
-[description]
+Ragnar carries himself with calm authority and quiet confidence. His personality reads as stoic, disciplined, and dependable—someone who commands respect through presence rather than words. Beneath the controlled exterior is a loyal and protective nature that becomes most visible when he is defending those he cares about.
 
 ---
 
@@ -145,16 +145,19 @@ These traits should **never drift in generated images**.
 
 Always preserve:
 
-- height range
-- body proportions
-- facial structure
-- hairstyle silhouette
-- core aesthetic
+- extremely tall imposing height
+- massive muscular upper-body dominance
+- broad shoulders and thick chest structure
+- square facial structure with short blond beard
+- long blond shoulder-length hair
+- rugged warrior aesthetic
 
 Avoid:
 
-- [common drift issue]
-- [common drift issue]
+- making him lean or lightly athletic
+- reducing shoulder width or torso mass
+- softening the facial structure
+- turning armor into ornate decorative fantasy costume
 
 ---
 
@@ -187,6 +190,4 @@ The **core reference pack** for prompts:
 
 This block is designed to be **copied directly into prompts**.
 
-Ragnar is a [height + build] character with [distinctive facial features] and [visual style].
-Their aesthetic includes [style keywords], [typical clothing elements], and [accessories].
-Maintain consistent facial identity, body proportions, and style across all views.
+Ragnar is an extremely tall, massively muscular warrior with a broad shoulder-dominant frame, square facial structure, calm blue eyes, and long blond hair with a short beard. His aesthetic blends rugged utilitarian armor with military and gothic influences, emphasizing leather, antique metal, dark colors, and battle-worn durability. Maintain consistent facial identity, body proportions, and powerful silhouette across all views.

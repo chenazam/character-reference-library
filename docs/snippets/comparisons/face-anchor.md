@@ -63,4 +63,11 @@
     </a>
   </div>
 
+  <div class="comparison-card">
+    <h3><a href="/characters/ragnar/">Ragnar</a></h3>
+    <a href="/assets/library/10_CHARACTERS/RAGNAR/01_IDENTITY/face/ragnar_face_anchor_v1.png" target="_blank">
+      <img src="/assets/library/10_CHARACTERS/RAGNAR/01_IDENTITY/face/ragnar_face_anchor_v1.png" alt="Ragnar face-anchor">
+    </a>
+  </div>
+
 </div>

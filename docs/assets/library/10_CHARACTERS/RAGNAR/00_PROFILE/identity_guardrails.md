@@ -1,22 +1,28 @@
-# Identity Guardrails — [CHARACTER_NAME]
+# Identity Guardrails — Ragnar
 
-These rules define traits that must remain consistent when generating images of [CHARACTER_NAME].
+These rules define traits that must remain consistent when generating images of Ragnar.
+
+---
 
 ## Core Physical Identity
 
 Always preserve:
 
-- [HEIGHT AND BODY SCALE]
-- [GENERAL BUILD DESCRIPTION]
-- [SHOULDER WIDTH]
-- [LIMB PROPORTIONS]
-- [OVERALL BODY MASS / SILHOUETTE]
+- extremely tall height (208 cm / 6'10") and towering presence
+- massive, dense muscular build
+- strongly shoulder-dominant frame
+- extremely broad shoulders and thick chest mass
+- thick muscular arms and powerful upper-body silhouette
+- grounded, stable stance with strong physical weight
+- upper-body-dominant silhouette with heavy torso mass
 
 Avoid:
 
-- [UNWANTED BODY TYPE]
-- [INCORRECT PROPORTIONS]
-- [BODY TYPES THAT CONFLICT WITH CHARACTER]
+- lean, slender, or lightly athletic body types
+- narrow shoulders or reduced chest width
+- compact or average height proportions
+- thin limbs or delicate musculature
+- runner-type or agile silhouettes that contradict his power frame
 
 ---
 
@@ -24,17 +30,20 @@ Avoid:
 
 Always preserve:
 
-- [FACE SHAPE]
-- [JAW STRUCTURE]
-- [HAIR COLOR AND LENGTH]
-- [OVERALL FACIAL PRESENCE]
+- square facial structure
+- strong angular jawline and masculine bone structure
+- calm blue eyes with a steady, watchful gaze
+- long blond hair reaching approximately shoulder length
+- short blond beard and mustache
+- rugged masculine facial texture
 
 Avoid:
 
-- [INCORRECT FACE SHAPE]
-- [UNWANTED AGING]
-- [UNWANTED HAIRSTYLES]
-- [UNINTENDED FACIAL HAIR]
+- narrow or oval face shapes
+- soft or rounded jawlines
+- short haircuts or shaved hairstyles
+- clean-shaven appearance
+- heavy aging or exaggerated wrinkles
 
 ---
 
@@ -42,16 +51,20 @@ Avoid:
 
 Always preserve:
 
-- [GENERAL STYLE AESTHETIC]
-- [CLOTHING SILHOUETTE]
-- [COLOR PALETTE]
-- [ACCESSORY STYLE]
+- rugged utilitarian warrior aesthetic
+- military and gothic design influences
+- practical battle-ready clothing and armor
+- dark practical color palette (black, dark brown)
+- accents of steel or deep red
+- materials such as leather and aged metal
+- equipment that reads as functional and battle-worn
 
 Avoid:
 
-- [INCOMPATIBLE STYLE ELEMENTS]
-- [UNWANTED COLOR PALETTES]
-- [CLOTHING SILHOUETTES THAT BREAK CHARACTER]
+- ornate fantasy armor that looks ceremonial or decorative
+- bright modern colors that break the rugged palette
+- lightweight fashionable clothing that undermines the warrior identity
+- futuristic or sci-fi styling unless explicitly intended
 
 ---
 
@@ -59,15 +72,17 @@ Avoid:
 
 Typical movement:
 
-- [MOVEMENT TRAIT]
-- [MOVEMENT TRAIT]
+- grounded, powerful movement
+- slow, deliberate, controlled physical actions
 
 Typical posture:
 
-- [POSTURE TRAIT]
-- [POSTURE TRAIT]
+- stable, balanced stance
+- broad-shouldered posture with natural physical dominance
 
 Avoid:
 
-- [UNCHARACTERISTIC BODY LANGUAGE]
-- [MOVEMENT CONTRARY TO CHARACTER IDENTITY]
+- restless or jittery movement
+- exaggerated expressive gestures
+- timid or withdrawn posture
+- light agile movement that contradicts his heavy physical presence

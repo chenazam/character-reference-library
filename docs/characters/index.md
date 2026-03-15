@@ -62,6 +62,7 @@ Browse characters in the reference library.
 
 <a class="character-card" href="ragnar/">
 
+  <img src="..\assets\library\10_CHARACTERS\RAGNAR\01_IDENTITY\face\ragnar_face_anchor_v1.png" alt="Ragnar">
   <h3>Ragnar</h3>
 
 </a>

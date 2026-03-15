@@ -1,5 +1,7 @@
 # Danny
 
+<div class="character-header">
+
 --8<-- "snippets/galleries/danny/hero.md"
 
 ## Overview
@@ -22,6 +24,8 @@ Despite his massive and intimidating appearance, he carries a warm “gentle gia
   <li><strong>Movement:</strong> grounded powerful</li>
   <li><strong>Presence:</strong> dominant presence</li>
 </ul>
+</div>
+
 </div>
 
 </div>

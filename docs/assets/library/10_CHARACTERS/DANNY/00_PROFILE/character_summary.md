@@ -14,6 +14,14 @@ Gender Presentation: masculine
 
 ---
 
+## Overview Paragraph
+
+Danny is an extremely tall, massively built man with a broad skeletal frame and a dense muscular physique. His towering height, heavy shoulders, thick chest, and powerful arms create a dominant upper-body silhouette that makes him visually imposing even at rest.
+
+Despite his intimidating physical scale, Danny’s presence reads warm and approachable. His relaxed posture, open expression, and easy smile give him the energy of a gentle giant — someone physically formidable but emotionally grounded, protective, and naturally kind.
+
+---
+
 ## Visual Identity (Short Prompt Version)
 
 Use this block when a prompt needs a **short character description**.

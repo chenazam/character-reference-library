@@ -12,7 +12,7 @@ Reference assets that still need to be generated.
 
 ## DANNY
 
-- next: anatomy_sheet
+- next: body_anchor
 
 ## DENNIS
 

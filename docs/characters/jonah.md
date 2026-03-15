@@ -1,12 +1,14 @@
 # Jonah
 
+<div class="character-header">
+
 --8<-- "snippets/galleries/jonah/hero.md"
 
 ## Overview
 
 <div class="character-overview-text">
 
-Jonah is a tall man with a lean athletic physique and naturally elongated proportions. His frame is slim and elegant with long legs, a lightly athletic torso, and balanced shoulders that create a tall, graceful silhouette. Short personality description used for scene prompts.
+Jonah is a 5'10" man with a lean athletic build and naturally elongated proportions. His frame is slim and elegant with long limbs, a narrow waist, and balanced shoulders that create a tall, graceful silhouette. Jonah is cheerful, expressive, and openly affectionate. He carries himself with playful confidence and enjoys drawing attention through bold fashion and expressive body language. His personality feels warm, flirtatious, and energetic, often bringing humor and emotional openness into social situations.
 
 <div class="character-stats">
 <ul>
@@ -20,6 +22,8 @@ Jonah is a tall man with a lean athletic physique and naturally elongated propor
   <li><strong>Expression:</strong> soft neutral and open warm</li>
   <li><strong>Movement:</strong> relaxed natural</li>
 </ul>
+</div>
+
 </div>
 
 </div>

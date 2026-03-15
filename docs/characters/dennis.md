@@ -1,5 +1,7 @@
 # Dennis
 
+<div class="character-header">
+
 --8<-- "snippets/galleries/dennis/hero.md"
 
 ## Overview
@@ -22,6 +24,8 @@ His presence feels warm, approachable, and slightly reserved, giving the impress
   <li><strong>Movement:</strong> relaxed natural</li>
   <li><strong>Presence:</strong> grounded</li>
 </ul>
+</div>
+
 </div>
 
 </div>

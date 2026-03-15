@@ -14,6 +14,14 @@ Gender Presentation: Soft masculine
 
 ---
 
+## Overview Paragraph
+
+Dennis is a medium-height man with a soft, naturally untrained physique and a clearly hip-dominant silhouette. Most of his body mass sits in the abdomen, hips, glutes, and thighs, while his shoulders and upper body appear lighter by comparison, giving him rounded lower-body contours rather than an athletic V-shape.
+
+His face is gentle and approachable, with a soft round structure, freckles across the nose, and rectangular glasses that reinforce his everyday appearance. Dennis reads as a calm, grounded person with a quiet presence — someone ordinary, thoughtful, and quietly warm rather than physically imposing.
+
+---
+
 ## Visual Identity (Short Prompt Version)
 
 Use this block when a prompt needs a **short character description**.

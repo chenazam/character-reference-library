@@ -1,5 +1,7 @@
 # Daimon
 
+<div class="character-header">
+
 --8<-- "snippets/galleries/daimon/hero.md"
 
 ## Overview
@@ -23,6 +25,8 @@ Despite his intimidating presence, his behavior can shift dramatically around th
   <li><strong>Movement:</strong> grounded powerful</li>
   <li><strong>Presence:</strong> dominant presence</li>
 </ul>
+</div>
+
 </div>
 
 </div>

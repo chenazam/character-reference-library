@@ -1,5 +1,7 @@
 # Luca
 
+<div class="character-header">
+
 --8<-- "snippets/galleries/luca/hero.md"
 
 ## Overview
@@ -22,6 +24,8 @@ He is affectionate, attentive to others, and naturally nurturing, creating a sen
   <li><strong>Movement:</strong> relaxed natural</li>
   <li><strong>Presence:</strong> neutral presence</li>
 </ul>
+</div>
+
 </div>
 
 </div>

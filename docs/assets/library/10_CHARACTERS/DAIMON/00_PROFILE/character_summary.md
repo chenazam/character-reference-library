@@ -14,6 +14,14 @@ Gender Presentation: strongly masculine, imposing
 
 ---
 
+## Overview Paragraph
+
+Daimon is an extremely tall, massively built man with a dense muscular frame and a commanding physical presence. His broad shoulders, thick limbs, and square facial structure create a powerful silhouette that reads rugged, stoic, and physically formidable.
+
+His aesthetic is dark, practical, and utilitarian, built around leather, heavy materials, restrained color palettes, and a hardened masculine edge. Even at rest, he feels imposing and controlled, with a presence defined more by contained force than overt motion.
+
+---
+
 ## Visual Identity (Short Prompt Version)
 
 Use this block when a prompt needs a **short character description**.

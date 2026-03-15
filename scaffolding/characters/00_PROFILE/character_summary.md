@@ -14,6 +14,13 @@ Gender Presentation: [optional]
 
 ---
 
+## Overview Paragraph
+
+1–2 paragraphs of natural prose describing the character’s overall appearance, silhouette, presence, and vibe.  
+This text is used directly for the character page overview.
+
+---
+
 ## Visual Identity (Short Prompt Version)
 
 Use this block when a prompt needs a **short character description**.

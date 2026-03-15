@@ -1,5 +1,7 @@
 # Hudson
 
+<div class="character-header">
+
 --8<-- "snippets/galleries/hudson/hero.md"
 
 ## Overview
@@ -22,6 +24,8 @@ He often appears reserved or intimidating at first glance, but underneath that c
   <li><strong>Movement:</strong> relaxed natural</li>
   <li><strong>Presence:</strong> expansive presence</li>
 </ul>
+</div>
+
 </div>
 
 </div>

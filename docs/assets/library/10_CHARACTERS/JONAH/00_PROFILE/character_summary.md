@@ -6,7 +6,7 @@ Name: Jonah
 
 Height: 178 cm (5'10")
 
-Build Type: Lean athletic with elongated proportions
+Build Type: elongated_slender — lean athletic physique with long natural proportions
 
 Age Appearance: mid-20s
 
@@ -14,39 +14,43 @@ Gender Presentation: masculine with playful and occasionally feminine styling
 
 ---
 
+## Overview Paragraph
+
+Jonah is a lean, athletic man with a dancer build, elongated proportions, expressive green eyes, and a graceful, elegant silhouette. His long limbs, balanced shoulders, and dark blonde wavy hair give him a refined visual identity that feels light, fluid, and naturally expressive.
+
+His style blends playful athletic fashion with romantic and slightly provocative elements, creating a look that feels bold, youthful, and self-aware. He projects warmth, openness, and cheerful confidence, with a presence that feels affectionate, flirtatious, and emotionally bright.
+
+---
+
 ## Visual Identity (Short Prompt Version)
 
-Use this block when a prompt needs a **short character description**.
-
 Jonah is a tall lean athletic man with long elegant proportions, expressive green eyes, and dark blonde wavy hair with soft side-swept volume.  
-His aesthetic is playful athletic fashion that mixes sporty clothing with expressive, confident styling.
+His aesthetic blends playful athletic fashion with expressive sporty styling and confident modern streetwear.
 
 ---
 
 ## Visual Identity (Full Prompt Version)
 
-Use this block when a prompt needs a **complete character description**.
-
-Jonah is a tall man with a lean athletic physique and naturally elongated proportions. His frame is slim and elegant with long legs, a lightly athletic torso, and balanced shoulders that create a tall, graceful silhouette.
+Jonah is a 5'10" man with a lean athletic build and naturally elongated proportions. His frame is slim and elegant with long limbs, a narrow waist, and balanced shoulders that create a tall, graceful silhouette.
 
 Key features:
 
-- face shape: long oval face with balanced refined features
+- face shape: long oval face with refined balanced features
 - jawline: defined but not overly sharp
-- eyes: expressive green eyes
+- eyes: expressive green eyes with lively warmth
 - hair: dark blonde medium-length wavy hair with soft side-swept volume
-- skin tone: light skin with natural tone
+- skin tone: light skin with a natural tone
 
 Body proportions:
 
-- shoulder width: moderately broad but not bulky
-- torso shape: lean athletic torso with visible but natural muscle tone
+- shoulder width: moderate shoulders with a light athletic upper body
+- torso shape: lean athletic torso with natural muscle tone
 - limb proportions: long arms and legs creating an elongated silhouette
 - posture: relaxed confident posture with open body language
 
 Overall silhouette:
 
-A tall slender athletic silhouette with long limbs, a narrow waist, and balanced shoulders. His proportions read as elegant and elongated rather than bulky or heavily muscular.
+Jonah’s design emphasizes height, elegance, and fluid movement rather than muscular bulk. His long limbs, narrow waist, and balanced shoulders create a tall, slender athletic silhouette that reads expressive, energetic, and visually graceful.
 
 ---
 
@@ -54,7 +58,7 @@ A tall slender athletic silhouette with long limbs, a narrow waist, and balanced
 
 Aesthetic keywords:
 
-- playful athletic
+- playful_athletic
 - athletic
 - romantic
 
@@ -92,11 +96,11 @@ Relaxed and confident with open body language and comfortable self-expression.
 
 Movement style:
 
-Natural, athletic, and fluid with energetic physicality.
+Natural, fluid movement with light athletic energy. His physical presence often reads lively and expressive rather than grounded or imposing.
 
 Gesture style:
 
-Expressive gestures that often emphasize personality and playfulness.
+Expressive gestures that emphasize personality, often playful or slightly theatrical.
 
 ---
 
@@ -108,19 +112,17 @@ Soft neutral expression with relaxed features.
 
 Typical smile:
 
-Warm friendly smile that reads as open and approachable.
+Warm friendly smile that reads open and inviting.
 
 Emotional range:
 
-Highly expressive and playful, easily shifting between flirtation, humor, curiosity, and lighthearted confidence.
+Highly expressive and emotionally open, shifting easily between humor, curiosity, flirtation, and playful confidence.
 
 ---
 
 ## Personality Snapshot
 
-Short personality description used for scene prompts.
-
-Jonah is a cheerful, playful, and affectionate young man with a confident but lighthearted personality. He is expressive, emotionally open, and comfortable with bold fashion and self-presentation. His energy is warm, flirtatious, and joyful, often bringing humor and affection into everyday situations.
+Jonah is cheerful, expressive, and openly affectionate. He carries himself with playful confidence and enjoys drawing attention through bold fashion and expressive body language. His personality feels warm, flirtatious, and energetic, often bringing humor and emotional openness into social situations.
 
 ---
 
@@ -130,8 +132,8 @@ These traits should **never drift in generated images**.
 
 Always preserve:
 
-- height range
 - elongated lean athletic body proportions
+- tall slender silhouette
 - expressive green eyes
 - dark blonde wavy hairstyle with side-swept volume
 - playful athletic aesthetic
@@ -161,7 +163,7 @@ These should be attached whenever possible.
 
 ## Identity Pack
 
-The **core reference pack** for prompts:
+The core reference pack for prompts:
 
 1. Face Anchor Sheet
 2. Anatomy Sheet
@@ -172,8 +174,6 @@ The **core reference pack** for prompts:
 
 ## Prompt Identity Block
 
-This block is designed to be **copied directly into prompts**.
-
 Jonah is a tall lean athletic character with expressive green eyes, refined facial features, and dark blonde wavy hair with soft side-swept volume.  
-His aesthetic combines playful athletic fashion with expressive sporty clothing such as crop tops, athletic shorts, and mesh fabrics.  
+His aesthetic blends playful athletic fashion with expressive sporty clothing such as crop tops, athletic shorts, and mesh fabrics.  
 Maintain consistent facial identity, body proportions, and style across all views.

@@ -1,5 +1,7 @@
 # Lucien
 
+<div class="character-header">
+
 --8<-- "snippets/galleries/lucien/hero.md"
 
 ## Overview
@@ -21,6 +23,8 @@ A slender modern occultist with refined features, expressive dark eyes, and a qu
   <li><strong>Movement:</strong> deliberate precise</li>
   <li><strong>Presence:</strong> neutral presence</li>
 </ul>
+</div>
+
 </div>
 
 </div>

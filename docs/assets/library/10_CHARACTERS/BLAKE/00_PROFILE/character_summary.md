@@ -14,20 +14,25 @@ Gender Presentation: masculine, confident athletic
 
 ---
 
+## Overview Paragraph
+
+Blake is a tall, muscular athlete with a calm, grounded presence and a powerful upper-body-dominant silhouette. His broad shoulders, strong chest, and thick arms give him a physically imposing frame, but his overall read is steady and protective rather than aggressive.
+
+His style blends polished athletic clothing with understated luxury influences, creating a look that feels modern, masculine, and quietly confident. He projects stability, self-assurance, and relaxed physical strength in both posture and expression.
+
+---
+
 ## Visual Identity (Short Prompt Version)
 
-Use this block when a prompt needs a **short character description**.
-
 Blake is a 6'3" tall, broad-shouldered man with a muscular athletic build, strong chest and arms, and a confident masculine presence.  
-His aesthetic is polished athletic style with fitted clothing, dark colors, and understated luxury.
+His aesthetic centers on polished athletic style with fitted clothing, dark neutral colors, and understated luxury details.
 
 ---
 
 ## Visual Identity (Full Prompt Version)
 
-Use this block when a prompt needs a **complete character description**.
-
-Blake is 6'3" with a tall, powerful athletic build and strong upper-body development.
+Blake is a 6'3" tall man with a powerful athletic build and strong upper-body development.  
+His broad shoulders, thick arms, and muscular chest create a tall, stable silhouette that reads confident, grounded, and physically imposing without appearing aggressive.
 
 Key features:
 
@@ -46,7 +51,7 @@ Body proportions:
 
 Overall silhouette:
 
-Blake has a tall, broad, upper-body-dominant silhouette. His wide shoulders, thick arms, and muscular chest create a powerful athletic presence that reads stable, grounded, and physically imposing.
+Blake’s design emphasizes a tall, upper-body-dominant frame. His wide shoulders, thick arms, and muscular chest establish a visually stable and grounded presence that reads powerful, protective, and physically capable.
 
 ---
 
@@ -107,7 +112,7 @@ Strong, deliberate movement with controlled physical presence.
 
 Gesture style:
 
-Confident and open gestures, often relaxed but assertive.
+Confident and open gestures that appear natural and relaxed rather than theatrical.
 
 ---
 
@@ -123,15 +128,14 @@ Warm, slightly amused smile that appears easily in relaxed moments.
 
 Emotional range:
 
-Controlled but genuine emotional presence; confident, steady, and reassuring.
+Controlled but genuine emotional presence; confident, steady, and reassuring rather than overly expressive.
 
 ---
 
 ## Personality Snapshot
 
-Short personality description used for scene prompts.
-
-Blake is confident, steady, and quietly charismatic. He carries himself with calm assurance and natural leadership energy. His presence feels grounded and protective, balancing strength with a relaxed and approachable demeanor.
+Blake carries himself with calm confidence and quiet authority. His demeanor is steady and grounded, giving the impression of someone reliable and physically capable.  
+He often reads as protective and reassuring rather than intimidating, combining physical strength with an approachable and relaxed presence.
 
 ---
 
@@ -175,7 +179,7 @@ These should be attached whenever possible.
 
 ## Identity Pack
 
-The **core reference pack** for prompts:
+The core reference pack for prompts:
 
 1. Face Anchor Sheet
 2. Anatomy Sheet
@@ -185,8 +189,6 @@ The **core reference pack** for prompts:
 ---
 
 ## Prompt Identity Block
-
-This block is designed to be **copied directly into prompts**.
 
 Blake is a 6'3" tall, broad-shouldered man with a muscular athletic build, strong chest and arms, and short dark brown hair.  
 His aesthetic includes fitted athletic clothing, dark neutral colors, and understated luxury styling.  

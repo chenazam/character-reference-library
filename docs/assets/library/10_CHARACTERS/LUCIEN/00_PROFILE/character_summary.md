@@ -10,6 +10,14 @@ Primary Aesthetic: occult / gothic / scholarly
 
 ---
 
+## Overview Paragraph
+
+Lucien is a slender, narrow-framed man with refined features, expressive dark eyes, and naturally curly dark hair. His physique is lightly built with a slim torso and narrow shoulders, while the lower body carries slightly more volume in the hips and glutes, creating a subtle leg-dominant silhouette that contrasts with his otherwise delicate frame.
+
+His overall aesthetic blends occult symbolism with scholarly elegance and restrained gothic styling. Dark layered clothing, antique jewelry, and talismanic accessories give him the appearance of a modern practitioner of arcane traditions rather than a theatrical fantasy mage. Lucien’s presence is calm and observant, with a quiet confidence and a hint of playful mischief that suggests he knows more than he immediately reveals.
+
+---
+
 ## Physical Appearance
 
 ### Overall Build

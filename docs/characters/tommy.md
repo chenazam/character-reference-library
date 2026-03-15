@@ -1,5 +1,7 @@
 # Tommy
 
+<div class="character-header">
+
 --8<-- "snippets/galleries/tommy/hero.md"
 
 ## Overview
@@ -22,6 +24,8 @@ He has a naturally caring personality and tends to respond to situations with un
   <li><strong>Movement:</strong> relaxed natural</li>
   <li><strong>Presence:</strong> compact presence</li>
 </ul>
+</div>
+
 </div>
 
 </div>

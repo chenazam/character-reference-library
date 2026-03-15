@@ -14,6 +14,14 @@ Gender Presentation: masculine with soft, gentle physical presence
 
 ---
 
+## Overview Paragraph
+
+Tommy is a medium-height young man with a soft, slightly curvy natural build and a gentle, youthful presence. His fuller hips, glutes, and thighs give him a compact leg-dominant silhouette, while his soft facial structure and light brown hair make his overall appearance feel warm and approachable.
+
+His aesthetic is cozy, casual, and softly romantic, favoring comfortable clothing and a more tender visual tone. He reads as affectionate, emotionally open, and quietly sweet, with a softness that feels sincere rather than fragile.
+
+---
+
 ## Visual Identity (Short Prompt Version)
 
 Use this block when a prompt needs a **short character description**.

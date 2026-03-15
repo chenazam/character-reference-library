@@ -14,6 +14,14 @@ Gender Presentation: masculine
 
 ---
 
+## Overview Paragraph
+
+Luca is a short, compact lean athletic young man with soft rounded features and a gentle, approachable presence. His smaller runner-style frame and tousled brown hair create a silhouette that feels light, relaxed, and quietly endearing rather than imposing.
+
+His aesthetic centers on domestic-soft comfort mixed with casual athletic ease, favoring cozy everyday clothing and understated styling. He reads as warm, gentle, and emotionally accessible, with a calm natural charm that makes him feel easy to be around.
+
+---
+
 ## Visual Identity (Short Prompt Version)
 
 Use this block when a prompt needs a **short character description**.

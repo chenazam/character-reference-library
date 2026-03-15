@@ -260,6 +260,9 @@ def build_character_page(character: str, character_dir: pathlib.Path) -> str:
     lines.append(f"# {name}")
     lines.append("")
 
+    lines.append('<div class="character-header">')
+    lines.append("")
+
     hero_snippet_path = SNIPPETS_ROOT / character / "hero.md"
     if hero_snippet_path.exists():
         lines.append(f'--8<-- "snippets/galleries/{character}/hero.md"')
@@ -269,8 +272,12 @@ def build_character_page(character: str, character_dir: pathlib.Path) -> str:
     lines.append("")
     lines.append(overview_block)
     lines.append("")
+
+    lines.append("</div>")
+    lines.append("")
     lines.append("---")
     lines.append("")
+
 
     for section_title, section_slug in SECTIONS:
         snippet_path = SNIPPETS_ROOT / character / f"{section_slug}.md"

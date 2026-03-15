@@ -14,6 +14,14 @@ Gender Presentation: masculine
 
 ---
 
+## Overview Paragraph
+
+Hudson is a tall, broad-shouldered athletic man with a muscular build and a controlled, dominant presence. His narrow angular facial structure and short brown hair give him a clean, disciplined look, while his body proportions emphasize strength, balance, and physical composure.
+
+His aesthetic blends athletic luxury with minimalist sport-influenced styling, creating a polished image that feels deliberate and restrained. He projects calm authority and self-control, with a physical presence that is confident without needing overt display.
+
+---
+
 ## Visual Identity (Short Prompt Version)
 
 Use this block when a prompt needs a **short character description**.

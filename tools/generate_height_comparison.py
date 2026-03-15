@@ -84,12 +84,22 @@ def difference_category(diff_cm: int) -> str:
 def make_image_link(record: dict, filename: str) -> str:
     if not filename:
         return ""
+
     character_dir = pathlib.Path(record["dir"])
-    candidate = character_dir / filename
-    if candidate.exists():
+    matches = [p for p in character_dir.rglob(filename) if p.is_file()]
+
+    if not matches:
+        return ""
+
+    # Prefer stable alphabetical ordering
+    matches.sort()
+    candidate = matches[0]
+
+    try:
         rel = candidate.relative_to(ROOT / "docs")
         return f"/{rel.as_posix()}"
-    return ""
+    except ValueError:
+        return ""
 
 
 def get_reference_links(record: dict, metadata: dict) -> dict:

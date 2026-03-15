@@ -1,0 +1,135 @@
+name: RAGNAR
+slug:
+- character_slug
+status: active
+project:
+- PROJECT_NAME
+core_identity:
+  short_summary:
+  - brief one-sentence identity summary
+  role_archetype:
+  - - archetype
+  aesthetic_tags:
+  - - tag
+  - - tag
+physical:
+  height_cm:
+  - HEIGHT_CM
+  height_imperial: '[HEIGHT_IMPERIAL]'
+  height_visual_category:
+  - profile_keyword
+  build_category:
+  - build_type
+  frame_proportion:
+  - profile_keyword
+  body_fat_range:
+  - profile_keyword
+  body_softness_distribution:
+  - profile_keyword
+  build_notes: '[Brief description of physique and how it should read.]
+
+    '
+  shoulder_profile:
+  - profile_keyword
+  torso_profile:
+  - profile_keyword
+  limb_profile:
+  - profile_keyword
+  posture_profile:
+  - profile_keyword
+  silhouette_anchor:
+  - profile_keyword
+  silhouette_keywords:
+  - - keyword
+  - - keyword
+  - - keyword
+face:
+  face_shape:
+  - face_shape_keyword
+  jawline:
+  - jawline_keyword
+  eye_description:
+  - brief description
+  hair_description:
+  - brief description
+  skin_description:
+  - brief description
+  distinctive_features:
+  - - feature
+  - - feature
+hair_color:
+- hair_color_keyword
+style:
+  primary_aesthetic:
+  - primary_aesthetic
+  secondary_aesthetic:
+  - - secondary_aesthetic
+  materials:
+  - - material
+  - - material
+  primary_colors:
+  - - color
+  - - color
+  accent_colors:
+  - - accent_color
+  recurring_accessories:
+  - - accessory
+expression:
+  default_expression:
+  - expression_keyword
+  smile_type:
+  - smile_keyword
+  emotional_tone:
+  - tone_keyword
+movement:
+  movement_style:
+  - movement_keyword
+  gesture_style:
+  - gesture_keyword
+  body_language:
+  - body_language_keyword
+  spatial_presence:
+  - movement_keyword
+identity_rules:
+  preserve:
+  - - preserve_rule
+  - - preserve_rule
+  avoid:
+  - - avoid_rule
+  - - avoid_rule
+reference_files:
+  face_anchor: ''
+  anatomy_sheet: ''
+  body_anchor: ''
+  ultimate_character_sheet: ''
+  signature_outfit_sheet: ''
+pipeline_status:
+  face_anchor: not_started
+  hair_sheet: not_started
+  anatomy_sheet: not_started
+  proportion_grid: not_started
+  muscle_tension: not_started
+  body_anchor: not_started
+  silhouette_sheet: not_started
+  turnaround_sheet: not_started
+  expression_sheet: not_started
+  hand_sheet: not_started
+  ucs: not_started
+  signature_outfit: not_started
+  design_language: not_started
+  wardrobe: not_started
+  pose_sheet: not_started
+  motion_sheet: not_started
+  scale_sheet: not_started
+  scene_anchors: not_started
+  prop_sheet: not_started
+  gallery_image: not_started
+  ucs_core: not_started
+  motion_anchor: not_started
+  height_scale: not_started
+  interaction_anchor: not_started
+  scene_anchor: not_started
+  dynamic_pose: not_started
+  final_ucs: not_started
+notes: ''
+last_updated: '[YYYY-MM-DD]'

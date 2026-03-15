@@ -31,3 +31,9 @@ This text is used directly for the character page overview.</p>
 </div>
 
 ---
+
+## Body
+
+--8<-- "snippets/galleries/ragnar/body.md"
+
+---

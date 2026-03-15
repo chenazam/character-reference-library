@@ -110,16 +110,24 @@
   border-radius: 12px;
 }
 
-.character-hero::after {
-  content: '';
-  display: block;
-  clear: both;
+.character-overview-text {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  min-height: 220px;
 }
 
-@media (max-width: 900px) {
-  .character-hero {
-    float: none;
-    width: min(320px, 100%);
-    margin: 0 auto 1rem auto;
-  }
+.character-overview-text p {
+  margin-top: 0;
+}
+
+.character-stats {
+  margin-top: 0.8rem;
+}
+
+.character-stats ul {
+  margin: 0.4rem 0 0 1.2rem;
+}
+
+.character-stats li {
+  margin: 0.2rem 0;
 }

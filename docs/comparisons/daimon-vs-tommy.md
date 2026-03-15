@@ -49,3 +49,13 @@
 
 In terms of build, **Daimon** reads as **Heavy Muscular**, while **Tommy** reads as **Soft Slender**.
 
+## Available References
+
+<div class="comparison-grid comparison-grid-2">
+
+  <div class="comparison-item">
+    <div class="comparison-label">Tommy — Anatomy Sheet</div>
+    <img src="/assets/library/10_CHARACTERS/TOMMY/02_BODY/anatomy/tommy_anatomy_sheet_v1.png" alt="Tommy Anatomy Sheet">
+  </div>
+</div>
+

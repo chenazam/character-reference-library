@@ -62,14 +62,23 @@ In terms of build, **Lucien** reads as **Narrow Slender**, while **Ragnar** read
   </div>
 </div>
 
+## Anatomy Sheet Comparison
+
+<div class="comparison-grid comparison-grid-2">
+  <div class="comparison-item">
+    <div class="comparison-label">Lucien</div>
+    <img src="/assets/library/10_CHARACTERS/LUCIEN/02_BODY/anatomy/lucien_anatomy_sheet_v1.png" alt="Lucien Anatomy Sheet Comparison">
+  </div>
+  <div class="comparison-item">
+    <div class="comparison-label">Ragnar</div>
+    <img src="/assets/library/10_CHARACTERS/RAGNAR/02_BODY/anatomy/ragnar_anatomy_sheet_v1.png" alt="Ragnar Anatomy Sheet Comparison">
+  </div>
+</div>
+
 ## Available References
 
 <div class="comparison-grid comparison-grid-2">
 
-  <div class="comparison-item">
-    <div class="comparison-label">Lucien — Anatomy Sheet</div>
-    <img src="/assets/library/10_CHARACTERS/LUCIEN/02_BODY/anatomy/lucien_anatomy_sheet_v1.png" alt="Lucien Anatomy Sheet">
-  </div>
   <div class="comparison-item">
     <div class="comparison-label">Lucien — Silhouette Sheet</div>
     <img src="/assets/library/10_CHARACTERS/LUCIEN/02_BODY/structure/lucien_silhouette_v1.png" alt="Lucien Silhouette Sheet">

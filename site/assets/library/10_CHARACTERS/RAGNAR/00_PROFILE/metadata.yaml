@@ -88,17 +88,17 @@ identity_rules:
   - turning the armor into ornate fantasy costume
   - exaggerating facial expressions
 reference_files:
-  face_anchor: ''
-  anatomy_sheet: ''
+  face_anchor: ragnar_face_anchor_v1.png
+  anatomy_sheet: ragnar_anatomy_sheet_v1.png
   body_anchor: ragnar_body_anchor_v0.png
   silhouette_sheet: ''
   turnaround_sheet: ''
   ultimate_character_sheet: ''
   signature_outfit_sheet: ''
 pipeline_status:
-  face_anchor: not_started
-  hair_sheet: not_started
-  anatomy_sheet: not_started
+  face_anchor: complete
+  hair_sheet: complete
+  anatomy_sheet: complete
   proportion_grid: not_started
   muscle_tension: not_started
   body_anchor: complete

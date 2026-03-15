@@ -94,9 +94,11 @@ identity_rules:
   - turning the aesthetic into generic casual streetwear
   - exaggerating expressions or making him cartoonish
 reference_files:
-  face_anchor: lucien_face_anchor_sheet_v1.png
+  face_anchor: lucien_face_anchor_v1.png
   anatomy_sheet: lucien_anatomy_sheet_v1.png
   body_anchor: lucien_body_anchor_v1.png
+  silhouette_sheet: lucien_silhouette_v1.png
+  turnaround_sheet: lucien_turnaround_v1.png
   ultimate_character_sheet: ''
   signature_outfit_sheet: ''
 pipeline_status:

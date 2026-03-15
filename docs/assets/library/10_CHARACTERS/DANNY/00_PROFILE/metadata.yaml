@@ -83,12 +83,13 @@ identity_rules:
   - avoid narrow facial structure or soft jawline
   - avoid emotionally cold or stoic presentation that removes his gentle giant energy
 reference_files:
-  face_anchor: danny_face_anchor.png
-  anatomy_sheet: ''
+  face_anchor: danny_face_anchor_v1.png
+  anatomy_sheet: danny_anatomy_sheet_v1.png
   body_anchor: ''
-  turnaround_sheet: danny_turnaround_sheet.png
+  turnaround_sheet: ''
   ultimate_character_sheet: ''
   signature_outfit_sheet: ''
+  silhouette_sheet: ''
 pipeline_status:
   face_anchor: complete
   hair_sheet: complete

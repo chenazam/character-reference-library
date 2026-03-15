@@ -31,6 +31,7 @@ physical:
   posture_profile: [profile_keyword]
 
   silhouette_anchor: [profile_keyword]
+  silhouette_emphasis: [profile_keyword]
   silhouette_keywords:
     - [keyword]
     - [keyword]
@@ -94,6 +95,8 @@ reference_files:
   face_anchor: ''
   anatomy_sheet: ''
   body_anchor: ''
+  silhouette_sheet: ''
+  turnaround_sheet: ''
   ultimate_character_sheet: ''
   signature_outfit_sheet: ''
 

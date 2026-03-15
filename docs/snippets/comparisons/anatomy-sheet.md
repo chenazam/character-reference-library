@@ -36,6 +36,13 @@
   </div>
 
   <div class="comparison-card">
+    <h3><a href="/characters/luca/">Luca</a></h3>
+    <a href="/assets/library/10_CHARACTERS/LUCA/02_BODY/anatomy/luca_anatomy_sheet_01.png" target="_blank">
+      <img src="/assets/library/10_CHARACTERS/LUCA/02_BODY/anatomy/luca_anatomy_sheet_01.png" alt="Luca anatomy-sheet">
+    </a>
+  </div>
+
+  <div class="comparison-card">
     <h3><a href="/characters/lucien/">Lucien</a></h3>
     <a href="/assets/library/10_CHARACTERS/LUCIEN/02_BODY/anatomy/lucien_anatomy_sheet_v1.png" target="_blank">
       <img src="/assets/library/10_CHARACTERS/LUCIEN/02_BODY/anatomy/lucien_anatomy_sheet_v1.png" alt="Lucien anatomy-sheet">

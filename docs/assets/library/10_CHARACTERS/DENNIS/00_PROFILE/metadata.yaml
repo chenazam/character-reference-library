@@ -83,11 +83,13 @@ identity_rules:
   - avoid athletic V-shaped torso
   - avoid exaggerated shoulder width or muscular definition
 reference_files:
-  face_anchor: ''
-  anatomy_sheet: ''
-  body_anchor: ''
+  face_anchor: dennis_face_anchor_v1.png
+  anatomy_sheet: dennis_anatomy_sheet_v1.png
+  body_anchor: dennis_body_anchor_v1.png
   ultimate_character_sheet: ''
   signature_outfit_sheet: ''
+  silhouette_sheet: dennis_silhouette_v1.png
+  turnaround_sheet: dennis_turnaround_v1.png
 pipeline_status:
   face_anchor: complete
   hair_sheet: complete

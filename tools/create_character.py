@@ -10,10 +10,17 @@ SCAFFOLD = ROOT / "scaffolding" / "characters"
 CHARACTER_ROOT = ROOT / "docs/assets/library/10_CHARACTERS"
 
 
-def create_character(name):
+def display_name_from_input(name: str) -> str:
+    name = name.strip()
+    if not name:
+        raise ValueError("Character name cannot be empty.")
+    return name[0].upper() + name[1:].lower()
 
-    folder_name = name.upper()
-    slug = name.lower()
+
+def create_character(name: str) -> None:
+    display_name = display_name_from_input(name)
+    folder_name = display_name.upper()
+    slug = display_name.lower()
 
     target = CHARACTER_ROOT / folder_name
 
@@ -21,7 +28,7 @@ def create_character(name):
         print(f"Character already exists: {folder_name}")
         return
 
-    print(f"\nCreating character: {folder_name}")
+    print(f"\nCreating character: {display_name} ({folder_name})")
 
     shutil.copytree(SCAFFOLD, target)
 
@@ -33,40 +40,37 @@ def create_character(name):
     summary = profile / "character_summary.md"
     prompt_blocks = profile / "prompt_blocks.md"
 
-    if metadata.exists():
-        text = metadata.read_text()
-        text = text.replace("[CHARACTER_NAME]", folder_name)
-        metadata.write_text(text)
+    replacements = {
+        "[CHARACTER_NAME]": display_name,
+        "[CHARACTER_SLUG]": slug,
+        "[CHARACTER_FOLDER]": folder_name,
+    }
 
-    if summary.exists():
-        text = summary.read_text()
-        text = text.replace("[CHARACTER_NAME]", folder_name)
-        summary.write_text(text)
-
-    if prompt_blocks.exists():
-        text = prompt_blocks.read_text()
-        text = text.replace("[CHARACTER_NAME]", folder_name)
-        prompt_blocks.write_text(text)
+    for path in [metadata, summary, prompt_blocks]:
+        if path.exists():
+            text = path.read_text(encoding="utf-8")
+            for placeholder, value in replacements.items():
+                text = text.replace(placeholder, value)
+            path.write_text(text, encoding="utf-8")
 
     print("Profile templates initialized")
 
     print("\nUpdating generated pages...")
 
-    subprocess.run([sys.executable, "tools/generate_character_pages.py"])
-    subprocess.run([sys.executable, "tools/generate_character_index.py"])
-    subprocess.run([sys.executable, "tools/generate_nav_characters.py"])
+    subprocess.run([sys.executable, "tools/generate_character_pages.py"], cwd=ROOT)
+    subprocess.run([sys.executable, "tools/generate_character_index.py"], cwd=ROOT)
+    subprocess.run([sys.executable, "tools/generate_nav_characters.py"], cwd=ROOT)
 
     print("\nCharacter creation complete.\n")
 
 
-def main():
-
+def main() -> None:
     parser = argparse.ArgumentParser()
 
     parser.add_argument(
         "--name",
         required=True,
-        help="Character name (e.g. luca → folder LUCA)"
+        help="Character name (e.g. ragnar -> folder RAGNAR, display name Ragnar)",
     )
 
     args = parser.parse_args()

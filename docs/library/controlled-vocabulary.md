@@ -90,6 +90,7 @@ Use these values for `physical.silhouette_keywords`.
 | upper_dominant | upper body visually emphasized                                                       |
 | glute_emphasis | silhouette visually defined by prominent rounded glutes relative to waist and thighs |
 | heavy_set      | dense mass-focused silhouette                                                        |
+| massive        | extreme muscular scale and physical mass dominate silhouette                         |
 
 ---
 
@@ -381,3 +382,8 @@ Future pair-level aesthetic tags to consider:
 
 - dangerous_romance — intimate dynamic defined by tension between softness and danger
 - protective_intimacy — visual dynamic where one character physically protects or dominates space around a partner
+- size_contrast — visual dynamic where the height and size difference between characters is extremely distinct
+
+Future pair-level fields to consider:
+
+- size_difference_category — based on height and silhouette difference (values: subtle, noticeable, dramatic, extreme)

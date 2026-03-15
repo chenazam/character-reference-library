@@ -40,4 +40,4 @@ Reference assets that still need to be generated.
 
 ## TOMMY
 
-- next: face_anchor
+- next: anatomy_sheet

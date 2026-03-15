@@ -91,7 +91,7 @@ reference_files:
   signature_outfit_sheet: ''
 pipeline_status:
   face_anchor: complete
-  hair_sheet: not_started
+  hair_sheet: complete
   anatomy_sheet: not_started
   proportion_grid: not_started
   muscle_tension: not_started

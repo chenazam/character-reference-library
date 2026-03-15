@@ -4,17 +4,19 @@
 
 --8<-- "snippets/galleries/blake/hero.md"
 
-## Overview
-
 <div class="character-overview-text">
 
-Blake is a 6'3" tall man with a powerful athletic build and strong upper-body development.  
-His broad shoulders, thick arms, and muscular chest create a tall, stable silhouette that reads confident, grounded, and physically imposing without appearing aggressive. Blake carries himself with calm confidence and quiet authority. His demeanor is steady and grounded, giving the impression of someone reliable and physically capable.  
-He often reads as protective and reassuring rather than intimidating, combining physical strength with an approachable and relaxed presence.
+<p>Blake is a tall, muscular athlete with a calm, grounded presence and a powerful upper-body-dominant silhouette. His broad shoulders, strong chest, and thick arms give him a physically imposing frame, but his overall read is steady and protective rather than aggressive.</p>
+
+<p>His style blends polished athletic clothing with understated luxury influences, creating a look that feels modern, masculine, and quietly confident. He projects stability, self-assurance, and relaxed physical strength in both posture and expression.</p>
+
+<p>---</p>
 
 <div class="character-stats">
 <ul>
   <li><strong>Height:</strong> 191 cm / 6&#x27;3&quot;</li>
+  <li><strong>Build:</strong> athletic muscular</li>
+  <li><strong>Silhouette:</strong> upper body dominant</li>
   <li><strong>Face:</strong> square and defined jawline</li>
   <li><strong>Hair:</strong> short dark brown hair with clean athletic styling</li>
   <li><strong>Eyes:</strong> calm confident eyes</li>

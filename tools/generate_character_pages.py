@@ -124,7 +124,14 @@ def add_stat(stats: list[tuple[str, str]], label: str, value) -> None:
 
 
 def build_overview_paragraph(metadata: dict, summary_sections: dict[str, str]) -> str:
-    name = metadata.get("name", "This character")
+    overview_text = clean_md_text(summary_sections.get("Overview Paragraph", ""))
+    overview_para = extract_first_paragraph(overview_text)
+    if overview_para:
+        extra_paras = [p.strip() for p in overview_text.split("\n\n")[1:] if p.strip()]
+        if extra_paras:
+            return "\n\n".join([overview_para] + extra_paras)
+        return overview_para
+
     core = metadata.get("core_identity", {})
     physical = metadata.get("physical", {})
     face = metadata.get("face", {})
@@ -166,7 +173,7 @@ def build_overview_paragraph(metadata: dict, summary_sections: dict[str, str]) -
         face_bits.append(str(face["eye_description"]).strip())
 
     if face_bits:
-        bits.append(f"He is characterized by a { '; '.join(face_bits) }.")
+        bits.append(f"He is characterized by a {'; '.join(face_bits)}.")
 
     if primary_aesthetic:
         style_sentence = f"His style centers on {primary_aesthetic}"
@@ -183,11 +190,7 @@ def build_overview_paragraph(metadata: dict, summary_sections: dict[str, str]) -
         move_sentence += "."
         bits.append(move_sentence)
 
-    paragraph = " ".join(bit.strip() for bit in bits if bit.strip())
-    if not paragraph:
-        paragraph = f"{name} is a character in the reference library."
-
-    return paragraph
+    return " ".join(bit.strip() for bit in bits if bit.strip()) or "Overview unavailable."
 
 
 def build_stats(metadata: dict) -> list[tuple[str, str]]:
@@ -209,8 +212,8 @@ def build_stats(metadata: dict) -> list[tuple[str, str]]:
     elif height_imp:
         stats.append(("Height", str(height_imp)))
 
-    add_stat(stats, "Build", core.get("body_type"))
-    add_stat(stats, "Silhouette", core.get("silhouette"))
+    add_stat(stats, "Build", core.get("body_type") or physical.get("build_category"))
+    add_stat(stats, "Silhouette", core.get("silhouette") or physical.get("frame_proportion"))
     add_stat(stats, "Face", [face.get("face_shape"), face.get("jawline")])
     add_stat(stats, "Hair", face.get("hair_description"))
     add_stat(stats, "Eyes", face.get("eye_description"))
@@ -231,8 +234,9 @@ def build_overview_block(metadata: dict, summary_sections: dict[str, str]) -> st
     lines = ['<div class="character-overview-text">', ""]
 
     if paragraph:
-        lines.append(paragraph)
-        lines.append("")
+        for para in [p.strip() for p in paragraph.split("\n\n") if p.strip()]:
+            lines.append(f"<p>{html.escape(para)}</p>")
+            lines.append("")
 
     if stats:
         lines.append('<div class="character-stats">')
@@ -259,7 +263,6 @@ def build_character_page(character: str, character_dir: pathlib.Path) -> str:
 
     lines.append(f"# {name}")
     lines.append("")
-
     lines.append('<div class="character-header">')
     lines.append("")
 
@@ -268,8 +271,6 @@ def build_character_page(character: str, character_dir: pathlib.Path) -> str:
         lines.append(f'--8<-- "snippets/galleries/{character}/hero.md"')
         lines.append("")
 
-    lines.append("## Overview")
-    lines.append("")
     lines.append(overview_block)
     lines.append("")
 
@@ -277,7 +278,6 @@ def build_character_page(character: str, character_dir: pathlib.Path) -> str:
     lines.append("")
     lines.append("---")
     lines.append("")
-
 
     for section_title, section_slug in SECTIONS:
         snippet_path = SNIPPETS_ROOT / character / f"{section_slug}.md"

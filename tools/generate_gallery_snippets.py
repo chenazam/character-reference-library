@@ -26,7 +26,7 @@ def page_relative_url(character_slug: str, target_under_docs: pathlib.Path) -> s
     return pathlib.PurePosixPath(rel).as_posix()
 
 
-def generate_gallery(images, character_slug: str):
+def generate_gallery(images: list[pathlib.Path], character_slug: str) -> str:
     lines = []
     lines.append('<div class="character-gallery">')
     lines.append("")
@@ -43,13 +43,13 @@ def generate_gallery(images, character_slug: str):
     return "\n".join(lines)
 
 
-def generate_hero_image(image: pathlib.Path, character_slug: str):
+def generate_hero_image(image: pathlib.Path, character_slug: str) -> str:
     rel = page_relative_url(character_slug, image)
 
     lines = []
     lines.append('<div class="character-hero">')
     lines.append(f'  <a href="{rel}" target="_blank">')
-    lines.append(f'    <img src="{rel}" alt="">')
+    lines.append(f'    <img src="{rel}" alt="{character_slug} hero image">')
     lines.append("  </a>")
     lines.append("</div>")
     lines.append("")
@@ -58,17 +58,51 @@ def generate_hero_image(image: pathlib.Path, character_slug: str):
 
 def is_gallery_image(path: pathlib.Path) -> bool:
     parts_lower = [p.lower() for p in path.parts]
-    name_lower = path.name.lower()
-    stem_lower = path.stem.lower()
+    name_lower = path.stem.lower()
 
     return (
-        "01_gallery" in parts_lower
-        or "gallery" in stem_lower
-        or "thumbnail" in stem_lower
+        "gallery" in parts_lower
+        or "gallery" in name_lower
+        or "thumbnail" in name_lower
+        or "thumb" in name_lower
+        or "hero" in name_lower
+        or "portrait" in name_lower
     )
 
 
-def collect_images(folder):
+def is_face_anchor_image(path: pathlib.Path) -> bool:
+    parts_lower = [p.lower() for p in path.parts]
+    name_lower = path.stem.lower()
+
+    return (
+        "face" in parts_lower
+        or "face_anchor" in name_lower
+        or ("anchor" in name_lower and "face" in name_lower)
+    )
+
+
+def score_hero_candidate(path: pathlib.Path) -> tuple[int, str]:
+    name = path.stem.lower()
+
+    if "hero" in name:
+        return (0, name)
+    if "gallery" in name:
+        return (1, name)
+    if "portrait" in name:
+        return (2, name)
+    if "thumbnail" in name or "thumb" in name:
+        return (3, name)
+
+    return (9, name)
+
+
+def choose_hero_image(images: list[pathlib.Path]) -> pathlib.Path | None:
+    if not images:
+        return None
+    return sorted(images, key=score_hero_candidate)[0]
+
+
+def collect_images(folder: pathlib.Path) -> list[pathlib.Path]:
     images = []
     for p in folder.rglob("*"):
         if p.suffix.lower() in IMAGE_EXTENSIONS:
@@ -76,16 +110,13 @@ def collect_images(folder):
     return sorted(images)
 
 
-def split_identity_images(images):
+def split_identity_images(images: list[pathlib.Path]) -> tuple[list[pathlib.Path], list[pathlib.Path]]:
     gallery_images = [img for img in images if is_gallery_image(img)]
     regular_images = [img for img in images if not is_gallery_image(img)]
     return regular_images, gallery_images
 
 
-def main():
-    print("USING UPDATED generate_character_pages.py")
-    print(__file__)
-
+def main() -> None:
     SNIPPETS_ROOT.mkdir(parents=True, exist_ok=True)
 
     for character_dir in sorted(CHARACTERS_ROOT.iterdir()):
@@ -111,7 +142,7 @@ def main():
                 continue
 
             if family_folder == "01_IDENTITY":
-                identity_images, hero_images = split_identity_images(images)
+                identity_images, hero_candidates = split_identity_images(images)
 
                 if identity_images:
                     snippet_path = character_snippet_dir / f"{family_name}.md"
@@ -121,9 +152,15 @@ def main():
                 else:
                     print(f"  Skipping {family_folder} identity gallery (no non-gallery images)")
 
-                if hero_images:
+                hero_image = choose_hero_image(hero_candidates)
+
+                if not hero_image:
+                    face_candidates = [img for img in images if is_face_anchor_image(img)]
+                    hero_image = choose_hero_image(face_candidates)
+
+                if hero_image:
                     hero_path = character_snippet_dir / "hero.md"
-                    hero = generate_hero_image(hero_images[0], character)
+                    hero = generate_hero_image(hero_image, character)
                     hero_path.write_text(hero, encoding="utf-8")
                     print(f"  Generated {hero_path.relative_to(ROOT)}")
                 else:

@@ -4,16 +4,19 @@
 
 --8<-- "snippets/galleries/dennis/hero.md"
 
-## Overview
-
 <div class="character-overview-text">
 
-Dennis is medium height with a naturally soft, untrained physique and a clearly hip-dominant body structure. Dennis reads as a calm, grounded everyday person with a gentle demeanor.  
-His presence feels warm, approachable, and slightly reserved, giving the impression of someone thoughtful and quietly kind rather than outwardly assertive.
+<p>Dennis is a medium-height man with a soft, naturally untrained physique and a clearly hip-dominant silhouette. Most of his body mass sits in the abdomen, hips, glutes, and thighs, while his shoulders and upper body appear lighter by comparison, giving him rounded lower-body contours rather than an athletic V-shape.</p>
+
+<p>His face is gentle and approachable, with a soft round structure, freckles across the nose, and rectangular glasses that reinforce his everyday appearance. Dennis reads as a calm, grounded person with a quiet presence — someone ordinary, thoughtful, and quietly warm rather than physically imposing.</p>
+
+<p>---</p>
 
 <div class="character-stats">
 <ul>
   <li><strong>Height:</strong> 175 cm / 5 ft 9 in</li>
+  <li><strong>Build:</strong> soft heavy</li>
+  <li><strong>Silhouette:</strong> hip dominant</li>
   <li><strong>Face:</strong> soft round and soft jawline</li>
   <li><strong>Hair:</strong> short dark hair with natural parting and light texture</li>
   <li><strong>Eyes:</strong> medium eyes behind rectangular glasses with a calm neutral gaze</li>

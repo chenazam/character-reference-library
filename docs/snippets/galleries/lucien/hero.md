@@ -1,5 +1,5 @@
 <div class="character-hero">
   <a href="..\..\assets\library\10_CHARACTERS\LUCIEN\01_IDENTITY\gallery\lucien_gallery_image_v1.png" target="_blank">
-    <img src="..\..\assets\library\10_CHARACTERS\LUCIEN\01_IDENTITY\gallery\lucien_gallery_image_v1.png" alt="">
+    <img src="..\..\assets\library\10_CHARACTERS\LUCIEN\01_IDENTITY\gallery\lucien_gallery_image_v1.png" alt="lucien hero image">
   </a>
 </div>

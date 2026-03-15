@@ -20,19 +20,6 @@ IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".webp"}
 
 
 def page_relative_url(character_slug: str, target_under_docs: pathlib.Path) -> str:
-    """
-    Compute a URL relative to the rendered character page location.
-
-    Character pages live at:
-        docs/characters/<slug>.md
-
-    With MkDocs default directory_urls: true, they render to:
-        /characters/<slug>/
-
-    So paths inside included snippets must be relative to the virtual page
-    directory "characters/<slug>/", not to the snippet file location and not
-    to docs/characters/.
-    """
     target_virtual = pathlib.PurePosixPath(target_under_docs.relative_to(DOCS_ROOT).as_posix())
     page_virtual_dir = pathlib.PurePosixPath("characters") / character_slug
     rel = os.path.relpath(str(target_virtual), start=str(page_virtual_dir))
@@ -56,12 +43,43 @@ def generate_gallery(images, character_slug: str):
     return "\n".join(lines)
 
 
+def generate_hero_image(image: pathlib.Path, character_slug: str):
+    rel = page_relative_url(character_slug, image)
+
+    lines = []
+    lines.append('<div class="character-hero">')
+    lines.append(f'  <a href="{rel}" target="_blank">')
+    lines.append(f'    <img src="{rel}" alt="">')
+    lines.append("  </a>")
+    lines.append("</div>")
+    lines.append("")
+    return "\n".join(lines)
+
+
+def is_gallery_image(path: pathlib.Path) -> bool:
+    parts_lower = [p.lower() for p in path.parts]
+    name_lower = path.name.lower()
+    stem_lower = path.stem.lower()
+
+    return (
+        "01_gallery" in parts_lower
+        or "gallery" in stem_lower
+        or "thumbnail" in stem_lower
+    )
+
+
 def collect_images(folder):
     images = []
     for p in folder.rglob("*"):
         if p.suffix.lower() in IMAGE_EXTENSIONS:
             images.append(p)
     return sorted(images)
+
+
+def split_identity_images(images):
+    gallery_images = [img for img in images if is_gallery_image(img)]
+    regular_images = [img for img in images if not is_gallery_image(img)]
+    return regular_images, gallery_images
 
 
 def main():
@@ -87,6 +105,27 @@ def main():
 
             if not images:
                 print(f"  Skipping {family_folder} (no images)")
+                continue
+
+            if family_folder == "01_IDENTITY":
+                identity_images, hero_images = split_identity_images(images)
+
+                if identity_images:
+                    snippet_path = character_snippet_dir / f"{family_name}.md"
+                    gallery = generate_gallery(identity_images, character)
+                    snippet_path.write_text(gallery, encoding="utf-8")
+                    print(f"  Generated {snippet_path.relative_to(ROOT)}")
+                else:
+                    print(f"  Skipping {family_folder} identity gallery (no non-gallery images)")
+
+                if hero_images:
+                    hero_path = character_snippet_dir / "hero.md"
+                    hero = generate_hero_image(hero_images[0], character)
+                    hero_path.write_text(hero, encoding="utf-8")
+                    print(f"  Generated {hero_path.relative_to(ROOT)}")
+                else:
+                    print(f"  No hero image found for {character_dir.name}")
+
                 continue
 
             snippet_path = character_snippet_dir / f"{family_name}.md"

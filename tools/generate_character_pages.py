@@ -48,6 +48,12 @@ def build_character_page(character: str, character_dir: pathlib.Path) -> str:
 
     lines.append(f"# {name}")
     lines.append("")
+
+    hero_snippet_path = SNIPPETS_ROOT / character / "hero.md"
+    if hero_snippet_path.exists():
+        lines.append(f'--8<-- "snippets/galleries/{character}/hero.md"')
+        lines.append("")
+
     lines.append("## Overview")
     lines.append("")
     lines.append(f"{name} is a character in the reference library.")
@@ -68,6 +74,7 @@ def build_character_page(character: str, character_dir: pathlib.Path) -> str:
         lines.append("")
 
     return "\n".join(lines)
+
 
 
 def current_character_slugs() -> set[str]:

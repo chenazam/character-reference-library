@@ -1,5 +1,7 @@
 # Lucien
 
+--8<-- "snippets/galleries/lucien/hero.md"
+
 ## Overview
 
 Lucien is a character in the reference library.

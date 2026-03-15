@@ -1,5 +1,7 @@
 # Blake
 
+--8<-- "snippets/galleries/blake/hero.md"
+
 ## Overview
 
 Blake is a character in the reference library.

@@ -1,5 +1,7 @@
 # Tommy
 
+--8<-- "snippets/galleries/tommy/hero.md"
+
 ## Overview
 
 Tommy is a character in the reference library.

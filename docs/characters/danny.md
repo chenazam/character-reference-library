@@ -1,5 +1,7 @@
 # Danny
 
+--8<-- "snippets/galleries/danny/hero.md"
+
 ## Overview
 
 Danny is a character in the reference library.

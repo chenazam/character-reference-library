@@ -88,11 +88,13 @@ identity_rules:
   - youthful soft facial features
   - light athletic body
 reference_files:
-  face_anchor: ''
+  face_anchor: daimon_face_anchor_v1.png
   anatomy_sheet: ''
   body_anchor: ''
   ultimate_character_sheet: ''
   signature_outfit_sheet: ''
+  silhouette_sheet: ''
+  turnaround_sheet: ''
 pipeline_status:
   face_anchor: complete
   hair_sheet: complete

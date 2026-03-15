@@ -91,11 +91,13 @@ identity_rules:
   - very narrow hips
   - extremely thin or twink-like body
 reference_files:
-  face_anchor: tom_face_anchor.png
+  face_anchor: tommy_face_anchor_v1.png
   anatomy_sheet: ''
-  body_anchor: tom_body_anchor.png
+  body_anchor: ''
   ultimate_character_sheet: ''
   signature_outfit_sheet: ''
+  silhouette_sheet: ''
+  turnaround_sheet: ''
 pipeline_status:
   face_anchor: complete
   hair_sheet: complete

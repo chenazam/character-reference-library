@@ -146,6 +146,21 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/RAGNAR/00_PROFILE/character_summary/</loc>
+         <lastmod>2026-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/RAGNAR/00_PROFILE/identity_guardrails/</loc>
+         <lastmod>2026-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/RAGNAR/00_PROFILE/prompt_blocks/</loc>
+         <lastmod>2026-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/TOMMY/00_PROFILE/character_summary/</loc>
          <lastmod>2026-03-15</lastmod>
          <changefreq>daily</changefreq>
@@ -492,6 +507,11 @@
     </url>
     <url>
          <loc>https://charreflib.chenazam.com/characters/overview/</loc>
+         <lastmod>2026-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/characters/ragnar/</loc>
          <lastmod>2026-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>

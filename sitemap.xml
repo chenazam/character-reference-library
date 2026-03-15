@@ -506,6 +506,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/comparisons/assets/</loc>
+         <lastmod>2026-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/environments/</loc>
          <lastmod>2026-03-15</lastmod>
          <changefreq>daily</changefreq>
@@ -637,6 +642,96 @@
     </url>
     <url>
          <loc>https://charreflib.chenazam.com/prompts/templates/ucs/</loc>
+         <lastmod>2026-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/comparisons/anatomy-back/</loc>
+         <lastmod>2026-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/comparisons/anatomy-front/</loc>
+         <lastmod>2026-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/comparisons/anatomy-glutes/</loc>
+         <lastmod>2026-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/comparisons/anatomy-sheet/</loc>
+         <lastmod>2026-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/comparisons/anatomy-side/</loc>
+         <lastmod>2026-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/comparisons/body-anchor/</loc>
+         <lastmod>2026-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/comparisons/expression-sheet/</loc>
+         <lastmod>2026-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/comparisons/face-anchor/</loc>
+         <lastmod>2026-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/comparisons/face-front/</loc>
+         <lastmod>2026-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/comparisons/face-profile/</loc>
+         <lastmod>2026-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/comparisons/face-three-quarter/</loc>
+         <lastmod>2026-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/comparisons/gallery-image/</loc>
+         <lastmod>2026-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/comparisons/hair-sheet/</loc>
+         <lastmod>2026-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/comparisons/hand-sheet/</loc>
+         <lastmod>2026-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/comparisons/muscle-tension/</loc>
+         <lastmod>2026-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/comparisons/proportion-grid/</loc>
+         <lastmod>2026-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/comparisons/silhouette-sheet/</loc>
+         <lastmod>2026-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/comparisons/turnaround-sheet/</loc>
          <lastmod>2026-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -842,6 +937,11 @@
     </url>
     <url>
          <loc>https://charreflib.chenazam.com/snippets/galleries/jonah/identity/</loc>
+         <lastmod>2026-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/galleries/luca/body/</loc>
          <lastmod>2026-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>

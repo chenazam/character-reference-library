@@ -40,3 +40,9 @@
 --8<-- "snippets/galleries/hudson/identity.md"
 
 ---
+
+## Body
+
+--8<-- "snippets/galleries/hudson/body.md"
+
+---

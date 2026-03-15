@@ -1,30 +1,34 @@
-Create a three-quarter facial reference for a character design pipeline.
+Create a full side-profile facial reference for a character design pipeline.
 
 Character:
-Danny is an extremely tall, broad-shouldered, heavily muscular man with a square face, broad jawline, light blue eyes, and short light-brown hair with light stubble. His massive football-player physique gives him a dominant physical presence, while his expression and posture often carry warm, approachable “gentle giant” energy. His aesthetic blends rugged utilitarian clothing with practical athletic wear.
+Daimon is an extremely tall man with a massive muscular build and a powerful physical presence.  
+He has broad shoulders, thick limbs, and a dense upper-body-dominant frame that creates an imposing silhouette.  
+His face is square with a strong jawline, dark short hair, and intense hazel eyes.  
+His aesthetic is rugged and utilitarian, featuring practical clothing, leather materials, dark colors, and visible tattoos.
 
 ---
 
 View:
-clean 45-degree three-quarter head view
+perfect left-facing side profile
 neutral expression
-natural head alignment
+straight head alignment
 
 Focus:
-depth of facial structure
-cheekbone form
-nose projection
-jaw curvature
-brow-to-cheek transition
-how the hairstyle frames the face from an angled view
+forehead slope
+nose profile
+lip projection
+chin projection
+jaw-to-neck transition
+ear placement
+hair silhouette from the side
 
 Output requirements:
 single clean facial reference image
-consistent identity with the front face reference
 full head clearly visible
+strict side profile
 no dramatic perspective distortion
-no stylized pose or expression
-facial structure must remain stable and recognizable
+identity must remain consistent with front and three-quarter references
+no expressive pose or stylized camera treatment
 
 Use:
 Style:

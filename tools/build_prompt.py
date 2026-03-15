@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import pathlib
 import re
+import subprocess
 import sys
 from typing import Dict, List
 
@@ -123,7 +124,6 @@ TEMPLATE_ALIASES = {
 }
 
 
-
 def read_text(path: pathlib.Path) -> str:
     if not path.exists():
         raise FileNotFoundError(f"Missing file: {path}")
@@ -157,7 +157,7 @@ def slugify(value: str) -> str:
     return value
 
 
-def derive_output_path(character_names: List[str], template_name: str):
+def derive_output_path(character_names: List[str], template_name: str) -> pathlib.Path:
     char_slug = "-".join(slugify(c) for c in character_names)
     template_slug = slugify(template_name)
     filename = f"{char_slug}-{template_slug}.txt"
@@ -242,7 +242,7 @@ def resolve_placeholders(text: str, values: Dict[str, str]) -> str:
     for _ in range(20):
         changed = False
 
-        def replacer(match):
+        def replacer(match: re.Match[str]) -> str:
             nonlocal changed
             key = match.group(1)
 
@@ -265,13 +265,26 @@ def clean_final_prompt(text: str) -> str:
     return cleaned.strip()
 
 
-def build_prompt(
-    template_path,
-    character_folder=None,
-    character_list=None,
-    params=None,
-):
+def copy_to_clipboard(text: str) -> None:
+    try:
+        subprocess.run(
+            ["clip"],
+            input=text,
+            text=True,
+            check=True,
+        )
+    except FileNotFoundError as exc:
+        raise RuntimeError("Windows clipboard utility 'clip' was not found.") from exc
+    except subprocess.CalledProcessError as exc:
+        raise RuntimeError("Failed to copy prompt to clipboard.") from exc
 
+
+def build_prompt(
+    template_path: pathlib.Path,
+    character_folder: str | None = None,
+    character_list: List[str] | None = None,
+    params: Dict[str, str] | None = None,
+) -> str:
     template_text = strip_code_fence(read_text(template_path))
 
     master_blocks = load_master_blocks()
@@ -293,36 +306,44 @@ def build_prompt(
     return clean_final_prompt(resolved)
 
 
-def parse_params(param_args):
-    params = {}
+def parse_params(param_args: List[str] | None) -> Dict[str, str]:
+    params: Dict[str, str] = {}
 
     if not param_args:
         return params
 
     for item in param_args:
+        if "=" not in item:
+            raise ValueError(f"Invalid --param value '{item}'. Expected KEY=VALUE.")
         key, value = item.split("=", 1)
         params[key.strip().upper()] = value.strip()
 
     return params
 
 
-def main():
-
+def main() -> None:
     parser = argparse.ArgumentParser(
         description="Build prompt from template + blocks"
     )
 
     parser.add_argument("--template")
-
     parser.add_argument("--character")
     parser.add_argument("--characters", nargs="+")
-
-    parser.add_argument("--output")
-
-    parser.add_argument("--stdout", action="store_true")
-
+    parser.add_argument(
+        "--output",
+        help="Write prompt to a file. If omitted, no file is created.",
+    )
+    parser.add_argument(
+        "--stdout",
+        action="store_true",
+        help="Print the resolved prompt to the console.",
+    )
+    parser.add_argument(
+        "--no-clipboard",
+        action="store_true",
+        help="Disable copying prompt to clipboard.",
+    )
     parser.add_argument("--param", action="append")
-
     parser.add_argument(
         "--list-templates",
         action="store_true",
@@ -333,10 +354,8 @@ def main():
 
     if args.list_templates:
         print("Available template aliases:\n")
-
         for alias, path in sorted(TEMPLATE_ALIASES.items()):
             print(f"{alias:<20} -> {path}")
-
         sys.exit(0)
 
     if not args.template:
@@ -347,41 +366,30 @@ def main():
         print("Error: Provide --character or --characters", file=sys.stderr)
         sys.exit(1)
 
-    template_path = resolve_template_path(args.template)
+    try:
+        params = parse_params(args.param)
 
-    params = parse_params(args.param)
-
-    character_list = []
-
-    if args.character:
-        character_list.append(args.character)
-
-    if args.characters:
-        character_list.extend(args.characters)
-
-    final_prompt = build_prompt(
-        template_path=template_path,
-        character_folder=args.character,
-        character_list=args.characters,
-        params=params,
-    )
-
-    if args.stdout:
-        print(final_prompt)
-
-    if not args.stdout or args.output:
-
-        output_path = (
-            ROOT / args.output
-            if args.output
-            else derive_output_path(character_list, args.template)
+        final_prompt = build_prompt(
+            template_path=resolve_template_path(args.template),
+            character_folder=args.character,
+            character_list=args.characters,
+            params=params,
         )
 
-        output_path.parent.mkdir(parents=True, exist_ok=True)
+        if not args.no_clipboard:
+            copy_to_clipboard(final_prompt)
 
-        output_path.write_text(final_prompt, encoding="utf-8")
+        if args.stdout:
+            print(final_prompt)
 
-        print(f"Built prompt: {output_path}")
+        if args.output:
+            output_path = pathlib.Path(args.output)
+            output_path.parent.mkdir(parents=True, exist_ok=True)
+            output_path.write_text(final_prompt, encoding="utf-8")
+
+    except Exception as exc:
+        print(f"Error: {exc}", file=sys.stderr)
+        sys.exit(1)
 
 
 if __name__ == "__main__":

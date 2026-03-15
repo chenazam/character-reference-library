@@ -38,10 +38,6 @@ Reference assets that still need to be generated.
 
 - next: ucs_core
 
-## RAGNAR
-
-- next: face_anchor
-
 ## TOMMY
 
 - next: anatomy_sheet

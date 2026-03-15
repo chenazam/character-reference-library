@@ -50,6 +50,13 @@
   </div>
 
   <div class="comparison-card">
+    <h3><a href="/characters/tommy/">Tommy</a></h3>
+    <a href="/assets/library/10_CHARACTERS/TOMMY/02_BODY/anatomy/tommy_anatomy_front_v1.png" target="_blank">
+      <img src="/assets/library/10_CHARACTERS/TOMMY/02_BODY/anatomy/tommy_anatomy_front_v1.png" alt="Tommy anatomy-front">
+    </a>
+  </div>
+
+  <div class="comparison-card">
     <h3><a href="/characters/ragnar/">Ragnar</a></h3>
     <a href="/assets/library/10_CHARACTERS/RAGNAR/02_BODY/anatomy/ragnar_anatomy_front_v1.png" target="_blank">
       <img src="/assets/library/10_CHARACTERS/RAGNAR/02_BODY/anatomy/ragnar_anatomy_front_v1.png" alt="Ragnar anatomy-front">

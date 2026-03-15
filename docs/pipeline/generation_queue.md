@@ -44,4 +44,4 @@ Reference assets that still need to be generated.
 
 ## TOMMY
 
-- next: anatomy_sheet
+- next: body_anchor

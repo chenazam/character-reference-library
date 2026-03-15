@@ -28,7 +28,7 @@ Reference assets that still need to be generated.
 
 ## JONAH
 
-- next: anatomy_sheet
+- next: proportion_grid
 
 ## LUCA
 

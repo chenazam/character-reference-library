@@ -38,3 +38,9 @@
 --8<-- "snippets/galleries/jonah/identity.md"
 
 ---
+
+## Body
+
+--8<-- "snippets/galleries/jonah/body.md"
+
+---

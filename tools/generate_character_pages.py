@@ -24,22 +24,25 @@ RESERVED_PAGES = {
     "character-page-template.md",
 }
 
-print("USING UPDATED generate_character_pages.py")
-print(__file__)
-
-
-# --- text cleanup helpers --------------------------------
 
 def fix_common_mojibake(text: str) -> str:
     return (
         text.replace("â€™", "'")
             .replace("â€“", "–")
             .replace("â€œ", '"')
-            .replace("â€", '"')
+            .replace("â€\x9d", '"')
     )
 
 
-# --- metadata loading ------------------------------------
+def deep_fix_strings(value):
+    if isinstance(value, str):
+        return fix_common_mojibake(value)
+    if isinstance(value, list):
+        return [deep_fix_strings(item) for item in value]
+    if isinstance(value, dict):
+        return {k: deep_fix_strings(v) for k, v in value.items()}
+    return value
+
 
 def load_metadata(character_dir: pathlib.Path) -> dict:
     metadata_file = character_dir / "00_PROFILE" / "metadata.yaml"
@@ -50,13 +53,9 @@ def load_metadata(character_dir: pathlib.Path) -> dict:
     try:
         with metadata_file.open("r", encoding="utf-8") as f:
             data = yaml.safe_load(f) or {}
-
-            # clean string fields
-            for k, v in data.items():
-                if isinstance(v, str):
-                    data[k] = fix_common_mojibake(v)
-
-            return data if isinstance(data, dict) else {}
+            if not isinstance(data, dict):
+                return {}
+            return deep_fix_strings(data)
     except Exception as e:
         print(f"Warning: failed to read {metadata_file}: {e}")
         return {}
@@ -69,7 +68,6 @@ def load_character_summary(character_dir: pathlib.Path) -> str:
     try:
         text = summary_file.read_text(encoding="utf-8")
         return fix_common_mojibake(text)
-
     except Exception as e:
         print(f"Warning: failed to read {summary_file}: {e}")
         return ""
@@ -119,7 +117,7 @@ def build_overview(metadata: dict, summary_sections: dict[str, str]) -> str:
     expression = metadata.get("expression", {})
     movement = metadata.get("movement", {})
 
-    short_summary = core.get("short_summary", "")
+    short_summary = (core.get("short_summary") or "").strip()
     height_cm = physical.get("height_cm")
     height_imp = physical.get("height_imperial")
     build_notes = (physical.get("build_notes") or "").strip()
@@ -127,31 +125,13 @@ def build_overview(metadata: dict, summary_sections: dict[str, str]) -> str:
 
     face_desc = []
     if face.get("face_shape"):
-        face_desc.append(face["face_shape"].replace("_", " "))
+        face_desc.append(str(face["face_shape"]).replace("_", " "))
     if face.get("jawline"):
-        face_desc.append(face["jawline"].replace("_", " "))
+        face_desc.append(str(face["jawline"]).replace("_", " "))
     if face.get("hair_description"):
-        face_desc.append(face["hair_description"])
+        face_desc.append(str(face["hair_description"]))
     if face.get("eye_description"):
-        face_desc.append(face["eye_description"])
-
-    style_parts = []
-    if style.get("primary_aesthetic"):
-        style_parts.append(style["primary_aesthetic"].replace("_", " "))
-    if style.get("secondary_aesthetic"):
-        style_parts.append(human_join([s.replace("_", " ") for s in style["secondary_aesthetic"]]))
-    if style.get("materials"):
-        style_parts.append(f"materials such as {human_join(style['materials'])}")
-    if style.get("primary_colors"):
-        style_parts.append(f"colors such as {human_join([c.replace('_', ' ') for c in style['primary_colors']])}")
-
-    movement_parts = []
-    if movement.get("movement_style"):
-        movement_parts.append(movement["movement_style"].replace("_", " "))
-    if movement.get("gesture_style"):
-        movement_parts.append(movement["gesture_style"].replace("_", " "))
-    if movement.get("spatial_presence"):
-        movement_parts.append(movement["spatial_presence"].replace("_", " "))
+        face_desc.append(str(face["eye_description"]))
 
     visual_full = clean_md_text(summary_sections.get("Visual Identity (Full Prompt Version)", ""))
     personality = clean_md_text(summary_sections.get("Personality Snapshot", ""))
@@ -171,44 +151,51 @@ def build_overview(metadata: dict, summary_sections: dict[str, str]) -> str:
         identity_para.append(build_notes)
 
     if face_desc:
-        identity_para.append(
-            f"He is characterized by a {'; '.join(face_desc)}."
-        )
+        identity_para.append(f"He is characterized by a {'; '.join(face_desc)}.")
 
     style_para = ""
-    if style_parts:
+    primary_aesthetic = str(style.get("primary_aesthetic", "")).replace("_", " ").strip()
+    secondary = style.get("secondary_aesthetic") or []
+    materials = style.get("materials") or []
+    colors = style.get("primary_colors") or []
+
+    if primary_aesthetic or secondary or materials or colors:
         style_para = (
-            f"His style is defined by {style.get('primary_aesthetic', '').replace('_', ' ')}"
-            if style.get("primary_aesthetic")
+            f"His style is defined by {primary_aesthetic}"
+            if primary_aesthetic
             else "His style is visually consistent"
         )
         extras = []
-        if style.get("secondary_aesthetic"):
-            extras.append(f"secondary influences from {human_join([s.replace('_', ' ') for s in style['secondary_aesthetic']])}")
-        if style.get("materials"):
-            extras.append(f"materials such as {human_join(style['materials'])}")
-        if style.get("primary_colors"):
-            extras.append(f"a palette built around {human_join([c.replace('_', ' ') for c in style['primary_colors']])}")
+        if secondary:
+            extras.append(f"secondary influences from {human_join([str(s).replace('_', ' ') for s in secondary])}")
+        if materials:
+            extras.append(f"materials such as {human_join([str(m) for m in materials])}")
+        if colors:
+            extras.append(f"a palette built around {human_join([str(c).replace('_', ' ') for c in colors])}")
         if extras:
             style_para += ", with " + ", ".join(extras)
         style_para += "."
 
     presence_para_parts = []
-    if movement_parts:
+    movement_style = str(movement.get("movement_style", "")).replace("_", " ").strip()
+    gesture_style = str(movement.get("gesture_style", "")).replace("_", " ").strip()
+    spatial_presence = str(movement.get("spatial_presence", "")).replace("_", " ").strip()
+
+    if movement_style or gesture_style or spatial_presence:
         presence_para_parts.append(
-            f"He moves with {movement.get('movement_style', '').replace('_', ' ')}, uses {movement.get('gesture_style', '').replace('_', ' ') if movement.get('gesture_style') else 'controlled'} gestures, and projects a {movement.get('spatial_presence', '').replace('_', ' ')}."
+            f"He moves with {movement_style or 'controlled movement'}, uses {gesture_style or 'controlled'} gestures, and projects a {spatial_presence or 'steady presence'}."
         )
+
     if expression.get("default_expression") or expression.get("smile_type") or expression.get("emotional_tone"):
         expr_bits = []
         if expression.get("default_expression"):
-            expr_bits.append(expression["default_expression"].replace("_", " "))
+            expr_bits.append(str(expression["default_expression"]).replace("_", " "))
         if expression.get("smile_type"):
-            expr_bits.append(expression["smile_type"].replace("_", " "))
+            expr_bits.append(str(expression["smile_type"]).replace("_", " "))
         if expression.get("emotional_tone"):
-            expr_bits.append(expression["emotional_tone"].replace("_", " "))
-        presence_para_parts.append(
-            f"His expression profile reads as {human_join(expr_bits)}."
-        )
+            expr_bits.append(str(expression["emotional_tone"]).replace("_", " "))
+        presence_para_parts.append(f"His expression profile reads as {human_join(expr_bits)}.")
+
     if personality:
         presence_para_parts.append(extract_first_paragraph(personality))
     elif notes:
@@ -231,9 +218,6 @@ def build_character_page(character: str, character_dir: pathlib.Path) -> str:
 
     name = metadata.get("name", character_dir.name)
     overview = build_overview(metadata, summary_sections)
-    print(f"{character}: overview length = {len(overview)}")
-    print(repr(overview[:200]))
-
 
     lines = []
 
@@ -265,3 +249,44 @@ def build_character_page(character: str, character_dir: pathlib.Path) -> str:
         lines.append("")
 
     return "\n".join(lines)
+
+
+def current_character_slugs() -> set[str]:
+    slugs = set()
+    for character_dir in sorted(CHARACTERS_ROOT.iterdir()):
+        if character_dir.is_dir():
+            slugs.add(character_dir.name.lower())
+    return slugs
+
+
+def cleanup_stale_generated_pages(valid_slugs: set[str]) -> None:
+    for page_path in PAGES_ROOT.glob("*.md"):
+        if page_path.name in RESERVED_PAGES:
+            continue
+
+        if page_path.stem not in valid_slugs:
+            page_path.unlink()
+            print(f"Removed stale page {page_path.relative_to(ROOT)}")
+
+
+def main() -> None:
+    PAGES_ROOT.mkdir(parents=True, exist_ok=True)
+
+    valid_slugs = current_character_slugs()
+    cleanup_stale_generated_pages(valid_slugs)
+
+    for character_dir in sorted(CHARACTERS_ROOT.iterdir()):
+        if not character_dir.is_dir():
+            continue
+
+        character = character_dir.name.lower()
+        page_path = PAGES_ROOT / f"{character}.md"
+
+        page_content = build_character_page(character, character_dir)
+        page_path.write_text(page_content, encoding="utf-8")
+
+        print(f"Generated {page_path.relative_to(ROOT)}")
+
+
+if __name__ == "__main__":
+    main()

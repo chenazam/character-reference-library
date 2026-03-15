@@ -12,7 +12,7 @@ Reference assets that still need to be generated.
 
 ## DANNY
 
-- next: face_anchor
+- next: hair_sheet
 
 ## DENNIS
 

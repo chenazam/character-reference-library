@@ -28,7 +28,7 @@ Reference assets that still need to be generated.
 
 ## JONAH
 
-- next: hair_sheet
+- next: anatomy_sheet
 
 ## LUCA
 

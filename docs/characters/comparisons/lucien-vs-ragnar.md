@@ -11,9 +11,8 @@
 ## Physical Contrast
 
 ### Lucien
-
 narrow_slender | glute_slender | glutes-emphasis | slender, leg_dominant, glute_emphasis
 
 ### Ragnar
-
 heavy_muscular | power_frame | upper_body-emphasis | tall, broad, imposing, massive, upper_dominant
+

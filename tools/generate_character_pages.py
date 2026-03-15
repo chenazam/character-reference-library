@@ -7,7 +7,6 @@ CHARACTERS_ROOT = ROOT / "docs/assets/library/10_CHARACTERS"
 SNIPPETS_ROOT = ROOT / "docs/snippets/galleries"
 PAGES_ROOT = ROOT / "docs/characters"
 
-
 SECTIONS = [
     ("Identity", "identity"),
     ("Body", "body"),
@@ -17,8 +16,16 @@ SECTIONS = [
     ("Scenes", "scenes"),
 ]
 
+# Files in docs/characters that are documentation/manual files, not generated character pages
+RESERVED_PAGES = {
+    "index.md",
+    "overview.md",
+    "templates.md",
+    "character-page-template.md",
+}
 
-def load_metadata(character_dir):
+
+def load_metadata(character_dir: pathlib.Path) -> dict:
     metadata_file = character_dir / "00_PROFILE" / "metadata.yaml"
 
     if not metadata_file.exists():
@@ -33,15 +40,7 @@ def load_metadata(character_dir):
         return {}
 
 
-def snippet_line(character, section_slug):
-    snippet_path = SNIPPETS_ROOT / character / f"{section_slug}.md"
-
-    if snippet_path.exists():
-        return f'--8<-- "snippets/galleries/{character}/{section_slug}.md"'
-    return f'<!-- snippet missing: snippets/galleries/{character}/{section_slug}.md -->'
-
-
-def build_character_page(character, character_dir):
+def build_character_page(character: str, character_dir: pathlib.Path) -> str:
     metadata = load_metadata(character_dir)
     name = metadata.get("name", character_dir.name)
 
@@ -68,13 +67,37 @@ def build_character_page(character, character_dir):
         lines.append("---")
         lines.append("")
 
-
     return "\n".join(lines)
+
+
+def current_character_slugs() -> set[str]:
+    slugs = set()
+    for character_dir in sorted(CHARACTERS_ROOT.iterdir()):
+        if character_dir.is_dir():
+            slugs.add(character_dir.name.lower())
+    return slugs
+
+
+def cleanup_stale_generated_pages(valid_slugs: set[str]) -> None:
+    for page_path in PAGES_ROOT.glob("*.md"):
+        if page_path.name in RESERVED_PAGES:
+            continue
+
+        # page stem is the slug, e.g. docs/characters/blake.md -> "blake"
+        if page_path.stem not in valid_slugs:
+            page_path.unlink()
+            print(f"Removed stale page {page_path.relative_to(ROOT)}")
 
 
 def main():
     PAGES_ROOT.mkdir(parents=True, exist_ok=True)
 
+    valid_slugs = current_character_slugs()
+
+    # First remove stale generated pages for deleted characters
+    cleanup_stale_generated_pages(valid_slugs)
+
+    # Then regenerate current character pages
     for character_dir in sorted(CHARACTERS_ROOT.iterdir()):
         if not character_dir.is_dir():
             continue

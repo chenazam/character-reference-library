@@ -83,6 +83,9 @@ def split_identity_images(images):
 
 
 def main():
+    print("USING UPDATED generate_character_pages.py")
+    print(__file__)
+
     SNIPPETS_ROOT.mkdir(parents=True, exist_ok=True)
 
     for character_dir in sorted(CHARACTERS_ROOT.iterdir()):

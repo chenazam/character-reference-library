@@ -24,6 +24,10 @@ RESERVED_PAGES = {
     "character-page-template.md",
 }
 
+print("USING UPDATED generate_character_pages.py")
+print(__file__)
+
+
 # --- text cleanup helpers --------------------------------
 
 def fix_common_mojibake(text: str) -> str:
@@ -227,6 +231,9 @@ def build_character_page(character: str, character_dir: pathlib.Path) -> str:
 
     name = metadata.get("name", character_dir.name)
     overview = build_overview(metadata, summary_sections)
+    print(f"{character}: overview length = {len(overview)}")
+    print(repr(overview[:200]))
+
 
     lines = []
 

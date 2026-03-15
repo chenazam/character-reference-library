@@ -98,18 +98,28 @@
 }
 
 .character-hero {
-  margin: 0 0 1.5rem 0;
-  text-align: center;
-}
-
-.character-hero a {
-  display: inline-block;
+  float: right;
+  width: min(280px, 38%);
+  margin: 0 0 1rem 1.5rem;
 }
 
 .character-hero img {
-  max-width: 320px;
+  display: block;
   width: 100%;
   height: auto;
   border-radius: 12px;
+}
+
+.character-hero::after {
+  content: '';
   display: block;
+  clear: both;
+}
+
+@media (max-width: 900px) {
+  .character-hero {
+    float: none;
+    width: min(320px, 100%);
+    margin: 0 auto 1rem auto;
+  }
 }

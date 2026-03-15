@@ -12,7 +12,7 @@ Reference assets that still need to be generated.
 
 ## DANNY
 
-- next: hair_sheet
+- next: anatomy_sheet
 
 ## DENNIS
 
@@ -32,7 +32,7 @@ Reference assets that still need to be generated.
 
 ## LUCA
 
-- next: hair_sheet
+- next: anatomy_sheet
 
 ## LUCIEN
 

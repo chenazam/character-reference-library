@@ -90,7 +90,7 @@ reference_files:
   ultimate_character_sheet: ''
   signature_outfit_sheet: ''
 pipeline_status:
-  face_anchor: not_started
+  face_anchor: complete
   hair_sheet: not_started
   anatomy_sheet: not_started
   proportion_grid: not_started

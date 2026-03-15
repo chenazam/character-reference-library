@@ -20,7 +20,7 @@ Reference assets that still need to be generated.
 
 ## HUDSON
 
-- next: anatomy_sheet
+- next: body_anchor
 
 ## JASPER
 

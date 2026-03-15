@@ -60,6 +60,12 @@ Browse characters in the reference library.
 
 </a>
 
+<a class="character-card" href="['character_slug']/">
+
+  <h3>RAGNAR</h3>
+
+</a>
+
 <a class="character-card" href="tommy/">
 
   <img src="..\assets\library\10_CHARACTERS\TOMMY\01_IDENTITY\gallery\tommy_gallery_image_v1.png" alt="Tommy">

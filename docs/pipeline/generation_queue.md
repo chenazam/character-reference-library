@@ -4,7 +4,7 @@ Reference assets that still need to be generated.
 
 ## BLAKE
 
-- next: hair_sheet
+- next: anatomy_sheet
 
 ## DAIMON
 
@@ -37,6 +37,10 @@ Reference assets that still need to be generated.
 ## LUCIEN
 
 - next: ucs_core
+
+## RAGNAR
+
+- next: face_anchor
 
 ## TOMMY
 

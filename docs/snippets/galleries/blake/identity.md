@@ -20,4 +20,8 @@
     <img src="..\..\assets\library\10_CHARACTERS\BLAKE\01_IDENTITY\gallery\blake-gallery-image.png" alt="">
   </a>
 
+  <a href="..\..\assets\library\10_CHARACTERS\BLAKE\01_IDENTITY\hair\blake_hair_sheet_v1.png" target="_blank">
+    <img src="..\..\assets\library\10_CHARACTERS\BLAKE\01_IDENTITY\hair\blake_hair_sheet_v1.png" alt="">
+  </a>
+
 </div>

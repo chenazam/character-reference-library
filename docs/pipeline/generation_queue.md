@@ -4,7 +4,7 @@ Reference assets that still need to be generated.
 
 ## BLAKE
 
-- next: anatomy_sheet
+- next: proportion_grid
 
 ## DAIMON
 

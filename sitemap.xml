@@ -526,6 +526,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/characters/comparisons/lucien-vs-ragnar/</loc>
+         <lastmod>2026-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/comparisons/assets/</loc>
          <lastmod>2026-03-15</lastmod>
          <changefreq>daily</changefreq>
@@ -1037,6 +1042,11 @@
     </url>
     <url>
          <loc>https://charreflib.chenazam.com/snippets/galleries/lucien/turnaround/</loc>
+         <lastmod>2026-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/galleries/ragnar/body/</loc>
          <lastmod>2026-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>

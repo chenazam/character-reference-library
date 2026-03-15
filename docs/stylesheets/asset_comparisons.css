@@ -1,0 +1,42 @@
+.comparison-controls {
+  margin: 0 0 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.comparison-controls select {
+  min-width: 280px;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+.comparison-card {
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.comparison-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.comparison-card img {
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.comparison-section[hidden] {
+  display: none !important;
+}

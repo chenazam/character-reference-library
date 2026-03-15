@@ -32,7 +32,7 @@ Reference assets that still need to be generated.
 
 ## LUCA
 
-- next: anatomy_sheet
+- next: body_anchor
 
 ## LUCIEN
 

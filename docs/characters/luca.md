@@ -40,3 +40,9 @@
 --8<-- "snippets/galleries/luca/identity.md"
 
 ---
+
+## Body
+
+--8<-- "snippets/galleries/luca/body.md"
+
+---

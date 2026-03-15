@@ -4,11 +4,26 @@
 
 ## Overview
 
-Jasper is 170 cm (5'7") tall. Lean runner-built man with playful athletic energy and expressive charm. Lean endurance-athlete physique with strong lower-body development. Narrow waist, compact torso, and powerful thighs typical of a runner. Jasper's most visually distinctive feature is his prominent, rounded glutes and strong runner's legs, which create a leg-dominant silhouette. Muscle tone is defined but not bulky, emphasizing agility and speed. He is characterized by a oval; defined jawline; short light brown / dark blonde hair with soft natural texture; expressive eyes with lively warmth.
+<div class="character-overview-text">
 
-His style is defined by exhibitionist, with secondary influences from athletic and streetwear, materials such as cotton and mesh, a palette built around pink, soft red, light grey, and navy.
+Jasper is 5'7" with a lean athletic runner’s build and strong lower-body development. Short personality description used for scene prompts.
 
-He moves with restless quick, uses expressive gestures, and projects a energetic. His expression profile reads as soft neutral, playful smile, and open warm. Short personality description used for scene prompts.
+<div class="character-stats">
+<ul>
+  <li><strong>Height:</strong> 170 cm / 5&#x27;7&quot;</li>
+  <li><strong>Face:</strong> oval and defined jawline</li>
+  <li><strong>Hair:</strong> short light brown / dark blonde hair with soft natural texture</li>
+  <li><strong>Eyes:</strong> expressive eyes with lively warmth</li>
+  <li><strong>Style:</strong> exhibitionist, athletic, and streetwear</li>
+  <li><strong>Palette:</strong> pink, soft red, light grey, and navy</li>
+  <li><strong>Materials:</strong> cotton and mesh</li>
+  <li><strong>Expression:</strong> soft neutral and open warm</li>
+  <li><strong>Movement:</strong> restless quick</li>
+  <li><strong>Presence:</strong> energetic</li>
+</ul>
+</div>
+
+</div>
 
 ---
 

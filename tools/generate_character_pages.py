@@ -1,3 +1,4 @@
+import html
 import pathlib
 import re
 import yaml
@@ -97,7 +98,7 @@ def extract_first_paragraph(text: str) -> str:
 
 
 def human_join(items: list[str]) -> str:
-    items = [i for i in items if i]
+    items = [str(i).strip() for i in items if str(i).strip()]
     if not items:
         return ""
     if len(items) == 1:
@@ -107,9 +108,89 @@ def human_join(items: list[str]) -> str:
     return f"{', '.join(items[:-1])}, and {items[-1]}"
 
 
-def build_overview(metadata: dict, summary_sections: dict[str, str]) -> str:
-    name = metadata.get("name", "This character")
+def labelize(value: str) -> str:
+    return str(value).replace("_", " ").strip()
 
+
+def add_stat(stats: list[tuple[str, str]], label: str, value) -> None:
+    if value is None:
+        return
+    if isinstance(value, list):
+        rendered = human_join([labelize(v) for v in value])
+    else:
+        rendered = labelize(value)
+    if rendered:
+        stats.append((label, rendered))
+
+
+def build_overview_paragraph(metadata: dict, summary_sections: dict[str, str]) -> str:
+    name = metadata.get("name", "This character")
+    core = metadata.get("core_identity", {})
+    physical = metadata.get("physical", {})
+    face = metadata.get("face", {})
+    style = metadata.get("style", {})
+    movement = metadata.get("movement", {})
+
+    visual_full = clean_md_text(summary_sections.get("Visual Identity (Full Prompt Version)", ""))
+    personality = clean_md_text(summary_sections.get("Personality Snapshot", ""))
+
+    visual_para = extract_first_paragraph(visual_full)
+    personality_para = extract_first_paragraph(personality)
+
+    if visual_para:
+        paragraph = visual_para
+        if personality_para and personality_para not in paragraph:
+            paragraph += " " + personality_para
+        return paragraph
+
+    short_summary = (core.get("short_summary") or "").strip()
+    build_notes = (physical.get("build_notes") or "").strip()
+    primary_aesthetic = labelize(style.get("primary_aesthetic", ""))
+    movement_style = labelize(movement.get("movement_style", ""))
+    spatial_presence = labelize(movement.get("spatial_presence", ""))
+
+    bits = []
+    if short_summary:
+        bits.append(short_summary)
+    elif build_notes:
+        bits.append(build_notes)
+
+    face_bits = []
+    if face.get("face_shape"):
+        face_bits.append(labelize(face["face_shape"]))
+    if face.get("jawline"):
+        face_bits.append(labelize(face["jawline"]))
+    if face.get("hair_description"):
+        face_bits.append(str(face["hair_description"]).strip())
+    if face.get("eye_description"):
+        face_bits.append(str(face["eye_description"]).strip())
+
+    if face_bits:
+        bits.append(f"He is characterized by a { '; '.join(face_bits) }.")
+
+    if primary_aesthetic:
+        style_sentence = f"His style centers on {primary_aesthetic}"
+        secondary = style.get("secondary_aesthetic") or []
+        if secondary:
+            style_sentence += f", with influences from {human_join([labelize(s) for s in secondary])}"
+        style_sentence += "."
+        bits.append(style_sentence)
+
+    if movement_style or spatial_presence:
+        move_sentence = f"He moves with {movement_style or 'controlled movement'}"
+        if spatial_presence:
+            move_sentence += f" and projects a {spatial_presence}"
+        move_sentence += "."
+        bits.append(move_sentence)
+
+    paragraph = " ".join(bit.strip() for bit in bits if bit.strip())
+    if not paragraph:
+        paragraph = f"{name} is a character in the reference library."
+
+    return paragraph
+
+
+def build_stats(metadata: dict) -> list[tuple[str, str]]:
     core = metadata.get("core_identity", {})
     physical = metadata.get("physical", {})
     face = metadata.get("face", {})
@@ -117,98 +198,53 @@ def build_overview(metadata: dict, summary_sections: dict[str, str]) -> str:
     expression = metadata.get("expression", {})
     movement = metadata.get("movement", {})
 
-    short_summary = (core.get("short_summary") or "").strip()
+    stats: list[tuple[str, str]] = []
+
     height_cm = physical.get("height_cm")
     height_imp = physical.get("height_imperial")
-    build_notes = (physical.get("build_notes") or "").strip()
-    notes = (metadata.get("notes") or "").strip()
+    if height_cm and height_imp:
+        stats.append(("Height", f"{height_cm} cm / {height_imp}"))
+    elif height_cm:
+        stats.append(("Height", f"{height_cm} cm"))
+    elif height_imp:
+        stats.append(("Height", str(height_imp)))
 
-    face_desc = []
-    if face.get("face_shape"):
-        face_desc.append(str(face["face_shape"]).replace("_", " "))
-    if face.get("jawline"):
-        face_desc.append(str(face["jawline"]).replace("_", " "))
-    if face.get("hair_description"):
-        face_desc.append(str(face["hair_description"]))
-    if face.get("eye_description"):
-        face_desc.append(str(face["eye_description"]))
+    add_stat(stats, "Build", core.get("body_type"))
+    add_stat(stats, "Silhouette", core.get("silhouette"))
+    add_stat(stats, "Face", [face.get("face_shape"), face.get("jawline")])
+    add_stat(stats, "Hair", face.get("hair_description"))
+    add_stat(stats, "Eyes", face.get("eye_description"))
+    add_stat(stats, "Style", [style.get("primary_aesthetic")] + list(style.get("secondary_aesthetic") or []))
+    add_stat(stats, "Palette", style.get("primary_colors"))
+    add_stat(stats, "Materials", style.get("materials"))
+    add_stat(stats, "Expression", [expression.get("default_expression"), expression.get("emotional_tone")])
+    add_stat(stats, "Movement", movement.get("movement_style"))
+    add_stat(stats, "Presence", movement.get("spatial_presence"))
 
-    visual_full = clean_md_text(summary_sections.get("Visual Identity (Full Prompt Version)", ""))
-    personality = clean_md_text(summary_sections.get("Personality Snapshot", ""))
+    return [(label, value) for label, value in stats if value]
 
-    identity_para = []
-    if short_summary:
-        if height_cm and height_imp:
-            identity_para.append(f"{name} is {height_cm} cm ({height_imp}) tall. {short_summary}")
-        else:
-            identity_para.append(f"{name} is {short_summary[0].lower() + short_summary[1:]}" if short_summary else "")
-    elif visual_full:
-        identity_para.append(extract_first_paragraph(visual_full))
-    elif build_notes:
-        identity_para.append(build_notes)
 
-    if build_notes and build_notes not in " ".join(identity_para):
-        identity_para.append(build_notes)
+def build_overview_block(metadata: dict, summary_sections: dict[str, str]) -> str:
+    paragraph = build_overview_paragraph(metadata, summary_sections)
+    stats = build_stats(metadata)
 
-    if face_desc:
-        identity_para.append(f"He is characterized by a {'; '.join(face_desc)}.")
+    lines = ['<div class="character-overview-text">', ""]
 
-    style_para = ""
-    primary_aesthetic = str(style.get("primary_aesthetic", "")).replace("_", " ").strip()
-    secondary = style.get("secondary_aesthetic") or []
-    materials = style.get("materials") or []
-    colors = style.get("primary_colors") or []
+    if paragraph:
+        lines.append(paragraph)
+        lines.append("")
 
-    if primary_aesthetic or secondary or materials or colors:
-        style_para = (
-            f"His style is defined by {primary_aesthetic}"
-            if primary_aesthetic
-            else "His style is visually consistent"
-        )
-        extras = []
-        if secondary:
-            extras.append(f"secondary influences from {human_join([str(s).replace('_', ' ') for s in secondary])}")
-        if materials:
-            extras.append(f"materials such as {human_join([str(m) for m in materials])}")
-        if colors:
-            extras.append(f"a palette built around {human_join([str(c).replace('_', ' ') for c in colors])}")
-        if extras:
-            style_para += ", with " + ", ".join(extras)
-        style_para += "."
+    if stats:
+        lines.append('<div class="character-stats">')
+        lines.append("<ul>")
+        for label, value in stats:
+            lines.append(f"  <li><strong>{html.escape(label)}:</strong> {html.escape(value)}</li>")
+        lines.append("</ul>")
+        lines.append("</div>")
+        lines.append("")
 
-    presence_para_parts = []
-    movement_style = str(movement.get("movement_style", "")).replace("_", " ").strip()
-    gesture_style = str(movement.get("gesture_style", "")).replace("_", " ").strip()
-    spatial_presence = str(movement.get("spatial_presence", "")).replace("_", " ").strip()
-
-    if movement_style or gesture_style or spatial_presence:
-        presence_para_parts.append(
-            f"He moves with {movement_style or 'controlled movement'}, uses {gesture_style or 'controlled'} gestures, and projects a {spatial_presence or 'steady presence'}."
-        )
-
-    if expression.get("default_expression") or expression.get("smile_type") or expression.get("emotional_tone"):
-        expr_bits = []
-        if expression.get("default_expression"):
-            expr_bits.append(str(expression["default_expression"]).replace("_", " "))
-        if expression.get("smile_type"):
-            expr_bits.append(str(expression["smile_type"]).replace("_", " "))
-        if expression.get("emotional_tone"):
-            expr_bits.append(str(expression["emotional_tone"]).replace("_", " "))
-        presence_para_parts.append(f"His expression profile reads as {human_join(expr_bits)}.")
-
-    if personality:
-        presence_para_parts.append(extract_first_paragraph(personality))
-    elif notes:
-        presence_para_parts.append(notes)
-
-    paragraphs = [
-        " ".join(identity_para).strip(),
-        style_para.strip(),
-        " ".join(presence_para_parts).strip(),
-    ]
-
-    paragraphs = [p for p in paragraphs if p]
-    return "\n\n".join(paragraphs)
+    lines.append("</div>")
+    return "\n".join(lines)
 
 
 def build_character_page(character: str, character_dir: pathlib.Path) -> str:
@@ -217,7 +253,7 @@ def build_character_page(character: str, character_dir: pathlib.Path) -> str:
     summary_sections = parse_markdown_sections(summary_text)
 
     name = metadata.get("name", character_dir.name)
-    overview = build_overview(metadata, summary_sections)
+    overview_block = build_overview_block(metadata, summary_sections)
 
     lines = []
 
@@ -231,7 +267,7 @@ def build_character_page(character: str, character_dir: pathlib.Path) -> str:
 
     lines.append("## Overview")
     lines.append("")
-    lines.append(overview or f"{name} is a character in the reference library.")
+    lines.append(overview_block)
     lines.append("")
     lines.append("---")
     lines.append("")

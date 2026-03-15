@@ -4,12 +4,27 @@
 
 ## Overview
 
-Luca is 168 cm (5'6) tall. Compact lean athletic young man with relaxed natural presence and soft approachable facial features. Lean athletic physique with moderate muscle tone and balanced proportions. Body reads as fit and agile rather than bulky or powerful. Limbs are slim, shoulders moderate width, and the overall silhouette appears compact and lightweight. He is characterized by a soft round; defined jawline; medium-short tousled brown hair with soft natural volume; grey-green eyes with soft attentive gaze.
+<div class="character-overview-text">
 
-His style is defined by domestic soft, with secondary influences from athletic, materials such as cotton and linen, a palette built around black and grey.
-
-He moves with relaxed natural, uses soft gentle gestures, and projects a neutral presence. His expression profile reads as soft neutral, warm smile, and open warm. Luca has a warm, caring personality and often acts as the emotional heart of the group.  
+Luca is a short, compact young man with a lean athletic build and relaxed natural presence. Luca has a warm, caring personality and often acts as the emotional heart of the group.  
 He is affectionate, attentive to others, and naturally nurturing, creating a sense of comfort and emotional safety for the people around him.
+
+<div class="character-stats">
+<ul>
+  <li><strong>Height:</strong> 168 cm / 5&#x27;6</li>
+  <li><strong>Face:</strong> soft round and defined jawline</li>
+  <li><strong>Hair:</strong> medium-short tousled brown hair with soft natural volume</li>
+  <li><strong>Eyes:</strong> grey-green eyes with soft attentive gaze</li>
+  <li><strong>Style:</strong> domestic soft and athletic</li>
+  <li><strong>Palette:</strong> black and grey</li>
+  <li><strong>Materials:</strong> cotton and linen</li>
+  <li><strong>Expression:</strong> soft neutral and open warm</li>
+  <li><strong>Movement:</strong> relaxed natural</li>
+  <li><strong>Presence:</strong> neutral presence</li>
+</ul>
+</div>
+
+</div>
 
 ---
 

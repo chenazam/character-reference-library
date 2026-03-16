@@ -90,9 +90,14 @@ ASSET_TYPES = {
         "patterns": ["muscle_tension"],
         "folders": ["02_BODY"],
     },
+    "silhouette-front": {
+        "label": "02 Body – Silhouette Front",
+        "patterns": ["silhouette_front"],
+        "folders": ["02_BODY"],
+    },
     "silhouette-sheet": {
         "label": "02 Body – Silhouette Sheet",
-        "patterns": ["silhouette_sheet", "silhouette"],
+        "patterns": ["silhouette_sheet"],
         "folders": ["02_BODY"],
     },
     "turnaround-sheet": {

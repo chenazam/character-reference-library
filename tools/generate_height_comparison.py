@@ -142,6 +142,7 @@ def get_reference_links(record: dict, metadata: dict, page_docs_path: pathlib.Pa
         "body_anchor": make_image_link(record, refs.get("body_anchor", ""), page_docs_path),
         "anatomy_sheet": make_image_link(record, refs.get("anatomy_sheet", ""), page_docs_path),
         "silhouette_sheet": make_image_link(record, refs.get("silhouette_sheet", ""), page_docs_path),
+        "silhouette_front": make_image_link(record, refs.get("silhouette_front", ""), page_docs_path),
     }
 
 
@@ -210,11 +211,11 @@ def build_height_chart_section(
     name_a: str,
     height_a: int,
     imperial_a: str,
-    silhouette_a: str,
+    silhouette_front_a: str,
     name_b: str,
     height_b: int,
     imperial_b: str,
-    silhouette_b: str,
+    silhouette_front_b: str,
 ) -> str:
     max_height = max(height_a, height_b)
     if max_height <= 0:
@@ -226,11 +227,21 @@ def build_height_chart_section(
     a_pct = pct(height_a)
     b_pct = pct(height_b)
 
-    use_silhouettes = bool(silhouette_a and silhouette_b)
+    use_silhouettes = bool(silhouette_front_a and silhouette_front_b)
 
     if use_silhouettes:
-        figure_a = f'<img class="height-lineup__silhouette" src="{silhouette_a}" alt="{name_a} silhouette" style="height: {a_pct:.2f}%;">'
-        figure_b = f'<img class="height-lineup__silhouette" src="{silhouette_b}" alt="{name_b} silhouette" style="height: {b_pct:.2f}%;">'
+        figure_a = (
+            f'<img class="height-lineup__silhouette" '
+            f'src="{silhouette_front_a}" '
+            f'alt="{name_a} silhouette front" '
+            f'style="height: {a_pct:.2f}%;">'
+        )
+        figure_b = (
+            f'<img class="height-lineup__silhouette" '
+            f'src="{silhouette_front_b}" '
+            f'alt="{name_b} silhouette front" '
+            f'style="height: {b_pct:.2f}%;">'
+        )
     else:
         figure_a = f'<div class="height-lineup__placeholder" style="height: {a_pct:.2f}%"></div>'
         figure_b = f'<div class="height-lineup__placeholder" style="height: {b_pct:.2f}%"></div>'
@@ -420,11 +431,11 @@ def build_markdown(
         name_a,
         height_a,
         imperial_a,
-        refs_a.get("silhouette_sheet", ""),
+        refs_a.get("silhouette_front", ""),
         name_b,
         height_b,
         imperial_b,
-        refs_b.get("silhouette_sheet", ""),
+        refs_b.get("silhouette_front", ""),
     )
 
     comparison_summary_section = build_comparison_summary(
@@ -449,7 +460,7 @@ def build_markdown(
         name_b, refs_b["anatomy_sheet"],
     )
     silhouette_section = build_optional_section(
-        "Silhouette Comparison",
+        "Silhouette Sheet Comparison",
         name_a, refs_a["silhouette_sheet"],
         name_b, refs_b["silhouette_sheet"],
     )

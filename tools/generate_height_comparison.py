@@ -19,6 +19,29 @@ except ModuleNotFoundError:
     from site_paths import image_url_from_record, site_root_url
 
 
+try:
+    from tools.height_utils import (
+        get_nested,
+        fallback_proportion_archetype,
+        get_reference_silhouette_link,
+        make_root_image_link,
+        build_reference_placeholder,
+        build_character_placeholder,
+        build_silhouette_img,
+    )
+except ModuleNotFoundError:
+    from height_utils import (
+        get_nested,
+        fallback_proportion_archetype,
+        get_reference_silhouette_link,
+        make_root_image_link,
+        build_reference_placeholder,
+        build_character_placeholder,
+        build_silhouette_img,
+    )
+
+
+
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 OUTPUT_DIR = ROOT / "docs" / "comparisons"
 NAV_SCRIPT = ROOT / "tools" / "generate_nav_comparisons.py"

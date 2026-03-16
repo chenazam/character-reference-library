@@ -86,6 +86,7 @@ reference_files:
   ultimate_character_sheet: ''
   signature_outfit_sheet: ''
   silhouette_sheet: ''
+  silhouette_front: ''
 pipeline_status:
   face_anchor: complete
   hair_sheet: complete
@@ -114,6 +115,7 @@ pipeline_status:
   scene_anchor: not_started
   dynamic_pose: not_started
   final_ucs: not_started
+  silhouette_front: not_started
 notes: Metadata reconstructed from visual references only; corrected for known character
   identity.
 last_updated: '2026-03-13'

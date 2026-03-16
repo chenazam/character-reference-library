@@ -69,13 +69,21 @@ Shows how the body behaves under different tension states.
 
 ---
 
-## Silhouette
+## Silhouette Sheet
 
 Defines the character’s readable outer shape and body outline.
 
 --8<-- "assets/library/50_PROMPT_TEMPLATES/02_BODY/silhouette-sheet.md"
 
 ---
+
+## Silhouette Front
+
+Provides a standardized front silhouette used for visual height comparisons.
+
+--8<-- "assets/library/50_PROMPT_TEMPLATES/02_BODY/silhouette-front.md"
+
+--
 
 ## Turnaround
 

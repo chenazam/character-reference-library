@@ -260,10 +260,107 @@ def build_height_chart_section(
     silhouette_front_b: str,
     archetype_b: str,
 ) -> str:
-    max_height = max(height_a, height_b)
+    max_height = max(height_a, height_b, 180)
     if max_height <= 0:
         return ""
 
+    chart_height_px = 460
+    reference_height = 180
+    reference_imperial = "5'11\""
+
+    def pct(height: int) -> float:
+        return (height / max_height) * 100
+
+    def tick_bottom_px(tick_cm: int) -> float:
+        return (tick_cm / max_height) * chart_height_px
+
+    ref_pct = pct(reference_height)
+    a_pct = pct(height_a)
+    b_pct = pct(height_b)
+
+    use_silhouettes = bool(silhouette_front_a and silhouette_front_b)
+
+    reference_figure = (
+        f'<div class="height-lineup__placeholder '
+        f'height-lineup__placeholder--athletic '
+        f'height-lineup__placeholder--reference" '
+        f'style="height: {ref_pct:.2f}%"></div>'
+    )
+
+    if use_silhouettes:
+        figure_a = (
+            f'<img class="height-lineup__silhouette" '
+            f'src="{silhouette_front_a}" '
+            f'alt="{name_a} silhouette front" '
+            f'style="height: {a_pct:.2f}%;">'
+        )
+        figure_b = (
+            f'<img class="height-lineup__silhouette" '
+            f'src="{silhouette_front_b}" '
+            f'alt="{name_b} silhouette front" '
+            f'style="height: {b_pct:.2f}%;">'
+        )
+    else:
+        figure_a = (
+            f'<div class="height-lineup__placeholder '
+            f'height-lineup__placeholder--{archetype_a}" '
+            f'style="height: {a_pct:.2f}%"></div>'
+        )
+        figure_b = (
+            f'<div class="height-lineup__placeholder '
+            f'height-lineup__placeholder--{archetype_b}" '
+            f'style="height: {b_pct:.2f}%"></div>'
+        )
+
+    tick_step = 10
+    tick_start = (max_height // tick_step) * tick_step
+    ticks = []
+
+    for tick_cm in range(tick_start, 0, -tick_step):
+        bottom_px = tick_bottom_px(tick_cm)
+        ticks.append(
+            f'<div class="height-lineup__tick" style="bottom: {bottom_px:.2f}px;">'
+            f'<span class="height-lineup__tick-label">{tick_cm} cm</span>'
+            f'</div>'
+        )
+
+    ticks_html = "\n    ".join(ticks)
+
+    return f"""## Visual Height Chart
+
+<div class="height-lineup">
+  <div class="height-lineup__ticks" aria-hidden="true">
+    {ticks_html}
+  </div>
+
+  <div class="height-lineup__baseline" aria-hidden="true"></div>
+
+  <div class="height-lineup__figure height-lineup__figure--ref">
+    <div class="height-lineup__stage">
+      {reference_figure}
+    </div>
+    <div class="height-lineup__label">Reference</div>
+    <div class="height-lineup__meta">{reference_height} cm / {reference_imperial}</div>
+  </div>
+
+  <div class="height-lineup__figure height-lineup__figure--a">
+    <div class="height-lineup__stage">
+      {figure_a}
+    </div>
+    <div class="height-lineup__label">{name_a}</div>
+    <div class="height-lineup__meta">{height_a} cm / {imperial_a}</div>
+  </div>
+
+  <div class="height-lineup__figure height-lineup__figure--b">
+    <div class="height-lineup__stage">
+      {figure_b}
+    </div>
+    <div class="height-lineup__label">{name_b}</div>
+    <div class="height-lineup__meta">{height_b} cm / {imperial_b}</div>
+  </div>
+</div>
+
+"""
     chart_height_px = 460
 
     def pct(height: int) -> float:

@@ -740,3 +740,31 @@
     gap: 1.25rem;
   }
 }
+
+
+.height-lineup--archetype-doc {
+  --lineup-stage-height: 260px;
+  --lineup-footer-height: 1.5rem;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin: 1rem 0 1.5rem;
+  position: relative;
+}
+
+.height-lineup--archetype-doc .height-lineup__baseline {
+  left: 0;
+  right: 0;
+}
+
+.height-lineup--archetype-doc .height-lineup__stage {
+  max-width: 180px;
+  height: var(--lineup-stage-height);
+  padding: 0 0.5rem;
+}
+
+.height-lineup--archetype-doc .height-lineup__label,
+.height-lineup--archetype-doc .height-lineup__meta {
+  display: none;
+}

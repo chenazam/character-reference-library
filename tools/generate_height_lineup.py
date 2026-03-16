@@ -9,6 +9,9 @@ OUTPUT_ROOT = pathlib.Path("docs/comparisons/lineups")
 
 CHART_HEIGHT_PX = 460
 
+reference_height = 180
+reference_imperial = "5'11\""
+
 
 def load_character(slug: str) -> dict:
     for char_dir in LIBRARY_ROOT.iterdir():
@@ -90,7 +93,7 @@ def find_asset(meta: dict, key: str) -> str:
 
 
 def build_chart(characters: list) -> str:
-    max_height = max(c["height_cm"] for c in characters)
+    max_height = max(max(c["height_cm"] for c in characters), 180)
 
     def pct(h):
         return (h / max_height) * 100
@@ -108,7 +111,24 @@ def build_chart(characters: list) -> str:
             f'<span class="height-lineup__tick-label">{t} cm</span></div>'
         )
 
-    figures = []
+    reference_figure = (
+    f'<div class="height-lineup__placeholder '
+    f'height-lineup__placeholder--athletic '
+    f'height-lineup__placeholder--reference" '
+    f'style="height:{pct(reference_height):.2f}%"></div>'
+)
+
+    figures = [
+        f"""
+    <div class="height-lineup__figure height-lineup__figure--ref">
+      <div class="height-lineup__stage">
+        {reference_figure}
+      </div>
+      <div class="height-lineup__label">Reference</div>
+      <div class="height-lineup__meta">{reference_height} cm / {reference_imperial}</div>
+    </div>
+    """
+    ]
 
     for i, c in enumerate(characters):
         name = c["name"]

@@ -287,3 +287,8 @@
     grid-template-columns: 1fr;
   }
 }
+
+.silhouette-lineup img {
+  height: 320px;
+  object-fit: contain;
+}

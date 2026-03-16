@@ -127,6 +127,9 @@ def canonical_slug_pair(slug_a: str, slug_b: str) -> tuple[str, str]:
     return tuple(sorted([slug_a, slug_b]))
 
 
+DOCS_ROOT = pathlib.Path("docs").resolve()
+
+
 def make_image_link(record: dict, filename: str) -> str:
     if not filename:
         return ""
@@ -138,10 +141,11 @@ def make_image_link(record: dict, filename: str) -> str:
         return ""
 
     matches.sort()
-    candidate = matches[0]
+    candidate = matches[0].resolve()
 
     try:
-        return site_root_url(candidate)
+        relative = candidate.relative_to(DOCS_ROOT)
+        return "/" + relative.as_posix()
     except ValueError:
         return ""
 

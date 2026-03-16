@@ -73,7 +73,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--b">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--compact_athletic" style="height: 89.01%"></div>
+      <div class="height-lineup__placeholder height-lineup__placeholder--compact_light" style="height: 89.01%"></div>
     </div>
     <div class="height-lineup__label">Jasper</div>
     <div class="height-lineup__meta">170 cm / 5'7"</div>

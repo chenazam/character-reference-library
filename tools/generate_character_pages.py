@@ -111,28 +111,28 @@ def build_height_context_section(record: dict, metadata: dict) -> str:
     reference_silhouette = get_reference_silhouette_link()
 
     if silhouette_front and reference_silhouette:
-    reference_figure = build_silhouette_img(
-        reference_silhouette,
-        "Reference silhouette",
-        pct(reference_height),
-        reference=True,
-    )
-else:
-    reference_figure = build_reference_placeholder(
-        pct(reference_height)
-    )
+        reference_figure = build_silhouette_img(
+            reference_silhouette,
+            "Reference silhouette",
+            pct(reference_height),
+            reference=True,
+        )
+    else:
+        reference_figure = build_reference_placeholder(
+            pct(reference_height)
+        )
 
-if silhouette_front:
-    character_figure = build_silhouette_img(
-        silhouette_front,
-        f"{char_name} silhouette front",
-        pct(height_cm),
-    )
-else:
-    character_figure = build_character_placeholder(
-        archetype,
-        pct(height_cm),
-    )
+    if silhouette_front:
+        character_figure = build_silhouette_img(
+            silhouette_front,
+            f"{char_name} silhouette front",
+            pct(height_cm),
+        )
+    else:
+        character_figure = build_character_placeholder(
+            archetype,
+            pct(height_cm),
+        )
 
     return f"""## Height Context
 

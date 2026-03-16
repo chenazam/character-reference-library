@@ -50,7 +50,7 @@
 
   <div class="height-lineup__figure height-lineup__figure--a">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--massive_balanced" style="height: 97.22%"></div>
+      <div class="height-lineup__placeholder height-lineup__placeholder--heavy_muscular" style="height: 97.22%"></div>
     </div>
     <div class="height-lineup__label">Dennis</div>
     <div class="height-lineup__meta">175 cm / 5 ft 9 in</div>

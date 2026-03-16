@@ -73,7 +73,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--b">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--compact_athletic" style="height: 87.05%"></div>
+      <div class="height-lineup__placeholder height-lineup__placeholder--compact_light" style="height: 87.05%"></div>
     </div>
     <div class="height-lineup__label">Luca</div>
     <div class="height-lineup__meta">168 cm / 5'6</div>

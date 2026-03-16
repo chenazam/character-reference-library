@@ -1,169 +1,232 @@
-.height-lineup {
-  --lineup-tick-column: 90px;
-  --lineup-stage-height: 460px;
-  --lineup-footer-height: 3.2rem;
+#!/usr/bin/env python3
 
-  display: grid;
-  grid-template-columns: var(--lineup-tick-column) repeat(3, minmax(0, 1fr));
-  gap: 2rem;
-  align-items: end;
-  margin: 1rem 0 2rem;
-  position: relative;
-}
+import argparse
+import pathlib
+import sys
+import yaml
 
-.height-lineup--multi {
-  grid-template-columns: var(--lineup-tick-column) repeat(auto-fit, minmax(140px, 1fr));
-}
+try:
+    from tools.site_paths import image_url_from_record
+except ModuleNotFoundError:
+    from site_paths import image_url_from_record
 
-.height-lineup__ticks {
-  position: absolute;
-  left: 0;
-  width: var(--lineup-tick-column);
-  height: var(--lineup-stage-height);
-  bottom: var(--lineup-footer-height);
-  z-index: 0;
-}
 
-.height-lineup__tick {
-  position: absolute;
-  left: 0;
-  right: 0;
-  border-top: 1px solid var(--md-default-fg-color--lighter);
-}
+ROOT = pathlib.Path(__file__).resolve().parents[1]
+LIBRARY_ROOT = ROOT / "docs" / "assets" / "library" / "10_CHARACTERS"
+OUTPUT_ROOT = ROOT / "docs" / "comparisons" / "lineups"
 
-.height-lineup__tick-label {
-  position: absolute;
-  top: -0.7rem;
-  left: 0;
-  font-size: 0.72rem;
-  color: var(--md-default-fg-color--light);
-  background: var(--md-default-bg-color);
-  padding-right: 0.35rem;
-}
+CHART_HEIGHT_PX = 460
 
-.height-lineup__baseline {
-  position: absolute;
-  left: var(--lineup-tick-column);
-  right: 0;
-  bottom: var(--lineup-footer-height);
-  height: 2px;
-  background: var(--md-default-fg-color);
-  z-index: 0;
-}
 
-.height-lineup__figure {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  z-index: 1;
-}
+def get_nested(d, *keys, default=None):
+    cur = d
+    for k in keys:
+        if not isinstance(cur, dict):
+            return default
+        cur = cur.get(k)
+    return cur if cur is not None else default
 
-.height-lineup__figure--ref {
-  grid-column: 2;
-}
 
-.height-lineup__figure--a {
-  grid-column: 3;
-}
+def load_character(slug: str) -> dict:
+    if not LIBRARY_ROOT.exists():
+        raise FileNotFoundError(f"Library root not found: {LIBRARY_ROOT}")
 
-.height-lineup__figure--b {
-  grid-column: 4;
-}
+    for char_dir in LIBRARY_ROOT.iterdir():
+        if not char_dir.is_dir():
+            continue
 
-.height-lineup__stage {
-  width: 100%;
-  max-width: 260px;
-  height: var(--lineup-stage-height);
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding: 0 1rem;
-  position: relative;
-}
+        meta_file = char_dir / "00_PROFILE" / "metadata.yaml"
+        if not meta_file.exists():
+            continue
 
-.height-lineup__label {
-  margin-top: 0.75rem;
-  font-size: 0.95rem;
-  font-weight: 600;
-  text-align: center;
-}
+        meta = yaml.safe_load(meta_file.read_text(encoding="utf-8")) or {}
+        if meta.get("slug") == slug:
+            meta["_dir"] = char_dir
+            return meta
 
-.height-lineup__meta {
-  font-size: 0.8rem;
-  color: var(--md-default-fg-color--light);
-  text-align: center;
-}
+    raise ValueError(f"Character not found for slug: {slug}")
 
-.height-lineup__silhouette {
-  max-width: 100%;
-  width: auto;
-  object-fit: contain;
-  object-position: bottom center;
-  display: block;
-}
 
-.height-lineup__placeholder {
-  max-width: 100%;
-  opacity: 0.55;
-  background: var(--md-default-fg-color--light);
-  display: block;
-  margin: 0 auto;
-}
+def fallback_archetype(meta: dict) -> str:
+    anchor = get_nested(meta, "physical", "silhouette_anchor", default="")
+    build = get_nested(meta, "physical", "build_category", default="")
+    keywords = get_nested(meta, "physical", "silhouette_keywords", default=[]) or []
 
-.height-lineup__placeholder--reference {
-  opacity: 0.3;
-}
+    if anchor in {"power_frame"}:
+        return "massive"
 
-.height-lineup__placeholder--slender {
-  width: 84px;
-  clip-path: polygon(
-    42% 0%, 58% 0%, 64% 8%, 64% 20%, 73% 37%, 68% 100%,
-    56% 100%, 53% 60%, 47% 60%, 44% 100%, 32% 100%, 27% 37%,
-    36% 20%, 36% 8%
-  );
-}
+    if anchor in {"power_athlete"}:
+        return "broad"
 
-.height-lineup__placeholder--athletic {
-  width: 104px;
-  clip-path: polygon(
-    40% 0%, 60% 0%, 67% 8%, 67% 20%, 80% 37%, 73% 100%,
-    57% 100%, 54% 62%, 46% 62%, 43% 100%, 27% 100%, 20% 37%,
-    33% 20%, 33% 8%
-  );
-}
+    if anchor in {"runner_silhouette"}:
+        return "athletic"
 
-.height-lineup__placeholder--broad {
-  width: 124px;
-  clip-path: polygon(
-    39% 0%, 61% 0%, 69% 8%, 69% 20%, 85% 38%, 76% 100%,
-    58% 100%, 55% 64%, 45% 64%, 42% 100%, 24% 100%, 15% 38%,
-    31% 20%, 31% 8%
-  );
-}
+    if anchor in {"elongated_slender", "glute_slender"}:
+        return "slender"
 
-.height-lineup__placeholder--massive {
-  width: 144px;
-  clip-path: polygon(
-    38% 0%, 62% 0%, 70% 8%, 70% 20%, 88% 39%, 79% 100%,
-    59% 100%, 56% 66%, 44% 66%, 41% 100%, 21% 100%, 12% 39%,
-    30% 20%, 30% 8%
-  );
-}
+    if build in {"power_build", "heavy_muscular", "broad_heavy", "thick_set", "large_frame"}:
+        return "massive"
 
-@media (max-width: 1050px) {
-  .height-lineup {
-    grid-template-columns: 1fr;
-  }
+    if build in {"athletic_muscular"}:
+        return "broad"
 
-  .height-lineup__ticks,
-  .height-lineup__baseline {
-    display: none;
-  }
+    if build in {"balanced_athletic", "runner_build", "lower_athletic", "light_athletic"}:
+        return "athletic"
 
-  .height-lineup__figure--ref,
-  .height-lineup__figure--a,
-  .height-lineup__figure--b {
-    grid-column: auto;
-  }
-}
+    if build in {"soft_slender", "narrow_slender", "elongated_slender"}:
+        return "slender"
+
+    if "heavy_set" in keywords or "imposing" in keywords:
+        return "massive"
+
+    if "broad" in keywords or "upper_dominant" in keywords:
+        return "broad"
+
+    if "agile" in keywords or "leg_dominant" in keywords:
+        return "athletic"
+
+    return "slender"
+
+
+def find_asset(meta: dict, key: str, page_docs_path: pathlib.Path) -> str:
+    refs = meta.get("reference_files", {})
+    filename = refs.get(key, "")
+    if not filename:
+        return ""
+
+    record = {"dir": str(meta["_dir"])}
+    return image_url_from_record(record, filename, from_page_docs_path=page_docs_path)
+
+
+def build_chart(characters: list[dict], page_docs_path: pathlib.Path) -> str:
+    reference_height = 180
+    reference_imperial = "5'11\""
+
+    max_height = max(max(c["physical"]["height_cm"] for c in characters), reference_height)
+
+    def pct(h: int) -> float:
+        return (h / max_height) * 100
+
+    def tick_px(cm: int) -> float:
+        return (cm / max_height) * CHART_HEIGHT_PX
+
+    tick_step = 10
+    tick_start = (max_height // tick_step) * tick_step
+
+    ticks = []
+    for t in range(tick_start, 0, -tick_step):
+        ticks.append(
+            f'<div class="height-lineup__tick" style="bottom: {tick_px(t):.2f}px;">'
+            f'<span class="height-lineup__tick-label">{t} cm</span></div>'
+        )
+
+    reference_figure = (
+        f'<div class="height-lineup__placeholder '
+        f'height-lineup__placeholder--athletic '
+        f'height-lineup__placeholder--reference" '
+        f'style="height: {pct(reference_height):.2f}%"></div>'
+    )
+
+    figures = [
+        f"""
+<div class="height-lineup__figure">
+  <div class="height-lineup__stage">
+    {reference_figure}
+  </div>
+  <div class="height-lineup__label">Reference</div>
+  <div class="height-lineup__meta">{reference_height} cm / {reference_imperial}</div>
+</div>
+"""
+    ]
+
+    for c in characters:
+        name = c["name"]
+        height = c["physical"]["height_cm"]
+        imperial = c["physical"]["height_imperial"]
+
+        silhouette = find_asset(c, "silhouette_front", page_docs_path)
+        archetype = fallback_archetype(c)
+
+        if silhouette:
+            body = (
+                f'<img class="height-lineup__silhouette" '
+                f'src="{silhouette}" '
+                f'alt="{name} silhouette" '
+                f'style="height: {pct(height):.2f}%;">'
+            )
+        else:
+            body = (
+                f'<div class="height-lineup__placeholder '
+                f'height-lineup__placeholder--{archetype}" '
+                f'style="height: {pct(height):.2f}%"></div>'
+            )
+
+        figures.append(
+            f"""
+<div class="height-lineup__figure">
+  <div class="height-lineup__stage">
+    {body}
+  </div>
+  <div class="height-lineup__label">{name}</div>
+  <div class="height-lineup__meta">{height} cm / {imperial}</div>
+</div>
+"""
+        )
+
+    return f"""
+<div class="height-lineup height-lineup--multi">
+
+  <div class="height-lineup__ticks" aria-hidden="true">
+    {"".join(ticks)}
+  </div>
+
+  <div class="height-lineup__baseline" aria-hidden="true"></div>
+
+  {"".join(figures)}
+
+</div>
+"""
+
+
+def generate_lineup(slugs: list[str]) -> pathlib.Path:
+    characters = [load_character(s) for s in slugs]
+    characters.sort(key=lambda c: c["physical"]["height_cm"], reverse=True)
+
+    title = "Height Lineup — " + ", ".join(c["name"] for c in characters)
+
+    OUTPUT_ROOT.mkdir(parents=True, exist_ok=True)
+
+    filename = "-".join(sorted(slugs)) + "-lineup.md"
+    output_file = OUTPUT_ROOT / filename
+
+    chart = build_chart(characters, output_file)
+
+    markdown = f"""---
+hide:
+  - toc
+---
+
+# {title}
+
+{chart}
+"""
+
+    output_file.write_text(markdown, encoding="utf-8")
+    return output_file
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Generate a multi-character height lineup page.")
+    parser.add_argument("slugs", nargs="+", help="Character slugs to include")
+    args = parser.parse_args()
+
+    try:
+        output_file = generate_lineup(args.slugs)
+        print(f"Generated lineup page: {output_file}")
+    except Exception as e:
+        print(f"Error: {e}", file=sys.stderr)
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()

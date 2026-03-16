@@ -1,7 +1,7 @@
 name: Blake
 slug: blake
 status: active
-project: Blake & Jasper
+project: blake_jasper
 site_visibility:
   list_in_character_index: true
   include_in_nav: true

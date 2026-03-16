@@ -249,6 +249,55 @@ def build_height_chart_section(
     return f"""## Visual Height Chart
 
 <div class="height-lineup">
+  <div class="height-lineup__baseline" aria-hidden="true"></div>
+
+  <div class="height-lineup__figure">
+    <div class="height-lineup__stage">
+      {figure_a}
+    </div>
+    <div class="height-lineup__label">{name_a}</div>
+    <div class="height-lineup__meta">{height_a} cm / {imperial_a}</div>
+  </div>
+
+  <div class="height-lineup__figure">
+    <div class="height-lineup__stage">
+      {figure_b}
+    </div>
+    <div class="height-lineup__label">{name_b}</div>
+    <div class="height-lineup__meta">{height_b} cm / {imperial_b}</div>
+  </div>
+</div>
+
+"""
+
+    def pct(height: int) -> float:
+        return (height / max_height) * 100
+
+    a_pct = pct(height_a)
+    b_pct = pct(height_b)
+
+    use_silhouettes = bool(silhouette_front_a and silhouette_front_b)
+
+    if use_silhouettes:
+        figure_a = (
+            f'<img class="height-lineup__silhouette" '
+            f'src="{silhouette_front_a}" '
+            f'alt="{name_a} silhouette front" '
+            f'style="height: {a_pct:.2f}%;">'
+        )
+        figure_b = (
+            f'<img class="height-lineup__silhouette" '
+            f'src="{silhouette_front_b}" '
+            f'alt="{name_b} silhouette front" '
+            f'style="height: {b_pct:.2f}%;">'
+        )
+    else:
+        figure_a = f'<div class="height-lineup__placeholder" style="height: {a_pct:.2f}%"></div>'
+        figure_b = f'<div class="height-lineup__placeholder" style="height: {b_pct:.2f}%"></div>'
+
+    return f"""## Visual Height Chart
+
+<div class="height-lineup">
   <div class="height-lineup__figure">
     <div class="height-lineup__stage">
       {figure_a}

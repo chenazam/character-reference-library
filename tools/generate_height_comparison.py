@@ -274,7 +274,7 @@ def build_height_chart_section(
 
   <div class="height-lineup__baseline" aria-hidden="true"></div>
 
-  <div class="height-lineup__figure">
+  <div class="height-lineup__figure height-lineup__figure--a">
     <div class="height-lineup__stage">
       {figure_a}
     </div>
@@ -282,7 +282,7 @@ def build_height_chart_section(
     <div class="height-lineup__meta">{height_a} cm / {imperial_a}</div>
   </div>
 
-  <div class="height-lineup__figure">
+  <div class="height-lineup__figure height-lineup__figure--b">
     <div class="height-lineup__stage">
       {figure_b}
     </div>

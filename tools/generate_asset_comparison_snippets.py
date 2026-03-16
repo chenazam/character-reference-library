@@ -1,13 +1,21 @@
+#!/usr/bin/env python3
+
 import pathlib
 import re
 import yaml
 from collections import defaultdict
 
-ROOT = pathlib.Path(__file__).resolve().parents[1]
-DOCS_ROOT = ROOT / "docs"
+try:
+    from tools.site_paths import DOCS_ROOT, asset_relative_url, page_relative_url
+except ModuleNotFoundError:
+    from site_paths import DOCS_ROOT, asset_relative_url, page_relative_url
 
-CHARACTERS_ROOT = ROOT / "docs/assets/library/10_CHARACTERS"
-SNIPPETS_ROOT = ROOT / "docs/snippets/comparisons"
+
+ROOT = pathlib.Path(__file__).resolve().parents[1]
+
+CHARACTERS_ROOT = ROOT / "docs" / "assets" / "library" / "10_CHARACTERS"
+SNIPPETS_ROOT = ROOT / "docs" / "snippets" / "comparisons"
+ASSET_COMPARISON_PAGE = ROOT / "docs" / "comparisons" / "assets.md"
 
 IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".webp"}
 
@@ -232,6 +240,7 @@ CHARACTER_ORDER = [
     "jonah",
     "luca",
     "lucien",
+    "ragnar",
     "tommy",
 ]
 
@@ -321,10 +330,6 @@ def character_name_from_path(path: pathlib.Path) -> str:
     return path.relative_to(CHARACTERS_ROOT).parts[0].lower()
 
 
-def site_root_url(target_under_docs: pathlib.Path) -> str:
-    return "/" + target_under_docs.relative_to(DOCS_ROOT).as_posix()
-
-
 VERSION_PATTERN = re.compile(r"_v(\d+)$", re.IGNORECASE)
 
 
@@ -345,7 +350,7 @@ def choose_best_image(paths: list[pathlib.Path]) -> pathlib.Path:
         paths,
         key=lambda p: (
             -canonical_bonus(p),
-            -extract_version(p),  # highest version wins
+            -extract_version(p),
             len(p.stem),
             p.stem.lower(),
         ),
@@ -364,7 +369,8 @@ def titleize_character(name: str) -> str:
 
 
 def build_character_page_link(character_slug: str) -> str:
-    return f"/characters/{character_slug}/"
+    target_page = DOCS_ROOT / "characters" / f"{character_slug}.md"
+    return page_relative_url(target_page, ASSET_COMPARISON_PAGE)
 
 
 def build_asset_snippet(asset_key: str, paths_by_character: dict[str, list[pathlib.Path]]) -> str:
@@ -374,7 +380,7 @@ def build_asset_snippet(asset_key: str, paths_by_character: dict[str, list[pathl
 
     for character in sorted(paths_by_character.keys(), key=character_sort_key):
         best_image = choose_best_image(paths_by_character[character])
-        image_rel = site_root_url(best_image)
+        image_rel = asset_relative_url(best_image, ASSET_COMPARISON_PAGE)
         char_page_rel = build_character_page_link(character)
         display_name = titleize_character(character)
 

@@ -103,6 +103,11 @@ def should_list_in_character_index(character_dir):
 def main():
     lines = []
 
+    lines.append("---")
+    lines.append("hide:")
+    lines.append("  - toc")
+    lines.append("---")
+    lines.append("")
     lines.append("# Characters")
     lines.append("")
     lines.append("Browse characters in the reference library.")

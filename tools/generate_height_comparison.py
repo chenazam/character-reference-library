@@ -207,21 +207,6 @@ def build_available_references_section(name_a: str, refs_a: dict, name_b: str, r
     )
 
 
-def build_height_chart_section(
-    name_a: str,
-    height_a: int,
-    imperial_a: str,
-    silhouette_front_a: str,
-    name_b: str,
-    height_b: int,
-    imperial_b: str,
-    silhouette_front_b: str,
-    archetype_b: str,
-) -> str:
-    max_height = max(height_a, height_b)
-    if max_height <= 0:
-        return ""
-
 def fallback_archetype(meta: dict) -> str:
     anchor = get_nested(meta, "physical", "silhouette_anchor", default="")
     build = get_nested(meta, "physical", "build_category", default="")
@@ -261,6 +246,23 @@ def fallback_archetype(meta: dict) -> str:
         return "athletic"
 
     return "slender"
+
+
+def build_height_chart_section(
+    name_a: str,
+    height_a: int,
+    imperial_a: str,
+    silhouette_front_a: str,
+    archetype_a: str,
+    name_b: str,
+    height_b: int,
+    imperial_b: str,
+    silhouette_front_b: str,
+    archetype_b: str,
+) -> str:
+    max_height = max(height_a, height_b)
+    if max_height <= 0:
+        return ""
 
     chart_height_px = 460
 
@@ -332,102 +334,6 @@ def fallback_archetype(meta: dict) -> str:
   </div>
 
   <div class="height-lineup__figure height-lineup__figure--b">
-    <div class="height-lineup__stage">
-      {figure_b}
-    </div>
-    <div class="height-lineup__label">{name_b}</div>
-    <div class="height-lineup__meta">{height_b} cm / {imperial_b}</div>
-  </div>
-</div>
-
-"""
-
-    def pct(height: int) -> float:
-        return (height / max_height) * 100
-
-    a_pct = pct(height_a)
-    b_pct = pct(height_b)
-
-    use_silhouettes = bool(silhouette_front_a and silhouette_front_b)
-
-    if use_silhouettes:
-        figure_a = (
-            f'<img class="height-lineup__silhouette" '
-            f'src="{silhouette_front_a}" '
-            f'alt="{name_a} silhouette front" '
-            f'style="height: {a_pct:.2f}%;">'
-        )
-        figure_b = (
-            f'<img class="height-lineup__silhouette" '
-            f'src="{silhouette_front_b}" '
-            f'alt="{name_b} silhouette front" '
-            f'style="height: {b_pct:.2f}%;">'
-        )
-    else:
-        figure_a = f'<div class="height-lineup__placeholder" style="height: {a_pct:.2f}%"></div>'
-        figure_b = f'<div class="height-lineup__placeholder" style="height: {b_pct:.2f}%"></div>'
-
-    return f"""## Visual Height Chart
-
-<div class="height-lineup">
-  <div class="height-lineup__baseline" aria-hidden="true"></div>
-
-  <div class="height-lineup__figure">
-    <div class="height-lineup__stage">
-      {figure_a}
-    </div>
-    <div class="height-lineup__label">{name_a}</div>
-    <div class="height-lineup__meta">{height_a} cm / {imperial_a}</div>
-  </div>
-
-  <div class="height-lineup__figure">
-    <div class="height-lineup__stage">
-      {figure_b}
-    </div>
-    <div class="height-lineup__label">{name_b}</div>
-    <div class="height-lineup__meta">{height_b} cm / {imperial_b}</div>
-  </div>
-</div>
-
-"""
-
-    def pct(height: int) -> float:
-        return (height / max_height) * 100
-
-    a_pct = pct(height_a)
-    b_pct = pct(height_b)
-
-    use_silhouettes = bool(silhouette_front_a and silhouette_front_b)
-
-    if use_silhouettes:
-        figure_a = (
-            f'<img class="height-lineup__silhouette" '
-            f'src="{silhouette_front_a}" '
-            f'alt="{name_a} silhouette front" '
-            f'style="height: {a_pct:.2f}%;">'
-        )
-        figure_b = (
-            f'<img class="height-lineup__silhouette" '
-            f'src="{silhouette_front_b}" '
-            f'alt="{name_b} silhouette front" '
-            f'style="height: {b_pct:.2f}%;">'
-        )
-    else:
-        figure_a = f'<div class="height-lineup__placeholder" style="height: {a_pct:.2f}%"></div>'
-        figure_b = f'<div class="height-lineup__placeholder" style="height: {b_pct:.2f}%"></div>'
-
-    return f"""## Visual Height Chart
-
-<div class="height-lineup">
-  <div class="height-lineup__figure">
-    <div class="height-lineup__stage">
-      {figure_a}
-    </div>
-    <div class="height-lineup__label">{name_a}</div>
-    <div class="height-lineup__meta">{height_a} cm / {imperial_a}</div>
-  </div>
-
-  <div class="height-lineup__figure">
     <div class="height-lineup__stage">
       {figure_b}
     </div>

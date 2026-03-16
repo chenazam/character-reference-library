@@ -177,8 +177,12 @@
 }
 
 .height-lineup {
+  --lineup-tick-column: 90px;
+  --lineup-stage-height: 460px;
+  --lineup-footer-height: 3.2rem;
+
   display: grid;
-  grid-template-columns: 90px repeat(2, minmax(0, 1fr));
+  grid-template-columns: var(--lineup-tick-column) repeat(2, minmax(0, 1fr));
   gap: 2rem;
   align-items: end;
   margin: 1rem 0 2rem;
@@ -186,8 +190,12 @@
 }
 
 .height-lineup__ticks {
-  position: relative;
-  height: 460px;
+  position: absolute;
+  left: 0;
+  width: var(--lineup-tick-column);
+  height: var(--lineup-stage-height);
+  bottom: var(--lineup-footer-height);
+  z-index: 0;
 }
 
 .height-lineup__tick {
@@ -209,9 +217,9 @@
 
 .height-lineup__baseline {
   position: absolute;
-  left: 90px;
+  left: var(--lineup-tick-column);
   right: 0;
-  bottom: 3.2rem;
+  bottom: var(--lineup-footer-height);
   height: 2px;
   background: var(--md-default-fg-color--lighter);
   z-index: 0;
@@ -228,7 +236,7 @@
 .height-lineup__stage {
   width: 100%;
   max-width: 260px;
-  height: 460px;
+  height: var(--lineup-stage-height);
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -291,7 +299,6 @@
     display: none;
   }
 }
-
 .comparison-badges {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

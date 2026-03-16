@@ -202,7 +202,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  border-top: 1px solid var(--md-default-fg-color--lighter);
+  border-top: 1px solid rgba(0,0,0,0.15);
 }
 
 .height-lineup__tick-label {
@@ -221,7 +221,7 @@
   right: 0;
   bottom: var(--lineup-footer-height);
   height: 2px;
-  background: var(--md-default-fg-color--lighter);
+  background: var(--md-default-fg-color);
   z-index: 0;
 }
 
@@ -275,7 +275,7 @@
 
 .height-lineup__placeholder {
   max-width: 100%;
-  opacity: 0.75;
+  opacity: 0.55;
   background: var(--md-default-fg-color--light);
   display: block;
   margin: 0 auto;

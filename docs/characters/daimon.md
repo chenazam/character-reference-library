@@ -31,6 +31,10 @@
 
 </div>
 
+</div>
+
+---
+
 ## Height Context
 
 <div class="height-lineup height-lineup--character-context">
@@ -54,7 +58,6 @@
 </div>
 
 
-</div>
 
 ---
 

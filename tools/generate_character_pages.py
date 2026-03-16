@@ -418,15 +418,22 @@ def build_character_page(character: str, character_dir: pathlib.Path) -> str:
         lines.append(f'--8<-- "snippets/galleries/{character}/hero.md"')
         lines.append("")
 
-    lines.append(overview_block)
-    lines.append("")
+        lines.append(overview_block)
+        lines.append("")
 
-    lines.append(height_context_section)
+        lines.append("</div>")
+        lines.append("")
 
-    lines.append("</div>")
-    lines.append("")
-    lines.append("---")
-    lines.append("")
+        if height_context_section:
+            lines.append("---")
+            lines.append("")
+            lines.append(height_context_section)
+            lines.append("")
+            lines.append("---")
+            lines.append("")
+        else:
+            lines.append("---")
+            lines.append("")
 
     for section_title, section_slug in SECTIONS:
         snippet_path = SNIPPETS_ROOT / character / f"{section_slug}.md"

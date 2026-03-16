@@ -49,7 +49,7 @@
 
   <div class="height-lineup__baseline" aria-hidden="true"></div>
 
-  <div class="height-lineup__figure">
+  <div class="height-lineup__figure height-lineup__figure--a">
     <div class="height-lineup__stage">
       <div class="height-lineup__placeholder" style="height: 100.00%"></div>
     </div>
@@ -57,7 +57,7 @@
     <div class="height-lineup__meta">188 cm / 6'2</div>
   </div>
 
-  <div class="height-lineup__figure">
+  <div class="height-lineup__figure height-lineup__figure--b">
     <div class="height-lineup__stage">
       <div class="height-lineup__placeholder" style="height: 94.68%"></div>
     </div>

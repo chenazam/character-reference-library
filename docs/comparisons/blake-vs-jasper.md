@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Blake vs Jasper
 
 ## Height Comparison
@@ -103,4 +108,3 @@ Their emotional presentation also differs: **Blake** feels **Controlled**, while
     <img src="../../assets/library/10_CHARACTERS/BLAKE/02_BODY/structure/blake_body_anchor_v1.png" alt="Blake Body Anchor">
   </div>
 </div>
-

@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Asset Comparisons
 
 Compare one asset type across all characters. Use the selector to switch between generated comparison grids.

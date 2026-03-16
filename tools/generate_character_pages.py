@@ -52,40 +52,6 @@ RESERVED_PAGES = {
     "character-page-template.md",
 }
 
-def get_nested(data: dict, *keys, default=""):
-    current = data
-    for key in keys:
-        if not isinstance(current, dict):
-            return default
-        current = current.get(key)
-        if current is None:
-            return default
-    return current
-
-def get_reference_silhouette_link() -> str:
-    if not REFERENCE_SILHOUETTE.exists():
-        return ""
-    try:
-        return site_root_url(REFERENCE_SILHOUETTE)
-    except Exception:
-        return ""
-
-def make_image_link(record: dict, filename: str) -> str:
-    if not filename:
-        return ""
-
-    character_dir = pathlib.Path(record["dir"])
-    matches = [p for p in character_dir.rglob(filename) if p.is_file()]
-    if not matches:
-        return ""
-
-    matches.sort()
-    try:
-        return site_root_url(matches[0])
-    except Exception:
-        return ""
-
-
 def fix_common_mojibake(text: str) -> str:
     return (
         text.replace("â€™", "'")

@@ -380,7 +380,7 @@ def build_character_page_link(character_slug: str) -> str:
 
 def build_asset_snippet(asset_key: str, paths_by_character: dict[str, list[pathlib.Path]]) -> str:
     lines = []
-    lines.append('<div class="comparison-grid">')
+    lines.append('<div class="asset-comparison-grid">')
     lines.append("")
 
     for character in sorted(paths_by_character.keys(), key=character_sort_key):

@@ -16,6 +16,11 @@ import subprocess
 import sys
 
 try:
+    from tools.height_utils import fallback_proportion_archetype
+except ModuleNotFoundError:
+    from height_utils import fallback_proportion_archetype
+
+try:
     from tools.library_index import build_library_index
 except ModuleNotFoundError:
     from library_index import build_library_index
@@ -222,7 +227,7 @@ def build_available_references_section(name_a: str, refs_a: dict, name_b: str, r
     )
 
 
-def fallback_archetype(meta: dict) -> str:
+def fallback_proportion_archetype(meta: dict) -> str:
     anchor = get_nested(meta, "physical", "silhouette_anchor", default="")
     build = get_nested(meta, "physical", "build_category", default="")
     keywords = get_nested(meta, "physical", "silhouette_keywords", default=[]) or []
@@ -627,8 +632,8 @@ def build_markdown(
 
     difference_badges_section = build_difference_badges(meta_a, meta_b, diff_category)
 
-    archetype_a = fallback_archetype(meta_a)
-    archetype_b = fallback_archetype(meta_b)
+    archetype_a = fallback_proportion_archetype(meta_a)
+    archetype_b = fallback_proportion_archetype(meta_b)
 
     height_chart_section = build_height_chart_section(
         name_a,

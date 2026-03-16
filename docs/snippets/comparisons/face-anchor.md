@@ -1,4 +1,4 @@
-<div class="comparison-grid">
+<div class="asset-comparison-grid">
 
   <div class="comparison-card">
     <h3><a href="../../characters/blake/">Blake</a></h3>

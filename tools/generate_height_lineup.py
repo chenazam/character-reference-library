@@ -6,6 +6,11 @@ import sys
 import yaml
 
 try:
+    from tools.height_utils import fallback_proportion_archetype
+except ModuleNotFoundError:
+    from height_utils import fallback_proportion_archetype
+
+try:
     from tools.site_paths import image_url_from_record
 except ModuleNotFoundError:
     from site_paths import image_url_from_record
@@ -59,47 +64,6 @@ def load_character(slug: str) -> dict:
             return meta
 
     raise ValueError(f"Character not found for slug: {slug}")
-
-
-def fallback_archetype(meta: dict) -> str:
-    anchor = get_nested(meta, "physical", "silhouette_anchor", default="")
-    build = get_nested(meta, "physical", "build_category", default="")
-    keywords = get_nested(meta, "physical", "silhouette_keywords", default=[]) or []
-
-    if anchor in {"power_frame"}:
-        return "massive"
-
-    if anchor in {"power_athlete"}:
-        return "broad"
-
-    if anchor in {"runner_silhouette"}:
-        return "athletic"
-
-    if anchor in {"elongated_slender", "glute_slender"}:
-        return "slender"
-
-    if build in {"power_build", "heavy_muscular", "broad_heavy", "thick_set", "large_frame"}:
-        return "massive"
-
-    if build in {"athletic_muscular"}:
-        return "broad"
-
-    if build in {"balanced_athletic", "runner_build", "lower_athletic", "light_athletic"}:
-        return "athletic"
-
-    if build in {"soft_slender", "narrow_slender", "elongated_slender"}:
-        return "slender"
-
-    if "heavy_set" in keywords or "imposing" in keywords:
-        return "massive"
-
-    if "broad" in keywords or "upper_dominant" in keywords:
-        return "broad"
-
-    if "agile" in keywords or "leg_dominant" in keywords:
-        return "athletic"
-
-    return "slender"
 
 
 def find_asset(meta: dict, key: str, page_docs_path: pathlib.Path) -> str:
@@ -178,7 +142,7 @@ def build_chart(characters: list[dict], page_docs_path: pathlib.Path) -> str:
         imperial = c["physical"]["height_imperial"]
 
         silhouette = character_silhouettes[len(figures) - 1]
-        archetype = fallback_archetype(c)
+        archetype = fallback_proportion_archetype(c)
 
         if silhouette:
             body = (

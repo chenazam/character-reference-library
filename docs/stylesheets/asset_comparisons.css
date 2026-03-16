@@ -1,3 +1,7 @@
+/* =========================================================
+   Asset comparison page
+   ========================================================= */
+
 .comparison-controls {
   margin: 0 0 1rem 0;
   display: flex;
@@ -10,7 +14,7 @@
   min-width: 280px;
 }
 
-.comparison-grid {
+.asset-comparison-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1rem;

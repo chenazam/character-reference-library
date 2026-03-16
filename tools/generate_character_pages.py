@@ -8,6 +8,11 @@ try:
 except ModuleNotFoundError:
     from site_paths import site_root_url
 
+try:
+    from tools.height_utils import fallback_proportion_archetype
+except ModuleNotFoundError:
+    from height_utils import fallback_proportion_archetype
+
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 CHARACTERS_ROOT = ROOT / "docs/assets/library/10_CHARACTERS"
@@ -40,38 +45,6 @@ def get_nested(data: dict, *keys, default=""):
         if current is None:
             return default
     return current
-
-def fallback_archetype(meta: dict) -> str:
-    anchor = get_nested(meta, "physical", "silhouette_anchor", default="")
-    build = get_nested(meta, "physical", "build_category", default="")
-    keywords = get_nested(meta, "physical", "silhouette_keywords", default=[]) or []
-
-    if anchor in {"power_frame"}:
-        return "massive"
-    if anchor in {"power_athlete"}:
-        return "broad"
-    if anchor in {"runner_silhouette"}:
-        return "athletic"
-    if anchor in {"elongated_slender", "glute_slender"}:
-        return "slender"
-
-    if build in {"power_build", "heavy_muscular", "broad_heavy", "thick_set", "large_frame"}:
-        return "massive"
-    if build in {"athletic_muscular"}:
-        return "broad"
-    if build in {"balanced_athletic", "runner_build", "lower_athletic", "light_athletic"}:
-        return "athletic"
-    if build in {"soft_slender", "narrow_slender", "elongated_slender"}:
-        return "slender"
-
-    if "heavy_set" in keywords or "imposing" in keywords:
-        return "massive"
-    if "broad" in keywords or "upper_dominant" in keywords:
-        return "broad"
-    if "agile" in keywords or "leg_dominant" in keywords:
-        return "athletic"
-
-    return "slender"
 
 def get_reference_silhouette_link() -> str:
     if not REFERENCE_SILHOUETTE.exists():
@@ -146,7 +119,7 @@ def build_height_context_section(record: dict, metadata: dict) -> str:
         return (height / max_height) * 100
 
     char_name = metadata.get("name", "Character")
-    archetype = fallback_archetype(metadata)
+    archetype = fallback_proportion_archetype(metadata)
 
     silhouette_front = make_image_link(
         record,

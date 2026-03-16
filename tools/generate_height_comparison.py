@@ -646,7 +646,7 @@ def build_markdown(
         name_a, refs_a, name_b, refs_b
     )
 
-        return f"""---
+    return f"""---
 hide:
   - toc
 ---

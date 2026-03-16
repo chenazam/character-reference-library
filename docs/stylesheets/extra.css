@@ -302,6 +302,11 @@
     grid-template-columns: 1fr;
   }
 
+  .height-lineup__figure--a,
+  .height-lineup__figure--b {
+    grid-column: auto;
+  }
+
   .height-lineup__ticks,
   .height-lineup__baseline {
     display: none;

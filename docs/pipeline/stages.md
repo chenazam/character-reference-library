@@ -32,7 +32,8 @@ Establish structural body references.
 - 4 — Body Anchor
 - 5 — Proportion Grid
 - 6 — Muscle Tension
-- 7 — Silhouette
+- 7A — Silhouette Sheet
+- 7B — Silhouette Front
 - 8 — Turnaround
 
 ## Stage 5 — Identity Extension

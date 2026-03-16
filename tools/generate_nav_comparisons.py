@@ -2,17 +2,21 @@
 """
 Generate the Comparison Pages navigation section in mkdocs.yml.
 
-This script scans docs/comparisons for markdown pages and rewrites the
-'Comparison Pages' subsection under 'Browse Library' in mkdocs.yml.
+Optional:
+- refresh all existing generated height comparison pages before updating nav
 """
 
+import argparse
 import pathlib
+import subprocess
+import sys
 import yaml
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 MKDOCS_FILE = ROOT / "mkdocs.yml"
 COMPARISON_PAGES = ROOT / "docs" / "comparisons"
+HEIGHT_GENERATOR = ROOT / "tools" / "generate_height_comparison.py"
 
 # Optional static pages that should appear first if they exist
 STATIC_COMPARISON_PAGES = {
@@ -22,6 +26,18 @@ STATIC_COMPARISON_PAGES = {
 }
 
 
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description="Update comparison nav in mkdocs.yml."
+    )
+    parser.add_argument(
+        "--refresh-pages",
+        action="store_true",
+        help="Regenerate all existing height comparison pages before updating nav.",
+    )
+    return parser.parse_args()
+
+
 def display_name_for_slug(slug: str) -> str:
     parts = slug.replace("_", "-").split("-vs-")
     if len(parts) == 2:
@@ -29,6 +45,49 @@ def display_name_for_slug(slug: str) -> str:
         right = parts[1].replace("-", " ").title()
         return f"{left} vs {right}"
     return slug.replace("-", " ").replace("_", " ").title()
+
+
+def comparison_slug_pairs():
+    pages = [
+        p for p in COMPARISON_PAGES.glob("*.md")
+        if p.name not in STATIC_COMPARISON_PAGES
+    ]
+
+    for page in pages:
+        stem = page.stem.replace("_", "-")
+        if "-vs-" not in stem:
+            continue
+        left, right = stem.split("-vs-", 1)
+        if left and right:
+            yield left, right, page
+
+
+def refresh_existing_comparison_pages():
+    if not HEIGHT_GENERATOR.exists():
+        raise FileNotFoundError(f"Height comparison generator not found: {HEIGHT_GENERATOR}")
+
+    refreshed = []
+
+    for left, right, page in sorted(comparison_slug_pairs(), key=lambda item: item[2].name):
+        result = subprocess.run(
+            [sys.executable, str(HEIGHT_GENERATOR), left, right, "--no-nav-update"],
+            capture_output=True,
+            text=True,
+        )
+
+        if result.returncode != 0:
+            print(f"Warning: failed to refresh comparison page for {left} vs {right}")
+            if result.stdout:
+                print(result.stdout)
+            if result.stderr:
+                print(result.stderr)
+            continue
+
+        refreshed.append((left, right))
+        if result.stdout.strip():
+            print(result.stdout.strip())
+
+    return refreshed
 
 
 def build_comparison_entries() -> list[dict]:
@@ -61,7 +120,7 @@ def find_nav_section(nav_list: list, key: str):
     return None
 
 
-def main():
+def update_nav():
     if not MKDOCS_FILE.exists():
         raise FileNotFoundError(f"mkdocs.yml not found: {MKDOCS_FILE}")
 
@@ -96,6 +155,16 @@ def main():
     print("Updated Comparison Pages nav in mkdocs.yml")
     for entry in new_entries:
         print(entry)
+
+
+def main():
+    args = parse_args()
+
+    if args.refresh_pages:
+        refreshed = refresh_existing_comparison_pages()
+        print(f"Refreshed {len(refreshed)} comparison page(s).")
+
+    update_nav()
 
 
 if __name__ == "__main__":

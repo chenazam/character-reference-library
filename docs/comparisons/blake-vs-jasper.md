@@ -62,11 +62,11 @@ Their emotional presentation also differs: **Blake** feels **Controlled**, while
 <div class="comparison-grid comparison-grid-2">
   <div class="comparison-item">
     <div class="comparison-label">Blake</div>
-    <img src="../assets/library/10_CHARACTERS/BLAKE/02_BODY/anatomy/blake_anatomy_sheet_v1.png" alt="Blake Anatomy Sheet Comparison">
+    <img src="/assets/library/10_CHARACTERS/BLAKE/02_BODY/anatomy/blake_anatomy_sheet_v1.png" alt="Blake Anatomy Sheet Comparison">
   </div>
   <div class="comparison-item">
     <div class="comparison-label">Jasper</div>
-    <img src="../assets/library/10_CHARACTERS/JASPER/02_BODY/anatomy/jasper_anatomy_sheet_v1.png" alt="Jasper Anatomy Sheet Comparison">
+    <img src="/assets/library/10_CHARACTERS/JASPER/02_BODY/anatomy/jasper_anatomy_sheet_v1.png" alt="Jasper Anatomy Sheet Comparison">
   </div>
 </div>
 
@@ -76,7 +76,7 @@ Their emotional presentation also differs: **Blake** feels **Controlled**, while
 
   <div class="comparison-item">
     <div class="comparison-label">Blake — Body Anchor</div>
-    <img src="../assets/library/10_CHARACTERS/BLAKE/02_BODY/structure/blake_body_anchor_v1.png" alt="Blake Body Anchor">
+    <img src="/assets/library/10_CHARACTERS/BLAKE/02_BODY/structure/blake_body_anchor_v1.png" alt="Blake Body Anchor">
   </div>
 </div>
 

@@ -1,7 +1,7 @@
 name: Lucien
 slug: lucien
 status: active
-project: Lucien & Ragnar
+project: lucien_ragnar
 site_visibility:
   list_in_character_index: true
   include_in_nav: true

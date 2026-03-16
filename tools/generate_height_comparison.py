@@ -14,7 +14,6 @@ import argparse
 import pathlib
 import subprocess
 import sys
-import os
 
 try:
     from tools.library_index import build_library_index
@@ -23,6 +22,7 @@ except ModuleNotFoundError:
 
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
+DOCS_ROOT = ROOT / "docs"
 OUTPUT_DIR = ROOT / "docs" / "comparisons"
 NAV_SCRIPT = ROOT / "tools" / "generate_nav_comparisons.py"
 
@@ -35,6 +35,10 @@ COMPARISON_ASSET_TYPES = [
 
 def load_library():
     return build_library_index()
+
+
+def site_root_url(target_under_docs: pathlib.Path) -> str:
+    return "/" + target_under_docs.relative_to(DOCS_ROOT).as_posix()
 
 
 def get_character_record(library: dict, slug: str) -> dict:
@@ -137,8 +141,7 @@ def make_image_link(record: dict, filename: str) -> str:
     candidate = matches[0]
 
     try:
-        rel = os.path.relpath(candidate, OUTPUT_DIR)
-        return pathlib.Path(rel).as_posix()
+        return site_root_url(candidate)
     except ValueError:
         return ""
 
@@ -493,6 +496,11 @@ def parse_args():
     )
     parser.add_argument("slug_a", help="Slug of the first character")
     parser.add_argument("slug_b", help="Slug of the second character")
+    parser.add_argument(
+        "--no-nav-update",
+        action="store_true",
+        help="Do not update comparison nav after generating the page.",
+    )
     return parser.parse_args()
 
 
@@ -514,7 +522,9 @@ def main():
     output_path = write_output(args.slug_a, args.slug_b, markdown)
 
     print(f"Generated comparison page: {output_path}")
-    update_comparison_nav()
+    if not args.no_nav_update:
+        update_comparison_nav()
+
 
 
 if __name__ == "__main__":

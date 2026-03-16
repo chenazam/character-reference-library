@@ -41,8 +41,12 @@ nav:
     - Asset Comparison: comparisons/assets.md
     - Blake vs Jasper: comparisons/blake-vs-jasper.md
     - Daimon vs Tommy: comparisons/daimon-vs-tommy.md
+    - Danny vs Hudson: comparisons/danny-vs-hudson.md
+    - Danny vs Jonah: comparisons/danny-vs-jonah.md
     - Danny vs Luca: comparisons/danny-vs-luca.md
     - Hudson vs Jonah: comparisons/hudson-vs-jonah.md
+    - Hudson vs Luca: comparisons/hudson-vs-luca.md
+    - Jonah vs Luca: comparisons/jonah-vs-luca.md
     - Lucien vs Ragnar: comparisons/lucien-vs-ragnar.md
   - Environments:
     - Index: environments/index.md

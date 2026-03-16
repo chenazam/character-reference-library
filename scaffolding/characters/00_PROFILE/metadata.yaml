@@ -3,6 +3,7 @@ slug: [character_slug]
 
 status: active
 project: [PROJECT_NAME]
+exclude_from_comparisons: false
 
 core_identity:
   short_summary: [brief one-sentence identity summary]

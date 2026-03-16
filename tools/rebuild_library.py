@@ -13,9 +13,12 @@ SCRIPTS = [
     "tools/generate_nav_characters.py",
     "tools/generate_asset_comparison_snippets.py",
     "tools/generate_asset_comparison_page.py",
+    "tools/generate_project_comparisons.py",
+    "tools/generate_nav_comparisons.py --refresh-pages",
     "tools/generate_pipeline_dashboard.py",
     "tools/generate_generation_queue.py",
 ]
+
 
 
 def run_command(command, label, allow_failure=False, capture_output=False, text=True):
@@ -39,7 +42,8 @@ def run_command(command, label, allow_failure=False, capture_output=False, text=
 
 
 def run_python(script):
-    run_command([sys.executable, script], f"Running {script}")
+    parts = script.split()
+    run_command([sys.executable] + parts, f"Running {script}")
 
 
 def run_mkdocs_build():

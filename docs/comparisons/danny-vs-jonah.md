@@ -1,12 +1,12 @@
-# Hudson vs Jonah
+# Danny vs Jonah
 
 ## Height Comparison
 
-- **Hudson:** 188 cm / 6'2
+- **Danny:** 193 cm / 6'4
 - **Jonah:** 178 cm / 5'10"
-- **Difference:** 10 cm / 0'4"
+- **Difference:** 15 cm / 0'6"
 - **Category:** noticeable
-- **Relative scale:** Hudson is approximately 5.6% taller than Jonah
+- **Relative scale:** Danny is approximately 8.4% taller than Jonah
 
 <div class="comparison-badges">
   <div class="comparison-badge">
@@ -15,11 +15,11 @@
   </div>
   <div class="comparison-badge">
     <div class="comparison-badge__label">Build Contrast</div>
-    <div class="comparison-badge__value">Athletic Muscular vs Elongated Slender</div>
+    <div class="comparison-badge__value">Heavy Muscular vs Elongated Slender</div>
   </div>
   <div class="comparison-badge">
     <div class="comparison-badge__label">Silhouette Contrast</div>
-    <div class="comparison-badge__value">Power Athlete vs Runner Silhouette</div>
+    <div class="comparison-badge__value">Power Frame vs Runner Silhouette</div>
   </div>
 </div>
 
@@ -30,13 +30,13 @@
     <div class="height-chart__bar-wrap">
       <div class="height-chart__bar" style="height: 100.00%"></div>
     </div>
-    <div class="height-chart__label">Hudson</div>
-    <div class="height-chart__meta">188 cm / 6'2</div>
+    <div class="height-chart__label">Danny</div>
+    <div class="height-chart__meta">193 cm / 6'4</div>
   </div>
 
   <div class="height-chart__figure">
     <div class="height-chart__bar-wrap">
-      <div class="height-chart__bar" style="height: 94.68%"></div>
+      <div class="height-chart__bar" style="height: 92.23%"></div>
     </div>
     <div class="height-chart__label">Jonah</div>
     <div class="height-chart__meta">178 cm / 5'10"</div>
@@ -45,22 +45,22 @@
 
 ## Comparison Summary
 
-**Hudson** and **Jonah** show a **Noticeable height contrast**, with **Hudson** standing **10 cm** taller than **Jonah**.
+**Danny** and **Jonah** show a **Noticeable height contrast**, with **Danny** standing **15 cm** taller than **Jonah**.
 
-In terms of build, **Hudson** reads as **Athletic Muscular**, while **Jonah** reads as **Elongated Slender**.
+In terms of build, **Danny** reads as **Heavy Muscular**, while **Jonah** reads as **Elongated Slender**.
 
-Their design language also differs strongly: **Hudson** is rooted in a **Athletic Luxury** aesthetic, while **Jonah** is defined more by **Playful Athletic** styling.
+Their design language also differs strongly: **Danny** is rooted in a **Rugged Utilitarian** aesthetic, while **Jonah** is defined more by **Playful Athletic** styling.
 
-Facially, **Hudson** tends toward a **Confident Neutral** expression, while **Jonah** reads as more **Soft Neutral**.
+In motion, **Danny** reads as **Grounded Powerful**, whereas **Jonah** feels more **Relaxed Natural**.
 
-Their emotional presentation also differs: **Hudson** feels **Controlled**, while **Jonah** feels **Open Warm**.
+Their body language pushes this contrast further: **Danny** appears **Calm Composed**, while **Jonah** appears **Open Confident**.
 
 ## Anatomy Sheet Comparison
 
 <div class="comparison-grid comparison-grid-2">
   <div class="comparison-item">
-    <div class="comparison-label">Hudson</div>
-    <img src="/assets/library/10_CHARACTERS/HUDSON/02_BODY/anatomy/hudson_anatomy_sheet_v1.png" alt="Hudson Anatomy Sheet Comparison">
+    <div class="comparison-label">Danny</div>
+    <img src="/assets/library/10_CHARACTERS/DANNY/02_BODY/anatomy/danny_anatomy_sheet_v1.png" alt="Danny Anatomy Sheet Comparison">
   </div>
   <div class="comparison-item">
     <div class="comparison-label">Jonah</div>

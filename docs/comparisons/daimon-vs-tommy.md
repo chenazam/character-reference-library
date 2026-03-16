@@ -65,7 +65,7 @@ Their emotional presentation also differs: **Daimon** feels **Intense**, while *
 
   <div class="comparison-item">
     <div class="comparison-label">Tommy — Anatomy Sheet</div>
-    <img src="../assets/library/10_CHARACTERS/TOMMY/02_BODY/anatomy/tommy_anatomy_sheet_v1.png" alt="Tommy Anatomy Sheet">
+    <img src="/assets/library/10_CHARACTERS/TOMMY/02_BODY/anatomy/tommy_anatomy_sheet_v1.png" alt="Tommy Anatomy Sheet">
   </div>
 </div>
 

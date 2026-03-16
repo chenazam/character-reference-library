@@ -15,7 +15,8 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 LIBRARY_ROOT = ROOT / "docs" / "assets" / "library" / "10_CHARACTERS"
 OUTPUT_ROOT = ROOT / "docs" / "comparisons" / "lineups"
 
-CHART_HEIGHT_PX = 460
+COMPACT_STAGE_HEIGHT = 360
+CHART_HEIGHT_PX = COMPACT_STAGE_HEIGHT
 
 
 def get_nested(d, *keys, default=None):
@@ -174,7 +175,7 @@ def build_chart(characters: list[dict], page_docs_path: pathlib.Path) -> str:
         )
 
     return f"""
-<div class="height-lineup height-lineup--multi">
+<div class="height-lineup height-lineup--multi height-lineup--compact">
 
   <div class="height-lineup__ticks" aria-hidden="true">
     {"".join(ticks)}

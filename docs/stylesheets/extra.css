@@ -400,6 +400,47 @@
   grid-column: auto;
 }
 
+.height-lineup--compact {
+  --lineup-tick-column: 72px;
+  --lineup-stage-height: 360px;
+  --lineup-footer-height: 2.8rem;
+  gap: 1.25rem;
+}
+
+.height-lineup--compact .height-lineup__stage {
+  max-width: 180px;
+  padding: 0 0.5rem;
+}
+
+.height-lineup--compact .height-lineup__label {
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+}
+
+.height-lineup--compact .height-lineup__meta {
+  font-size: 0.72rem;
+}
+
+.height-lineup--compact .height-lineup__tick-label {
+  font-size: 0.66rem;
+}
+
+.height-lineup--compact .height-lineup__placeholder--slender {
+  width: 64px;
+}
+
+.height-lineup--compact .height-lineup__placeholder--athletic {
+  width: 78px;
+}
+
+.height-lineup--compact .height-lineup__placeholder--broad {
+  width: 92px;
+}
+
+.height-lineup--compact .height-lineup__placeholder--massive {
+  width: 106px;
+}
+
 @media (max-width: 1050px) {
   .height-lineup {
     grid-template-columns: 1fr;

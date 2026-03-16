@@ -95,7 +95,7 @@ If identity drift occurs, prioritize earlier anchors.
 4 Body Anchor
   ├─ 5 Proportion Grid
   ├─ 6 Muscle Tension
-  └─ 7 Silhouette
+  └─ 7A Silhouette Sheet
         ↓
         8 Turnaround
           ├─ 9 Expression Sheet
@@ -353,7 +353,7 @@ Avoid by default
 
 ---
 
-## 7 Silhouette
+## 7A Silhouette Sheet
 
 Required inputs
 
@@ -371,12 +371,29 @@ Avoid by default
 
 ---
 
+## 7B Silhouette Front
+
+Required inputs
+
+- 7A Silhouette Sheet
+- 3E Anatomy Sheet
+
+Optional inputs
+
+- 5 Proportion Grid
+
+Avoid by default
+
+- outfit sheets
+- UCS sheets
+- other silhouette panels
+
 ## 8 Turnaround
 
 Required inputs
 
 - 4 Body Anchor
-- 7 Silhouette
+- 7A Silhouette Sheet
 - 1D Face Anchor
 
 Optional inputs
@@ -431,7 +448,7 @@ Required inputs
 
 - 1D Face Anchor
 - 2 Hair Sheet
-- 7 Silhouette
+- 7A Silhouette Sheet
 - 8 Turnaround
 - 9 Expression Sheet
 
@@ -539,7 +556,7 @@ Avoid by default
 Required inputs
 
 - 4 Body Anchor
-- 7 Silhouette
+- 7A Silhouette Sheet
 
 Optional inputs
 
@@ -608,7 +625,7 @@ Avoid by default
 Required inputs
 
 - 13 Signature Outfit
-- 7 Silhouette
+- 7A Silhouette Sheet
 - 8 Turnaround
 
 Optional inputs

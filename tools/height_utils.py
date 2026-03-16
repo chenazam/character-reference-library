@@ -52,40 +52,40 @@ def fallback_proportion_archetype(meta: dict) -> str:
     if anchor == "power_frame":
         return "massive_upper_dominant"
 
-if anchor == "power_athlete":
-    if emphasis in {"balanced", "overall"}:
-        return "broad_athletic"
-    return "broad_upper_dominant"
-
-if anchor == "runner_silhouette":
-    if "compact" in keywords:
-        return "compact_light"
-    return "athletic_leg_dominant"
-
-if anchor == "elongated_slender":
-    if emphasis in {"soft", "lower_curve", "glutes", "hips"}:
+    if anchor == "power_athlete":
+        if emphasis in {"balanced", "overall"}:
+            return "broad_athletic"
+        return "broad_upper_dominant"
+    
+    if anchor == "runner_silhouette":
+        if "compact" in keywords:
+            return "compact_light"
+        return "athletic_leg_dominant"
+    
+    if anchor == "elongated_slender":
+        if emphasis in {"soft", "lower_curve", "glutes", "hips"}:
+            return "slender_refined"
+        return "slender_tall"
+    
+    if anchor == "glute_slender":
         return "slender_refined"
-    return "slender_tall"
-
-if anchor == "glute_slender":
-    return "slender_refined"
 
     archetype = None
 
-if build in {"soft_slender"}:
-    archetype = "slender_refined"
-elif build in {"narrow_slender", "elongated_slender"}:
-    archetype = "slender_tall"
-elif build in {"balanced_athletic", "light_athletic"}:
-    archetype = "athletic_balanced"
-elif build in {"runner_build", "lower_athletic"}:
-    archetype = "athletic_leg_dominant"
-elif build in {"compact_athletic"}:
-    archetype = "compact_light"
-elif build in {"athletic_muscular"}:
-    archetype = "broad_athletic"
-elif build in {"power_build", "heavy_muscular", "broad_heavy", "thick_set", "large_frame"}:
-    archetype = "heavy_muscular"
+    if build in {"soft_slender"}:
+        archetype = "slender_refined"
+    elif build in {"narrow_slender", "elongated_slender"}:
+        archetype = "slender_tall"
+    elif build in {"balanced_athletic", "light_athletic"}:
+        archetype = "athletic_balanced"
+    elif build in {"runner_build", "lower_athletic"}:
+        archetype = "athletic_leg_dominant"
+    elif build in {"compact_athletic"}:
+        archetype = "compact_light"
+    elif build in {"athletic_muscular"}:
+        archetype = "broad_athletic"
+    elif build in {"power_build", "heavy_muscular", "broad_heavy", "thick_set", "large_frame"}:
+        archetype = "heavy_muscular"
 
     if "compact" in keywords and archetype in {"athletic_balanced", "athletic_leg_dominant", None}:
         archetype = "compact_light"

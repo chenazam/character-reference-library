@@ -58,6 +58,11 @@ def populated_asset_keys() -> list[str]:
 def build_page(asset_keys: list[str]) -> str:
     if not asset_keys:
         body = [
+            "---",
+            "hide:",
+            "  - toc",
+            "---",
+            "",
             "# Asset Comparisons",
             "",
             "No comparison snippets have been generated yet.",
@@ -68,6 +73,11 @@ def build_page(asset_keys: list[str]) -> str:
         return "\n".join(body)
 
     lines = []
+    lines.append("---")
+    lines.append("hide:")
+    lines.append("  - toc")
+    lines.append("---")
+    lines.append("")
     lines.append("# Asset Comparisons")
     lines.append("")
     lines.append("Compare one asset type across all characters. Use the selector to switch between generated comparison grids.")

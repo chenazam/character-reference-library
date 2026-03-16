@@ -1,13 +1,6 @@
 #!/usr/bin/env python3
 """
 Generate a metadata-driven character height comparison page.
-
-This generator:
-- compares two characters by height and build metadata
-- renders a markdown page
-- includes optional paired asset comparison sections when matching assets exist
-- includes fallback available-reference sections for unmatched assets
-- updates MkDocs comparison nav automatically after generation
 """
 
 import argparse
@@ -16,19 +9,14 @@ import subprocess
 import sys
 
 try:
-    from tools.height_utils import fallback_proportion_archetype
-except ModuleNotFoundError:
-    from height_utils import fallback_proportion_archetype
-
-try:
     from tools.library_index import build_library_index
 except ModuleNotFoundError:
     from library_index import build_library_index
 
 try:
-    from tools.site_paths import image_url_from_record
+    from tools.site_paths import image_url_from_record, site_root_url
 except ModuleNotFoundError:
-    from site_paths import image_url_from_record
+    from site_paths import image_url_from_record, site_root_url
 
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -45,23 +33,6 @@ COMPARISON_ASSET_TYPES = [
 
 def load_library():
     return build_library_index()
-
-
-def make_chart_image_link(record: dict, filename: str) -> str:
-    return image_url_from_record(record, filename)
-
-
-def get_reference_silhouette_link() -> str:
-    if not REFERENCE_SILHOUETTE.exists():
-        return ""
-    try:
-        record = {"dir": str(REFERENCE_SILHOUETTE.parent)}
-        return image_url_from_record(
-            record,
-            REFERENCE_SILHOUETTE.name,
-        )
-    except Exception:
-        return ""
 
 
 def get_character_record(library: dict, slug: str) -> dict:
@@ -88,6 +59,113 @@ def get_nested(data: dict, *keys, default=""):
         if current is None:
             return default
     return current
+
+
+def fallback_proportion_archetype(meta: dict) -> str:
+    anchor = get_nested(meta, "physical", "silhouette_anchor", default="")
+    emphasis = get_nested(meta, "physical", "silhouette_emphasis", default="")
+    build = get_nested(meta, "physical", "build_category", default="")
+    keywords = set(get_nested(meta, "physical", "silhouette_keywords", default=[]) or [])
+
+    anchor = str(anchor or "").strip()
+    emphasis = str(emphasis or "").strip()
+    build = str(build or "").strip()
+    keywords = {str(k).strip() for k in keywords if str(k).strip()}
+
+    if anchor == "power_frame":
+        return "massive_upper_dominant"
+
+    if anchor == "power_athlete":
+        if emphasis in {"balanced", "overall"}:
+            return "broad_balanced"
+        return "broad_upper_dominant"
+
+    if anchor == "runner_silhouette":
+        if "compact" in keywords:
+            return "compact_athletic"
+        return "athletic_leg_dominant"
+
+    if anchor == "elongated_slender":
+        if emphasis in {"soft", "lower_curve", "glutes", "hips"}:
+            return "slender_soft"
+        return "slender_tall"
+
+    if anchor == "glute_slender":
+        return "slender_soft"
+
+    archetype = None
+
+    if build in {"soft_slender"}:
+        archetype = "slender_soft"
+    elif build in {"narrow_slender", "elongated_slender"}:
+        archetype = "slender_tall"
+    elif build in {"balanced_athletic", "light_athletic"}:
+        archetype = "athletic_balanced"
+    elif build in {"runner_build", "lower_athletic"}:
+        archetype = "athletic_leg_dominant"
+    elif build in {"compact_athletic"}:
+        archetype = "compact_athletic"
+    elif build in {"athletic_muscular"}:
+        archetype = "broad_balanced"
+    elif build in {"power_build", "heavy_muscular", "broad_heavy", "thick_set", "large_frame"}:
+        archetype = "massive_balanced"
+
+    if "compact" in keywords and archetype in {"athletic_balanced", "athletic_leg_dominant", None}:
+        archetype = "compact_athletic"
+
+    if "leg_dominant" in keywords and archetype in {"athletic_balanced", "broad_balanced", None}:
+        archetype = "athletic_leg_dominant"
+
+    if "upper_dominant" in keywords:
+        if archetype in {"massive_balanced", None}:
+            archetype = "massive_upper_dominant"
+        elif archetype in {"broad_balanced", "athletic_balanced", None}:
+            archetype = "broad_upper_dominant"
+
+    if keywords & {"curvy", "soft", "glute_dominant", "hip_dominant"}:
+        if archetype in {"slender_tall", "slender_soft", None}:
+            archetype = "slender_soft"
+        else:
+            archetype = "soft_curvy"
+
+    if keywords & {"imposing", "massive", "heavy_set"}:
+        if emphasis in {"upper_body", "shoulders", "chest"} or "upper_dominant" in keywords:
+            archetype = "massive_upper_dominant"
+        else:
+            archetype = "massive_balanced"
+
+    if "broad" in keywords and archetype in {"athletic_balanced", None}:
+        archetype = "broad_balanced"
+
+    if "agile" in keywords and archetype is None:
+        archetype = "athletic_balanced"
+
+    if emphasis in {"upper_body", "shoulders", "chest"}:
+        if archetype in {"massive_balanced"}:
+            archetype = "massive_upper_dominant"
+        elif archetype in {"broad_balanced", "athletic_balanced", None}:
+            archetype = "broad_upper_dominant"
+
+    elif emphasis in {"legs", "lower_body"}:
+        if archetype in {"athletic_balanced", "compact_athletic", None}:
+            archetype = "athletic_leg_dominant"
+
+    elif emphasis in {"glutes", "hips", "lower_curve", "soft"}:
+        if archetype in {"slender_tall", "slender_soft", None}:
+            archetype = "slender_soft"
+        elif archetype not in {"massive_upper_dominant", "broad_upper_dominant"}:
+            archetype = "soft_curvy"
+
+    elif emphasis in {"balanced", "overall"}:
+        if archetype == "broad_upper_dominant":
+            archetype = "broad_balanced"
+        elif archetype == "massive_upper_dominant":
+            archetype = "massive_balanced"
+
+    if archetype is None:
+        return "slender_tall"
+
+    return archetype
 
 
 def cm_to_inches(cm: float) -> float:
@@ -155,8 +233,38 @@ def comparison_page_docs_path(slug_a: str, slug_b: str) -> pathlib.Path:
     return OUTPUT_DIR / f"{canon_a}-vs-{canon_b}.md"
 
 
+def make_chart_image_link(record: dict, filename: str) -> str:
+    if not filename:
+        return ""
+
+    character_dir = pathlib.Path(record["dir"])
+    matches = [p for p in character_dir.rglob(filename) if p.is_file()]
+    if not matches:
+        return ""
+
+    matches.sort()
+    try:
+        return site_root_url(matches[0])
+    except Exception:
+        return ""
+
+
+def get_reference_silhouette_link() -> str:
+    if not REFERENCE_SILHOUETTE.exists():
+        return ""
+    try:
+        return site_root_url(REFERENCE_SILHOUETTE)
+    except Exception:
+        return ""
+
+
 def make_image_link(record: dict, filename: str, page_docs_path: pathlib.Path) -> str:
-    return image_url_from_record(record, filename, from_page_docs_path=page_docs_path)
+    if not filename:
+        return ""
+    try:
+        return image_url_from_record(record, filename, from_page_docs_path=page_docs_path)
+    except Exception:
+        return ""
 
 
 def get_reference_links(record: dict, metadata: dict, page_docs_path: pathlib.Path) -> dict:
@@ -165,7 +273,7 @@ def get_reference_links(record: dict, metadata: dict, page_docs_path: pathlib.Pa
         "body_anchor": make_image_link(record, refs.get("body_anchor", ""), page_docs_path),
         "anatomy_sheet": make_image_link(record, refs.get("anatomy_sheet", ""), page_docs_path),
         "silhouette_sheet": make_image_link(record, refs.get("silhouette_sheet", ""), page_docs_path),
-        "silhouette_front": make_image_link(record, refs.get("silhouette_front", ""), page_docs_path),
+        "silhouette_front": make_chart_image_link(record, refs.get("silhouette_front", "")),
     }
 
 
@@ -228,47 +336,6 @@ def build_available_references_section(name_a: str, refs_a: dict, name_b: str, r
         + "".join(items)
         + "\n</div>\n\n"
     )
-
-
-def fallback_proportion_archetype(meta: dict) -> str:
-    anchor = get_nested(meta, "physical", "silhouette_anchor", default="")
-    build = get_nested(meta, "physical", "build_category", default="")
-    keywords = get_nested(meta, "physical", "silhouette_keywords", default=[]) or []
-
-    if anchor in {"power_frame"}:
-        return "massive"
-
-    if anchor in {"power_athlete"}:
-        return "broad"
-
-    if anchor in {"runner_silhouette"}:
-        return "athletic"
-
-    if anchor in {"elongated_slender", "glute_slender"}:
-        return "slender"
-
-    if build in {"power_build", "heavy_muscular", "broad_heavy", "thick_set", "large_frame"}:
-        return "massive"
-
-    if build in {"athletic_muscular"}:
-        return "broad"
-
-    if build in {"balanced_athletic", "runner_build", "lower_athletic", "light_athletic"}:
-        return "athletic"
-
-    if build in {"soft_slender", "narrow_slender", "elongated_slender"}:
-        return "slender"
-
-    if "heavy_set" in keywords or "imposing" in keywords:
-        return "massive"
-
-    if "broad" in keywords or "upper_dominant" in keywords:
-        return "broad"
-
-    if "agile" in keywords or "leg_dominant" in keywords:
-        return "athletic"
-
-    return "slender"
 
 
 def build_height_chart_section(
@@ -394,85 +461,6 @@ def build_height_chart_section(
 </div>
 
 """
-    chart_height_px = 460
-
-    def pct(height: int) -> float:
-        return (height / max_height) * 100
-
-    def tick_bottom_px(tick_cm: int) -> float:
-        return (tick_cm / max_height) * chart_height_px
-
-    a_pct = pct(height_a)
-    b_pct = pct(height_b)
-
-    use_silhouettes = bool(silhouette_front_a and silhouette_front_b)
-
-    if use_silhouettes:
-        figure_a = (
-            f'<img class="height-lineup__silhouette" '
-            f'src="{silhouette_front_a}" '
-            f'alt="{name_a} silhouette front" '
-            f'style="height: {a_pct:.2f}%;">'
-        )
-        figure_b = (
-            f'<img class="height-lineup__silhouette" '
-            f'src="{silhouette_front_b}" '
-            f'alt="{name_b} silhouette front" '
-            f'style="height: {b_pct:.2f}%;">'
-        )
-    else:
-        figure_a = (
-            f'<div class="height-lineup__placeholder '
-            f'height-lineup__placeholder--{archetype_a}" '
-            f'style="height: {a_pct:.2f}%"></div>'
-        )
-        figure_b = (
-            f'<div class="height-lineup__placeholder '
-            f'height-lineup__placeholder--{archetype_b}" '
-            f'style="height: {b_pct:.2f}%"></div>'
-        )
-
-    tick_step = 10
-    tick_start = (max_height // tick_step) * tick_step
-    ticks = []
-
-    for tick_cm in range(tick_start, 0, -tick_step):
-        bottom_px = tick_bottom_px(tick_cm)
-        ticks.append(
-            f'<div class="height-lineup__tick" style="bottom: {bottom_px:.2f}px;">'
-            f'<span class="height-lineup__tick-label">{tick_cm} cm</span>'
-            f'</div>'
-        )
-
-    ticks_html = "\n    ".join(ticks)
-
-    return f"""## Visual Height Chart
-
-<div class="height-lineup">
-  <div class="height-lineup__ticks" aria-hidden="true">
-    {ticks_html}
-  </div>
-
-  <div class="height-lineup__baseline" aria-hidden="true"></div>
-
-  <div class="height-lineup__figure height-lineup__figure--a">
-    <div class="height-lineup__stage">
-      {figure_a}
-    </div>
-    <div class="height-lineup__label">{name_a}</div>
-    <div class="height-lineup__meta">{height_a} cm / {imperial_a}</div>
-  </div>
-
-  <div class="height-lineup__figure height-lineup__figure--b">
-    <div class="height-lineup__stage">
-      {figure_b}
-    </div>
-    <div class="height-lineup__label">{name_b}</div>
-    <div class="height-lineup__meta">{height_b} cm / {imperial_b}</div>
-  </div>
-</div>
-
-"""
 
 
 def build_difference_badges(meta_a: dict, meta_b: dict, diff_category: str) -> str:
@@ -552,7 +540,10 @@ def build_comparison_summary(
             f"In terms of build, **{name_a}** reads as **{build_a}**, while **{name_b}** reads as **{build_b}**."
         )
 
-    silhouettes_exist = bool(refs_a.get("silhouette_sheet") and refs_b.get("silhouette_sheet"))
+    silhouettes_exist = bool(
+        get_nested(meta_a, "reference_files", "silhouette_sheet", default="")
+        and get_nested(meta_b, "reference_files", "silhouette_sheet", default="")
+    )
     if silhouettes_exist and anchor_a and anchor_b:
         silhouette_sentence = (
             f"Their silhouettes reinforce this contrast: "
@@ -633,15 +624,6 @@ def build_markdown(
     refs_a = get_reference_links(record_a, meta_a, page_docs_path)
     refs_b = get_reference_links(record_b, meta_b, page_docs_path)
 
-    silhouette_front_a = make_chart_image_link(
-        record_a,
-        get_nested(meta_a, "reference_files", "silhouette_front", default=""),
-    )
-    silhouette_front_b = make_chart_image_link(
-        record_b,
-        get_nested(meta_b, "reference_files", "silhouette_front", default=""),
-    )
-
     difference_badges_section = build_difference_badges(meta_a, meta_b, diff_category)
 
     archetype_a = fallback_proportion_archetype(meta_a)
@@ -651,12 +633,12 @@ def build_markdown(
         name_a,
         height_a,
         imperial_a,
-        silhouette_front_a,
+        refs_a.get("silhouette_front", ""),
         archetype_a,
         name_b,
         height_b,
         imperial_b,
-        silhouette_front_b,
+        refs_b.get("silhouette_front", ""),
         archetype_b,
         reference_silhouette,
     )

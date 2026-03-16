@@ -1832,6 +1832,64 @@
 </ul>
 <p>Only attach them if they are explicitly needed.</p>
 <hr />
+<h1 id="pipeline-stage-index">Pipeline Stage Index</h1>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Focus</th>
+<th>Key Outputs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#stage-1--face-identity">Stage 1</a></td>
+<td>Face Identity</td>
+<td>Face Anchor</td>
+</tr>
+<tr>
+<td><a href="#stage-2--hair-identity">Stage 2</a></td>
+<td>Hair Identity</td>
+<td>Hair Sheet</td>
+</tr>
+<tr>
+<td><a href="#stage-3--physique-anchoring">Stage 3</a></td>
+<td>Physique Anchoring</td>
+<td>Anatomy Sheet</td>
+</tr>
+<tr>
+<td><a href="#stage-4--structural-anchors">Stage 4</a></td>
+<td>Structural Anchors</td>
+<td>Body Anchor</td>
+</tr>
+<tr>
+<td><a href="#stage-5--identity-extensions">Stage 5</a></td>
+<td>Identity Extensions</td>
+<td>Expressions</td>
+</tr>
+<tr>
+<td><a href="#stage-6--ucs-core-generation">Stage 6</a></td>
+<td>UCS Core</td>
+<td>UCS Core</td>
+</tr>
+<tr>
+<td><a href="#stage-7--style-anchoring">Stage 7</a></td>
+<td>Style</td>
+<td>Signature Outfit</td>
+</tr>
+<tr>
+<td><a href="#stage-8--motion--character-use">Stage 8</a></td>
+<td>Motion</td>
+<td>Poses</td>
+</tr>
+<tr>
+<td><a href="#stage-9--final-ucs">Stage 9</a></td>
+<td>Final UCS</td>
+<td>Final UCS</td>
+</tr>
+</tbody>
+</table>
+<hr />
 <h1 id="identity-anchor-hierarchy">Identity Anchor Hierarchy</h1>
 <p>The following sheets act as identity anchors for the character.</p>
 <p>They should override conflicting information from later assets.</p>
@@ -1855,14 +1913,39 @@
 </thead>
 <tbody>
 <tr>
+<td>1D Face Anchor</td>
+<td>canonical facial identity</td>
+<td>1A, 1B, 1C</td>
+</tr>
+<tr>
+<td>2 Hair Sheet</td>
+<td>hairstyle structure</td>
+<td>1D</td>
+</tr>
+<tr>
+<td>3E Anatomy Sheet</td>
+<td>full anatomical reference</td>
+<td>3A, 3B, 3C</td>
+</tr>
+<tr>
 <td>4 Body Anchor</td>
 <td>stable body identity</td>
 <td>1D, 2, 3E</td>
 </tr>
 <tr>
+<td>7A Silhouette Sheet</td>
+<td>readable body outline</td>
+<td>4, 3E</td>
+</tr>
+<tr>
+<td>7B Silhouette Front</td>
+<td>canonical silhouette asset</td>
+<td>7A, 3E</td>
+</tr>
+<tr>
 <td>8 Turnaround</td>
 <td>canonical full-body reference</td>
-<td>4, 7, 1D</td>
+<td>4, 7A, 1D</td>
 </tr>
 <tr>
 <td>9 Expression Sheet</td>
@@ -1877,7 +1960,7 @@
 <tr>
 <td>11 Gallery Image</td>
 <td>early presentation image</td>
-<td>1D, 2, 7, 8, 9</td>
+<td>1D, 2, 7A, 8, 9</td>
 </tr>
 <tr>
 <td>12H UCS Core</td>
@@ -1903,16 +1986,30 @@
 </table>
 <hr />
 <h2 id="dependency-backbone">Dependency Backbone</h2>
-<pre><code class="language-text">1D Face Anchor
+<pre><code class="language-text">1A Front Face
+  ↓
+1B 3/4 Face
+  ↓
+1C Profile Face
+  ↓
+1D Face Anchor
   ↓
 2 Hair Sheet
+  ↓
+3A Anatomy Front
+  ↓
+3B Anatomy Side
+  ↓
+3C Anatomy Back
   ↓
 3E Anatomy Sheet
   ↓
 4 Body Anchor
   ├─ 5 Proportion Grid
   ├─ 6 Muscle Tension
-  └─ 7 Silhouette
+  └─ 7A Silhouette Sheet
+        ↓
+        7B Silhouette Front
         ↓
         8 Turnaround
           ├─ 9 Expression Sheet
@@ -2138,7 +2235,7 @@
 <li>UCS sheets</li>
 </ul>
 <hr />
-<h2 id="7-silhouette">7 Silhouette</h2>
+<h2 id="7a-silhouette-sheet">7A Silhouette Sheet</h2>
 <p>Required inputs</p>
 <ul>
 <li>4 Body Anchor</li>
@@ -2154,11 +2251,27 @@
 <li>UCS sheets</li>
 </ul>
 <hr />
+<h2 id="7b-silhouette-front">7B Silhouette Front</h2>
+<p>Required inputs</p>
+<ul>
+<li>7A Silhouette Sheet</li>
+<li>3E Anatomy Sheet</li>
+</ul>
+<p>Optional inputs</p>
+<ul>
+<li>5 Proportion Grid</li>
+</ul>
+<p>Avoid by default</p>
+<ul>
+<li>outfit sheets</li>
+<li>UCS sheets</li>
+<li>other silhouette panels</li>
+</ul>
 <h2 id="8-turnaround">8 Turnaround</h2>
 <p>Required inputs</p>
 <ul>
 <li>4 Body Anchor</li>
-<li>7 Silhouette</li>
+<li>7A Silhouette Sheet</li>
 <li>1D Face Anchor</li>
 </ul>
 <p>Optional inputs</p>
@@ -2206,7 +2319,7 @@
 <ul>
 <li>1D Face Anchor</li>
 <li>2 Hair Sheet</li>
-<li>7 Silhouette</li>
+<li>7A Silhouette Sheet</li>
 <li>8 Turnaround</li>
 <li>9 Expression Sheet</li>
 </ul>
@@ -2301,7 +2414,7 @@
 <p>Required inputs</p>
 <ul>
 <li>4 Body Anchor</li>
-<li>7 Silhouette</li>
+<li>7A Silhouette Sheet</li>
 </ul>
 <p>Optional inputs</p>
 <ul>
@@ -2361,7 +2474,7 @@
 <p>Required inputs</p>
 <ul>
 <li>13 Signature Outfit</li>
-<li>7 Silhouette</li>
+<li>7A Silhouette Sheet</li>
 <li>8 Turnaround</li>
 </ul>
 <p>Optional inputs</p>

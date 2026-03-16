@@ -182,12 +182,25 @@
   gap: 2rem;
   align-items: end;
   margin: 1rem 0 2rem;
+  position: relative;
+}
+
+.height-lineup__baseline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 3.2rem;
+  height: 2px;
+  background: var(--md-default-fg-color--lighter);
+  z-index: 0;
 }
 
 .height-lineup__figure {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .height-lineup__stage {
@@ -195,11 +208,9 @@
   max-width: 260px;
   height: 460px;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: center;
   padding: 0 1rem;
-  border-left: 1px solid var(--md-default-fg-color--lighter);
-  border-bottom: 1px solid var(--md-default-fg-color--lighter);
   position: relative;
 }
 
@@ -220,6 +231,7 @@
   max-width: 100%;
   width: auto;
   object-fit: contain;
+  object-position: bottom center;
   display: block;
 }
 
@@ -251,8 +263,11 @@
   .height-lineup {
     grid-template-columns: 1fr;
   }
-}
 
+  .height-lineup__baseline {
+    display: none;
+  }
+}
 .comparison-badges {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -286,4 +301,9 @@
   .comparison-badges {
     grid-template-columns: 1fr;
   }
+}
+
+.silhouette-lineup img {
+  height: 320px;
+  object-fit: contain;
 }

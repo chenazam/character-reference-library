@@ -95,6 +95,7 @@ reference_files:
   turnaround_sheet: ''
   ultimate_character_sheet: ''
   signature_outfit_sheet: ''
+  silhouette_front: ''
 pipeline_status:
   face_anchor: complete
   hair_sheet: complete
@@ -116,6 +117,7 @@ pipeline_status:
   scene_anchors: not_started
   prop_sheet: not_started
   gallery_image: not_started
+  silhouette_front: not_started
 notes: 'Ragnar should read as physically overwhelming in scale and mass relative to
   most characters. His silhouette should always emphasize broad shoulders, thick torso
   mass, and commanding height.

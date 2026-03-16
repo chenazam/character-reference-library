@@ -101,6 +101,7 @@ reference_files:
   signature_outfit_sheet: ''
   silhouette_sheet: ''
   turnaround_sheet: ''
+  silhouette_front: ''
 pipeline_status:
   face_anchor: complete
   hair_sheet: complete
@@ -129,6 +130,7 @@ pipeline_status:
   scene_anchor: not_started
   dynamic_pose: not_started
   final_ucs: not_started
+  silhouette_front: not_started
 notes: 'Jasper is defined by a runner-style physique with strong legs and a playful,
   energetic demeanor. His body language tends to be relaxed and expressive, often
   leaning casually or shifting weight easily.

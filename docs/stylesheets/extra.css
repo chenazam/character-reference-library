@@ -400,6 +400,49 @@
   pointer-events: none;
 }
 
+.height-lineup--character-context {
+  --lineup-stage-height: 320px;
+  --lineup-footer-height: 2.8rem;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: end;
+  margin: 1rem 0 2rem;
+  position: relative;
+}
+
+.height-lineup--character-context .height-lineup__baseline {
+  left: 0;
+  right: 0;
+}
+
+.height-lineup--character-context .height-lineup__figure--ref,
+.height-lineup--character-context .height-lineup__figure--a {
+  grid-column: auto;
+}
+
+.height-lineup--character-context .height-lineup__stage {
+  max-width: 180px;
+  height: var(--lineup-stage-height);
+  padding: 0 0.5rem;
+}
+
+.height-lineup--character-context .height-lineup__label {
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+}
+
+.height-lineup--character-context .height-lineup__meta {
+  font-size: 0.72rem;
+}
+
+@media (max-width: 700px) {
+  .height-lineup--character-context {
+    grid-template-columns: 1fr;
+  }
+}
+
 .height-lineup--multi > .height-lineup__figure {
   grid-column: auto;
 }
@@ -504,4 +547,78 @@
 .silhouette-lineup img {
   height: 320px;
   object-fit: contain;
+}
+
+/* ------------------------------------------------ */
+/* Character page height context chart */
+/* ------------------------------------------------ */
+
+.height-lineup--character-context {
+  --lineup-stage-height: 300px;
+  --lineup-footer-height: 2.6rem;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+
+  align-items: end;
+  justify-items: center;
+
+  margin: 1.5rem 0 2rem;
+
+  position: relative;
+}
+
+/* baseline */
+
+.height-lineup--character-context .height-lineup__baseline {
+  left: 0;
+  right: 0;
+}
+
+/* figure stage */
+
+.height-lineup--character-context .height-lineup__stage {
+  max-width: 180px;
+  height: var(--lineup-stage-height);
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  padding: 0 0.5rem;
+}
+
+/* labels */
+
+.height-lineup--character-context .height-lineup__label {
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.height-lineup--character-context .height-lineup__meta {
+  font-size: 0.72rem;
+  opacity: 0.75;
+}
+
+/* reference silhouette slightly faded */
+
+.height-lineup--character-context .height-lineup__silhouette--reference {
+  opacity: 0.35;
+}
+
+/* fallback placeholder silhouettes */
+
+.height-lineup--character-context .height-lineup__placeholder {
+  max-width: 90px;
+}
+
+/* responsive */
+
+@media (max-width: 700px) {
+  .height-lineup--character-context {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
 }

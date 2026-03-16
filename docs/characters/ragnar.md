@@ -31,6 +31,29 @@
 
 </div>
 
+## Height Context
+
+<div class="height-lineup height-lineup--character-context">
+  <div class="height-lineup__baseline" aria-hidden="true"></div>
+
+  <div class="height-lineup__figure height-lineup__figure--ref">
+    <div class="height-lineup__stage">
+      <div class="height-lineup__placeholder height-lineup__placeholder--athletic height-lineup__placeholder--reference" style="height: 86.54%"></div>
+    </div>
+    <div class="height-lineup__label">Reference</div>
+    <div class="height-lineup__meta">180 cm / 5'11"</div>
+  </div>
+
+  <div class="height-lineup__figure height-lineup__figure--a">
+    <div class="height-lineup__stage">
+      <div class="height-lineup__placeholder height-lineup__placeholder--massive" style="height: 100.00%"></div>
+    </div>
+    <div class="height-lineup__label">Ragnar</div>
+    <div class="height-lineup__meta">208 cm / 6'10"</div>
+  </div>
+</div>
+
+
 </div>
 
 ---

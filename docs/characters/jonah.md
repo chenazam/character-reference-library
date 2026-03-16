@@ -29,6 +29,29 @@
 
 </div>
 
+## Height Context
+
+<div class="height-lineup height-lineup--character-context">
+  <div class="height-lineup__baseline" aria-hidden="true"></div>
+
+  <div class="height-lineup__figure height-lineup__figure--ref">
+    <div class="height-lineup__stage">
+      <div class="height-lineup__placeholder height-lineup__placeholder--athletic height-lineup__placeholder--reference" style="height: 100.00%"></div>
+    </div>
+    <div class="height-lineup__label">Reference</div>
+    <div class="height-lineup__meta">180 cm / 5'11"</div>
+  </div>
+
+  <div class="height-lineup__figure height-lineup__figure--a">
+    <div class="height-lineup__stage">
+      <div class="height-lineup__placeholder height-lineup__placeholder--athletic" style="height: 98.89%"></div>
+    </div>
+    <div class="height-lineup__label">Jonah</div>
+    <div class="height-lineup__meta">178 cm / 5'10"</div>
+  </div>
+</div>
+
+
 </div>
 
 ---

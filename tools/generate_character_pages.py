@@ -3,11 +3,17 @@ import pathlib
 import re
 import yaml
 
+try:
+    from tools.site_paths import site_root_url
+except ModuleNotFoundError:
+    from site_paths import site_root_url
+
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 CHARACTERS_ROOT = ROOT / "docs/assets/library/10_CHARACTERS"
 SNIPPETS_ROOT = ROOT / "docs/snippets/galleries"
 PAGES_ROOT = ROOT / "docs/characters"
+REFERENCE_SILHOUETTE = ROOT / "docs" / "assets" / "reference" / "reference_male_average_180cm_front_v1.png"
 
 SECTIONS = [
     ("Identity", "identity"),
@@ -24,6 +30,71 @@ RESERVED_PAGES = {
     "templates.md",
     "character-page-template.md",
 }
+
+def get_nested(data: dict, *keys, default=""):
+    current = data
+    for key in keys:
+        if not isinstance(current, dict):
+            return default
+        current = current.get(key)
+        if current is None:
+            return default
+    return current
+
+def fallback_archetype(meta: dict) -> str:
+    anchor = get_nested(meta, "physical", "silhouette_anchor", default="")
+    build = get_nested(meta, "physical", "build_category", default="")
+    keywords = get_nested(meta, "physical", "silhouette_keywords", default=[]) or []
+
+    if anchor in {"power_frame"}:
+        return "massive"
+    if anchor in {"power_athlete"}:
+        return "broad"
+    if anchor in {"runner_silhouette"}:
+        return "athletic"
+    if anchor in {"elongated_slender", "glute_slender"}:
+        return "slender"
+
+    if build in {"power_build", "heavy_muscular", "broad_heavy", "thick_set", "large_frame"}:
+        return "massive"
+    if build in {"athletic_muscular"}:
+        return "broad"
+    if build in {"balanced_athletic", "runner_build", "lower_athletic", "light_athletic"}:
+        return "athletic"
+    if build in {"soft_slender", "narrow_slender", "elongated_slender"}:
+        return "slender"
+
+    if "heavy_set" in keywords or "imposing" in keywords:
+        return "massive"
+    if "broad" in keywords or "upper_dominant" in keywords:
+        return "broad"
+    if "agile" in keywords or "leg_dominant" in keywords:
+        return "athletic"
+
+    return "slender"
+
+def get_reference_silhouette_link() -> str:
+    if not REFERENCE_SILHOUETTE.exists():
+        return ""
+    try:
+        return site_root_url(REFERENCE_SILHOUETTE)
+    except Exception:
+        return ""
+
+def make_image_link(record: dict, filename: str) -> str:
+    if not filename:
+        return ""
+
+    character_dir = pathlib.Path(record["dir"])
+    matches = [p for p in character_dir.rglob(filename) if p.is_file()]
+    if not matches:
+        return ""
+
+    matches.sort()
+    try:
+        return site_root_url(matches[0])
+    except Exception:
+        return ""
 
 
 def fix_common_mojibake(text: str) -> str:
@@ -60,6 +131,80 @@ def load_metadata(character_dir: pathlib.Path) -> dict:
     except Exception as e:
         print(f"Warning: failed to read {metadata_file}: {e}")
         return {}
+
+def build_height_context_section(record: dict, metadata: dict) -> str:
+    height_cm = get_nested(metadata, "physical", "height_cm", default=0)
+    height_imperial = get_nested(metadata, "physical", "height_imperial", default="")
+    if not height_cm:
+        return ""
+
+    reference_height = 180
+    reference_imperial = "5'11\""
+    max_height = max(height_cm, reference_height)
+
+    def pct(height: int) -> float:
+        return (height / max_height) * 100
+
+    char_name = metadata.get("name", "Character")
+    archetype = fallback_archetype(metadata)
+
+    silhouette_front = make_image_link(
+        record,
+        get_nested(metadata, "reference_files", "silhouette_front", default=""),
+    )
+
+    reference_silhouette = get_reference_silhouette_link()
+
+    if silhouette_front and reference_silhouette:
+        reference_figure = (
+            f'<img class="height-lineup__silhouette height-lineup__silhouette--reference" '
+            f'src="{reference_silhouette}" alt="Reference silhouette" '
+            f'style="height: {pct(reference_height):.2f}%;">'
+        )
+    else:
+        reference_figure = (
+            f'<div class="height-lineup__placeholder '
+            f'height-lineup__placeholder--athletic '
+            f'height-lineup__placeholder--reference" '
+            f'style="height: {pct(reference_height):.2f}%"></div>'
+        )
+
+    if silhouette_front:
+        character_figure = (
+            f'<img class="height-lineup__silhouette" '
+            f'src="{silhouette_front}" alt="{char_name} silhouette front" '
+            f'style="height: {pct(height_cm):.2f}%;">'
+        )
+    else:
+        character_figure = (
+            f'<div class="height-lineup__placeholder '
+            f'height-lineup__placeholder--{archetype}" '
+            f'style="height: {pct(height_cm):.2f}%"></div>'
+        )
+
+    return f"""## Height Context
+
+<div class="height-lineup height-lineup--character-context">
+  <div class="height-lineup__baseline" aria-hidden="true"></div>
+
+  <div class="height-lineup__figure height-lineup__figure--ref">
+    <div class="height-lineup__stage">
+      {reference_figure}
+    </div>
+    <div class="height-lineup__label">Reference</div>
+    <div class="height-lineup__meta">{reference_height} cm / {reference_imperial}</div>
+  </div>
+
+  <div class="height-lineup__figure height-lineup__figure--a">
+    <div class="height-lineup__stage">
+      {character_figure}
+    </div>
+    <div class="height-lineup__label">{char_name}</div>
+    <div class="height-lineup__meta">{height_cm} cm / {height_imperial}</div>
+  </div>
+</div>
+
+"""
 
 
 def load_character_summary(character_dir: pathlib.Path) -> str:
@@ -255,6 +400,8 @@ def build_character_page(character: str, character_dir: pathlib.Path) -> str:
     metadata = load_metadata(character_dir)
     summary_text = load_character_summary(character_dir)
     summary_sections = parse_markdown_sections(summary_text)
+    record = {"dir": str(character_dir)}
+    height_context_section = build_height_context_section(record, metadata)
 
     name = metadata.get("name", character_dir.name)
     overview_block = build_overview_block(metadata, summary_sections)
@@ -273,6 +420,8 @@ def build_character_page(character: str, character_dir: pathlib.Path) -> str:
 
     lines.append(overview_block)
     lines.append("")
+
+    lines.append(height_context_section)
 
     lines.append("</div>")
     lines.append("")

@@ -17,6 +17,7 @@ SCRIPTS = [
     "tools/generate_nav_comparisons.py --refresh-pages",
     "tools/generate_pipeline_dashboard.py",
     "tools/generate_generation_queue.py",
+    "tools/generate_build_status_page.py",
 ]
 
 

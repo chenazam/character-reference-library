@@ -60,11 +60,11 @@ Their body language pushes this contrast further: **Danny** appears **Calm Compo
 <div class="comparison-grid comparison-grid-2">
   <div class="comparison-item">
     <div class="comparison-label">Danny</div>
-    <img src="/assets/library/10_CHARACTERS/DANNY/02_BODY/anatomy/danny_anatomy_sheet_v1.png" alt="Danny Anatomy Sheet Comparison">
+    <img src="../../assets/library/10_CHARACTERS/DANNY/02_BODY/anatomy/danny_anatomy_sheet_v1.png" alt="Danny Anatomy Sheet Comparison">
   </div>
   <div class="comparison-item">
     <div class="comparison-label">Luca</div>
-    <img src="/assets/library/10_CHARACTERS/LUCA/02_BODY/anatomy/luca_anatomy_sheet_01.png" alt="Luca Anatomy Sheet Comparison">
+    <img src="../../assets/library/10_CHARACTERS/LUCA/02_BODY/anatomy/luca_anatomy_sheet_01.png" alt="Luca Anatomy Sheet Comparison">
   </div>
 </div>
 

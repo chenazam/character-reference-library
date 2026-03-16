@@ -60,11 +60,11 @@ Their emotional presentation also differs: **Hudson** feels **Controlled**, whil
 <div class="comparison-grid comparison-grid-2">
   <div class="comparison-item">
     <div class="comparison-label">Hudson</div>
-    <img src="/assets/library/10_CHARACTERS/HUDSON/02_BODY/anatomy/hudson_anatomy_sheet_v1.png" alt="Hudson Anatomy Sheet Comparison">
+    <img src="../../assets/library/10_CHARACTERS/HUDSON/02_BODY/anatomy/hudson_anatomy_sheet_v1.png" alt="Hudson Anatomy Sheet Comparison">
   </div>
   <div class="comparison-item">
     <div class="comparison-label">Jonah</div>
-    <img src="/assets/library/10_CHARACTERS/JONAH/02_BODY/anatomy/jonah_anatomy_sheet_v1.png" alt="Jonah Anatomy Sheet Comparison">
+    <img src="../../assets/library/10_CHARACTERS/JONAH/02_BODY/anatomy/jonah_anatomy_sheet_v1.png" alt="Jonah Anatomy Sheet Comparison">
   </div>
 </div>
 
@@ -74,7 +74,7 @@ Their emotional presentation also differs: **Hudson** feels **Controlled**, whil
 
   <div class="comparison-item">
     <div class="comparison-label">Jonah — Body Anchor</div>
-    <img src="/assets/library/10_CHARACTERS/JONAH/00_SOURCE_REFERENCES/body/jonah_body_anchor.png" alt="Jonah Body Anchor">
+    <img src="../../assets/library/10_CHARACTERS/JONAH/00_SOURCE_REFERENCES/body/jonah_body_anchor.png" alt="Jonah Body Anchor">
   </div>
 </div>
 

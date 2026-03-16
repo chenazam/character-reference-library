@@ -44,5 +44,5 @@ no stylization drift between panels
 
 Use:
 [REFERENCE_SHEET_BLOCK_STACK]
-[PORTRAIT_SHEET_FORMAT_BLOCK]
+[LANDSCAPE_SHEET_FORMAT_BLOCK]
 ```

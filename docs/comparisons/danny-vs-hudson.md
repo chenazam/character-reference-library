@@ -64,11 +64,11 @@ Their emotional presentation also differs: **Danny** feels **Open Warm**, while 
 <div class="comparison-grid comparison-grid-2">
   <div class="comparison-item">
     <div class="comparison-label">Danny</div>
-    <img src="/assets/library/10_CHARACTERS/DANNY/02_BODY/anatomy/danny_anatomy_sheet_v1.png" alt="Danny Anatomy Sheet Comparison">
+    <img src="../../assets/library/10_CHARACTERS/DANNY/02_BODY/anatomy/danny_anatomy_sheet_v1.png" alt="Danny Anatomy Sheet Comparison">
   </div>
   <div class="comparison-item">
     <div class="comparison-label">Hudson</div>
-    <img src="/assets/library/10_CHARACTERS/HUDSON/02_BODY/anatomy/hudson_anatomy_sheet_v1.png" alt="Hudson Anatomy Sheet Comparison">
+    <img src="../../assets/library/10_CHARACTERS/HUDSON/02_BODY/anatomy/hudson_anatomy_sheet_v1.png" alt="Hudson Anatomy Sheet Comparison">
   </div>
 </div>
 

@@ -60,11 +60,11 @@ Facially, **Lucien** tends toward a **Calm Reserved** expression, while **Ragnar
 <div class="comparison-grid comparison-grid-2">
   <div class="comparison-item">
     <div class="comparison-label">Lucien</div>
-    <img src="/assets/library/10_CHARACTERS/LUCIEN/02_BODY/structure/lucien_body_anchor_v1.png" alt="Lucien Body Anchor Comparison">
+    <img src="../../assets/library/10_CHARACTERS/LUCIEN/02_BODY/structure/lucien_body_anchor_v1.png" alt="Lucien Body Anchor Comparison">
   </div>
   <div class="comparison-item">
     <div class="comparison-label">Ragnar</div>
-    <img src="/assets/library/10_CHARACTERS/RAGNAR/02_BODY/structure/ragnar_body_anchor_v0.png" alt="Ragnar Body Anchor Comparison">
+    <img src="../../assets/library/10_CHARACTERS/RAGNAR/02_BODY/structure/ragnar_body_anchor_v0.png" alt="Ragnar Body Anchor Comparison">
   </div>
 </div>
 
@@ -73,11 +73,11 @@ Facially, **Lucien** tends toward a **Calm Reserved** expression, while **Ragnar
 <div class="comparison-grid comparison-grid-2">
   <div class="comparison-item">
     <div class="comparison-label">Lucien</div>
-    <img src="/assets/library/10_CHARACTERS/LUCIEN/02_BODY/anatomy/lucien_anatomy_sheet_v1.png" alt="Lucien Anatomy Sheet Comparison">
+    <img src="../../assets/library/10_CHARACTERS/LUCIEN/02_BODY/anatomy/lucien_anatomy_sheet_v1.png" alt="Lucien Anatomy Sheet Comparison">
   </div>
   <div class="comparison-item">
     <div class="comparison-label">Ragnar</div>
-    <img src="/assets/library/10_CHARACTERS/RAGNAR/02_BODY/anatomy/ragnar_anatomy_sheet_v1.png" alt="Ragnar Anatomy Sheet Comparison">
+    <img src="../../assets/library/10_CHARACTERS/RAGNAR/02_BODY/anatomy/ragnar_anatomy_sheet_v1.png" alt="Ragnar Anatomy Sheet Comparison">
   </div>
 </div>
 
@@ -87,7 +87,7 @@ Facially, **Lucien** tends toward a **Calm Reserved** expression, while **Ragnar
 
   <div class="comparison-item">
     <div class="comparison-label">Lucien — Silhouette Sheet</div>
-    <img src="/assets/library/10_CHARACTERS/LUCIEN/02_BODY/structure/lucien_silhouette_v1.png" alt="Lucien Silhouette Sheet">
+    <img src="../../assets/library/10_CHARACTERS/LUCIEN/02_BODY/structure/lucien_silhouette_v1.png" alt="Lucien Silhouette Sheet">
   </div>
 </div>
 

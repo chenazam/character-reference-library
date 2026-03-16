@@ -167,6 +167,8 @@ def build_chart(characters: list[dict]) -> str:
         archetype = fallback_proportion_archetype(meta)
         
         print(f"[archetype] {meta['name']} → {archetype}")
+        
+        print(f"[archetype] {meta['name']} → {archetype}")
 
         if silhouette:
             body = (

@@ -1,220 +1,169 @@
-import argparse
-import pathlib
-import yaml
+.height-lineup {
+  --lineup-tick-column: 90px;
+  --lineup-stage-height: 460px;
+  --lineup-footer-height: 3.2rem;
 
-from site_paths import site_root_url
+  display: grid;
+  grid-template-columns: var(--lineup-tick-column) repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  align-items: end;
+  margin: 1rem 0 2rem;
+  position: relative;
+}
 
-LIBRARY_ROOT = pathlib.Path("assets/library/10_CHARACTERS")
-OUTPUT_ROOT = pathlib.Path("docs/comparisons/lineups")
+.height-lineup--multi {
+  grid-template-columns: var(--lineup-tick-column) repeat(auto-fit, minmax(140px, 1fr));
+}
 
-CHART_HEIGHT_PX = 460
+.height-lineup__ticks {
+  position: absolute;
+  left: 0;
+  width: var(--lineup-tick-column);
+  height: var(--lineup-stage-height);
+  bottom: var(--lineup-footer-height);
+  z-index: 0;
+}
 
-reference_height = 180
-reference_imperial = "5'11\""
+.height-lineup__tick {
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-top: 1px solid var(--md-default-fg-color--lighter);
+}
 
+.height-lineup__tick-label {
+  position: absolute;
+  top: -0.7rem;
+  left: 0;
+  font-size: 0.72rem;
+  color: var(--md-default-fg-color--light);
+  background: var(--md-default-bg-color);
+  padding-right: 0.35rem;
+}
 
-def load_character(slug: str) -> dict:
-    for char_dir in LIBRARY_ROOT.iterdir():
-        meta_file = char_dir / "metadata.yaml"
-        if not meta_file.exists():
-            continue
+.height-lineup__baseline {
+  position: absolute;
+  left: var(--lineup-tick-column);
+  right: 0;
+  bottom: var(--lineup-footer-height);
+  height: 2px;
+  background: var(--md-default-fg-color);
+  z-index: 0;
+}
 
-        meta = yaml.safe_load(meta_file.read_text())
-        if meta.get("slug") == slug:
-            meta["_dir"] = char_dir
-            return meta
+.height-lineup__figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
 
-    raise ValueError(f"Character not found for slug: {slug}")
+.height-lineup__figure--ref {
+  grid-column: 2;
+}
 
+.height-lineup__figure--a {
+  grid-column: 3;
+}
 
-def get_nested(d, *keys, default=None):
-    cur = d
-    for k in keys:
-        if not isinstance(cur, dict):
-            return default
-        cur = cur.get(k)
-    return cur if cur is not None else default
+.height-lineup__figure--b {
+  grid-column: 4;
+}
 
+.height-lineup__stage {
+  width: 100%;
+  max-width: 260px;
+  height: var(--lineup-stage-height);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 1rem;
+  position: relative;
+}
 
-def fallback_archetype(meta: dict) -> str:
-    anchor = get_nested(meta, "physical", "silhouette_anchor", default="")
-    build = get_nested(meta, "physical", "build_category", default="")
-    keywords = get_nested(meta, "physical", "silhouette_keywords", default=[]) or []
+.height-lineup__label {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: center;
+}
 
-    if anchor in {"power_frame"}:
-        return "massive"
+.height-lineup__meta {
+  font-size: 0.8rem;
+  color: var(--md-default-fg-color--light);
+  text-align: center;
+}
 
-    if anchor in {"power_athlete"}:
-        return "broad"
+.height-lineup__silhouette {
+  max-width: 100%;
+  width: auto;
+  object-fit: contain;
+  object-position: bottom center;
+  display: block;
+}
 
-    if anchor in {"runner_silhouette"}:
-        return "athletic"
+.height-lineup__placeholder {
+  max-width: 100%;
+  opacity: 0.55;
+  background: var(--md-default-fg-color--light);
+  display: block;
+  margin: 0 auto;
+}
 
-    if anchor in {"elongated_slender", "glute_slender"}:
-        return "slender"
+.height-lineup__placeholder--reference {
+  opacity: 0.3;
+}
 
-    if build in {"power_build", "heavy_muscular", "broad_heavy", "large_frame"}:
-        return "massive"
+.height-lineup__placeholder--slender {
+  width: 84px;
+  clip-path: polygon(
+    42% 0%, 58% 0%, 64% 8%, 64% 20%, 73% 37%, 68% 100%,
+    56% 100%, 53% 60%, 47% 60%, 44% 100%, 32% 100%, 27% 37%,
+    36% 20%, 36% 8%
+  );
+}
 
-    if build in {"athletic_muscular"}:
-        return "broad"
+.height-lineup__placeholder--athletic {
+  width: 104px;
+  clip-path: polygon(
+    40% 0%, 60% 0%, 67% 8%, 67% 20%, 80% 37%, 73% 100%,
+    57% 100%, 54% 62%, 46% 62%, 43% 100%, 27% 100%, 20% 37%,
+    33% 20%, 33% 8%
+  );
+}
 
-    if build in {"balanced_athletic", "runner_build", "light_athletic"}:
-        return "athletic"
+.height-lineup__placeholder--broad {
+  width: 124px;
+  clip-path: polygon(
+    39% 0%, 61% 0%, 69% 8%, 69% 20%, 85% 38%, 76% 100%,
+    58% 100%, 55% 64%, 45% 64%, 42% 100%, 24% 100%, 15% 38%,
+    31% 20%, 31% 8%
+  );
+}
 
-    if build in {"soft_slender", "narrow_slender"}:
-        return "slender"
+.height-lineup__placeholder--massive {
+  width: 144px;
+  clip-path: polygon(
+    38% 0%, 62% 0%, 70% 8%, 70% 20%, 88% 39%, 79% 100%,
+    59% 100%, 56% 66%, 44% 66%, 41% 100%, 21% 100%, 12% 39%,
+    30% 20%, 30% 8%
+  );
+}
 
-    if "heavy_set" in keywords or "imposing" in keywords:
-        return "massive"
+@media (max-width: 1050px) {
+  .height-lineup {
+    grid-template-columns: 1fr;
+  }
 
-    if "broad" in keywords:
-        return "broad"
+  .height-lineup__ticks,
+  .height-lineup__baseline {
+    display: none;
+  }
 
-    if "agile" in keywords or "leg_dominant" in keywords:
-        return "athletic"
-
-    return "slender"
-
-
-def find_asset(meta: dict, key: str) -> str:
-    refs = meta.get("reference_files", {})
-    filename = refs.get(key)
-
-    if not filename:
-        return ""
-
-    char_dir = meta["_dir"]
-    matches = list(char_dir.rglob(filename))
-    if not matches:
-        return ""
-
-    return site_root_url(matches[0])
-
-
-def build_chart(characters: list) -> str:
-    max_height = max(max(c["height_cm"] for c in characters), 180)
-
-    def pct(h):
-        return (h / max_height) * 100
-
-    def tick_px(cm):
-        return (cm / max_height) * CHART_HEIGHT_PX
-
-    tick_step = 10
-    tick_start = (max_height // tick_step) * tick_step
-
-    ticks = []
-    for t in range(tick_start, 0, -tick_step):
-        ticks.append(
-            f'<div class="height-lineup__tick" style="bottom:{tick_px(t):.2f}px;">'
-            f'<span class="height-lineup__tick-label">{t} cm</span></div>'
-        )
-
-    reference_figure = (
-    f'<div class="height-lineup__placeholder '
-    f'height-lineup__placeholder--athletic '
-    f'height-lineup__placeholder--reference" '
-    f'style="height:{pct(reference_height):.2f}%"></div>'
-)
-
-    figures = [
-        f"""
-    <div class="height-lineup__figure height-lineup__figure--ref">
-      <div class="height-lineup__stage">
-        {reference_figure}
-      </div>
-      <div class="height-lineup__label">Reference</div>
-      <div class="height-lineup__meta">{reference_height} cm / {reference_imperial}</div>
-    </div>
-    """
-    ]
-
-    for i, c in enumerate(characters):
-        name = c["name"]
-        height = c["height_cm"]
-        imperial = c["height_imperial"]
-
-        silhouette = find_asset(c, "silhouette_front")
-        archetype = fallback_archetype(c)
-
-        if silhouette:
-            body = (
-                f'<img class="height-lineup__silhouette" '
-                f'src="{silhouette}" '
-                f'alt="{name} silhouette" '
-                f'style="height:{pct(height):.2f}%;">'
-            )
-        else:
-            body = (
-                f'<div class="height-lineup__placeholder '
-                f'height-lineup__placeholder--{archetype}" '
-                f'style="height:{pct(height):.2f}%"></div>'
-            )
-
-        figures.append(
-            f"""
-<div class="height-lineup__figure">
-  <div class="height-lineup__stage">
-    {body}
-  </div>
-  <div class="height-lineup__label">{name}</div>
-  <div class="height-lineup__meta">{height} cm / {imperial}</div>
-</div>
-"""
-        )
-
-    return f"""
-<div class="height-lineup height-lineup--multi">
-
-  <div class="height-lineup__ticks">
-    {"".join(ticks)}
-  </div>
-
-  <div class="height-lineup__baseline"></div>
-
-  {"".join(figures)}
-
-</div>
-"""
-
-
-def generate_lineup(slugs: list):
-    characters = [load_character(s) for s in slugs]
-
-    characters.sort(key=lambda c: c["height_cm"], reverse=True)
-
-    title = "Height Lineup — " + ", ".join(c["name"] for c in characters)
-
-    chart = build_chart(characters)
-
-    OUTPUT_ROOT.mkdir(parents=True, exist_ok=True)
-
-    filename = "-".join(sorted(slugs)) + "-lineup.md"
-    output_file = OUTPUT_ROOT / filename
-
-    markdown = f"""---
-hide:
-  - toc
----
-
-# {title}
-
-{chart}
-"""
-
-    output_file.write_text(markdown, encoding="utf-8")
-
-    print("Generated lineup page:", output_file)
-
-
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("slugs", nargs="+")
-    args = parser.parse_args()
-
-    generate_lineup(args.slugs)
-
-
-if __name__ == "__main__":
-    main()
+  .height-lineup__figure--ref,
+  .height-lineup__figure--a,
+  .height-lineup__figure--b {
+    grid-column: auto;
+  }
+}

@@ -13,6 +13,19 @@ except ModuleNotFoundError:
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 REFERENCE_SILHOUETTE = ROOT / "docs" / "assets" / "reference" / "reference_male_average_180cm_front_v1.png"
 
+SILHOUETTE_ARCHETYPES = {
+    "slender_refined",
+    "slender_tall",
+    "compact_light",
+    "athletic_balanced",
+    "athletic_leg_dominant",
+    "broad_athletic",
+    "broad_upper_dominant",
+    "heavy_muscular",
+    "massive_upper_dominant",
+    "soft_curvy",
+}
+
 
 def get_nested(data: dict, *keys, default=""):
     current = data

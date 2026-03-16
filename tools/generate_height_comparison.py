@@ -2,7 +2,7 @@
 """
 Generate a metadata-driven character height comparison page.
 
-This v1 generator:
+This generator:
 - compares two characters by height and build metadata
 - renders a markdown page
 - includes optional paired asset comparison sections when matching assets exist
@@ -20,9 +20,13 @@ try:
 except ModuleNotFoundError:
     from library_index import build_library_index
 
+try:
+    from tools.site_paths import image_url_from_record
+except ModuleNotFoundError:
+    from site_paths import image_url_from_record
+
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-DOCS_ROOT = ROOT / "docs"
 OUTPUT_DIR = ROOT / "docs" / "comparisons"
 NAV_SCRIPT = ROOT / "tools" / "generate_nav_comparisons.py"
 
@@ -35,10 +39,6 @@ COMPARISON_ASSET_TYPES = [
 
 def load_library():
     return build_library_index()
-
-
-def site_root_url(target_under_docs: pathlib.Path) -> str:
-    return "/" + target_under_docs.relative_to(DOCS_ROOT).as_posix()
 
 
 def get_character_record(library: dict, slug: str) -> dict:
@@ -127,35 +127,21 @@ def canonical_slug_pair(slug_a: str, slug_b: str) -> tuple[str, str]:
     return tuple(sorted([slug_a, slug_b]))
 
 
-DOCS_ROOT = pathlib.Path("docs").resolve()
+def comparison_page_docs_path(slug_a: str, slug_b: str) -> pathlib.Path:
+    canon_a, canon_b = canonical_slug_pair(slug_a, slug_b)
+    return OUTPUT_DIR / f"{canon_a}-vs-{canon_b}.md"
 
 
-def make_image_link(record: dict, filename: str) -> str:
-    if not filename:
-        return ""
-
-    character_dir = pathlib.Path(record["dir"])
-    matches = [p for p in character_dir.rglob(filename) if p.is_file()]
-
-    if not matches:
-        return ""
-
-    matches.sort()
-    candidate = matches[0].resolve()
-
-    try:
-        relative = candidate.relative_to(DOCS_ROOT)
-        return "/" + relative.as_posix()
-    except ValueError:
-        return ""
+def make_image_link(record: dict, filename: str, page_docs_path: pathlib.Path) -> str:
+    return image_url_from_record(record, filename, from_page_docs_path=page_docs_path)
 
 
-def get_reference_links(record: dict, metadata: dict) -> dict:
+def get_reference_links(record: dict, metadata: dict, page_docs_path: pathlib.Path) -> dict:
     refs = metadata.get("reference_files", {})
     return {
-        "body_anchor": make_image_link(record, refs.get("body_anchor", "")),
-        "anatomy_sheet": make_image_link(record, refs.get("anatomy_sheet", "")),
-        "silhouette_sheet": make_image_link(record, refs.get("silhouette_sheet", "")),
+        "body_anchor": make_image_link(record, refs.get("body_anchor", ""), page_docs_path),
+        "anatomy_sheet": make_image_link(record, refs.get("anatomy_sheet", ""), page_docs_path),
+        "silhouette_sheet": make_image_link(record, refs.get("silhouette_sheet", ""), page_docs_path),
     }
 
 
@@ -201,7 +187,6 @@ def build_available_references_section(name_a: str, refs_a: dict, name_b: str, r
         a_link = refs_a.get(key, "")
         b_link = refs_b.get(key, "")
 
-        # If both exist, they are already shown in the dedicated comparison section.
         if a_link and b_link:
             continue
 
@@ -403,7 +388,13 @@ def build_comparison_summary(
     return "## Comparison Summary\n\n" + "\n\n".join(sentences) + "\n\n"
 
 
-def build_markdown(meta_a: dict, meta_b: dict, record_a: dict, record_b: dict) -> str:
+def build_markdown(
+    meta_a: dict,
+    meta_b: dict,
+    record_a: dict,
+    record_b: dict,
+    page_docs_path: pathlib.Path,
+) -> str:
     name_a = meta_a["name"]
     name_b = meta_b["name"]
 
@@ -420,8 +411,8 @@ def build_markdown(meta_a: dict, meta_b: dict, record_a: dict, record_b: dict) -
     taller_name = name_a if height_a > height_b else name_b
     shorter_name = name_b if height_a > height_b else name_a
 
-    refs_a = get_reference_links(record_a, meta_a)
-    refs_b = get_reference_links(record_b, meta_b)
+    refs_a = get_reference_links(record_a, meta_a, page_docs_path)
+    refs_b = get_reference_links(record_b, meta_b, page_docs_path)
 
     difference_badges_section = build_difference_badges(meta_a, meta_b, diff_category)
 
@@ -435,7 +426,6 @@ def build_markdown(meta_a: dict, meta_b: dict, record_a: dict, record_b: dict) -
         imperial_b,
         refs_b.get("silhouette_sheet", ""),
     )
-
 
     comparison_summary_section = build_comparison_summary(
         meta_a,
@@ -480,13 +470,10 @@ def build_markdown(meta_a: dict, meta_b: dict, record_a: dict, record_b: dict) -
 {difference_badges_section}{height_chart_section}{comparison_summary_section}{body_section}{anatomy_section}{silhouette_section}{available_references_section}"""
 
 
-def write_output(slug_a: str, slug_b: str, markdown: str) -> pathlib.Path:
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    canon_a, canon_b = canonical_slug_pair(slug_a, slug_b)
-    filename = f"{canon_a}-vs-{canon_b}.md"
-    output_path = OUTPUT_DIR / filename
-    output_path.write_text(markdown, encoding="utf-8")
-    return output_path
+def write_output(page_docs_path: pathlib.Path, markdown: str) -> pathlib.Path:
+    page_docs_path.parent.mkdir(parents=True, exist_ok=True)
+    page_docs_path.write_text(markdown, encoding="utf-8")
+    return page_docs_path
 
 
 def update_comparison_nav() -> None:
@@ -514,7 +501,7 @@ def update_comparison_nav() -> None:
 
 def parse_args():
     parser = argparse.ArgumentParser(
-        description="Generate a simple metadata-driven height comparison page."
+        description="Generate a metadata-driven height comparison page."
     )
     parser.add_argument("slug_a", help="Slug of the first character")
     parser.add_argument("slug_b", help="Slug of the second character")
@@ -540,13 +527,13 @@ def main():
     meta_a = get_metadata(record_a)
     meta_b = get_metadata(record_b)
 
-    markdown = build_markdown(meta_a, meta_b, record_a, record_b)
-    output_path = write_output(args.slug_a, args.slug_b, markdown)
+    page_docs_path = comparison_page_docs_path(args.slug_a, args.slug_b)
+    markdown = build_markdown(meta_a, meta_b, record_a, record_b, page_docs_path)
+    output_path = write_output(page_docs_path, markdown)
 
     print(f"Generated comparison page: {output_path}")
     if not args.no_nav_update:
         update_comparison_nav()
-
 
 
 if __name__ == "__main__":

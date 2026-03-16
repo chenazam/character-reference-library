@@ -5,8 +5,11 @@ theme:
   name: material
   features:
   - content.code.copy
+  - navigation.sections
+  - navigation.path
+  - navigation.indexes
 markdown_extensions:
-- attr_list
+- attr_lis
 - md_in_html
 - pymdownx.snippets:
     base_path:

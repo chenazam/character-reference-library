@@ -178,16 +178,38 @@
 
 .height-lineup {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 90px repeat(2, minmax(0, 1fr));
   gap: 2rem;
   align-items: end;
   margin: 1rem 0 2rem;
   position: relative;
 }
 
-.height-lineup__baseline {
+.height-lineup__ticks {
+  position: relative;
+  height: 460px;
+}
+
+.height-lineup__tick {
   position: absolute;
   left: 0;
+  right: 0;
+  border-top: 1px solid var(--md-default-fg-color--lighter);
+}
+
+.height-lineup__tick-label {
+  position: absolute;
+  top: -0.7rem;
+  left: 0;
+  font-size: 0.72rem;
+  color: var(--md-default-fg-color--light);
+  background: var(--md-default-bg-color);
+  padding-right: 0.35rem;
+}
+
+.height-lineup__baseline {
+  position: absolute;
+  left: 90px;
   right: 0;
   bottom: 3.2rem;
   height: 2px;
@@ -259,15 +281,17 @@
   );
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
   .height-lineup {
     grid-template-columns: 1fr;
   }
 
+  .height-lineup__ticks,
   .height-lineup__baseline {
     display: none;
   }
 }
+
 .comparison-badges {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

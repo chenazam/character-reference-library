@@ -111,31 +111,28 @@ def build_height_context_section(record: dict, metadata: dict) -> str:
     reference_silhouette = get_reference_silhouette_link()
 
     if silhouette_front and reference_silhouette:
-        reference_figure = (
-            f'<img class="height-lineup__silhouette height-lineup__silhouette--reference" '
-            f'src="{reference_silhouette}" alt="Reference silhouette" '
-            f'style="height: {pct(reference_height):.2f}%;">'
-        )
-    else:
-        reference_figure = (
-            f'<div class="height-lineup__placeholder '
-            f'height-lineup__placeholder--athletic_balanced '
-            f'height-lineup__placeholder--reference" '
-            f'style="height: {pct(reference_height):.2f}%"></div>'
-        )
+    reference_figure = build_silhouette_img(
+        reference_silhouette,
+        "Reference silhouette",
+        pct(reference_height),
+        reference=True,
+    )
+else:
+    reference_figure = build_reference_placeholder(
+        pct(reference_height)
+    )
 
-    if silhouette_front:
-        character_figure = (
-            f'<img class="height-lineup__silhouette" '
-            f'src="{silhouette_front}" alt="{char_name} silhouette front" '
-            f'style="height: {pct(height_cm):.2f}%;">'
-        )
-    else:
-        character_figure = (
-            f'<div class="height-lineup__placeholder '
-            f'height-lineup__placeholder--{archetype}" '
-            f'style="height: {pct(height_cm):.2f}%"></div>'
-        )
+if silhouette_front:
+    character_figure = build_silhouette_img(
+        silhouette_front,
+        f"{char_name} silhouette front",
+        pct(height_cm),
+    )
+else:
+    character_figure = build_character_placeholder(
+        archetype,
+        pct(height_cm),
+    )
 
     return f"""## Height Context
 

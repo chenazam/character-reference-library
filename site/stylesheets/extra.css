@@ -355,45 +355,67 @@
   opacity: 0.3;
 }
 
-.height-lineup__placeholder--slender_tall {
+/* =========================================================
+   V1 fallback silhouette archetypes
+   ========================================================= */
+
+.height-lineup__placeholder--slender_refined {
   width: 78px;
   clip-path: polygon(
     43% 0%,
     57% 0%,
     62% 7%,
     62% 19%,
-    70% 34%,
+    69% 33%,
     66% 100%,
     55% 100%,
     52% 58%,
     48% 58%,
     45% 100%,
     34% 100%,
-    30% 34%,
+    31% 33%,
     38% 19%,
     38% 7%
   );
 }
 
-.height-lineup__placeholder--slender_soft {
-  width: 86px;
+.height-lineup__placeholder--slender_tall {
+  width: 76px;
   clip-path: polygon(
-    42% 0%,
-    58% 0%,
-    64% 8%,
-    64% 20%,
-    72% 34%,
-    69% 48%,
-    66% 100%,
-    56% 100%,
-    53% 60%,
-    47% 60%,
-    44% 100%,
-    34% 100%,
-    31% 48%,
-    28% 34%,
-    36% 20%,
-    36% 8%
+    43% 0%,
+    57% 0%,
+    61% 6%,
+    61% 17%,
+    68% 30%,
+    65% 100%,
+    55% 100%,
+    52% 54%,
+    48% 54%,
+    45% 100%,
+    35% 100%,
+    32% 30%,
+    39% 17%,
+    39% 6%
+  );
+}
+
+.height-lineup__placeholder--compact_light {
+  width: 90px;
+  clip-path: polygon(
+    40% 0%,
+    60% 0%,
+    67% 8%,
+    67% 22%,
+    77% 36%,
+    72% 100%,
+    57% 100%,
+    54% 63%,
+    46% 63%,
+    43% 100%,
+    28% 100%,
+    23% 36%,
+    33% 22%,
+    33% 8%
   );
 }
 
@@ -418,102 +440,82 @@
 }
 
 .height-lineup__placeholder--athletic_leg_dominant {
-  width: 104px;
+  width: 102px;
   clip-path: polygon(
     41% 0%,
     59% 0%,
     66% 8%,
     66% 20%,
-    76% 33%,
-    71% 48%,
+    75% 32%,
+    72% 46%,
     69% 100%,
     57% 100%,
     54% 58%,
     46% 58%,
     43% 100%,
     31% 100%,
-    29% 48%,
-    24% 33%,
+    28% 46%,
+    25% 32%,
     34% 20%,
     34% 8%
   );
 }
 
-.height-lineup__placeholder--compact_athletic {
-  width: 110px;
-  clip-path: polygon(
-    39% 0%,
-    61% 0%,
-    68% 8%,
-    68% 21%,
-    79% 36%,
-    73% 100%,
-    58% 100%,
-    55% 63%,
-    45% 63%,
-    42% 100%,
-    27% 100%,
-    21% 36%,
-    32% 21%,
-    32% 8%
-  );
-}
-
-.height-lineup__placeholder--broad_balanced {
-  width: 120px;
+.height-lineup__placeholder--broad_athletic {
+  width: 116px;
   clip-path: polygon(
     39% 0%,
     61% 0%,
     70% 8%,
     70% 20%,
-    84% 36%,
+    83% 35%,
     75% 100%,
     58% 100%,
-    55% 64%,
-    45% 64%,
+    55% 63%,
+    45% 63%,
     42% 100%,
     25% 100%,
-    16% 36%,
+    17% 35%,
     30% 20%,
     30% 8%
   );
 }
 
 .height-lineup__placeholder--broad_upper_dominant {
-  width: 126px;
+  width: 124px;
   clip-path: polygon(
     39% 0%,
     61% 0%,
     71% 8%,
     71% 19%,
-    87% 34%,
+    87% 33%,
     77% 100%,
     58% 100%,
     55% 65%,
     45% 65%,
     42% 100%,
     23% 100%,
-    13% 34%,
+    13% 33%,
     29% 19%,
     29% 8%
   );
 }
 
-.height-lineup__placeholder--massive_balanced {
-  width: 140px;
+.height-lineup__placeholder--heavy_muscular {
+  width: 136px;
   clip-path: polygon(
     38% 0%,
     62% 0%,
     71% 8%,
     71% 20%,
-    88% 38%,
-    79% 100%,
+    86% 37%,
+    78% 100%,
     59% 100%,
     56% 66%,
     44% 66%,
     41% 100%,
-    21% 100%,
-    12% 38%,
+    22% 100%,
+    14% 37%,
     29% 20%,
     29% 8%
   );
@@ -546,20 +548,63 @@
     58% 0%,
     65% 8%,
     65% 20%,
-    73% 33%,
-    70% 46%,
+    72% 32%,
+    71% 46%,
     68% 100%,
     57% 100%,
     54% 58%,
     46% 58%,
     43% 100%,
     32% 100%,
-    30% 46%,
-    27% 33%,
+    29% 46%,
+    28% 32%,
     35% 20%,
     35% 8%
   );
 }
+
+/* compact lineup mode overrides */
+
+.height-lineup--compact .height-lineup__placeholder--slender_refined {
+  width: 60px;
+}
+
+.height-lineup--compact .height-lineup__placeholder--slender_tall {
+  width: 58px;
+}
+
+.height-lineup--compact .height-lineup__placeholder--compact_light {
+  width: 70px;
+}
+
+.height-lineup--compact .height-lineup__placeholder--athletic_balanced {
+  width: 76px;
+}
+
+.height-lineup--compact .height-lineup__placeholder--athletic_leg_dominant {
+  width: 78px;
+}
+
+.height-lineup--compact .height-lineup__placeholder--broad_athletic {
+  width: 88px;
+}
+
+.height-lineup--compact .height-lineup__placeholder--broad_upper_dominant {
+  width: 96px;
+}
+
+.height-lineup--compact .height-lineup__placeholder--heavy_muscular {
+  width: 104px;
+}
+
+.height-lineup--compact .height-lineup__placeholder--massive_upper_dominant {
+  width: 114px;
+}
+
+.height-lineup--compact .height-lineup__placeholder--soft_curvy {
+  width: 74px;
+}
+
 
 /* =========================================================
    Multi-character lineup mode
@@ -616,45 +661,6 @@
   top: -0.45rem;
 }
 
-.height-lineup--compact .height-lineup__placeholder--slender_tall {
-  width: 60px;
-}
-
-.height-lineup--compact .height-lineup__placeholder--slender_soft {
-  width: 66px;
-}
-
-.height-lineup--compact .height-lineup__placeholder--athletic_balanced {
-  width: 76px;
-}
-
-.height-lineup--compact .height-lineup__placeholder--athletic_leg_dominant {
-  width: 80px;
-}
-
-.height-lineup--compact .height-lineup__placeholder--compact_athletic {
-  width: 84px;
-}
-
-.height-lineup--compact .height-lineup__placeholder--broad_balanced {
-  width: 92px;
-}
-
-.height-lineup--compact .height-lineup__placeholder--broad_upper_dominant {
-  width: 98px;
-}
-
-.height-lineup--compact .height-lineup__placeholder--massive_balanced {
-  width: 108px;
-}
-
-.height-lineup--compact .height-lineup__placeholder--massive_upper_dominant {
-  width: 114px;
-}
-
-.height-lineup--compact .height-lineup__placeholder--soft_curvy {
-  width: 74px;
-}
 
 /* =========================================================
    Single-character height context chart

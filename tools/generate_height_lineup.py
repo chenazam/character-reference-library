@@ -181,6 +181,7 @@ def build_chart(characters: list[dict], page_docs_path: pathlib.Path) -> str:
   </div>
 
   <div class="height-lineup__baseline" aria-hidden="true"></div>
+  <div class="height-lineup__spacer" aria-hidden="true"></div>
 
   {"".join(figures)}
 

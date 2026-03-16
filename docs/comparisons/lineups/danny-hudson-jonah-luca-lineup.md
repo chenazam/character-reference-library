@@ -13,6 +13,7 @@ hide:
   </div>
 
   <div class="height-lineup__baseline" aria-hidden="true"></div>
+  <div class="height-lineup__spacer" aria-hidden="true"></div>
 
   
 <div class="height-lineup__figure">

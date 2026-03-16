@@ -90,6 +90,22 @@ def refresh_existing_comparison_pages():
     return refreshed
 
 
+def build_lineup_entries() -> list[dict]:
+    lineups_dir = COMPARISON_PAGES / "lineups"
+    if not lineups_dir.exists():
+        return []
+
+    pages = sorted(lineups_dir.glob("*.md"), key=lambda p: p.stem)
+
+    entries = []
+    for page in pages:
+        label = page.stem.replace("-", " ").replace("_", " ").title()
+        label = label.replace(" Lineup", "")
+        entries.append({label: f"comparisons/lineups/{page.name}"})
+
+    return entries
+
+
 def build_comparison_entries() -> list[dict]:
     entries = []
 
@@ -99,7 +115,7 @@ def build_comparison_entries() -> list[dict]:
         if page.exists():
             entries.append({title: f"comparisons/{filename}"})
 
-    # Then generated comparison pages
+    # Regular comparison pages
     pages = [
         p for p in COMPARISON_PAGES.glob("*.md")
         if p.name not in STATIC_COMPARISON_PAGES
@@ -109,6 +125,11 @@ def build_comparison_entries() -> list[dict]:
 
     for page in pages:
         entries.append({display_name_for_slug(page.stem): f"comparisons/{page.name}"})
+
+    # Lineups subsection
+    lineup_entries = build_lineup_entries()
+    if lineup_entries:
+        entries.append({"Lineups": lineup_entries})
 
     return entries
 

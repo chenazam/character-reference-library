@@ -35,14 +35,13 @@ def get_nested(d, *keys, default=None):
     return cur if cur is not None else default
 
 
-def get_reference_silhouette_link(page_docs_path: pathlib.Path) -> str:
+def get_reference_silhouette_link() -> str:
     if not REFERENCE_SILHOUETTE.exists():
         return ""
     record = {"dir": str(REFERENCE_SILHOUETTE.parent)}
     return image_url_from_record(
         record,
         REFERENCE_SILHOUETTE.name,
-        from_page_docs_path=page_docs_path,
     )
 
 
@@ -66,14 +65,14 @@ def load_character(slug: str) -> dict:
     raise ValueError(f"Character not found for slug: {slug}")
 
 
-def find_asset(meta: dict, key: str, page_docs_path: pathlib.Path) -> str:
+def find_asset(meta: dict, key: str) -> str:
     refs = meta.get("reference_files", {})
     filename = refs.get(key, "")
     if not filename:
         return ""
 
     record = {"dir": str(meta["_dir"])}
-    return image_url_from_record(record, filename, from_page_docs_path=page_docs_path)
+    return image_url_from_record(record, filename)
 
 
 def build_chart(characters: list[dict], page_docs_path: pathlib.Path) -> str:
@@ -82,7 +81,7 @@ def build_chart(characters: list[dict], page_docs_path: pathlib.Path) -> str:
 
     compact_mode = len(characters) >= COMPACT_THRESHOLD
     chart_height_px = COMPACT_CHART_HEIGHT_PX if compact_mode else NORMAL_CHART_HEIGHT_PX
-    reference_silhouette = get_reference_silhouette_link(page_docs_path)
+    reference_silhouette = get_reference_silhouette_link()
 
     max_height = max(max(c["physical"]["height_cm"] for c in characters), reference_height)
 
@@ -103,7 +102,7 @@ def build_chart(characters: list[dict], page_docs_path: pathlib.Path) -> str:
         )
     
     character_silhouettes = [
-        find_asset(c, "silhouette_front", page_docs_path)
+        find_asset(c, "silhouette_front")
         for c in characters
     ]
     use_real_character_silhouettes = all(bool(s) for s in character_silhouettes)

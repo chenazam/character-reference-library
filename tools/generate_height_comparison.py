@@ -47,7 +47,11 @@ def load_library():
     return build_library_index()
 
 
-def get_reference_silhouette_link(page_docs_path: pathlib.Path) -> str:
+def make_chart_image_link(record: dict, filename: str) -> str:
+    return image_url_from_record(record, filename)
+
+
+def get_reference_silhouette_link() -> str:
     if not REFERENCE_SILHOUETTE.exists():
         return ""
     try:
@@ -55,7 +59,6 @@ def get_reference_silhouette_link(page_docs_path: pathlib.Path) -> str:
         return image_url_from_record(
             record,
             REFERENCE_SILHOUETTE.name,
-            from_page_docs_path=page_docs_path,
         )
     except Exception:
         return ""
@@ -618,7 +621,7 @@ def build_markdown(
     imperial_a = get_nested(meta_a, "physical", "height_imperial", default="")
     imperial_b = get_nested(meta_b, "physical", "height_imperial", default="")
 
-    reference_silhouette = get_reference_silhouette_link(page_docs_path)
+    reference_silhouette = get_reference_silhouette_link()
 
     diff_cm, diff_label = height_difference_summary(height_a, height_b)
     _, pct_label = ratio_summary(height_a, height_b)
@@ -630,6 +633,15 @@ def build_markdown(
     refs_a = get_reference_links(record_a, meta_a, page_docs_path)
     refs_b = get_reference_links(record_b, meta_b, page_docs_path)
 
+    silhouette_front_a = make_chart_image_link(
+        record_a,
+        get_nested(meta_a, "reference_files", "silhouette_front", default=""),
+    )
+    silhouette_front_b = make_chart_image_link(
+        record_b,
+        get_nested(meta_b, "reference_files", "silhouette_front", default=""),
+    )
+
     difference_badges_section = build_difference_badges(meta_a, meta_b, diff_category)
 
     archetype_a = fallback_proportion_archetype(meta_a)
@@ -639,12 +651,12 @@ def build_markdown(
         name_a,
         height_a,
         imperial_a,
-        refs_a.get("silhouette_front", ""),
+        silhouette_front_a,
         archetype_a,
         name_b,
         height_b,
         imperial_b,
-        refs_b.get("silhouette_front", ""),
+        silhouette_front_b,
         archetype_b,
         reference_silhouette,
     )

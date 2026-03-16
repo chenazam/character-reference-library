@@ -66,7 +66,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--a">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--slender" style="height: 81.73%"></div>
+      <div class="height-lineup__placeholder height-lineup__placeholder--slender_soft" style="height: 81.73%"></div>
     </div>
     <div class="height-lineup__label">Lucien</div>
     <div class="height-lineup__meta">170 cm / 5'7"</div>
@@ -74,7 +74,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--b">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--massive" style="height: 100.00%"></div>
+      <div class="height-lineup__placeholder height-lineup__placeholder--massive_upper_dominant" style="height: 100.00%"></div>
     </div>
     <div class="height-lineup__label">Ragnar</div>
     <div class="height-lineup__meta">208 cm / 6'10"</div>

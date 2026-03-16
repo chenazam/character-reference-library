@@ -64,7 +64,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--a">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--broad" style="height: 100.00%"></div>
+      <div class="height-lineup__placeholder height-lineup__placeholder--broad_upper_dominant" style="height: 100.00%"></div>
     </div>
     <div class="height-lineup__label">Hudson</div>
     <div class="height-lineup__meta">188 cm / 6'2</div>
@@ -72,7 +72,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--b">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--athletic" style="height: 89.36%"></div>
+      <div class="height-lineup__placeholder height-lineup__placeholder--compact_athletic" style="height: 89.36%"></div>
     </div>
     <div class="height-lineup__label">Luca</div>
     <div class="height-lineup__meta">168 cm / 5'6</div>

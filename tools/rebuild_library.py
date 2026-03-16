@@ -10,6 +10,7 @@ SCRIPTS = [
     "tools/generate_gallery_snippets.py",
     "tools/generate_character_pages.py",
     "tools/generate_character_index.py",
+    "tools/generate_archetype_pages.py",
     "tools/generate_nav_characters.py",
     "tools/generate_asset_comparison_snippets.py",
     "tools/generate_asset_comparison_page.py",

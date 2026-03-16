@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 import pathlib
 
 
@@ -29,6 +30,7 @@ def ensure_under_docs(path) -> pathlib.Path:
 def docs_relative(path) -> pathlib.Path:
     """
     Convert an absolute docs file path to a path relative to docs/.
+
     Example:
         docs/assets/x.png -> assets/x.png
     """
@@ -39,6 +41,7 @@ def docs_relative(path) -> pathlib.Path:
 def site_root_url(path) -> str:
     """
     Convert a docs file path into a site-root URL.
+
     Example:
         docs/assets/x.png -> /assets/x.png
     """
@@ -49,11 +52,68 @@ def site_root_url(path) -> str:
 def site_output_path(path) -> pathlib.Path:
     """
     Convert a docs file path into the equivalent built-site file path.
+
     Example:
         docs/assets/x.png -> site/assets/x.png
     """
     rel = docs_relative(path)
     return SITE_ROOT / rel
+
+
+def page_build_dir(page_docs_path) -> pathlib.Path:
+    """
+    Return the built output directory for a markdown page under MkDocs.
+
+    Examples:
+        docs/index.md -> site/
+        docs/comparisons/assets.md -> site/comparisons/assets/
+        docs/comparisons/index.md -> site/comparisons/
+    """
+    page_path = ensure_under_docs(page_docs_path)
+
+    if page_path.suffix.lower() != ".md":
+        raise ValueError(f"Expected a markdown page under docs/: {page_path}")
+
+    rel = docs_relative(page_path)
+
+    if page_path.name == "index.md":
+        return SITE_ROOT / rel.parent
+
+    return SITE_ROOT / rel.with_suffix("")
+
+
+def asset_relative_url(asset_docs_path, from_page_docs_path) -> str:
+    """
+    Build a URL to an asset file relative to the final built page location.
+
+    Example:
+        asset_docs_path = docs/assets/library/x.png
+        from_page_docs_path = docs/comparisons/assets.md
+        -> ../../assets/library/x.png
+    """
+    target = site_output_path(asset_docs_path)
+    base = page_build_dir(from_page_docs_path)
+    rel = os.path.relpath(target, base)
+    return pathlib.Path(rel).as_posix()
+
+
+def page_relative_url(target_page_docs_path, from_page_docs_path) -> str:
+    """
+    Build a URL to another markdown page relative to the final built page location.
+
+    Example:
+        target_page_docs_path = docs/characters/lucien.md
+        from_page_docs_path = docs/comparisons/assets.md
+        -> ../../characters/lucien/
+    """
+    target = page_build_dir(target_page_docs_path)
+    base = page_build_dir(from_page_docs_path)
+    rel = pathlib.Path(os.path.relpath(target, base)).as_posix()
+
+    if rel == ".":
+        return "./"
+
+    return rel.rstrip("/") + "/"
 
 
 def find_named_file(root, filename: str) -> pathlib.Path | None:
@@ -69,10 +129,12 @@ def find_named_file(root, filename: str) -> pathlib.Path | None:
     return matches[0]
 
 
-def image_url_from_record(record: dict, filename: str) -> str:
+def image_url_from_record(record: dict, filename: str, from_page_docs_path=None) -> str:
     """
-    Resolve a reference filename from a library record into a site-root URL.
-    Returns "" if not found or not under docs/.
+    Resolve a reference filename from a library record into a URL.
+
+    If from_page_docs_path is omitted, returns a site-root URL.
+    If from_page_docs_path is provided, returns a URL relative to the final built page.
     """
     if not filename:
         return ""
@@ -83,6 +145,8 @@ def image_url_from_record(record: dict, filename: str) -> str:
         return ""
 
     try:
-        return site_root_url(candidate)
+        if from_page_docs_path is None:
+            return site_root_url(candidate)
+        return asset_relative_url(candidate, from_page_docs_path)
     except ValueError:
         return ""

@@ -9,7 +9,7 @@ theme:
   - navigation.path
   - navigation.indexes
 markdown_extensions:
-- attr_lis
+- attr_list
 - md_in_html
 - pymdownx.snippets:
     base_path:

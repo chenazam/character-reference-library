@@ -18,6 +18,7 @@ OUTPUT_ROOT = ROOT / "docs" / "comparisons" / "lineups"
 NORMAL_CHART_HEIGHT_PX = 460
 COMPACT_CHART_HEIGHT_PX = 360
 COMPACT_THRESHOLD = 4  # 4+ actual characters (excluding reference) switches to compact mode
+REFERENCE_SILHOUETTE = ROOT / "docs" / "assets" / "reference" / "reference_male_average_180cm_front_v1.png"
 
 
 def get_nested(d, *keys, default=None):
@@ -27,6 +28,17 @@ def get_nested(d, *keys, default=None):
             return default
         cur = cur.get(k)
     return cur if cur is not None else default
+
+
+def get_reference_silhouette_link(page_docs_path: pathlib.Path) -> str:
+    if not REFERENCE_SILHOUETTE.exists():
+        return ""
+    record = {"dir": str(REFERENCE_SILHOUETTE.parent)}
+    return image_url_from_record(
+        record,
+        REFERENCE_SILHOUETTE.name,
+        from_page_docs_path=page_docs_path,
+    )
 
 
 def load_character(slug: str) -> dict:
@@ -106,6 +118,7 @@ def build_chart(characters: list[dict], page_docs_path: pathlib.Path) -> str:
 
     compact_mode = len(characters) >= COMPACT_THRESHOLD
     chart_height_px = COMPACT_CHART_HEIGHT_PX if compact_mode else NORMAL_CHART_HEIGHT_PX
+    reference_silhouette = get_reference_silhouette_link(page_docs_path)
 
     max_height = max(max(c["physical"]["height_cm"] for c in characters), reference_height)
 
@@ -124,13 +137,28 @@ def build_chart(characters: list[dict], page_docs_path: pathlib.Path) -> str:
             f'<div class="height-lineup__tick" style="bottom: {tick_px(t):.2f}px;">'
             f'<span class="height-lineup__tick-label">{t} cm</span></div>'
         )
+    
+    character_silhouettes = [
+        find_asset(c, "silhouette_front", page_docs_path)
+        for c in characters
+    ]
+    use_real_character_silhouettes = all(bool(s) for s in character_silhouettes)
+    use_real_reference = bool(use_real_character_silhouettes and reference_silhouette)
 
-    reference_figure = (
-        f'<div class="height-lineup__placeholder '
-        f'height-lineup__placeholder--athletic '
-        f'height-lineup__placeholder--reference" '
-        f'style="height: {pct(reference_height):.2f}%"></div>'
-    )
+    if use_real_reference:
+        reference_figure = (
+            f'<img class="height-lineup__silhouette height-lineup__silhouette--reference" '
+            f'src="{reference_silhouette}" '
+            f'alt="Reference silhouette" '
+            f'style="height: {pct(reference_height):.2f}%;">'
+        )
+    else:
+        reference_figure = (
+            f'<div class="height-lineup__placeholder '
+            f'height-lineup__placeholder--athletic '
+            f'height-lineup__placeholder--reference" '
+            f'style="height: {pct(reference_height):.2f}%"></div>'
+        )
 
     figures = [
         f"""
@@ -144,12 +172,12 @@ def build_chart(characters: list[dict], page_docs_path: pathlib.Path) -> str:
 """
     ]
 
-    for c in characters:
+    for c, silhouette in zip(characters, character_silhouettes):
         name = c["name"]
         height = c["physical"]["height_cm"]
         imperial = c["physical"]["height_imperial"]
 
-        silhouette = find_asset(c, "silhouette_front", page_docs_path)
+        silhouette = character_silhouettes[len(figures) - 1]
         archetype = fallback_archetype(c)
 
         if silhouette:

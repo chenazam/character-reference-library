@@ -309,6 +309,10 @@
   opacity: 0.3;
 }
 
+.height-lineup__silhouette--reference {
+  opacity: 0.35;
+}
+
 .height-lineup__placeholder--slender {
   width: 84px;
   clip-path: polygon(

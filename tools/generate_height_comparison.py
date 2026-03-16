@@ -29,6 +29,7 @@ except ModuleNotFoundError:
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 OUTPUT_DIR = ROOT / "docs" / "comparisons"
 NAV_SCRIPT = ROOT / "tools" / "generate_nav_comparisons.py"
+REFERENCE_SILHOUETTE = ROOT / "docs" / "assets" / "reference" / "reference_male_average_180cm_front_v1.png"
 
 COMPARISON_ASSET_TYPES = [
     ("Body Anchor", "body_anchor"),
@@ -39,6 +40,20 @@ COMPARISON_ASSET_TYPES = [
 
 def load_library():
     return build_library_index()
+
+
+def get_reference_silhouette_link(page_docs_path: pathlib.Path) -> str:
+    if not REFERENCE_SILHOUETTE.exists():
+        return ""
+    try:
+        record = {"dir": str(REFERENCE_SILHOUETTE.parent)}
+        return image_url_from_record(
+            record,
+            REFERENCE_SILHOUETTE.name,
+            from_page_docs_path=page_docs_path,
+        )
+    except Exception:
+        return ""
 
 
 def get_character_record(library: dict, slug: str) -> dict:
@@ -259,6 +274,7 @@ def build_height_chart_section(
     imperial_b: str,
     silhouette_front_b: str,
     archetype_b: str,
+    reference_silhouette: str,
 ) -> str:
     max_height = max(height_a, height_b, 180)
     if max_height <= 0:
@@ -279,13 +295,22 @@ def build_height_chart_section(
     b_pct = pct(height_b)
 
     use_silhouettes = bool(silhouette_front_a and silhouette_front_b)
+    use_real_reference = bool(use_silhouettes and reference_silhouette)
 
-    reference_figure = (
-        f'<div class="height-lineup__placeholder '
-        f'height-lineup__placeholder--athletic '
-        f'height-lineup__placeholder--reference" '
-        f'style="height: {ref_pct:.2f}%"></div>'
-    )
+    if use_real_reference:
+        reference_figure = (
+            f'<img class="height-lineup__silhouette height-lineup__silhouette--reference" '
+            f'src="{reference_silhouette}" '
+            f'alt="Reference silhouette" '
+            f'style="height: {ref_pct:.2f}%;">'
+        )
+    else:
+        reference_figure = (
+            f'<div class="height-lineup__placeholder '
+            f'height-lineup__placeholder--athletic '
+            f'height-lineup__placeholder--reference" '
+            f'style="height: {ref_pct:.2f}%"></div>'
+        )
 
     if use_silhouettes:
         figure_a = (
@@ -588,6 +613,8 @@ def build_markdown(
     imperial_a = get_nested(meta_a, "physical", "height_imperial", default="")
     imperial_b = get_nested(meta_b, "physical", "height_imperial", default="")
 
+    reference_silhouette = get_reference_silhouette_link(page_docs_path)
+
     diff_cm, diff_label = height_difference_summary(height_a, height_b)
     _, pct_label = ratio_summary(height_a, height_b)
     diff_category = difference_category(diff_cm)
@@ -614,6 +641,7 @@ def build_markdown(
         imperial_b,
         refs_b.get("silhouette_front", ""),
         archetype_b,
+        reference_silhouette,
     )
 
     comparison_summary_section = build_comparison_summary(

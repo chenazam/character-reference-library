@@ -189,6 +189,10 @@
   position: relative;
 }
 
+.height-lineup--multi {
+  grid-template-columns: 90px repeat(auto-fit, minmax(140px, 1fr));
+}
+
 .height-lineup__ticks {
   position: absolute;
   left: 0;

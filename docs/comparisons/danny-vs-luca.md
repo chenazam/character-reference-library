@@ -52,7 +52,7 @@
 
   <div class="height-lineup__figure height-lineup__figure--a">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder" style="height: 100.00%"></div>
+      <div class="height-lineup__placeholder height-lineup__placeholder--massive" style="height: 100.00%"></div>
     </div>
     <div class="height-lineup__label">Danny</div>
     <div class="height-lineup__meta">193 cm / 6'4</div>
@@ -60,7 +60,7 @@
 
   <div class="height-lineup__figure height-lineup__figure--b">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder" style="height: 87.05%"></div>
+      <div class="height-lineup__placeholder height-lineup__placeholder--athletic" style="height: 87.05%"></div>
     </div>
     <div class="height-lineup__label">Luca</div>
     <div class="height-lineup__meta">168 cm / 5'6</div>

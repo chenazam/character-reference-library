@@ -52,7 +52,7 @@
 
   <div class="height-lineup__figure height-lineup__figure--a">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder" style="height: 100.00%"></div>
+      <div class="height-lineup__placeholder height-lineup__placeholder--broad" style="height: 100.00%"></div>
     </div>
     <div class="height-lineup__label">Blake</div>
     <div class="height-lineup__meta">191 cm / 6'3"</div>
@@ -60,7 +60,7 @@
 
   <div class="height-lineup__figure height-lineup__figure--b">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder" style="height: 89.01%"></div>
+      <div class="height-lineup__placeholder height-lineup__placeholder--athletic" style="height: 89.01%"></div>
     </div>
     <div class="height-lineup__label">Jasper</div>
     <div class="height-lineup__meta">170 cm / 5'7"</div>

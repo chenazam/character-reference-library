@@ -103,7 +103,7 @@ def build_height_context_section(record: dict, metadata: dict) -> str:
     char_name = metadata.get("name", "Character")
     archetype = fallback_proportion_archetype(metadata)
 
-    silhouette_front = make_image_link(
+    silhouette_front = make_root_image_link(
         record,
         get_nested(metadata, "reference_files", "silhouette_front", default=""),
     )

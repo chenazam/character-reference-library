@@ -108,6 +108,7 @@ pipeline_status:
   proportion_grid: not_started
   muscle_tension: not_started
   body_anchor: not_started
+  silhouette_front: not_started
   silhouette_sheet: not_started
   turnaround_sheet: not_started
   expression_sheet: not_started

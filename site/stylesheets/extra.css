@@ -233,11 +233,11 @@
   z-index: 1;
 }
 
-.height-lineup__figure:nth-of-type(1) {
+.height-lineup__figure--a {
   grid-column: 2;
 }
 
-.height-lineup__figure:nth-of-type(2) {
+.height-lineup__figure--b {
   grid-column: 3;
 }
 
@@ -300,6 +300,11 @@
 @media (max-width: 1050px) {
   .height-lineup {
     grid-template-columns: 1fr;
+  }
+
+  .height-lineup__figure--a,
+  .height-lineup__figure--b {
+    grid-column: auto;
   }
 
   .height-lineup__ticks,

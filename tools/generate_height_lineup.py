@@ -15,8 +15,9 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 LIBRARY_ROOT = ROOT / "docs" / "assets" / "library" / "10_CHARACTERS"
 OUTPUT_ROOT = ROOT / "docs" / "comparisons" / "lineups"
 
-COMPACT_STAGE_HEIGHT = 360
-CHART_HEIGHT_PX = COMPACT_STAGE_HEIGHT
+NORMAL_CHART_HEIGHT_PX = 460
+COMPACT_CHART_HEIGHT_PX = 360
+COMPACT_THRESHOLD = 4  # 4+ actual characters (excluding reference) switches to compact mode
 
 
 def get_nested(d, *keys, default=None):
@@ -103,13 +104,16 @@ def build_chart(characters: list[dict], page_docs_path: pathlib.Path) -> str:
     reference_height = 180
     reference_imperial = "5'11\""
 
+    compact_mode = len(characters) >= COMPACT_THRESHOLD
+    chart_height_px = COMPACT_CHART_HEIGHT_PX if compact_mode else NORMAL_CHART_HEIGHT_PX
+
     max_height = max(max(c["physical"]["height_cm"] for c in characters), reference_height)
 
     def pct(h: int) -> float:
         return (h / max_height) * 100
 
     def tick_px(cm: int) -> float:
-        return (cm / max_height) * CHART_HEIGHT_PX
+        return (cm / max_height) * chart_height_px
 
     tick_step = 10
     tick_start = (max_height // tick_step) * tick_step
@@ -174,8 +178,12 @@ def build_chart(characters: list[dict], page_docs_path: pathlib.Path) -> str:
 """
         )
 
+    lineup_classes = "height-lineup height-lineup--multi"
+    if compact_mode:
+        lineup_classes += " height-lineup--compact"
+
     return f"""
-<div class="height-lineup height-lineup--multi height-lineup--compact">
+<div class="{lineup_classes}">
 
   <div class="height-lineup__ticks" aria-hidden="true">
     {"".join(ticks)}

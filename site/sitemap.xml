@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/build-status/</loc>
+         <lastmod>2026-03-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/assets/library/</loc>
          <lastmod>2026-03-16</lastmod>
          <changefreq>daily</changefreq>

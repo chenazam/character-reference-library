@@ -315,7 +315,7 @@ def build_height_chart_section(
     else:
         reference_figure = (
             f'<div class="height-lineup__placeholder '
-            f'height-lineup__placeholder--athletic '
+            f'height-lineup__placeholder--athletic_balanced '
             f'height-lineup__placeholder--reference" '
             f'style="height: {ref_pct:.2f}%"></div>'
         )

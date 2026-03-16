@@ -56,7 +56,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--ref">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--athletic height-lineup__placeholder--reference" style="height: 95.74%"></div>
+      <div class="height-lineup__placeholder height-lineup__placeholder--athletic_balanced height-lineup__placeholder--reference" style="height: 95.74%"></div>
     </div>
     <div class="height-lineup__label">Reference</div>
     <div class="height-lineup__meta">180 cm / 5'11"</div>

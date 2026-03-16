@@ -137,7 +137,7 @@ def build_height_context_section(record: dict, metadata: dict) -> str:
     else:
         reference_figure = (
             f'<div class="height-lineup__placeholder '
-            f'height-lineup__placeholder--athletic '
+            f'height-lineup__placeholder--athletic_balanced '
             f'height-lineup__placeholder--reference" '
             f'style="height: {pct(reference_height):.2f}%"></div>'
         )

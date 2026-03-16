@@ -97,6 +97,7 @@ reference_files:
   signature_outfit_sheet: ''
   silhouette_sheet: ''
   turnaround_sheet: ''
+  silhouette_front: ''
 pipeline_status:
   face_anchor: complete
   hair_sheet: complete
@@ -125,6 +126,7 @@ pipeline_status:
   scene_anchor: not_started
   dynamic_pose: not_started
   final_ucs: not_started
+  silhouette_front: not_started
 notes: 'Blakeâ€™s visual identity is defined by a tall, powerful athletic frame and
   confident relaxed demeanor. His style favors fitted athletic clothing that emphasizes
   his upper-body strength and broad shoulders.

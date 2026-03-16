@@ -26,6 +26,8 @@
 ## Visual Height Chart
 
 <div class="height-lineup">
+  <div class="height-lineup__baseline" aria-hidden="true"></div>
+
   <div class="height-lineup__figure">
     <div class="height-lineup__stage">
       <div class="height-lineup__placeholder" style="height: 100.00%"></div>

@@ -221,9 +221,11 @@ def build_height_chart_section(
     name_a: str,
     height_a: int,
     imperial_a: str,
+    silhouette_a: str,
     name_b: str,
     height_b: int,
     imperial_b: str,
+    silhouette_b: str,
 ) -> str:
     max_height = max(height_a, height_b)
     if max_height <= 0:
@@ -235,23 +237,32 @@ def build_height_chart_section(
     a_pct = pct(height_a)
     b_pct = pct(height_b)
 
+    use_silhouettes = bool(silhouette_a and silhouette_b)
+
+    if use_silhouettes:
+        figure_a = f'<img class="height-lineup__silhouette" src="{silhouette_a}" alt="{name_a} silhouette" style="height: {a_pct:.2f}%;">'
+        figure_b = f'<img class="height-lineup__silhouette" src="{silhouette_b}" alt="{name_b} silhouette" style="height: {b_pct:.2f}%;">'
+    else:
+        figure_a = f'<div class="height-lineup__placeholder" style="height: {a_pct:.2f}%"></div>'
+        figure_b = f'<div class="height-lineup__placeholder" style="height: {b_pct:.2f}%"></div>'
+
     return f"""## Visual Height Chart
 
-<div class="height-chart">
-  <div class="height-chart__figure">
-    <div class="height-chart__bar-wrap">
-      <div class="height-chart__bar" style="height: {a_pct:.2f}%"></div>
+<div class="height-lineup">
+  <div class="height-lineup__figure">
+    <div class="height-lineup__stage">
+      {figure_a}
     </div>
-    <div class="height-chart__label">{name_a}</div>
-    <div class="height-chart__meta">{height_a} cm / {imperial_a}</div>
+    <div class="height-lineup__label">{name_a}</div>
+    <div class="height-lineup__meta">{height_a} cm / {imperial_a}</div>
   </div>
 
-  <div class="height-chart__figure">
-    <div class="height-chart__bar-wrap">
-      <div class="height-chart__bar" style="height: {b_pct:.2f}%"></div>
+  <div class="height-lineup__figure">
+    <div class="height-lineup__stage">
+      {figure_b}
     </div>
-    <div class="height-chart__label">{name_b}</div>
-    <div class="height-chart__meta">{height_b} cm / {imperial_b}</div>
+    <div class="height-lineup__label">{name_b}</div>
+    <div class="height-lineup__meta">{height_b} cm / {imperial_b}</div>
   </div>
 </div>
 
@@ -411,9 +422,16 @@ def build_markdown(meta_a: dict, meta_b: dict, record_a: dict, record_b: dict) -
     difference_badges_section = build_difference_badges(meta_a, meta_b, diff_category)
 
     height_chart_section = build_height_chart_section(
-        name_a, height_a, imperial_a,
-        name_b, height_b, imperial_b
+        name_a,
+        height_a,
+        imperial_a,
+        refs_a.get("silhouette_sheet", ""),
+        name_b,
+        height_b,
+        imperial_b,
+        refs_b.get("silhouette_sheet", ""),
     )
+
 
     comparison_summary_section = build_comparison_summary(
         meta_a,

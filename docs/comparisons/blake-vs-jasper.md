@@ -25,21 +25,21 @@
 
 ## Visual Height Chart
 
-<div class="height-chart">
-  <div class="height-chart__figure">
-    <div class="height-chart__bar-wrap">
-      <div class="height-chart__bar" style="height: 100.00%"></div>
+<div class="height-lineup">
+  <div class="height-lineup__figure">
+    <div class="height-lineup__stage">
+      <div class="height-lineup__placeholder" style="height: 100.00%"></div>
     </div>
-    <div class="height-chart__label">Blake</div>
-    <div class="height-chart__meta">191 cm / 6'3"</div>
+    <div class="height-lineup__label">Blake</div>
+    <div class="height-lineup__meta">191 cm / 6'3"</div>
   </div>
 
-  <div class="height-chart__figure">
-    <div class="height-chart__bar-wrap">
-      <div class="height-chart__bar" style="height: 89.01%"></div>
+  <div class="height-lineup__figure">
+    <div class="height-lineup__stage">
+      <div class="height-lineup__placeholder" style="height: 89.01%"></div>
     </div>
-    <div class="height-chart__label">Jasper</div>
-    <div class="height-chart__meta">170 cm / 5'7"</div>
+    <div class="height-lineup__label">Jasper</div>
+    <div class="height-lineup__meta">170 cm / 5'7"</div>
   </div>
 </div>
 

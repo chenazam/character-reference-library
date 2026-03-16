@@ -25,21 +25,21 @@
 
 ## Visual Height Chart
 
-<div class="height-chart">
-  <div class="height-chart__figure">
-    <div class="height-chart__bar-wrap">
-      <div class="height-chart__bar" style="height: 100.00%"></div>
+<div class="height-lineup">
+  <div class="height-lineup__figure">
+    <div class="height-lineup__stage">
+      <div class="height-lineup__placeholder" style="height: 100.00%"></div>
     </div>
-    <div class="height-chart__label">Danny</div>
-    <div class="height-chart__meta">193 cm / 6'4</div>
+    <div class="height-lineup__label">Danny</div>
+    <div class="height-lineup__meta">193 cm / 6'4</div>
   </div>
 
-  <div class="height-chart__figure">
-    <div class="height-chart__bar-wrap">
-      <div class="height-chart__bar" style="height: 87.05%"></div>
+  <div class="height-lineup__figure">
+    <div class="height-lineup__stage">
+      <div class="height-lineup__placeholder" style="height: 87.05%"></div>
     </div>
-    <div class="height-chart__label">Luca</div>
-    <div class="height-chart__meta">168 cm / 5'6</div>
+    <div class="height-lineup__label">Luca</div>
+    <div class="height-lineup__meta">168 cm / 5'6</div>
   </div>
 </div>
 

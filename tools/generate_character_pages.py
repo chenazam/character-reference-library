@@ -9,9 +9,25 @@ except ModuleNotFoundError:
     from site_paths import site_root_url
 
 try:
-    from tools.height_utils import fallback_proportion_archetype
+    from tools.height_utils import (
+        get_nested,
+        fallback_proportion_archetype,
+        get_reference_silhouette_link,
+        make_root_image_link,
+        build_reference_placeholder,
+        build_character_placeholder,
+        build_silhouette_img,
+    )
 except ModuleNotFoundError:
-    from height_utils import fallback_proportion_archetype
+    from height_utils import (
+        get_nested,
+        fallback_proportion_archetype,
+        get_reference_silhouette_link,
+        make_root_image_link,
+        build_reference_placeholder,
+        build_character_placeholder,
+        build_silhouette_img,
+    )
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 

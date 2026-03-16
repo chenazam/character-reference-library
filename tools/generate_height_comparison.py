@@ -216,10 +216,51 @@ def build_height_chart_section(
     height_b: int,
     imperial_b: str,
     silhouette_front_b: str,
+    archetype_b: str,
 ) -> str:
     max_height = max(height_a, height_b)
     if max_height <= 0:
         return ""
+
+def fallback_archetype(meta: dict) -> str:
+    anchor = get_nested(meta, "physical", "silhouette_anchor", default="")
+    build = get_nested(meta, "physical", "build_category", default="")
+    keywords = get_nested(meta, "physical", "silhouette_keywords", default=[]) or []
+
+    if anchor in {"power_frame"}:
+        return "massive"
+
+    if anchor in {"power_athlete"}:
+        return "broad"
+
+    if anchor in {"runner_silhouette"}:
+        return "athletic"
+
+    if anchor in {"elongated_slender", "glute_slender"}:
+        return "slender"
+
+    if build in {"power_build", "heavy_muscular", "broad_heavy", "thick_set", "large_frame"}:
+        return "massive"
+
+    if build in {"athletic_muscular"}:
+        return "broad"
+
+    if build in {"balanced_athletic", "runner_build", "lower_athletic", "light_athletic"}:
+        return "athletic"
+
+    if build in {"soft_slender", "narrow_slender", "elongated_slender"}:
+        return "slender"
+
+    if "heavy_set" in keywords or "imposing" in keywords:
+        return "massive"
+
+    if "broad" in keywords or "upper_dominant" in keywords:
+        return "broad"
+
+    if "agile" in keywords or "leg_dominant" in keywords:
+        return "athletic"
+
+    return "slender"
 
     chart_height_px = 460
 
@@ -248,8 +289,16 @@ def build_height_chart_section(
             f'style="height: {b_pct:.2f}%;">'
         )
     else:
-        figure_a = f'<div class="height-lineup__placeholder" style="height: {a_pct:.2f}%"></div>'
-        figure_b = f'<div class="height-lineup__placeholder" style="height: {b_pct:.2f}%"></div>'
+        figure_a = (
+            f'<div class="height-lineup__placeholder '
+            f'height-lineup__placeholder--{archetype_a}" '
+            f'style="height: {a_pct:.2f}%"></div>'
+        )
+        figure_b = (
+            f'<div class="height-lineup__placeholder '
+            f'height-lineup__placeholder--{archetype_b}" '
+            f'style="height: {b_pct:.2f}%"></div>'
+        )
 
     tick_step = 10
     tick_start = (max_height // tick_step) * tick_step
@@ -548,15 +597,20 @@ def build_markdown(
 
     difference_badges_section = build_difference_badges(meta_a, meta_b, diff_category)
 
+    archetype_a = fallback_archetype(meta_a)
+    archetype_b = fallback_archetype(meta_b)
+
     height_chart_section = build_height_chart_section(
         name_a,
         height_a,
         imperial_a,
         refs_a.get("silhouette_front", ""),
+        archetype_a,
         name_b,
         height_b,
         imperial_b,
         refs_b.get("silhouette_front", ""),
+        archetype_b,
     )
 
     comparison_summary_section = build_comparison_summary(

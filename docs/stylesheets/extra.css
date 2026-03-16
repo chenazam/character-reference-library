@@ -233,11 +233,11 @@
   z-index: 1;
 }
 
-.height-lineup__figure:nth-of-type(1) {
+.height-lineup__figure--a {
   grid-column: 2;
 }
 
-.height-lineup__figure:nth-of-type(2) {
+.height-lineup__figure--b {
   grid-column: 3;
 }
 

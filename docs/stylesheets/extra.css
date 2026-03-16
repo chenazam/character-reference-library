@@ -189,8 +189,21 @@
   position: relative;
 }
 
+.height-lineup {
+  --lineup-tick-column: 90px;
+  --lineup-stage-height: 460px;
+  --lineup-footer-height: 3.2rem;
+
+  display: grid;
+  grid-template-columns: var(--lineup-tick-column) repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  align-items: end;
+  margin: 1rem 0 2rem;
+  position: relative;
+}
+
 .height-lineup--multi {
-  grid-template-columns: 90px repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: var(--lineup-tick-column) repeat(auto-fit, minmax(140px, 1fr));
 }
 
 .height-lineup__ticks {
@@ -206,7 +219,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  border-top: 1px solid rgba(0,0,0,0.15);
+  border-top: 1px solid var(--md-default-fg-color--lighter);
 }
 
 .height-lineup__tick-label {
@@ -237,12 +250,16 @@
   z-index: 1;
 }
 
-.height-lineup__figure--a {
+.height-lineup__figure--ref {
   grid-column: 2;
 }
 
-.height-lineup__figure--b {
+.height-lineup__figure--a {
   grid-column: 3;
+}
+
+.height-lineup__figure--b {
+  grid-column: 4;
 }
 
 .height-lineup__stage {
@@ -285,87 +302,43 @@
   margin: 0 auto;
 }
 
-/* Slender */
+.height-lineup__placeholder--reference {
+  opacity: 0.3;
+}
+
 .height-lineup__placeholder--slender {
   width: 84px;
   clip-path: polygon(
-    42% 0%,
-    58% 0%,
-    64% 8%,
-    64% 20%,
-    73% 37%,
-    68% 100%,
-    56% 100%,
-    53% 60%,
-    47% 60%,
-    44% 100%,
-    32% 100%,
-    27% 37%,
-    36% 20%,
-    36% 8%
+    42% 0%, 58% 0%, 64% 8%, 64% 20%, 73% 37%, 68% 100%,
+    56% 100%, 53% 60%, 47% 60%, 44% 100%, 32% 100%, 27% 37%,
+    36% 20%, 36% 8%
   );
 }
 
-/* Athletic */
 .height-lineup__placeholder--athletic {
   width: 104px;
   clip-path: polygon(
-    40% 0%,
-    60% 0%,
-    67% 8%,
-    67% 20%,
-    80% 37%,
-    73% 100%,
-    57% 100%,
-    54% 62%,
-    46% 62%,
-    43% 100%,
-    27% 100%,
-    20% 37%,
-    33% 20%,
-    33% 8%
+    40% 0%, 60% 0%, 67% 8%, 67% 20%, 80% 37%, 73% 100%,
+    57% 100%, 54% 62%, 46% 62%, 43% 100%, 27% 100%, 20% 37%,
+    33% 20%, 33% 8%
   );
 }
 
-/* Broad */
 .height-lineup__placeholder--broad {
   width: 124px;
   clip-path: polygon(
-    39% 0%,
-    61% 0%,
-    69% 8%,
-    69% 20%,
-    85% 38%,
-    76% 100%,
-    58% 100%,
-    55% 64%,
-    45% 64%,
-    42% 100%,
-    24% 100%,
-    15% 38%,
-    31% 20%,
-    31% 8%
+    39% 0%, 61% 0%, 69% 8%, 69% 20%, 85% 38%, 76% 100%,
+    58% 100%, 55% 64%, 45% 64%, 42% 100%, 24% 100%, 15% 38%,
+    31% 20%, 31% 8%
   );
 }
 
-/* Massive */
 .height-lineup__placeholder--massive {
   width: 144px;
   clip-path: polygon(
-    38% 0%,
-    62% 0%,
-    70% 8%,
-    70% 20%,
-    88% 39%,
-    79% 100%,
-    59% 100%,
-    56% 66%,
-    44% 66%,
-    41% 100%,
-    21% 100%,
-    12% 39%,
-    30% 20%,
-    30% 8%
+    38% 0%, 62% 0%, 70% 8%, 70% 20%, 88% 39%, 79% 100%,
+    59% 100%, 56% 66%, 44% 66%, 41% 100%, 21% 100%, 12% 39%,
+    30% 20%, 30% 8%
   );
 }
 
@@ -374,16 +347,18 @@
     grid-template-columns: 1fr;
   }
 
-  .height-lineup__figure--a,
-  .height-lineup__figure--b {
-    grid-column: auto;
-  }
-
   .height-lineup__ticks,
   .height-lineup__baseline {
     display: none;
   }
+
+  .height-lineup__figure--ref,
+  .height-lineup__figure--a,
+  .height-lineup__figure--b {
+    grid-column: auto;
+  }
 }
+
 .comparison-badges {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

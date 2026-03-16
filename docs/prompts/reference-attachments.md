@@ -50,6 +50,22 @@ Only attach them if they are explicitly needed.
 
 ---
 
+# Pipeline Stage Index
+
+| Stage | Focus | Key Outputs |
+|------|------|-------------|
+| [Stage 1](#stage-1--face-identity) | Face Identity | Face Anchor |
+| [Stage 2](#stage-2--hair-identity) | Hair Identity | Hair Sheet |
+| [Stage 3](#stage-3--physique-anchoring) | Physique Anchoring | Anatomy Sheet |
+| [Stage 4](#stage-4--structural-anchors) | Structural Anchors | Body Anchor |
+| [Stage 5](#stage-5--identity-extensions) | Identity Extensions | Expressions |
+| [Stage 6](#stage-6--ucs-core-generation) | UCS Core | UCS Core |
+| [Stage 7](#stage-7--style-anchoring) | Style | Signature Outfit |
+| [Stage 8](#stage-8--motion--character-use) | Motion | Poses |
+| [Stage 9](#stage-9--final-ucs) | Final UCS | Final UCS |
+
+---
+
 # Identity Anchor Hierarchy
 
 The following sheets act as identity anchors for the character.
@@ -69,26 +85,43 @@ If identity drift occurs, prioritize earlier anchors.
 
 ## Quick Reference Map
 
-| Step                | Main purpose                    | Best primary references |
-| ------------------- | ------------------------------- | ----------------------- |
-| 4 Body Anchor       | stable body identity            | 1D, 2, 3E               |
-| 8 Turnaround        | canonical full-body reference   | 4, 7, 1D                |
-| 9 Expression Sheet  | expressive facial identity      | 1D, 2                   |
-| 10 Hand Sheet       | hand anatomy/style              | 3E, 4                   |
-| 11 Gallery Image    | early presentation image        | 1D, 2, 7, 8, 9          |
-| 12H UCS Core        | consolidated character identity | 12A–12G                 |
-| 13 Signature Outfit | canonical clothing identity     | 12H, 8                  |
-| 16 Pose Sheet       | clothed body language           | 13, 8                   |
-| 22 Final UCS        | enriched final character sheet  | 12H, 21                 |
+| Step | Main purpose | Best primary references |
+|-----|--------------|------------------------|
+| 1D Face Anchor | canonical facial identity | 1A, 1B, 1C |
+| 2 Hair Sheet | hairstyle structure | 1D |
+| 3E Anatomy Sheet | full anatomical reference | 3A, 3B, 3C |
+| 4 Body Anchor | stable body identity | 1D, 2, 3E |
+| 7A Silhouette Sheet | readable body outline | 4, 3E |
+| 7B Silhouette Front | canonical silhouette asset | 7A, 3E |
+| 8 Turnaround | canonical full-body reference | 4, 7A, 1D |
+| 9 Expression Sheet | expressive facial identity | 1D, 2 |
+| 10 Hand Sheet | hand anatomy/style | 3E, 4 |
+| 11 Gallery Image | early presentation image | 1D, 2, 7A, 8, 9 |
+| 12H UCS Core | consolidated character identity | 12A–12G |
+| 13 Signature Outfit | canonical clothing identity | 12H, 8 |
+| 16 Pose Sheet | clothed body language | 13, 8 |
+| 22 Final UCS | enriched final character sheet | 12H, 21 |
 
 ---
 
 ## Dependency Backbone
 
 ```text
+1A Front Face
+  ↓
+1B 3/4 Face
+  ↓
+1C Profile Face
+  ↓
 1D Face Anchor
   ↓
 2 Hair Sheet
+  ↓
+3A Anatomy Front
+  ↓
+3B Anatomy Side
+  ↓
+3C Anatomy Back
   ↓
 3E Anatomy Sheet
   ↓
@@ -96,6 +129,8 @@ If identity drift occurs, prioritize earlier anchors.
   ├─ 5 Proportion Grid
   ├─ 6 Muscle Tension
   └─ 7A Silhouette Sheet
+        ↓
+        7B Silhouette Front
         ↓
         8 Turnaround
           ├─ 9 Expression Sheet

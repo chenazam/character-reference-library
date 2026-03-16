@@ -104,7 +104,7 @@ def build_height_context_section(record: dict, metadata: dict) -> str:
     archetype = fallback_proportion_archetype(metadata)
 
     silhouette_front = make_root_image_link(
-        record,
+        record["dir"],
         get_nested(metadata, "reference_files", "silhouette_front", default=""),
     )
 

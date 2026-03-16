@@ -49,16 +49,22 @@
 
 In terms of build, **Hudson** reads as **Athletic Muscular**, while **Jonah** reads as **Elongated Slender**.
 
+Their design language also differs strongly: **Hudson** is rooted in a **Athletic Luxury** aesthetic, while **Jonah** is defined more by **Playful Athletic** styling.
+
+Facially, **Hudson** tends toward a **Confident Neutral** expression, while **Jonah** reads as more **Soft Neutral**.
+
+Their emotional presentation also differs: **Hudson** feels **Controlled**, while **Jonah** feels **Open Warm**.
+
 ## Anatomy Sheet Comparison
 
 <div class="comparison-grid comparison-grid-2">
   <div class="comparison-item">
     <div class="comparison-label">Hudson</div>
-    <img src="/assets/library/10_CHARACTERS/HUDSON/02_BODY/anatomy/hudson_anatomy_sheet_v1.png" alt="Hudson Anatomy Sheet Comparison">
+    <img src="../assets/library/10_CHARACTERS/HUDSON/02_BODY/anatomy/hudson_anatomy_sheet_v1.png" alt="Hudson Anatomy Sheet Comparison">
   </div>
   <div class="comparison-item">
     <div class="comparison-label">Jonah</div>
-    <img src="/assets/library/10_CHARACTERS/JONAH/02_BODY/anatomy/jonah_anatomy_sheet_v1.png" alt="Jonah Anatomy Sheet Comparison">
+    <img src="../assets/library/10_CHARACTERS/JONAH/02_BODY/anatomy/jonah_anatomy_sheet_v1.png" alt="Jonah Anatomy Sheet Comparison">
   </div>
 </div>
 
@@ -68,7 +74,7 @@ In terms of build, **Hudson** reads as **Athletic Muscular**, while **Jonah** re
 
   <div class="comparison-item">
     <div class="comparison-label">Jonah — Body Anchor</div>
-    <img src="/assets/library/10_CHARACTERS/JONAH/00_SOURCE_REFERENCES/body/jonah_body_anchor.png" alt="Jonah Body Anchor">
+    <img src="../assets/library/10_CHARACTERS/JONAH/00_SOURCE_REFERENCES/body/jonah_body_anchor.png" alt="Jonah Body Anchor">
   </div>
 </div>
 

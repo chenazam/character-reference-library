@@ -49,7 +49,7 @@ ASSET_TYPES = {
 def populated_asset_keys() -> list[str]:
     keys = []
     for asset_key in ASSET_TYPES:
-        snippet_path = SNIPPETS_ROOT / f"{asset_key}.md"
+        snippet_path = SNIPPETS_ROOT / {asset_key}.md
         if snippet_path.exists():
             keys.append(asset_key)
     return keys

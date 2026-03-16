@@ -49,16 +49,24 @@
 
 In terms of build, **Blake** reads as **Athletic Muscular**, while **Jasper** reads as **Runner Build**.
 
+Their design language also differs strongly: **Blake** is rooted in a **Athletic Luxury** aesthetic, while **Jasper** is defined more by **Exhibitionist** styling.
+
+In motion, **Blake** reads as **Grounded Powerful**, whereas **Jasper** feels more **Restless Quick**.
+
+Facially, **Blake** tends toward a **Confident Neutral** expression, while **Jasper** reads as more **Soft Neutral**.
+
+Their emotional presentation also differs: **Blake** feels **Controlled**, while **Jasper** feels **Open Warm**.
+
 ## Anatomy Sheet Comparison
 
 <div class="comparison-grid comparison-grid-2">
   <div class="comparison-item">
     <div class="comparison-label">Blake</div>
-    <img src="/assets/library/10_CHARACTERS/BLAKE/02_BODY/anatomy/blake_anatomy_sheet_v1.png" alt="Blake Anatomy Sheet Comparison">
+    <img src="../assets/library/10_CHARACTERS/BLAKE/02_BODY/anatomy/blake_anatomy_sheet_v1.png" alt="Blake Anatomy Sheet Comparison">
   </div>
   <div class="comparison-item">
     <div class="comparison-label">Jasper</div>
-    <img src="/assets/library/10_CHARACTERS/JASPER/02_BODY/anatomy/jasper_anatomy_sheet_v1.png" alt="Jasper Anatomy Sheet Comparison">
+    <img src="../assets/library/10_CHARACTERS/JASPER/02_BODY/anatomy/jasper_anatomy_sheet_v1.png" alt="Jasper Anatomy Sheet Comparison">
   </div>
 </div>
 
@@ -68,7 +76,7 @@ In terms of build, **Blake** reads as **Athletic Muscular**, while **Jasper** re
 
   <div class="comparison-item">
     <div class="comparison-label">Blake — Body Anchor</div>
-    <img src="/assets/library/10_CHARACTERS/BLAKE/02_BODY/structure/blake_body_anchor_v1.png" alt="Blake Body Anchor">
+    <img src="../assets/library/10_CHARACTERS/BLAKE/02_BODY/structure/blake_body_anchor_v1.png" alt="Blake Body Anchor">
   </div>
 </div>
 

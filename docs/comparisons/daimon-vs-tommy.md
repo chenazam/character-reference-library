@@ -49,13 +49,23 @@
 
 In terms of build, **Daimon** reads as **Heavy Muscular**, while **Tommy** reads as **Soft Slender**.
 
+Their design language also differs strongly: **Daimon** is rooted in a **Rugged Utilitarian** aesthetic, while **Tommy** is defined more by **Domestic Soft** styling.
+
+In motion, **Daimon** reads as **Grounded Powerful**, whereas **Tommy** feels more **Relaxed Natural**.
+
+Their body language pushes this contrast further: **Daimon** appears **Calm Composed**, while **Tommy** appears **Soft Withdrawn**.
+
+Facially, **Daimon** tends toward a **Serious Controlled** expression, while **Tommy** reads as more **Soft Neutral**.
+
+Their emotional presentation also differs: **Daimon** feels **Intense**, while **Tommy** feels **Open Warm**.
+
 ## Available References
 
 <div class="comparison-grid comparison-grid-2">
 
   <div class="comparison-item">
     <div class="comparison-label">Tommy — Anatomy Sheet</div>
-    <img src="/assets/library/10_CHARACTERS/TOMMY/02_BODY/anatomy/tommy_anatomy_sheet_v1.png" alt="Tommy Anatomy Sheet">
+    <img src="../assets/library/10_CHARACTERS/TOMMY/02_BODY/anatomy/tommy_anatomy_sheet_v1.png" alt="Tommy Anatomy Sheet">
   </div>
 </div>
 

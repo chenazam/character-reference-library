@@ -7,13 +7,14 @@ This v1 generator:
 - renders a markdown page
 - includes optional paired asset comparison sections when matching assets exist
 - includes fallback available-reference sections for unmatched assets
+- updates MkDocs comparison nav automatically after generation
 """
 
 import argparse
 import pathlib
 import subprocess
 import sys
-
+import os
 
 try:
     from tools.library_index import build_library_index
@@ -25,35 +26,11 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 OUTPUT_DIR = ROOT / "docs" / "comparisons"
 NAV_SCRIPT = ROOT / "tools" / "generate_nav_comparisons.py"
 
-
 COMPARISON_ASSET_TYPES = [
     ("Body Anchor", "body_anchor"),
     ("Anatomy Sheet", "anatomy_sheet"),
     ("Silhouette Sheet", "silhouette_sheet"),
 ]
-
-
-def update_comparison_nav() -> None:
-    if not NAV_SCRIPT.exists():
-        print(f"Warning: comparison nav script not found: {NAV_SCRIPT}")
-        return
-
-    result = subprocess.run(
-        [sys.executable, str(NAV_SCRIPT)],
-        capture_output=True,
-        text=True,
-    )
-
-    if result.returncode != 0:
-        print("Warning: failed to update comparison nav.")
-        if result.stdout:
-            print(result.stdout)
-        if result.stderr:
-            print(result.stderr)
-        return
-
-    if result.stdout:
-        print(result.stdout.strip())
 
 
 def load_library():
@@ -142,6 +119,10 @@ def difference_category(diff_cm: int) -> str:
     return "extreme"
 
 
+def canonical_slug_pair(slug_a: str, slug_b: str) -> tuple[str, str]:
+    return tuple(sorted([slug_a, slug_b]))
+
+
 def make_image_link(record: dict, filename: str) -> str:
     if not filename:
         return ""
@@ -156,8 +137,8 @@ def make_image_link(record: dict, filename: str) -> str:
     candidate = matches[0]
 
     try:
-        rel = candidate.relative_to(ROOT / "docs")
-        return f"/{rel.as_posix()}"
+        rel = os.path.relpath(candidate, OUTPUT_DIR)
+        return pathlib.Path(rel).as_posix()
     except ValueError:
         return ""
 
@@ -324,18 +305,34 @@ def build_comparison_summary(
     keywords_a = format_list_as_phrase(get_nested(meta_a, "physical", "silhouette_keywords", default=[]))
     keywords_b = format_list_as_phrase(get_nested(meta_b, "physical", "silhouette_keywords", default=[]))
 
-    height_sentence = (
+    aesthetic_a = prettify_value(get_nested(meta_a, "style", "primary_aesthetic", default=""))
+    aesthetic_b = prettify_value(get_nested(meta_b, "style", "primary_aesthetic", default=""))
+
+    movement_a = prettify_value(get_nested(meta_a, "movement", "movement_style", default=""))
+    movement_b = prettify_value(get_nested(meta_b, "movement", "movement_style", default=""))
+
+    body_language_a = prettify_value(get_nested(meta_a, "movement", "body_language", default=""))
+    body_language_b = prettify_value(get_nested(meta_b, "movement", "body_language", default=""))
+
+    expression_a = prettify_value(get_nested(meta_a, "expression", "default_expression", default=""))
+    expression_b = prettify_value(get_nested(meta_b, "expression", "default_expression", default=""))
+
+    emotional_tone_a = prettify_value(get_nested(meta_a, "expression", "emotional_tone", default=""))
+    emotional_tone_b = prettify_value(get_nested(meta_b, "expression", "emotional_tone", default=""))
+
+    sentences = []
+
+    sentences.append(
         f"**{name_a}** and **{name_b}** show a **{prettify_value(diff_category)} height contrast**, "
         f"with **{taller_name}** standing **{diff_cm} cm** taller than **{shorter_name}**."
     )
 
-    build_sentence = (
-        f"In terms of build, **{name_a}** reads as **{build_a}**, while **{name_b}** reads as **{build_b}**."
-    )
+    if build_a and build_b:
+        sentences.append(
+            f"In terms of build, **{name_a}** reads as **{build_a}**, while **{name_b}** reads as **{build_b}**."
+        )
 
     silhouettes_exist = bool(refs_a.get("silhouette_sheet") and refs_b.get("silhouette_sheet"))
-    silhouette_sentence = ""
-
     if silhouettes_exist and anchor_a and anchor_b:
         silhouette_sentence = (
             f"Their silhouettes reinforce this contrast: "
@@ -344,26 +341,46 @@ def build_comparison_summary(
 
         if emphasis_a:
             silhouette_sentence += f" with **{emphasis_a} emphasis**"
-
         if keywords_a:
             silhouette_sentence += f", characterized by {keywords_a}"
 
         silhouette_sentence += ", while "
 
         silhouette_sentence += f"**{name_b}** presents a **{anchor_b} silhouette"
-
         if emphasis_b:
             silhouette_sentence += f" with **{emphasis_b} emphasis**"
-
         if keywords_b:
             silhouette_sentence += f", characterized by {keywords_b}"
 
         silhouette_sentence += "."
-
-    sentences = [height_sentence, build_sentence]
-
-    if silhouette_sentence:
         sentences.append(silhouette_sentence)
+
+    if aesthetic_a and aesthetic_b and aesthetic_a != aesthetic_b:
+        sentences.append(
+            f"Their design language also differs strongly: **{name_a}** is rooted in a **{aesthetic_a}** aesthetic, "
+            f"while **{name_b}** is defined more by **{aesthetic_b}** styling."
+        )
+
+    if movement_a and movement_b and movement_a != movement_b:
+        sentences.append(
+            f"In motion, **{name_a}** reads as **{movement_a}**, whereas **{name_b}** feels more **{movement_b}**."
+        )
+
+    if body_language_a and body_language_b and body_language_a != body_language_b:
+        sentences.append(
+            f"Their body language pushes this contrast further: **{name_a}** appears **{body_language_a}**, "
+            f"while **{name_b}** appears **{body_language_b}**."
+        )
+
+    if expression_a and expression_b and expression_a != expression_b:
+        sentences.append(
+            f"Facially, **{name_a}** tends toward a **{expression_a}** expression, while **{name_b}** reads as more **{expression_b}**."
+        )
+
+    if emotional_tone_a and emotional_tone_b and emotional_tone_a != emotional_tone_b:
+        sentences.append(
+            f"Their emotional presentation also differs: **{name_a}** feels **{emotional_tone_a}**, while **{name_b}** feels **{emotional_tone_b}**."
+        )
 
     return "## Comparison Summary\n\n" + "\n\n".join(sentences) + "\n\n"
 
@@ -440,10 +457,34 @@ def build_markdown(meta_a: dict, meta_b: dict, record_a: dict, record_b: dict) -
 
 def write_output(slug_a: str, slug_b: str, markdown: str) -> pathlib.Path:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    filename = f"{slug_a}-vs-{slug_b}.md"
+    canon_a, canon_b = canonical_slug_pair(slug_a, slug_b)
+    filename = f"{canon_a}-vs-{canon_b}.md"
     output_path = OUTPUT_DIR / filename
     output_path.write_text(markdown, encoding="utf-8")
     return output_path
+
+
+def update_comparison_nav() -> None:
+    if not NAV_SCRIPT.exists():
+        print(f"Warning: comparison nav script not found: {NAV_SCRIPT}")
+        return
+
+    result = subprocess.run(
+        [sys.executable, str(NAV_SCRIPT)],
+        capture_output=True,
+        text=True,
+    )
+
+    if result.returncode != 0:
+        print("Warning: failed to update comparison nav.")
+        if result.stdout:
+            print(result.stdout)
+        if result.stderr:
+            print(result.stderr)
+        return
+
+    if result.stdout:
+        print(result.stdout.strip())
 
 
 def parse_args():
@@ -459,6 +500,10 @@ def main():
     args = parse_args()
     library = load_library()
 
+    canon_a, canon_b = canonical_slug_pair(args.slug_a, args.slug_b)
+    if (args.slug_a, args.slug_b) != (canon_a, canon_b):
+        print(f"Note: using canonical comparison filename order: {canon_a}-vs-{canon_b}.md")
+
     record_a = get_character_record(library, args.slug_a)
     record_b = get_character_record(library, args.slug_b)
 
@@ -470,7 +515,6 @@ def main():
 
     print(f"Generated comparison page: {output_path}")
     update_comparison_nav()
-
 
 
 if __name__ == "__main__":

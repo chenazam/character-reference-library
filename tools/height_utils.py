@@ -51,18 +51,43 @@ def fallback_proportion_archetype(meta: dict) -> str:
     keywords = {str(k).strip() for k in keywords if str(k).strip()}
 
     
-    if anchor == "power_frame":
-        return "massive_upper_dominant"
+        # --- MUSCULAR / HEAVY TYPES (REFINED) ---
+
+    if build in {"heavy_muscular"}:
+        # Distinguish Danny vs Ragnar
+        if height_cm and height_cm >= 195:
+            return "massive_upper_dominant"   # Ragnar-tier
+        return "heavy_muscular"               # Danny-tier
+
+
+    if build in {"power_build", "broad_heavy", "thick_set", "large_frame"}:
+        # Use silhouette emphasis if available
+        emphasis = meta.get("silhouette_emphasis", "")
+
+        if emphasis == "upper_body":
+            return "massive_upper_dominant"
+
+        return "massive_balanced"
+
+
+    if build in {"athletic_muscular"}:
+        # Split Hudson vs Daimon
+        emphasis = meta.get("silhouette_emphasis", "")
+
+        if emphasis == "upper_body":
+            return "broad_upper_dominant"     # Daimon
+
+        return "broad_athletic"               # Hudson
 
     if anchor == "power_athlete":
         if emphasis in {"balanced", "overall"}:
             return "broad_athletic"
         return "broad_upper_dominant"
     
-    if anchor == "runner_silhouette":
-        if "compact" in keywords:
-            return "compact_light"
-        return "athletic_leg_dominant"
+    if build in {"compact_athletic"}:
+        if emphasis in {"legs", "lower_body"} or "leg_dominant" in keywords:
+            return "athletic_leg_dominant"    # Jasper
+        return "compact_light"                # Luca
     
     if anchor == "elongated_slender":
         if emphasis in {"soft", "lower_curve", "glutes", "hips"}:
@@ -91,34 +116,6 @@ def fallback_proportion_archetype(meta: dict) -> str:
         if emphasis in {"legs", "lower_body"} or "leg_dominant" in keywords:
             return "athletic_leg_dominant"
         return "compact_light"
-
-    # --- MUSCULAR / HEAVY TYPES (REFINED) ---
-
-    if build in {"heavy_muscular"}:
-        # Distinguish Danny vs Ragnar
-        if height_cm and height_cm >= 195:
-            return "massive_upper_dominant"   # Ragnar-tier
-        return "heavy_muscular"               # Danny-tier
-
-
-    if build in {"power_build", "broad_heavy", "thick_set", "large_frame"}:
-        # Use silhouette emphasis if available
-        emphasis = meta.get("silhouette_emphasis", "")
-
-        if emphasis == "upper_body":
-            return "massive_upper_dominant"
-
-        return "massive_balanced"
-
-
-    if build in {"athletic_muscular"}:
-        # Split Hudson vs Daimon
-        emphasis = meta.get("silhouette_emphasis", "")
-
-        if emphasis == "upper_body":
-            return "broad_upper_dominant"     # Daimon
-
-        return "broad_athletic"               # Hudson
 
     if "compact" in keywords and archetype in {"athletic_balanced", "athletic_leg_dominant", None}:
         archetype = "compact_light"

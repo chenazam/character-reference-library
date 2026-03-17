@@ -18,9 +18,9 @@ hide:
 
 ## Common Metadata Signals
 
-**Build categories:** runner_build, light_athletic  
+**Build categories:** runner_build  
 **Anchors:** runner_silhouette  
-**Emphasis:** glutes_thighs, legs
+**Emphasis:** glutes_thighs
 
 
 A smaller, lighter, compact silhouette with grounded proportions and modest width.
@@ -30,5 +30,4 @@ A smaller, lighter, compact silhouette with grounded proportions and modest widt
 | Character | Build | Anchor | Emphasis |
 |---|---|---|---|
 | Jasper | runner_build | runner_silhouette | glutes_thighs |
-| Luca | light_athletic | runner_silhouette | legs |
 

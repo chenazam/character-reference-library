@@ -42,7 +42,7 @@ hide:
 
 <div class="height-lineup__figure">
   <div class="height-lineup__stage">
-    <div class="height-lineup__placeholder height-lineup__placeholder--massive_upper_dominant" style="height: 92.79%"></div>
+    <div class="height-lineup__placeholder height-lineup__placeholder--heavy_muscular" style="height: 92.79%"></div>
   </div>
   <div class="height-lineup__label">Danny</div>
   <div class="height-lineup__meta">193 cm / 6'4</div>
@@ -50,7 +50,7 @@ hide:
 
 <div class="height-lineup__figure">
   <div class="height-lineup__stage">
-    <div class="height-lineup__placeholder height-lineup__placeholder--broad_upper_dominant" style="height: 91.83%"></div>
+    <div class="height-lineup__placeholder height-lineup__placeholder--broad_athletic" style="height: 91.83%"></div>
   </div>
   <div class="height-lineup__label">Blake</div>
   <div class="height-lineup__meta">191 cm / 6'3"</div>
@@ -58,7 +58,7 @@ hide:
 
 <div class="height-lineup__figure">
   <div class="height-lineup__stage">
-    <div class="height-lineup__placeholder height-lineup__placeholder--broad_upper_dominant" style="height: 90.38%"></div>
+    <div class="height-lineup__placeholder height-lineup__placeholder--broad_athletic" style="height: 90.38%"></div>
   </div>
   <div class="height-lineup__label">Hudson</div>
   <div class="height-lineup__meta">188 cm / 6'2</div>
@@ -66,7 +66,7 @@ hide:
 
 <div class="height-lineup__figure">
   <div class="height-lineup__stage">
-    <div class="height-lineup__placeholder height-lineup__placeholder--athletic_leg_dominant" style="height: 85.58%"></div>
+    <div class="height-lineup__placeholder height-lineup__placeholder--slender_tall" style="height: 85.58%"></div>
   </div>
   <div class="height-lineup__label">Jonah</div>
   <div class="height-lineup__meta">178 cm / 5'10"</div>
@@ -106,7 +106,7 @@ hide:
 
 <div class="height-lineup__figure">
   <div class="height-lineup__stage">
-    <div class="height-lineup__placeholder height-lineup__placeholder--compact_light" style="height: 80.77%"></div>
+    <div class="height-lineup__placeholder height-lineup__placeholder--athletic_leg_dominant" style="height: 80.77%"></div>
   </div>
   <div class="height-lineup__label">Luca</div>
   <div class="height-lineup__meta">168 cm / 5'6</div>

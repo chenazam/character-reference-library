@@ -50,7 +50,7 @@
 
   <div class="height-lineup__figure height-lineup__figure--a">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--massive_upper_dominant" style="height: 100.00%"></div>
+      <div class="height-lineup__placeholder height-lineup__placeholder--heavy_muscular" style="height: 100.00%"></div>
     </div>
     <div class="height-lineup__label">Danny</div>
     <div class="height-lineup__meta">193 cm / 6'4</div>

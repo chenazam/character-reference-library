@@ -18,14 +18,16 @@ hide:
 
 ## Common Metadata Signals
 
-**Build categories:** -  
-**Anchors:** -  
-**Emphasis:** -
+**Build categories:** heavy_muscular  
+**Anchors:** power_frame  
+**Emphasis:** upper_body
 
 
 A thick, dense, muscular silhouette with heavy overall mass and reduced taper.
 
 ## Characters
 
-_No characters currently mapped to this archetype._
+| Character | Build | Anchor | Emphasis |
+|---|---|---|---|
+| Danny | heavy_muscular | power_frame | upper_body |
 

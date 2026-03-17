@@ -39,6 +39,32 @@ ARCHETYPE_DESCRIPTIONS = {
 }
 
 
+def parse_bool(value, default=True):
+    if value is None:
+        return default
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, str):
+        normalized = value.strip().lower()
+        if normalized in {"true", "yes", "1", "on"}:
+            return True
+        if normalized in {"false", "no", "0", "off"}:
+            return False
+    if isinstance(value, (int, float)):
+        return bool(value)
+    return default
+
+
+def should_list_in_public_archetype_docs(metadata: dict) -> bool:
+    site_visibility = metadata.get("site_visibility", {})
+
+    if not isinstance(site_visibility, dict):
+        return True
+
+    raw_value = site_visibility.get("list_in_character_index", True)
+    return parse_bool(raw_value, True)
+
+
 def load_all_characters() -> list[dict]:
     characters = []
 
@@ -253,10 +279,15 @@ def main():
     characters = load_all_characters()
 
     groups = {archetype: [] for archetype in SILHOUETTE_ARCHETYPES}
-    
+    groups_all = {archetype: [] for archetype in SILHOUETTE_ARCHETYPES}
+    groups_public = {archetype: [] for archetype in SILHOUETTE_ARCHETYPES}
+
     for metadata in characters:
         archetype = fallback_proportion_archetype(metadata)
-        groups.setdefault(archetype, []).append(metadata)
+        groups_all.setdefault(archetype, []).append(metadata)
+    
+        if should_list_in_public_archetype_docs(metadata):
+            groups_public.setdefault(archetype, []).append(metadata)
     
     for archetype in SILHOUETTE_ARCHETYPES:
         page = build_archetype_page(archetype, groups.get(archetype, []))
@@ -264,7 +295,7 @@ def main():
         out_file.write_text(page, encoding="utf-8")
         print(f"Generated archetype page: {out_file}")
 
-    index_page = build_index_page(groups)
+    index_page = build_index_page(groups_public)
     index_file = OUTPUT_ROOT / "index.md"
     index_file.write_text(index_page, encoding="utf-8")
     print(f"Generated archetype index: {index_file}")

@@ -137,18 +137,15 @@ def build_index_card(archetype: str, characters: list[dict]) -> str:
     preview = build_archetype_preview(archetype)
 
     return f"""<div class="archetype-index-card">
+  <h2><a href="{archetype}.md">{title}</a></h2>
 
-## [{title}]({archetype}.md)
+  {preview}
 
-{preview}
+  <p>{description}</p>
 
-{description}
-
-**Characters:** {count}
-
+  <p><strong>Characters:</strong> {count}</p>
 </div>
 """
-
 
 def build_index_page(groups: dict[str, list[dict]]) -> str:
     lines = [

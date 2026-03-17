@@ -57,7 +57,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--ref">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--athletic_balanced height-lineup__placeholder--reference" style="height: 94.24%"></div>
+      <img class="height-lineup__silhouette height-lineup__silhouette--reference" src="/assets/reference/reference_male_average_180cm_front_v1.png" alt="Reference silhouette" style="height: 94.24%;">
     </div>
     <div class="height-lineup__label">Reference</div>
     <div class="height-lineup__meta">180 cm / 5'11"</div>
@@ -65,7 +65,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--a">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--broad_upper_dominant height-lineup__placeholder--elongated" style="height: 100.00%"></div>
+      <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/BLAKE/02_BODY/structure/blake_silhouette_front_v1.png" alt="Blake silhouette front" style="height: 100.00%;">
     </div>
     <div class="height-lineup__label">Blake</div>
     <div class="height-lineup__meta">191 cm / 6'3"</div>
@@ -73,7 +73,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--b">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--athletic_leg_dominant height-lineup__placeholder--compact height-lineup__placeholder--glute_emphasis" style="height: 89.01%"></div>
+      <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/JASPER/02_BODY/structure/jasper_silhouette_front_v1.png" alt="Jasper silhouette front" style="height: 89.01%;">
     </div>
     <div class="height-lineup__label">Jasper</div>
     <div class="height-lineup__meta">170 cm / 5'7"</div>
@@ -86,6 +86,8 @@ hide:
 
 In terms of build, **Blake** reads as **Athletic Muscular**, while **Jasper** reads as **Runner Build**.
 
+Their silhouettes reinforce this contrast: **Blake** has a **Power Athlete silhouette with **Upper Body emphasis**, characterized by tall, broad, muscular, and imposing, while **Jasper** presents a **Runner Silhouette silhouette with **Glutes Thighs emphasis**, characterized by compact, agile, leg dominant, and glute emphasis.
+
 Their design language also differs strongly: **Blake** is rooted in a **Athletic Luxury** aesthetic, while **Jasper** is defined more by **Exhibitionist** styling.
 
 In motion, **Blake** reads as **Grounded Powerful**, whereas **Jasper** feels more **Restless Quick**.
@@ -93,6 +95,19 @@ In motion, **Blake** reads as **Grounded Powerful**, whereas **Jasper** feels mo
 Facially, **Blake** tends toward a **Confident Neutral** expression, while **Jasper** reads as more **Soft Neutral**.
 
 Their emotional presentation also differs: **Blake** feels **Controlled**, while **Jasper** feels **Open Warm**.
+
+## Body Anchor Comparison
+
+<div class="comparison-grid comparison-grid-2">
+  <div class="comparison-item">
+    <div class="comparison-label">Blake</div>
+    <img src="../../assets/library/10_CHARACTERS/BLAKE/02_BODY/structure/blake_body_anchor_v1.png" alt="Blake Body Anchor Comparison">
+  </div>
+  <div class="comparison-item">
+    <div class="comparison-label">Jasper</div>
+    <img src="../../assets/library/10_CHARACTERS/JASPER/02_BODY/structure/jasper_body_anchor_v1.png" alt="Jasper Body Anchor Comparison">
+  </div>
+</div>
 
 ## Anatomy Sheet Comparison
 
@@ -107,17 +122,16 @@ Their emotional presentation also differs: **Blake** feels **Controlled**, while
   </div>
 </div>
 
-## Available References
+## Silhouette Sheet Comparison
 
 <div class="comparison-grid comparison-grid-2">
-
   <div class="comparison-item">
-    <div class="comparison-label">Blake — Body Anchor</div>
-    <img src="../../assets/library/10_CHARACTERS/BLAKE/02_BODY/structure/blake_body_anchor_v1.png" alt="Blake Body Anchor">
+    <div class="comparison-label">Blake</div>
+    <img src="../../assets/library/10_CHARACTERS/BLAKE/02_BODY/structure/blake_silhouette_sheet_v1.png" alt="Blake Silhouette Sheet Comparison">
   </div>
   <div class="comparison-item">
-    <div class="comparison-label">Blake — Silhouette Sheet</div>
-    <img src="../../assets/library/10_CHARACTERS/BLAKE/02_BODY/structure/blake_silhouette_sheet_v1.png" alt="Blake Silhouette Sheet">
+    <div class="comparison-label">Jasper</div>
+    <img src="../../assets/library/10_CHARACTERS/JASPER/02_BODY/structure/jasper_silhouette_sheet_v1.png" alt="Jasper Silhouette Sheet Comparison">
   </div>
 </div>
 

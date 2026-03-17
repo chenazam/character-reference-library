@@ -343,6 +343,30 @@
   opacity: 0.35;
 }
 
+/* =========================
+   SILHOUETTE MODIFIERS
+   ========================= */
+
+/* Taller / elongated */
+.silhouette--elongated {
+  transform: scaleY(1.08);
+}
+
+/* Shorter / compact */
+.silhouette--compact {
+  transform: scaleY(0.92);
+}
+
+/* Glute emphasis (subtle lower widening) */
+.silhouette--glute_emphasis {
+  border-radius: 45% 45% 55% 55% / 40% 40% 65% 65%;
+}
+
+/* Dense / thick mass */
+.silhouette--dense {
+  transform: scaleX(1.08);
+}
+
 .height-lineup__placeholder {
   max-width: 100%;
   opacity: 0.55;
@@ -561,6 +585,26 @@
     36% 20%,
     36% 8%
   );
+}
+
+/* Taller / elongated */
+.height-lineup__placeholder--elongated {
+  transform: scaleY(1.08);
+}
+
+/* Shorter / compact */
+.height-lineup__placeholder--compact {
+  transform: scaleY(0.92);
+}
+
+/* Glute emphasis */
+.height-lineup__placeholder--glute_emphasis {
+  border-radius: 45% 45% 55% 55% / 40% 40% 65% 65%;
+}
+
+/* Dense / thicker mass */
+.height-lineup__placeholder--dense {
+  transform: scaleX(1.08);
 }
 
 /* compact lineup mode overrides */

@@ -373,6 +373,11 @@
   background: var(--md-default-fg-color--light);
   display: block;
   margin: 0 auto;
+
+  --sil-scale-x: 1;
+  --sil-scale-y: 1;
+  transform: scaleX(var(--sil-scale-x)) scaleY(var(--sil-scale-y));
+  transform-origin: center bottom;
 }
 
 .height-lineup__placeholder--reference {
@@ -589,12 +594,12 @@
 
 /* Taller / elongated */
 .height-lineup__placeholder--elongated {
-  transform: scaleY(1.08);
+  --sil-scale-y: 1.08;
 }
 
 /* Shorter / compact */
 .height-lineup__placeholder--compact {
-  transform: scaleY(0.92);
+  --sil-scale-y: 0.92;
 }
 
 /* Glute emphasis */
@@ -604,7 +609,7 @@
 
 /* Dense / thicker mass */
 .height-lineup__placeholder--dense {
-  transform: scaleX(1.08);
+  --sil-scale-y: 1.08;
 }
 
 /* compact lineup mode overrides */

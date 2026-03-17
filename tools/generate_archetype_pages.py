@@ -129,12 +129,29 @@ def build_archetype_page(archetype: str, characters: list[dict]) -> str:
     return "\n".join(lines)
 
 
+def build_index_character_links(characters: list[dict]) -> str:
+    if not characters:
+        return "<p><em>No characters currently mapped to this archetype.</em></p>"
+
+    links = []
+    for c in sorted(characters, key=lambda x: x.get("name", "")):
+        name = c.get("name", c.get("slug", "Unknown"))
+        slug = c.get("slug", "")
+        if slug:
+            links.append(f'<a href="../characters/{slug}.md">{name}</a>')
+        else:
+            links.append(name)
+
+    return "<p><strong>Characters:</strong> " + ", ".join(links) + "</p>"
+
+
 def build_index_card(archetype: str, characters: list[dict]) -> str:
     title = prettify_archetype(archetype)
     description = ARCHETYPE_DESCRIPTIONS.get(archetype, "")
     count = len(characters)
 
     preview = build_archetype_preview(archetype)
+    character_links = build_index_character_links(characters)
 
     return f"""<div class="archetype-index-card">
   <h2><a href="{archetype}.md">{title}</a></h2>
@@ -143,9 +160,12 @@ def build_index_card(archetype: str, characters: list[dict]) -> str:
 
   <p>{description}</p>
 
-  <p><strong>Characters:</strong> {count}</p>
+  <p><strong>Count:</strong> {count}</p>
+
+  {character_links}
 </div>
 """
+
 
 def build_index_page(groups: dict[str, list[dict]]) -> str:
     lines = [

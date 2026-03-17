@@ -148,7 +148,7 @@ def build_chart(characters: list[dict]) -> str:
         imperial = c["physical"]["height_imperial"]
         archetype = fallback_proportion_archetype(c)
         
-        print(f"[archetype] {c['name']} → {archetype}")
+        print(f"[archetype] {c['name']} -> {archetype}")
 
         if silhouette:
             body = (

@@ -109,7 +109,10 @@ def build_chart(characters: list[dict]) -> str:
         )
 
     character_silhouettes = [
-        find_asset(c, "silhouette_front")
+        make_root_image_link(
+            c["_dir"],
+            get_nested(c, "reference_files", "silhouette_front", default="")
+        )
         for c in characters
     ]
     use_real_character_silhouettes = all(bool(s) for s in character_silhouettes)

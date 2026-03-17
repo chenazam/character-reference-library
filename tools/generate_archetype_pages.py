@@ -61,6 +61,27 @@ def prettify_archetype(name: str) -> str:
     return name.replace("_", " ").title()
 
 
+def build_character_table(archetype: str, characters: list[dict]) -> str:
+    if not characters:
+        return "_No characters currently mapped to this archetype._\n"
+
+    lines = [
+        "| Character | Build | Anchor | Emphasis |",
+        "|---|---|---|---|",
+    ]
+
+    for c in sorted(characters, key=lambda x: x.get("name", "")):
+        name = c.get("name", c.get("slug", "Unknown"))
+
+        build = get_nested(c, "physical", "build_category", default="-")
+        anchor = get_nested(c, "physical", "silhouette_anchor", default="-")
+        emphasis = get_nested(c, "physical", "silhouette_emphasis", default="-")
+
+        lines.append(f"| {name} | {build} | {anchor} | {emphasis} |")
+
+    return "\n".join(lines) + "\n"
+
+
 def build_archetype_preview(archetype: str) -> str:
     placeholder = build_character_placeholder(archetype, 100.0)
     return f"""<div class="height-lineup height-lineup--archetype-doc">
@@ -74,7 +95,7 @@ def build_archetype_preview(archetype: str) -> str:
 """
 
 
-def build_archetype_page(archetype: str, character_names: list[str]) -> str:
+def build_archetype_page(archetype: str, characters: list[dict]) -> str:
     title = prettify_archetype(archetype)
     description = ARCHETYPE_DESCRIPTIONS.get(archetype, "")
 
@@ -99,12 +120,8 @@ def build_archetype_page(archetype: str, character_names: list[str]) -> str:
         "## Characters",
         "",
     ])
-
-    if character_names:
-        for name in sorted(character_names):
-            lines.append(f"- {name}")
-    else:
-        lines.append("_No characters currently mapped to this archetype._")
+    
+    lines.append(build_character_table(archetype, characters))
 
     lines.append("")
     return "\n".join(lines)
@@ -140,12 +157,11 @@ def main():
     characters = load_all_characters()
 
     groups = {archetype: [] for archetype in SILHOUETTE_ARCHETYPES}
-
+    
     for metadata in characters:
-        name = metadata.get("name", metadata.get("slug", "Unknown"))
         archetype = fallback_proportion_archetype(metadata)
-        groups.setdefault(archetype, []).append(name)
-
+        groups.setdefault(archetype, []).append(metadata)
+    
     for archetype in SILHOUETTE_ARCHETYPES:
         page = build_archetype_page(archetype, groups.get(archetype, []))
         out_file = OUTPUT_ROOT / f"{archetype}.md"

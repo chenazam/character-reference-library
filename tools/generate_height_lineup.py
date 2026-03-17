@@ -64,6 +64,24 @@ def load_character(slug: str) -> dict:
     raise ValueError(f"Character not found for slug: {slug}")
 
 
+def find_asset(meta: dict, key: str) -> str:
+    refs = meta.get("reference_files", {})
+    filename = refs.get(key, "")
+    if not filename:
+        return ""
+
+    character_dir = pathlib.Path(meta["_dir"])
+    matches = [p for p in character_dir.rglob(filename) if p.is_file()]
+    if not matches:
+        return ""
+
+    matches.sort()
+    try:
+        return site_root_url(matches[0])
+    except Exception:
+        return ""
+
+
 def build_chart(characters: list[dict]) -> str:
     reference_height = 180
     reference_imperial = "5'11\""

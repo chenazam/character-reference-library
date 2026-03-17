@@ -57,7 +57,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--ref">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--athletic_balanced height-lineup__placeholder--reference" style="height: 93.26%"></div>
+      <img class="height-lineup__silhouette height-lineup__silhouette--reference" src="/assets/reference/reference_male_average_180cm_front_v1.png" alt="Reference silhouette" style="height: 93.26%;">
     </div>
     <div class="height-lineup__label">Reference</div>
     <div class="height-lineup__meta">180 cm / 5'11"</div>
@@ -65,7 +65,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--a">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--heavy_muscular height-lineup__placeholder--elongated height-lineup__placeholder--dense" style="height: 100.00%"></div>
+      <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/DANNY/02_BODY/structure/danny_silhouette_front_v1.png" alt="Danny silhouette front" style="height: 100.00%;">
     </div>
     <div class="height-lineup__label">Danny</div>
     <div class="height-lineup__meta">193 cm / 6'4</div>
@@ -73,7 +73,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--b">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--broad_athletic height-lineup__placeholder--elongated" style="height: 97.41%"></div>
+      <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/HUDSON/02_BODY/structure/hudson_silhouette_front_v1.png" alt="Hudson silhouette front" style="height: 97.41%;">
     </div>
     <div class="height-lineup__label">Hudson</div>
     <div class="height-lineup__meta">188 cm / 6'2</div>
@@ -86,6 +86,8 @@ hide:
 
 In terms of build, **Danny** reads as **Heavy Muscular**, while **Hudson** reads as **Athletic Muscular**.
 
+Their silhouettes reinforce this contrast: **Danny** has a **Power Frame silhouette with **Upper Body emphasis**, characterized by imposing, broad, and heavy set, while **Hudson** presents a **Power Athlete silhouette with **Shoulders emphasis**, characterized by tall, broad, and agile.
+
 Their design language also differs strongly: **Danny** is rooted in a **Rugged Utilitarian** aesthetic, while **Hudson** is defined more by **Athletic Luxury** styling.
 
 In motion, **Danny** reads as **Grounded Powerful**, whereas **Hudson** feels more **Relaxed Natural**.
@@ -95,6 +97,19 @@ Their body language pushes this contrast further: **Danny** appears **Calm Compo
 Facially, **Danny** tends toward a **Soft Neutral** expression, while **Hudson** reads as more **Confident Neutral**.
 
 Their emotional presentation also differs: **Danny** feels **Open Warm**, while **Hudson** feels **Controlled**.
+
+## Body Anchor Comparison
+
+<div class="comparison-grid comparison-grid-2">
+  <div class="comparison-item">
+    <div class="comparison-label">Danny</div>
+    <img src="../../assets/library/10_CHARACTERS/DANNY/02_BODY/structure/danny_body_anchor_v1.png" alt="Danny Body Anchor Comparison">
+  </div>
+  <div class="comparison-item">
+    <div class="comparison-label">Hudson</div>
+    <img src="../../assets/library/10_CHARACTERS/HUDSON/02_BODY/structure/hudson_body_anchor_v1.png" alt="Hudson Body Anchor Comparison">
+  </div>
+</div>
 
 ## Anatomy Sheet Comparison
 
@@ -109,17 +124,16 @@ Their emotional presentation also differs: **Danny** feels **Open Warm**, while 
   </div>
 </div>
 
-## Available References
+## Silhouette Sheet Comparison
 
 <div class="comparison-grid comparison-grid-2">
-
   <div class="comparison-item">
-    <div class="comparison-label">Danny — Body Anchor</div>
-    <img src="../../assets/library/10_CHARACTERS/DANNY/02_BODY/structure/danny_body_anchor_v1.png" alt="Danny Body Anchor">
+    <div class="comparison-label">Danny</div>
+    <img src="../../assets/library/10_CHARACTERS/DANNY/02_BODY/structure/danny_silhouette_sheet_v1.png" alt="Danny Silhouette Sheet Comparison">
   </div>
   <div class="comparison-item">
-    <div class="comparison-label">Danny — Silhouette Sheet</div>
-    <img src="../../assets/library/10_CHARACTERS/DANNY/02_BODY/structure/danny_silhouette_sheet_v1.png" alt="Danny Silhouette Sheet">
+    <div class="comparison-label">Hudson</div>
+    <img src="../../assets/library/10_CHARACTERS/HUDSON/02_BODY/structure/hudson_silhouette_sheet_v1.png" alt="Hudson Silhouette Sheet Comparison">
   </div>
 </div>
 

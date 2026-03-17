@@ -106,3 +106,17 @@ Their emotional presentation also differs: **Hudson** feels **Controlled**, whil
   </div>
 </div>
 
+## Available References
+
+<div class="comparison-grid comparison-grid-2">
+
+  <div class="comparison-item">
+    <div class="comparison-label">Hudson — Body Anchor</div>
+    <img src="../../assets/library/10_CHARACTERS/HUDSON/02_BODY/structure/hudson_body_anchor_v1.png" alt="Hudson Body Anchor">
+  </div>
+  <div class="comparison-item">
+    <div class="comparison-label">Hudson — Silhouette Sheet</div>
+    <img src="../../assets/library/10_CHARACTERS/HUDSON/02_BODY/structure/hudson_silhouette_sheet_v1.png" alt="Hudson Silhouette Sheet">
+  </div>
+</div>
+

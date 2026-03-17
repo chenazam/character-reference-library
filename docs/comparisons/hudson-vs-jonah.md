@@ -91,6 +91,19 @@ Facially, **Hudson** tends toward a **Confident Neutral** expression, while **Jo
 
 Their emotional presentation also differs: **Hudson** feels **Controlled**, while **Jonah** feels **Open Warm**.
 
+## Body Anchor Comparison
+
+<div class="comparison-grid comparison-grid-2">
+  <div class="comparison-item">
+    <div class="comparison-label">Hudson</div>
+    <img src="../../assets/library/10_CHARACTERS/HUDSON/02_BODY/structure/hudson_body_anchor_v1.png" alt="Hudson Body Anchor Comparison">
+  </div>
+  <div class="comparison-item">
+    <div class="comparison-label">Jonah</div>
+    <img src="../../assets/library/10_CHARACTERS/JONAH/00_SOURCE_REFERENCES/body/jonah_body_anchor.png" alt="Jonah Body Anchor Comparison">
+  </div>
+</div>
+
 ## Anatomy Sheet Comparison
 
 <div class="comparison-grid comparison-grid-2">
@@ -109,8 +122,8 @@ Their emotional presentation also differs: **Hudson** feels **Controlled**, whil
 <div class="comparison-grid comparison-grid-2">
 
   <div class="comparison-item">
-    <div class="comparison-label">Jonah — Body Anchor</div>
-    <img src="../../assets/library/10_CHARACTERS/JONAH/00_SOURCE_REFERENCES/body/jonah_body_anchor.png" alt="Jonah Body Anchor">
+    <div class="comparison-label">Hudson — Silhouette Sheet</div>
+    <img src="../../assets/library/10_CHARACTERS/HUDSON/02_BODY/structure/hudson_silhouette_sheet_v1.png" alt="Hudson Silhouette Sheet">
   </div>
 </div>
 

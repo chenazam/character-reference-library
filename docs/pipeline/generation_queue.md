@@ -16,7 +16,7 @@ Reference assets that still need to be generated.
 
 ## DENNIS
 
-- next: silhouette_sheet
+- next: ucs_core
 
 ## HUDSON
 
@@ -36,7 +36,7 @@ Reference assets that still need to be generated.
 
 ## LUCIEN
 
-- next: silhouette_sheet
+- next: ucs_core
 
 ## RAGNAR
 

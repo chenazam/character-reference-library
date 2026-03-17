@@ -58,7 +58,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--ref">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--athletic_balanced height-lineup__placeholder--reference" style="height: 86.54%"></div>
+      <img class="height-lineup__silhouette height-lineup__silhouette--reference" src="/assets/reference/reference_male_average_180cm_front_v1.png" alt="Reference silhouette" style="height: 86.54%;">
     </div>
     <div class="height-lineup__label">Reference</div>
     <div class="height-lineup__meta">180 cm / 5'11"</div>
@@ -66,7 +66,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--a">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--slender_refined height-lineup__placeholder--compact height-lineup__placeholder--glute_emphasis" style="height: 81.73%"></div>
+      <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/LUCIEN/02_BODY/structure/lucien_silhouette_front_v1.png" alt="Lucien silhouette front" style="height: 81.73%;">
     </div>
     <div class="height-lineup__label">Lucien</div>
     <div class="height-lineup__meta">170 cm / 5'7"</div>
@@ -74,7 +74,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--b">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--massive_upper_dominant height-lineup__placeholder--elongated height-lineup__placeholder--dense" style="height: 100.00%"></div>
+      <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/RAGNAR/02_BODY/structure/ragnar_silhouette_front_v1.png" alt="Ragnar silhouette front" style="height: 100.00%;">
     </div>
     <div class="height-lineup__label">Ragnar</div>
     <div class="height-lineup__meta">208 cm / 6'10"</div>
@@ -86,6 +86,8 @@ hide:
 **Lucien** and **Ragnar** show a **Extreme height contrast**, with **Ragnar** standing **38 cm** taller than **Lucien**.
 
 In terms of build, **Lucien** reads as **Narrow Slender**, while **Ragnar** reads as **Heavy Muscular**.
+
+Their silhouettes reinforce this contrast: **Lucien** has a **Glute Slender silhouette with **Glutes emphasis**, characterized by slender, leg dominant, and glute emphasis, while **Ragnar** presents a **Power Frame silhouette with **Upper Body emphasis**, characterized by tall, broad, imposing, massive, and upper dominant.
 
 Their design language also differs strongly: **Lucien** is rooted in a **Occult** aesthetic, while **Ragnar** is defined more by **Rugged Utilitarian** styling.
 
@@ -119,13 +121,16 @@ Facially, **Lucien** tends toward a **Calm Reserved** expression, while **Ragnar
   </div>
 </div>
 
-## Available References
+## Silhouette Sheet Comparison
 
 <div class="comparison-grid comparison-grid-2">
-
   <div class="comparison-item">
-    <div class="comparison-label">Ragnar — Silhouette Sheet</div>
-    <img src="../../assets/library/10_CHARACTERS/RAGNAR/02_BODY/structure/ragnar_silhouette_sheet_v1.png" alt="Ragnar Silhouette Sheet">
+    <div class="comparison-label">Lucien</div>
+    <img src="../../assets/library/10_CHARACTERS/LUCIEN/02_BODY/structure/lucien_silhouette_sheet_v1.png" alt="Lucien Silhouette Sheet Comparison">
+  </div>
+  <div class="comparison-item">
+    <div class="comparison-label">Ragnar</div>
+    <img src="../../assets/library/10_CHARACTERS/RAGNAR/02_BODY/structure/ragnar_silhouette_sheet_v1.png" alt="Ragnar Silhouette Sheet Comparison">
   </div>
 </div>
 

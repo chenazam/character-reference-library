@@ -32,8 +32,8 @@
     <img src="..\..\assets\library\10_CHARACTERS\DENNIS\02_BODY\structure\dennis_proportion_grid_v1.png" alt="">
   </a>
 
-  <a href="..\..\assets\library\10_CHARACTERS\DENNIS\02_BODY\structure\dennis_silhouette_v1.png" target="_blank">
-    <img src="..\..\assets\library\10_CHARACTERS\DENNIS\02_BODY\structure\dennis_silhouette_v1.png" alt="">
+  <a href="..\..\assets\library\10_CHARACTERS\DENNIS\02_BODY\structure\dennis_silhouette_sheet_v1.png" target="_blank">
+    <img src="..\..\assets\library\10_CHARACTERS\DENNIS\02_BODY\structure\dennis_silhouette_sheet_v1.png" alt="">
   </a>
 
   <a href="..\..\assets\library\10_CHARACTERS\DENNIS\02_BODY\structure\dennis_turnaround_v1.png" target="_blank">

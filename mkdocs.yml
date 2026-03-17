@@ -58,8 +58,7 @@ nav:
     - Index: environments/index.md
   - Inspiration:
     - Index: inspiration/index.md
-  - Silhouette Archetypes:
-    - Archetype Overview: archetypes/index.md
+  - Silhouette Archetypes: archetypes/index.md
 - Prompt System:
   - Overview: prompts/overview.md
   - Master Blocks: prompts/master-blocks.md

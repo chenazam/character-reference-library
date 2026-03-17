@@ -100,7 +100,9 @@ def fallback_proportion_archetype(meta: dict) -> str:
             archetype = "broad_upper_dominant"
     
     if keywords & {"curvy", "soft", "glute_dominant", "hip_dominant"}:
-        if archetype in {"slender_tall", "slender_refined", None}:
+        if emphasis in {"glutes", "hips", "lower_curve", "soft"}:
+            archetype = "soft_curvy"
+        elif archetype in {"slender_tall", "slender_refined", None}:
             archetype = "slender_refined"
         else:
             archetype = "soft_curvy"
@@ -128,9 +130,7 @@ def fallback_proportion_archetype(meta: dict) -> str:
             archetype = "athletic_leg_dominant"
     
     elif emphasis in {"glutes", "hips", "lower_curve", "soft"}:
-        if archetype in {"slender_tall", "slender_refined", None}:
-            archetype = "slender_refined"
-        elif archetype not in {"massive_upper_dominant", "broad_upper_dominant"}:
+        if archetype not in {"massive_upper_dominant", "broad_upper_dominant"}:
             archetype = "soft_curvy"
     
     elif emphasis in {"balanced", "overall"}:

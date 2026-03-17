@@ -30,4 +30,5 @@ A strongly upper-body-dominant silhouette with wide shoulders and a pronounced V
 | Character | Build | Anchor | Emphasis |
 |---|---|---|---|
 | Blake | athletic_muscular | power_athlete | upper_body |
+| Daimon | athletic_muscular | power_athlete | upper_body |
 

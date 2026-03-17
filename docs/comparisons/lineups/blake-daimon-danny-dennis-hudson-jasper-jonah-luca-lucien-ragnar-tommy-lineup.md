@@ -34,7 +34,7 @@ hide:
 
 <div class="height-lineup__figure">
   <div class="height-lineup__stage">
-    <div class="height-lineup__placeholder height-lineup__placeholder--massive_upper_dominant" style="height: 94.23%"></div>
+    <div class="height-lineup__placeholder height-lineup__placeholder--broad_upper_dominant" style="height: 94.23%"></div>
   </div>
   <div class="height-lineup__label">Daimon</div>
   <div class="height-lineup__meta">196 cm / 6'5"</div>

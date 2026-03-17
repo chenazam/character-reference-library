@@ -15,7 +15,7 @@
 <div class="character-stats">
 <ul>
   <li><strong>Height:</strong> 196 cm / 6&#x27;5&quot;</li>
-  <li><strong>Build:</strong> heavy muscular</li>
+  <li><strong>Build:</strong> athletic muscular</li>
   <li><strong>Silhouette:</strong> shoulder dominant</li>
   <li><strong>Face:</strong> square and broad jawline</li>
   <li><strong>Hair:</strong> dark hair worn short and practical, often slightly rough or unstyled</li>
@@ -50,7 +50,7 @@
 
   <div class="height-lineup__figure height-lineup__figure--a">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--massive_upper_dominant" style="height: 100.00%"></div>
+      <div class="height-lineup__placeholder height-lineup__placeholder--broad_upper_dominant" style="height: 100.00%"></div>
     </div>
     <div class="height-lineup__label">Daimon</div>
     <div class="height-lineup__meta">196 cm / 6'5"</div>

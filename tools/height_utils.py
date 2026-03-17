@@ -61,10 +61,17 @@ def fallback_proportion_archetype(meta: dict) -> str:
     # 1. SPECIFIC COMBINATION RULES (HIGHEST PRIORITY)
     # =========================================================
 
-    # --- HEAVY MUSCULAR SPLIT (Danny vs Ragnar) ---
+    # --- HEAVY MUSCULAR SPLIT (STRICT MASSIVE THRESHOLD) ---
+
     if build == "heavy_muscular":
-        if height >= 195:
+        # Only classify as MASSIVE if truly extreme
+        if (
+            height >= 205
+            or "massive" in keywords
+            or "giant" in keywords
+        ):
             return "massive_upper_dominant"
+
         return "heavy_muscular"
 
     # --- ATHLETIC MUSCULAR SPLIT (Daimon vs Hudson) ---

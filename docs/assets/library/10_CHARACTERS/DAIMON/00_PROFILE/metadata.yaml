@@ -14,13 +14,13 @@ core_identity:
   - protector
   - rival
   aesthetic_tags:
+  - rugged_utilitarian
   - streetwear
-  - exhibitionist
 physical:
   height_cm: 196
   height_imperial: 6'5"
   height_visual_category: imposing
-  build_category: heavy_muscular
+  build_category: athletic_muscular
   frame_proportion: shoulder_dominant
   body_fat_range: athletic
   body_softness_distribution: firm_all
@@ -33,7 +33,7 @@ physical:
   torso_profile: thick_torso
   limb_profile: thick_limbs
   posture_profile: grounded_stable
-  silhouette_anchor: power_frame
+  silhouette_anchor: power_athlete
   silhouette_emphasis: upper_body
   silhouette_keywords:
   - tall

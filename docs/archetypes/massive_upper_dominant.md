@@ -29,6 +29,5 @@ An extremely large upper-body-dominant silhouette with overwhelming shoulder and
 
 | Character | Build | Anchor | Emphasis |
 |---|---|---|---|
-| Daimon | heavy_muscular | power_frame | upper_body |
 | Ragnar | heavy_muscular | power_frame | upper_body |
 

@@ -20,11 +20,11 @@ hide:
   </div>
   <div class="comparison-badge">
     <div class="comparison-badge__label">Build Contrast</div>
-    <div class="comparison-badge__value">Heavy Muscular vs Soft Slender</div>
+    <div class="comparison-badge__value">Athletic Muscular vs Soft Slender</div>
   </div>
   <div class="comparison-badge">
     <div class="comparison-badge__label">Silhouette Contrast</div>
-    <div class="comparison-badge__value">Power Frame vs Hip Dominant Soft</div>
+    <div class="comparison-badge__value">Power Athlete vs Hip Dominant Soft</div>
   </div>
 </div>
 
@@ -65,7 +65,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--a">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--massive_upper_dominant" style="height: 100.00%"></div>
+      <div class="height-lineup__placeholder height-lineup__placeholder--broad_upper_dominant" style="height: 100.00%"></div>
     </div>
     <div class="height-lineup__label">Daimon</div>
     <div class="height-lineup__meta">196 cm / 6'5"</div>
@@ -84,7 +84,7 @@ hide:
 
 **Daimon** and **Tommy** show a **Dramatic height contrast**, with **Daimon** standing **21 cm** taller than **Tommy**.
 
-In terms of build, **Daimon** reads as **Heavy Muscular**, while **Tommy** reads as **Soft Slender**.
+In terms of build, **Daimon** reads as **Athletic Muscular**, while **Tommy** reads as **Soft Slender**.
 
 Their design language also differs strongly: **Daimon** is rooted in a **Rugged Utilitarian** aesthetic, while **Tommy** is defined more by **Domestic Soft** styling.
 

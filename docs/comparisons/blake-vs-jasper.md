@@ -115,5 +115,9 @@ Their emotional presentation also differs: **Blake** feels **Controlled**, while
     <div class="comparison-label">Blake — Body Anchor</div>
     <img src="../../assets/library/10_CHARACTERS/BLAKE/02_BODY/structure/blake_body_anchor_v1.png" alt="Blake Body Anchor">
   </div>
+  <div class="comparison-item">
+    <div class="comparison-label">Blake — Silhouette Sheet</div>
+    <img src="../../assets/library/10_CHARACTERS/BLAKE/02_BODY/structure/blake_silhouette_sheet_v1.png" alt="Blake Silhouette Sheet">
+  </div>
 </div>
 

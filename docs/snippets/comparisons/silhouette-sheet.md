@@ -1,6 +1,13 @@
 <div class="asset-comparison-grid">
 
   <div class="comparison-card">
+    <h3><a href="../../characters/blake/">Blake</a></h3>
+    <a href="../../assets/library/10_CHARACTERS/BLAKE/02_BODY/structure/blake_silhouette_sheet_v1.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/BLAKE/02_BODY/structure/blake_silhouette_sheet_v1.png" alt="Blake silhouette-sheet">
+    </a>
+  </div>
+
+  <div class="comparison-card">
     <h3><a href="../../characters/danny/">Danny</a></h3>
     <a href="../../assets/library/10_CHARACTERS/DANNY/02_BODY/structure/danny_silhouette_sheet_v1.png" target="_blank">
       <img src="../../assets/library/10_CHARACTERS/DANNY/02_BODY/structure/danny_silhouette_sheet_v1.png" alt="Danny silhouette-sheet">

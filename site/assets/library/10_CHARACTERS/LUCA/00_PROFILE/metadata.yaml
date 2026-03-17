@@ -32,12 +32,12 @@ physical:
   torso_profile: athletic_torso
   limb_profile: slender_limbs
   posture_profile: relaxed_neutral
-  silhouette_anchor: runner_silhouette
-  silhouette_emphasis: legs
+  silhouette_anchor: compact_frame
+  silhouette_emphasis: balanced
   silhouette_keywords:
   - compact
   - agile
-  - leg_dominant
+  - light_frame
 face:
   face_shape: soft_round
   jawline: defined_jawline

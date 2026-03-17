@@ -44,24 +44,6 @@ COMPACT_THRESHOLD = 4
 REFERENCE_SILHOUETTE = ROOT / "docs" / "assets" / "reference" / "reference_male_average_180cm_front_v1.png"
 
 
-def get_nested(d, *keys, default=None):
-    cur = d
-    for k in keys:
-        if not isinstance(cur, dict):
-            return default
-        cur = cur.get(k)
-    return cur if cur is not None else default
-
-
-def get_reference_silhouette_link() -> str:
-    if not REFERENCE_SILHOUETTE.exists():
-        return ""
-    try:
-        return site_root_url(REFERENCE_SILHOUETTE)
-    except Exception:
-        return ""
-
-
 def load_character(slug: str) -> dict:
     if not LIBRARY_ROOT.exists():
         raise FileNotFoundError(f"Library root not found: {LIBRARY_ROOT}")
@@ -80,24 +62,6 @@ def load_character(slug: str) -> dict:
             return meta
 
     raise ValueError(f"Character not found for slug: {slug}")
-
-
-def find_asset(meta: dict, key: str) -> str:
-    refs = meta.get("reference_files", {})
-    filename = refs.get(key, "")
-    if not filename:
-        return ""
-
-    character_dir = pathlib.Path(meta["_dir"])
-    matches = [p for p in character_dir.rglob(filename) if p.is_file()]
-    if not matches:
-        return ""
-
-    matches.sort()
-    try:
-        return site_root_url(matches[0])
-    except Exception:
-        return ""
 
 
 def build_chart(characters: list[dict]) -> str:

@@ -60,6 +60,7 @@ TEMPLATE_ALIASES = {
 
     "silhouette": "docs/assets/library/50_PROMPT_TEMPLATES/02_BODY/silhouette-sheet.md",
     "silhouette-sheet": "docs/assets/library/50_PROMPT_TEMPLATES/02_BODY/silhouette-sheet.md",
+    "silhouette-front": "docs/assets/library/50_PROMPT_TEMPLATES/02_BODY/silhouette-front.md",
 
     "turnaround": "docs/assets/library/50_PROMPT_TEMPLATES/02_BODY/turnaround-sheet.md",
     "turnaround-sheet": "docs/assets/library/50_PROMPT_TEMPLATES/02_BODY/turnaround-sheet.md",

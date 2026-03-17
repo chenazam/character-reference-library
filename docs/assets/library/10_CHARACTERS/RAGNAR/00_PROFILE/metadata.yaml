@@ -90,20 +90,20 @@ identity_rules:
 reference_files:
   face_anchor: ragnar_face_anchor_v1.png
   anatomy_sheet: ragnar_anatomy_sheet_v1.png
-  body_anchor: ragnar_body_anchor_v0.png
-  silhouette_sheet: ''
+  body_anchor: ragnar_body_anchor_v1.png
+  silhouette_sheet: ragnar_silhouette_sheet_v1.png
   turnaround_sheet: ''
   ultimate_character_sheet: ''
   signature_outfit_sheet: ''
-  silhouette_front: ''
+  silhouette_front: ragnar_silhouette_front_v1.png
 pipeline_status:
   face_anchor: complete
   hair_sheet: complete
   anatomy_sheet: complete
-  proportion_grid: not_started
+  proportion_grid: complete
   muscle_tension: not_started
   body_anchor: complete
-  silhouette_sheet: not_started
+  silhouette_sheet: complete
   turnaround_sheet: not_started
   expression_sheet: not_started
   hand_sheet: not_started
@@ -117,7 +117,7 @@ pipeline_status:
   scene_anchors: not_started
   prop_sheet: not_started
   gallery_image: not_started
-  silhouette_front: not_started
+  silhouette_front: complete
 notes: 'Ragnar should read as physically overwhelming in scale and mass relative to
   most characters. His silhouette should always emphasize broad shoulders, thick torso
   mass, and commanding height.

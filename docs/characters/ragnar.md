@@ -42,7 +42,7 @@
 
   <div class="height-lineup__figure height-lineup__figure--ref">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--athletic_balanced height-lineup__placeholder--reference" style="height: 86.54%"></div>
+      <img class="height-lineup__silhouette height-lineup__silhouette--reference" src="/assets/reference/reference_male_average_180cm_front_v1.png" alt="Reference silhouette" style="height: 86.54%;">
     </div>
     <div class="height-lineup__label">Reference</div>
     <div class="height-lineup__meta">180 cm / 5'11"</div>
@@ -50,7 +50,7 @@
 
   <div class="height-lineup__figure height-lineup__figure--a">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--massive_upper_dominant height-lineup__placeholder--elongated height-lineup__placeholder--dense" style="height: 100.00%"></div>
+      <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/RAGNAR/02_BODY/structure/ragnar_silhouette_front_v1.png" alt="Ragnar silhouette front" style="height: 100.00%;">
     </div>
     <div class="height-lineup__label">Ragnar</div>
     <div class="height-lineup__meta">208 cm / 6'10"</div>

@@ -24,4 +24,20 @@
     <img src="..\..\assets\library\10_CHARACTERS\RAGNAR\02_BODY\structure\ragnar_body_anchor_v0.png" alt="">
   </a>
 
+  <a href="..\..\assets\library\10_CHARACTERS\RAGNAR\02_BODY\structure\ragnar_body_anchor_v1.png" target="_blank">
+    <img src="..\..\assets\library\10_CHARACTERS\RAGNAR\02_BODY\structure\ragnar_body_anchor_v1.png" alt="">
+  </a>
+
+  <a href="..\..\assets\library\10_CHARACTERS\RAGNAR\02_BODY\structure\ragnar_proportion_grid_v0.png" target="_blank">
+    <img src="..\..\assets\library\10_CHARACTERS\RAGNAR\02_BODY\structure\ragnar_proportion_grid_v0.png" alt="">
+  </a>
+
+  <a href="..\..\assets\library\10_CHARACTERS\RAGNAR\02_BODY\structure\ragnar_silhouette_front_v1.png" target="_blank">
+    <img src="..\..\assets\library\10_CHARACTERS\RAGNAR\02_BODY\structure\ragnar_silhouette_front_v1.png" alt="">
+  </a>
+
+  <a href="..\..\assets\library\10_CHARACTERS\RAGNAR\02_BODY\structure\ragnar_silhouette_sheet_v1.png" target="_blank">
+    <img src="..\..\assets\library\10_CHARACTERS\RAGNAR\02_BODY\structure\ragnar_silhouette_sheet_v1.png" alt="">
+  </a>
+
 </div>

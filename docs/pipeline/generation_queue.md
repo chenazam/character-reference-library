@@ -40,7 +40,7 @@ Reference assets that still need to be generated.
 
 ## RAGNAR
 
-- next: proportion_grid
+- next: muscle_tension
 
 ## TOMMY
 

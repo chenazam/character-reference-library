@@ -26,7 +26,7 @@ hide:
 
 <div class="height-lineup__figure">
   <div class="height-lineup__stage">
-    <div class="height-lineup__placeholder height-lineup__placeholder--massive_upper_dominant height-lineup__placeholder--elongated height-lineup__placeholder--dense" style="height: 100.00%"></div>
+    <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/RAGNAR/02_BODY/structure/ragnar_silhouette_front_v1.png" alt="Ragnar silhouette" style="height: 100.00%;">
   </div>
   <div class="height-lineup__label">Ragnar</div>
   <div class="height-lineup__meta">208 cm / 6'10"</div>

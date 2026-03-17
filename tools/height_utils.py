@@ -111,6 +111,21 @@ def fallback_proportion_archetype(meta: dict) -> str:
     if (soft_build or soft_anchor or soft_distribution) and (full_lower_emphasis or soft_curve_keywords):
         return "soft_curvy"
 
+
+    # --- SLENDER / REFINED TYPES ---
+
+    if build == "elongated_slender":
+        return "slender_tall"
+
+    if build == "narrow_slender":
+        return "slender_refined"
+
+    if anchor == "glute_slender":
+        return "slender_refined"
+
+    if "slender" in keywords and build not in {"runner_build", "lower_athletic", "light_athletic"}:
+        return "slender_refined"
+
     # =========================================================
     # 2. ANCHOR-BASED CLASSIFICATION
     # =========================================================

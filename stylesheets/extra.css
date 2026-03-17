@@ -605,7 +605,6 @@
   width: 74px;
 }
 
-
 /* =========================================================
    Multi-character lineup mode
    ========================================================= */
@@ -660,7 +659,6 @@
   line-height: 1;
   top: -0.45rem;
 }
-
 
 /* =========================================================
    Single-character height context chart
@@ -741,10 +739,9 @@
   }
 }
 
-
 .height-lineup--archetype-doc {
   --lineup-stage-height: 260px;
-  --lineup-footer-height: 1.5rem;
+  --lineup-footer-height: 0rem;
 
   display: grid;
   grid-template-columns: 1fr;

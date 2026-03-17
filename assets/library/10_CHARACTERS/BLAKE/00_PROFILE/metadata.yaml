@@ -95,9 +95,9 @@ reference_files:
   body_anchor: blake_body_anchor_v1.png
   ultimate_character_sheet: ''
   signature_outfit_sheet: ''
-  silhouette_sheet: ''
+  silhouette_sheet: blake_silhouette_sheet_v1.png
   turnaround_sheet: ''
-  silhouette_front: ''
+  silhouette_front: blake_silhouette_front_v1.png
 pipeline_status:
   face_anchor: complete
   hair_sheet: complete
@@ -105,7 +105,7 @@ pipeline_status:
   proportion_grid: not_started
   muscle_tension: not_started
   body_anchor: complete
-  silhouette_sheet: not_started
+  silhouette_sheet: complete
   turnaround_sheet: not_started
   expression_sheet: not_started
   hand_sheet: not_started
@@ -126,7 +126,7 @@ pipeline_status:
   scene_anchor: not_started
   dynamic_pose: not_started
   final_ucs: not_started
-  silhouette_front: not_started
+  silhouette_front: complete
 notes: 'Blakeâ€™s visual identity is defined by a tall, powerful athletic frame and
   confident relaxed demeanor. His style favors fitted athletic clothing that emphasizes
   his upper-body strength and broad shoulders.

@@ -3,6 +3,8 @@
 import pathlib
 import yaml
 
+from collections import Counter
+
 try:
     from tools.height_utils import (
         SILHOUETTE_ARCHETYPES,
@@ -97,11 +99,52 @@ def build_archetype_preview(archetype: str) -> str:
 """
 
 
+def summarize_metadata_signals(characters: list[dict]) -> dict:
+    builds = Counter()
+    anchors = Counter()
+    emphasis = Counter()
+
+    for c in characters:
+        build = get_nested(c, "physical", "build_category", default=None)
+        anchor = get_nested(c, "physical", "silhouette_anchor", default=None)
+        emph = get_nested(c, "physical", "silhouette_emphasis", default=None)
+
+        if build:
+            builds[build] += 1
+        if anchor:
+            anchors[anchor] += 1
+        if emph:
+            emphasis[emph] += 1
+
+    return {
+        "builds": builds,
+        "anchors": anchors,
+        "emphasis": emphasis,
+    }
+
+
+def format_top_values(counter: Counter, limit: int = 3) -> str:
+    if not counter:
+        return "-"
+
+    most_common = counter.most_common(limit)
+    return ", ".join([name for name, _ in most_common])
+
+
+def format_top_values(counter: Counter, limit: int = 3) -> str:
+    if not counter:
+        return "-"
+
+    most_common = counter.most_common(limit)
+    return ", ".join([name for name, _ in most_common])
+
+
 def build_archetype_page(archetype: str, characters: list[dict]) -> str:
     title = prettify_archetype(archetype)
     description = ARCHETYPE_DESCRIPTIONS.get(archetype, "")
 
     preview = build_archetype_preview(archetype)
+    metadata_section = build_metadata_signals_section(characters)
 
     lines = [
         "---",
@@ -112,6 +155,8 @@ def build_archetype_page(archetype: str, characters: list[dict]) -> str:
         f"# {title}",
         "",
         preview,
+        "",
+        metadata_section,
         "",
     ]
 

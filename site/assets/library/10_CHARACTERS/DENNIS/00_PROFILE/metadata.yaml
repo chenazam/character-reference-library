@@ -88,7 +88,7 @@ reference_files:
   body_anchor: dennis_body_anchor_v1.png
   ultimate_character_sheet: ''
   signature_outfit_sheet: ''
-  silhouette_sheet: ''
+  silhouette_sheet: dennis_silhouette_sheet_v1.png
   turnaround_sheet: dennis_turnaround_v1.png
   silhouette_front: ''
 pipeline_status:
@@ -98,7 +98,7 @@ pipeline_status:
   proportion_grid: complete
   muscle_tension: complete
   body_anchor: complete
-  silhouette_sheet: not_started
+  silhouette_sheet: complete
   turnaround_sheet: complete
   expression_sheet: complete
   hand_sheet: complete

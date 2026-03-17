@@ -20,7 +20,7 @@ hide:
 
 **Build categories:** heavy_muscular  
 **Anchors:** power_frame  
-**Emphasis:** upper_body, shoulders
+**Emphasis:** upper_body
 
 
 An extremely large upper-body-dominant silhouette with overwhelming shoulder and torso presence.
@@ -29,7 +29,7 @@ An extremely large upper-body-dominant silhouette with overwhelming shoulder and
 
 | Character | Build | Anchor | Emphasis |
 |---|---|---|---|
-| Daimon | heavy_muscular | power_frame | shoulders |
+| Daimon | heavy_muscular | power_frame | upper_body |
 | Danny | heavy_muscular | power_frame | upper_body |
 | Ragnar | heavy_muscular | power_frame | upper_body |
 

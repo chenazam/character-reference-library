@@ -49,6 +49,9 @@ def fallback_proportion_archetype(meta: dict) -> str:
     build = str(build or "").strip()
     keywords = {str(k).strip() for k in keywords if str(k).strip()}
 
+    height_cm = meta.get("height_cm")
+    build = meta.get("build_category", "")
+
     if anchor == "power_frame":
         return "massive_upper_dominant"
 
@@ -87,10 +90,34 @@ def fallback_proportion_archetype(meta: dict) -> str:
         archetype = "athletic_leg_dominant"
     elif build in {"compact_athletic"}:
         archetype = "compact_light"
-    elif build in {"athletic_muscular"}:
-        archetype = "broad_athletic"
-    elif build in {"power_build", "heavy_muscular", "broad_heavy", "thick_set", "large_frame"}:
-        archetype = "heavy_muscular"
+
+        # --- MUSCULAR / HEAVY TYPES (REFINED) ---
+
+    if build in {"heavy_muscular"}:
+        # Distinguish Danny vs Ragnar
+        if height_cm and height_cm >= 195:
+            return "massive_upper_dominant"   # Ragnar-tier
+        return "heavy_muscular"               # Danny-tier
+
+
+    if build in {"power_build", "broad_heavy", "thick_set", "large_frame"}:
+        # Use silhouette emphasis if available
+        emphasis = meta.get("silhouette_emphasis", "")
+
+        if emphasis == "upper_body":
+            return "massive_upper_dominant"
+
+        return "massive_balanced"
+
+
+    if build in {"athletic_muscular"}:
+        # Split Hudson vs Daimon
+        emphasis = meta.get("silhouette_emphasis", "")
+
+        if emphasis == "upper_body":
+            return "broad_upper_dominant"     # Daimon
+
+        return "broad_athletic"               # Hudson
 
     if "compact" in keywords and archetype in {"athletic_balanced", "athletic_leg_dominant", None}:
         archetype = "compact_light"

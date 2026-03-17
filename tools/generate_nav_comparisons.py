@@ -17,6 +17,8 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 MKDOCS_FILE = ROOT / "mkdocs.yml"
 COMPARISON_PAGES = ROOT / "docs" / "comparisons"
 HEIGHT_GENERATOR = ROOT / "tools" / "generate_height_comparison.py"
+LINEUP_GENERATOR = ROOT / "tools" / "generate_height_lineup.py"
+LINEUPS_DIR = COMPARISON_PAGES / "lineups"
 
 # Optional static pages that should appear first if they exist
 STATIC_COMPARISON_PAGES = {
@@ -33,7 +35,7 @@ def parse_args():
     parser.add_argument(
         "--refresh-pages",
         action="store_true",
-        help="Regenerate all existing height comparison pages before updating nav.",
+        help="Regenerate all existing comparison and lineup pages before updating nav.",
     )
     return parser.parse_args()
 
@@ -62,6 +64,27 @@ def comparison_slug_pairs():
             yield left, right, page
 
 
+def lineup_slug_groups():
+    if not LINEUPS_DIR.exists():
+        return
+
+    pages = sorted(
+        p for p in LINEUPS_DIR.glob("*.md")
+        if p.name != "index.md"
+    )
+
+    for page in pages:
+        stem = page.stem.replace("_", "-")
+        if not stem.endswith("-lineup"):
+            continue
+
+        slug_part = stem[:-len("-lineup")]
+        slugs = [part for part in slug_part.split("-") if part]
+
+        if slugs:
+            yield slugs, page
+
+
 def refresh_existing_comparison_pages():
     if not HEIGHT_GENERATOR.exists():
         raise FileNotFoundError(f"Height comparison generator not found: {HEIGHT_GENERATOR}")
@@ -84,6 +107,34 @@ def refresh_existing_comparison_pages():
             continue
 
         refreshed.append((left, right))
+        if result.stdout.strip():
+            print(result.stdout.strip())
+
+    return refreshed
+
+
+def refresh_existing_lineup_pages():
+    if not LINEUP_GENERATOR.exists():
+        raise FileNotFoundError(f"Height lineup generator not found: {LINEUP_GENERATOR}")
+
+    refreshed = []
+
+    for slugs, page in lineup_slug_groups():
+        result = subprocess.run(
+            [sys.executable, str(LINEUP_GENERATOR), *slugs],
+            capture_output=True,
+            text=True,
+        )
+
+        if result.returncode != 0:
+            print(f"Warning: failed to refresh lineup page for {' / '.join(slugs)}")
+            if result.stdout:
+                print(result.stdout)
+            if result.stderr:
+                print(result.stderr)
+            continue
+
+        refreshed.append((slugs, page))
         if result.stdout.strip():
             print(result.stdout.strip())
 
@@ -182,8 +233,11 @@ def main():
     args = parse_args()
 
     if args.refresh_pages:
-        refreshed = refresh_existing_comparison_pages()
-        print(f"Refreshed {len(refreshed)} comparison page(s).")
+        refreshed_comparisons = refresh_existing_comparison_pages()
+        print(f"Refreshed {len(refreshed_comparisons)} comparison page(s).")
+
+        refreshed_lineups = refresh_existing_lineup_pages()
+        print(f"Refreshed {len(refreshed_lineups)} lineup page(s).")
 
     update_nav()
 

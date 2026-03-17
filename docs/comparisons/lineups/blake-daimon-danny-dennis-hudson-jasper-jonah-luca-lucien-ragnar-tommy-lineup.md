@@ -74,7 +74,7 @@ hide:
 
 <div class="height-lineup__figure">
   <div class="height-lineup__stage">
-    <div class="height-lineup__placeholder height-lineup__placeholder--heavy_muscular" style="height: 84.13%"></div>
+    <div class="height-lineup__placeholder height-lineup__placeholder--soft_curvy" style="height: 84.13%"></div>
   </div>
   <div class="height-lineup__label">Dennis</div>
   <div class="height-lineup__meta">175 cm / 5 ft 9 in</div>
@@ -82,7 +82,7 @@ hide:
 
 <div class="height-lineup__figure">
   <div class="height-lineup__stage">
-    <div class="height-lineup__placeholder height-lineup__placeholder--slender_refined" style="height: 84.13%"></div>
+    <div class="height-lineup__placeholder height-lineup__placeholder--soft_curvy" style="height: 84.13%"></div>
   </div>
   <div class="height-lineup__label">Tommy</div>
   <div class="height-lineup__meta">175 cm / 5'9"</div>

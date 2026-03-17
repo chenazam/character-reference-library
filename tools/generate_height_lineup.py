@@ -6,12 +6,6 @@ import sys
 import yaml
 
 try:
-    from tools.site_paths import site_root_url
-except ModuleNotFoundError:
-    from site_paths import site_root_url
-
-
-try:
     from tools.height_utils import (
         get_nested,
         fallback_proportion_archetype,
@@ -41,7 +35,6 @@ OUTPUT_ROOT = ROOT / "docs" / "comparisons" / "lineups"
 NORMAL_CHART_HEIGHT_PX = 460
 COMPACT_CHART_HEIGHT_PX = 360
 COMPACT_THRESHOLD = 4
-REFERENCE_SILHOUETTE = ROOT / "docs" / "assets" / "reference" / "reference_male_average_180cm_front_v1.png"
 
 
 def load_character(slug: str) -> dict:
@@ -62,24 +55,6 @@ def load_character(slug: str) -> dict:
             return meta
 
     raise ValueError(f"Character not found for slug: {slug}")
-
-
-def find_asset(meta: dict, key: str) -> str:
-    refs = meta.get("reference_files", {})
-    filename = refs.get(key, "")
-    if not filename:
-        return ""
-
-    character_dir = pathlib.Path(meta["_dir"])
-    matches = [p for p in character_dir.rglob(filename) if p.is_file()]
-    if not matches:
-        return ""
-
-    matches.sort()
-    try:
-        return site_root_url(matches[0])
-    except Exception:
-        return ""
 
 
 def build_chart(characters: list[dict]) -> str:
@@ -119,19 +94,14 @@ def build_chart(characters: list[dict]) -> str:
     use_real_reference = bool(use_real_character_silhouettes and reference_silhouette)
 
     if use_real_reference:
-        reference_figure = (
-            f'<img class="height-lineup__silhouette height-lineup__silhouette--reference" '
-            f'src="{reference_silhouette}" '
-            f'alt="Reference silhouette" '
-            f'style="height: {pct(reference_height):.2f}%;">'
+        reference_figure = build_silhouette_img(
+            reference_silhouette,
+            "Reference silhouette",
+            pct(reference_height),
+            reference=True,
         )
     else:
-        reference_figure = (
-            f'<div class="height-lineup__placeholder '
-            f'height-lineup__placeholder--athletic_balanced '
-            f'height-lineup__placeholder--reference" '
-            f'style="height: {pct(reference_height):.2f}%"></div>'
-        )
+        reference_figure = build_reference_placeholder(pct(reference_height))
 
     figures = [
         f"""
@@ -154,18 +124,13 @@ def build_chart(characters: list[dict]) -> str:
         print(f"[archetype] {c['name']} -> {archetype}")
 
         if silhouette:
-            body = (
-                f'<img class="height-lineup__silhouette" '
-                f'src="{silhouette}" '
-                f'alt="{name} silhouette" '
-                f'style="height: {pct(height):.2f}%;">'
+            body = build_silhouette_img(
+                silhouette,
+                f"{name} silhouette",
+                pct(height),
             )
         else:
-            body = (
-                f'<div class="height-lineup__placeholder '
-                f'height-lineup__placeholder--{archetype}" '
-                f'style="height: {pct(height):.2f}%"></div>'
-            )
+            body = build_character_placeholder(archetype, pct(height))
 
         figures.append(
             f"""

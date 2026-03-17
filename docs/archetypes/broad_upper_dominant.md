@@ -18,17 +18,14 @@ hide:
 
 ## Common Metadata Signals
 
-**Build categories:** athletic_muscular  
-**Anchors:** power_athlete  
-**Emphasis:** upper_body, shoulders
+**Build categories:** -  
+**Anchors:** -  
+**Emphasis:** -
 
 
 A strongly upper-body-dominant silhouette with wide shoulders and a pronounced V-shape.
 
 ## Characters
 
-| Character | Build | Anchor | Emphasis |
-|---|---|---|---|
-| Blake | athletic_muscular | power_athlete | upper_body |
-| Hudson | athletic_muscular | power_athlete | shoulders |
+_No characters currently mapped to this archetype._
 

@@ -18,16 +18,14 @@ hide:
 
 ## Common Metadata Signals
 
-**Build categories:** narrow_slender  
-**Anchors:** glute_slender  
-**Emphasis:** glutes
+**Build categories:** -  
+**Anchors:** -  
+**Emphasis:** -
 
 
 A narrow, elegant, lightly built silhouette with delicate proportions and gentle taper.
 
 ## Characters
 
-| Character | Build | Anchor | Emphasis |
-|---|---|---|---|
-| Lucien | narrow_slender | glute_slender | glutes |
+_No characters currently mapped to this archetype._
 

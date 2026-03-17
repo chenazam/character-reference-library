@@ -18,18 +18,14 @@ hide:
 
 ## Common Metadata Signals
 
-**Build categories:** heavy_muscular  
-**Anchors:** power_frame  
-**Emphasis:** upper_body, shoulders
+**Build categories:** -  
+**Anchors:** -  
+**Emphasis:** -
 
 
 An extremely large upper-body-dominant silhouette with overwhelming shoulder and torso presence.
 
 ## Characters
 
-| Character | Build | Anchor | Emphasis |
-|---|---|---|---|
-| Daimon | heavy_muscular | power_frame | shoulders |
-| Danny | heavy_muscular | power_frame | upper_body |
-| Ragnar | heavy_muscular | power_frame | upper_body |
+_No characters currently mapped to this archetype._
 

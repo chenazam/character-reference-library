@@ -19,5 +19,8 @@ A strongly upper-body-dominant silhouette with wide shoulders and a pronounced V
 
 ## Characters
 
-- Blake
-- Hudson
+| Character | Build | Anchor | Emphasis |
+|---|---|---|---|
+| Blake | athletic_muscular | power_athlete | upper_body |
+| Hudson | athletic_muscular | power_athlete | shoulders |
+

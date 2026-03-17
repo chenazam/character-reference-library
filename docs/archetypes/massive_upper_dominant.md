@@ -19,6 +19,9 @@ An extremely large upper-body-dominant silhouette with overwhelming shoulder and
 
 ## Characters
 
-- Daimon
-- Danny
-- Ragnar
+| Character | Build | Anchor | Emphasis |
+|---|---|---|---|
+| Daimon | heavy_muscular | power_frame | shoulders |
+| Danny | heavy_muscular | power_frame | upper_body |
+| Ragnar | heavy_muscular | power_frame | upper_body |
+

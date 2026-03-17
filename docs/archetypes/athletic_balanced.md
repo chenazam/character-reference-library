@@ -20,3 +20,4 @@ A proportional athletic silhouette with moderate shoulder width and balanced low
 ## Characters
 
 _No characters currently mapped to this archetype._
+

@@ -19,4 +19,7 @@ An athletic silhouette with stronger lower-body emphasis, especially thighs, hip
 
 ## Characters
 
-- Jonah
+| Character | Build | Anchor | Emphasis |
+|---|---|---|---|
+| Jonah | elongated_slender | runner_silhouette | legs |
+

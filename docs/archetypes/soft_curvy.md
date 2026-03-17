@@ -19,5 +19,8 @@ A softer silhouette with fuller hips, gentler transitions, and a more rounded lo
 
 ## Characters
 
-- Dennis
-- Tommy
+| Character | Build | Anchor | Emphasis |
+|---|---|---|---|
+| Dennis | soft_heavy | hip_dominant_soft | hips_glutes_thighs |
+| Tommy | soft_slender | hip_dominant_soft | hips_glutes_thighs |
+

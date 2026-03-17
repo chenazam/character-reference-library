@@ -20,3 +20,4 @@ A broad-shouldered athletic silhouette with visible strength but controlled tape
 ## Characters
 
 _No characters currently mapped to this archetype._
+

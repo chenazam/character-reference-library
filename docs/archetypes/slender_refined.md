@@ -19,4 +19,7 @@ A narrow, elegant, lightly built silhouette with delicate proportions and gentle
 
 ## Characters
 
-- Lucien
+| Character | Build | Anchor | Emphasis |
+|---|---|---|---|
+| Lucien | narrow_slender | glute_slender | glutes |
+

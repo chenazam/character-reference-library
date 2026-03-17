@@ -6,12 +6,14 @@ import yaml
 try:
     from tools.height_utils import (
         SILHOUETTE_ARCHETYPES,
+        get_nested,
         fallback_proportion_archetype,
         build_character_placeholder,
     )
 except ModuleNotFoundError:
     from height_utils import (
         SILHOUETTE_ARCHETYPES,
+        get_nested,
         fallback_proportion_archetype,
         build_character_placeholder,
     )

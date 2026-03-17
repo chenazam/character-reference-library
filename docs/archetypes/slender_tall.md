@@ -20,3 +20,4 @@ A vertically elongated, slender silhouette with long lines and minimal mass.
 ## Characters
 
 _No characters currently mapped to this archetype._
+

@@ -262,7 +262,7 @@ def build_index_page(groups: dict[str, list[dict]]) -> str:
     ]
 
     for archetype in SILHOUETTE_ARCHETYPES:
-        lines.append(build_index_card(archetype, groups.get(archetype, [])))
+        lines.append(build_index_card(archetype, groups_public.get(archetype, [])))
         lines.append("")
 
     lines.extend([
@@ -278,7 +278,6 @@ def main():
 
     characters = load_all_characters()
 
-    groups = {archetype: [] for archetype in SILHOUETTE_ARCHETYPES}
     groups_all = {archetype: [] for archetype in SILHOUETTE_ARCHETYPES}
     groups_public = {archetype: [] for archetype in SILHOUETTE_ARCHETYPES}
 

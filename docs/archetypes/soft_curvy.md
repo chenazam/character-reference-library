@@ -18,7 +18,7 @@ hide:
 
 ## Common Metadata Signals
 
-**Build categories:** soft_heavy, soft_slender  
+**Build categories:** soft_heavy  
 **Anchors:** hip_dominant_soft  
 **Emphasis:** hips_glutes_thighs
 
@@ -30,5 +30,4 @@ A softer silhouette with fuller hips, gentler transitions, and a more rounded lo
 | Character | Build | Anchor | Emphasis |
 |---|---|---|---|
 | Dennis | soft_heavy | hip_dominant_soft | hips_glutes_thighs |
-| Tommy | soft_slender | hip_dominant_soft | hips_glutes_thighs |
 

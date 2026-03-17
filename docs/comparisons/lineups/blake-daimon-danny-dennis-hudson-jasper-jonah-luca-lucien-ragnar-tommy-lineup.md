@@ -50,7 +50,7 @@ hide:
 
 <div class="height-lineup__figure">
   <div class="height-lineup__stage">
-    <div class="height-lineup__placeholder height-lineup__placeholder--broad_athletic" style="height: 91.83%"></div>
+    <div class="height-lineup__placeholder height-lineup__placeholder--broad_upper_dominant" style="height: 91.83%"></div>
   </div>
   <div class="height-lineup__label">Blake</div>
   <div class="height-lineup__meta">191 cm / 6'3"</div>
@@ -66,7 +66,7 @@ hide:
 
 <div class="height-lineup__figure">
   <div class="height-lineup__stage">
-    <div class="height-lineup__placeholder height-lineup__placeholder--slender_tall" style="height: 85.58%"></div>
+    <div class="height-lineup__placeholder height-lineup__placeholder--athletic_leg_dominant" style="height: 85.58%"></div>
   </div>
   <div class="height-lineup__label">Jonah</div>
   <div class="height-lineup__meta">178 cm / 5'10"</div>
@@ -82,7 +82,7 @@ hide:
 
 <div class="height-lineup__figure">
   <div class="height-lineup__stage">
-    <div class="height-lineup__placeholder height-lineup__placeholder--soft_curvy" style="height: 84.13%"></div>
+    <div class="height-lineup__placeholder height-lineup__placeholder--athletic_balanced" style="height: 84.13%"></div>
   </div>
   <div class="height-lineup__label">Tommy</div>
   <div class="height-lineup__meta">175 cm / 5'9"</div>
@@ -90,7 +90,7 @@ hide:
 
 <div class="height-lineup__figure">
   <div class="height-lineup__stage">
-    <div class="height-lineup__placeholder height-lineup__placeholder--compact_light" style="height: 81.73%"></div>
+    <div class="height-lineup__placeholder height-lineup__placeholder--athletic_leg_dominant" style="height: 81.73%"></div>
   </div>
   <div class="height-lineup__label">Jasper</div>
   <div class="height-lineup__meta">170 cm / 5'7"</div>
@@ -98,7 +98,7 @@ hide:
 
 <div class="height-lineup__figure">
   <div class="height-lineup__stage">
-    <div class="height-lineup__placeholder height-lineup__placeholder--slender_refined" style="height: 81.73%"></div>
+    <div class="height-lineup__placeholder height-lineup__placeholder--athletic_balanced" style="height: 81.73%"></div>
   </div>
   <div class="height-lineup__label">Lucien</div>
   <div class="height-lineup__meta">170 cm / 5'7"</div>

@@ -20,7 +20,7 @@ hide:
 
 **Build categories:** athletic_muscular  
 **Anchors:** power_athlete  
-**Emphasis:** upper_body, shoulders
+**Emphasis:** shoulders
 
 
 A broad-shouldered athletic silhouette with visible strength but controlled taper.
@@ -29,6 +29,5 @@ A broad-shouldered athletic silhouette with visible strength but controlled tape
 
 | Character | Build | Anchor | Emphasis |
 |---|---|---|---|
-| Blake | athletic_muscular | power_athlete | upper_body |
 | Hudson | athletic_muscular | power_athlete | shoulders |
 

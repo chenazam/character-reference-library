@@ -38,143 +38,108 @@ def get_nested(data: dict, *keys, default=""):
     return current
 
 
+def extract_silhouette_signals(meta: dict) -> dict:
+    return {
+        "height_cm": get_nested(meta, "physical", "height_cm", default=0),
+        "build": get_nested(meta, "physical", "build_category", default=""),
+        "anchor": get_nested(meta, "physical", "silhouette_anchor", default=""),
+        "emphasis": get_nested(meta, "physical", "silhouette_emphasis", default=""),
+        "keywords": set(get_nested(meta, "physical", "silhouette_keywords", default=[]) or []),
+    }
+
+
 def fallback_proportion_archetype(meta: dict) -> str:
-    height_cm = get_nested(meta, "physical", "height_cm", default=0)
-    build = get_nested(meta, "physical", "build_category", default="")
-    anchor = get_nested(meta, "physical", "silhouette_anchor", default="")
-    emphasis = get_nested(meta, "physical", "silhouette_emphasis", default="")
-    keywords = set(get_nested(meta, "physical", "silhouette_keywords", default=[]) or [])
+    s = extract_silhouette_signals(meta)
 
-    anchor = str(anchor or "").strip()
-    emphasis = str(emphasis or "").strip()
-    build = str(build or "").strip()
-    keywords = {str(k).strip() for k in keywords if str(k).strip()}
+    height = s["height_cm"]
+    build = s["build"]
+    anchor = s["anchor"]
+    emphasis = s["emphasis"]
+    keywords = s["keywords"]
 
-    
-        # --- MUSCULAR / HEAVY TYPES (REFINED) ---
+    # =========================================================
+    # 1. SPECIFIC COMBINATION RULES (HIGHEST PRIORITY)
+    # =========================================================
 
-    if build in {"heavy_muscular"}:
-        # Distinguish Danny vs Ragnar
-        if height_cm and height_cm >= 195:
-            return "massive_upper_dominant"   # Ragnar-tier
-        return "heavy_muscular"               # Danny-tier
-
-
-    if build in {"power_build", "broad_heavy", "thick_set", "large_frame"}:
-        # Use silhouette emphasis if available
-        emphasis = meta.get("silhouette_emphasis", "")
-
-        if emphasis == "upper_body":
+    # --- HEAVY MUSCULAR SPLIT (Danny vs Ragnar) ---
+    if build == "heavy_muscular":
+        if height >= 195:
             return "massive_upper_dominant"
+        return "heavy_muscular"
 
-        return "massive_balanced"
-
-
-    if build in {"athletic_muscular"}:
-        # Split Hudson vs Daimon
-        emphasis = meta.get("silhouette_emphasis", "")
-
+    # --- ATHLETIC MUSCULAR SPLIT (Daimon vs Hudson) ---
+    if build == "athletic_muscular":
         if emphasis == "upper_body":
-            return "broad_upper_dominant"     # Daimon
-
-        return "broad_athletic"               # Hudson
-
-    if anchor == "power_athlete":
-        if emphasis in {"balanced", "overall"}:
+            return "broad_upper_dominant"
+        if emphasis in {"shoulders", "upper_frame"}:
             return "broad_athletic"
-        return "broad_upper_dominant"
-    
-    if build in {"compact_athletic"}:
-        if emphasis in {"legs", "lower_body"} or "leg_dominant" in keywords:
-            return "athletic_leg_dominant"    # Jasper
-        return "compact_light"                # Luca
-    
-    if anchor == "elongated_slender":
-        if emphasis in {"soft", "lower_curve", "glutes", "hips"}:
-            return "slender_refined"
-        return "slender_tall"
-    
-    if anchor == "glute_slender":
-        return "slender_refined"
+        return "broad_athletic"
 
-    if anchor in {"hip_dominant_soft", "soft_curvy"}:
-        return "soft_curvy"
-
-    archetype = None
-
-    if build in {"soft_slender"}:
-        archetype = "slender_refined"
-    elif build in {"soft_heavy"}:
-        archetype = "soft_curvy"
-    elif build in {"narrow_slender", "elongated_slender"}:
-        archetype = "slender_tall"
-    elif build in {"balanced_athletic", "light_athletic"}:
-        archetype = "athletic_balanced"
-    elif build in {"runner_build", "lower_athletic"}:
-        archetype = "athletic_leg_dominant"
-    elif build in {"compact_athletic"}:
+    # --- COMPACT LOWER-BODY SPLIT (Jasper vs Luca) ---
+    if build == "compact_athletic":
         if emphasis in {"legs", "lower_body"} or "leg_dominant" in keywords:
             return "athletic_leg_dominant"
         return "compact_light"
 
-    if "compact" in keywords and archetype in {"athletic_balanced", "athletic_leg_dominant", None}:
-        archetype = "compact_light"
-    
-    if "leg_dominant" in keywords and archetype in {"athletic_balanced", "broad_athletic", None}:
-        archetype = "athletic_leg_dominant"
-    
-    if "upper_dominant" in keywords:
-        if archetype in {"heavy_muscular", None}:
-            archetype = "massive_upper_dominant"
-        elif archetype in {"broad_athletic", "athletic_balanced", None}:
-            archetype = "broad_upper_dominant"
-    
-    if keywords & {"curvy", "soft", "glute_dominant", "hip_dominant"}:
-        if emphasis in {"glutes", "hips", "lower_curve", "soft"}:
-            archetype = "soft_curvy"
-        elif archetype in {"slender_tall", "slender_refined", None}:
-            archetype = "slender_refined"
-        else:
-            archetype = "soft_curvy"
-    
-    if keywords & {"imposing", "massive", "heavy_set"}:
-        if build == "soft_heavy" or anchor in {"hip_dominant_soft", "soft_curvy"}:
-            archetype = "soft_curvy"
-        elif emphasis in {"upper_body", "shoulders", "chest"} or "upper_dominant" in keywords:
-            archetype = "massive_upper_dominant"
-        else:
-            archetype = "heavy_muscular"
-    
-    if "broad" in keywords and archetype in {"athletic_balanced", None}:
-        archetype = "broad_athletic"
+    # --- SOFT / CURVY ---
+    if build in {"soft_heavy", "soft_curvy"}:
+        return "soft_curvy"
 
-    if "agile" in keywords and archetype is None:
-        archetype = "athletic_balanced"
+    # =========================================================
+    # 2. ANCHOR-BASED CLASSIFICATION
+    # =========================================================
 
-    if emphasis in {"upper_body", "shoulders", "chest"}:
-        if archetype in {"heavy_muscular"}:
-            archetype = "massive_upper_dominant"
-        elif archetype in {"broad_athletic", "athletic_balanced", None}:
-            archetype = "broad_upper_dominant"
-    
-    elif emphasis in {"legs", "lower_body"}:
-        if archetype in {"athletic_balanced", "compact_light", None}:
-            archetype = "athletic_leg_dominant"
-    
-    elif emphasis in {"glutes", "hips", "lower_curve", "soft"}:
-        if archetype not in {"massive_upper_dominant", "broad_upper_dominant"}:
-            archetype = "soft_curvy"
-    
-    elif emphasis in {"balanced", "overall"}:
-        if archetype == "broad_upper_dominant":
-            archetype = "broad_athletic"
-        elif archetype == "massive_upper_dominant":
-            archetype = "heavy_muscular"
-    
-    if archetype is None:
-        return "slender_tall"
+    if anchor == "runner_silhouette":
+        return "athletic_leg_dominant"
 
-    return archetype
+    if anchor == "heroic_upper":
+        return "broad_upper_dominant"
+
+    if anchor == "balanced_athletic":
+        return "athletic_balanced"
+
+    if anchor == "compact_frame":
+        return "compact_light"
+
+    if anchor == "slender_frame":
+        return "slender_refined"
+
+    # =========================================================
+    # 3. BUILD-BASED FALLBACKS
+    # =========================================================
+
+    if build in {"runner_build", "lower_athletic"}:
+        return "athletic_leg_dominant"
+
+    if build in {"balanced_athletic", "light_athletic"}:
+        return "athletic_balanced"
+
+    if build in {"athletic_muscular"}:
+        return "broad_athletic"
+
+    if build in {"power_build", "broad_heavy", "thick_set", "large_frame"}:
+        if emphasis == "upper_body":
+            return "massive_upper_dominant"
+        return "heavy_muscular"
+
+    # =========================================================
+    # 4. KEYWORD / FINAL REFINEMENT
+    # =========================================================
+
+    if "massive" in keywords:
+        return "massive_upper_dominant"
+
+    if "broad_shoulders" in keywords:
+        return "broad_upper_dominant"
+
+    if "soft" in keywords or "curvy" in keywords:
+        return "soft_curvy"
+
+    # =========================================================
+    # DEFAULT
+    # =========================================================
+
+    return "athletic_balanced"
 
 
 def make_root_image_link(search_root: str | pathlib.Path, filename: str) -> str:

@@ -15,6 +15,14 @@ hide:
 </div>
 
 
+
+## Common Metadata Signals
+
+**Build categories:** heavy_muscular  
+**Anchors:** power_frame  
+**Emphasis:** upper_body, shoulders
+
+
 An extremely large upper-body-dominant silhouette with overwhelming shoulder and torso presence.
 
 ## Characters

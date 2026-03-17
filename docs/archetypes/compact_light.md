@@ -15,6 +15,14 @@ hide:
 </div>
 
 
+
+## Common Metadata Signals
+
+**Build categories:** runner_build, light_athletic  
+**Anchors:** runner_silhouette  
+**Emphasis:** glutes_thighs, legs
+
+
 A smaller, lighter, compact silhouette with grounded proportions and modest width.
 
 ## Characters

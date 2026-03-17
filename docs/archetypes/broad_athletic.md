@@ -15,6 +15,14 @@ hide:
 </div>
 
 
+
+## Common Metadata Signals
+
+**Build categories:** -  
+**Anchors:** -  
+**Emphasis:** -
+
+
 A broad-shouldered athletic silhouette with visible strength but controlled taper.
 
 ## Characters

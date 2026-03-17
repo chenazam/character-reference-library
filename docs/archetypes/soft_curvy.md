@@ -15,6 +15,14 @@ hide:
 </div>
 
 
+
+## Common Metadata Signals
+
+**Build categories:** soft_heavy, soft_slender  
+**Anchors:** hip_dominant_soft  
+**Emphasis:** hips_glutes_thighs
+
+
 A softer silhouette with fuller hips, gentler transitions, and a more rounded lower-body read.
 
 ## Characters

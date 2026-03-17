@@ -15,6 +15,14 @@ hide:
 </div>
 
 
+
+## Common Metadata Signals
+
+**Build categories:** -  
+**Anchors:** -  
+**Emphasis:** -
+
+
 A proportional athletic silhouette with moderate shoulder width and balanced lower body.
 
 ## Characters

@@ -15,6 +15,14 @@ hide:
 </div>
 
 
+
+## Common Metadata Signals
+
+**Build categories:** narrow_slender  
+**Anchors:** glute_slender  
+**Emphasis:** glutes
+
+
 A narrow, elegant, lightly built silhouette with delicate proportions and gentle taper.
 
 ## Characters

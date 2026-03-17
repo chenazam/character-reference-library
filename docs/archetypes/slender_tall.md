@@ -15,6 +15,14 @@ hide:
 </div>
 
 
+
+## Common Metadata Signals
+
+**Build categories:** -  
+**Anchors:** -  
+**Emphasis:** -
+
+
 A vertically elongated, slender silhouette with long lines and minimal mass.
 
 ## Characters

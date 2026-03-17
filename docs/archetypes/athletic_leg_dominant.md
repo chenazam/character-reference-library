@@ -15,6 +15,14 @@ hide:
 </div>
 
 
+
+## Common Metadata Signals
+
+**Build categories:** elongated_slender  
+**Anchors:** runner_silhouette  
+**Emphasis:** legs
+
+
 An athletic silhouette with stronger lower-body emphasis, especially thighs, hips, and glutes.
 
 ## Characters

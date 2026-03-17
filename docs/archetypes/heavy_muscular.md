@@ -15,6 +15,14 @@ hide:
 </div>
 
 
+
+## Common Metadata Signals
+
+**Build categories:** -  
+**Anchors:** -  
+**Emphasis:** -
+
+
 A thick, dense, muscular silhouette with heavy overall mass and reduced taper.
 
 ## Characters

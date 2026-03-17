@@ -15,6 +15,14 @@ hide:
 </div>
 
 
+
+## Common Metadata Signals
+
+**Build categories:** athletic_muscular  
+**Anchors:** power_athlete  
+**Emphasis:** upper_body, shoulders
+
+
 A strongly upper-body-dominant silhouette with wide shoulders and a pronounced V-shape.
 
 ## Characters

@@ -775,3 +775,7 @@
 .archetype-index-card p {
   margin: 0.5rem 0;
 }
+
+.archetype-index-card p:last-child {
+  margin-bottom: 0;
+}

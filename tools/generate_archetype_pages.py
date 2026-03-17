@@ -289,7 +289,7 @@ def main():
             groups_public.setdefault(archetype, []).append(metadata)
     
     for archetype in SILHOUETTE_ARCHETYPES:
-        page = build_archetype_page(archetype, groups.get(archetype, []))
+        page = build_archetype_page(archetype, groups_all.get(archetype, []))
         out_file = OUTPUT_ROOT / f"{archetype}.md"
         out_file.write_text(page, encoding="utf-8")
         print(f"Generated archetype page: {out_file}")

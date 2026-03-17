@@ -131,12 +131,20 @@ def format_top_values(counter: Counter, limit: int = 3) -> str:
     return ", ".join([name for name, _ in most_common])
 
 
-def format_top_values(counter: Counter, limit: int = 3) -> str:
-    if not counter:
-        return "-"
+def build_metadata_signals_section(characters: list[dict]) -> str:
+    signals = summarize_metadata_signals(characters)
 
-    most_common = counter.most_common(limit)
-    return ", ".join([name for name, _ in most_common])
+    builds = format_top_values(signals["builds"])
+    anchors = format_top_values(signals["anchors"])
+    emphasis = format_top_values(signals["emphasis"])
+
+    return f"""
+## Common Metadata Signals
+
+**Build categories:** {builds}  
+**Anchors:** {anchors}  
+**Emphasis:** {emphasis}
+"""
 
 
 def build_archetype_page(archetype: str, characters: list[dict]) -> str:

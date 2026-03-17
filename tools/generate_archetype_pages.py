@@ -207,7 +207,7 @@ def build_index_card(archetype: str, characters: list[dict]) -> str:
     character_links = build_index_character_links(characters)
 
     return f"""<div class="archetype-index-card">
-  <h2><a href="{archetype}.md">{title}</a></h2>
+  <h2><a href="{archetype}">{title}</a></h2>
 
   {preview}
 

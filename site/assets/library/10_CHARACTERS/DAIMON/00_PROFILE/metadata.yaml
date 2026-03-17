@@ -34,7 +34,7 @@ physical:
   limb_profile: thick_limbs
   posture_profile: grounded_stable
   silhouette_anchor: power_frame
-  silhouette_emphasis: shoulders
+  silhouette_emphasis: upper_body
   silhouette_keywords:
   - tall
   - broad

@@ -18,14 +18,16 @@ hide:
 
 ## Common Metadata Signals
 
-**Build categories:** -  
-**Anchors:** -  
-**Emphasis:** -
+**Build categories:** light_athletic  
+**Anchors:** compact_frame  
+**Emphasis:** balanced
 
 
 A smaller, lighter, compact silhouette with grounded proportions and modest width.
 
 ## Characters
 
-_No characters currently mapped to this archetype._
+| Character | Build | Anchor | Emphasis |
+|---|---|---|---|
+| Luca | light_athletic | compact_frame | balanced |
 

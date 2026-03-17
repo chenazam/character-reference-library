@@ -24,7 +24,7 @@ hide:
   </div>
   <div class="comparison-badge">
     <div class="comparison-badge__label">Silhouette Contrast</div>
-    <div class="comparison-badge__value">Runner Silhouette vs Runner Silhouette</div>
+    <div class="comparison-badge__value">Runner Silhouette vs Compact Frame</div>
   </div>
 </div>
 
@@ -72,7 +72,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--b">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--athletic_leg_dominant" style="height: 93.33%"></div>
+      <div class="height-lineup__placeholder height-lineup__placeholder--compact_light" style="height: 93.33%"></div>
     </div>
     <div class="height-lineup__label">Luca</div>
     <div class="height-lineup__meta">168 cm / 5'6</div>

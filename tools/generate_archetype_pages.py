@@ -129,7 +129,28 @@ def build_archetype_page(archetype: str, characters: list[dict]) -> str:
     return "\n".join(lines)
 
 
-def build_index_page(groups: dict[str, list[str]]) -> str:
+def build_index_card(archetype: str, characters: list[dict]) -> str:
+    title = prettify_archetype(archetype)
+    description = ARCHETYPE_DESCRIPTIONS.get(archetype, "")
+    count = len(characters)
+
+    preview = build_archetype_preview(archetype)
+
+    return f"""<div class="archetype-index-card">
+
+## [{title}]({archetype}.md)
+
+{preview}
+
+{description}
+
+**Characters:** {count}
+
+</div>
+"""
+
+
+def build_index_page(groups: dict[str, list[dict]]) -> str:
     lines = [
         "---",
         "hide:",
@@ -140,16 +161,19 @@ def build_index_page(groups: dict[str, list[str]]) -> str:
         "",
         "These pages document the fallback silhouette archetypes used when a character does not yet have a `silhouette_front` asset.",
         "",
-        "## Archetypes",
+        '<div class="archetype-index-grid">',
         "",
     ]
 
     for archetype in SILHOUETTE_ARCHETYPES:
-        title = prettify_archetype(archetype)
-        count = len(groups.get(archetype, []))
-        lines.append(f"- [{title}]({archetype}.md) — {count} character(s)")
+        lines.append(build_index_card(archetype, groups.get(archetype, [])))
+        lines.append("")
 
-    lines.append("")
+    lines.extend([
+        "</div>",
+        "",
+    ])
+
     return "\n".join(lines)
 
 

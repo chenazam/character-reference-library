@@ -50,7 +50,7 @@
 
   <div class="height-lineup__figure height-lineup__figure--a">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--broad_upper_dominant" style="height: 100.00%"></div>
+      <div class="height-lineup__placeholder height-lineup__placeholder--broad_upper_dominant height-lineup__placeholder--elongated" style="height: 100.00%"></div>
     </div>
     <div class="height-lineup__label">Daimon</div>
     <div class="height-lineup__meta">196 cm / 6'5"</div>

@@ -132,6 +132,7 @@ def build_height_context_section(record: dict, metadata: dict) -> str:
         character_figure = build_character_placeholder(
             archetype,
             pct(height_cm),
+            metadata
         )
 
     return f"""## Height Context

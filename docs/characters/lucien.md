@@ -50,7 +50,7 @@
 
   <div class="height-lineup__figure height-lineup__figure--a">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--slender_refined" style="height: 94.44%"></div>
+      <div class="height-lineup__placeholder height-lineup__placeholder--slender_refined height-lineup__placeholder--compact height-lineup__placeholder--glute_emphasis" style="height: 94.44%"></div>
     </div>
     <div class="height-lineup__label">Lucien</div>
     <div class="height-lineup__meta">170 cm / 5'7"</div>

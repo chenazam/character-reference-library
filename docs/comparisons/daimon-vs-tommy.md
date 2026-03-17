@@ -65,7 +65,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--a">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--broad_upper_dominant" style="height: 100.00%"></div>
+      <div class="height-lineup__placeholder height-lineup__placeholder--broad_upper_dominant height-lineup__placeholder--elongated" style="height: 100.00%"></div>
     </div>
     <div class="height-lineup__label">Daimon</div>
     <div class="height-lineup__meta">196 cm / 6'5"</div>
@@ -73,7 +73,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--b">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--soft_curvy" style="height: 89.29%"></div>
+      <div class="height-lineup__placeholder height-lineup__placeholder--soft_curvy height-lineup__placeholder--glute_emphasis" style="height: 89.29%"></div>
     </div>
     <div class="height-lineup__label">Tommy</div>
     <div class="height-lineup__meta">175 cm / 5'9"</div>

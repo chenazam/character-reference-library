@@ -130,7 +130,7 @@ def build_chart(characters: list[dict]) -> str:
                 pct(height),
             )
         else:
-            body = build_character_placeholder(archetype, pct(height))
+            body = build_character_placeholder(archetype, pct(height), c)
 
         figures.append(
             f"""

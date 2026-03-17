@@ -48,6 +48,39 @@ def extract_silhouette_signals(meta: dict) -> dict:
     }
 
 
+
+def get_archetype_modifiers(meta: dict) -> list[str]:
+    mods = []
+
+    physical = meta.get("physical", {})
+
+    height = physical.get("height_cm", 175)
+    frame = physical.get("frame_proportion", "")
+    softness = physical.get("body_softness_distribution", "")
+    keywords = set(physical.get("silhouette_keywords", []))
+
+    # --- elongated ---
+    if height >= 178 or "long-limbed" in keywords:
+        mods.append("elongated")
+
+    # --- compact ---
+    if height <= 170 or frame == "compact_frame":
+        mods.append("compact")
+
+    # --- glute emphasis ---
+    if "glute_emphasis" in keywords:
+        mods.append("glute_emphasis")
+
+    # --- dense (heavy mass, not just muscular) ---
+    if (
+        "heavy_set" in keywords
+        or physical.get("build_category") in {"heavy_muscular", "thick_set"}
+    ):
+        mods.append("dense")
+
+    return mods
+
+
 def fallback_proportion_archetype(meta: dict) -> str:
     s = extract_silhouette_signals(meta)
 
@@ -217,10 +250,19 @@ def build_reference_placeholder(height_pct: float) -> str:
     )
 
 
-def build_character_placeholder(archetype: str, height_pct: float) -> str:
+def build_character_placeholder(archetype: str, height_pct: float, meta: dict | None = None) -> str:
+    modifier_classes = ""
+
+    if meta is not None:
+        modifiers = get_archetype_modifiers(meta)
+        if modifiers:
+            modifier_classes = " " + " ".join(
+                f"height-lineup__placeholder--{m}" for m in modifiers
+            )
+
     return (
         f'<div class="height-lineup__placeholder '
-        f'height-lineup__placeholder--{archetype}" '
+        f'height-lineup__placeholder--{archetype}{modifier_classes}" '
         f'style="height: {height_pct:.2f}%"></div>'
     )
 

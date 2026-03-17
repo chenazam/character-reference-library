@@ -260,11 +260,13 @@ def build_height_chart_section(
     imperial_a: str,
     silhouette_front_a: str,
     archetype_a: str,
+    meta_a: dict,
     name_b: str,
     height_b: int,
     imperial_b: str,
     silhouette_front_b: str,
     archetype_b: str,
+    meta_b: dict,
     reference_silhouette: str,
 ) -> str:
     max_height = max(height_a, height_b, 180)
@@ -304,29 +306,19 @@ def build_height_chart_section(
         )
 
     if use_silhouettes:
-        figure_a = (
-            f'<img class="height-lineup__silhouette" '
-            f'src="{silhouette_front_a}" '
-            f'alt="{name_a} silhouette front" '
-            f'style="height: {a_pct:.2f}%;">'
+        figure_a = build_silhouette_img(
+            silhouette_front_a,
+            f"{name_a} silhouette front",
+            a_pct,
         )
-        figure_b = (
-            f'<img class="height-lineup__silhouette" '
-            f'src="{silhouette_front_b}" '
-            f'alt="{name_b} silhouette front" '
-            f'style="height: {b_pct:.2f}%;">'
+        figure_b = build_silhouette_img(
+            silhouette_front_b,
+            f"{name_b} silhouette front",
+            b_pct,
         )
     else:
-        figure_a = (
-            f'<div class="height-lineup__placeholder '
-            f'height-lineup__placeholder--{archetype_a}" '
-            f'style="height: {a_pct:.2f}%"></div>'
-        )
-        figure_b = (
-            f'<div class="height-lineup__placeholder '
-            f'height-lineup__placeholder--{archetype_b}" '
-            f'style="height: {b_pct:.2f}%"></div>'
-        )
+        figure_a = build_character_placeholder(archetype_a, a_pct, meta_a)
+        figure_b = build_character_placeholder(archetype_b, b_pct, meta_b)
 
     tick_step = 10
     tick_start = (max_height // tick_step) * tick_step
@@ -551,11 +543,13 @@ def build_markdown(
         imperial_a,
         refs_a.get("silhouette_front", ""),
         archetype_a,
+        meta_a,
         name_b,
         height_b,
         imperial_b,
         refs_b.get("silhouette_front", ""),
         archetype_b,
+        meta_b,
         reference_silhouette,
     )
 

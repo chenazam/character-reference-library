@@ -20,7 +20,7 @@ hide:
   </div>
   <div class="comparison-badge">
     <div class="comparison-badge__label">Build Contrast</div>
-    <div class="comparison-badge__value">Heavy Muscular vs Elongated Slender</div>
+    <div class="comparison-badge__value">Heavy Muscular vs Lower Athletic</div>
   </div>
   <div class="comparison-badge">
     <div class="comparison-badge__label">Silhouette Contrast</div>
@@ -73,7 +73,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--b">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--slender_tall" style="height: 92.23%"></div>
+      <div class="height-lineup__placeholder height-lineup__placeholder--athletic_leg_dominant" style="height: 92.23%"></div>
     </div>
     <div class="height-lineup__label">Jonah</div>
     <div class="height-lineup__meta">178 cm / 5'10"</div>
@@ -84,7 +84,7 @@ hide:
 
 **Danny** and **Jonah** show a **Noticeable height contrast**, with **Danny** standing **15 cm** taller than **Jonah**.
 
-In terms of build, **Danny** reads as **Heavy Muscular**, while **Jonah** reads as **Elongated Slender**.
+In terms of build, **Danny** reads as **Heavy Muscular**, while **Jonah** reads as **Lower Athletic**.
 
 Their design language also differs strongly: **Danny** is rooted in a **Rugged Utilitarian** aesthetic, while **Jonah** is defined more by **Playful Athletic** styling.
 

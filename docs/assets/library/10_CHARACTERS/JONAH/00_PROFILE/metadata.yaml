@@ -19,7 +19,7 @@ core_identity:
 physical:
   height_cm: 178
   height_imperial: 5'10"
-  build_category: elongated_slender
+  build_category: lower_athletic
   build_notes: Lean athletic build with long natural proportions, moderate visible
     tone, and an elegant elongated silhouette.
   shoulder_profile: moderate_shoulders
@@ -29,7 +29,6 @@ physical:
   silhouette_anchor: runner_silhouette
   silhouette_emphasis: legs
   silhouette_keywords:
-  - slender
   - long-limbed
   - elegant
   - athletic

@@ -20,7 +20,7 @@ hide:
   </div>
   <div class="comparison-badge">
     <div class="comparison-badge__label">Build Contrast</div>
-    <div class="comparison-badge__value">Elongated Slender vs Light Athletic</div>
+    <div class="comparison-badge__value">Lower Athletic vs Light Athletic</div>
   </div>
   <div class="comparison-badge">
     <div class="comparison-badge__label">Silhouette Contrast</div>
@@ -64,7 +64,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--a">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--slender_tall" style="height: 98.89%"></div>
+      <div class="height-lineup__placeholder height-lineup__placeholder--athletic_leg_dominant" style="height: 98.89%"></div>
     </div>
     <div class="height-lineup__label">Jonah</div>
     <div class="height-lineup__meta">178 cm / 5'10"</div>
@@ -83,7 +83,7 @@ hide:
 
 **Jonah** and **Luca** show a **Noticeable height contrast**, with **Jonah** standing **10 cm** taller than **Luca**.
 
-In terms of build, **Jonah** reads as **Elongated Slender**, while **Luca** reads as **Light Athletic**.
+In terms of build, **Jonah** reads as **Lower Athletic**, while **Luca** reads as **Light Athletic**.
 
 Their design language also differs strongly: **Jonah** is rooted in a **Playful Athletic** aesthetic, while **Luca** is defined more by **Domestic Soft** styling.
 

@@ -42,7 +42,7 @@ hide:
 
 <div class="height-lineup__figure">
   <div class="height-lineup__stage">
-    <div class="height-lineup__placeholder height-lineup__placeholder--slender_tall" style="height: 92.23%"></div>
+    <div class="height-lineup__placeholder height-lineup__placeholder--athletic_leg_dominant" style="height: 92.23%"></div>
   </div>
   <div class="height-lineup__label">Jonah</div>
   <div class="height-lineup__meta">178 cm / 5'10"</div>

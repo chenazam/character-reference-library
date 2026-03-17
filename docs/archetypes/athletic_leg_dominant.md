@@ -18,9 +18,9 @@ hide:
 
 ## Common Metadata Signals
 
-**Build categories:** runner_build, elongated_slender  
+**Build categories:** elongated_slender  
 **Anchors:** runner_silhouette  
-**Emphasis:** glutes_thighs, legs
+**Emphasis:** legs
 
 
 An athletic silhouette with stronger lower-body emphasis, especially thighs, hips, and glutes.
@@ -29,6 +29,5 @@ An athletic silhouette with stronger lower-body emphasis, especially thighs, hip
 
 | Character | Build | Anchor | Emphasis |
 |---|---|---|---|
-| Jasper | runner_build | runner_silhouette | glutes_thighs |
 | Jonah | elongated_slender | runner_silhouette | legs |
 

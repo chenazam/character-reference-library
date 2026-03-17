@@ -18,17 +18,14 @@ hide:
 
 ## Common Metadata Signals
 
-**Build categories:** narrow_slender, soft_slender  
-**Anchors:** glute_slender, hip_dominant_soft  
-**Emphasis:** glutes, hips_glutes_thighs
+**Build categories:** -  
+**Anchors:** -  
+**Emphasis:** -
 
 
 A proportional athletic silhouette with moderate shoulder width and balanced lower body.
 
 ## Characters
 
-| Character | Build | Anchor | Emphasis |
-|---|---|---|---|
-| Lucien | narrow_slender | glute_slender | glutes |
-| Tommy | soft_slender | hip_dominant_soft | hips_glutes_thighs |
+_No characters currently mapped to this archetype._
 

@@ -88,8 +88,13 @@ def fallback_proportion_archetype(meta: dict) -> str:
             return "athletic_leg_dominant"
         return "compact_light"
 
-    # --- SOFT / CURVY ---
-    if build in {"soft_heavy", "soft_curvy"}:
+    # --- SOFT / CURVY FAMILY ---
+    if (
+        build in {"soft_heavy", "soft_curvy", "soft_slender"}
+        or anchor == "hip_dominant_soft"
+        or emphasis in {"hips_glutes_thighs", "lower_body_soft"}
+        or "glute_emphasis" in keywords
+    ):
         return "soft_curvy"
 
     # =========================================================

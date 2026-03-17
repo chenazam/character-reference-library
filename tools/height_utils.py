@@ -91,15 +91,24 @@ def fallback_proportion_archetype(meta: dict) -> str:
     # --- SOFT / CURVY FAMILY ---
     soft_build = build in {"soft_heavy", "soft_curvy", "soft_slender"}
     soft_anchor = anchor == "hip_dominant_soft"
-    soft_distribution = get_nested(meta, "physical", "body_softness_distribution", default="") in {
+
+    soft_distribution = get_nested(
+        meta, "physical", "body_softness_distribution", default=""
+    ) in {
         "soft_lower_body",
-        "glute_dominant",
         "balanced_softness",
     }
-    lower_curve_emphasis = emphasis in {"hips_glutes_thighs", "lower_body_soft"}
-    lower_curve_keywords = bool({"glute_emphasis", "hip_dominant", "curvy"} & keywords)
 
-    if (soft_build or soft_anchor or soft_distribution) and (lower_curve_emphasis or lower_curve_keywords):
+    full_lower_emphasis = emphasis in {
+        "hips_glutes_thighs",
+        "lower_body_soft",
+        "hips",
+        "hips_glutes",
+    }
+
+    soft_curve_keywords = bool({"hip_dominant", "curvy"} & keywords)
+
+    if (soft_build or soft_anchor or soft_distribution) and (full_lower_emphasis or soft_curve_keywords):
         return "soft_curvy"
 
     # =========================================================

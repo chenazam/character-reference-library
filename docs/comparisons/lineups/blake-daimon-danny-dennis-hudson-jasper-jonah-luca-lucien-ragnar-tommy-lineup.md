@@ -90,7 +90,7 @@ hide:
 
 <div class="height-lineup__figure">
   <div class="height-lineup__stage">
-    <div class="height-lineup__placeholder height-lineup__placeholder--soft_curvy" style="height: 81.73%"></div>
+    <div class="height-lineup__placeholder height-lineup__placeholder--athletic_leg_dominant" style="height: 81.73%"></div>
   </div>
   <div class="height-lineup__label">Jasper</div>
   <div class="height-lineup__meta">170 cm / 5'7"</div>
@@ -98,7 +98,7 @@ hide:
 
 <div class="height-lineup__figure">
   <div class="height-lineup__stage">
-    <div class="height-lineup__placeholder height-lineup__placeholder--soft_curvy" style="height: 81.73%"></div>
+    <div class="height-lineup__placeholder height-lineup__placeholder--athletic_balanced" style="height: 81.73%"></div>
   </div>
   <div class="height-lineup__label">Lucien</div>
   <div class="height-lineup__meta">170 cm / 5'7"</div>

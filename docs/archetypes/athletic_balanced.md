@@ -18,14 +18,16 @@ hide:
 
 ## Common Metadata Signals
 
-**Build categories:** -  
-**Anchors:** -  
-**Emphasis:** -
+**Build categories:** narrow_slender  
+**Anchors:** glute_slender  
+**Emphasis:** glutes
 
 
 A proportional athletic silhouette with moderate shoulder width and balanced lower body.
 
 ## Characters
 
-_No characters currently mapped to this archetype._
+| Character | Build | Anchor | Emphasis |
+|---|---|---|---|
+| Lucien | narrow_slender | glute_slender | glutes |
 

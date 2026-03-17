@@ -73,7 +73,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--b">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--slender_refined" style="height: 89.29%"></div>
+      <div class="height-lineup__placeholder height-lineup__placeholder--soft_curvy" style="height: 89.29%"></div>
     </div>
     <div class="height-lineup__label">Tommy</div>
     <div class="height-lineup__meta">175 cm / 5'9"</div>

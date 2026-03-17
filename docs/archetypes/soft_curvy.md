@@ -19,4 +19,5 @@ A softer silhouette with fuller hips, gentler transitions, and a more rounded lo
 
 ## Characters
 
-_No characters currently mapped to this archetype._
+- Dennis
+- Tommy

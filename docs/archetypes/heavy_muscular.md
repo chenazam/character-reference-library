@@ -19,4 +19,4 @@ A thick, dense, muscular silhouette with heavy overall mass and reduced taper.
 
 ## Characters
 
-- Dennis
+_No characters currently mapped to this archetype._

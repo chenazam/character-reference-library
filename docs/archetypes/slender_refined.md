@@ -20,4 +20,3 @@ A narrow, elegant, lightly built silhouette with delicate proportions and gentle
 ## Characters
 
 - Lucien
-- Tommy

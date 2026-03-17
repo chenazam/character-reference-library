@@ -293,6 +293,7 @@
   align-items: center;
   position: relative;
   z-index: 1;
+  min-width: 0;
 }
 
 .height-lineup__figure--ref {
@@ -308,14 +309,15 @@
 }
 
 .height-lineup__stage {
-  width: 100%;
-  max-width: 260px;
+  width: 180px;
+  max-width: 100%;
   height: var(--lineup-stage-height);
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
   position: relative;
+  overflow: hidden;
 }
 
 .height-lineup__label {
@@ -332,11 +334,13 @@
 }
 
 .height-lineup__silhouette {
-  max-width: 100%;
-  width: auto;
-  object-fit: contain;
-  object-position: bottom center;
   display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center bottom;
+  flex: 0 0 auto;
 }
 
 .height-lineup__silhouette--reference {
@@ -347,24 +351,20 @@
    SILHOUETTE MODIFIERS
    ========================= */
 
-/* Taller / elongated */
-.silhouette--elongated {
-  transform: scaleY(1.08);
+.height-lineup__placeholder--elongated {
+  --sil-scale-y: 1.08;
 }
 
-/* Shorter / compact */
-.silhouette--compact {
-  transform: scaleY(0.92);
+.height-lineup__placeholder--compact {
+  --sil-scale-y: 0.92;
 }
 
-/* Glute emphasis (subtle lower widening) */
-.silhouette--glute_emphasis {
-  border-radius: 45% 45% 55% 55% / 40% 40% 65% 65%;
+.height-lineup__placeholder--glute_emphasis {
+  --sil-scale-x: 1.04;
 }
 
-/* Dense / thick mass */
-.silhouette--dense {
-  transform: scaleX(1.08);
+.height-lineup__placeholder--dense {
+  --sil-scale-x: 1.08;
 }
 
 .height-lineup__placeholder {

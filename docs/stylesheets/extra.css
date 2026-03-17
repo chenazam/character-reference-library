@@ -309,15 +309,14 @@
 }
 
 .height-lineup__stage {
-  width: 180px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 260px;
   height: var(--lineup-stage-height);
   display: flex;
   align-items: flex-end;
   justify-content: center;
   padding: 0 0.5rem;
   position: relative;
-  overflow: hidden;
 }
 
 .height-lineup__label {
@@ -336,7 +335,7 @@
 .height-lineup__silhouette {
   display: block;
   width: auto;
-  max-width: 100%;
+  max-width: none;
   height: auto;
   object-fit: contain;
   object-position: center bottom;

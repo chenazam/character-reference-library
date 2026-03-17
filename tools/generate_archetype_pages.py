@@ -191,7 +191,7 @@ def build_index_character_links(characters: list[dict]) -> str:
         name = c.get("name", c.get("slug", "Unknown"))
         slug = c.get("slug", "")
         if slug:
-            links.append(f'<a href="../characters/{slug}.md">{name}</a>')
+            links.append(f'<a href="../characters/{slug}">{name}</a>')
         else:
             links.append(name)
 

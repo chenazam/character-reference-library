@@ -39,9 +39,10 @@ def get_nested(data: dict, *keys, default=""):
 
 
 def fallback_proportion_archetype(meta: dict) -> str:
+    height_cm = get_nested(meta, "physical", "height_cm", default=0)
+    build = get_nested(meta, "physical", "build_category", default="")
     anchor = get_nested(meta, "physical", "silhouette_anchor", default="")
     emphasis = get_nested(meta, "physical", "silhouette_emphasis", default="")
-    build = get_nested(meta, "physical", "build_category", default="")
     keywords = set(get_nested(meta, "physical", "silhouette_keywords", default=[]) or [])
 
     anchor = str(anchor or "").strip()
@@ -49,9 +50,7 @@ def fallback_proportion_archetype(meta: dict) -> str:
     build = str(build or "").strip()
     keywords = {str(k).strip() for k in keywords if str(k).strip()}
 
-    height_cm = meta.get("height_cm")
-    build = meta.get("build_category", "")
-
+    
     if anchor == "power_frame":
         return "massive_upper_dominant"
 
@@ -89,9 +88,11 @@ def fallback_proportion_archetype(meta: dict) -> str:
     elif build in {"runner_build", "lower_athletic"}:
         archetype = "athletic_leg_dominant"
     elif build in {"compact_athletic"}:
-        archetype = "compact_light"
+        if emphasis in {"legs", "lower_body"} or "leg_dominant" in keywords:
+            return "athletic_leg_dominant"
+        return "compact_light"
 
-        # --- MUSCULAR / HEAVY TYPES (REFINED) ---
+    # --- MUSCULAR / HEAVY TYPES (REFINED) ---
 
     if build in {"heavy_muscular"}:
         # Distinguish Danny vs Ragnar

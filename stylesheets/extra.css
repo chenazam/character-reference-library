@@ -361,206 +361,186 @@
 
 .height-lineup__placeholder--slender_refined {
   width: 78px;
-  clip-path: polygon(
-    43% 0%,
-    57% 0%,
-    62% 7%,
-    62% 19%,
-    69% 33%,
-    66% 100%,
-    55% 100%,
-    52% 58%,
-    48% 58%,
-    45% 100%,
-    34% 100%,
-    31% 33%,
-    38% 19%,
-    38% 7%
-  );
+  clip-path: polygon(43% 0%,
+      57% 0%,
+      62% 7%,
+      62% 19%,
+      69% 33%,
+      66% 100%,
+      55% 100%,
+      52% 58%,
+      48% 58%,
+      45% 100%,
+      34% 100%,
+      31% 33%,
+      38% 19%,
+      38% 7%);
 }
 
 .height-lineup__placeholder--slender_tall {
   width: 76px;
-  clip-path: polygon(
-    43% 0%,
-    57% 0%,
-    61% 6%,
-    61% 17%,
-    68% 30%,
-    65% 100%,
-    55% 100%,
-    52% 54%,
-    48% 54%,
-    45% 100%,
-    35% 100%,
-    32% 30%,
-    39% 17%,
-    39% 6%
-  );
+  clip-path: polygon(43% 0%,
+      57% 0%,
+      61% 6%,
+      61% 17%,
+      68% 30%,
+      65% 100%,
+      55% 100%,
+      52% 54%,
+      48% 54%,
+      45% 100%,
+      35% 100%,
+      32% 30%,
+      39% 17%,
+      39% 6%);
 }
 
 .height-lineup__placeholder--compact_light {
   width: 90px;
-  clip-path: polygon(
-    40% 0%,
-    60% 0%,
-    67% 8%,
-    67% 22%,
-    77% 36%,
-    72% 100%,
-    57% 100%,
-    54% 63%,
-    46% 63%,
-    43% 100%,
-    28% 100%,
-    23% 36%,
-    33% 22%,
-    33% 8%
-  );
+  clip-path: polygon(40% 0%,
+      60% 0%,
+      67% 8%,
+      67% 22%,
+      77% 36%,
+      72% 100%,
+      57% 100%,
+      54% 63%,
+      46% 63%,
+      43% 100%,
+      28% 100%,
+      23% 36%,
+      33% 22%,
+      33% 8%);
 }
 
 .height-lineup__placeholder--athletic_balanced {
   width: 100px;
-  clip-path: polygon(
-    40% 0%,
-    60% 0%,
-    67% 8%,
-    67% 20%,
-    79% 35%,
-    72% 100%,
-    57% 100%,
-    54% 62%,
-    46% 62%,
-    43% 100%,
-    28% 100%,
-    21% 35%,
-    33% 20%,
-    33% 8%
-  );
+  clip-path: polygon(40% 0%,
+      60% 0%,
+      67% 8%,
+      67% 20%,
+      79% 35%,
+      72% 100%,
+      57% 100%,
+      54% 62%,
+      46% 62%,
+      43% 100%,
+      28% 100%,
+      21% 35%,
+      33% 20%,
+      33% 8%);
 }
 
 .height-lineup__placeholder--athletic_leg_dominant {
   width: 102px;
-  clip-path: polygon(
-    41% 0%,
-    59% 0%,
-    66% 8%,
-    66% 20%,
-    75% 32%,
-    72% 46%,
-    69% 100%,
-    57% 100%,
-    54% 58%,
-    46% 58%,
-    43% 100%,
-    31% 100%,
-    28% 46%,
-    25% 32%,
-    34% 20%,
-    34% 8%
-  );
+  clip-path: polygon(41% 0%,
+      59% 0%,
+      66% 8%,
+      66% 20%,
+      75% 32%,
+      72% 46%,
+      69% 100%,
+      57% 100%,
+      54% 58%,
+      46% 58%,
+      43% 100%,
+      31% 100%,
+      28% 46%,
+      25% 32%,
+      34% 20%,
+      34% 8%);
 }
 
 .height-lineup__placeholder--broad_athletic {
   width: 116px;
-  clip-path: polygon(
-    39% 0%,
-    61% 0%,
-    70% 8%,
-    70% 20%,
-    83% 35%,
-    75% 100%,
-    58% 100%,
-    55% 63%,
-    45% 63%,
-    42% 100%,
-    25% 100%,
-    17% 35%,
-    30% 20%,
-    30% 8%
-  );
+  clip-path: polygon(39% 0%,
+      61% 0%,
+      70% 8%,
+      70% 20%,
+      83% 35%,
+      75% 100%,
+      58% 100%,
+      55% 63%,
+      45% 63%,
+      42% 100%,
+      25% 100%,
+      17% 35%,
+      30% 20%,
+      30% 8%);
 }
 
 .height-lineup__placeholder--broad_upper_dominant {
   width: 124px;
-  clip-path: polygon(
-    39% 0%,
-    61% 0%,
-    71% 8%,
-    71% 19%,
-    87% 33%,
-    77% 100%,
-    58% 100%,
-    55% 65%,
-    45% 65%,
-    42% 100%,
-    23% 100%,
-    13% 33%,
-    29% 19%,
-    29% 8%
-  );
+  clip-path: polygon(39% 0%,
+      61% 0%,
+      71% 8%,
+      71% 19%,
+      87% 33%,
+      77% 100%,
+      58% 100%,
+      55% 65%,
+      45% 65%,
+      42% 100%,
+      23% 100%,
+      13% 33%,
+      29% 19%,
+      29% 8%);
 }
 
 .height-lineup__placeholder--heavy_muscular {
   width: 136px;
-  clip-path: polygon(
-    38% 0%,
-    62% 0%,
-    71% 8%,
-    71% 20%,
-    86% 37%,
-    78% 100%,
-    59% 100%,
-    56% 66%,
-    44% 66%,
-    41% 100%,
-    22% 100%,
-    14% 37%,
-    29% 20%,
-    29% 8%
-  );
+  clip-path: polygon(38% 0%,
+      62% 0%,
+      71% 8%,
+      71% 20%,
+      86% 37%,
+      78% 100%,
+      59% 100%,
+      56% 66%,
+      44% 66%,
+      41% 100%,
+      22% 100%,
+      14% 37%,
+      29% 20%,
+      29% 8%);
 }
 
 .height-lineup__placeholder--massive_upper_dominant {
   width: 148px;
-  clip-path: polygon(
-    38% 0%,
-    62% 0%,
-    72% 8%,
-    72% 19%,
-    90% 34%,
-    80% 100%,
-    59% 100%,
-    56% 67%,
-    44% 67%,
-    41% 100%,
-    20% 100%,
-    10% 34%,
-    28% 19%,
-    28% 8%
-  );
+  clip-path: polygon(38% 0%,
+      62% 0%,
+      72% 8%,
+      72% 19%,
+      90% 34%,
+      80% 100%,
+      59% 100%,
+      56% 67%,
+      44% 67%,
+      41% 100%,
+      20% 100%,
+      10% 34%,
+      28% 19%,
+      28% 8%);
 }
 
 .height-lineup__placeholder--soft_curvy {
   width: 98px;
-  clip-path: polygon(
-    42% 0%,
-    58% 0%,
-    65% 8%,
-    65% 20%,
-    72% 32%,
-    71% 46%,
-    68% 100%,
-    57% 100%,
-    54% 58%,
-    46% 58%,
-    43% 100%,
-    32% 100%,
-    29% 46%,
-    28% 32%,
-    35% 20%,
-    35% 8%
-  );
+  clip-path: polygon(42% 0%,
+      58% 0%,
+      65% 8%,
+      65% 20%,
+      72% 32%,
+      71% 46%,
+      68% 100%,
+      57% 100%,
+      54% 58%,
+      46% 58%,
+      43% 100%,
+      32% 100%,
+      29% 46%,
+      28% 32%,
+      35% 20%,
+      35% 8%);
 }
 
 /* compact lineup mode overrides */
@@ -610,10 +590,8 @@
    ========================================================= */
 
 .height-lineup--multi {
-  grid-template-columns: var(--lineup-tick-column) repeat(
-      auto-fit,
-      minmax(140px, 1fr)
-    );
+  grid-template-columns: var(--lineup-tick-column) repeat(auto-fit,
+      minmax(140px, 1fr));
 }
 
 .height-lineup__spacer {
@@ -623,7 +601,7 @@
   pointer-events: none;
 }
 
-.height-lineup--multi > .height-lineup__figure {
+.height-lineup--multi>.height-lineup__figure {
   grid-column: auto;
 }
 
@@ -764,4 +742,36 @@
 .height-lineup--archetype-doc .height-lineup__label,
 .height-lineup--archetype-doc .height-lineup__meta {
   display: none;
+}
+
+/* =========================================================
+   Archetype index
+   ========================================================= */
+
+.archetype-index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.archetype-index-card {
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  background: var(--md-code-bg-color);
+}
+
+.archetype-index-card h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.archetype-index-card .height-lineup--archetype-doc {
+  margin: 0.5rem 0 1rem;
+}
+
+.archetype-index-card p {
+  margin: 0.5rem 0;
 }

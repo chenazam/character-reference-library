@@ -109,3 +109,17 @@ Their emotional presentation also differs: **Danny** feels **Open Warm**, while 
   </div>
 </div>
 
+## Available References
+
+<div class="comparison-grid comparison-grid-2">
+
+  <div class="comparison-item">
+    <div class="comparison-label">Danny — Body Anchor</div>
+    <img src="../../assets/library/10_CHARACTERS/DANNY/02_BODY/structure/danny_body_anchor_v1.png" alt="Danny Body Anchor">
+  </div>
+  <div class="comparison-item">
+    <div class="comparison-label">Danny — Silhouette Sheet</div>
+    <img src="../../assets/library/10_CHARACTERS/DANNY/02_BODY/structure/danny_silhouette_sheet_v1.png" alt="Danny Silhouette Sheet">
+  </div>
+</div>
+

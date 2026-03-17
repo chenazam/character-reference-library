@@ -92,6 +92,19 @@ In motion, **Danny** reads as **Grounded Powerful**, whereas **Jonah** feels mor
 
 Their body language pushes this contrast further: **Danny** appears **Calm Composed**, while **Jonah** appears **Open Confident**.
 
+## Body Anchor Comparison
+
+<div class="comparison-grid comparison-grid-2">
+  <div class="comparison-item">
+    <div class="comparison-label">Danny</div>
+    <img src="../../assets/library/10_CHARACTERS/DANNY/02_BODY/structure/danny_body_anchor_v1.png" alt="Danny Body Anchor Comparison">
+  </div>
+  <div class="comparison-item">
+    <div class="comparison-label">Jonah</div>
+    <img src="../../assets/library/10_CHARACTERS/JONAH/00_SOURCE_REFERENCES/body/jonah_body_anchor.png" alt="Jonah Body Anchor Comparison">
+  </div>
+</div>
+
 ## Anatomy Sheet Comparison
 
 <div class="comparison-grid comparison-grid-2">
@@ -110,8 +123,8 @@ Their body language pushes this contrast further: **Danny** appears **Calm Compo
 <div class="comparison-grid comparison-grid-2">
 
   <div class="comparison-item">
-    <div class="comparison-label">Jonah — Body Anchor</div>
-    <img src="../../assets/library/10_CHARACTERS/JONAH/00_SOURCE_REFERENCES/body/jonah_body_anchor.png" alt="Jonah Body Anchor">
+    <div class="comparison-label">Danny — Silhouette Sheet</div>
+    <img src="../../assets/library/10_CHARACTERS/DANNY/02_BODY/structure/danny_silhouette_sheet_v1.png" alt="Danny Silhouette Sheet">
   </div>
 </div>
 

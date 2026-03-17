@@ -18,14 +18,17 @@ hide:
 
 ## Common Metadata Signals
 
-**Build categories:** -  
-**Anchors:** -  
-**Emphasis:** -
+**Build categories:** runner_build, light_athletic  
+**Anchors:** runner_silhouette  
+**Emphasis:** glutes_thighs, legs
 
 
 A smaller, lighter, compact silhouette with grounded proportions and modest width.
 
 ## Characters
 
-_No characters currently mapped to this archetype._
+| Character | Build | Anchor | Emphasis |
+|---|---|---|---|
+| Jasper | runner_build | runner_silhouette | glutes_thighs |
+| Luca | light_athletic | runner_silhouette | legs |
 

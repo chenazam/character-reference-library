@@ -18,14 +18,16 @@ hide:
 
 ## Common Metadata Signals
 
-**Build categories:** -  
-**Anchors:** -  
-**Emphasis:** -
+**Build categories:** elongated_slender  
+**Anchors:** runner_silhouette  
+**Emphasis:** legs
 
 
 An athletic silhouette with stronger lower-body emphasis, especially thighs, hips, and glutes.
 
 ## Characters
 
-_No characters currently mapped to this archetype._
+| Character | Build | Anchor | Emphasis |
+|---|---|---|---|
+| Jonah | elongated_slender | runner_silhouette | legs |
 

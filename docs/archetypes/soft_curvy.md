@@ -18,14 +18,17 @@ hide:
 
 ## Common Metadata Signals
 
-**Build categories:** -  
-**Anchors:** -  
-**Emphasis:** -
+**Build categories:** soft_heavy, soft_slender  
+**Anchors:** hip_dominant_soft  
+**Emphasis:** hips_glutes_thighs
 
 
 A softer silhouette with fuller hips, gentler transitions, and a more rounded lower-body read.
 
 ## Characters
 
-_No characters currently mapped to this archetype._
+| Character | Build | Anchor | Emphasis |
+|---|---|---|---|
+| Dennis | soft_heavy | hip_dominant_soft | hips_glutes_thighs |
+| Tommy | soft_slender | hip_dominant_soft | hips_glutes_thighs |
 

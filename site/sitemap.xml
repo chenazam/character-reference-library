@@ -296,6 +296,21 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/face-panel-framing-block/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/face-panel-output-requirements/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/face-panel-rendering-neutral/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/global-style-block/</loc>
          <lastmod>2026-03-18</lastmod>
          <changefreq>daily</changefreq>
@@ -391,6 +406,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/front-face-reference_v4/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/gallery-image/</loc>
          <lastmod>2026-03-18</lastmod>
          <changefreq>daily</changefreq>
@@ -406,6 +426,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/profile-face-reference-v4/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/profile-face-reference/</loc>
          <lastmod>2026-03-18</lastmod>
          <changefreq>daily</changefreq>
@@ -417,6 +442,11 @@
     </url>
     <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/profile-face-reference_v3/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/three-quarter-face-reference-v4/</loc>
          <lastmod>2026-03-18</lastmod>
          <changefreq>daily</changefreq>
     </url>

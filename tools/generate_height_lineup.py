@@ -103,6 +103,7 @@ def build_chart(characters: list[dict]) -> str:
     else:
         reference_figure = build_reference_placeholder(pct(reference_height))
 
+    lineup_count = len(characters) + 1
     figures = [
         f"""
 <div class="height-lineup__figure">
@@ -148,7 +149,7 @@ def build_chart(characters: list[dict]) -> str:
 
     return f"""
 <div class="height-lineup__scroll">
-<div class="{lineup_classes}">
+<div class="{lineup_classes}" style="--lineup-count: {lineup_count};">
 
   <div class="height-lineup__ticks" aria-hidden="true">
     {"".join(ticks)}

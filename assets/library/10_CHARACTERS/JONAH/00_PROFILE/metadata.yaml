@@ -85,12 +85,12 @@ identity_rules:
 reference_files:
   face_anchor: jonah_face_anchor_v1.png
   anatomy_sheet: jonah_anatomy_sheet_v1.png
-  body_anchor: jonah_body_anchor.png
+  body_anchor: jonah_body_anchor_v1.png
   ultimate_character_sheet: ''
   signature_outfit_sheet: ''
-  silhouette_sheet: ''
+  silhouette_sheet: jonah_silhouette_sheet_v1.png
   turnaround_sheet: jonah_turnaround_sheet.png
-  silhouette_front: ''
+  silhouette_front: jonah_silhouette_front_v1.png
 pipeline_status:
   face_anchor: complete
   hair_sheet: complete
@@ -98,7 +98,7 @@ pipeline_status:
   proportion_grid: not_started
   muscle_tension: not_started
   body_anchor: complete
-  silhouette_sheet: not_started
+  silhouette_sheet: complete
   turnaround_sheet: complete
   expression_sheet: complete
   hand_sheet: complete
@@ -119,6 +119,6 @@ pipeline_status:
   scene_anchor: not_started
   dynamic_pose: not_started
   final_ucs: not_started
-  silhouette_front: not_started
+  silhouette_front: complete
 notes: ''
 last_updated: 2026-03-13

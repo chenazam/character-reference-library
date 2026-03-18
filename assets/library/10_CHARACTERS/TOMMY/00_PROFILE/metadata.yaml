@@ -17,8 +17,8 @@ core_identity:
   - domestic_soft
   - romantic
 physical:
-  height_cm: 175
-  height_imperial: 5'9"
+  height_cm: 172
+  height_imperial: 5'8"
   height_visual_category: medium
   build_category: soft_slender
   frame_proportion: hip_dominant

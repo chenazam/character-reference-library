@@ -1,0 +1,73 @@
+# Identity Guardrails — [CHARACTER_NAME]
+
+These rules define traits that must remain consistent when generating images of [CHARACTER_NAME].
+
+## Core Physical Identity
+
+Always preserve:
+
+- [HEIGHT AND BODY SCALE]
+- [GENERAL BUILD DESCRIPTION]
+- [SHOULDER WIDTH]
+- [LIMB PROPORTIONS]
+- [OVERALL BODY MASS / SILHOUETTE]
+
+Avoid:
+
+- [UNWANTED BODY TYPE]
+- [INCORRECT PROPORTIONS]
+- [BODY TYPES THAT CONFLICT WITH CHARACTER]
+
+---
+
+## Facial Identity
+
+Always preserve:
+
+- [FACE SHAPE]
+- [JAW STRUCTURE]
+- [HAIR COLOR AND LENGTH]
+- [OVERALL FACIAL PRESENCE]
+
+Avoid:
+
+- [INCORRECT FACE SHAPE]
+- [UNWANTED AGING]
+- [UNWANTED HAIRSTYLES]
+- [UNINTENDED FACIAL HAIR]
+
+---
+
+## Style Identity
+
+Always preserve:
+
+- [GENERAL STYLE AESTHETIC]
+- [CLOTHING SILHOUETTE]
+- [COLOR PALETTE]
+- [ACCESSORY STYLE]
+
+Avoid:
+
+- [INCOMPATIBLE STYLE ELEMENTS]
+- [UNWANTED COLOR PALETTES]
+- [CLOTHING SILHOUETTES THAT BREAK CHARACTER]
+
+---
+
+## Body Language
+
+Typical movement:
+
+- [MOVEMENT TRAIT]
+- [MOVEMENT TRAIT]
+
+Typical posture:
+
+- [POSTURE TRAIT]
+- [POSTURE TRAIT]
+
+Avoid:
+
+- [UNCHARACTERISTIC BODY LANGUAGE]
+- [MOVEMENT CONTRARY TO CHARACTER IDENTITY]

@@ -4,6 +4,11 @@ slug: [character_slug]
 status: active
 project: [PROJECT_NAME]
 exclude_from_comparisons: false
+site_visibility:
+  list_in_character_index: true
+  include_in_nav: true
+  generate_page: true
+  include_in_prompt_builder: true
 
 core_identity:
   short_summary: [brief one-sentence identity summary]

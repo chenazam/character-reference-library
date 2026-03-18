@@ -29,6 +29,7 @@ An athletic silhouette with stronger lower-body emphasis, especially thighs, hip
 
 | Character | Build | Anchor | Emphasis |
 |---|---|---|---|
+| Connor | runner_build | runner_silhouette | glutes_thighs |
 | Jasper | runner_build | runner_silhouette | glutes_thighs |
 | Jonah | lower_athletic | runner_silhouette | legs |
 

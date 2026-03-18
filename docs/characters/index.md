@@ -9,10 +9,24 @@ Browse characters in the reference library.
 
 <div class="character-index-grid">
 
+<a class="character-card" href="alexander/">
+
+  <img src="..\assets\library\10_CHARACTERS\ALEXANDER\01_IDENTITY\face\alexander_face_anchor_v1.png" alt="Alexander">
+  <h3>Alexander</h3>
+
+</a>
+
 <a class="character-card" href="blake/">
 
   <img src="..\assets\library\10_CHARACTERS\BLAKE\01_IDENTITY\gallery\blake-gallery-image.png" alt="Blake">
   <h3>Blake</h3>
+
+</a>
+
+<a class="character-card" href="connor/">
+
+  <img src="..\assets\library\10_CHARACTERS\CONNOR\01_IDENTITY\face\connor_face_anchor_v1.png" alt="Connor">
+  <h3>Connor</h3>
 
 </a>
 

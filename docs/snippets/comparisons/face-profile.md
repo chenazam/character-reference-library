@@ -70,4 +70,18 @@
     </a>
   </div>
 
+  <div class="comparison-card">
+    <h3><a href="../../characters/alexander/">Alexander</a></h3>
+    <a href="../../assets/library/10_CHARACTERS/ALEXANDER/01_IDENTITY/face/alexander_profile_face_v2.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/ALEXANDER/01_IDENTITY/face/alexander_profile_face_v2.png" alt="Alexander face-profile">
+    </a>
+  </div>
+
+  <div class="comparison-card">
+    <h3><a href="../../characters/connor/">Connor</a></h3>
+    <a href="../../assets/library/10_CHARACTERS/CONNOR/01_IDENTITY/face/connor_profile_face_v2.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/CONNOR/01_IDENTITY/face/connor_profile_face_v2.png" alt="Connor face-profile">
+    </a>
+  </div>
+
 </div>

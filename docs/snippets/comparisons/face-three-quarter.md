@@ -30,8 +30,8 @@
 
   <div class="comparison-card">
     <h3><a href="../../characters/jasper/">Jasper</a></h3>
-    <a href="../../assets/library/10_CHARACTERS/JASPER/01_IDENTITY/face/jasper_fthree_quarter_face_v1.png" target="_blank">
-      <img src="../../assets/library/10_CHARACTERS/JASPER/01_IDENTITY/face/jasper_fthree_quarter_face_v1.png" alt="Jasper face-three-quarter">
+    <a href="../../assets/library/10_CHARACTERS/JASPER/01_IDENTITY/face/jasper_three_quarter_face_v1.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/JASPER/01_IDENTITY/face/jasper_three_quarter_face_v1.png" alt="Jasper face-three-quarter">
     </a>
   </div>
 
@@ -67,6 +67,20 @@
     <h3><a href="../../characters/tommy/">Tommy</a></h3>
     <a href="../../assets/library/10_CHARACTERS/TOMMY/01_IDENTITY/face/tommy_three_quarter_face_v1.png" target="_blank">
       <img src="../../assets/library/10_CHARACTERS/TOMMY/01_IDENTITY/face/tommy_three_quarter_face_v1.png" alt="Tommy face-three-quarter">
+    </a>
+  </div>
+
+  <div class="comparison-card">
+    <h3><a href="../../characters/alexander/">Alexander</a></h3>
+    <a href="../../assets/library/10_CHARACTERS/ALEXANDER/01_IDENTITY/face/alexander_three_quarter_face_v2.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/ALEXANDER/01_IDENTITY/face/alexander_three_quarter_face_v2.png" alt="Alexander face-three-quarter">
+    </a>
+  </div>
+
+  <div class="comparison-card">
+    <h3><a href="../../characters/connor/">Connor</a></h3>
+    <a href="../../assets/library/10_CHARACTERS/CONNOR/01_IDENTITY/face/connor_three_quarter_face_v2.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/CONNOR/01_IDENTITY/face/connor_three_quarter_face_v2.png" alt="Connor face-three-quarter">
     </a>
   </div>
 

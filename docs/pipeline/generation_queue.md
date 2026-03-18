@@ -2,9 +2,17 @@
 
 Reference assets that still need to be generated.
 
+## ALEXANDER
+
+- next: hair_sheet
+
 ## BLAKE
 
 - next: proportion_grid
+
+## CONNOR
+
+- next: hair_sheet
 
 ## DAIMON
 

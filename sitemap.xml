@@ -281,6 +281,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/anatomy-clothing-standard/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/anatomy-pose-neutral/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/background-block/</loc>
          <lastmod>2026-03-18</lastmod>
          <changefreq>daily</changefreq>
@@ -297,11 +307,6 @@
     </url>
     <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/face-panel-framing-block/</loc>
-         <lastmod>2026-03-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/face-panel-output-requirements/</loc>
          <lastmod>2026-03-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -337,6 +342,11 @@
     </url>
     <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/lighting-block/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/panel-output-requirements/</loc>
          <lastmod>2026-03-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -471,7 +481,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/02_BODY/anatomy-back_v2/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/02_BODY/anatomy-front/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/02_BODY/anatomy-front_v2/</loc>
          <lastmod>2026-03-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -487,6 +507,11 @@
     </url>
     <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/02_BODY/anatomy-side/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/02_BODY/anatomy-side_v2/</loc>
          <lastmod>2026-03-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1061,6 +1086,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/snippets/galleries/alexander/body/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/snippets/galleries/alexander/hero/</loc>
          <lastmod>2026-03-18</lastmod>
          <changefreq>daily</changefreq>
@@ -1092,6 +1122,11 @@
     </url>
     <url>
          <loc>https://charreflib.chenazam.com/snippets/galleries/blake/scenes/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/galleries/connor/body/</loc>
          <lastmod>2026-03-18</lastmod>
          <changefreq>daily</changefreq>
     </url>

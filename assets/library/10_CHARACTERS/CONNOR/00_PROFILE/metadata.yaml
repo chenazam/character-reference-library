@@ -81,7 +81,7 @@ identity_rules:
   - avoid rigid, dominant, or overly confident posture
 reference_files:
   face_anchor: connor_face_anchor_v1.png
-  anatomy_sheet: ''
+  anatomy_sheet: connor_anatomy_sheet_v2.png
   body_anchor: ''
   silhouette_sheet: ''
   turnaround_sheet: ''
@@ -91,7 +91,7 @@ reference_files:
 pipeline_status:
   face_anchor: complete
   hair_sheet: not_started
-  anatomy_sheet: not_started
+  anatomy_sheet: complete
   proportion_grid: not_started
   muscle_tension: not_started
   body_anchor: not_started

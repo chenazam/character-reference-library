@@ -17,7 +17,7 @@ core_identity:
   - soft_masculine
 physical:
   height_cm: 175
-  height_imperial: 5 ft 9 in
+  height_imperial: 5'9"
   height_visual_category: medium
   build_category: soft_heavy
   frame_proportion: hip_dominant

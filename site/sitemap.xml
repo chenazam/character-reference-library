@@ -71,6 +71,21 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/ALEXANDER/00_PROFILE/character_summary/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/ALEXANDER/00_PROFILE/identity_guardrails/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/ALEXANDER/00_PROFILE/prompt_blocks/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/BLAKE/00_PROFILE/character_summary/</loc>
          <lastmod>2026-03-18</lastmod>
          <changefreq>daily</changefreq>
@@ -82,6 +97,21 @@
     </url>
     <url>
          <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/BLAKE/00_PROFILE/prompt_blocks/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/CONNOR/00_PROFILE/character_summary/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/CONNOR/00_PROFILE/identity_guardrails/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/CONNOR/00_PROFILE/prompt_blocks/</loc>
          <lastmod>2026-03-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -341,7 +371,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/face-anchor-sheet_v2/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/front-face-reference/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/front-face-reference_v2/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/front-face-reference_v3/</loc>
          <lastmod>2026-03-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -366,7 +411,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/profile-face-reference_v2/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/profile-face-reference_v3/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/three-quarter-face-reference/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/three-quarter-face-reference_v2/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/three-quarter-face-reference_v3/</loc>
          <lastmod>2026-03-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -521,12 +586,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/characters/alexander/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/characters/blake/</loc>
          <lastmod>2026-03-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://charreflib.chenazam.com/characters/character-page-template/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/characters/connor/</loc>
          <lastmod>2026-03-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -596,17 +671,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/comparisons/alexander-vs-connor/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/comparisons/assets/</loc>
-         <lastmod>2026-03-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://charreflib.chenazam.com/comparisons/blake-vs-danny/</loc>
-         <lastmod>2026-03-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://charreflib.chenazam.com/comparisons/blake-vs-hudson/</loc>
          <lastmod>2026-03-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -636,11 +706,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/comparisons/danny-vs-ragnar/</loc>
-         <lastmod>2026-03-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://charreflib.chenazam.com/comparisons/hudson-vs-jonah/</loc>
          <lastmod>2026-03-18</lastmod>
          <changefreq>daily</changefreq>
@@ -661,47 +726,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/comparisons/lineups/blake-daimon-danny-dennis-hudson-jasper-jonah-luca-lucien-ragnar-tommy-lineup/</loc>
-         <lastmod>2026-03-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://charreflib.chenazam.com/comparisons/lineups/blake-danny-hudson-lineup/</loc>
-         <lastmod>2026-03-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://charreflib.chenazam.com/comparisons/lineups/daimon-danny-ragnar-lineup/</loc>
-         <lastmod>2026-03-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://charreflib.chenazam.com/comparisons/lineups/daimon-luca-tommy-lineup/</loc>
-         <lastmod>2026-03-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://charreflib.chenazam.com/comparisons/lineups/danny-hudson-jonah-luca-lineup/</loc>
-         <lastmod>2026-03-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://charreflib.chenazam.com/comparisons/lineups/danny-jasper-jonah-luca-lucien-ragnar-tommy-lineup/</loc>
-         <lastmod>2026-03-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://charreflib.chenazam.com/comparisons/lineups/danny-lucien-ragnar-tommy-lineup/</loc>
-         <lastmod>2026-03-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://charreflib.chenazam.com/comparisons/lineups/jasper-jonah-luca-lineup/</loc>
-         <lastmod>2026-03-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://charreflib.chenazam.com/comparisons/lineups/jasper-luca-tommy-lineup/</loc>
          <lastmod>2026-03-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1006,6 +1031,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/snippets/galleries/alexander/hero/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/galleries/alexander/identity/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/snippets/galleries/blake/body/</loc>
          <lastmod>2026-03-18</lastmod>
          <changefreq>daily</changefreq>
@@ -1027,6 +1062,16 @@
     </url>
     <url>
          <loc>https://charreflib.chenazam.com/snippets/galleries/blake/scenes/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/galleries/connor/hero/</loc>
+         <lastmod>2026-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/snippets/galleries/connor/identity/</loc>
          <lastmod>2026-03-18</lastmod>
          <changefreq>daily</changefreq>
     </url>

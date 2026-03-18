@@ -2,6 +2,7 @@ name: Blake
 slug: blake
 status: active
 project: blake_jasper
+exclude_from_comparisons: false
 site_visibility:
   list_in_character_index: true
   include_in_nav: true

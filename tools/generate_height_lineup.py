@@ -33,8 +33,6 @@ LIBRARY_ROOT = ROOT / "docs" / "assets" / "library" / "10_CHARACTERS"
 OUTPUT_ROOT = ROOT / "docs" / "comparisons" / "lineups"
 
 NORMAL_CHART_HEIGHT_PX = 460
-COMPACT_CHART_HEIGHT_PX = 360
-COMPACT_THRESHOLD = 6
 
 
 def load_character(slug: str) -> dict:

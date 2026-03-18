@@ -23,6 +23,7 @@ ASSET_TYPES = {
     "proportion-grid": "02 Body – Proportion Grid",
     "muscle-tension": "02 Body – Muscle Tension Sheet",
     "silhouette-sheet": "02 Body – Silhouette Sheet",
+    "silhouette-front": "02 Body – Silhouette Front",
     "turnaround-sheet": "02 Body – Turnaround Sheet",
     "height-scale": "02 Body – Height Scale Sheet",
     "ucs-sheet": "03 UCS – Ultimate Character Sheet",

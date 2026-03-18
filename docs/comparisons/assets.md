@@ -27,6 +27,7 @@ Compare one asset type across all characters. Use the selector to switch between
     <option value="proportion-grid">02 Body – Proportion Grid</option>
     <option value="muscle-tension">02 Body – Muscle Tension Sheet</option>
     <option value="silhouette-sheet">02 Body – Silhouette Sheet</option>
+    <option value="silhouette-front">02 Body – Silhouette Front</option>
     <option value="turnaround-sheet">02 Body – Turnaround Sheet</option>
   </select>
 </div>
@@ -147,6 +148,13 @@ Compare one asset type across all characters. Use the selector to switch between
 <h2>02 Body – Silhouette Sheet</h2>
 
 --8<-- "snippets/comparisons/silhouette-sheet.md"
+
+</section>
+
+<section class="comparison-section" data-asset-type="silhouette-front" hidden="hidden">
+<h2>02 Body – Silhouette Front</h2>
+
+--8<-- "snippets/comparisons/silhouette-front.md"
 
 </section>
 

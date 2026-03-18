@@ -32,7 +32,7 @@ Reference assets that still need to be generated.
 
 ## LUCA
 
-- next: body_anchor
+- next: proportion_grid
 
 ## LUCIEN
 

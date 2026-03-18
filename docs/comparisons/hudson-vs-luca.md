@@ -56,7 +56,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--ref">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--athletic_balanced height-lineup__placeholder--reference" style="height: 95.74%"></div>
+      <img class="height-lineup__silhouette height-lineup__silhouette--reference" src="/assets/reference/reference_male_average_180cm_front_v1.png" alt="Reference silhouette" style="height: 95.74%;">
     </div>
     <div class="height-lineup__label">Reference</div>
     <div class="height-lineup__meta">180 cm / 5'11"</div>
@@ -64,7 +64,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--a">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--broad_athletic height-lineup__placeholder--elongated" style="height: 100.00%"></div>
+      <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/HUDSON/02_BODY/structure/hudson_silhouette_front_v1.png" alt="Hudson silhouette front" style="height: 100.00%;">
     </div>
     <div class="height-lineup__label">Hudson</div>
     <div class="height-lineup__meta">188 cm / 6'2</div>
@@ -72,7 +72,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--b">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--compact_light height-lineup__placeholder--compact" style="height: 89.36%"></div>
+      <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/LUCA/02_BODY/structure/luca_silhouette_front_v1.png" alt="Luca silhouette front" style="height: 89.36%;">
     </div>
     <div class="height-lineup__label">Luca</div>
     <div class="height-lineup__meta">168 cm / 5'6</div>
@@ -85,6 +85,8 @@ hide:
 
 In terms of build, **Hudson** reads as **Athletic Muscular**, while **Luca** reads as **Light Athletic**.
 
+Their silhouettes reinforce this contrast: **Hudson** has a **Power Athlete silhouette with **Shoulders emphasis**, characterized by tall, broad, and agile, while **Luca** presents a **Compact Frame silhouette with **Balanced emphasis**, characterized by compact, agile, and light frame.
+
 Their design language also differs strongly: **Hudson** is rooted in a **Athletic Luxury** aesthetic, while **Luca** is defined more by **Domestic Soft** styling.
 
 Their body language pushes this contrast further: **Hudson** appears **Open Confident**, while **Luca** appears **Soft Withdrawn**.
@@ -92,6 +94,19 @@ Their body language pushes this contrast further: **Hudson** appears **Open Conf
 Facially, **Hudson** tends toward a **Confident Neutral** expression, while **Luca** reads as more **Soft Neutral**.
 
 Their emotional presentation also differs: **Hudson** feels **Controlled**, while **Luca** feels **Open Warm**.
+
+## Body Anchor Comparison
+
+<div class="comparison-grid comparison-grid-2">
+  <div class="comparison-item">
+    <div class="comparison-label">Hudson</div>
+    <img src="../../assets/library/10_CHARACTERS/HUDSON/02_BODY/structure/hudson_body_anchor_v1.png" alt="Hudson Body Anchor Comparison">
+  </div>
+  <div class="comparison-item">
+    <div class="comparison-label">Luca</div>
+    <img src="../../assets/library/10_CHARACTERS/LUCA/02_BODY/structure/luca_body_anchor_v1.png" alt="Luca Body Anchor Comparison">
+  </div>
+</div>
 
 ## Anatomy Sheet Comparison
 
@@ -106,17 +121,16 @@ Their emotional presentation also differs: **Hudson** feels **Controlled**, whil
   </div>
 </div>
 
-## Available References
+## Silhouette Sheet Comparison
 
 <div class="comparison-grid comparison-grid-2">
-
   <div class="comparison-item">
-    <div class="comparison-label">Hudson — Body Anchor</div>
-    <img src="../../assets/library/10_CHARACTERS/HUDSON/02_BODY/structure/hudson_body_anchor_v1.png" alt="Hudson Body Anchor">
+    <div class="comparison-label">Hudson</div>
+    <img src="../../assets/library/10_CHARACTERS/HUDSON/02_BODY/structure/hudson_silhouette_sheet_v1.png" alt="Hudson Silhouette Sheet Comparison">
   </div>
   <div class="comparison-item">
-    <div class="comparison-label">Hudson — Silhouette Sheet</div>
-    <img src="../../assets/library/10_CHARACTERS/HUDSON/02_BODY/structure/hudson_silhouette_sheet_v1.png" alt="Hudson Silhouette Sheet">
+    <div class="comparison-label">Luca</div>
+    <img src="../../assets/library/10_CHARACTERS/LUCA/02_BODY/structure/luca_silhouette_sheet_v1.png" alt="Luca Silhouette Sheet Comparison">
   </div>
 </div>
 

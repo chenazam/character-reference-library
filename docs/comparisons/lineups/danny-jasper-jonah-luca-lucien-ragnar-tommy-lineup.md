@@ -6,6 +6,7 @@ hide:
 # Height Lineup — Ragnar, Danny, Jonah, Tommy, Jasper, Lucien, Luca
 
 
+<div class="height-lineup__scroll">
 <div class="height-lineup height-lineup--multi height-lineup--compact">
 
   <div class="height-lineup__ticks" aria-hidden="true">
@@ -81,5 +82,6 @@ hide:
 </div>
 
 
+</div>
 </div>
 

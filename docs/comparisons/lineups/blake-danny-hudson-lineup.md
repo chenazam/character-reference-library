@@ -6,6 +6,7 @@ hide:
 # Height Lineup — Danny, Blake, Hudson
 
 
+<div class="height-lineup__scroll">
 <div class="height-lineup height-lineup--multi">
 
   <div class="height-lineup__ticks" aria-hidden="true">
@@ -49,5 +50,6 @@ hide:
 </div>
 
 
+</div>
 </div>
 

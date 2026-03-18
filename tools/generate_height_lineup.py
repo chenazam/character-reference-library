@@ -147,6 +147,7 @@ def build_chart(characters: list[dict]) -> str:
         lineup_classes += " height-lineup--compact"
 
     return f"""
+<div class="height-lineup__scroll">
 <div class="{lineup_classes}">
 
   <div class="height-lineup__ticks" aria-hidden="true">
@@ -158,6 +159,7 @@ def build_chart(characters: list[dict]) -> str:
 
   {"".join(figures)}
 
+</div>
 </div>
 """
 

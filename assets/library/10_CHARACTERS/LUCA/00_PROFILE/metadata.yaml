@@ -81,20 +81,20 @@ identity_rules:
 reference_files:
   face_anchor: luca_face_anchor_v1.png
   anatomy_sheet: luca_anatomy_sheet_01.png
-  body_anchor: ''
+  body_anchor: luca_body_anchor_v1.png
   turnaround_sheet: ''
   ultimate_character_sheet: ''
   signature_outfit_sheet: ''
-  silhouette_sheet: ''
-  silhouette_front: ''
+  silhouette_sheet: luca_silhouette_sheet_v1.png
+  silhouette_front: luca_silhouette_front_v1.png
 pipeline_status:
   face_anchor: complete
   hair_sheet: complete
   anatomy_sheet: complete
   proportion_grid: not_started
   muscle_tension: not_started
-  body_anchor: not_started
-  silhouette_sheet: not_started
+  body_anchor: complete
+  silhouette_sheet: complete
   turnaround_sheet: not_started
   expression_sheet: not_started
   hand_sheet: not_started
@@ -115,7 +115,7 @@ pipeline_status:
   scene_anchor: not_started
   dynamic_pose: not_started
   final_ucs: not_started
-  silhouette_front: not_started
+  silhouette_front: complete
 notes: Metadata reconstructed from visual reference sheets and corrected for confirmed
   character identity.
 last_updated: '2026-03-13'

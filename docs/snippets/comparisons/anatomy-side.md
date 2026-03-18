@@ -8,6 +8,13 @@
   </div>
 
   <div class="comparison-card">
+    <h3><a href="../../characters/daimon/">Daimon</a></h3>
+    <a href="../../assets/library/10_CHARACTERS/DAIMON/02_BODY/anatomy/daimon_anatomy_side_v1.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/DAIMON/02_BODY/anatomy/daimon_anatomy_side_v1.png" alt="Daimon anatomy-side">
+    </a>
+  </div>
+
+  <div class="comparison-card">
     <h3><a href="../../characters/danny/">Danny</a></h3>
     <a href="../../assets/library/10_CHARACTERS/DANNY/02_BODY/anatomy/danny_anatomy_side_v1.png" target="_blank">
       <img src="../../assets/library/10_CHARACTERS/DANNY/02_BODY/anatomy/danny_anatomy_side_v1.png" alt="Danny anatomy-side">

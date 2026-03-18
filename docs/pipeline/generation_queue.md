@@ -8,7 +8,7 @@ Reference assets that still need to be generated.
 
 ## DAIMON
 
-- next: anatomy_sheet
+- next: proportion_grid
 
 ## DANNY
 

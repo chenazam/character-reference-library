@@ -57,7 +57,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--ref">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--athletic_balanced height-lineup__placeholder--reference" style="height: 91.84%"></div>
+      <img class="height-lineup__silhouette height-lineup__silhouette--reference" src="/assets/reference/reference_male_average_180cm_front_v1.png" alt="Reference silhouette" style="height: 91.84%;">
     </div>
     <div class="height-lineup__label">Reference</div>
     <div class="height-lineup__meta">180 cm / 5'11"</div>
@@ -65,7 +65,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--a">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--broad_upper_dominant height-lineup__placeholder--elongated" style="height: 100.00%"></div>
+      <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/DAIMON/02_BODY/structure/daimon_silhouette_front_v1.png" alt="Daimon silhouette front" style="height: 100.00%;">
     </div>
     <div class="height-lineup__label">Daimon</div>
     <div class="height-lineup__meta">196 cm / 6'5"</div>
@@ -73,7 +73,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--b">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--soft_curvy height-lineup__placeholder--glute_emphasis" style="height: 89.29%"></div>
+      <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/TOMMY/02_BODY/structure/tommy_silhouette_front_v1.png" alt="Tommy silhouette front" style="height: 89.29%;">
     </div>
     <div class="height-lineup__label">Tommy</div>
     <div class="height-lineup__meta">175 cm / 5'9"</div>
@@ -86,6 +86,8 @@ hide:
 
 In terms of build, **Daimon** reads as **Athletic Muscular**, while **Tommy** reads as **Soft Slender**.
 
+Their silhouettes reinforce this contrast: **Daimon** has a **Power Athlete silhouette with **Upper Body emphasis**, characterized by tall, broad, imposing, and upper dominant, while **Tommy** presents a **Hip Dominant Soft silhouette with **Hips Glutes Thighs emphasis**, characterized by compact, leg dominant, agile, and glute emphasis.
+
 Their design language also differs strongly: **Daimon** is rooted in a **Rugged Utilitarian** aesthetic, while **Tommy** is defined more by **Domestic Soft** styling.
 
 In motion, **Daimon** reads as **Grounded Powerful**, whereas **Tommy** feels more **Relaxed Natural**.
@@ -96,21 +98,42 @@ Facially, **Daimon** tends toward a **Serious Controlled** expression, while **T
 
 Their emotional presentation also differs: **Daimon** feels **Intense**, while **Tommy** feels **Open Warm**.
 
-## Available References
+## Body Anchor Comparison
 
 <div class="comparison-grid comparison-grid-2">
+  <div class="comparison-item">
+    <div class="comparison-label">Daimon</div>
+    <img src="../../assets/library/10_CHARACTERS/DAIMON/02_BODY/structure/daimon_body_anchor_v1.png" alt="Daimon Body Anchor Comparison">
+  </div>
+  <div class="comparison-item">
+    <div class="comparison-label">Tommy</div>
+    <img src="../../assets/library/10_CHARACTERS/TOMMY/02_BODY/structure/tommy_body_anchor_v1.png" alt="Tommy Body Anchor Comparison">
+  </div>
+</div>
 
+## Anatomy Sheet Comparison
+
+<div class="comparison-grid comparison-grid-2">
   <div class="comparison-item">
-    <div class="comparison-label">Tommy — Body Anchor</div>
-    <img src="../../assets/library/10_CHARACTERS/TOMMY/02_BODY/structure/tommy_body_anchor_v1.png" alt="Tommy Body Anchor">
+    <div class="comparison-label">Daimon</div>
+    <img src="../../assets/library/10_CHARACTERS/DAIMON/02_BODY/anatomy/daimon_anatomy_sheet_v1.png" alt="Daimon Anatomy Sheet Comparison">
   </div>
   <div class="comparison-item">
-    <div class="comparison-label">Tommy — Anatomy Sheet</div>
-    <img src="../../assets/library/10_CHARACTERS/TOMMY/02_BODY/anatomy/tommy_anatomy_sheet_v1.png" alt="Tommy Anatomy Sheet">
+    <div class="comparison-label">Tommy</div>
+    <img src="../../assets/library/10_CHARACTERS/TOMMY/02_BODY/anatomy/tommy_anatomy_sheet_v1.png" alt="Tommy Anatomy Sheet Comparison">
+  </div>
+</div>
+
+## Silhouette Sheet Comparison
+
+<div class="comparison-grid comparison-grid-2">
+  <div class="comparison-item">
+    <div class="comparison-label">Daimon</div>
+    <img src="../../assets/library/10_CHARACTERS/DAIMON/02_BODY/structure/daimon_silhouette_sheet_v1.png" alt="Daimon Silhouette Sheet Comparison">
   </div>
   <div class="comparison-item">
-    <div class="comparison-label">Tommy — Silhouette Sheet</div>
-    <img src="../../assets/library/10_CHARACTERS/TOMMY/02_BODY/structure/tommy_silhouette_sheet_v1.png" alt="Tommy Silhouette Sheet">
+    <div class="comparison-label">Tommy</div>
+    <img src="../../assets/library/10_CHARACTERS/TOMMY/02_BODY/structure/tommy_silhouette_sheet_v1.png" alt="Tommy Silhouette Sheet Comparison">
   </div>
 </div>
 

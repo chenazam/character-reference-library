@@ -89,21 +89,21 @@ identity_rules:
   - light athletic body
 reference_files:
   face_anchor: daimon_face_anchor_v1.png
-  anatomy_sheet: ''
-  body_anchor: ''
+  anatomy_sheet: daimon_anatomy_sheet_v1.png
+  body_anchor: daimon_body_anchor_v1.png
   ultimate_character_sheet: ''
   signature_outfit_sheet: ''
-  silhouette_sheet: ''
+  silhouette_sheet: daimon_silhouette_sheet_v1.png
   turnaround_sheet: ''
-  silhouette_front: ''
+  silhouette_front: daimon_silhouette_front_v1.png
 pipeline_status:
   face_anchor: complete
   hair_sheet: complete
-  anatomy_sheet: not_started
+  anatomy_sheet: complete
   proportion_grid: not_started
   muscle_tension: not_started
-  body_anchor: not_started
-  silhouette_sheet: not_started
+  body_anchor: complete
+  silhouette_sheet: complete
   turnaround_sheet: not_started
   expression_sheet: not_started
   hand_sheet: not_started
@@ -124,6 +124,6 @@ pipeline_status:
   scene_anchor: not_started
   dynamic_pose: not_started
   final_ucs: not_started
-  silhouette_front: not_started
+  silhouette_front: complete
 notes: ''
 last_updated: '2026-03-13'

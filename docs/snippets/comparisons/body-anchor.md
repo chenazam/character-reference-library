@@ -29,6 +29,13 @@
   </div>
 
   <div class="comparison-card">
+    <h3><a href="../../characters/jonah/">Jonah</a></h3>
+    <a href="../../assets/library/10_CHARACTERS/JONAH/02_BODY/structure/jonah_body_anchor_v1.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/JONAH/02_BODY/structure/jonah_body_anchor_v1.png" alt="Jonah body-anchor">
+    </a>
+  </div>
+
+  <div class="comparison-card">
     <h3><a href="../../characters/luca/">Luca</a></h3>
     <a href="../../assets/library/10_CHARACTERS/LUCA/02_BODY/structure/luca_body_anchor_v1.png" target="_blank">
       <img src="../../assets/library/10_CHARACTERS/LUCA/02_BODY/structure/luca_body_anchor_v1.png" alt="Luca body-anchor">

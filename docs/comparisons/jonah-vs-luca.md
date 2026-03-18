@@ -56,7 +56,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--ref">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--athletic_balanced height-lineup__placeholder--reference" style="height: 100.00%"></div>
+      <img class="height-lineup__silhouette height-lineup__silhouette--reference" src="/assets/reference/reference_male_average_180cm_front_v1.png" alt="Reference silhouette" style="height: 100.00%;">
     </div>
     <div class="height-lineup__label">Reference</div>
     <div class="height-lineup__meta">180 cm / 5'11"</div>
@@ -64,7 +64,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--a">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--athletic_leg_dominant height-lineup__placeholder--elongated" style="height: 98.89%"></div>
+      <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/JONAH/02_BODY/structure/jonah_silhouette_front_v1.png" alt="Jonah silhouette front" style="height: 98.89%;">
     </div>
     <div class="height-lineup__label">Jonah</div>
     <div class="height-lineup__meta">178 cm / 5'10"</div>
@@ -72,7 +72,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--b">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--compact_light height-lineup__placeholder--compact" style="height: 93.33%"></div>
+      <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/LUCA/02_BODY/structure/luca_silhouette_front_v1.png" alt="Luca silhouette front" style="height: 93.33%;">
     </div>
     <div class="height-lineup__label">Luca</div>
     <div class="height-lineup__meta">168 cm / 5'6</div>
@@ -85,6 +85,8 @@ hide:
 
 In terms of build, **Jonah** reads as **Lower Athletic**, while **Luca** reads as **Light Athletic**.
 
+Their silhouettes reinforce this contrast: **Jonah** has a **Runner Silhouette silhouette with **Legs emphasis**, characterized by long-limbed, elegant, and athletic, while **Luca** presents a **Compact Frame silhouette with **Balanced emphasis**, characterized by compact, agile, and light frame.
+
 Their design language also differs strongly: **Jonah** is rooted in a **Playful Athletic** aesthetic, while **Luca** is defined more by **Domestic Soft** styling.
 
 Their body language pushes this contrast further: **Jonah** appears **Open Confident**, while **Luca** appears **Soft Withdrawn**.
@@ -94,7 +96,7 @@ Their body language pushes this contrast further: **Jonah** appears **Open Confi
 <div class="comparison-grid comparison-grid-2">
   <div class="comparison-item">
     <div class="comparison-label">Jonah</div>
-    <img src="../../assets/library/10_CHARACTERS/JONAH/00_SOURCE_REFERENCES/body/jonah_body_anchor.png" alt="Jonah Body Anchor Comparison">
+    <img src="../../assets/library/10_CHARACTERS/JONAH/02_BODY/structure/jonah_body_anchor_v1.png" alt="Jonah Body Anchor Comparison">
   </div>
   <div class="comparison-item">
     <div class="comparison-label">Luca</div>
@@ -115,13 +117,16 @@ Their body language pushes this contrast further: **Jonah** appears **Open Confi
   </div>
 </div>
 
-## Available References
+## Silhouette Sheet Comparison
 
 <div class="comparison-grid comparison-grid-2">
-
   <div class="comparison-item">
-    <div class="comparison-label">Luca — Silhouette Sheet</div>
-    <img src="../../assets/library/10_CHARACTERS/LUCA/02_BODY/structure/luca_silhouette_sheet_v1.png" alt="Luca Silhouette Sheet">
+    <div class="comparison-label">Jonah</div>
+    <img src="../../assets/library/10_CHARACTERS/JONAH/02_BODY/structure/jonah_silhouette_sheet_v1.png" alt="Jonah Silhouette Sheet Comparison">
+  </div>
+  <div class="comparison-item">
+    <div class="comparison-label">Luca</div>
+    <img src="../../assets/library/10_CHARACTERS/LUCA/02_BODY/structure/luca_silhouette_sheet_v1.png" alt="Luca Silhouette Sheet Comparison">
   </div>
 </div>
 

@@ -19,7 +19,7 @@ hide:
   
 <div class="height-lineup__figure">
   <div class="height-lineup__stage">
-    <div class="height-lineup__placeholder height-lineup__placeholder--athletic_balanced height-lineup__placeholder--reference" style="height: 100.00%"></div>
+    <img class="height-lineup__silhouette height-lineup__silhouette--reference" src="/assets/reference/reference_male_average_180cm_front_v1.png" alt="Reference silhouette" style="height: 100.00%;">
   </div>
   <div class="height-lineup__label">Reference</div>
   <div class="height-lineup__meta">180 cm / 5'11"</div>
@@ -27,7 +27,7 @@ hide:
 
 <div class="height-lineup__figure">
   <div class="height-lineup__stage">
-    <div class="height-lineup__placeholder height-lineup__placeholder--athletic_leg_dominant height-lineup__placeholder--elongated" style="height: 98.89%"></div>
+    <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/JONAH/02_BODY/structure/jonah_silhouette_front_v1.png" alt="Jonah silhouette" style="height: 98.89%;">
   </div>
   <div class="height-lineup__label">Jonah</div>
   <div class="height-lineup__meta">178 cm / 5'10"</div>
@@ -35,7 +35,7 @@ hide:
 
 <div class="height-lineup__figure">
   <div class="height-lineup__stage">
-    <div class="height-lineup__placeholder height-lineup__placeholder--athletic_leg_dominant height-lineup__placeholder--compact height-lineup__placeholder--glute_emphasis" style="height: 94.44%"></div>
+    <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/JASPER/02_BODY/structure/jasper_silhouette_front_v1.png" alt="Jasper silhouette" style="height: 94.44%;">
   </div>
   <div class="height-lineup__label">Jasper</div>
   <div class="height-lineup__meta">170 cm / 5'7"</div>
@@ -43,7 +43,7 @@ hide:
 
 <div class="height-lineup__figure">
   <div class="height-lineup__stage">
-    <div class="height-lineup__placeholder height-lineup__placeholder--compact_light height-lineup__placeholder--compact" style="height: 93.33%"></div>
+    <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/LUCA/02_BODY/structure/luca_silhouette_front_v1.png" alt="Luca silhouette" style="height: 93.33%;">
   </div>
   <div class="height-lineup__label">Luca</div>
   <div class="height-lineup__meta">168 cm / 5'6</div>

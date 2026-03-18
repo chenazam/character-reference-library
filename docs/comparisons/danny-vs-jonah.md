@@ -57,7 +57,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--ref">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--athletic_balanced height-lineup__placeholder--reference" style="height: 93.26%"></div>
+      <img class="height-lineup__silhouette height-lineup__silhouette--reference" src="/assets/reference/reference_male_average_180cm_front_v1.png" alt="Reference silhouette" style="height: 93.26%;">
     </div>
     <div class="height-lineup__label">Reference</div>
     <div class="height-lineup__meta">180 cm / 5'11"</div>
@@ -65,7 +65,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--a">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--heavy_muscular height-lineup__placeholder--elongated height-lineup__placeholder--dense" style="height: 100.00%"></div>
+      <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/DANNY/02_BODY/structure/danny_silhouette_front_v1.png" alt="Danny silhouette front" style="height: 100.00%;">
     </div>
     <div class="height-lineup__label">Danny</div>
     <div class="height-lineup__meta">193 cm / 6'4</div>
@@ -73,7 +73,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--b">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--athletic_leg_dominant height-lineup__placeholder--elongated" style="height: 92.23%"></div>
+      <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/JONAH/02_BODY/structure/jonah_silhouette_front_v1.png" alt="Jonah silhouette front" style="height: 92.23%;">
     </div>
     <div class="height-lineup__label">Jonah</div>
     <div class="height-lineup__meta">178 cm / 5'10"</div>
@@ -85,6 +85,8 @@ hide:
 **Danny** and **Jonah** show a **Noticeable height contrast**, with **Danny** standing **15 cm** taller than **Jonah**.
 
 In terms of build, **Danny** reads as **Heavy Muscular**, while **Jonah** reads as **Lower Athletic**.
+
+Their silhouettes reinforce this contrast: **Danny** has a **Power Frame silhouette with **Upper Body emphasis**, characterized by imposing, broad, and heavy set, while **Jonah** presents a **Runner Silhouette silhouette with **Legs emphasis**, characterized by long-limbed, elegant, and athletic.
 
 Their design language also differs strongly: **Danny** is rooted in a **Rugged Utilitarian** aesthetic, while **Jonah** is defined more by **Playful Athletic** styling.
 
@@ -101,7 +103,7 @@ Their body language pushes this contrast further: **Danny** appears **Calm Compo
   </div>
   <div class="comparison-item">
     <div class="comparison-label">Jonah</div>
-    <img src="../../assets/library/10_CHARACTERS/JONAH/00_SOURCE_REFERENCES/body/jonah_body_anchor.png" alt="Jonah Body Anchor Comparison">
+    <img src="../../assets/library/10_CHARACTERS/JONAH/02_BODY/structure/jonah_body_anchor_v1.png" alt="Jonah Body Anchor Comparison">
   </div>
 </div>
 
@@ -118,13 +120,16 @@ Their body language pushes this contrast further: **Danny** appears **Calm Compo
   </div>
 </div>
 
-## Available References
+## Silhouette Sheet Comparison
 
 <div class="comparison-grid comparison-grid-2">
-
   <div class="comparison-item">
-    <div class="comparison-label">Danny — Silhouette Sheet</div>
-    <img src="../../assets/library/10_CHARACTERS/DANNY/02_BODY/structure/danny_silhouette_sheet_v1.png" alt="Danny Silhouette Sheet">
+    <div class="comparison-label">Danny</div>
+    <img src="../../assets/library/10_CHARACTERS/DANNY/02_BODY/structure/danny_silhouette_sheet_v1.png" alt="Danny Silhouette Sheet Comparison">
+  </div>
+  <div class="comparison-item">
+    <div class="comparison-label">Jonah</div>
+    <img src="../../assets/library/10_CHARACTERS/JONAH/02_BODY/structure/jonah_silhouette_sheet_v1.png" alt="Jonah Silhouette Sheet Comparison">
   </div>
 </div>
 

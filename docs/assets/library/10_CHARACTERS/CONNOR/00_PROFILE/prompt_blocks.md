@@ -8,173 +8,127 @@ Each block can be copied into prompts depending on the generation task.
 
 ## Character Block
 
-Use for:
-
-- reference sheet prompts
-- anatomy prompts
-- body anchors
-- general character prompts
-
-[Brief full-body description of the character including build, facial identity, and overall aesthetic.]
+Connor is a medium-height young man with a slim, soft-athletic runner’s build and a gentle overall presence. He has blue-grey eyes, short medium-brown hair with natural texture, and soft, youthful facial features. His silhouette is lightly built with subtle lower-body emphasis, and his overall aesthetic is relaxed, domestic, and approachable.
 
 ---
 
 ## Identity Block (Short)
 
-Use for:
-
-- quick prompts
-- scene prompts
-- interaction prompts
-
-[One or two sentence visual summary of the character.]
+Connor is a slim, soft-athletic young man with gentle features, blue-grey eyes, and short medium-brown hair, with a warm, slightly shy, and relaxed presence.
 
 ---
 
 ## Identity Block (Extended)
 
-Use for:
+Connor is a medium-height young man with a slim, soft-athletic runner’s build and a gentle, approachable presence.
 
-- character setup
-- new chat initialization
-- style-sensitive prompts
+His face is soft and youthful, with a rounded structure, blue-grey eyes, and short medium-brown hair with a natural, slightly tousled texture. Subtle freckles across his nose and cheeks contribute to his soft appearance.
 
-[Full visual description of the character including build, facial features, proportions, and aesthetic.]
+His build is lightly defined, with moderate shoulders, a soft torso, and stronger lower-body development in the thighs and glutes. His posture is relaxed and slightly inward, and his overall aesthetic is soft, domestic, and quietly comforting.
 
 ---
 
 ## Face Block
 
-Use for:
+Connor has a soft, rounded face shape with a gentle, youthful structure.
 
-- face anchor prompts
-- portrait prompts
-- expression prompts
+His jawline is soft and lightly defined.
 
-[Describe facial features only.]
+His eyes are blue-grey, with a calm, slightly absentminded expression.
 
-Include:
+He has short medium-brown hair with natural texture and a slight curl.
 
-- face shape
-- jawline
-- eyes
-- distinctive traits
+Subtle freckles across his nose and cheeks contribute to his soft, approachable appearance.
 
 ---
 
 ## Body Block
 
-Use for:
+Connor is medium height with a slim, soft-athletic runner’s build.
 
-- anatomy prompts
-- pose prompts
-- body anchor prompts
+He has moderate, slightly narrow shoulders, a soft torso with minimal definition, and lean limbs.
 
-[Describe body proportions and physique.]
+His lower body is more developed than his upper body, with stronger thighs and glutes creating a subtle leg-dominant silhouette.
 
-Include:
-
-- height
-- build
-- posture
-- limb proportions
+His posture is relaxed and slightly inward, with a non-dominant and gentle physical presence.
 
 ---
 
 ## Style Block
 
-Use for:
+Connor’s style is soft, relaxed, and domestic.
 
-- outfit prompts
-- design language sheets
-- wardrobe prompts
+He wears comfortable clothing such as soft sweaters, casual shirts, t-shirts, and relaxed jeans or lounge pants.
 
-[Describe the character's fashion and aesthetic identity.]
+Materials are lightweight and natural, such as cotton and linen.
 
-Include:
+His color palette is soft and muted, focusing on beige, light blue, grey, and other gentle tones.
 
-- clothing style
-- materials
-- accessories
-- palette
+Accessories are minimal or absent.
 
 ---
 
 ## Movement Block
 
-Use for:
+Connor’s movement is natural and relaxed, with light and unforced motion.
 
-- motion prompts
-- pose prompts
-- dynamic scenes
+His posture tends to be slightly inward, with soft shoulders and a gentle physical presence.
 
-[Describe posture, movement style, and physical energy.]
+His movements feel fluid and unobtrusive rather than deliberate or commanding.
 
 ---
 
 ## Expression Block
 
-Use for:
+Connor’s default expression is soft, calm, and slightly absentminded.
 
-- expression sheets
-- portrait prompts
-- emotional scenes
+His smile is warm, open, and gentle.
 
-[Describe default expression style and emotional tone.]
+His emotional range is expressive but subtle, with feelings conveyed through small, natural shifts rather than strong or controlled expressions.
 
 ---
 
 ## Wardrobe Description Block
 
-Use for:
+Connor wears soft, relaxed silhouettes that emphasize comfort and approachability.
 
-- outfit sheets
-- design language sheets
-- wardrobe prompts
+His clothing includes sweaters, casual shirts, t-shirts, and relaxed pants or shorts, often slightly loose or gently fitted.
 
-[Describe how the character typically dresses.]
+Layering is simple and minimal, focused on comfort rather than structure.
 
-Include:
-
-- silhouettes
-- layering style
-- typical outfit combinations
-- recurring clothing elements
+His outfits feel domestic and lived-in, suited to a calm suburban lifestyle.
 
 ---
 
 ## Anti-Drift Rules
 
-Use for:
-
-- identity preservation prompts
-- difficult scenes
-- regeneration corrections
-
 Always preserve:
 
-- recognizable face structure
-- consistent body proportions
-- stable hairstyle
-- core aesthetic
+- slim, leg-dominant runner proportions
+- soft facial features and youthful structure
+- short, slightly textured brown hair
+- relaxed, inward posture
+- soft, domestic aesthetic
 
 Avoid:
 
-- [common drift issue]
-- [common drift issue]
+- broad shoulders or upper-body dominant proportions
+- rigid, dominant, or overly confident posture
 
 ---
 
 ## Short Prompt Description
 
-Copy this block directly into short prompts.
-
-[One concise visual description of the character.]
+Connor is a slim, soft-athletic young man with gentle facial features, blue-grey eyes, and short medium-brown hair, with a warm and slightly shy presence.
 
 ---
 
 ## Full Prompt Description
 
-Copy this block into prompts that require a full character description.
+Connor is a medium-height young man with a slim, soft-athletic runner’s build, defined by moderate shoulders, a soft torso, and stronger lower-body development in the thighs and glutes.
 
-[Full character description combining body, face, and style identity.]
+He has a soft, youthful face with a rounded structure, blue-grey eyes, short medium-brown hair with natural texture, and subtle freckles.
+
+His posture is relaxed and slightly inward, and his aesthetic is soft and domestic, with comfortable clothing, muted colors, and a gentle, approachable presence.
+
+Maintain consistent facial identity, body proportions, and style across all views.

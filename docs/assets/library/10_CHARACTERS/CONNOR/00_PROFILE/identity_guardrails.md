@@ -1,22 +1,23 @@
-# Identity Guardrails — [CHARACTER_NAME]
+# Identity Guardrails — Connor
 
-These rules define traits that must remain consistent when generating images of [CHARACTER_NAME].
+These rules define traits that must remain consistent when generating images of Connor.
 
 ## Core Physical Identity
 
 Always preserve:
 
-- [HEIGHT AND BODY SCALE]
-- [GENERAL BUILD DESCRIPTION]
-- [SHOULDER WIDTH]
-- [LIMB PROPORTIONS]
-- [OVERALL BODY MASS / SILHOUETTE]
+- medium height with clearly smaller scale than taller characters like Alexander
+- slim, soft-athletic runner build
+- moderate to slightly narrow shoulders
+- lean limbs with stronger lower-body development
+- leg-dominant silhouette with emphasis on thighs and glutes
 
 Avoid:
 
-- [UNWANTED BODY TYPE]
-- [INCORRECT PROPORTIONS]
-- [BODY TYPES THAT CONFLICT WITH CHARACTER]
+- broad shoulders or upper-body dominant proportions
+- heavy musculature or bodybuilder physique
+- overly thin, underweight, or frail body types
+- balanced or upper-body dominant silhouettes that remove lower-body emphasis
 
 ---
 
@@ -24,17 +25,18 @@ Avoid:
 
 Always preserve:
 
-- [FACE SHAPE]
-- [JAW STRUCTURE]
-- [HAIR COLOR AND LENGTH]
-- [OVERALL FACIAL PRESENCE]
+- soft, rounded face shape with youthful proportions
+- soft, lightly defined jawline
+- short medium-brown hair with natural texture and slight curl
+- blue-grey eyes with a gentle, slightly absentminded expression
+- subtle freckles across nose and cheeks
 
 Avoid:
 
-- [INCORRECT FACE SHAPE]
-- [UNWANTED AGING]
-- [UNWANTED HAIRSTYLES]
-- [UNINTENDED FACIAL HAIR]
+- sharp or highly angular facial structures
+- overly aged or mature facial appearance
+- overly styled, rigid, or sharply cut hairstyles
+- heavy facial hair or strong stubble
 
 ---
 
@@ -42,16 +44,17 @@ Avoid:
 
 Always preserve:
 
-- [GENERAL STYLE AESTHETIC]
-- [CLOTHING SILHOUETTE]
-- [COLOR PALETTE]
-- [ACCESSORY STYLE]
+- soft, domestic, and approachable aesthetic
+- relaxed or gently fitted clothing silhouettes
+- muted, soft color palette (beige, light blue, grey, soft tones)
+- minimal or no accessories
 
 Avoid:
 
-- [INCOMPATIBLE STYLE ELEMENTS]
-- [UNWANTED COLOR PALETTES]
-- [CLOTHING SILHOUETTES THAT BREAK CHARACTER]
+- structured, rigid, or highly tailored silhouettes
+- dark, heavy, or overly masculine color palettes dominating the look
+- flashy, trendy, or high-fashion styling
+- layered or complex outfits that feel overly intentional
 
 ---
 
@@ -59,15 +62,16 @@ Avoid:
 
 Typical movement:
 
-- [MOVEMENT TRAIT]
-- [MOVEMENT TRAIT]
+- relaxed and natural movement
+- light, fluid, and unobtrusive motion
 
 Typical posture:
 
-- [POSTURE TRAIT]
-- [POSTURE TRAIT]
+- slightly inward and relaxed stance
+- soft shoulders and non-dominant presence
 
 Avoid:
 
-- [UNCHARACTERISTIC BODY LANGUAGE]
-- [MOVEMENT CONTRARY TO CHARACTER IDENTITY]
+- upright, rigid, or dominant posture
+- deliberate, controlled, or authoritative movement
+- exaggerated confidence or assertive body language

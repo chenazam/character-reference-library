@@ -8,173 +8,125 @@ Each block can be copied into prompts depending on the generation task.
 
 ## Character Block
 
-Use for:
-
-- reference sheet prompts
-- anatomy prompts
-- body anchors
-- general character prompts
-
-[Brief full-body description of the character including build, facial identity, and overall aesthetic.]
+Alexander is a tall, broad-shouldered man with a strong athletic build and a well-proportioned muscular frame. He has cerulean blue eyes, short dark brown hair, and light stubble. His overall appearance is structured and refined, with a controlled, masculine presence and clean, well-defined proportions.
 
 ---
 
 ## Identity Block (Short)
 
-Use for:
-
-- quick prompts
-- scene prompts
-- interaction prompts
-
-[One or two sentence visual summary of the character.]
+Alexander is a tall, broad-shouldered athletic man with cerulean blue eyes, dark brown hair, and light stubble, with a calm, composed, and confident presence.
 
 ---
 
 ## Identity Block (Extended)
 
-Use for:
+Alexander is a tall man with a broad, athletic build and a strong upper-body presence, defined by wide shoulders, a deep chest, and balanced muscular proportions.
 
-- character setup
-- new chat initialization
-- style-sensitive prompts
+His face has a structured, masculine shape with a defined jawline, cerulean blue eyes, and short dark brown hair styled with natural volume. Light stubble adds texture and maturity to his appearance.
 
-[Full visual description of the character including build, facial features, proportions, and aesthetic.]
+His posture is upright and controlled, and his overall aesthetic is refined, structured, and quietly confident, with a clean and intentional silhouette.
 
 ---
 
 ## Face Block
 
-Use for:
+Alexander has a long oval face shape with a defined, masculine jawline.
 
-- face anchor prompts
-- portrait prompts
-- expression prompts
+His eyes are cerulean blue, with a calm and observant gaze.
 
-[Describe facial features only.]
+He has short dark brown hair with natural volume, styled neatly and effortlessly.
 
-Include:
-
-- face shape
-- jawline
-- eyes
-- distinctive traits
+His features are balanced and structured, with light stubble and a strong brow contributing to a composed, mature appearance.
 
 ---
 
 ## Body Block
 
-Use for:
+Alexander is tall with a broad, athletic build and a strong upper-body emphasis.
 
-- anatomy prompts
-- pose prompts
-- body anchor prompts
+He has wide shoulders, a defined chest, and muscular arms, with balanced athletic proportions.
 
-[Describe body proportions and physique.]
+His torso forms a clean V-shaped taper, and his limbs are well-proportioned and visibly defined.
 
-Include:
-
-- height
-- build
-- posture
-- limb proportions
+His posture is upright, controlled, and confident, reinforcing a stable and grounded physical presence.
 
 ---
 
 ## Style Block
 
-Use for:
+Alexander’s style is refined, structured, and understated.
 
-- outfit prompts
-- design language sheets
-- wardrobe prompts
+He wears fitted clothing such as tailored shirts, sweaters, polos, and well-fitted t-shirts, paired with chinos or dark jeans.
 
-[Describe the character's fashion and aesthetic identity.]
+Materials are clean and high-quality, such as cotton and wool.
 
-Include:
+His color palette is restrained, focusing on black, navy, charcoal, and occasional olive tones.
 
-- clothing style
-- materials
-- accessories
-- palette
+Accessories are minimal, typically limited to a simple watch.
 
 ---
 
 ## Movement Block
 
-Use for:
+Alexander’s movement is deliberate and precise, with minimal unnecessary motion.
 
-- motion prompts
-- pose prompts
-- dynamic scenes
+His posture remains upright and controlled even in relaxed situations.
 
-[Describe posture, movement style, and physical energy.]
+His physical presence feels grounded and stable, with a natural sense of authority in how he occupies space.
 
 ---
 
 ## Expression Block
 
-Use for:
+Alexander’s default expression is calm, reserved, and observant.
 
-- expression sheets
-- portrait prompts
-- emotional scenes
+His smile is subtle and restrained rather than overtly expressive.
 
-[Describe default expression style and emotional tone.]
+His emotional range appears controlled and measured, with intensity conveyed through small, focused changes rather than broad expressions.
 
 ---
 
 ## Wardrobe Description Block
 
-Use for:
+Alexander dresses in structured, fitted silhouettes that emphasize his broad shoulders and clean proportions.
 
-- outfit sheets
-- design language sheets
-- wardrobe prompts
+He favors simple, well-fitted garments such as tailored shirts, fitted t-shirts, sweaters, and polos, paired with chinos or dark jeans.
 
-[Describe how the character typically dresses.]
+Layering is minimal and intentional, often including light jackets or structured outerwear.
 
-Include:
-
-- silhouettes
-- layering style
-- typical outfit combinations
-- recurring clothing elements
+His wardrobe maintains a consistent, refined look that appears effortless but carefully chosen.
 
 ---
 
 ## Anti-Drift Rules
 
-Use for:
-
-- identity preservation prompts
-- difficult scenes
-- regeneration corrections
-
 Always preserve:
 
-- recognizable face structure
-- consistent body proportions
-- stable hairstyle
-- core aesthetic
+- tall height and broad shoulder structure
+- upper-body dominant proportions
+- defined jawline and facial structure
+- short dark hair and light stubble
+- refined, structured aesthetic
 
 Avoid:
 
-- [common drift issue]
-- [common drift issue]
+- bodybuilder-level bulk or exaggerated musculature
+- soft, inward, or slouched posture
 
 ---
 
 ## Short Prompt Description
 
-Copy this block directly into short prompts.
-
-[One concise visual description of the character.]
+Alexander is a tall, broad-shouldered athletic man with cerulean blue eyes, dark brown hair, and light stubble, with a composed and confident presence.
 
 ---
 
 ## Full Prompt Description
 
-Copy this block into prompts that require a full character description.
+Alexander is a tall man with a broad, athletic build, defined by wide shoulders, a strong chest, and balanced muscular proportions.
 
-[Full character description combining body, face, and style identity.]
+He has a structured face with a defined jawline, cerulean blue eyes, short dark brown hair, and light stubble.
+
+His posture is upright and controlled, and his aesthetic is refined and structured, with fitted clothing, clean lines, and a restrained color palette.
+
+Maintain consistent facial identity, body proportions, and style across all views.

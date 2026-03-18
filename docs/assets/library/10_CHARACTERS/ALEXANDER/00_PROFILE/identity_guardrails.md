@@ -1,22 +1,23 @@
-# Identity Guardrails — [CHARACTER_NAME]
+# Identity Guardrails — Alexander
 
-These rules define traits that must remain consistent when generating images of [CHARACTER_NAME].
+These rules define traits that must remain consistent when generating images of Alexander.
 
 ## Core Physical Identity
 
 Always preserve:
 
-- [HEIGHT AND BODY SCALE]
-- [GENERAL BUILD DESCRIPTION]
-- [SHOULDER WIDTH]
-- [LIMB PROPORTIONS]
-- [OVERALL BODY MASS / SILHOUETTE]
+- tall height and clear scale advantage over average characters
+- broad, upper-body dominant athletic build
+- wide shoulder structure and deep chest
+- balanced muscular limbs with visible but controlled definition
+- clean V-shaped silhouette with strong upper-body emphasis
 
 Avoid:
 
-- [UNWANTED BODY TYPE]
-- [INCORRECT PROPORTIONS]
-- [BODY TYPES THAT CONFLICT WITH CHARACTER]
+- bodybuilder-level bulk or exaggerated musculature
+- narrow shoulders or reduced upper-body presence
+- soft, undefined torso or loss of structure
+- overly slim or lightweight body types
 
 ---
 
@@ -24,17 +25,18 @@ Avoid:
 
 Always preserve:
 
-- [FACE SHAPE]
-- [JAW STRUCTURE]
-- [HAIR COLOR AND LENGTH]
-- [OVERALL FACIAL PRESENCE]
+- long oval face shape with structured proportions
+- defined, masculine jawline
+- short dark brown hair with natural volume
+- light stubble
+- calm, composed facial presence
 
 Avoid:
 
-- [INCORRECT FACE SHAPE]
-- [UNWANTED AGING]
-- [UNWANTED HAIRSTYLES]
-- [UNINTENDED FACIAL HAIR]
+- rounded or overly soft face shapes
+- overly aged or significantly older appearance
+- long, messy, or stylized hairstyles that break the clean look
+- fully clean-shaven appearance unless explicitly intended
 
 ---
 
@@ -42,16 +44,17 @@ Avoid:
 
 Always preserve:
 
-- [GENERAL STYLE AESTHETIC]
-- [CLOTHING SILHOUETTE]
-- [COLOR PALETTE]
-- [ACCESSORY STYLE]
+- refined, structured, and understated aesthetic
+- fitted clothing that emphasizes shoulder width and clean proportions
+- restrained color palette (black, navy, charcoal, neutral tones)
+- minimal, subtle accessories
 
 Avoid:
 
-- [INCOMPATIBLE STYLE ELEMENTS]
-- [UNWANTED COLOR PALETTES]
-- [CLOTHING SILHOUETTES THAT BREAK CHARACTER]
+- oversized or loose silhouettes that obscure body structure
+- bright, saturated, or flashy color palettes
+- overly trendy or exaggerated fashion styles
+- cluttered or accessory-heavy outfits
 
 ---
 
@@ -59,15 +62,16 @@ Avoid:
 
 Typical movement:
 
-- [MOVEMENT TRAIT]
-- [MOVEMENT TRAIT]
+- deliberate and precise movement
+- minimal and controlled physical motion
 
 Typical posture:
 
-- [POSTURE TRAIT]
-- [POSTURE TRAIT]
+- upright and composed stance
+- grounded and stable physical presence
 
 Avoid:
 
-- [UNCHARACTERISTIC BODY LANGUAGE]
-- [MOVEMENT CONTRARY TO CHARACTER IDENTITY]
+- slouched, inward, or withdrawn posture
+- exaggerated or overly expressive movement
+- nervous, hesitant, or chaotic body language

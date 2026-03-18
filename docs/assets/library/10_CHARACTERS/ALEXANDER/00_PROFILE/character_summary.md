@@ -4,56 +4,53 @@
 
 Name: Alexander
 
-Height: [HEIGHT_CM] cm ([HEIGHT_IMPERIAL])
+Height: 185 cm (6'1")
 
-Build Type: [lean / athletic / muscular / heavyset / etc.]
+Build Type: athletic muscular
 
-Age Appearance: [approximate age range]
+Age Appearance: mid-thirties
 
-Gender Presentation: [optional]
+Gender Presentation: masculine
 
 ---
 
 ## Overview Paragraph
 
-1–2 paragraphs of natural prose describing the character’s overall appearance, silhouette, presence, and vibe.  
-This text is used directly for the character page overview.
+Alexander is a tall, broad-shouldered man with a strong athletic build and a composed, controlled presence. His physique is defined by a clear upper-body emphasis, with broad shoulders, a deep chest, and well-developed arms, creating a clean V-shaped silhouette that reads as powerful without being excessive. His proportions are balanced and deliberate, giving the impression of strength maintained through discipline rather than vanity.
+
+His face is structured and masculine, with a defined jawline, cerulean blue eyes, and dark brown hair kept neat and effortless. Light stubble adds texture to his appearance, reinforcing a mature, grounded look. Alexander’s overall presence is calm, observant, and quietly dominant, with a natural authority that feels controlled rather than overtly aggressive.
 
 ---
 
 ## Visual Identity (Short Prompt Version)
 
-Use this block when a prompt needs a **short character description**.
-
-Alexander is a [height + build description] with [key facial features].
-Their aesthetic is [style description].
+Alexander is a tall, broad-shouldered athletic man with cerulean blue eyes, dark brown hair, and light stubble.  
+His aesthetic is refined, structured, and quietly confident with a controlled masculine presence.
 
 ---
 
 ## Visual Identity (Full Prompt Version)
 
-Use this block when a prompt needs a **complete character description**.
-
-Alexander is [height description] with [body description].
+Alexander is a tall man with a broad, athletic build and a strong upper-body presence.
 
 Key features:
 
-- face shape: [description]
-- jawline: [description]
-- eyes: [description]
-- hair: [description]
-- skin tone: [description]
+- face shape: long oval with structured proportions
+- jawline: defined and masculine
+- eyes: cerulean blue, calm and observant
+- hair: short dark brown hair with natural volume, neatly styled
+- skin tone: light with even tone
 
 Body proportions:
 
-- shoulder width: [description]
-- torso shape: [description]
-- limb proportions: [description]
-- posture: [description]
+- shoulder width: broad and visually dominant
+- torso shape: athletic torso with defined chest and controlled taper
+- limb proportions: balanced athletic limbs with visible definition
+- posture: upright, controlled, and composed
 
 Overall silhouette:
 
-[describe the recognizable shape of the character]
+A strong V-shaped silhouette defined by broad shoulders and a structured upper body, with clean lines and balanced proportions that read as powerful and controlled rather than bulky.
 
 ---
 
@@ -61,31 +58,31 @@ Overall silhouette:
 
 Aesthetic keywords:
 
-- [style keyword]
-- [style keyword]
-- [style keyword]
+- athletic_luxury
+- refined
+- structured
 
 Typical clothing elements:
 
-- [element]
-- [element]
-- [element]
+- fitted t-shirts or henleys
+- tailored shirts or sweaters
+- chinos or dark jeans
 
 Typical materials:
 
-- [material]
-- [material]
+- cotton
+- wool
 
 Typical colors:
 
 Primary colors:
 
-- [color]
-- [color]
+- black
+- navy
 
 Accent colors:
 
-- [color]
+- olive
 
 ---
 
@@ -93,9 +90,7 @@ Accent colors:
 
 Recurring items that often appear with the character:
 
-- [item]
-- [item]
-- [item]
+- minimal watch
 
 ---
 
@@ -103,15 +98,15 @@ Recurring items that often appear with the character:
 
 Posture:
 
-[description]
+Upright and controlled, with a naturally composed stance that reinforces physical presence.
 
 Movement style:
 
-[description]
+Deliberate and precise, with minimal unnecessary motion.
 
 Gesture style:
 
-[description]
+Restrained and controlled, with small, intentional gestures.
 
 ---
 
@@ -119,23 +114,21 @@ Gesture style:
 
 Default expression:
 
-[description]
+Calm, reserved, and observant.
 
 Typical smile:
 
-[description]
+Subtle and restrained rather than expressive.
 
 Emotional range:
 
-[description]
+Controlled and measured, with intensity appearing in small, focused shifts rather than broad expression.
 
 ---
 
 ## Personality Snapshot
 
-Short personality description used for scene prompts.
-
-[description]
+Alexander presents as calm, intelligent, and composed, with a quietly dominant presence. His behavior suggests control and intention in both movement and interaction, creating an impression of stability, confidence, and underlying intensity.
 
 ---
 
@@ -145,16 +138,16 @@ These traits should **never drift in generated images**.
 
 Always preserve:
 
-- height range
-- body proportions
-- facial structure
-- hairstyle silhouette
-- core aesthetic
+- height range (tall, clearly above average)
+- broad shoulder structure and upper-body dominance
+- defined jawline and facial structure
+- short dark hair and light stubble
+- structured, refined aesthetic
 
 Avoid:
 
-- [common drift issue]
-- [common drift issue]
+- overly bulky or bodybuilder-level proportions
+- soft, slouched, or inward posture
 
 ---
 
@@ -187,6 +180,6 @@ The **core reference pack** for prompts:
 
 This block is designed to be **copied directly into prompts**.
 
-Alexander is a [height + build] character with [distinctive facial features] and [visual style].
-Their aesthetic includes [style keywords], [typical clothing elements], and [accessories].
+Alexander is a tall, broad-shouldered athletic man with cerulean blue eyes, dark brown hair, and light stubble.  
+His aesthetic includes structured, refined clothing, fitted silhouettes, and a controlled, confident presence.  
 Maintain consistent facial identity, body proportions, and style across all views.

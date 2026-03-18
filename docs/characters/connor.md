@@ -6,8 +6,9 @@
 
 <div class="character-overview-text">
 
-<p>1–2 paragraphs of natural prose describing the character’s overall appearance, silhouette, presence, and vibe.  
-This text is used directly for the character page overview.</p>
+<p>Connor is a slim young man with a soft athletic build and a gentle, approachable presence. His physique is lightly trained, with a natural runner’s silhouette that emphasizes the lower body—his thighs and glutes are subtly more developed than his upper body, while his shoulders and torso remain lighter and less defined. This creates a soft, slightly inward silhouette that reads as relaxed and non-threatening rather than physically assertive.</p>
+
+<p>His face is youthful and soft-featured, with a rounded structure, blue-grey eyes, and short medium-brown hair with a natural, slightly tousled texture. Subtle freckles across his nose and cheeks enhance his boyish appearance. Connor’s overall presence is warm, calm, and slightly shy, with an occasional absentminded quality that makes him feel gentle and emotionally open.</p>
 
 <p>---</p>
 

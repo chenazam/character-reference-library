@@ -4,56 +4,53 @@
 
 Name: Connor
 
-Height: [HEIGHT_CM] cm ([HEIGHT_IMPERIAL])
+Height: 175 cm (5'9")
 
-Build Type: [lean / athletic / muscular / heavyset / etc.]
+Build Type: runner_build (soft athletic)
 
-Age Appearance: [approximate age range]
+Age Appearance: early-to-mid twenties
 
-Gender Presentation: [optional]
+Gender Presentation: soft masculine
 
 ---
 
 ## Overview Paragraph
 
-1–2 paragraphs of natural prose describing the character’s overall appearance, silhouette, presence, and vibe.  
-This text is used directly for the character page overview.
+Connor is a slim young man with a soft athletic build and a gentle, approachable presence. His physique is lightly trained, with a natural runner’s silhouette that emphasizes the lower body—his thighs and glutes are subtly more developed than his upper body, while his shoulders and torso remain lighter and less defined. This creates a soft, slightly inward silhouette that reads as relaxed and non-threatening rather than physically assertive.
+
+His face is youthful and soft-featured, with a rounded structure, blue-grey eyes, and short medium-brown hair with a natural, slightly tousled texture. Subtle freckles across his nose and cheeks enhance his boyish appearance. Connor’s overall presence is warm, calm, and slightly shy, with an occasional absentminded quality that makes him feel gentle and emotionally open.
 
 ---
 
 ## Visual Identity (Short Prompt Version)
 
-Use this block when a prompt needs a **short character description**.
-
-Connor is a [height + build description] with [key facial features].
-Their aesthetic is [style description].
+Connor is a slim, soft-athletic young man with gentle features, blue-grey eyes, and short medium-brown hair.  
+His aesthetic is soft, domestic, and slightly delicate with a warm, approachable presence.
 
 ---
 
 ## Visual Identity (Full Prompt Version)
 
-Use this block when a prompt needs a **complete character description**.
-
-Connor is [height description] with [body description].
+Connor is a medium-height young man with a slim, soft-athletic runner’s build and a gentle overall presence.
 
 Key features:
 
-- face shape: [description]
-- jawline: [description]
-- eyes: [description]
-- hair: [description]
-- skin tone: [description]
+- face shape: soft round with youthful proportions
+- jawline: soft and lightly defined
+- eyes: blue-grey, gentle and slightly absentminded
+- hair: short medium-brown hair with natural texture and slight curl
+- skin tone: light with subtle freckles across nose and cheeks
 
 Body proportions:
 
-- shoulder width: [description]
-- torso shape: [description]
-- limb proportions: [description]
-- posture: [description]
+- shoulder width: moderate and slightly narrow
+- torso shape: soft torso with minimal definition
+- limb proportions: lean limbs with stronger lower-body development
+- posture: relaxed, slightly inward, and non-dominant
 
 Overall silhouette:
 
-[describe the recognizable shape of the character]
+A slim, softly tapered silhouette with light upper-body structure and subtle emphasis on the thighs and glutes, creating a gentle, leg-dominant runner profile.
 
 ---
 
@@ -61,31 +58,31 @@ Overall silhouette:
 
 Aesthetic keywords:
 
-- [style keyword]
-- [style keyword]
-- [style keyword]
+- domestic_soft
+- romantic
+- approachable
 
 Typical clothing elements:
 
-- [element]
-- [element]
-- [element]
+- soft sweaters or casual shirts
+- relaxed jeans or lounge pants
+- lightweight homewear or casual shorts
 
 Typical materials:
 
-- [material]
-- [material]
+- cotton
+- linen
 
 Typical colors:
 
 Primary colors:
 
-- [color]
-- [color]
+- beige
+- light_blue
 
 Accent colors:
 
-- [color]
+- soft_grey
 
 ---
 
@@ -93,9 +90,7 @@ Accent colors:
 
 Recurring items that often appear with the character:
 
-- [item]
-- [item]
-- [item]
+- none
 
 ---
 
@@ -103,15 +98,15 @@ Recurring items that often appear with the character:
 
 Posture:
 
-[description]
+Relaxed and slightly inward, with soft shoulders and a non-assertive stance.
 
 Movement style:
 
-[description]
+Natural and unforced, with light, fluid motion.
 
 Gesture style:
 
-[description]
+Gentle and understated, often minimal or hesitant.
 
 ---
 
@@ -119,23 +114,21 @@ Gesture style:
 
 Default expression:
 
-[description]
+Soft, neutral, and slightly absentminded.
 
 Typical smile:
 
-[description]
+Warm, open, and gentle.
 
 Emotional range:
 
-[description]
+Expressive but subtle, with emotions often appearing as quiet shifts rather than dramatic changes.
 
 ---
 
 ## Personality Snapshot
 
-Short personality description used for scene prompts.
-
-[description]
+Connor presents as warm, gentle, and emotionally open, with a shy and slightly anxious nature that softens into calmness and contentment. His demeanor suggests trust, devotion, and a desire for stability, expressed through quiet attentiveness and a naturally caring presence.
 
 ---
 
@@ -145,16 +138,16 @@ These traits should **never drift in generated images**.
 
 Always preserve:
 
-- height range
-- body proportions
-- facial structure
-- hairstyle silhouette
-- core aesthetic
+- height range (medium, clearly shorter than Alexander)
+- slim, leg-dominant runner proportions
+- soft facial structure and youthful features
+- short, slightly textured brown hair
+- soft, domestic aesthetic
 
 Avoid:
 
-- [common drift issue]
-- [common drift issue]
+- broad shoulders or heavy upper-body musculature
+- rigid, dominant, or overly confident posture
 
 ---
 
@@ -187,6 +180,6 @@ The **core reference pack** for prompts:
 
 This block is designed to be **copied directly into prompts**.
 
-Connor is a [height + build] character with [distinctive facial features] and [visual style].
-Their aesthetic includes [style keywords], [typical clothing elements], and [accessories].
+Connor is a slim, soft-athletic young man with gentle facial features, blue-grey eyes, and short medium-brown hair.  
+His aesthetic includes soft, domestic clothing, relaxed silhouettes, and a warm, approachable presence.  
 Maintain consistent facial identity, body proportions, and style across all views.

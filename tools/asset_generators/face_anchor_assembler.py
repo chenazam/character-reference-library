@@ -17,12 +17,13 @@ Default project conventions:
 - Output filename:
     [character_name]_face_anchor_[VERSION].png
 
-This version does NOT use MediaPipe. It performs deterministic width-preserving
-vertical crops from 2:3 to 3:4 with configurable upward bias and optional
-tightening to reduce visible shoulder/chest mass.
+This version does NOT use MediaPipe. It performs deterministic cropping while
+always preserving the target panel aspect ratio (3:4). Tightening now zooms in
+by cropping BOTH width and height proportionally, instead of squishing the image.
 
-Install:
-    python -m pip install --upgrade Pillow
+New in this version:
+- per-view horizontal bias defaults
+- automatic profile direction detection using filename + image analysis
 """
 
 from __future__ import annotations
@@ -34,7 +35,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional, Tuple
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont, ImageOps, ImageStat
 
 
 # -----------------------------
@@ -57,6 +58,11 @@ LABEL_BAND_PX = 120
 LABEL_GAP_PX = 30
 
 CHAR_ROOT_RELATIVE = Path("docs/assets/library/10_CHARACTERS")
+
+# Per-view crop defaults
+DEFAULT_FRONT_H_BIAS = 0.50
+DEFAULT_THREE_QUARTER_H_BIAS = 0.50
+DEFAULT_PROFILE_BACKHEAD_BIAS = 0.66  # more room in front of the face
 
 
 @dataclass
@@ -84,11 +90,6 @@ def save_debug_image(img: Image.Image, path: Path) -> None:
 
 
 def normalize_character_name(name: str) -> tuple[str, str]:
-    """
-    Returns:
-        character_slug: lowercase filename prefix, e.g. 'connor'
-        character_dir: uppercase directory name, e.g. 'CONNOR'
-    """
     raw = name.strip()
     if not raw:
         raise ValueError("Character name must not be empty.")
@@ -96,10 +97,6 @@ def normalize_character_name(name: str) -> tuple[str, str]:
 
 
 def find_project_root(start_path: Path) -> Optional[Path]:
-    """
-    Walk upward from start_path and look for the repository root by checking for
-    the character library folder.
-    """
     current = start_path.resolve()
     if current.is_file():
         current = current.parent
@@ -128,12 +125,6 @@ def build_expected_paths(face_dir: Path, character_name: str, version: str) -> d
 
 
 def choose_latest_version(face_dir: Path, character_name: str) -> Optional[str]:
-    """
-    Find the latest version where all three required inputs exist.
-    Supports:
-      - *_v1.png, *_v2.png ...
-      - files with no version suffix
-    """
     character_slug, _ = normalize_character_name(character_name)
     required_stems = [
         f"{character_slug}_front_face",
@@ -166,51 +157,140 @@ def choose_latest_version(face_dir: Path, character_name: str) -> Optional[str]:
 
 
 # -----------------------------
+# Direction detection
+# -----------------------------
+
+def infer_profile_direction_from_name(path: Path) -> Optional[str]:
+    """
+    Returns 'left', 'right', or None.
+    """
+    name = path.stem.lower()
+
+    left_markers = [
+        "_left_profile", "_profile_left", "_profile_l", "_left",
+    ]
+    right_markers = [
+        "_right_profile", "_profile_right", "_profile_r", "_right",
+    ]
+
+    if any(marker in name for marker in left_markers):
+        return "left"
+    if any(marker in name for marker in right_markers):
+        return "right"
+    return None
+
+
+def edge_energy_half(gray: Image.Image, left_half: bool) -> float:
+    """
+    Estimate how much edge detail exists in one half of the image.
+    The face side usually has stronger edge energy than the blank background side.
+    """
+    w, h = gray.size
+    box = (0, 0, w // 2, h) if left_half else (w // 2, 0, w, h)
+    region = gray.crop(box)
+    region = ImageOps.autocontrast(region)
+    edges = region.filter(ImageFilter.FIND_EDGES)  # type: ignore[name-defined]
+    stat = ImageStat.Stat(edges)
+    return float(stat.mean[0])
+
+
+def infer_profile_direction_from_pixels(img: Image.Image) -> str:
+    """
+    Returns:
+      'left'  -> subject facing left
+      'right' -> subject facing right
+
+    Heuristic:
+    - Compute edge energy in left/right halves.
+    - The half containing the facial silhouette tends to have more structure.
+    """
+    gray = ImageOps.grayscale(img)
+    left_energy = edge_energy_half(gray, left_half=True)
+    right_energy = edge_energy_half(gray, left_half=False)
+
+    return "left" if left_energy >= right_energy else "right"
+
+
+def detect_profile_direction(path: Path, img: Image.Image) -> str:
+    """
+    First trust explicit filename markers if present, otherwise infer from image.
+    """
+    from_name = infer_profile_direction_from_name(path)
+    if from_name is not None:
+        return from_name
+    return infer_profile_direction_from_pixels(img)
+
+
+def profile_horizontal_bias_for_direction(direction: str) -> float:
+    """
+    Bias points toward the back of the head so the face gets more room in front.
+
+    - facing left: subject occupies left side, so shift crop to the right
+    - facing right: subject occupies right side, so shift crop to the left
+    """
+    if direction == "left":
+        return DEFAULT_PROFILE_BACKHEAD_BIAS
+    if direction == "right":
+        return 1.0 - DEFAULT_PROFILE_BACKHEAD_BIAS
+    return 0.50
+
+
+# -----------------------------
 # Cropping
 # -----------------------------
+from PIL import ImageFilter
+
 
 def crop_to_ratio(
     img: Image.Image,
     target_ratio: float = TARGET_PANEL_RATIO,
     vertical_bias: float = 0.30,
     tighten: float = 1.0,
+    horizontal_bias: float = 0.50,
 ) -> CropResult:
     """
-    Deterministic portrait crop:
-    - Preserve full width when possible
-    - Crop height down from 2:3 to 3:4
-    - Optionally tighten the crop to reduce visible shoulders/chest mass
-    - Bias slightly upward so the result keeps a bit more room below than above
+    Deterministic crop that ALWAYS preserves the target aspect ratio.
 
-    vertical_bias meaning:
-    - 0.00 => crop starts at very top
-    - 0.50 => centered crop
-    - 0.25-0.35 => useful range
-
-    tighten meaning:
-    - 1.00 => standard 3:4 crop from source width
-    - 0.88 => tighter crop before resize, usually better for face anchors
-    - 0.80-1.00 => safe range
+    Strategy:
+    1. Start from the largest possible 3:4 crop in the source image.
+    2. Apply 'tighten' as a proportional zoom, reducing BOTH width and height.
+    3. Position the crop with vertical_bias and horizontal_bias.
     """
     w, h = img.size
 
-    base_crop_h = int(round(w / target_ratio))
-    crop_h = int(round(base_crop_h * tighten))
-    crop_h = max(1, crop_h)
+    source_ratio = w / h
+    if source_ratio < target_ratio:
+        max_crop_w = w
+        max_crop_h = int(round(max_crop_w / target_ratio))
+        method_base = "max-from-width"
+    else:
+        max_crop_h = h
+        max_crop_w = int(round(max_crop_h * target_ratio))
+        method_base = "max-from-height"
 
-    if crop_h > h:
-        crop_w = int(round(h * target_ratio))
-        crop_w = min(crop_w, w)
-        left = (w - crop_w) // 2
-        box = (left, 0, left + crop_w, h)
-        return CropResult(img.crop(box), "fallback-width", box)
+    max_crop_w = min(max_crop_w, w)
+    max_crop_h = min(max_crop_h, h)
 
+    crop_w = max(1, int(round(max_crop_w * tighten)))
+    crop_h = max(1, int(round(max_crop_h * tighten)))
+
+    crop_h = min(crop_h, h)
+    crop_w = int(round(crop_h * target_ratio))
+    if crop_w > w:
+        crop_w = w
+        crop_h = int(round(crop_w / target_ratio))
+
+    extra_w = w - crop_w
     extra_h = h - crop_h
+
+    left = int(round(extra_w * horizontal_bias))
     top = int(round(extra_h * vertical_bias))
+
+    left = clamp(left, 0, w - crop_w)
     top = clamp(top, 0, h - crop_h)
 
-    box = (0, top, w, top + crop_h)
-    method = "fallback-height-tight" if tighten < 0.999 else "fallback-height"
+    box = (left, top, left + crop_w, top + crop_h)
+    method = f"{method_base}-tight" if tighten < 0.999 else method_base
     return CropResult(img.crop(box), method, box)
 
 
@@ -292,11 +372,7 @@ def parse_args() -> argparse.Namespace:
         description="Assemble a Face Anchor Sheet using the project's character asset conventions."
     )
 
-    parser.add_argument(
-        "--character",
-        required=True,
-        help="Character name, e.g. CONNOR or connor",
-    )
+    parser.add_argument("--character", required=True, help="Character name, e.g. CONNOR or connor")
     parser.add_argument(
         "--version",
         default=None,
@@ -335,14 +411,35 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--vertical-bias",
         type=float,
-        default=0.30,
-        help="Top-bias for width-preserving vertical crop. 0.25-0.35 is a useful range.",
+        default=0.25,
+        help="Top-bias for crop placement. 0.25-0.35 is a useful range.",
+    )
+    parser.add_argument(
+        "--front-horizontal-bias",
+        type=float,
+        default=DEFAULT_FRONT_H_BIAS,
+        help="Horizontal bias for front crop. Default keeps it centered.",
+    )
+    parser.add_argument(
+        "--three-quarter-horizontal-bias",
+        type=float,
+        default=DEFAULT_THREE_QUARTER_H_BIAS,
+        help="Horizontal bias for three-quarter crop. Default keeps it centered.",
+    )
+    parser.add_argument(
+        "--profile-horizontal-bias",
+        type=float,
+        default=None,
+        help=(
+            "Optional explicit horizontal bias for profile crop. "
+            "If omitted, profile direction is auto-detected and bias is applied toward the back of the head."
+        ),
     )
     parser.add_argument(
         "--tighten",
         type=float,
-        default=1.0,
-        help="Tighten the crop before resize. 0.88 is a good starting point.",
+        default=0.88,
+        help="Proportional zoom while preserving 3:4 ratio. 0.88 is a good starting point.",
     )
     parser.add_argument(
         "--debug-dir",
@@ -362,9 +459,9 @@ def validate_panel_ratio(panel_width: int, panel_height: int) -> None:
         )
 
 
-def validate_vertical_bias(vertical_bias: float) -> None:
-    if not (0.0 <= vertical_bias <= 0.5):
-        raise ValueError("vertical-bias must be between 0.0 and 0.5")
+def validate_bias(name: str, value: float) -> None:
+    if not (0.0 <= value <= 1.0):
+        raise ValueError(f"{name} must be between 0.0 and 1.0")
 
 
 def validate_tighten(tighten: float) -> None:
@@ -377,7 +474,11 @@ def main() -> int:
 
     try:
         validate_panel_ratio(args.panel_width, args.panel_height)
-        validate_vertical_bias(args.vertical_bias)
+        validate_bias("vertical-bias", args.vertical_bias)
+        validate_bias("front-horizontal-bias", args.front_horizontal_bias)
+        validate_bias("three-quarter-horizontal-bias", args.three_quarter_horizontal_bias)
+        if args.profile_horizontal_bias is not None:
+            validate_bias("profile-horizontal-bias", args.profile_horizontal_bias)
         validate_tighten(args.tighten)
     except ValueError as exc:
         print(f"Error: {exc}", file=sys.stderr)
@@ -385,7 +486,6 @@ def main() -> int:
 
     if args.face_dir is not None:
         face_dir = args.face_dir.resolve()
-        project_root = None
     else:
         if args.project_root is not None:
             project_root = args.project_root.resolve()
@@ -397,7 +497,6 @@ def main() -> int:
                     file=sys.stderr,
                 )
                 return 1
-
         face_dir = resolve_face_dir(project_root, args.character)
 
     if not face_dir.exists():
@@ -415,7 +514,6 @@ def main() -> int:
             return 1
 
     paths = build_expected_paths(face_dir, args.character, version)
-
     front_path = paths["front"]
     profile_path = paths["profile"]
     three_quarter_path = paths["three_quarter"]
@@ -430,9 +528,31 @@ def main() -> int:
     profile_img = load_image(profile_path)
     three_quarter_img = load_image(three_quarter_path)
 
-    front_crop = crop_to_ratio(front_img, vertical_bias=args.vertical_bias, tighten=args.tighten)
-    profile_crop = crop_to_ratio(profile_img, vertical_bias=args.vertical_bias, tighten=args.tighten)
-    three_quarter_crop = crop_to_ratio(three_quarter_img, vertical_bias=args.vertical_bias, tighten=args.tighten)
+    profile_direction = detect_profile_direction(profile_path, profile_img)
+    profile_horizontal_bias = (
+        args.profile_horizontal_bias
+        if args.profile_horizontal_bias is not None
+        else profile_horizontal_bias_for_direction(profile_direction)
+    )
+
+    front_crop = crop_to_ratio(
+        front_img,
+        vertical_bias=args.vertical_bias,
+        horizontal_bias=args.front_horizontal_bias,
+        tighten=args.tighten,
+    )
+    profile_crop = crop_to_ratio(
+        profile_img,
+        vertical_bias=args.vertical_bias,
+        horizontal_bias=profile_horizontal_bias,
+        tighten=args.tighten,
+    )
+    three_quarter_crop = crop_to_ratio(
+        three_quarter_img,
+        vertical_bias=args.vertical_bias,
+        horizontal_bias=args.three_quarter_horizontal_bias,
+        tighten=args.tighten,
+    )
 
     panel_size = (args.panel_width, args.panel_height)
     front_panel = fit_panel(front_crop.image, panel_size)
@@ -462,6 +582,10 @@ def main() -> int:
     print(f"Three-quarter input: {three_quarter_path}")
     print(f"Output: {output_path}")
     print(f"Vertical bias: {args.vertical_bias}")
+    print(f"Front horizontal bias: {args.front_horizontal_bias}")
+    print(f"Profile direction: {profile_direction}")
+    print(f"Profile horizontal bias: {profile_horizontal_bias}")
+    print(f"Three-quarter horizontal bias: {args.three_quarter_horizontal_bias}")
     print(f"Tighten: {args.tighten}")
     print(f"Profile crop method: {profile_crop.method}, box={profile_crop.crop_box}")
     print(f"Front crop method: {front_crop.method}, box={front_crop.crop_box}")

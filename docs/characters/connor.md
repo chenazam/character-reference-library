@@ -66,3 +66,9 @@
 --8<-- "snippets/galleries/connor/identity.md"
 
 ---
+
+## Body
+
+--8<-- "snippets/galleries/connor/body.md"
+
+---

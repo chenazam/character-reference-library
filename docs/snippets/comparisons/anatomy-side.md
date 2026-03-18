@@ -58,8 +58,8 @@
 
   <div class="comparison-card">
     <h3><a href="../../characters/ragnar/">Ragnar</a></h3>
-    <a href="../../assets/library/10_CHARACTERS/RAGNAR/02_BODY/anatomy/ragnar_anatomy_side_v1.png" target="_blank">
-      <img src="../../assets/library/10_CHARACTERS/RAGNAR/02_BODY/anatomy/ragnar_anatomy_side_v1.png" alt="Ragnar anatomy-side">
+    <a href="../../assets/library/10_CHARACTERS/RAGNAR/02_BODY/anatomy/ragnar_anatomy_side_v2.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/RAGNAR/02_BODY/anatomy/ragnar_anatomy_side_v2.png" alt="Ragnar anatomy-side">
     </a>
   </div>
 
@@ -67,6 +67,20 @@
     <h3><a href="../../characters/tommy/">Tommy</a></h3>
     <a href="../../assets/library/10_CHARACTERS/TOMMY/02_BODY/anatomy/tommy_anatomy_side_v1.png" target="_blank">
       <img src="../../assets/library/10_CHARACTERS/TOMMY/02_BODY/anatomy/tommy_anatomy_side_v1.png" alt="Tommy anatomy-side">
+    </a>
+  </div>
+
+  <div class="comparison-card">
+    <h3><a href="../../characters/alexander/">Alexander</a></h3>
+    <a href="../../assets/library/10_CHARACTERS/ALEXANDER/02_BODY/anatomy/alexander_anatomy_side_v1.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/ALEXANDER/02_BODY/anatomy/alexander_anatomy_side_v1.png" alt="Alexander anatomy-side">
+    </a>
+  </div>
+
+  <div class="comparison-card">
+    <h3><a href="../../characters/connor/">Connor</a></h3>
+    <a href="../../assets/library/10_CHARACTERS/CONNOR/02_BODY/anatomy/connor_anatomy_side_v2.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/CONNOR/02_BODY/anatomy/connor_anatomy_side_v2.png" alt="Connor anatomy-side">
     </a>
   </div>
 

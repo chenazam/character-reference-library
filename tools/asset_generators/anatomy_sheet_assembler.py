@@ -29,10 +29,11 @@ Requirements:
 from __future__ import annotations
 
 import argparse
+import re
 import sys
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Iterable, Tuple
+from typing import Iterable, Optional, Tuple
 
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
@@ -64,7 +65,7 @@ DEFAULT_TEXT = (90, 90, 90)
 
 DEFAULT_OUTPUT = Path("anatomy_sheet.png")
 
-BASE_LIBRARY_PATH = Path("/docs/assets/library/10_CHARACTERS")
+CHAR_ROOT_RELATIVE = Path("docs/assets/library/10_CHARACTERS")
 
 
 @dataclass
@@ -142,22 +143,69 @@ def save_image(img: Image.Image, path: Path) -> None:
 def validate_exists(path: Path) -> None:
     if not path.exists():
         raise FileNotFoundError(f"File not found: {path}")
-    
 
-def resolve_character_paths(character: str) -> tuple[Path, Path, Path]:
-    char = character.upper()
 
-    base = BASE_LIBRARY_PATH / char / "02_BODY" / "anatomy"
+def normalize_character_name(name: str) -> tuple[str, str]:
+    raw = name.strip()
+    if not raw:
+        raise ValueError("Character name must not be empty.")
+    return raw.lower(), raw.upper()
 
-    front = base / "anatomy_front.png"
-    side  = base / "anatomy_side.png"
-    back  = base / "anatomy_back.png"
 
-    for p in (front, side, back):
-        if not p.exists():
-            raise FileNotFoundError(f"Missing anatomy panel: {p}")
+def find_project_root(start_path: Path) -> Optional[Path]:
+    current = start_path.resolve()
+    if current.is_file():
+        current = current.parent
+    for candidate in [current, *current.parents]:
+        if (candidate / CHAR_ROOT_RELATIVE).exists():
+            return candidate
+    return None
 
-    return front, side, back
+
+def resolve_anatomy_dir(project_root: Path, character_name: str) -> Path:
+    _, character_dir = normalize_character_name(character_name)
+    return project_root / CHAR_ROOT_RELATIVE / character_dir / "02_BODY" / "anatomy"
+
+
+def build_expected_paths(anatomy_dir: Path, character_name: str, version: str) -> dict[str, Path]:
+    character_slug, _ = normalize_character_name(character_name)
+    version_suffix = f"_{version}" if version else ""
+    return {
+        "front": anatomy_dir / f"{character_slug}_anatomy_front{version_suffix}.png",
+        "side": anatomy_dir / f"{character_slug}_anatomy_side{version_suffix}.png",
+        "back": anatomy_dir / f"{character_slug}_anatomy_back{version_suffix}.png",
+        "output": anatomy_dir / f"{character_slug}_anatomy_sheet{version_suffix}.png",
+    }
+
+
+def choose_latest_version(anatomy_dir: Path, character_name: str) -> Optional[str]:
+    character_slug, _ = normalize_character_name(character_name)
+    required_stems = [
+        f"{character_slug}_anatomy_front",
+        f"{character_slug}_anatomy_side",
+        f"{character_slug}_anatomy_back",
+    ]
+
+    candidates: set[str] = set()
+    for stem in required_stems:
+        for file in anatomy_dir.glob(f"{stem}*.png"):
+            match = re.match(rf"^{re.escape(stem)}(?:_(v\d+))?\.png$", file.name)
+            if match:
+                candidates.add(match.group(1) or "")
+
+    def version_key(v: str) -> tuple[int, str]:
+        if not v:
+            return (0, "")
+        m = re.match(r"v(\d+)$", v)
+        if m:
+            return (int(m.group(1)), v)
+        return (-1, v)
+
+    for version in sorted(candidates, key=version_key, reverse=True):
+        paths = build_expected_paths(anatomy_dir, character_name, version)
+        if all(paths[key].exists() for key in ("front", "side", "back")):
+            return version
+    return None
 
 
 def average_rgb(values: Iterable[Tuple[float, float, float]]) -> Tuple[float, float, float]:
@@ -175,13 +223,11 @@ def estimate_background_color(img: Image.Image, sample_size: int = 24) -> Tuple[
         img.crop((0, h - s, s, h)),
         img.crop((w - s, h - s, w, h)),
     ]
-
     samples = []
     for c in corners:
         arr = np.asarray(c, dtype=np.float32).reshape(-1, 3)
         mean = arr.mean(axis=0)
         samples.append((float(mean[0]), float(mean[1]), float(mean[2])))
-
     return average_rgb(samples)
 
 
@@ -189,10 +235,8 @@ def make_foreground_mask(img: Image.Image, threshold: float = DEFAULT_THRESHOLD)
     bg = estimate_background_color(img)
     arr = np.asarray(img, dtype=np.float32)
     bg_arr = np.array(bg, dtype=np.float32)
-
     diff = arr - bg_arr
     dist = np.sqrt(np.sum(diff * diff, axis=2))
-
     mask = (dist > threshold).astype(np.uint8) * 255
     mask_img = Image.fromarray(mask, mode="L")
     mask_img = mask_img.filter(ImageFilter.MedianFilter(size=3))
@@ -205,7 +249,6 @@ def find_figure_bounds(mask: Image.Image) -> FigureBounds:
     ys, xs = np.where(arr > 0)
     if len(xs) == 0 or len(ys) == 0:
         raise ValueError("Could not detect foreground figure in image.")
-
     return FigureBounds(
         x_min=int(xs.min()),
         y_min=int(ys.min()),
@@ -227,33 +270,21 @@ def resize_image(img: Image.Image, scale: float) -> Image.Image:
     return img.resize((new_w, new_h), Image.Resampling.LANCZOS)
 
 
-def place_figure(
-    bounds: FigureBounds,
-    scale: float,
-    panel_center_x: int,
-    baseline_y: int,
-) -> Tuple[int, int]:
+def place_figure(bounds: FigureBounds, scale: float, panel_center_x: int, baseline_y: int) -> Tuple[int, int]:
     figure_center_x = ((bounds.x_min + bounds.x_max) / 2.0) * scale
     resized_baseline = bounds.y_max * scale
-
     paste_x = int(round(panel_center_x - figure_center_x))
     paste_y = int(round(baseline_y - resized_baseline))
     return paste_x, paste_y
 
 
-def process_panel(
-    source_path: Path,
-    panel_center_x: int,
-    layout: LayoutSpec,
-    threshold: float,
-) -> Tuple[ProcessedFigure, Image.Image]:
+def process_panel(source_path: Path, panel_center_x: int, layout: LayoutSpec, threshold: float) -> Tuple[ProcessedFigure, Image.Image]:
     img = load_image(source_path)
     mask = make_foreground_mask(img, threshold=threshold)
     bounds = find_figure_bounds(mask)
     scale = compute_scale(bounds, layout)
     resized = resize_image(img, scale)
     paste_x, paste_y = place_figure(bounds, scale, panel_center_x, layout.baseline_y)
-
     processed = ProcessedFigure(
         source_path=source_path,
         original_image=img,
@@ -268,37 +299,19 @@ def process_panel(
 
 def validate_layout(layout: LayoutSpec) -> None:
     expected_width = (
-        layout.margin_left
-        + layout.panel_width
-        + layout.gutter
-        + layout.panel_width
-        + layout.gutter
-        + layout.panel_width
-        + layout.margin_right
+        layout.margin_left + layout.panel_width + layout.gutter +
+        layout.panel_width + layout.gutter + layout.panel_width + layout.margin_right
     )
     if expected_width != layout.canvas_width:
-        raise ValueError(
-            f"Canvas width mismatch: expected {expected_width} from margins/panels/gutters, got {layout.canvas_width}."
-        )
-
+        raise ValueError(f"Canvas width mismatch: expected {expected_width} from margins/panels/gutters, got {layout.canvas_width}.")
     expected_figure_area_height = (
-        layout.canvas_height
-        - layout.margin_top
-        - layout.margin_bottom
-        - layout.label_gap
-        - layout.label_band
+        layout.canvas_height - layout.margin_top - layout.margin_bottom - layout.label_gap - layout.label_band
     )
     if expected_figure_area_height != layout.figure_area_height:
-        raise ValueError(
-            f"Figure area height mismatch: expected {expected_figure_area_height}, got {layout.figure_area_height}."
-        )
-
+        raise ValueError(f"Figure area height mismatch: expected {expected_figure_area_height}, got {layout.figure_area_height}.")
     expected_baseline = layout.margin_top + layout.figure_area_height
     if expected_baseline != layout.baseline_y:
-        raise ValueError(
-            f"Baseline mismatch: expected {expected_baseline}, got {layout.baseline_y}."
-        )
-
+        raise ValueError(f"Baseline mismatch: expected {expected_baseline}, got {layout.baseline_y}.")
     if layout.max_figure_width > layout.panel_width:
         raise ValueError("max_figure_width must be <= panel_width.")
     if layout.target_height > layout.figure_area_height:
@@ -312,22 +325,14 @@ def validate_processed_figure(processed: ProcessedFigure, layout: LayoutSpec) ->
             f"Scaled figure width exceeds max allowed width for {processed.source_path.name}: "
             f"{scaled_width:.2f} > {layout.max_figure_width}"
         )
-
     scaled_top = processed.bounds.y_min * processed.scale + processed.paste_y
     top_clearance = scaled_top - layout.margin_top
     if top_clearance < 10:
-        raise ValueError(
-            f"Top clearance too small for {processed.source_path.name}: {top_clearance:.2f}px"
-        )
+        raise ValueError(f"Top clearance too small for {processed.source_path.name}: {top_clearance:.2f}px")
 
 
 def load_font(size: int) -> ImageFont.ImageFont:
-    font_candidates = [
-        "arial.ttf",
-        "Arial.ttf",
-        "DejaVuSans.ttf",
-        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
-    ]
+    font_candidates = ["arial.ttf", "Arial.ttf", "DejaVuSans.ttf", "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"]
     for candidate in font_candidates:
         try:
             return ImageFont.truetype(candidate, size=size)
@@ -336,27 +341,15 @@ def load_font(size: int) -> ImageFont.ImageFont:
     return ImageFont.load_default()
 
 
-def render_sheet(
-    front: ProcessedFigure,
-    side: ProcessedFigure,
-    back: ProcessedFigure,
-    layout: LayoutSpec,
-    output_path: Path,
-    background: Tuple[int, int, int] = DEFAULT_BG,
-    text_color: Tuple[int, int, int] = DEFAULT_TEXT,
-) -> Image.Image:
+def render_sheet(front: ProcessedFigure, side: ProcessedFigure, back: ProcessedFigure, layout: LayoutSpec, output_path: Path, background: Tuple[int, int, int] = DEFAULT_BG, text_color: Tuple[int, int, int] = DEFAULT_TEXT) -> Image.Image:
     canvas = Image.new("RGB", (layout.canvas_width, layout.canvas_height), background)
-
     for pf in (front, side, back):
         canvas.paste(pf.resized_image, (pf.paste_x, pf.paste_y))
-
     draw = ImageDraw.Draw(canvas)
     font = load_font(size=46)
-
     labels = ["FRONT", "SIDE", "BACK"]
     panel_lefts = layout.panel_lefts
     label_top = layout.margin_top + layout.figure_area_height + layout.label_gap
-
     for panel_left, label in zip(panel_lefts, labels):
         bbox = draw.textbbox((0, 0), label, font=font)
         text_w = bbox[2] - bbox[0]
@@ -364,7 +357,6 @@ def render_sheet(
         text_x = panel_left + (layout.panel_width - text_w) // 2
         text_y = label_top + (layout.label_band - text_h) // 2 - 4
         draw.text((text_x, text_y), label, fill=text_color, font=font)
-
     save_image(canvas, output_path)
     return canvas
 
@@ -381,48 +373,82 @@ def save_debug_bounded_source(img: Image.Image, bounds: FigureBounds, path: Path
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(
-        description="Assemble a strict anatomy sheet from front/side/back full-body images."
-    )
-    parser.add_argument("--front", type=Path, required=True, help="Path to front panel image")
-    parser.add_argument("--side", type=Path, required=True, help="Path to side panel image")
-    parser.add_argument("--back", type=Path, required=True, help="Path to back panel image")
-    parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT, help="Output anatomy sheet path")
+    parser = argparse.ArgumentParser(description="Assemble a strict anatomy sheet from front/side/back full-body images.")
+    parser.add_argument("--front", type=Path, default=None, help="Path to front panel image")
+    parser.add_argument("--side", type=Path, default=None, help="Path to side panel image")
+    parser.add_argument("--back", type=Path, default=None, help="Path to back panel image")
+    parser.add_argument("--output", type=Path, default=None, help="Output anatomy sheet path")
     parser.add_argument("--debug-dir", type=Path, default=None, help="Optional debug output directory")
     parser.add_argument("--threshold", type=float, default=DEFAULT_THRESHOLD, help="Foreground threshold")
-    parser.add_argument("--character", type=str, help="Character name")
+    parser.add_argument("--character", type=str, default=None, help="Character name, e.g. CONNOR or connor")
+    parser.add_argument("--version", type=str, default=None, help="Version suffix such as v1 or v2. If omitted, latest complete set is used.")
+    parser.add_argument("--project-root", type=Path, default=None, help="Optional explicit project root. If omitted, the script auto-detects it.")
+    parser.add_argument("--anatomy-dir", type=Path, default=None, help="Optional explicit anatomy directory. Overrides project-root + character resolution.")
     return parser.parse_args()
 
 
 def main() -> int:
     args = parse_args()
-
     try:
-        if args.character:
-            front_path, side_path, back_path = resolve_character_paths(args.character)
+        layout = LayoutSpec()
+        validate_layout(layout)
+
+        if args.anatomy_dir is not None:
+            anatomy_dir = args.anatomy_dir.resolve()
+        elif args.character is not None:
+            if args.project_root is not None:
+                project_root = args.project_root.resolve()
+            else:
+                project_root = find_project_root(Path(__file__))
+                if project_root is None:
+                    raise ValueError("Could not auto-detect project root. Use --project-root or --anatomy-dir.")
+            anatomy_dir = resolve_anatomy_dir(project_root, args.character)
+        else:
+            anatomy_dir = None
+
+        if anatomy_dir is not None:
+            if not anatomy_dir.exists():
+                raise FileNotFoundError(f"Anatomy directory not found: {anatomy_dir}")
+            if args.character is None:
+                raise ValueError("--character is required when using --anatomy-dir or auto-resolved directory mode.")
+            version = args.version
+            if version is None:
+                version = choose_latest_version(anatomy_dir, args.character)
+                if version is None:
+                    raise ValueError(f"Could not find a complete front/side/back set in {anatomy_dir}")
+            resolved_paths = build_expected_paths(anatomy_dir, args.character, version)
+            front_path = resolved_paths["front"]
+            side_path = resolved_paths["side"]
+            back_path = resolved_paths["back"]
+            output_path = args.output.resolve() if args.output else resolved_paths["output"]
         else:
             if not (args.front and args.side and args.back):
-                raise ValueError("Either --character OR all of --front/--side/--back must be provided.")
-            front_path, side_path, back_path = args.front, args.side, args.back
+                raise ValueError("Provide either --character or all of --front/--side/--back.")
+            front_path = args.front.resolve()
+            side_path = args.side.resolve()
+            back_path = args.back.resolve()
+            output_path = args.output.resolve() if args.output else DEFAULT_OUTPUT.resolve()
+            version = None
 
         for p in (front_path, side_path, back_path):
             validate_exists(p)
 
-        layout = LayoutSpec()
-        validate_layout(layout)
-
-        front_pf, front_mask = process_panel(args.front, layout.panel_centers[0], layout, args.threshold)
-        side_pf, side_mask = process_panel(args.side, layout.panel_centers[1], layout, args.threshold)
-        back_pf, back_mask = process_panel(args.back, layout.panel_centers[2], layout, args.threshold)
+        front_pf, front_mask = process_panel(front_path, layout.panel_centers[0], layout, args.threshold)
+        side_pf, side_mask = process_panel(side_path, layout.panel_centers[1], layout, args.threshold)
+        back_pf, back_mask = process_panel(back_path, layout.panel_centers[2], layout, args.threshold)
 
         for pf in (front_pf, side_pf, back_pf):
             validate_processed_figure(pf, layout)
 
-        render_sheet(front_pf, side_pf, back_pf, layout, args.output)
+        render_sheet(front_pf, side_pf, back_pf, layout, output_path)
 
         print("Done.")
-        print(f"Output: {args.output}")
+        print(f"Output: {output_path}")
         print(f"Threshold: {args.threshold}")
+        if anatomy_dir is not None:
+            print(f"Character: {args.character}")
+            print(f"Anatomy directory: {anatomy_dir}")
+            print(f"Version: {version if version else '(no suffix)'}")
         for label, pf in (("FRONT", front_pf), ("SIDE", side_pf), ("BACK", back_pf)):
             print(
                 f"{label}: bounds=({pf.bounds.x_min}, {pf.bounds.y_min}, {pf.bounds.x_max}, {pf.bounds.y_max}), "

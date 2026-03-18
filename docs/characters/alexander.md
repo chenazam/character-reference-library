@@ -66,3 +66,9 @@
 --8<-- "snippets/galleries/alexander/identity.md"
 
 ---
+
+## Body
+
+--8<-- "snippets/galleries/alexander/body.md"
+
+---

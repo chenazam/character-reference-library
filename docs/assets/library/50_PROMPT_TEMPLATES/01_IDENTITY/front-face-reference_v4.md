@@ -32,4 +32,4 @@ This asset defines the canonical facial identity and must be highly consistent a
 
 ---
 
-[FACE_PANEL_OUTPUT_REQUIREMENTS]
+[PANEL_OUTPUT_REQUIREMENTS]

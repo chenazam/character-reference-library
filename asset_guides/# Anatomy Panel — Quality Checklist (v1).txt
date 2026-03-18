@@ -1,0 +1,269 @@
+# Anatomy Panel — Quality Checklist (v1)
+
+## Core Principle
+
+An anatomy panel is a **measurement input**, not a final image.
+
+Every requirement should support:
+
+- geometric consistency
+- clean silhouette extraction
+- reliable scaling and alignment
+
+---
+
+# 1. Framing & Camera (CRITICAL)
+
+## Required
+
+- Full body visible (head → feet)
+- No cropping anywhere
+- Camera is:
+  - Straight-on (no tilt)
+  - Neutral perspective (minimal distortion)
+- Consistent camera distance across all panels
+
+## Must NOT happen
+
+- Zoom differences between views
+- Perspective exaggeration (wide lens effect)
+- Camera tilt (up/down angle)
+
+---
+
+# 2. Aspect Ratio & Scale
+
+## Required
+
+- Image ratio: **2:3 (width:height)**
+- Subject occupies:
+  - ~75–85% of image height
+  - Does NOT touch edges
+
+## Must NOT happen
+
+- Subject too small
+- Subject touching top/bottom edges
+- Inconsistent subject size across panels
+
+---
+
+# 3. Pose (EXTREMELY IMPORTANT)
+
+## Required
+
+- Neutral standing pose
+- Weight evenly distributed
+- Arms:
+  - Relaxed
+  - Slightly separated from torso (visible gap)
+- Legs:
+  - Hip-width apart
+- Spine:
+  - Natural upright posture
+
+## Must NOT happen
+
+- Contrapposto (weight shift)
+- Bent knees
+- Arms touching torso
+- Asymmetry between views
+
+---
+
+# 4. View Accuracy
+
+## FRONT
+
+- Perfectly symmetrical
+- Shoulders level
+- Hips level
+
+## SIDE
+
+- True profile (90°)
+- No torso twist toward camera
+- Spine curvature clearly readable
+
+## BACK
+
+- Matches front alignment
+- No rotation
+- Shoulders and hips symmetrical
+
+## Must NOT happen
+
+- 3/4 leakage into side/back views
+- Rotated torso
+- Inconsistent stance between views
+
+---
+
+# 5. Background & Separation
+
+## Required
+
+- Flat, uniform background
+- Neutral light color (off-white / light gray)
+- Strong contrast between subject and background
+
+## Must NOT happen
+
+- Gradients
+- Textures
+- Background shadows
+- Colors similar to subject
+
+---
+
+# 6. Silhouette Quality (VERY IMPORTANT)
+
+## Required
+
+- Clean, continuous outline
+- No holes in silhouette
+- Clear separation:
+  - Arms from torso
+  - Legs from each other
+
+## Must NOT happen
+
+- Merged limbs (legs touching, arms fused to torso)
+- Blurry edges
+- Noise interfering with silhouette
+
+---
+
+# 7. Lighting
+
+## Required
+
+- Soft, even lighting
+- Low contrast
+- No harsh shadows
+- No directional drama
+
+## Must NOT happen
+
+- Strong side lighting
+- Cast shadows on background
+- Blown highlights or crushed shadows
+
+---
+
+# 8. Clothing
+
+## Required
+
+- Minimal, form-revealing clothing
+- Consistent across all views
+
+Examples:
+
+- Fitted shorts
+- Compression shorts
+- Tight shirt or bare torso
+
+## Must NOT happen
+
+- Loose clothing
+- Layered outfits
+- Fabric obscuring body shape
+
+---
+
+# 9. Proportion Consistency (Across Panels)
+
+## Required
+
+- Same height across all views
+- Same limb length
+- Same shoulder width
+- Same hip width
+- Same head size
+
+## Must NOT happen
+
+- Limb length changes between views
+- Torso compression/expansion
+- Head scale drifting
+
+---
+
+# 10. Identity Neutrality
+
+## Required
+
+- Neutral expression
+- No stylization emphasis
+- No dramatic posing
+
+## Must NOT happen
+
+- Hero poses
+- Stylized exaggeration
+- Aesthetic bias
+
+---
+
+# 11. Assembler Compatibility (CRITICAL)
+
+Before using a panel, verify:
+
+- Clean silhouette can be extracted
+- Lowest pixel = feet (no noise below)
+- Highest pixel = head/hair
+- No stray pixels outside main body
+- No background artifacts
+
+---
+
+# Quick Validation Checklist
+
+Use this before accepting a panel:
+
+- [ ] Full body visible
+- [ ] Arms separated from torso
+- [ ] Legs separated
+- [ ] Neutral pose
+- [ ] Flat background
+- [ ] Consistent scale vs other views
+- [ ] No perspective distortion
+- [ ] Clean silhouette
+
+---
+
+# Common Failure Patterns
+
+## 1. Over-stylized lighting
+
+Looks good, breaks detection
+
+## 2. Arms touching torso
+
+Breaks silhouette separation
+
+## 3. Inconsistent scaling
+
+Different height between views
+
+## 4. Soft or blurry edges
+
+Reduces mask accuracy
+
+## 5. Subtle pose drift
+
+Small stance differences across views
+
+---
+
+# Summary
+
+A valid anatomy panel should function as:
+
+> A clean silhouette + reliable bounding box for measurement
+
+Not:
+
+- a stylized render
+- a composition-focused image

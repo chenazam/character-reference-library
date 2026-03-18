@@ -1,0 +1,192 @@
+# Body Anchor Panel Checklist (v1)
+
+## Purpose
+
+Body anchor panels define the **natural, character-aware full-body appearance** while remaining structurally locked to the anatomy sheet.
+
+They introduce controlled realism without altering proportions.
+
+---
+
+## Input References (REQUIRED)
+
+### Primary
+- Anatomy sheet (strict geometry source)
+
+### Secondary
+- Face anchor (identity consistency)
+
+### Optional
+- Character description / style metadata
+
+### Rules
+- Do NOT use previous body anchors as input
+- Do NOT chain generations (no body → body)
+
+---
+
+## 1. Framing & Camera
+
+- Full body visible (head to feet)
+- Consistent framing across all views
+- Same camera distance as anatomy panels
+- Neutral perspective (no distortion)
+
+---
+
+## 2. Pose (Controlled Naturalism)
+
+### Required
+- Upright posture
+- Spine neutral (no slouch, no stiffness)
+- Pose consistent across all views
+
+### Allowed
+- Very slight natural relaxation
+
+### Not Allowed
+- Contrapposto
+- Weight shift
+- Bent knees
+- Pose variation between views
+
+---
+
+## 3. Arms & Hands
+
+### Required
+- Arms hanging downward
+- Elbows mostly extended
+- Clear separation from torso
+
+### Hands
+- Neutral rotation
+- Fingers relaxed but controlled
+
+### Not Allowed
+- Arms touching torso
+- Large pose variation between views
+
+---
+
+## 4. Legs & Feet
+
+### Required
+- Legs mostly straight
+- Feet placement consistent across views
+
+### Allowed
+- Minimal natural softness
+
+### Not Allowed
+- Visible weight shift
+- Hip tilt
+- Stance variation
+
+---
+
+## 5. Clothing (Identity Layer)
+
+### Required
+- Consistent across all views
+- Character-appropriate
+- Preserves silhouette readability
+
+### Recommended
+- Fitted or semi-fitted clothing
+- Minimal fabric distortion
+
+### Not Allowed
+- Bulky clothing
+- Layered outfits
+- Shape-obscuring garments
+
+---
+
+## 6. Silhouette Integrity
+
+### Required
+- Clear readable outline
+- Visible:
+  - shoulder width
+  - waist shape
+  - hip structure
+  - leg proportions
+
+### Not Allowed
+- Limb merging
+- Silhouette ambiguity
+
+---
+
+## 7. Cross-View Consistency
+
+### Required
+- Identical pose across:
+  - front
+  - side
+  - three-quarter
+
+- Clothing consistency across views
+- Body proportions match exactly
+
+### Not Allowed
+- Pose reinterpretation per view
+- Clothing variation between views
+
+---
+
+## 8. Identity Expression
+
+### Required
+- Reflects character personality
+- Matches face anchor identity
+
+### Allowed
+- Subtle natural posture nuance
+
+### Not Allowed
+- Stylization that alters proportions
+- Exaggerated posing
+
+---
+
+## 9. Lighting
+
+### Required
+- Soft, neutral, even lighting
+
+### Not Allowed
+- Dramatic shadows
+- Directional lighting that obscures form
+
+---
+
+## 10. Validation Checklist
+
+### Geometry
+- [ ] Matches anatomy proportions
+- [ ] No limb length drift
+- [ ] No torso distortion
+
+### Pose
+- [ ] Same pose across all views
+- [ ] Arms separated from torso
+- [ ] No weight shift
+
+### Clothing
+- [ ] Consistent across views
+- [ ] Does not distort body shape
+
+### Silhouette
+- [ ] Clean readable outline
+- [ ] No merged limbs
+
+---
+
+## Key Rule
+
+Body anchor = controlled natural deformation of anatomy
+
+Silhouette difference vs anatomy:
+~90–95% identical

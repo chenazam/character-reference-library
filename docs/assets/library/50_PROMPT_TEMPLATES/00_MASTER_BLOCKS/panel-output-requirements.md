@@ -2,5 +2,5 @@
 
 - single image
 - no text, labels, or frames
-- no cropping of head or shoulders
+- no cropping of subject
 - clean, centered composition

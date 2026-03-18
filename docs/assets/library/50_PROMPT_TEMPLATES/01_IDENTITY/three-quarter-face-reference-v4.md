@@ -47,4 +47,4 @@ This asset represents the same face rotated into a three-quarter angle and must 
 
 ---
 
-[FACE_PANEL_OUTPUT_REQUIREMENTS]
+[PANEL_OUTPUT_REQUIREMENTS]

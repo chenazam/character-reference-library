@@ -57,4 +57,4 @@ This asset represents the same face in a strict profile view and must preserve i
 
 ---
 
-[FACE_PANEL_OUTPUT_REQUIREMENTS]
+[PANEL_OUTPUT_REQUIREMENTS]

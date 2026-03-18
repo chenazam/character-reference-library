@@ -6,7 +6,7 @@ These rules define traits that must remain consistent when generating images of 
 
 Always preserve:
 
-- Height approximately 5'9" (175 cm)
+- Height approximately 5'8" (172 cm)
 - Soft slender build with natural body softness
 - Narrow to moderate shoulders
 - Slender arms and lighter upper body

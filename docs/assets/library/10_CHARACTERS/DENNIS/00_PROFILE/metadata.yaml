@@ -90,7 +90,7 @@ reference_files:
   signature_outfit_sheet: ''
   silhouette_sheet: dennis_silhouette_sheet_v1.png
   turnaround_sheet: dennis_turnaround_v1.png
-  silhouette_front: ''
+  silhouette_front: dennis_silhouette_front_v1.png
 pipeline_status:
   face_anchor: complete
   hair_sheet: complete
@@ -119,7 +119,7 @@ pipeline_status:
   scene_anchor: not_started
   dynamic_pose: not_started
   final_ucs: not_started
-  silhouette_front: not_started
+  silhouette_front: complete
 notes: 'Reference images show a naturally soft male physique with visible lower-body
   dominance in hips, glutes, and thighs. Facial features are gentle with a soft round
   structure, freckles across the nose, and rectangular glasses.

@@ -27,10 +27,10 @@ hide:
 
 <div class="height-lineup__figure">
   <div class="height-lineup__stage">
-    <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/TOMMY/02_BODY/structure/tommy_silhouette_front_v1.png" alt="Tommy silhouette" style="height: 97.22%;">
+    <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/TOMMY/02_BODY/structure/tommy_silhouette_front_v1.png" alt="Tommy silhouette" style="height: 95.56%;">
   </div>
   <div class="height-lineup__label">Tommy</div>
-  <div class="height-lineup__meta">175 cm / 5'9"</div>
+  <div class="height-lineup__meta">172 cm / 5'8"</div>
 </div>
 
 <div class="height-lineup__figure">

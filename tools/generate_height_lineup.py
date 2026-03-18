@@ -34,7 +34,7 @@ OUTPUT_ROOT = ROOT / "docs" / "comparisons" / "lineups"
 
 NORMAL_CHART_HEIGHT_PX = 460
 COMPACT_CHART_HEIGHT_PX = 360
-COMPACT_THRESHOLD = 4
+COMPACT_THRESHOLD = 6
 
 
 def load_character(slug: str) -> dict:

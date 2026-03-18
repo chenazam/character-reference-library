@@ -78,7 +78,7 @@ hide:
     <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/DENNIS/02_BODY/structure/dennis_silhouette_front_v1.png" alt="Dennis silhouette" style="height: 84.13%;">
   </div>
   <div class="height-lineup__label">Dennis</div>
-  <div class="height-lineup__meta">175 cm / 5 ft 9 in</div>
+  <div class="height-lineup__meta">175 cm / 5'9"</div>
 </div>
 
 <div class="height-lineup__figure">

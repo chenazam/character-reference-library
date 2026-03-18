@@ -41,6 +41,29 @@ def load_metadata(character_dir):
     return yaml.safe_load(path.read_text(encoding="utf-8"))
 
 
+def parse_bool(value, default=True):
+    if value is None:
+        return default
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, str):
+        normalized = value.strip().lower()
+        if normalized in {"true", "yes", "1", "on"}:
+            return True
+        if normalized in {"false", "no", "0", "off"}:
+            return False
+    if isinstance(value, (int, float)):
+        return bool(value)
+    return default
+
+
+def is_publicly_visible(metadata: dict) -> bool:
+    site_visibility = metadata.get("site_visibility", {})
+    if not isinstance(site_visibility, dict):
+        return True
+    return parse_bool(site_visibility.get("list_in_character_index", True), True)
+
+
 def progress_bar(percent):
     total = 20
     filled = int(total * percent)
@@ -64,6 +87,9 @@ def main():
 
         metadata = load_metadata(char_dir)
         if not metadata:
+            continue
+
+        if not is_publicly_visible(metadata):
             continue
 
         status = metadata.get("pipeline_status", {})
@@ -96,6 +122,9 @@ def main():
 
         metadata = load_metadata(char_dir)
         if not metadata:
+            continue
+
+        if not is_publicly_visible(metadata):
             continue
 
         status = metadata.get("pipeline_status", {})

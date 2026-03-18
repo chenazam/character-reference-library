@@ -14,10 +14,6 @@ Reference assets that still need to be generated.
 
 - next: proportion_grid
 
-## DENNIS
-
-- next: ucs_core
-
 ## HUDSON
 
 - next: proportion_grid

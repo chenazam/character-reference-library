@@ -101,8 +101,16 @@ Their emotional presentation also differs: **Daimon** feels **Intense**, while *
 <div class="comparison-grid comparison-grid-2">
 
   <div class="comparison-item">
+    <div class="comparison-label">Tommy — Body Anchor</div>
+    <img src="../../assets/library/10_CHARACTERS/TOMMY/02_BODY/structure/tommy_body_anchor_v1.png" alt="Tommy Body Anchor">
+  </div>
+  <div class="comparison-item">
     <div class="comparison-label">Tommy — Anatomy Sheet</div>
     <img src="../../assets/library/10_CHARACTERS/TOMMY/02_BODY/anatomy/tommy_anatomy_sheet_v1.png" alt="Tommy Anatomy Sheet">
+  </div>
+  <div class="comparison-item">
+    <div class="comparison-label">Tommy — Silhouette Sheet</div>
+    <img src="../../assets/library/10_CHARACTERS/TOMMY/02_BODY/structure/tommy_silhouette_sheet_v1.png" alt="Tommy Silhouette Sheet">
   </div>
 </div>
 

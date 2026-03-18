@@ -24,4 +24,16 @@
     <img src="..\..\assets\library\10_CHARACTERS\TOMMY\02_BODY\anatomy\tommy_anatomy_side_v1.png" alt="">
   </a>
 
+  <a href="..\..\assets\library\10_CHARACTERS\TOMMY\02_BODY\structure\tommy_body_anchor_v1.png" target="_blank">
+    <img src="..\..\assets\library\10_CHARACTERS\TOMMY\02_BODY\structure\tommy_body_anchor_v1.png" alt="">
+  </a>
+
+  <a href="..\..\assets\library\10_CHARACTERS\TOMMY\02_BODY\structure\tommy_silhouette_front_v1.png" target="_blank">
+    <img src="..\..\assets\library\10_CHARACTERS\TOMMY\02_BODY\structure\tommy_silhouette_front_v1.png" alt="">
+  </a>
+
+  <a href="..\..\assets\library\10_CHARACTERS\TOMMY\02_BODY\structure\tommy_silhouette_sheet_v1.png" target="_blank">
+    <img src="..\..\assets\library\10_CHARACTERS\TOMMY\02_BODY\structure\tommy_silhouette_sheet_v1.png" alt="">
+  </a>
+
 </div>

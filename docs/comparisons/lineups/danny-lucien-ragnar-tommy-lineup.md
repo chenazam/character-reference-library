@@ -18,7 +18,7 @@ hide:
   
 <div class="height-lineup__figure">
   <div class="height-lineup__stage">
-    <div class="height-lineup__placeholder height-lineup__placeholder--athletic_balanced height-lineup__placeholder--reference" style="height: 86.54%"></div>
+    <img class="height-lineup__silhouette height-lineup__silhouette--reference" src="/assets/reference/reference_male_average_180cm_front_v1.png" alt="Reference silhouette" style="height: 86.54%;">
   </div>
   <div class="height-lineup__label">Reference</div>
   <div class="height-lineup__meta">180 cm / 5'11"</div>
@@ -26,7 +26,7 @@ hide:
 
 <div class="height-lineup__figure">
   <div class="height-lineup__stage">
-    <div class="height-lineup__placeholder height-lineup__placeholder--massive_upper_dominant height-lineup__placeholder--elongated height-lineup__placeholder--dense" style="height: 100.00%"></div>
+    <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/RAGNAR/02_BODY/structure/ragnar_silhouette_front_v1.png" alt="Ragnar silhouette" style="height: 100.00%;">
   </div>
   <div class="height-lineup__label">Ragnar</div>
   <div class="height-lineup__meta">208 cm / 6'10"</div>
@@ -34,7 +34,7 @@ hide:
 
 <div class="height-lineup__figure">
   <div class="height-lineup__stage">
-    <div class="height-lineup__placeholder height-lineup__placeholder--heavy_muscular height-lineup__placeholder--elongated height-lineup__placeholder--dense" style="height: 92.79%"></div>
+    <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/DANNY/02_BODY/structure/danny_silhouette_front_v1.png" alt="Danny silhouette" style="height: 92.79%;">
   </div>
   <div class="height-lineup__label">Danny</div>
   <div class="height-lineup__meta">193 cm / 6'4</div>
@@ -42,7 +42,7 @@ hide:
 
 <div class="height-lineup__figure">
   <div class="height-lineup__stage">
-    <div class="height-lineup__placeholder height-lineup__placeholder--soft_curvy height-lineup__placeholder--glute_emphasis" style="height: 84.13%"></div>
+    <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/TOMMY/02_BODY/structure/tommy_silhouette_front_v1.png" alt="Tommy silhouette" style="height: 84.13%;">
   </div>
   <div class="height-lineup__label">Tommy</div>
   <div class="height-lineup__meta">175 cm / 5'9"</div>
@@ -50,7 +50,7 @@ hide:
 
 <div class="height-lineup__figure">
   <div class="height-lineup__stage">
-    <div class="height-lineup__placeholder height-lineup__placeholder--slender_refined height-lineup__placeholder--compact height-lineup__placeholder--glute_emphasis" style="height: 81.73%"></div>
+    <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/LUCIEN/02_BODY/structure/lucien_silhouette_front_v1.png" alt="Lucien silhouette" style="height: 81.73%;">
   </div>
   <div class="height-lineup__label">Lucien</div>
   <div class="height-lineup__meta">170 cm / 5'7"</div>

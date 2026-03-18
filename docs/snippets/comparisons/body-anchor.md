@@ -49,4 +49,11 @@
     </a>
   </div>
 
+  <div class="comparison-card">
+    <h3><a href="../../characters/tommy/">Tommy</a></h3>
+    <a href="../../assets/library/10_CHARACTERS/TOMMY/02_BODY/structure/tommy_body_anchor_v1.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/TOMMY/02_BODY/structure/tommy_body_anchor_v1.png" alt="Tommy body-anchor">
+    </a>
+  </div>
+
 </div>

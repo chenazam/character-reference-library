@@ -10,23 +10,23 @@ These pages document the fallback silhouette archetypes used when a character do
 <div class="archetype-index-grid">
 
 <div class="archetype-index-card">
-  <h2><a href="compact_light">Compact Light</a></h2>
+  <h2><a href="soft_curvy">Soft Curvy</a></h2>
 
   <div class="height-lineup height-lineup--archetype-doc">
   <div class="height-lineup__baseline" aria-hidden="true"></div>
   <div class="height-lineup__figure">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--compact_light" style="height: 100.00%"></div>
+      <div class="height-lineup__placeholder height-lineup__placeholder--soft_curvy" style="height: 100.00%"></div>
     </div>
   </div>
 </div>
 
 
-  <p>A smaller, lighter, compact silhouette with grounded proportions and modest width.</p>
+  <p>A softer silhouette with fuller hips, gentler transitions, and a more rounded lower-body read.</p>
 
   <p><strong>Count:</strong> 1</p>
 
-  <p><strong>Characters:</strong> <a href="../characters/luca">Luca</a></p>
+  <p><strong>Characters:</strong> <a href="../characters/tommy">Tommy</a></p>
 </div>
 
 
@@ -52,23 +52,44 @@ These pages document the fallback silhouette archetypes used when a character do
 
 
 <div class="archetype-index-card">
-  <h2><a href="soft_curvy">Soft Curvy</a></h2>
+  <h2><a href="compact_light">Compact Light</a></h2>
 
   <div class="height-lineup height-lineup--archetype-doc">
   <div class="height-lineup__baseline" aria-hidden="true"></div>
   <div class="height-lineup__figure">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--soft_curvy" style="height: 100.00%"></div>
+      <div class="height-lineup__placeholder height-lineup__placeholder--compact_light" style="height: 100.00%"></div>
     </div>
   </div>
 </div>
 
 
-  <p>A softer silhouette with fuller hips, gentler transitions, and a more rounded lower-body read.</p>
+  <p>A smaller, lighter, compact silhouette with grounded proportions and modest width.</p>
 
   <p><strong>Count:</strong> 1</p>
 
-  <p><strong>Characters:</strong> <a href="../characters/tommy">Tommy</a></p>
+  <p><strong>Characters:</strong> <a href="../characters/luca">Luca</a></p>
+</div>
+
+
+<div class="archetype-index-card">
+  <h2><a href="broad_athletic">Broad Athletic</a></h2>
+
+  <div class="height-lineup height-lineup--archetype-doc">
+  <div class="height-lineup__baseline" aria-hidden="true"></div>
+  <div class="height-lineup__figure">
+    <div class="height-lineup__stage">
+      <div class="height-lineup__placeholder height-lineup__placeholder--broad_athletic" style="height: 100.00%"></div>
+    </div>
+  </div>
+</div>
+
+
+  <p>A broad-shouldered athletic silhouette with visible strength but controlled taper.</p>
+
+  <p><strong>Count:</strong> 1</p>
+
+  <p><strong>Characters:</strong> <a href="../characters/hudson">Hudson</a></p>
 </div>
 
 
@@ -94,23 +115,44 @@ These pages document the fallback silhouette archetypes used when a character do
 
 
 <div class="archetype-index-card">
-  <h2><a href="massive_upper_dominant">Massive Upper Dominant</a></h2>
+  <h2><a href="athletic_leg_dominant">Athletic Leg Dominant</a></h2>
 
   <div class="height-lineup height-lineup--archetype-doc">
   <div class="height-lineup__baseline" aria-hidden="true"></div>
   <div class="height-lineup__figure">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--massive_upper_dominant" style="height: 100.00%"></div>
+      <div class="height-lineup__placeholder height-lineup__placeholder--athletic_leg_dominant" style="height: 100.00%"></div>
     </div>
   </div>
 </div>
 
 
-  <p>An extremely large upper-body-dominant silhouette with overwhelming shoulder and torso presence.</p>
+  <p>An athletic silhouette with stronger lower-body emphasis, especially thighs, hips, and glutes.</p>
+
+  <p><strong>Count:</strong> 3</p>
+
+  <p><strong>Characters:</strong> <a href="../characters/connor">Connor</a>, <a href="../characters/jasper">Jasper</a>, <a href="../characters/jonah">Jonah</a></p>
+</div>
+
+
+<div class="archetype-index-card">
+  <h2><a href="slender_refined">Slender Refined</a></h2>
+
+  <div class="height-lineup height-lineup--archetype-doc">
+  <div class="height-lineup__baseline" aria-hidden="true"></div>
+  <div class="height-lineup__figure">
+    <div class="height-lineup__stage">
+      <div class="height-lineup__placeholder height-lineup__placeholder--slender_refined" style="height: 100.00%"></div>
+    </div>
+  </div>
+</div>
+
+
+  <p>A narrow, elegant, lightly built silhouette with delicate proportions and gentle taper.</p>
 
   <p><strong>Count:</strong> 1</p>
 
-  <p><strong>Characters:</strong> <a href="../characters/ragnar">Ragnar</a></p>
+  <p><strong>Characters:</strong> <a href="../characters/lucien">Lucien</a></p>
 </div>
 
 
@@ -157,65 +199,23 @@ These pages document the fallback silhouette archetypes used when a character do
 
 
 <div class="archetype-index-card">
-  <h2><a href="broad_athletic">Broad Athletic</a></h2>
+  <h2><a href="massive_upper_dominant">Massive Upper Dominant</a></h2>
 
   <div class="height-lineup height-lineup--archetype-doc">
   <div class="height-lineup__baseline" aria-hidden="true"></div>
   <div class="height-lineup__figure">
     <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--broad_athletic" style="height: 100.00%"></div>
+      <div class="height-lineup__placeholder height-lineup__placeholder--massive_upper_dominant" style="height: 100.00%"></div>
     </div>
   </div>
 </div>
 
 
-  <p>A broad-shouldered athletic silhouette with visible strength but controlled taper.</p>
+  <p>An extremely large upper-body-dominant silhouette with overwhelming shoulder and torso presence.</p>
 
   <p><strong>Count:</strong> 1</p>
 
-  <p><strong>Characters:</strong> <a href="../characters/hudson">Hudson</a></p>
-</div>
-
-
-<div class="archetype-index-card">
-  <h2><a href="slender_refined">Slender Refined</a></h2>
-
-  <div class="height-lineup height-lineup--archetype-doc">
-  <div class="height-lineup__baseline" aria-hidden="true"></div>
-  <div class="height-lineup__figure">
-    <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--slender_refined" style="height: 100.00%"></div>
-    </div>
-  </div>
-</div>
-
-
-  <p>A narrow, elegant, lightly built silhouette with delicate proportions and gentle taper.</p>
-
-  <p><strong>Count:</strong> 1</p>
-
-  <p><strong>Characters:</strong> <a href="../characters/lucien">Lucien</a></p>
-</div>
-
-
-<div class="archetype-index-card">
-  <h2><a href="athletic_leg_dominant">Athletic Leg Dominant</a></h2>
-
-  <div class="height-lineup height-lineup--archetype-doc">
-  <div class="height-lineup__baseline" aria-hidden="true"></div>
-  <div class="height-lineup__figure">
-    <div class="height-lineup__stage">
-      <div class="height-lineup__placeholder height-lineup__placeholder--athletic_leg_dominant" style="height: 100.00%"></div>
-    </div>
-  </div>
-</div>
-
-
-  <p>An athletic silhouette with stronger lower-body emphasis, especially thighs, hips, and glutes.</p>
-
-  <p><strong>Count:</strong> 3</p>
-
-  <p><strong>Characters:</strong> <a href="../characters/connor">Connor</a>, <a href="../characters/jasper">Jasper</a>, <a href="../characters/jonah">Jonah</a></p>
+  <p><strong>Characters:</strong> <a href="../characters/ragnar">Ragnar</a></p>
 </div>
 
 

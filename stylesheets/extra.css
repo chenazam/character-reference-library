@@ -250,7 +250,6 @@
   margin: 1rem 0 2rem;
   position: relative;
 
-  overflow-x: auto;
   overflow-y: visible;
 }
 
@@ -307,6 +306,12 @@
 
 .height-lineup__figure--b {
   grid-column: 4;
+}
+
+.height-lineup__scroll {
+  overflow-x: auto;
+  overflow-y: visible;
+  width: 100%;
 }
 
 .height-lineup__stage {

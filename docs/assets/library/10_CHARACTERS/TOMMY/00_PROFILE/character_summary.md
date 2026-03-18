@@ -4,7 +4,7 @@
 
 Name: Tommy
 
-Height: 172 cm (5'8")
+Height: 170 cm (5'7")
 
 Build Type: soft slender build with natural body softness
 

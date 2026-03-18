@@ -92,7 +92,7 @@ Use for:
 - pose prompts
 - body anchor prompts
 
-Tommy is approximately 172 cm (5'8") tall with a soft slender build and natural body softness.
+Tommy is approximately 170 cm (5'7") tall with a soft slender build and natural body softness.
 
 Body proportions:
 

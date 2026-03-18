@@ -8,10 +8,10 @@ hide:
 ## Height Comparison
 
 - **Daimon:** 196 cm / 6'5"
-- **Tommy:** 172 cm / 5'8"
-- **Difference:** 24 cm / 0'9"
+- **Tommy:** 170 cm / 5'7"
+- **Difference:** 26 cm / 0'10"
 - **Category:** dramatic
-- **Relative scale:** Daimon is approximately 14.0% taller than Tommy
+- **Relative scale:** Daimon is approximately 15.3% taller than Tommy
 
 <div class="comparison-badges">
   <div class="comparison-badge">
@@ -73,16 +73,16 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--b">
     <div class="height-lineup__stage">
-      <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/TOMMY/02_BODY/structure/tommy_silhouette_front_v1.png" alt="Tommy silhouette front" style="height: 87.76%;">
+      <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/TOMMY/02_BODY/structure/tommy_silhouette_front_v1.png" alt="Tommy silhouette front" style="height: 86.73%;">
     </div>
     <div class="height-lineup__label">Tommy</div>
-    <div class="height-lineup__meta">172 cm / 5'8"</div>
+    <div class="height-lineup__meta">170 cm / 5'7"</div>
   </div>
 </div>
 
 ## Comparison Summary
 
-**Daimon** and **Tommy** show a **Dramatic height contrast**, with **Daimon** standing **24 cm** taller than **Tommy**.
+**Daimon** and **Tommy** show a **Dramatic height contrast**, with **Daimon** standing **26 cm** taller than **Tommy**.
 
 In terms of build, **Daimon** reads as **Athletic Muscular**, while **Tommy** reads as **Soft Slender**.
 

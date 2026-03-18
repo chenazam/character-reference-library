@@ -3,7 +3,7 @@ hide:
   - toc
 ---
 
-# Height Lineup — Ragnar, Danny, Tommy, Lucien
+# Height Lineup — Ragnar, Danny, Lucien, Tommy
 
 
 <div class="height-lineup__scroll">
@@ -43,17 +43,17 @@ hide:
 
 <div class="height-lineup__figure">
   <div class="height-lineup__stage">
-    <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/TOMMY/02_BODY/structure/tommy_silhouette_front_v1.png" alt="Tommy silhouette" style="height: 82.69%;">
+    <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/LUCIEN/02_BODY/structure/lucien_silhouette_front_v1.png" alt="Lucien silhouette" style="height: 81.73%;">
   </div>
-  <div class="height-lineup__label">Tommy</div>
-  <div class="height-lineup__meta">172 cm / 5'8"</div>
+  <div class="height-lineup__label">Lucien</div>
+  <div class="height-lineup__meta">170 cm / 5'7"</div>
 </div>
 
 <div class="height-lineup__figure">
   <div class="height-lineup__stage">
-    <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/LUCIEN/02_BODY/structure/lucien_silhouette_front_v1.png" alt="Lucien silhouette" style="height: 81.73%;">
+    <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/TOMMY/02_BODY/structure/tommy_silhouette_front_v1.png" alt="Tommy silhouette" style="height: 81.73%;">
   </div>
-  <div class="height-lineup__label">Lucien</div>
+  <div class="height-lineup__label">Tommy</div>
   <div class="height-lineup__meta">170 cm / 5'7"</div>
 </div>
 

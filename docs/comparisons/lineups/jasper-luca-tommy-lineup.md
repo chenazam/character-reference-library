@@ -3,7 +3,7 @@ hide:
   - toc
 ---
 
-# Height Lineup — Tommy, Jasper, Luca
+# Height Lineup — Jasper, Tommy, Luca
 
 
 <div class="height-lineup__scroll">
@@ -27,17 +27,17 @@ hide:
 
 <div class="height-lineup__figure">
   <div class="height-lineup__stage">
-    <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/TOMMY/02_BODY/structure/tommy_silhouette_front_v1.png" alt="Tommy silhouette" style="height: 95.56%;">
+    <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/JASPER/02_BODY/structure/jasper_silhouette_front_v1.png" alt="Jasper silhouette" style="height: 94.44%;">
   </div>
-  <div class="height-lineup__label">Tommy</div>
-  <div class="height-lineup__meta">172 cm / 5'8"</div>
+  <div class="height-lineup__label">Jasper</div>
+  <div class="height-lineup__meta">170 cm / 5'7"</div>
 </div>
 
 <div class="height-lineup__figure">
   <div class="height-lineup__stage">
-    <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/JASPER/02_BODY/structure/jasper_silhouette_front_v1.png" alt="Jasper silhouette" style="height: 94.44%;">
+    <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/TOMMY/02_BODY/structure/tommy_silhouette_front_v1.png" alt="Tommy silhouette" style="height: 94.44%;">
   </div>
-  <div class="height-lineup__label">Jasper</div>
+  <div class="height-lineup__label">Tommy</div>
   <div class="height-lineup__meta">170 cm / 5'7"</div>
 </div>
 

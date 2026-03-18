@@ -59,8 +59,7 @@ def build_chart(characters: list[dict]) -> str:
     reference_height = 180
     reference_imperial = "5'11\""
 
-    compact_mode = len(characters) >= COMPACT_THRESHOLD
-    chart_height_px = COMPACT_CHART_HEIGHT_PX if compact_mode else NORMAL_CHART_HEIGHT_PX
+    chart_height_px = NORMAL_CHART_HEIGHT_PX
     reference_silhouette = get_reference_silhouette_link()
 
     max_height = max(max(c["physical"]["height_cm"] for c in characters), reference_height)
@@ -142,8 +141,6 @@ def build_chart(characters: list[dict]) -> str:
         )
 
     lineup_classes = "height-lineup height-lineup--multi"
-    if compact_mode:
-        lineup_classes += " height-lineup--compact"
 
     return f"""
 <div class="height-lineup__scroll">

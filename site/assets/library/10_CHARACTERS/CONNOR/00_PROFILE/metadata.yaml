@@ -80,7 +80,7 @@ identity_rules:
   - avoid broadening shoulders or adding upper-body bulk
   - avoid rigid, dominant, or overly confident posture
 reference_files:
-  face_anchor: connor_face_anchor_v2.png
+  face_anchor: connor_face_anchor_v1.png
   anatomy_sheet: ''
   body_anchor: ''
   silhouette_sheet: ''

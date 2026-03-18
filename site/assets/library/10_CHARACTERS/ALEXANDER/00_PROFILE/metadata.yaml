@@ -84,7 +84,7 @@ identity_rules:
   - avoid bodybuilder-level bulk or exaggerated musculature
   - avoid soft, inward, or withdrawn posture
 reference_files:
-  face_anchor: alexander_face_anchor_v2.png
+  face_anchor: alexander_face_anchor_v1.png
   anatomy_sheet: ''
   body_anchor: ''
   silhouette_sheet: ''

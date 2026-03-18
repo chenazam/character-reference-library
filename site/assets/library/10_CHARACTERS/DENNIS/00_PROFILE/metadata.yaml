@@ -84,7 +84,7 @@ identity_rules:
   - avoid exaggerated shoulder width or muscular definition
 reference_files:
   face_anchor: dennis_face_anchor_v1.png
-  anatomy_sheet: dennis_anatomy_sheet_v1.png
+  anatomy_sheet: dennis_anatomy_sheet_v2.png
   body_anchor: dennis_body_anchor_v1.png
   ultimate_character_sheet: ''
   signature_outfit_sheet: ''

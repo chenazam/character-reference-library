@@ -2358,6 +2358,34 @@
 </tbody>
 </table>
 <hr />
+<h2 id="dependency-chart">Dependency Chart</h2>
+<table>
+<thead>
+<tr>
+<th>Asset</th>
+<th>Depends on</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Front face reference</td>
+<td><strong>NONE (root)</strong></td>
+</tr>
+<tr>
+<td>Side face reference</td>
+<td>Front face reference</td>
+</tr>
+<tr>
+<td>3/4 face reference</td>
+<td>Front + Side face references</td>
+</tr>
+<tr>
+<td>Neutral portrait</td>
+<td>Face anchor sheet (derived) OR Front + 3/4</td>
+</tr>
+</tbody>
+</table>
+<hr />
 <h1 id="b-body-structure-anatomy-assets">B. Body structure / anatomy assets</h1>
 <h2 id="source-assets_1">Source assets</h2>
 <table>
@@ -2563,6 +2591,50 @@
 </tbody>
 </table>
 <hr />
+<h2 id="dependency-chart_1">Dependency Chart</h2>
+<table>
+<thead>
+<tr>
+<th>Asset</th>
+<th>Depends on</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Front anatomy reference</td>
+<td>Front face reference</td>
+</tr>
+<tr>
+<td>Side anatomy reference</td>
+<td>Front anatomy reference</td>
+</tr>
+<tr>
+<td>Back anatomy reference</td>
+<td>Front anatomy reference</td>
+</tr>
+<tr>
+<td>3/4 body anchor</td>
+<td>Front + Side anatomy references</td>
+</tr>
+<tr>
+<td>Front silhouette</td>
+<td>Front anatomy reference</td>
+</tr>
+<tr>
+<td>Side silhouette</td>
+<td>Side anatomy reference</td>
+</tr>
+<tr>
+<td>Back silhouette</td>
+<td>Back anatomy reference</td>
+</tr>
+<tr>
+<td>3/4 silhouette</td>
+<td>3/4 body anchor</td>
+</tr>
+</tbody>
+</table>
+<hr />
 <h1 id="b2-specialized-anatomy-assets">B2. Specialized anatomy assets</h1>
 <h2 id="source-assets_2">Source assets</h2>
 <table>
@@ -2646,6 +2718,26 @@
 <td>ordered views</td>
 <td>scale + crop normalization</td>
 <td>e.g. glute sheet, chest sheet</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="dependency-chart_2">Dependency Chart</h2>
+<table>
+<thead>
+<tr>
+<th>Asset</th>
+<th>Depends on</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Single-view closeup</td>
+<td>Front anatomy reference</td>
+</tr>
+<tr>
+<td>Multi-view closeups</td>
+<td>Front + Side anatomy references</td>
 </tr>
 </tbody>
 </table>
@@ -2808,6 +2900,30 @@
 </tbody>
 </table>
 <hr />
+<h2 id="dependency-chart_3">Dependency Chart</h2>
+<table>
+<thead>
+<tr>
+<th>Asset</th>
+<th>Depends on</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Front outfit</td>
+<td>Full body anchor sheet (derived)</td>
+</tr>
+<tr>
+<td>Side outfit</td>
+<td>Front outfit OR Side anatomy reference</td>
+</tr>
+<tr>
+<td>Back outfit</td>
+<td>Front outfit OR Back anatomy reference</td>
+</tr>
+</tbody>
+</table>
+<hr />
 <h1 id="d-gallery-library-assets">D. Gallery / library assets</h1>
 <h2 id="source-assets_4">Source assets</h2>
 <table>
@@ -2918,6 +3034,30 @@
 <td>structured layout</td>
 <td>multi-asset normalization</td>
 <td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="dependency-chart_4">Dependency Chart</h2>
+<table>
+<thead>
+<tr>
+<th>Asset</th>
+<th>Depends on</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gallery portrait</td>
+<td>Face anchor sheet</td>
+</tr>
+<tr>
+<td>Full-body gallery</td>
+<td>Full body anchor sheet + outfit</td>
+</tr>
+<tr>
+<td>Thumbnail</td>
+<td>Face anchor sheet OR gallery portrait</td>
 </tr>
 </tbody>
 </table>
@@ -3048,6 +3188,22 @@
 </tbody>
 </table>
 <hr />
+<h2 id="dependency-chart_5">Dependency Chart</h2>
+<table>
+<thead>
+<tr>
+<th>Asset</th>
+<th>Depends on</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pose anchor reference</td>
+<td>Full body anchor sheet + face anchor sheet</td>
+</tr>
+</tbody>
+</table>
+<hr />
 <h1 id="f-pair-relationship-assets">F. Pair / relationship assets</h1>
 <h2 id="source-assets_6">Source assets</h2>
 <table>
@@ -3159,6 +3315,22 @@
 <td>fixed layout</td>
 <td>exact normalization</td>
 <td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="dependency-chart_6">Dependency Chart</h2>
+<table>
+<thead>
+<tr>
+<th>Asset</th>
+<th>Depends on</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pair gallery asset</td>
+<td>Both characters’ face anchor + body anchor sheets</td>
 </tr>
 </tbody>
 </table>
@@ -3282,68 +3454,37 @@
 </tr>
 </tbody>
 </table>
-<hr />
-<h1 id="key-structural-takeaway-now-explicit">Key structural takeaway (now explicit)</h1>
-<p>The matrix now clearly shows:</p>
-<h2 id="1-two-fundamentally-different-pipelines">1. Two fundamentally different pipelines</h2>
-<h3 id="a-prompt-pipeline-source-assets">A. Prompt pipeline (source assets)</h3>
-<ul>
-<li>driven by blocks</li>
-<li>identity + instruction + context</li>
-<li>sensitive to wording and structure</li>
-</ul>
-<h3 id="b-assembly-pipeline-derived-sheets">B. Assembly pipeline (derived sheets)</h3>
-<ul>
-<li>driven by scripts</li>
-<li>deterministic</li>
-<li>depends on:</li>
-<li>source assets</li>
-<li>layout templates</li>
-<li>normalization rules</li>
-</ul>
-<hr />
-<h2 id="2-clean-separation-of-responsibilities">2. Clean separation of responsibilities</h2>
-<h3 id="prompt-system-handles">Prompt system handles:</h3>
-<ul>
-<li>identity fidelity</li>
-<li>anatomy correctness</li>
-<li>clothing design</li>
-<li>pose correctness</li>
-<li>scene composition</li>
-</ul>
-<h3 id="script-system-handles">Script system handles:</h3>
-<ul>
-<li>layout consistency</li>
-<li>panel alignment</li>
-<li>scaling</li>
-<li>labeling</li>
-<li>visual standardization</li>
-</ul>
-<hr />
-<h2 id="3-why-this-matters-for-the-next-step">3. Why this matters for the next step</h2>
-<p>This revised matrix gives us exactly what we need to build the blueprint:</p>
-<ul>
-<li>which assets require <strong>block composition</strong></li>
-<li>which assets require <strong>assembly specs</strong></li>
-<li>where identity blocks are actually used</li>
-<li>where they should NOT be used</li>
-</ul>
-<hr />
-<h1 id="next-step">Next step</h1>
-<p>Now we can move cleanly into:</p>
-<p>👉 <strong>Concrete pipeline block blueprint</strong></p>
-<p>That will include:</p>
-<ul>
-<li>exact block taxonomy</li>
-<li>inheritance order</li>
-<li>asset assembly recipes (per asset type)</li>
-<li>YAML-style schema for implementation</li>
-</ul>
-<p>And most importantly:</p>
-<ul>
-<li>how to plug this into your existing pipeline without breaking it</li>
-</ul>
-<p>Whenever you're ready, we move to that.</p>
+<h2 id="dependency-chart_7">Dependency Chart</h2>
+<table>
+<thead>
+<tr>
+<th>Asset</th>
+<th>Depends on</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Single-character scene</td>
+<td>Face anchor + body anchor + optional outfit</td>
+</tr>
+<tr>
+<td>Outfit scene</td>
+<td>Face + body + outfit sheet</td>
+</tr>
+<tr>
+<td>Pair scene</td>
+<td>Both characters’ face + body anchors</td>
+</tr>
+<tr>
+<td>Group scene</td>
+<td>All characters’ anchors</td>
+</tr>
+<tr>
+<td>Emotional scene</td>
+<td>Same as above + expression sheet (optional derived)</td>
+</tr>
+</tbody>
+</table>
 
 
 

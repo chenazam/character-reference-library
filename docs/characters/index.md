@@ -11,7 +11,7 @@ Browse characters in the reference library.
 
 <a class="character-card" href="alexander/">
 
-  <img src="..\assets\library\10_CHARACTERS\ALEXANDER\01_IDENTITY\face\alexander_face_anchor_v1.png" alt="Alexander">
+  <img src="..\assets\library\10_CHARACTERS\ALEXANDER\01_IDENTITY\gallery\alexander_gallery_image_v1.png" alt="Alexander">
   <h3>Alexander</h3>
 
 </a>
@@ -25,7 +25,7 @@ Browse characters in the reference library.
 
 <a class="character-card" href="connor/">
 
-  <img src="..\assets\library\10_CHARACTERS\CONNOR\01_IDENTITY\face\connor_face_anchor_v1.png" alt="Connor">
+  <img src="..\assets\library\10_CHARACTERS\CONNOR\01_IDENTITY\gallery\connor_gallery_image_v1.png" alt="Connor">
   <h3>Connor</h3>
 
 </a>

@@ -85,7 +85,7 @@ identity_rules:
   - avoid soft, inward, or withdrawn posture
 reference_files:
   face_anchor: alexander_face_anchor_v1.png
-  anatomy_sheet: alexander_anatomy_sheet_v1.png
+  anatomy_sheet: alexander_anatomy_sheet_v2.png
   body_anchor: ''
   silhouette_sheet: ''
   turnaround_sheet: ''
@@ -113,7 +113,7 @@ pipeline_status:
   scale_sheet: not_started
   scene_anchors: not_started
   prop_sheet: not_started
-  gallery_image: not_started
+  gallery_image: complete
 notes: 'Alexander functions as the stabilizing visual anchor of the pair.
 
   His silhouette should always read as broad, controlled, and physically dominant.

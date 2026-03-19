@@ -13,17 +13,10 @@ Design goals:
 - no cropping of the body
 - strict technical layout
 
-Default output spec:
-- canvas: 1800 x 1200
-- sheet ratio: 3:2
-- panels: FRONT | SIDE | BACK
-- panel zones: 500 x 930 figure areas
-- shared baseline: y = 990
-- target figure height: 880 px
-- max figure width inside panel: 450 px
-
-Requirements:
-    python -m pip install --upgrade Pillow numpy
+This version adds automatic background normalization:
+- estimates each source image background color from the corners
+- softly blends near-background pixels to the exact sheet background color
+- uses the normalized image for both detection and final compositing
 """
 
 from __future__ import annotations
@@ -38,33 +31,29 @@ from typing import Iterable, Optional, Tuple
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
-
 DEFAULT_CANVAS_WIDTH = 1800
 DEFAULT_CANVAS_HEIGHT = 1200
-
 DEFAULT_MARGIN_LEFT = 90
 DEFAULT_MARGIN_RIGHT = 90
 DEFAULT_MARGIN_TOP = 60
 DEFAULT_MARGIN_BOTTOM = 120
-
 DEFAULT_GUTTER = 60
 DEFAULT_LABEL_GAP = 20
 DEFAULT_LABEL_BAND = 70
-
 DEFAULT_PANEL_WIDTH = 500
 DEFAULT_FIGURE_AREA_HEIGHT = 930
 DEFAULT_BASELINE_Y = 990
-
 DEFAULT_TARGET_HEIGHT = 880
 DEFAULT_MAX_FIGURE_WIDTH = 450
-
 DEFAULT_THRESHOLD = 28.0
+
+# Background normalization thresholds
+DEFAULT_BG_THRESHOLD_LOW = 16.0
+DEFAULT_BG_THRESHOLD_HIGH = 40.0
 
 DEFAULT_BG = (244, 244, 244)
 DEFAULT_TEXT = (90, 90, 90)
-
 DEFAULT_OUTPUT = Path("anatomy_sheet.png")
-
 CHAR_ROOT_RELATIVE = Path("docs/assets/library/10_CHARACTERS")
 
 
@@ -88,6 +77,7 @@ class FigureBounds:
 class ProcessedFigure:
     source_path: Path
     original_image: Image.Image
+    normalized_image: Image.Image
     bounds: FigureBounds
     scale: float
     resized_image: Image.Image
@@ -117,11 +107,7 @@ class LayoutSpec:
         x0 = self.margin_left
         x1 = x0 + self.panel_width + self.gutter
         x2 = x1 + self.panel_width + self.gutter
-        return (
-            x0 + self.panel_width // 2,
-            x1 + self.panel_width // 2,
-            x2 + self.panel_width // 2,
-        )
+        return (x0 + self.panel_width // 2, x1 + self.panel_width // 2, x2 + self.panel_width // 2)
 
     @property
     def panel_lefts(self) -> Tuple[int, int, int]:
@@ -185,7 +171,6 @@ def choose_latest_version(anatomy_dir: Path, character_name: str) -> Optional[st
         f"{character_slug}_anatomy_side",
         f"{character_slug}_anatomy_back",
     ]
-
     candidates: set[str] = set()
     for stem in required_stems:
         for file in anatomy_dir.glob(f"{stem}*.png"):
@@ -231,6 +216,38 @@ def estimate_background_color(img: Image.Image, sample_size: int = 24) -> Tuple[
     return average_rgb(samples)
 
 
+def normalize_background(
+    img: Image.Image,
+    target_bg: Tuple[int, int, int] = DEFAULT_BG,
+    threshold_low: float = DEFAULT_BG_THRESHOLD_LOW,
+    threshold_high: float = DEFAULT_BG_THRESHOLD_HIGH,
+) -> Image.Image:
+    """
+    Softly blend near-background pixels into the exact sheet background color.
+
+    Pixels very close to the sampled background are fully replaced.
+    Pixels far from the sampled background are preserved.
+    Pixels in between are linearly blended.
+    """
+    if threshold_high <= threshold_low:
+        raise ValueError("threshold_high must be greater than threshold_low")
+
+    src_bg = estimate_background_color(img)
+    arr = np.asarray(img, dtype=np.float32)
+    bg_arr = np.array(src_bg, dtype=np.float32)
+    target_arr = np.array(target_bg, dtype=np.float32)
+
+    diff = arr - bg_arr
+    dist = np.sqrt(np.sum(diff * diff, axis=2))
+
+    alpha = np.clip((dist - threshold_low) / (threshold_high - threshold_low), 0.0, 1.0)
+    alpha = alpha[..., None]
+
+    blended = target_arr * (1.0 - alpha) + arr * alpha
+    blended = np.clip(blended, 0, 255).astype(np.uint8)
+    return Image.fromarray(blended, mode="RGB")
+
+
 def make_foreground_mask(img: Image.Image, threshold: float = DEFAULT_THRESHOLD) -> Image.Image:
     bg = estimate_background_color(img)
     arr = np.asarray(img, dtype=np.float32)
@@ -249,64 +266,68 @@ def find_figure_bounds(mask: Image.Image) -> FigureBounds:
     ys, xs = np.where(arr > 0)
     if len(xs) == 0 or len(ys) == 0:
         raise ValueError("Could not detect foreground figure in image.")
-    return FigureBounds(
-        x_min=int(xs.min()),
-        y_min=int(ys.min()),
-        x_max=int(xs.max()),
-        y_max=int(ys.max()),
-    )
+    return FigureBounds(int(xs.min()), int(ys.min()), int(xs.max()), int(ys.max()))
 
 
-def compute_scale(bounds: FigureBounds, layout: LayoutSpec) -> float:
-    scale_height_limited = layout.target_height / bounds.height
-    scale_width_limited = layout.max_figure_width / bounds.width
-    return min(scale_height_limited, scale_width_limited)
+def compute_effective_target_height(bounds_list: list[FigureBounds], layout: LayoutSpec) -> float:
+    width_limited_heights = [layout.max_figure_width * (b.height / b.width) for b in bounds_list]
+    return min(float(layout.target_height), *width_limited_heights)
+
+
+def compute_scale_for_shared_height(bounds: FigureBounds, shared_target_height: float) -> float:
+    return shared_target_height / bounds.height
 
 
 def resize_image(img: Image.Image, scale: float) -> Image.Image:
     w, h = img.size
-    new_w = max(1, int(round(w * scale)))
-    new_h = max(1, int(round(h * scale)))
-    return img.resize((new_w, new_h), Image.Resampling.LANCZOS)
+    return img.resize((max(1, int(round(w * scale))), max(1, int(round(h * scale)))), Image.Resampling.LANCZOS)
 
 
 def place_figure(bounds: FigureBounds, scale: float, panel_center_x: int, baseline_y: int) -> Tuple[int, int]:
     figure_center_x = ((bounds.x_min + bounds.x_max) / 2.0) * scale
     resized_baseline = bounds.y_max * scale
-    paste_x = int(round(panel_center_x - figure_center_x))
-    paste_y = int(round(baseline_y - resized_baseline))
-    return paste_x, paste_y
+    return int(round(panel_center_x - figure_center_x)), int(round(baseline_y - resized_baseline))
 
 
-def process_panel(source_path: Path, panel_center_x: int, layout: LayoutSpec, threshold: float) -> Tuple[ProcessedFigure, Image.Image]:
-    img = load_image(source_path)
-    mask = make_foreground_mask(img, threshold=threshold)
+def detect_panel(
+    source_path: Path,
+    threshold: float,
+    normalize_bg: bool,
+    bg_threshold_low: float,
+    bg_threshold_high: float,
+    sheet_bg: Tuple[int, int, int],
+) -> Tuple[Path, Image.Image, Image.Image, Image.Image, FigureBounds]:
+    original = load_image(source_path)
+    working = normalize_background(
+        original,
+        target_bg=sheet_bg,
+        threshold_low=bg_threshold_low,
+        threshold_high=bg_threshold_high,
+    ) if normalize_bg else original.copy()
+    mask = make_foreground_mask(working, threshold=threshold)
     bounds = find_figure_bounds(mask)
-    scale = compute_scale(bounds, layout)
-    resized = resize_image(img, scale)
-    paste_x, paste_y = place_figure(bounds, scale, panel_center_x, layout.baseline_y)
-    processed = ProcessedFigure(
-        source_path=source_path,
-        original_image=img,
-        bounds=bounds,
-        scale=scale,
-        resized_image=resized,
-        paste_x=paste_x,
-        paste_y=paste_y,
-    )
-    return processed, mask
+    return source_path, original, working, mask, bounds
+
+
+def build_processed_figure(
+    source_path: Path,
+    original_image: Image.Image,
+    normalized_image: Image.Image,
+    bounds: FigureBounds,
+    scale: float,
+    panel_center_x: int,
+    baseline_y: int,
+) -> ProcessedFigure:
+    resized = resize_image(normalized_image, scale)
+    paste_x, paste_y = place_figure(bounds, scale, panel_center_x, baseline_y)
+    return ProcessedFigure(source_path, original_image, normalized_image, bounds, scale, resized, paste_x, paste_y)
 
 
 def validate_layout(layout: LayoutSpec) -> None:
-    expected_width = (
-        layout.margin_left + layout.panel_width + layout.gutter +
-        layout.panel_width + layout.gutter + layout.panel_width + layout.margin_right
-    )
+    expected_width = layout.margin_left + layout.panel_width + layout.gutter + layout.panel_width + layout.gutter + layout.panel_width + layout.margin_right
     if expected_width != layout.canvas_width:
         raise ValueError(f"Canvas width mismatch: expected {expected_width} from margins/panels/gutters, got {layout.canvas_width}.")
-    expected_figure_area_height = (
-        layout.canvas_height - layout.margin_top - layout.margin_bottom - layout.label_gap - layout.label_band
-    )
+    expected_figure_area_height = layout.canvas_height - layout.margin_top - layout.margin_bottom - layout.label_gap - layout.label_band
     if expected_figure_area_height != layout.figure_area_height:
         raise ValueError(f"Figure area height mismatch: expected {expected_figure_area_height}, got {layout.figure_area_height}.")
     expected_baseline = layout.margin_top + layout.figure_area_height
@@ -321,10 +342,7 @@ def validate_layout(layout: LayoutSpec) -> None:
 def validate_processed_figure(processed: ProcessedFigure, layout: LayoutSpec) -> None:
     scaled_width = processed.bounds.width * processed.scale
     if scaled_width > layout.max_figure_width + 1:
-        raise ValueError(
-            f"Scaled figure width exceeds max allowed width for {processed.source_path.name}: "
-            f"{scaled_width:.2f} > {layout.max_figure_width}"
-        )
+        raise ValueError(f"Scaled figure width exceeds max allowed width for {processed.source_path.name}: {scaled_width:.2f} > {layout.max_figure_width}")
     scaled_top = processed.bounds.y_min * processed.scale + processed.paste_y
     top_clearance = scaled_top - layout.margin_top
     if top_clearance < 10:
@@ -332,12 +350,11 @@ def validate_processed_figure(processed: ProcessedFigure, layout: LayoutSpec) ->
 
 
 def load_font(size: int) -> ImageFont.ImageFont:
-    font_candidates = ["arial.ttf", "Arial.ttf", "DejaVuSans.ttf", "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"]
-    for candidate in font_candidates:
+    for candidate in ["arial.ttf", "Arial.ttf", "DejaVuSans.ttf", "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"]:
         try:
             return ImageFont.truetype(candidate, size=size)
         except Exception:
-            continue
+            pass
     return ImageFont.load_default()
 
 
@@ -374,16 +391,20 @@ def save_debug_bounded_source(img: Image.Image, bounds: FigureBounds, path: Path
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Assemble a strict anatomy sheet from front/side/back full-body images.")
-    parser.add_argument("--front", type=Path, default=None, help="Path to front panel image")
-    parser.add_argument("--side", type=Path, default=None, help="Path to side panel image")
-    parser.add_argument("--back", type=Path, default=None, help="Path to back panel image")
-    parser.add_argument("--output", type=Path, default=None, help="Output anatomy sheet path")
-    parser.add_argument("--debug-dir", type=Path, default=None, help="Optional debug output directory")
-    parser.add_argument("--threshold", type=float, default=DEFAULT_THRESHOLD, help="Foreground threshold")
-    parser.add_argument("--character", type=str, default=None, help="Character name, e.g. CONNOR or connor")
-    parser.add_argument("--version", type=str, default=None, help="Version suffix such as v1 or v2. If omitted, latest complete set is used.")
-    parser.add_argument("--project-root", type=Path, default=None, help="Optional explicit project root. If omitted, the script auto-detects it.")
-    parser.add_argument("--anatomy-dir", type=Path, default=None, help="Optional explicit anatomy directory. Overrides project-root + character resolution.")
+    parser.add_argument("--front", type=Path, default=None)
+    parser.add_argument("--side", type=Path, default=None)
+    parser.add_argument("--back", type=Path, default=None)
+    parser.add_argument("--output", type=Path, default=None)
+    parser.add_argument("--debug-dir", type=Path, default=None)
+    parser.add_argument("--threshold", type=float, default=DEFAULT_THRESHOLD, help="Foreground threshold after background normalization")
+    parser.add_argument("--normalize-background", action="store_true", default=True, help="Normalize source backgrounds to the sheet background")
+    parser.add_argument("--no-normalize-background", action="store_false", dest="normalize_background")
+    parser.add_argument("--bg-threshold-low", type=float, default=DEFAULT_BG_THRESHOLD_LOW, help="Distance below which pixels are treated as definite background")
+    parser.add_argument("--bg-threshold-high", type=float, default=DEFAULT_BG_THRESHOLD_HIGH, help="Distance above which pixels are treated as definite foreground")
+    parser.add_argument("--character", type=str, default=None)
+    parser.add_argument("--version", type=str, default=None)
+    parser.add_argument("--project-root", type=Path, default=None)
+    parser.add_argument("--anatomy-dir", type=Path, default=None)
     return parser.parse_args()
 
 
@@ -417,25 +438,33 @@ def main() -> int:
                 if version is None:
                     raise ValueError(f"Could not find a complete front/side/back set in {anatomy_dir}")
             resolved_paths = build_expected_paths(anatomy_dir, args.character, version)
-            front_path = resolved_paths["front"]
-            side_path = resolved_paths["side"]
-            back_path = resolved_paths["back"]
+            front_path, side_path, back_path = resolved_paths["front"], resolved_paths["side"], resolved_paths["back"]
             output_path = args.output.resolve() if args.output else resolved_paths["output"]
         else:
             if not (args.front and args.side and args.back):
                 raise ValueError("Provide either --character or all of --front/--side/--back.")
-            front_path = args.front.resolve()
-            side_path = args.side.resolve()
-            back_path = args.back.resolve()
+            front_path, side_path, back_path = args.front.resolve(), args.side.resolve(), args.back.resolve()
             output_path = args.output.resolve() if args.output else DEFAULT_OUTPUT.resolve()
             version = None
 
         for p in (front_path, side_path, back_path):
             validate_exists(p)
 
-        front_pf, front_mask = process_panel(front_path, layout.panel_centers[0], layout, args.threshold)
-        side_pf, side_mask = process_panel(side_path, layout.panel_centers[1], layout, args.threshold)
-        back_pf, back_mask = process_panel(back_path, layout.panel_centers[2], layout, args.threshold)
+        front_path, front_original, front_working, front_mask, front_bounds = detect_panel(
+            front_path, args.threshold, args.normalize_background, args.bg_threshold_low, args.bg_threshold_high, DEFAULT_BG
+        )
+        side_path, side_original, side_working, side_mask, side_bounds = detect_panel(
+            side_path, args.threshold, args.normalize_background, args.bg_threshold_low, args.bg_threshold_high, DEFAULT_BG
+        )
+        back_path, back_original, back_working, back_mask, back_bounds = detect_panel(
+            back_path, args.threshold, args.normalize_background, args.bg_threshold_low, args.bg_threshold_high, DEFAULT_BG
+        )
+
+        shared_target_height = compute_effective_target_height([front_bounds, side_bounds, back_bounds], layout)
+
+        front_pf = build_processed_figure(front_path, front_original, front_working, front_bounds, compute_scale_for_shared_height(front_bounds, shared_target_height), layout.panel_centers[0], layout.baseline_y)
+        side_pf = build_processed_figure(side_path, side_original, side_working, side_bounds, compute_scale_for_shared_height(side_bounds, shared_target_height), layout.panel_centers[1], layout.baseline_y)
+        back_pf = build_processed_figure(back_path, back_original, back_working, back_bounds, compute_scale_for_shared_height(back_bounds, shared_target_height), layout.panel_centers[2], layout.baseline_y)
 
         for pf in (front_pf, side_pf, back_pf):
             validate_processed_figure(pf, layout)
@@ -445,32 +474,32 @@ def main() -> int:
         print("Done.")
         print(f"Output: {output_path}")
         print(f"Threshold: {args.threshold}")
+        print(f"Background normalization: {args.normalize_background}")
+        print(f"Background thresholds: low={args.bg_threshold_low}, high={args.bg_threshold_high}")
+        print(f"Shared target height: {shared_target_height:.2f}")
         if anatomy_dir is not None:
             print(f"Character: {args.character}")
             print(f"Anatomy directory: {anatomy_dir}")
             print(f"Version: {version if version else '(no suffix)'}")
         for label, pf in (("FRONT", front_pf), ("SIDE", side_pf), ("BACK", back_pf)):
-            print(
-                f"{label}: bounds=({pf.bounds.x_min}, {pf.bounds.y_min}, {pf.bounds.x_max}, {pf.bounds.y_max}), "
-                f"scale={pf.scale:.6f}, paste=({pf.paste_x}, {pf.paste_y})"
-            )
+            print(f"{label}: bounds=({pf.bounds.x_min}, {pf.bounds.y_min}, {pf.bounds.x_max}, {pf.bounds.y_max}), source_wh=({pf.bounds.width}, {pf.bounds.height}), scale={pf.scale:.6f}, paste=({pf.paste_x}, {pf.paste_y})")
 
         if args.debug_dir is not None:
             debug_dir = args.debug_dir.resolve()
             save_debug_mask(front_mask, debug_dir / "front_mask.png")
             save_debug_mask(side_mask, debug_dir / "side_mask.png")
             save_debug_mask(back_mask, debug_dir / "back_mask.png")
-            save_debug_bounded_source(front_pf.original_image, front_pf.bounds, debug_dir / "front_bounds.png")
-            save_debug_bounded_source(side_pf.original_image, side_pf.bounds, debug_dir / "side_bounds.png")
-            save_debug_bounded_source(back_pf.original_image, back_pf.bounds, debug_dir / "back_bounds.png")
+            save_debug_bounded_source(front_pf.normalized_image, front_pf.bounds, debug_dir / "front_bounds.png")
+            save_debug_bounded_source(side_pf.normalized_image, side_pf.bounds, debug_dir / "side_bounds.png")
+            save_debug_bounded_source(back_pf.normalized_image, back_pf.bounds, debug_dir / "back_bounds.png")
+            save_image(front_pf.normalized_image, debug_dir / "front_normalized.png")
+            save_image(side_pf.normalized_image, debug_dir / "side_normalized.png")
+            save_image(back_pf.normalized_image, debug_dir / "back_normalized.png")
             print(f"Saved debug files in: {debug_dir}")
-
         return 0
-
     except Exception as exc:
         print(f"Error: {exc}", file=sys.stderr)
         return 1
-
 
 if __name__ == "__main__":
     raise SystemExit(main())

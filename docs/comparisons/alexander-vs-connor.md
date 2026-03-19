@@ -100,7 +100,7 @@ Their emotional presentation also differs: **Alexander** feels **Controlled**, w
 <div class="comparison-grid comparison-grid-2">
   <div class="comparison-item">
     <div class="comparison-label">Alexander</div>
-    <img src="../../assets/library/10_CHARACTERS/ALEXANDER/02_BODY/anatomy/alexander_anatomy_sheet_v1.png" alt="Alexander Anatomy Sheet Comparison">
+    <img src="../../assets/library/10_CHARACTERS/ALEXANDER/02_BODY/anatomy/alexander_anatomy_sheet_v2.png" alt="Alexander Anatomy Sheet Comparison">
   </div>
   <div class="comparison-item">
     <div class="comparison-label">Connor</div>

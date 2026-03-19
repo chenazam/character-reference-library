@@ -2,8 +2,8 @@
 
   <div class="comparison-card">
     <h3><a href="../../characters/blake/">Blake</a></h3>
-    <a href="../../assets/library/10_CHARACTERS/BLAKE/01_IDENTITY/gallery/blake-gallery-image.png" target="_blank">
-      <img src="../../assets/library/10_CHARACTERS/BLAKE/01_IDENTITY/gallery/blake-gallery-image.png" alt="Blake gallery-image">
+    <a href="../../assets/library/10_CHARACTERS/BLAKE/01_IDENTITY/gallery/blake-gallery-image_v2.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/BLAKE/01_IDENTITY/gallery/blake-gallery-image_v2.png" alt="Blake gallery-image">
     </a>
   </div>
 
@@ -60,6 +60,20 @@
     <h3><a href="../../characters/tommy/">Tommy</a></h3>
     <a href="../../assets/library/10_CHARACTERS/TOMMY/01_IDENTITY/gallery/tommy_gallery_image_v1.png" target="_blank">
       <img src="../../assets/library/10_CHARACTERS/TOMMY/01_IDENTITY/gallery/tommy_gallery_image_v1.png" alt="Tommy gallery-image">
+    </a>
+  </div>
+
+  <div class="comparison-card">
+    <h3><a href="../../characters/alexander/">Alexander</a></h3>
+    <a href="../../assets/library/10_CHARACTERS/ALEXANDER/01_IDENTITY/gallery/alexander_gallery_image_v1.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/ALEXANDER/01_IDENTITY/gallery/alexander_gallery_image_v1.png" alt="Alexander gallery-image">
+    </a>
+  </div>
+
+  <div class="comparison-card">
+    <h3><a href="../../characters/connor/">Connor</a></h3>
+    <a href="../../assets/library/10_CHARACTERS/CONNOR/01_IDENTITY/gallery/connor_gallery_image_v1.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/CONNOR/01_IDENTITY/gallery/connor_gallery_image_v1.png" alt="Connor gallery-image">
     </a>
   </div>
 

@@ -1,12 +1,27 @@
 Body:
 
 - height: 5'7" (170 cm)
-- build: lean runner-style athletic physique
+- build: compact runner-style athletic physique with lower-body emphasis
 - shoulders: moderate width
-- torso: lean athletic torso with light upper-body mass
-- waist: narrow and defined
+- torso: lighter, lean torso with only moderate upper-body definition
+- waist: narrow and naturally tapered
 - hips: balanced with strong glute development
 - limbs: long athletic legs with powerful runner thighs
+
+Physique distribution:
+
+- lower body is more developed than upper body
+- thighs and glutes are the primary areas of strength and mass
+- chest, shoulders, and arms remain lighter and secondary in emphasis
+- torso should read lean and athletic without heavy sculpting
+
+Muscle definition:
+
+- overall definition is athletic but controlled
+- abdominal definition should be subtle rather than sharply segmented
+- avoid prominent six-pack emphasis
+- torso definition should remain softer and less pronounced than lower-body development
+- abdominal definition should remain subtle even when viewed from the front
 
 Silhouette:
 

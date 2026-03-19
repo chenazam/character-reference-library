@@ -3,7 +3,7 @@ Identity preservation:
 Always preserve:
 
 - height around 5'7"
-- lean runner-style athletic build
+- compact runner-style athletic build with lower-body emphasis
 - strong thighs and prominent rounded glutes
 - narrow waist and lighter upper body
 - leg-dominant silhouette
@@ -20,3 +20,10 @@ Avoid:
 - tall body proportions
 - long or baggy shorts
 - overly formal clothing
+- prominent six-pack definition
+- sharply segmented abdominal muscles
+- evenly distributed muscular definition across the whole body
+- fitness-model torso sculpting
+- chest or arm development that rivals the lower body
+- in front-facing views, avoid clearly segmented abdominal muscles
+- abdominal structure should read as soft planar definition rather than a distinct six-pack

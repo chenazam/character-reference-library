@@ -29,12 +29,14 @@ New in this version:
 from __future__ import annotations
 
 import argparse
+import math
 import re
 import sys
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional, Tuple
 
+import numpy as np
 from PIL import Image, ImageDraw, ImageFont, ImageOps, ImageStat
 
 
@@ -64,12 +66,24 @@ DEFAULT_FRONT_H_BIAS = 0.50
 DEFAULT_THREE_QUARTER_H_BIAS = 0.50
 DEFAULT_PROFILE_BACKHEAD_BIAS = 0.66  # more room in front of the face
 
+# Face-aware normalization defaults
+DEFAULT_FACE_TOP_MARGIN_PCT = 0.04
+DEFAULT_FACE_CHIN_PCT = 0.62
+DEFAULT_FACE_MASK_THRESHOLD = 18.0
+DEFAULT_HEAD_UPPER_PORTION = 0.60
+DEFAULT_MIN_MASK_COVERAGE = 0.005
+
+VERSION_PATTERN = re.compile(r"_v(\d+)", re.IGNORECASE)
+
+
 
 @dataclass
 class CropResult:
     image: Image.Image
     method: str
     crop_box: Tuple[int, int, int, int]
+    subject_box: Optional[Tuple[int, int, int, int]] = None
+    head_box: Optional[Tuple[int, int, int, int]] = None
 
 
 # -----------------------------
@@ -78,6 +92,13 @@ class CropResult:
 
 def clamp(value: int, min_value: int, max_value: int) -> int:
     return max(min_value, min(value, max_value))
+
+
+def extract_version(path: Path) -> int:
+    m = VERSION_PATTERN.search(path.stem)
+    if not m:
+        return 0
+    return int(m.group(1))
 
 
 def load_image(path: Path) -> Image.Image:
@@ -235,6 +256,197 @@ def profile_horizontal_bias_for_direction(direction: str) -> float:
     return 0.50
 
 
+
+def sample_background_color(img: Image.Image, patch_size: int = 24) -> np.ndarray:
+    arr = np.asarray(img).astype(np.float32)
+    h, w, _ = arr.shape
+
+    patches = [
+        arr[0:patch_size, 0:patch_size],
+        arr[0:patch_size, max(0, w - patch_size):w],
+        arr[max(0, h - patch_size):h, 0:patch_size],
+        arr[max(0, h - patch_size):h, max(0, w - patch_size):w],
+    ]
+    stacked = np.concatenate([p.reshape(-1, 3) for p in patches], axis=0)
+    return np.median(stacked, axis=0)
+
+
+def build_foreground_mask(
+    img: Image.Image,
+    threshold: float = DEFAULT_FACE_MASK_THRESHOLD,
+) -> np.ndarray:
+    arr = np.asarray(img).astype(np.float32)
+    bg = sample_background_color(img)
+
+    diff = np.sqrt(np.sum((arr - bg) ** 2, axis=2))
+    mask = diff > threshold
+
+    # Light cleanup without extra dependencies:
+    # remove isolated specks via simple neighborhood count
+    padded = np.pad(mask.astype(np.uint8), 1, mode="constant", constant_values=0)
+    neighbor_sum = (
+        padded[:-2, :-2] + padded[:-2, 1:-1] + padded[:-2, 2:] +
+        padded[1:-1, :-2] + padded[1:-1, 1:-1] + padded[1:-1, 2:] +
+        padded[2:, :-2] + padded[2:, 1:-1] + padded[2:, 2:]
+    )
+    mask = neighbor_sum >= 3
+
+    return mask
+
+
+def bbox_from_mask(mask: np.ndarray) -> Optional[Tuple[int, int, int, int]]:
+    ys, xs = np.where(mask)
+    if len(xs) == 0 or len(ys) == 0:
+        return None
+    left = int(xs.min())
+    right = int(xs.max()) + 1
+    top = int(ys.min())
+    bottom = int(ys.max()) + 1
+    return (left, top, right, bottom)
+
+
+def estimate_subject_box(mask: np.ndarray) -> Optional[Tuple[int, int, int, int]]:
+    coverage = float(mask.mean())
+    if coverage < DEFAULT_MIN_MASK_COVERAGE:
+        return None
+    return bbox_from_mask(mask)
+
+
+def estimate_head_box(
+    mask: np.ndarray,
+    subject_box: Tuple[int, int, int, int],
+    upper_portion: float = DEFAULT_HEAD_UPPER_PORTION,
+) -> Optional[Tuple[int, int, int, int]]:
+    left, top, right, bottom = subject_box
+    subj_h = bottom - top
+    if subj_h < 20:
+        return None
+
+    upper_bottom = top + int(round(subj_h * upper_portion))
+    upper_mask = mask[top:upper_bottom, left:right]
+
+    head_bbox = bbox_from_mask(upper_mask)
+    if head_bbox is None:
+        return None
+
+    h_left, h_top, h_right, h_bottom = head_bbox
+    return (
+        left + h_left,
+        top + h_top,
+        left + h_right,
+        top + h_bottom,
+    )
+
+
+def clamp_crop_box(
+    left: int,
+    top: int,
+    crop_w: int,
+    crop_h: int,
+    img_w: int,
+    img_h: int,
+) -> Tuple[int, int, int, int]:
+    left = clamp(left, 0, img_w - crop_w)
+    top = clamp(top, 0, img_h - crop_h)
+    return (left, top, left + crop_w, top + crop_h)
+
+
+def compute_face_normalized_crop(
+    img: Image.Image,
+    target_ratio: float,
+    head_box: Tuple[int, int, int, int],
+    subject_box: Tuple[int, int, int, int],
+    face_top_margin_pct: float = DEFAULT_FACE_TOP_MARGIN_PCT,
+    chin_pct: float = DEFAULT_FACE_CHIN_PCT,
+    horizontal_bias: float = 0.50,
+    tighten: float = 1.0,
+    profile_direction: Optional[str] = None,
+) -> Tuple[int, int, int, int]:
+    img_w, img_h = img.size
+    h_left, h_top, h_right, h_bottom = head_box
+
+    head_w = max(1, h_right - h_left)
+    head_h = max(1, h_bottom - h_top)
+
+    # Use head top + chin target to derive crop height
+    # head bottom is our practical chin proxy in this no-ML version
+    crop_h_from_head = int(
+        round(head_h / max(0.05, (chin_pct - face_top_margin_pct)))
+    )
+    crop_h = min(crop_h_from_head, img_h)
+    crop_w = int(round(crop_h * target_ratio))
+    if crop_w > img_w:
+        crop_w = img_w
+        crop_h = int(round(crop_w / target_ratio))
+
+    # Apply tighten after deriving normalized crop size
+    crop_w = max(1, int(round(crop_w * tighten)))
+    crop_h = max(1, int(round(crop_h * tighten)))
+
+    crop_w = min(crop_w, img_w)
+    crop_h = min(crop_h, img_h)
+
+    # Re-enforce ratio
+    crop_w = int(round(crop_h * target_ratio))
+    if crop_w > img_w:
+        crop_w = img_w
+        crop_h = int(round(crop_w / target_ratio))
+
+    # Vertical anchoring:
+    # place head top at desired margin, using head_box top as hair-top proxy
+    top = int(round(h_top - crop_h * face_top_margin_pct))
+
+    # Horizontal anchoring:
+    # default: center on head box
+    head_cx = 0.5 * (h_left + h_right)
+
+    if profile_direction == "left":
+        # face points left; preserve more room in front of the nose
+        nose_x = h_left
+        backhead_x = h_right
+        desired_nose_x = crop_w * 0.30
+        desired_backhead_x = crop_w * 0.76
+        # blend both anchors a bit
+        left_from_nose = int(round(nose_x - desired_nose_x))
+        left_from_back = int(round(backhead_x - desired_backhead_x))
+        left = int(round(0.35 * left_from_nose + 0.65 * left_from_back))
+    elif profile_direction == "right":
+        nose_x = h_right
+        backhead_x = h_left
+        desired_nose_x = crop_w * 0.70
+        desired_backhead_x = crop_w * 0.24
+        left_from_nose = int(round(nose_x - desired_nose_x))
+        left_from_back = int(round(backhead_x - desired_backhead_x))
+        left = int(round(0.35 * left_from_nose + 0.65 * left_from_back))
+    else:
+        # centered around the head box, with optional additional bias
+        ideal_left = int(round(head_cx - crop_w / 2))
+        extra_w = img_w - crop_w
+        bias_left = int(round(extra_w * horizontal_bias))
+        left = int(round(0.65 * ideal_left + 0.35 * bias_left))
+
+    return clamp_crop_box(left, top, crop_w, crop_h, img_w, img_h)
+
+
+def draw_debug_boxes(
+    img: Image.Image,
+    crop_box: Tuple[int, int, int, int],
+    subject_box: Optional[Tuple[int, int, int, int]] = None,
+    head_box: Optional[Tuple[int, int, int, int]] = None,
+) -> Image.Image:
+    debug = img.copy()
+    draw = ImageDraw.Draw(debug)
+
+    if subject_box is not None:
+        draw.rectangle(subject_box, outline=(0, 180, 255), width=4)
+
+    if head_box is not None:
+        draw.rectangle(head_box, outline=(255, 120, 0), width=4)
+
+    draw.rectangle(crop_box, outline=(255, 0, 120), width=5)
+    return debug
+
+
 # -----------------------------
 # Cropping
 # -----------------------------
@@ -293,6 +505,69 @@ def crop_to_ratio(
     method = f"{method_base}-tight" if tighten < 0.999 else method_base
     return CropResult(img.crop(box), method, box)
 
+
+def crop_to_ratio_face_normalized(
+    img: Image.Image,
+    target_ratio: float = TARGET_PANEL_RATIO,
+    vertical_bias: float = 0.30,  # retained for fallback compatibility
+    tighten: float = 1.0,
+    horizontal_bias: float = 0.50,
+    profile_direction: Optional[str] = None,
+) -> CropResult:
+    """
+    Face-aware crop:
+    - detect foreground against flat background
+    - estimate subject box
+    - estimate head box from upper subject region
+    - compute 3:4 crop using normalized head anchors
+
+    Falls back to deterministic crop if normalization fails.
+    """
+    mask = build_foreground_mask(img)
+    subject_box = estimate_subject_box(mask)
+
+    if subject_box is None:
+        fallback = crop_to_ratio(
+            img,
+            target_ratio=target_ratio,
+            vertical_bias=vertical_bias,
+            tighten=tighten,
+            horizontal_bias=horizontal_bias,
+        )
+        fallback.method = f"fallback-no-subject-{fallback.method}"
+        return fallback
+
+    head_box = estimate_head_box(mask, subject_box)
+    if head_box is None:
+        fallback = crop_to_ratio(
+            img,
+            target_ratio=target_ratio,
+            vertical_bias=vertical_bias,
+            tighten=tighten,
+            horizontal_bias=horizontal_bias,
+        )
+        fallback.method = f"fallback-no-head-{fallback.method}"
+        fallback.subject_box = subject_box
+        return fallback
+
+    crop_box = compute_face_normalized_crop(
+        img=img,
+        target_ratio=target_ratio,
+        head_box=head_box,
+        subject_box=subject_box,
+        horizontal_bias=horizontal_bias,
+        tighten=tighten,
+        profile_direction=profile_direction,
+    )
+
+    cropped = img.crop(crop_box)
+    return CropResult(
+        image=cropped,
+        method="face-normalized",
+        crop_box=crop_box,
+        subject_box=subject_box,
+        head_box=head_box,
+    )
 
 def fit_panel(img: Image.Image, size: Tuple[int, int]) -> Image.Image:
     return img.resize(size, Image.Resampling.LANCZOS)
@@ -447,6 +722,11 @@ def parse_args() -> argparse.Namespace:
         default=None,
         help="Optional directory to save cropped intermediate panels.",
     )
+    parser.add_argument(
+        "--no-face-normalize",
+        action="store_true",
+        help="Disable face-aware normalization and use the legacy deterministic crop.",
+    )
     return parser.parse_args()
 
 
@@ -535,24 +815,47 @@ def main() -> int:
         else profile_horizontal_bias_for_direction(profile_direction)
     )
 
-    front_crop = crop_to_ratio(
-        front_img,
-        vertical_bias=args.vertical_bias,
-        horizontal_bias=args.front_horizontal_bias,
-        tighten=args.tighten,
-    )
-    profile_crop = crop_to_ratio(
-        profile_img,
-        vertical_bias=args.vertical_bias,
-        horizontal_bias=profile_horizontal_bias,
-        tighten=args.tighten,
-    )
-    three_quarter_crop = crop_to_ratio(
-        three_quarter_img,
-        vertical_bias=args.vertical_bias,
-        horizontal_bias=args.three_quarter_horizontal_bias,
-        tighten=args.tighten,
-    )
+    if args.no_face_normalize:
+        front_crop = crop_to_ratio(
+            front_img,
+            vertical_bias=args.vertical_bias,
+            horizontal_bias=args.front_horizontal_bias,
+            tighten=args.tighten,
+        )
+        profile_crop = crop_to_ratio(
+            profile_img,
+            vertical_bias=args.vertical_bias,
+            horizontal_bias=profile_horizontal_bias,
+            tighten=args.tighten,
+        )
+        three_quarter_crop = crop_to_ratio(
+            three_quarter_img,
+            vertical_bias=args.vertical_bias,
+            horizontal_bias=args.three_quarter_horizontal_bias,
+            tighten=args.tighten,
+        )
+    else:
+        front_crop = crop_to_ratio_face_normalized(
+            front_img,
+            vertical_bias=args.vertical_bias,
+            horizontal_bias=args.front_horizontal_bias,
+            tighten=args.tighten,
+            profile_direction=None,
+        )
+        profile_crop = crop_to_ratio_face_normalized(
+            profile_img,
+            vertical_bias=args.vertical_bias,
+            horizontal_bias=profile_horizontal_bias,
+            tighten=args.tighten,
+            profile_direction=profile_direction,
+        )
+        three_quarter_crop = crop_to_ratio_face_normalized(
+            three_quarter_img,
+            vertical_bias=args.vertical_bias,
+            horizontal_bias=args.three_quarter_horizontal_bias,
+            tighten=args.tighten,
+            profile_direction=None,
+        )
 
     panel_size = (args.panel_width, args.panel_height)
     front_panel = fit_panel(front_crop.image, panel_size)
@@ -561,9 +864,39 @@ def main() -> int:
 
     if args.debug_dir is not None:
         debug_dir = args.debug_dir.resolve()
+        debug_dir.mkdir(parents=True, exist_ok=True)
+
         save_debug_image(profile_crop.image, debug_dir / "profile_cropped.png")
         save_debug_image(front_crop.image, debug_dir / "front_cropped.png")
         save_debug_image(three_quarter_crop.image, debug_dir / "three_quarter_cropped.png")
+
+        save_debug_image(
+            draw_debug_boxes(
+                profile_img,
+                profile_crop.crop_box,
+                subject_box=profile_crop.subject_box,
+                head_box=profile_crop.head_box,
+            ),
+            debug_dir / "profile_debug_boxes.png",
+        )
+        save_debug_image(
+            draw_debug_boxes(
+                front_img,
+                front_crop.crop_box,
+                subject_box=front_crop.subject_box,
+                head_box=front_crop.head_box,
+            ),
+            debug_dir / "front_debug_boxes.png",
+        )
+        save_debug_image(
+            draw_debug_boxes(
+                three_quarter_img,
+                three_quarter_crop.crop_box,
+                subject_box=three_quarter_crop.subject_box,
+                head_box=three_quarter_crop.head_box,
+            ),
+            debug_dir / "three_quarter_debug_boxes.png",
+        )
 
     assemble_sheet(
         profile_panel=profile_panel,
@@ -590,6 +923,13 @@ def main() -> int:
     print(f"Profile crop method: {profile_crop.method}, box={profile_crop.crop_box}")
     print(f"Front crop method: {front_crop.method}, box={front_crop.crop_box}")
     print(f"Three-quarter crop method: {three_quarter_crop.method}, box={three_quarter_crop.crop_box}")
+    print(f"Face normalization: {'OFF' if args.no_face_normalize else 'ON'}")
+    print(f"Profile subject box: {profile_crop.subject_box}")
+    print(f"Profile head box: {profile_crop.head_box}")
+    print(f"Front subject box: {front_crop.subject_box}")
+    print(f"Front head box: {front_crop.head_box}")
+    print(f"Three-quarter subject box: {three_quarter_crop.subject_box}")
+    print(f"Three-quarter head box: {three_quarter_crop.head_box}")
 
     if args.debug_dir is not None:
         print(f"Saved debug crops in: {debug_dir}")

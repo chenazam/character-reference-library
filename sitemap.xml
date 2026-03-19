@@ -11,6 +11,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/00_INTERNAL_DOCS/asset_pipeline_matrix/</loc>
+         <lastmod>2026-03-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/archetypes/</loc>
          <lastmod>2026-03-19</lastmod>
          <changefreq>daily</changefreq>
@@ -422,6 +427,26 @@
     </url>
     <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/gallery-image/</loc>
+         <lastmod>2026-03-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/gallery-image_high_v2/</loc>
+         <lastmod>2026-03-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/gallery-image_low_v2/</loc>
+         <lastmod>2026-03-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/gallery-image_mid_v2/</loc>
+         <lastmod>2026-03-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/01_IDENTITY/gallery-image_v3/</loc>
          <lastmod>2026-03-19</lastmod>
          <changefreq>daily</changefreq>
     </url>

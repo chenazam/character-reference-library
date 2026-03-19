@@ -17,8 +17,9 @@ include:
 
   # Asset
   - blocks/asset/format/portrait_single.md
-  - blocks/asset/body/view/three_quarter.md
+  - blocks/asset/body/view/three_quarter_back.md
   - blocks/asset/body/styling/minimal_clothing.md
+  - blocks/asset/body/styling/barefoot.md
 
   # Character
   - characters/{character_id}/core.md

@@ -109,7 +109,7 @@ pipeline_status:
   scale_sheet: not_started
   scene_anchors: not_started
   prop_sheet: not_started
-  gallery_image: not_started
+  gallery_image: complete
 notes: 'Connor serves as the soft visual counterbalance to Alexander.
 
   His silhouette should remain lighter, softer, and more inward, with clear lower-body

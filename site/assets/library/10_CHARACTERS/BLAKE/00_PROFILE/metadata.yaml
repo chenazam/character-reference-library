@@ -91,7 +91,7 @@ identity_rules:
   - delicate limbs
   - small or lightweight silhouette
 reference_files:
-  face_anchor: blake_face_anchor_v1.png
+  face_anchor: blake_face_anchor_v2.png
   anatomy_sheet: blake_anatomy_sheet_v1.png
   body_anchor: blake_body_anchor_v1.png
   ultimate_character_sheet: ''

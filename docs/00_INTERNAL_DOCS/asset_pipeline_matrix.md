@@ -56,6 +56,17 @@
 
 ---
 
+## Dependency Chart
+
+| Asset                | Depends on                                 |
+| -------------------- | ------------------------------------------ |
+| Front face reference | **NONE (root)**                            |
+| Side face reference  | Front face reference                       |
+| 3/4 face reference   | Front + Side face references               |
+| Neutral portrait     | Face anchor sheet (derived) OR Front + 3/4 |
+
+---
+
 # B. Body structure / anatomy assets
 
 ## Source assets
@@ -83,6 +94,21 @@
 
 ---
 
+## Dependency Chart
+
+| Asset                   | Depends on                      |
+| ----------------------- | ------------------------------- |
+| Front anatomy reference | Front face reference            |
+| Side anatomy reference  | Front anatomy reference         |
+| Back anatomy reference  | Front anatomy reference         |
+| 3/4 body anchor         | Front + Side anatomy references |
+| Front silhouette        | Front anatomy reference         |
+| Side silhouette         | Side anatomy reference          |
+| Back silhouette         | Back anatomy reference          |
+| 3/4 silhouette          | 3/4 body anchor                 |
+
+---
+
 # B2. Specialized anatomy assets
 
 ## Source assets
@@ -99,6 +125,15 @@
 | Asset Type                          | Family | Output  | Source Assets       | Assembly Spec          | Labels | Layout Rules  | Normalization              | Notes                         |
 | ----------------------------------- | ------ | ------- | ------------------- | ---------------------- | ------ | ------------- | -------------------------- | ----------------------------- |
 | Specialized anatomy reference sheet | Body   | derived | multi-view closeups | anatomy-sheet template | yes    | ordered views | scale + crop normalization | e.g. glute sheet, chest sheet |
+
+---
+
+## Dependency Chart
+
+| Asset               | Depends on                      |
+| ------------------- | ------------------------------- |
+| Single-view closeup | Front anatomy reference         |
+| Multi-view closeups | Front + Side anatomy references |
 
 ---
 
@@ -127,6 +162,16 @@
 
 ---
 
+## Dependency Chart
+
+| Asset        | Depends on                             |
+| ------------ | -------------------------------------- |
+| Front outfit | Full body anchor sheet (derived)       |
+| Side outfit  | Front outfit OR Side anatomy reference |
+| Back outfit  | Front outfit OR Back anatomy reference |
+
+---
+
 # D. Gallery / library assets
 
 ## Source assets
@@ -145,6 +190,16 @@
 | ----------------------- | ------- | ------- | ------------------------- | ----------------- | ------ | ----------------- | ------------------------- | ----- |
 | Character library card  | Gallery | derived | gallery images + metadata | card template     | yes    | fixed layout      | framing normalization     |       |
 | Identity overview sheet | Gallery | derived | face + body + gallery     | overview template | yes    | structured layout | multi-asset normalization |       |
+
+---
+
+## Dependency Chart
+
+| Asset             | Depends on                            |
+| ----------------- | ------------------------------------- |
+| Gallery portrait  | Face anchor sheet                     |
+| Full-body gallery | Full body anchor sheet + outfit       |
+| Thumbnail         | Face anchor sheet OR gallery portrait |
 
 ---
 
@@ -171,6 +226,14 @@
 
 ---
 
+## Dependency Chart
+
+| Asset                 | Depends on                                 |
+| --------------------- | ------------------------------------------ |
+| Pose anchor reference | Full body anchor sheet + face anchor sheet |
+
+---
+
 # F. Pair / relationship assets
 
 ## Source assets
@@ -193,6 +256,14 @@
 
 ---
 
+## Dependency Chart
+
+| Asset              | Depends on                                        |
+| ------------------ | ------------------------------------------------- |
+| Pair gallery asset | Both characters’ face anchor + body anchor sheets |
+
+---
+
 # G. Scene / downstream outputs (all source)
 
 | Asset Type                | Family | Output | Face | Body | Hair | Style |   Outfit | Guardrails | Strict View | Layout |     Pair | Scene | Notes |
@@ -204,77 +275,12 @@
 | Group scene               | Scene  | source |  yes |  yes |  yes |   yes | optional |        yes |          no |     no |      yes |   yes |       |
 | Emotional narrative scene | Scene  | source |  yes |  yes |  yes |   yes | optional |        yes |          no |     no | optional |   yes |       |
 
----
+## Dependency Chart
 
-# Key structural takeaway (now explicit)
-
-The matrix now clearly shows:
-
-## 1. Two fundamentally different pipelines
-
-### A. Prompt pipeline (source assets)
-
-- driven by blocks
-- identity + instruction + context
-- sensitive to wording and structure
-
-### B. Assembly pipeline (derived sheets)
-
-- driven by scripts
-- deterministic
-- depends on:
-  - source assets
-  - layout templates
-  - normalization rules
-
----
-
-## 2. Clean separation of responsibilities
-
-### Prompt system handles:
-
-- identity fidelity
-- anatomy correctness
-- clothing design
-- pose correctness
-- scene composition
-
-### Script system handles:
-
-- layout consistency
-- panel alignment
-- scaling
-- labeling
-- visual standardization
-
----
-
-## 3. Why this matters for the next step
-
-This revised matrix gives us exactly what we need to build the blueprint:
-
-- which assets require **block composition**
-- which assets require **assembly specs**
-- where identity blocks are actually used
-- where they should NOT be used
-
----
-
-# Next step
-
-Now we can move cleanly into:
-
-👉 **Concrete pipeline block blueprint**
-
-That will include:
-
-- exact block taxonomy
-- inheritance order
-- asset assembly recipes (per asset type)
-- YAML-style schema for implementation
-
-And most importantly:
-
-- how to plug this into your existing pipeline without breaking it
-
-Whenever you're ready, we move to that.
+| Asset                  | Depends on                                          |
+| ---------------------- | --------------------------------------------------- |
+| Single-character scene | Face anchor + body anchor + optional outfit         |
+| Outfit scene           | Face + body + outfit sheet                          |
+| Pair scene             | Both characters’ face + body anchors                |
+| Group scene            | All characters’ anchors                             |
+| Emotional scene        | Same as above + expression sheet (optional derived) |

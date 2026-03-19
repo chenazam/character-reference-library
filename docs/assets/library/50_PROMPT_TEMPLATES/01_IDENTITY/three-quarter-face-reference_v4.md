@@ -8,6 +8,8 @@ This asset represents the same face rotated into a three-quarter angle and must 
 
 [CHARACTER_BLOCK]
 
+[FACE_BLOCK]
+
 ---
 
 ## View (THREE-QUARTER — STRICT)

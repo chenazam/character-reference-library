@@ -8,6 +8,8 @@ This asset represents the same face in a strict profile view and must preserve i
 
 [CHARACTER_BLOCK]
 
+[FACE_BLOCK]
+
 ---
 
 ## View (PROFILE — STRICT)

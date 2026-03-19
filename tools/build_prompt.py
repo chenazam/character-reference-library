@@ -131,6 +131,30 @@ def read_text(path: pathlib.Path) -> str:
     return path.read_text(encoding="utf-8")
 
 
+def normalize_for_model(text: str) -> str:
+    replacements = {
+        "\u2022": "- ",   # bullet
+        "\u2013": "-",    # en dash
+        "\u2014": "-",    # em dash
+        "\u2212": "-",    # minus sign
+        "\u00b0": " degrees",
+        "\u2192": "->",
+        "\u2018": "'",
+        "\u2019": "'",
+        "\u201c": '"',
+        "\u201d": '"',
+        "\u00a0": " ",    # non-breaking space
+    }
+
+    for old, new in replacements.items():
+        text = text.replace(old, new)
+
+    # Collapse odd double spaces introduced by replacements
+    text = re.sub(r"[ \t]+", " ", text)
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    return text.strip()
+
+
 def strip_code_fence(text: str) -> str:
     fence_pattern = re.compile(r"```(?:\w+)?\n(.*?)```", re.DOTALL)
     matches = fence_pattern.findall(text)
@@ -303,8 +327,7 @@ def build_prompt(
         values.update(params)
 
     resolved = resolve_placeholders(template_text, values)
-
-    return clean_final_prompt(resolved)
+    return normalize_for_model(clean_final_prompt(resolved))
 
 
 def parse_params(param_args: List[str] | None) -> Dict[str, str]:

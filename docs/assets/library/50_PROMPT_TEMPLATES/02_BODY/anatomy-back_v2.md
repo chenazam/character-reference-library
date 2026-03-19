@@ -8,6 +8,8 @@ This asset defines the character’s back structure, symmetry, and posterior sil
 
 [CHARACTER_BLOCK]
 
+[BODY_BLOCK]
+
 ---
 
 ## View (BACK — STRICT)

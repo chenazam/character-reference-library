@@ -8,6 +8,8 @@ This asset defines the character’s body proportions, structure, and silhouette
 
 [CHARACTER_BLOCK]
 
+[BODY_BLOCK]
+
 ---
 
 ## Pose (FRONT — NEUTRAL)

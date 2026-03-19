@@ -8,6 +8,8 @@ This asset defines the canonical facial identity and must be highly consistent a
 
 [CHARACTER_BLOCK]
 
+[FACE_BLOCK]
+
 ---
 
 ## View (FRONT — STRICT)

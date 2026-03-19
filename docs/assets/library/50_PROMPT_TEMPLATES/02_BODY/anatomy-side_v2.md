@@ -8,6 +8,8 @@ This asset defines the character’s body depth, posture, and silhouette in prof
 
 [CHARACTER_BLOCK]
 
+[BODY_BLOCK]
+
 ---
 
 ## View (PROFILE — STRICT)

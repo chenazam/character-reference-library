@@ -83,7 +83,7 @@ identity_rules:
   - severe or emotionally closed presentation
   - muted conservative styling that removes his playful confidence
 reference_files:
-  face_anchor: jonah_face_anchor_v1.png
+  face_anchor: jonah_face_anchor_v2.png
   anatomy_sheet: jonah_anatomy_sheet_v1.png
   body_anchor: jonah_body_anchor_v1.png
   ultimate_character_sheet: ''

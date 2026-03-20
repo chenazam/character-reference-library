@@ -26,7 +26,6 @@ include:
   - characters/{character_id}/body.md
   - characters/{character_id}/hair.md
   - characters/{character_id}/guardrails.md
-  - characters/{character_id}/specialized_anatomy/glutes.md
 
 conditional:
   references_attached:

@@ -30,8 +30,8 @@
 
   <div class="comparison-card">
     <h3><a href="../../characters/jasper/">Jasper</a></h3>
-    <a href="../../assets/library/10_CHARACTERS/JASPER/02_BODY/structure/jasper_silhouette_front_v1.png" target="_blank">
-      <img src="../../assets/library/10_CHARACTERS/JASPER/02_BODY/structure/jasper_silhouette_front_v1.png" alt="Jasper silhouette-front">
+    <a href="../../assets/library/10_CHARACTERS/JASPER/02_BODY/structure/jasper_silhouette_front_v99.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/JASPER/02_BODY/structure/jasper_silhouette_front_v99.png" alt="Jasper silhouette-front">
     </a>
   </div>
 

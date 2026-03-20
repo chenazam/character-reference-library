@@ -126,7 +126,15 @@ class PromptBuilderV2:
 
     def load_block(self, include_ref: str, variables: dict[str, str]) -> str:
         path = self.resolve_include_path(include_ref, variables)
-        return strip_code_fence(read_text(path))
+        raw = strip_code_fence(read_text(path))
+        return render_string(raw, variables)
+
+    def load_block_optional(self, include_ref: str, variables: dict[str, str]) -> str | None:
+        path = self.resolve_include_path(include_ref, variables)
+        if not path.exists():
+            return None
+        raw = strip_code_fence(read_text(path))
+        return render_string(raw, variables)
 
     def build_prompt(
         self,
@@ -141,6 +149,10 @@ class PromptBuilderV2:
         if not isinstance(include_items, list):
             raise PromptBuildError(f"'include' must be a list in recipe: {recipe_ref}")
 
+        optional_items = recipe.get("optional", [])
+        if optional_items and not isinstance(optional_items, list):
+            raise PromptBuildError(f"'optional' must be a list in recipe: {recipe_ref}")
+
         pieces: list[str] = []
 
         for item in include_items:
@@ -149,6 +161,15 @@ class PromptBuilderV2:
                     f"All recipe include entries must be strings: {recipe_ref}"
                 )
             pieces.append(self.load_block(item, variables))
+
+        for item in optional_items:
+            if not isinstance(item, str):
+                raise PromptBuildError(
+                    f"All recipe optional entries must be strings: {recipe_ref}"
+                )
+            loaded = self.load_block_optional(item, variables)
+            if loaded and loaded.strip():
+                pieces.append(loaded)
 
         conditional_map = recipe.get("conditional", {})
         if conditional_map:
@@ -182,11 +203,15 @@ class PromptBuilderV2:
             "recipe": recipe_ref,
             "name": recipe.get("name"),
             "includes": [],
+            "optional": [],
             "conditional": {},
         }
 
         for item in recipe.get("include", []):
             resolved["includes"].append(str(self.resolve_include_path(item, variables)))
+
+        for item in recipe.get("optional", []):
+            resolved["optional"].append(str(self.resolve_include_path(item, variables)))
 
         conditional_map = recipe.get("conditional", {})
         for condition_name, conditional_items in conditional_map.items():
@@ -228,6 +253,15 @@ def build_default_variables(args: argparse.Namespace) -> dict[str, str]:
     if args.region:
         variables.setdefault("region", args.region)
 
+    if getattr(args, "character_a", None):
+        variables.setdefault("character_a", args.character_a)
+
+    if getattr(args, "character_b", None):
+        variables.setdefault("character_b", args.character_b)
+
+    if getattr(args, "scene_description", None):
+        variables.setdefault("scene_description", args.scene_description)
+
     return variables
 
 
@@ -243,6 +277,9 @@ def main() -> None:
         "--character",
         help="Character folder name / id used for characters/{character_id}/...",
     )
+    parser.add_argument("--character-a", help="First character id")
+    parser.add_argument("--character-b", help="Second character id")
+    parser.add_argument("--scene-description", help="Freeform scene description")
     parser.add_argument(
         "--region",
         help="Optional specialized anatomy region, e.g. glutes",

@@ -71,6 +71,13 @@
   </div>
 
   <div class="comparison-card">
+    <h3><a href="../../characters/alek/">Alek</a></h3>
+    <a href="../../assets/library/10_CHARACTERS/ALEK/01_IDENTITY/face/alek_face_anchor_v1.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/ALEK/01_IDENTITY/face/alek_face_anchor_v1.png" alt="Alek face-anchor">
+    </a>
+  </div>
+
+  <div class="comparison-card">
     <h3><a href="../../characters/alexander/">Alexander</a></h3>
     <a href="../../assets/library/10_CHARACTERS/ALEXANDER/01_IDENTITY/face/alexander_face_anchor_v1.png" target="_blank">
       <img src="../../assets/library/10_CHARACTERS/ALEXANDER/01_IDENTITY/face/alexander_face_anchor_v1.png" alt="Alexander face-anchor">

@@ -29,6 +29,7 @@ A strongly upper-body-dominant silhouette with wide shoulders and a pronounced V
 
 | Character | Build | Anchor | Emphasis |
 |---|---|---|---|
+| Alek | athletic_muscular | power_athlete | upper_body |
 | Alexander | athletic_muscular | power_athlete | upper_body |
 | Blake | athletic_muscular | power_athlete | upper_body |
 | Daimon | athletic_muscular | power_athlete | upper_body |

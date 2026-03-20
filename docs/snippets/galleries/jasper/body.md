@@ -28,20 +28,32 @@
     <img src="..\..\assets\library\10_CHARACTERS\JASPER\02_BODY\anatomy\jasper_anatomy_three_quarter_front_v1.png" alt="">
   </a>
 
-  <a href="..\..\assets\library\10_CHARACTERS\JASPER\02_BODY\anatomy\jasper_body_anchor_v1.png" target="_blank">
-    <img src="..\..\assets\library\10_CHARACTERS\JASPER\02_BODY\anatomy\jasper_body_anchor_v1.png" alt="">
-  </a>
-
   <a href="..\..\assets\library\10_CHARACTERS\JASPER\02_BODY\structure\jasper_body_anchor_v1.png" target="_blank">
     <img src="..\..\assets\library\10_CHARACTERS\JASPER\02_BODY\structure\jasper_body_anchor_v1.png" alt="">
+  </a>
+
+  <a href="..\..\assets\library\10_CHARACTERS\JASPER\02_BODY\structure\jasper_silhouette_back_v1.png" target="_blank">
+    <img src="..\..\assets\library\10_CHARACTERS\JASPER\02_BODY\structure\jasper_silhouette_back_v1.png" alt="">
   </a>
 
   <a href="..\..\assets\library\10_CHARACTERS\JASPER\02_BODY\structure\jasper_silhouette_front_v1.png" target="_blank">
     <img src="..\..\assets\library\10_CHARACTERS\JASPER\02_BODY\structure\jasper_silhouette_front_v1.png" alt="">
   </a>
 
+  <a href="..\..\assets\library\10_CHARACTERS\JASPER\02_BODY\structure\jasper_silhouette_front_v99.png" target="_blank">
+    <img src="..\..\assets\library\10_CHARACTERS\JASPER\02_BODY\structure\jasper_silhouette_front_v99.png" alt="">
+  </a>
+
   <a href="..\..\assets\library\10_CHARACTERS\JASPER\02_BODY\structure\jasper_silhouette_sheet_v1.png" target="_blank">
     <img src="..\..\assets\library\10_CHARACTERS\JASPER\02_BODY\structure\jasper_silhouette_sheet_v1.png" alt="">
+  </a>
+
+  <a href="..\..\assets\library\10_CHARACTERS\JASPER\02_BODY\structure\jasper_silhouette_side_v1.png" target="_blank">
+    <img src="..\..\assets\library\10_CHARACTERS\JASPER\02_BODY\structure\jasper_silhouette_side_v1.png" alt="">
+  </a>
+
+  <a href="..\..\assets\library\10_CHARACTERS\JASPER\02_BODY\structure\jasper_silhouette_three_quarter_v1.png" target="_blank">
+    <img src="..\..\assets\library\10_CHARACTERS\JASPER\02_BODY\structure\jasper_silhouette_three_quarter_v1.png" alt="">
   </a>
 
 </div>

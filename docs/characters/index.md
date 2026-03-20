@@ -9,6 +9,13 @@ Browse characters in the reference library.
 
 <div class="character-index-grid">
 
+<a class="character-card" href="alek/">
+
+  <img src="..\assets\library\10_CHARACTERS\ALEK\01_IDENTITY\face\alek_face_anchor_v1.png" alt="Alek">
+  <h3>Alek</h3>
+
+</a>
+
 <a class="character-card" href="alexander/">
 
   <img src="..\assets\library\10_CHARACTERS\ALEXANDER\01_IDENTITY\gallery\alexander_gallery_image_v1.png" alt="Alexander">

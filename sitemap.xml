@@ -551,7 +551,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/body/constraint/posture_override_silhouette/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/body/constraint/ignore_posture_cues/</loc>
+         <lastmod>2026-03-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/body/constraint/posture_override_reference/</loc>
          <lastmod>2026-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -577,6 +582,11 @@
     </url>
     <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/body/pose/neutral_three_quarter/</loc>
+         <lastmod>2026-03-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/body/process/reconstruction/</loc>
          <lastmod>2026-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -662,6 +672,11 @@
     </url>
     <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/family/body/base/</loc>
+         <lastmod>2026-03-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/family/body/base_neutral/</loc>
          <lastmod>2026-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>

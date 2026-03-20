@@ -10,14 +10,14 @@ include:
   - blocks/global/output_constraints.md
 
   # Family
-  - blocks/family/body/base.md
+  - blocks/family/body/base_neutral.md
 
   # Asset
   - blocks/asset/format/portrait_single.md
   - blocks/asset/body/view/front.md
   - blocks/asset/body/pose/neutral_front.md
   - blocks/asset/body/constraint/silhouette.md
-  - blocks/asset/body/constraint/posture_override_silhouette.md
+  - blocks/asset/body/constraint/posture_override_reference.md
   - blocks/asset/body/rendering/silhouette.md
 
   # Character

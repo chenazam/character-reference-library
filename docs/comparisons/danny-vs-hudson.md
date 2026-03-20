@@ -57,7 +57,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--ref">
     <div class="height-lineup__stage">
-      <img class="height-lineup__silhouette height-lineup__silhouette--reference" src="/assets/reference/reference_male_average_180cm_front_v1.png" alt="Reference silhouette" style="height: 93.26%;">
+      <div class="height-lineup__placeholder height-lineup__placeholder--athletic_balanced height-lineup__placeholder--reference" style="height: 93.26%"></div>
     </div>
     <div class="height-lineup__label">Reference</div>
     <div class="height-lineup__meta">180 cm / 5'11"</div>
@@ -65,7 +65,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--a">
     <div class="height-lineup__stage">
-      <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/DANNY/02_BODY/structure/danny_silhouette_front_v1.png" alt="Danny silhouette front" style="height: 100.00%;">
+      <div class="height-lineup__placeholder height-lineup__placeholder--heavy_muscular height-lineup__placeholder--elongated height-lineup__placeholder--dense" style="height: 100.00%"></div>
     </div>
     <div class="height-lineup__label">Danny</div>
     <div class="height-lineup__meta">193 cm / 6'4</div>
@@ -73,7 +73,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--b">
     <div class="height-lineup__stage">
-      <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/HUDSON/02_BODY/structure/hudson_silhouette_front_v1.png" alt="Hudson silhouette front" style="height: 97.41%;">
+      <div class="height-lineup__placeholder height-lineup__placeholder--broad_athletic height-lineup__placeholder--elongated" style="height: 97.41%"></div>
     </div>
     <div class="height-lineup__label">Hudson</div>
     <div class="height-lineup__meta">188 cm / 6'2</div>

@@ -42,7 +42,7 @@
 
   <div class="height-lineup__figure height-lineup__figure--ref">
     <div class="height-lineup__stage">
-      <img class="height-lineup__silhouette height-lineup__silhouette--reference" src="/assets/reference/reference_male_average_180cm_front_v1.png" alt="Reference silhouette" style="height: 100.00%;">
+      <div class="height-lineup__placeholder height-lineup__placeholder--athletic_balanced height-lineup__placeholder--reference" style="height: 100.00%"></div>
     </div>
     <div class="height-lineup__label">Reference</div>
     <div class="height-lineup__meta">180 cm / 5'11"</div>
@@ -50,7 +50,7 @@
 
   <div class="height-lineup__figure height-lineup__figure--a">
     <div class="height-lineup__stage">
-      <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/TOMMY/02_BODY/structure/tommy_silhouette_front_v1.png" alt="Tommy silhouette front" style="height: 94.44%;">
+      <div class="height-lineup__placeholder height-lineup__placeholder--soft_curvy height-lineup__placeholder--compact height-lineup__placeholder--glute_emphasis" style="height: 94.44%"></div>
     </div>
     <div class="height-lineup__label">Tommy</div>
     <div class="height-lineup__meta">170 cm / 5'7"</div>

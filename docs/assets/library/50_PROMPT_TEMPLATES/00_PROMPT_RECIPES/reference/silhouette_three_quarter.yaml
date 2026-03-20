@@ -12,19 +12,20 @@ include:
   # Family
   - blocks/family/body/base.md
 
-  # Asset
-  - blocks/asset/format/portrait_single.md
-  - blocks/asset/body/view/three_quarter_back.md
-  - blocks/asset/body/pose/neutral_three_quarter.md
-  - blocks/asset/body/constraint/silhouette.md
-  - blocks/asset/body/constraint/posture_override_silhouette.md
-  - blocks/asset/body/rendering/silhouette.md
-
   # Character
   - characters/{character_id}/core.md
   - characters/{character_id}/body.md
   - characters/{character_id}/hair.md
   - characters/{character_id}/guardrails.md
+
+  # Asset
+  - blocks/asset/format/portrait_single.md
+  - blocks/asset/body/view/three_quarter_back.md
+  - blocks/asset/body/pose/neutral_three_quarter.md
+  - blocks/asset/body/constraint/posture_override_reference.md
+  - blocks/asset/body/process/reconstruction.md
+  - blocks/asset/body/constraint/silhouette.md
+  - blocks/asset/body/rendering/silhouette.md
 
 conditional:
   references_attached:

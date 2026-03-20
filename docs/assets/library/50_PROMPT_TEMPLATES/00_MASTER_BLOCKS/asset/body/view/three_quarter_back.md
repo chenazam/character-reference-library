@@ -21,7 +21,7 @@ Silhouette requirements:
 
 - glute projection must be clearly visible
 - lower-body mass must read as dominant
-- S-curve from chest to waist to glutes must remain visible
+- clear structural flow from torso to waist to glutes must remain readable
 
 Constraints:
 

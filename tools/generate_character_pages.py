@@ -61,6 +61,37 @@ def fix_common_mojibake(text: str) -> str:
     )
 
 
+def resolve_latest_normalized_silhouette_front(character_dir: pathlib.Path) -> str:
+    structure_dir = character_dir / "02_BODY" / "structure"
+    if not structure_dir.exists():
+        return ""
+
+    slug = character_dir.name.lower()
+    pattern = f"{slug}_silhouette_front*_normalized.png"
+
+    best_path = None
+    best_version = -1
+
+    for path in structure_dir.glob(pattern):
+        m = re.fullmatch(
+            rf"{re.escape(slug)}_silhouette_front(?:_v(\d+))?_normalized",
+            path.stem,
+            re.IGNORECASE,
+        )
+        if not m:
+            continue
+
+        version = int(m.group(1)) if m.group(1) else 0
+        if version > best_version:
+            best_version = version
+            best_path = path
+
+    if not best_path:
+        return ""
+
+    return make_root_image_link(character_dir, best_path.name)
+
+
 def deep_fix_strings(value):
     if isinstance(value, str):
         return fix_common_mojibake(value)
@@ -103,10 +134,7 @@ def build_height_context_section(record: dict, metadata: dict) -> str:
     char_name = metadata.get("name", "Character")
     archetype = fallback_proportion_archetype(metadata)
 
-    silhouette_front = make_root_image_link(
-        record["dir"],
-        get_nested(metadata, "reference_files", "silhouette_front", default=""),
-    )
+    silhouette_front = resolve_latest_normalized_silhouette_front(pathlib.Path(record["dir"]))
 
     reference_silhouette = get_reference_silhouette_link()
 

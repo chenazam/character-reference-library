@@ -1,23 +1,31 @@
-Pose (strict neutral side view):
+Pose:
+neutral standardized side-view standing pose
 
 - upright side profile with vertical spine
-- no forward lean or backward arch
-- neutral posture, balanced alignment
+- neutral posture with balanced alignment
+- no forward lean
+- no backward arch
+- no hip shift
+- no contrapposto
+- no casual asymmetry
 
 Arms:
 
-- arms relaxed along the body
-- slight separation from torso
-- no forward or backward offset
+- arms relaxed naturally along the body
+- slight visible separation from torso where possible
+- no forward or backward swing
+- hands neutral and relaxed
 
 Legs:
 
-- legs straight and aligned
-- feet flat and naturally positioned
-- no stagger or weight shift
+- legs straight and evenly weighted
+- feet flat and naturally positioned for a controlled side view
+- no staggered stance
+- no bend or asymmetrical loading
 
 Important:
 
-- ignore pose from reference images
-- reconstruct a standardized neutral side stance
-- prioritize clean, readable silhouette
+- do NOT preserve incidental pose from reference images
+- use the reference only for anatomy, proportions, and mass distribution
+- reconstruct a clean, standardized neutral side stance
+- prioritize technical consistency over natural pose variation

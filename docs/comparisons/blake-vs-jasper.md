@@ -57,7 +57,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--ref">
     <div class="height-lineup__stage">
-      <img class="height-lineup__silhouette height-lineup__silhouette--reference" src="/assets/reference/reference_male_average_180cm_front_v1.png" alt="Reference silhouette" style="height: 94.24%;">
+      <div class="height-lineup__placeholder height-lineup__placeholder--athletic_balanced height-lineup__placeholder--reference" style="height: 94.24%"></div>
     </div>
     <div class="height-lineup__label">Reference</div>
     <div class="height-lineup__meta">180 cm / 5'11"</div>
@@ -65,7 +65,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--a">
     <div class="height-lineup__stage">
-      <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/BLAKE/02_BODY/structure/blake_silhouette_front_v1.png" alt="Blake silhouette front" style="height: 100.00%;">
+      <div class="height-lineup__placeholder height-lineup__placeholder--broad_upper_dominant height-lineup__placeholder--elongated" style="height: 100.00%"></div>
     </div>
     <div class="height-lineup__label">Blake</div>
     <div class="height-lineup__meta">191 cm / 6'3"</div>
@@ -73,7 +73,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--b">
     <div class="height-lineup__stage">
-      <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/JASPER/02_BODY/structure/jasper_silhouette_front_v99.png" alt="Jasper silhouette front" style="height: 89.01%;">
+      <div class="height-lineup__placeholder height-lineup__placeholder--athletic_leg_dominant height-lineup__placeholder--compact height-lineup__placeholder--glute_emphasis" style="height: 89.01%"></div>
     </div>
     <div class="height-lineup__label">Jasper</div>
     <div class="height-lineup__meta">170 cm / 5'7"</div>
@@ -105,7 +105,7 @@ Their emotional presentation also differs: **Blake** feels **Controlled**, while
   </div>
   <div class="comparison-item">
     <div class="comparison-label">Jasper</div>
-    <img src="../../assets/library/10_CHARACTERS/JASPER/02_BODY/structure/jasper_body_anchor_v1.png" alt="Jasper Body Anchor Comparison">
+    <img src="../../assets/library/10_CHARACTERS/JASPER/02_BODY/anatomy/jasper_body_anchor_v1.png" alt="Jasper Body Anchor Comparison">
   </div>
 </div>
 

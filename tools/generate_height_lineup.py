@@ -2,6 +2,7 @@
 
 import argparse
 import pathlib
+import re
 import sys
 import yaml
 
@@ -33,6 +34,37 @@ LIBRARY_ROOT = ROOT / "docs" / "assets" / "library" / "10_CHARACTERS"
 OUTPUT_ROOT = ROOT / "docs" / "comparisons" / "lineups"
 
 NORMAL_CHART_HEIGHT_PX = 460
+
+
+def resolve_latest_normalized_silhouette_front(character_dir: pathlib.Path) -> str:
+    structure_dir = character_dir / "02_BODY" / "structure"
+    if not structure_dir.exists():
+        return ""
+
+    slug = character_dir.name.lower()
+    pattern = f"{slug}_silhouette_front*_normalized.png"
+
+    best_path = None
+    best_version = -1
+
+    for path in structure_dir.glob(pattern):
+        m = re.fullmatch(
+            rf"{re.escape(slug)}_silhouette_front(?:_v(\d+))?_normalized",
+            path.stem,
+            re.IGNORECASE,
+        )
+        if not m:
+            continue
+
+        version = int(m.group(1)) if m.group(1) else 0
+        if version > best_version:
+            best_version = version
+            best_path = path
+
+    if not best_path:
+        return ""
+
+    return make_root_image_link(character_dir, best_path.name)
 
 
 def load_character(slug: str) -> dict:
@@ -81,10 +113,7 @@ def build_chart(characters: list[dict]) -> str:
         )
 
     character_silhouettes = [
-        make_root_image_link(
-            c["_dir"],
-            get_nested(c, "reference_files", "silhouette_front", default="")
-        )
+        resolve_latest_normalized_silhouette_front(c["_dir"])
         for c in characters
     ]
     use_real_character_silhouettes = all(bool(s) for s in character_silhouettes)

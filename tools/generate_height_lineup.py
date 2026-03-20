@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+from __future__ import annotations
+
 import argparse
 import pathlib
 import re
@@ -28,12 +30,12 @@ except ModuleNotFoundError:
     )
 
 
-
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 LIBRARY_ROOT = ROOT / "docs" / "assets" / "library" / "10_CHARACTERS"
 OUTPUT_ROOT = ROOT / "docs" / "comparisons" / "lineups"
 
-NORMAL_CHART_HEIGHT_PX = 460
+REFERENCE_HEIGHT_CM = 180
+REFERENCE_HEIGHT_IMPERIAL = "5'11\""
 
 
 def resolve_latest_normalized_silhouette_front(character_dir: pathlib.Path) -> str:
@@ -87,35 +89,51 @@ def load_character(slug: str) -> dict:
     raise ValueError(f"Character not found for slug: {slug}")
 
 
-def build_chart(characters: list[dict]) -> str:
-    reference_height = 180
-    reference_imperial = "5'11\""
+def cm_to_inches(cm: float) -> float:
+    return cm / 2.54
 
-    chart_height_px = NORMAL_CHART_HEIGHT_PX
-    reference_silhouette = get_reference_silhouette_link()
 
-    max_height = max(max(c["physical"]["height_cm"] for c in characters), reference_height)
+def cm_to_feet_inches(cm: float) -> str:
+    rounded = round(cm_to_inches(cm))
+    feet = rounded // 12
+    inches = rounded % 12
+    return f"{feet}'{inches}\""
 
-    def pct(h: int) -> float:
-        return (h / max_height) * 100
 
-    def tick_px(cm: int) -> float:
-        return (cm / max_height) * chart_height_px
-
-    tick_step = 10
-    tick_start = (max_height // tick_step) * tick_step
-
+def build_ticks(min_cm: int, max_cm: int, step: int = 10) -> str:
+    tick_start = (max_cm // step) * step
     ticks = []
-    for t in range(tick_start, 0, -tick_step):
+
+    for tick_cm in range(tick_start, min_cm, -step):
+        bottom_pct = (tick_cm / max_cm) * 100
         ticks.append(
-            f'<div class="height-lineup__tick" style="bottom: {tick_px(t):.2f}px;">'
-            f'<span class="height-lineup__tick-label">{t} cm</span></div>'
+            f'<div class="height-lineup__tick" style="bottom: {bottom_pct:.4f}%;">'
+            f'<span class="height-lineup__tick-label">{tick_cm} cm</span>'
+            f"</div>"
         )
+
+    return "".join(ticks)
+
+
+def build_chart(characters: list[dict]) -> str:
+    reference_silhouette = get_reference_silhouette_link()
 
     character_silhouettes = [
         resolve_latest_normalized_silhouette_front(c["_dir"])
         for c in characters
     ]
+
+    heights_cm = [int(get_nested(c, "physical", "height_cm", default=0) or 0) for c in characters]
+    names = [str(c.get("name", c.get("slug", "Unknown"))) for c in characters]
+    feet_inches = [cm_to_feet_inches(h) for h in heights_cm]
+
+    max_height = max([REFERENCE_HEIGHT_CM, *heights_cm])
+    if max_height <= 0:
+        return ""
+
+    def pct(height: int) -> float:
+        return (height / max_height) * 100
+
     use_real_character_silhouettes = all(bool(s) for s in character_silhouettes)
     use_real_reference = bool(use_real_character_silhouettes and reference_silhouette)
 
@@ -123,13 +141,12 @@ def build_chart(characters: list[dict]) -> str:
         reference_figure = build_silhouette_img(
             reference_silhouette,
             "Reference silhouette",
-            pct(reference_height),
+            pct(REFERENCE_HEIGHT_CM),
             reference=True,
         )
     else:
-        reference_figure = build_reference_placeholder(pct(reference_height))
+        reference_figure = build_reference_placeholder(pct(REFERENCE_HEIGHT_CM))
 
-    lineup_count = len(characters) + 1
     figures = [
         f"""
 <div class="height-lineup__figure">
@@ -137,25 +154,28 @@ def build_chart(characters: list[dict]) -> str:
     {reference_figure}
   </div>
   <div class="height-lineup__label">Reference</div>
-  <div class="height-lineup__meta">{reference_height} cm / {reference_imperial}</div>
+  <div class="height-lineup__meta">{REFERENCE_HEIGHT_CM} cm / {REFERENCE_HEIGHT_IMPERIAL}</div>
 </div>
 """
     ]
 
-    for c, silhouette in zip(characters, character_silhouettes):
-        name = c["name"]
-        height = c["physical"]["height_cm"]
-        imperial = c["physical"]["height_imperial"]
-        archetype = fallback_proportion_archetype(c)
+    for character, silhouette, name, height_cm, imperial in zip(
+        characters,
+        character_silhouettes,
+        names,
+        heights_cm,
+        feet_inches,
+    ):
+        archetype = fallback_proportion_archetype(character)
 
         if use_real_character_silhouettes:
             body = build_silhouette_img(
                 silhouette,
                 f"{name} silhouette",
-                pct(height),
+                pct(height_cm),
             )
         else:
-            body = build_character_placeholder(archetype, pct(height), c)
+            body = build_character_placeholder(archetype, pct(height_cm), character)
 
         figures.append(
             f"""
@@ -164,36 +184,37 @@ def build_chart(characters: list[dict]) -> str:
     {body}
   </div>
   <div class="height-lineup__label">{name}</div>
-  <div class="height-lineup__meta">{height} cm / {imperial}</div>
+  <div class="height-lineup__meta">{height_cm} cm / {imperial}</div>
 </div>
 """
         )
 
-    lineup_classes = "height-lineup height-lineup--multi"
+    lineup_count = len(characters) + 1  # reference + character figures
 
     return f"""
 <div class="height-lineup__scroll">
-<div class="{lineup_classes}" style="--lineup-count: {lineup_count};">
+  <div class="height-lineup height-lineup--multi" style="--lineup-count:{lineup_count};">
+    <div class="height-lineup__ticks" aria-hidden="true">
+      {build_ticks(0, max_height)}
+    </div>
 
-  <div class="height-lineup__ticks" aria-hidden="true">
-    {"".join(ticks)}
+    <div class="height-lineup__baseline" aria-hidden="true"></div>
+    <div class="height-lineup__spacer" aria-hidden="true"></div>
+
+    {''.join(figures)}
   </div>
-
-  <div class="height-lineup__baseline" aria-hidden="true"></div>
-  <div class="height-lineup__spacer" aria-hidden="true"></div>
-
-  {"".join(figures)}
-
-</div>
 </div>
 """
 
 
 def generate_lineup(slugs: list[str]) -> pathlib.Path:
     characters = [load_character(s) for s in slugs]
-    characters.sort(key=lambda c: c["physical"]["height_cm"], reverse=True)
+    characters.sort(
+        key=lambda c: int(get_nested(c, "physical", "height_cm", default=0) or 0),
+        reverse=True,
+    )
 
-    title = "Height Lineup — " + ", ".join(c["name"] for c in characters)
+    title = "Height Lineup — " + ", ".join(c.get("name", c.get("slug", "Unknown")) for c in characters)
 
     OUTPUT_ROOT.mkdir(parents=True, exist_ok=True)
 
@@ -216,7 +237,7 @@ hide:
     return output_file
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(description="Generate a multi-character height lineup page.")
     parser.add_argument("slugs", nargs="+", help="Character slugs to include")
     args = parser.parse_args()
@@ -224,8 +245,8 @@ def main():
     try:
         output_file = generate_lineup(args.slugs)
         print(f"Generated lineup page: {output_file}")
-    except Exception as e:
-        print(f"Error: {e}", file=sys.stderr)
+    except Exception as exc:
+        print(f"Error: {exc}", file=sys.stderr)
         sys.exit(1)
 
 

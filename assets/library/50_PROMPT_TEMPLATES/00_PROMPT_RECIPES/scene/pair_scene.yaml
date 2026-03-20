@@ -1,0 +1,42 @@
+name: pair_scene
+
+include:
+  # Global
+  - blocks/global/reference_intent.md
+  - blocks/global/style/scene_realistic.md
+  - blocks/global/linework.md
+  - blocks/global/color.md
+  - blocks/global/consistency.md
+  - blocks/global/camera_base.md
+  - blocks/global/cleanliness/lighting.md
+  - blocks/global/cleanliness/background.md
+
+  # Family
+  - blocks/family/scene/base.md
+  - blocks/family/pair/base.md
+
+  # Character A
+  - characters/{character_a}/core.md
+  - characters/{character_a}/face.md
+  - characters/{character_a}/hair.md
+  - characters/{character_a}/body.md
+  - characters/{character_a}/style.md
+  - characters/{character_a}/guardrails.md
+
+  # Character B
+  - characters/{character_b}/core.md
+  - characters/{character_b}/face.md
+  - characters/{character_b}/hair.md
+  - characters/{character_b}/body.md
+  - characters/{character_b}/style.md
+  - characters/{character_b}/guardrails.md
+
+  # Identity reinforcement
+  - blocks/global/identity/face_anchor_scene.md
+
+  # Scene payload
+  - blocks/scene/input/scene_description.md
+
+conditional:
+  references_attached:
+    - blocks/global/reference_fidelity.md

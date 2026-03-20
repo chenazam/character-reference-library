@@ -551,6 +551,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/body/constraint/clinical_anatomy_tone/</loc>
+         <lastmod>2026-03-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/body/constraint/ignore_posture_cues/</loc>
          <lastmod>2026-03-20</lastmod>
          <changefreq>daily</changefreq>
@@ -562,6 +567,11 @@
     </url>
     <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/body/constraint/silhouette/</loc>
+         <lastmod>2026-03-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/body/focus/glutes/</loc>
          <lastmod>2026-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -616,6 +626,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/body/view/glutes_back/</loc>
+         <lastmod>2026-03-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/body/view/side/</loc>
          <lastmod>2026-03-20</lastmod>
          <changefreq>daily</changefreq>
@@ -647,6 +662,11 @@
     </url>
     <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/face/view/three_quarter/</loc>
+         <lastmod>2026-03-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/format/cropped_region/</loc>
          <lastmod>2026-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>

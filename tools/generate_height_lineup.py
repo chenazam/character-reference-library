@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import html
 import pathlib
 import re
 import sys
@@ -28,7 +29,6 @@ except ModuleNotFoundError:
         build_character_placeholder,
         build_silhouette_img,
     )
-
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 LIBRARY_ROOT = ROOT / "docs" / "assets" / "library" / "10_CHARACTERS"
@@ -163,7 +163,6 @@ def build_chart(characters: list[dict]) -> str:
         characters,
         character_silhouettes,
         names,
-        heights_cm,
         feet_inches,
     ):
         archetype = fallback_proportion_archetype(character)
@@ -183,13 +182,13 @@ def build_chart(characters: list[dict]) -> str:
   <div class="height-lineup__stage">
     {body}
   </div>
-  <div class="height-lineup__label">{name}</div>
+  <div class="height-lineup__label">{html.escape(name)}</div>
   <div class="height-lineup__meta">{height_cm} cm / {imperial}</div>
 </div>
 """
         )
 
-    lineup_count = len(characters) + 1  # reference + character figures
+    lineup_count = len(characters) + 1
 
     return f"""
 <div class="height-lineup__scroll">

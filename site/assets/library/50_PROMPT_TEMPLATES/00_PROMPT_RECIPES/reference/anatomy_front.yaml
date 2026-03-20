@@ -27,6 +27,10 @@ include:
   - characters/{character_id}/hair.md
   - characters/{character_id}/guardrails.md
 
+optional:
+  - characters/{character_id}/specialized_anatomy/posture.md
+  - characters/{character_id}/specialized_anatomy/upper_body.md
+
 conditional:
   references_attached:
     - blocks/global/reference_fidelity.md

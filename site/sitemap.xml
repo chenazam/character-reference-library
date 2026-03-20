@@ -176,6 +176,61 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/BLAKE/00_PROFILE/blocks/body/</loc>
+         <lastmod>2026-03-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/BLAKE/00_PROFILE/blocks/core/</loc>
+         <lastmod>2026-03-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/BLAKE/00_PROFILE/blocks/expression/</loc>
+         <lastmod>2026-03-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/BLAKE/00_PROFILE/blocks/face/</loc>
+         <lastmod>2026-03-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/BLAKE/00_PROFILE/blocks/guardrails/</loc>
+         <lastmod>2026-03-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/BLAKE/00_PROFILE/blocks/hair/</loc>
+         <lastmod>2026-03-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/BLAKE/00_PROFILE/blocks/movement/</loc>
+         <lastmod>2026-03-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/BLAKE/00_PROFILE/blocks/style/</loc>
+         <lastmod>2026-03-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/BLAKE/00_PROFILE/blocks/wardrobe/</loc>
+         <lastmod>2026-03-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/BLAKE/00_PROFILE/blocks/specialized_anatomy/posture/</loc>
+         <lastmod>2026-03-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/BLAKE/00_PROFILE/blocks/specialized_anatomy/upper_body/</loc>
+         <lastmod>2026-03-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/assets/library/10_CHARACTERS/CONNOR/00_PROFILE/character_summary/</loc>
          <lastmod>2026-03-20</lastmod>
          <changefreq>daily</changefreq>
@@ -496,12 +551,32 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/body/constraint/posture_override_silhouette/</loc>
+         <lastmod>2026-03-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/body/constraint/silhouette/</loc>
          <lastmod>2026-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/body/pose/neutral_back/</loc>
+         <lastmod>2026-03-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/body/pose/neutral_front/</loc>
+         <lastmod>2026-03-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/body/pose/neutral_side/</loc>
+         <lastmod>2026-03-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/body/pose/neutral_three_quarter/</loc>
          <lastmod>2026-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -641,6 +716,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/global/reference_fidelity_silhouette/</loc>
+         <lastmod>2026-03-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/global/reference_intent/</loc>
          <lastmod>2026-03-20</lastmod>
          <changefreq>daily</changefreq>
@@ -672,6 +752,11 @@
     </url>
     <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/global/style/scene_realistic/</loc>
+         <lastmod>2026-03-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/global/style/silhouette_reference/</loc>
          <lastmod>2026-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>

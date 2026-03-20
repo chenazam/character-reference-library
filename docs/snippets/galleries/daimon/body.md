@@ -24,8 +24,8 @@
     <img src="..\..\assets\library\10_CHARACTERS\DAIMON\02_BODY\structure\daimon_body_anchor_v1.png" alt="daimon_body_anchor (v1)">
   </a>
 
-  <a href="..\..\assets\library\10_CHARACTERS\DAIMON\02_BODY\structure\daimon_silhouette_front_v1.png" target="_blank" class="character-gallery__item" data-asset-key="daimon_silhouette_front" data-version="1" data-is-latest="true" title="daimon_silhouette_front (v1)">
-    <img src="..\..\assets\library\10_CHARACTERS\DAIMON\02_BODY\structure\daimon_silhouette_front_v1.png" alt="daimon_silhouette_front (v1)">
+  <a href="..\..\assets\library\10_CHARACTERS\DAIMON\02_BODY\structure\daimon_silhouette_front_v1_normalized.png" target="_blank" class="character-gallery__item" data-asset-key="daimon_silhouette_front_v1_normalized" data-version="0" data-is-latest="true" title="daimon_silhouette_front_v1_normalized">
+    <img src="..\..\assets\library\10_CHARACTERS\DAIMON\02_BODY\structure\daimon_silhouette_front_v1_normalized.png" alt="daimon_silhouette_front_v1_normalized">
   </a>
 
   <a href="..\..\assets\library\10_CHARACTERS\DAIMON\02_BODY\structure\daimon_silhouette_sheet_v1.png" target="_blank" class="character-gallery__item" data-asset-key="daimon_silhouette_sheet" data-version="1" data-is-latest="true" title="daimon_silhouette_sheet (v1)">

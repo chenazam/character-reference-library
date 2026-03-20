@@ -1,261 +1,4 @@
 /* =========================================================
-   Character galleries
-   ========================================================= */
-
-.character-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin: 0.75rem 0 1.25rem;
-}
-
-.character-gallery a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 220px;
-  height: 300px;
-  line-height: 0;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 8px;
-  overflow: hidden;
-  background: white;
-  transition:
-    transform 0.15s ease,
-    box-shadow 0.15s ease;
-}
-
-.character-gallery img {
-  display: block;
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  transition: transform 0.15s ease;
-}
-
-.character-gallery a:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-}
-
-.character-gallery a:hover img {
-  transform: scale(1.03);
-}
-
-.gallery-version-toggle {
-  margin: 0.75rem 0 1rem;
-}
-
-.gallery-version-toggle__label {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.9rem;
-  cursor: pointer;
-}
-
-.gallery-version-toggle__input {
-  margin: 0;
-}
-
-.character-gallery__item[data-is-latest='false'] {
-  display: none;
-}
-
-html[data-gallery-versions='all']
-  .character-gallery__item[data-is-latest='false'] {
-  display: flex;
-}
-
-/* =========================================================
-   Character index
-   ========================================================= */
-
-.character-index-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.character-card {
-  text-align: center;
-  text-decoration: none;
-}
-
-.character-card img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-.character-card h3 {
-  margin-top: 0.5rem;
-}
-
-/* =========================================================
-   Pipeline progress
-   ========================================================= */
-
-.pipeline-bar {
-  width: 100%;
-  height: 16px;
-  background: #e6e6e6;
-  border-radius: 6px;
-  overflow: hidden;
-  margin: 6px 0 12px 0;
-}
-
-.pipeline-bar div {
-  height: 100%;
-  background: linear-gradient(90deg, #4caf50, #8bc34a);
-}
-
-.stage-complete {
-  color: #4caf50;
-  font-weight: bold;
-}
-
-.stage-partial {
-  color: #ff9800;
-  font-weight: bold;
-}
-
-.stage-missing {
-  color: #f44336;
-  font-weight: bold;
-}
-
-/* =========================================================
-   Character header / overview
-   ========================================================= */
-
-.character-hero {
-  float: right;
-  width: min(280px, 38%);
-  margin: 0 0 1rem 1.5rem;
-}
-
-.character-hero img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-}
-
-.character-overview-text {
-  font-size: 0.65rem;
-  line-height: 1.55;
-  min-height: 220px;
-}
-
-.character-overview-text p {
-  margin-top: 0;
-}
-
-.character-stats {
-  margin-top: 0.8rem;
-}
-
-.character-stats ul {
-  margin: 0.4rem 0 0 1.2rem;
-}
-
-.character-stats li {
-  margin: 0.2rem 0;
-}
-
-.character-header::after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-/* =========================================================
-   Shared comparison layouts
-   ========================================================= */
-
-.comparison-grid {
-  display: grid;
-  gap: 1.25rem;
-  margin: 1rem 0 2rem;
-}
-
-.comparison-grid-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.comparison-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.comparison-label {
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--md-default-fg-color--light);
-  text-align: center;
-}
-
-.comparison-item img {
-  width: 100%;
-  max-width: 420px;
-  height: auto;
-  border-radius: 0.5rem;
-  display: block;
-}
-
-@media (max-width: 900px) {
-  .comparison-grid-2 {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* =========================================================
-   Comparison badges
-   ========================================================= */
-
-.comparison-badges {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-  margin: 1rem 0 2rem;
-}
-
-.comparison-badge {
-  padding: 0.9rem 1rem;
-  border: 1px solid var(--md-default-fg-color--lighter);
-  border-radius: 0.75rem;
-  background: var(--md-code-bg-color);
-}
-
-.comparison-badge__label {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--md-default-fg-color--light);
-  margin-bottom: 0.35rem;
-}
-
-.comparison-badge__value {
-  font-size: 0.95rem;
-  font-weight: 600;
-  line-height: 1.35;
-}
-
-@media (max-width: 900px) {
-  .comparison-badges {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* =========================================================
    Height lineup system
    Shared base for:
    - two-character comparison charts
@@ -274,6 +17,12 @@ html[data-gallery-versions='all']
   align-items: end;
   margin: 1rem 0 2rem;
   position: relative;
+}
+
+.height-lineup__scroll {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .height-lineup__ticks {
@@ -368,12 +117,41 @@ html[data-gallery-versions='all']
   opacity: 0.35;
 }
 
+/* =========================
+   SILHOUETTE MODIFIERS
+   ========================= */
+
+/* Taller / elongated */
+.silhouette--elongated {
+  transform: scaleY(1.08);
+}
+
+/* Shorter / compact */
+.silhouette--compact {
+  transform: scaleY(0.92);
+}
+
+/* Glute emphasis (subtle lower widening) */
+.silhouette--glute_emphasis {
+  border-radius: 45% 45% 55% 55% / 40% 40% 65% 65%;
+}
+
+/* Dense / thick mass */
+.silhouette--dense {
+  transform: scaleX(1.08);
+}
+
 .height-lineup__placeholder {
   max-width: 100%;
   opacity: 0.55;
   background: var(--md-default-fg-color--light);
   display: block;
   margin: 0 auto;
+
+  --sil-scale-x: 1;
+  --sil-scale-y: 1;
+  transform: scaleX(var(--sil-scale-x)) scaleY(var(--sil-scale-y));
+  transform-origin: center bottom;
 }
 
 .height-lineup__placeholder--reference {
@@ -385,22 +163,22 @@ html[data-gallery-versions='all']
    ========================================================= */
 
 .height-lineup__placeholder--slender_refined {
-  width: 78px;
+  width: 84px;
   clip-path: polygon(
-    43% 0%,
-    57% 0%,
-    62% 7%,
-    62% 19%,
-    69% 33%,
-    66% 100%,
-    55% 100%,
+    42% 0%,
+    58% 0%,
+    63% 7%,
+    63% 19%,
+    70% 33%,
+    67% 100%,
+    56% 100%,
     52% 58%,
     48% 58%,
-    45% 100%,
-    34% 100%,
-    31% 33%,
-    38% 19%,
-    38% 7%
+    44% 100%,
+    33% 100%,
+    30% 33%,
+    37% 19%,
+    37% 7%
   );
 }
 
@@ -487,22 +265,22 @@ html[data-gallery-versions='all']
 }
 
 .height-lineup__placeholder--broad_athletic {
-  width: 116px;
+  width: 120px;
   clip-path: polygon(
-    39% 0%,
-    61% 0%,
-    70% 8%,
-    70% 20%,
-    83% 35%,
+    40% 0%,
+    60% 0%,
+    68% 8%,
+    68% 20%,
+    81% 34%,
     75% 100%,
     58% 100%,
     55% 63%,
     45% 63%,
     42% 100%,
     25% 100%,
-    17% 35%,
-    30% 20%,
-    30% 8%
+    19% 34%,
+    32% 20%,
+    32% 8%
   );
 }
 
@@ -527,42 +305,42 @@ html[data-gallery-versions='all']
 }
 
 .height-lineup__placeholder--heavy_muscular {
-  width: 136px;
+  width: 140px;
   clip-path: polygon(
-    38% 0%,
-    62% 0%,
-    71% 8%,
-    71% 20%,
-    86% 37%,
+    39% 0%,
+    61% 0%,
+    69% 8%,
+    69% 20%,
+    83% 36%,
     78% 100%,
     59% 100%,
-    56% 66%,
-    44% 66%,
+    56% 68%,
+    44% 68%,
     41% 100%,
     22% 100%,
-    14% 37%,
-    29% 20%,
-    29% 8%
+    17% 36%,
+    31% 20%,
+    31% 8%
   );
 }
 
 .height-lineup__placeholder--massive_upper_dominant {
-  width: 148px;
+  width: 152px;
   clip-path: polygon(
     38% 0%,
     62% 0%,
-    72% 8%,
-    72% 19%,
-    90% 34%,
+    74% 8%,
+    74% 18%,
+    93% 30%,
     80% 100%,
     59% 100%,
-    56% 67%,
-    44% 67%,
+    56% 69%,
+    44% 69%,
     41% 100%,
     20% 100%,
-    10% 34%,
-    28% 19%,
-    28% 8%
+    7% 30%,
+    26% 18%,
+    26% 8%
   );
 }
 
@@ -588,10 +366,30 @@ html[data-gallery-versions='all']
   );
 }
 
+/* Taller / elongated */
+.height-lineup__placeholder--elongated {
+  --sil-scale-y: 1.08;
+}
+
+/* Shorter / compact */
+.height-lineup__placeholder--compact {
+  --sil-scale-y: 0.92;
+}
+
+/* Glute emphasis */
+.height-lineup__placeholder--glute_emphasis {
+  --sil-scale-x: 1.04;
+}
+
+/* Dense / thicker mass */
+.height-lineup__placeholder--dense {
+  --sil-scale-y: 1.08;
+}
+
 /* compact lineup mode overrides */
 
 .height-lineup--compact .height-lineup__placeholder--slender_refined {
-  width: 60px;
+  width: 64px;
 }
 
 .height-lineup--compact .height-lineup__placeholder--slender_tall {
@@ -611,7 +409,7 @@ html[data-gallery-versions='all']
 }
 
 .height-lineup--compact .height-lineup__placeholder--broad_athletic {
-  width: 88px;
+  width: 92px;
 }
 
 .height-lineup--compact .height-lineup__placeholder--broad_upper_dominant {
@@ -619,11 +417,11 @@ html[data-gallery-versions='all']
 }
 
 .height-lineup--compact .height-lineup__placeholder--heavy_muscular {
-  width: 104px;
+  width: 108px;
 }
 
 .height-lineup--compact .height-lineup__placeholder--massive_upper_dominant {
-  width: 114px;
+  width: 118px;
 }
 
 .height-lineup--compact .height-lineup__placeholder--soft_curvy {
@@ -653,7 +451,7 @@ html[data-gallery-versions='all']
 }
 
 /* =========================================================
-   Compact lineup mode (4+ characters)
+   Compact lineup mode (legacy)
    ========================================================= */
 
 .height-lineup--compact {
@@ -737,22 +535,22 @@ html[data-gallery-versions='all']
    ========================================================= */
 
 @media (max-width: 1050px) {
-  .height-lineup {
+  .height-lineup:not(.height-lineup--multi) {
     grid-template-columns: 1fr;
   }
 
-  .height-lineup__ticks,
-  .height-lineup__baseline {
+  .height-lineup:not(.height-lineup--multi) .height-lineup__ticks,
+  .height-lineup:not(.height-lineup--multi) .height-lineup__baseline {
     display: none;
   }
 
-  .height-lineup__figure--ref,
-  .height-lineup__figure--a,
-  .height-lineup__figure--b {
+  .height-lineup:not(.height-lineup--multi) .height-lineup__figure--ref,
+  .height-lineup:not(.height-lineup--multi) .height-lineup__figure--a,
+  .height-lineup:not(.height-lineup--multi) .height-lineup__figure--b {
     grid-column: auto;
   }
 
-  .height-lineup__spacer {
+  .height-lineup:not(.height-lineup--multi) .height-lineup__spacer {
     display: none;
   }
 }
@@ -789,40 +587,4 @@ html[data-gallery-versions='all']
 .height-lineup--archetype-doc .height-lineup__label,
 .height-lineup--archetype-doc .height-lineup__meta {
   display: none;
-}
-
-/* =========================================================
-   Archetype index
-   ========================================================= */
-
-.archetype-index-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.25rem;
-  margin: 1.5rem 0 2rem;
-}
-
-.archetype-index-card {
-  border: 1px solid var(--md-default-fg-color--lighter);
-  border-radius: 0.75rem;
-  padding: 1rem;
-  background: var(--md-code-bg-color);
-}
-
-.archetype-index-card h2 {
-  margin-top: 0;
-  margin-bottom: 0.75rem;
-  font-size: 1rem;
-}
-
-.archetype-index-card .height-lineup--archetype-doc {
-  margin: 0.5rem 0 1rem;
-}
-
-.archetype-index-card p {
-  margin: 0.5rem 0;
-}
-
-.archetype-index-card p:last-child {
-  margin-bottom: 0;
 }

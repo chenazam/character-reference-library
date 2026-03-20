@@ -363,11 +363,13 @@ html[data-gallery-versions='all']
 }
 
 .height-lineup__silhouette {
-  max-width: 100%;
   width: auto;
+  max-width: none;
+  max-height: none;
   object-fit: contain;
   object-position: bottom center;
   display: block;
+  flex: 0 0 auto;
 }
 
 .height-lineup__silhouette--reference {

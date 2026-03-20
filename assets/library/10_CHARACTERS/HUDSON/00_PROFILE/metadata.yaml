@@ -86,7 +86,7 @@ reference_files:
   ultimate_character_sheet: ''
   signature_outfit_sheet: ''
   silhouette_sheet: hudson_silhouette_sheet_v1.png
-  silhouette_front: hudson_silhouette_front_v1.png
+  silhouette_front: hudson_silhouette_front_v1_normalized.png
 pipeline_status:
   face_anchor: complete
   hair_sheet: complete

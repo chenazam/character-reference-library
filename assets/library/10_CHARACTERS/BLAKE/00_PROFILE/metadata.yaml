@@ -98,7 +98,7 @@ reference_files:
   signature_outfit_sheet: ''
   silhouette_sheet: blake_silhouette_sheet_v1.png
   turnaround_sheet: ''
-  silhouette_front: blake_silhouette_front_v1.png
+  silhouette_front: blake_silhouette_front_v1_normalized.png
 pipeline_status:
   face_anchor: complete
   hair_sheet: complete

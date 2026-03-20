@@ -18,6 +18,7 @@ include:
   # Asset
   - blocks/asset/format/portrait_single.md
   - blocks/asset/body/view/front.md
+  - blocks/asset/body/pose/neutral_front.md
   - blocks/asset/body/styling/minimal_clothing.md
   - blocks/asset/body/styling/barefoot.md
 
@@ -27,8 +28,10 @@ include:
   - characters/{character_id}/hair.md
   - characters/{character_id}/guardrails.md
 
+  # Override
+  - blocks/asset/body/constraint/posture_override_reference.md
+
 optional:
-  - characters/{character_id}/specialized_anatomy/posture.md
   - characters/{character_id}/specialized_anatomy/upper_body.md
 
 conditional:

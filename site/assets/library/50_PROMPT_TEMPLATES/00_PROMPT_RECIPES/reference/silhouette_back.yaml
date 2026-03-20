@@ -17,7 +17,7 @@ include:
   - blocks/asset/body/view/back.md
   - blocks/asset/body/pose/neutral_back.md
   - blocks/asset/body/constraint/silhouette.md
-  - blocks/asset/body/constraint/posture_override_silhouette.md
+  - blocks/asset/body/constraint/posture_override_reference.md
   - blocks/asset/body/rendering/silhouette.md
 
   # Character

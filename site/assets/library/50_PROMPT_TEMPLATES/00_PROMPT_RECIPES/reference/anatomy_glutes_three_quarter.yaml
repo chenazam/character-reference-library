@@ -16,7 +16,7 @@ include:
 
   # Asset
   - blocks/asset/format/cropped_region.md
-  - blocks/asset/body/view/glutes_back.md
+  - blocks/asset/body/view/glutes_three_quarter.md
   - blocks/asset/body/pose/neutral_back.md
   - blocks/asset/body/styling/minimal_clothing.md
   - blocks/asset/body/styling/anatomy_compression_emphasis.md

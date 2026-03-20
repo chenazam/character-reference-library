@@ -606,6 +606,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/body/styling/anatomy_compression_emphasis/</loc>
+         <lastmod>2026-03-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/body/styling/barefoot/</loc>
          <lastmod>2026-03-20</lastmod>
          <changefreq>daily</changefreq>
@@ -627,6 +632,16 @@
     </url>
     <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/body/view/glutes_back/</loc>
+         <lastmod>2026-03-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/body/view/glutes_side/</loc>
+         <lastmod>2026-03-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/body/view/glutes_three_quarter/</loc>
          <lastmod>2026-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>

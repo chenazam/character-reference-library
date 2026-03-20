@@ -1,24 +1,27 @@
-Specialized anatomy focus: glutes
+Specialized anatomy focus: gluteal structure
 
-- prominent rounded glutes
-- strong projection relative to waist and thighs
-- clearly defined lower-body volume
-- glutes act as the primary mass anchor in profile and three-quarter views
+Anatomical priority:
+
+- the gluteal region should read clearly as a major lower-body mass contributor
+- maintain clearly readable volume transition from lower back into glutes and upper thighs
+- preserve strong lower-body structure in side and three-quarter views
 
 Shape characteristics:
 
-- rounded and full
-- clearly visible from side and three-quarter angles
-- integrated smoothly into upper thigh mass
-- distinct from lower back and waist
+- rounded, full gluteal mass
+- clearly readable projection in side and three-quarter views
+- smooth integration into upper thigh mass
+- distinct separation from waist and lower back structure
 
 Maintain:
 
 - natural integration with runner-style thighs
-- athletic, not bulky or exaggerated proportions
+- athletic, natural proportions
+- believable anatomical structure without exaggeration
 
 Avoid:
 
-- flattening of glute shape
+- flattening of gluteal volume
 - underdefined lower-body mass
-- upper-body dominance overriding lower-body emphasis
+- abrupt transition between lower back, glutes, and thighs
+- exaggerated or sexualized presentation

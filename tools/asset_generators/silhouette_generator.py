@@ -209,12 +209,44 @@ def build_mask(img: Image.Image, threshold: float) -> Image.Image:
     arr = np.asarray(img, dtype=np.float32)
     bg_arr = np.array(bg, dtype=np.float32)
     dist = np.sqrt(np.sum((arr - bg_arr) ** 2, axis=2))
+
     mask = (dist > threshold).astype(np.uint8) * 255
     mask_img = Image.fromarray(mask, mode="L")
-    mask_img = mask_img.filter(ImageFilter.MedianFilter(size=3))
-    mask_img = mask_img.point(lambda p: 255 if p >= 128 else 0, mode="L")
-    return mask_img
 
+    # Base cleanup: remove speckle and anti-aliased edge noise
+    mask_img = mask_img.filter(ImageFilter.MedianFilter(size=3))
+    mask_img = mask_img.filter(ImageFilter.MinFilter(size=3))
+    mask_img = mask_img.filter(ImageFilter.MaxFilter(size=3))
+    mask_img = mask_img.point(lambda p: 255 if p >= 128 else 0, mode="L")
+
+    # Refined bottom-edge cleanup:
+    # keep the true silhouette boundary, remove stray pixels below it,
+    # and lightly smooth the bottom edge without thickening the feet.
+    mask_arr = np.asarray(mask_img, dtype=np.uint8).copy()
+    h, w = mask_arr.shape
+
+    for x in range(w):
+        ys = np.where(mask_arr[:, x] > 0)[0]
+        if len(ys) == 0:
+            continue
+
+        bottom = ys.max()
+
+        # Remove anything below the detected silhouette in this column.
+        if bottom + 1 < h:
+            mask_arr[bottom + 1 :, x] = 0
+
+    # Light vertical-only closing to smooth tiny jagged base artifacts
+    # without widening the silhouette horizontally.
+    padded = np.pad(mask_arr, ((1, 1), (0, 0)), mode="constant", constant_values=0)
+    vertical_sum = (
+        (padded[:-2, :] > 0).astype(np.uint8)
+        + (padded[1:-1, :] > 0).astype(np.uint8)
+        + (padded[2:, :] > 0).astype(np.uint8)
+    )
+    mask_arr = np.where(vertical_sum >= 2, 255, 0).astype(np.uint8)
+
+    return Image.fromarray(mask_arr, mode="L")
 
 def create_silhouette_image(
     input_path: Path,

@@ -388,16 +388,56 @@ def build_character_page(character: str, character_dir: pathlib.Path) -> str:
             lines.append("---")
             lines.append("")
 
+    gallery_sections = []
     for section_title, section_slug in SECTIONS:
         snippet_path = SNIPPETS_ROOT / character / f"{section_slug}.md"
-        if not snippet_path.exists():
-            continue
+        if snippet_path.exists():
+            gallery_sections.append((section_title, section_slug))
 
+    if gallery_sections:
+        lines.append('<div class="gallery-version-toggle" role="group" aria-label="Asset version display">')
+        lines.append('  <label class="gallery-version-toggle__label">')
+        lines.append('    <input class="gallery-version-toggle__input" type="checkbox" id="show-all-versions-toggle">')
+        lines.append('    <span>Show all versions</span>')
+        lines.append('  </label>')
+        lines.append('</div>')
+        lines.append("")
+
+    for section_title, section_slug in gallery_sections:
         lines.append(f"## {section_title}")
         lines.append("")
         lines.append(f'--8<-- "snippets/galleries/{character}/{section_slug}.md"')
         lines.append("")
         lines.append("---")
+        lines.append("")
+
+    if gallery_sections:
+        lines.append("<script>")
+        lines.append("document.addEventListener('DOMContentLoaded', function () {")
+        lines.append("  var toggle = document.getElementById('show-all-versions-toggle');")
+        lines.append("  if (!toggle) return;")
+        lines.append("  var root = document.documentElement;")
+        lines.append("  var storageKey = 'character-gallery-version-mode';")
+        lines.append("  try {")
+        lines.append("    if (window.localStorage && localStorage.getItem(storageKey) === 'all') {")
+        lines.append("      toggle.checked = true;")
+        lines.append("    }")
+        lines.append("  } catch (error) {}")
+        lines.append("")
+        lines.append("  function applyMode() {")
+        lines.append("    var mode = toggle.checked ? 'all' : 'latest';")
+        lines.append("    root.setAttribute('data-gallery-versions', mode);")
+        lines.append("    try {")
+        lines.append("      if (window.localStorage) {")
+        lines.append("        localStorage.setItem(storageKey, mode);")
+        lines.append("      }")
+        lines.append("    } catch (error) {}")
+        lines.append("  }")
+        lines.append("")
+        lines.append("  toggle.addEventListener('change', applyMode);")
+        lines.append("  applyMode();")
+        lines.append("});")
+        lines.append("</script>")
         lines.append("")
 
     return "\n".join(lines)

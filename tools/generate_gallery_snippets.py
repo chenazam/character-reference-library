@@ -1,5 +1,6 @@
 import os
 import pathlib
+import re
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DOCS_ROOT = ROOT / "docs"
@@ -17,6 +18,7 @@ ASSET_FAMILIES = {
 }
 
 IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".webp"}
+VERSION_RE = re.compile(r"^(?P<base>.+?)_v(?P<version>\d+)$", re.IGNORECASE)
 
 
 def page_relative_url(character_slug: str, target_under_docs: pathlib.Path) -> str:
@@ -26,15 +28,57 @@ def page_relative_url(character_slug: str, target_under_docs: pathlib.Path) -> s
     return pathlib.PurePosixPath(rel).as_posix()
 
 
+def split_version(stem: str) -> tuple[str, int]:
+    match = VERSION_RE.match(stem)
+    if not match:
+        return stem, 0
+    return match.group("base"), int(match.group("version"))
+
+
+def annotate_versions(images: list[pathlib.Path]) -> list[dict]:
+    parsed: list[tuple[pathlib.Path, str, int]] = []
+    latest_by_key: dict[str, int] = {}
+
+    for img in images:
+        asset_key, version = split_version(img.stem)
+        parsed.append((img, asset_key, version))
+        latest_by_key[asset_key] = max(latest_by_key.get(asset_key, -1), version)
+
+    entries = []
+    for img, asset_key, version in parsed:
+        entries.append(
+            {
+                "path": img,
+                "asset_key": asset_key,
+                "version": version,
+                "is_latest": version == latest_by_key[asset_key],
+            }
+        )
+
+    return entries
+
+
 def generate_gallery(images: list[pathlib.Path], character_slug: str) -> str:
     lines = []
     lines.append('<div class="character-gallery">')
     lines.append("")
 
-    for img in images:
-        rel = page_relative_url(character_slug, img)
-        lines.append(f'  <a href="{rel}" target="_blank">')
-        lines.append(f'    <img src="{rel}" alt="">')
+    for entry in annotate_versions(images):
+        rel = page_relative_url(character_slug, entry["path"])
+        title = f"{entry['asset_key']} (v{entry['version']})" if entry["version"] > 0 else entry["asset_key"]
+        is_latest = "true" if entry["is_latest"] else "false"
+
+        lines.append(
+            '  <a '
+            f'href="{rel}" '
+            'target="_blank" '
+            'class="character-gallery__item" '
+            f'data-asset-key="{entry["asset_key"]}" '
+            f'data-version="{entry["version"]}" '
+            f'data-is-latest="{is_latest}" '
+            f'title="{title}">'
+        )
+        lines.append(f'    <img src="{rel}" alt="{title}">')
         lines.append("  </a>")
         lines.append("")
 

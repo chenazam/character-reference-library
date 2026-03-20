@@ -59,6 +59,13 @@
 
 ---
 
+<div class="gallery-version-toggle" role="group" aria-label="Asset version display">
+  <label class="gallery-version-toggle__label">
+    <input class="gallery-version-toggle__input" type="checkbox" id="show-all-versions-toggle">
+    <span>Show all versions</span>
+  </label>
+</div>
+
 ## Identity
 
 --8<-- "snippets/galleries/jonah/identity.md"
@@ -70,3 +77,30 @@
 --8<-- "snippets/galleries/jonah/body.md"
 
 ---
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var toggle = document.getElementById('show-all-versions-toggle');
+  if (!toggle) return;
+  var root = document.documentElement;
+  var storageKey = 'character-gallery-version-mode';
+  try {
+    if (window.localStorage && localStorage.getItem(storageKey) === 'all') {
+      toggle.checked = true;
+    }
+  } catch (error) {}
+
+  function applyMode() {
+    var mode = toggle.checked ? 'all' : 'latest';
+    root.setAttribute('data-gallery-versions', mode);
+    try {
+      if (window.localStorage) {
+        localStorage.setItem(storageKey, mode);
+      }
+    } catch (error) {}
+  }
+
+  toggle.addEventListener('change', applyMode);
+  applyMode();
+});
+</script>

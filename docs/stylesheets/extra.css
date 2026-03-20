@@ -878,3 +878,32 @@
 .archetype-index-card p:last-child {
   margin-bottom: 0;
 }
+
+/* =========================================================
+   Gallery version toggle behavior
+   ========================================================= */
+
+/* Default: show only latest */
+html[data-gallery-versions='latest']
+  .character-gallery__item:not([data-is-latest='true']) {
+  display: none;
+}
+
+/* Show all versions */
+html[data-gallery-versions='all'] .character-gallery__item {
+  display: inline-block;
+}
+
+/* Optional: make toggle look decent */
+.gallery-version-toggle {
+  margin-bottom: 1rem;
+}
+
+.gallery-version-toggle__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color--light);
+}

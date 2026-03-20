@@ -29,6 +29,8 @@ include:
 
 optional:
   - characters/{character_id}/specialized_anatomy/glutes.md
+  - characters/{character_id}/specialized_anatomy/posture.md
+  - characters/{character_id}/specialized_anatomy/upper_body.md
 
 conditional:
   references_attached:

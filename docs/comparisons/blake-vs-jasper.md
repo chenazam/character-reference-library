@@ -73,7 +73,7 @@ hide:
 
   <div class="height-lineup__figure height-lineup__figure--b">
     <div class="height-lineup__stage">
-      <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/JASPER/02_BODY/structure/jasper_silhouette_front_v1.png" alt="Jasper silhouette front" style="height: 89.01%;">
+      <img class="height-lineup__silhouette" src="/assets/library/10_CHARACTERS/JASPER/02_BODY/structure/jasper_silhouette_front_v1_normalized.png" alt="Jasper silhouette front" style="height: 89.01%;">
     </div>
     <div class="height-lineup__label">Jasper</div>
     <div class="height-lineup__meta">170 cm / 5'7"</div>

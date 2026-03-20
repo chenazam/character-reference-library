@@ -5,7 +5,6 @@ Generate a metadata-driven character height comparison page.
 
 import argparse
 import pathlib
-import re
 import subprocess
 import sys
 
@@ -65,40 +64,6 @@ def get_character_record(library: dict, slug: str) -> dict:
         if metadata.get("slug") == slug:
             return record
     raise ValueError(f"Could not find character with slug: {slug}")
-
-
-def resolve_latest_normalized_silhouette_front(character_dir: pathlib.Path) -> str:
-    structure_dir = character_dir / "02_BODY" / "structure"
-    if not structure_dir.exists():
-        return ""
-
-    slug = (character_dir.name or "").lower()
-    pattern = f"{slug}_silhouette_front*_normalized.png"
-
-    best_path = None
-    best_version = -1
-
-    for path in structure_dir.glob(pattern):
-        m = re.fullmatch(
-            rf"{re.escape(slug)}_silhouette_front(?:_v(\d+))?_normalized",
-            path.stem,
-            re.IGNORECASE,
-        )
-        if not m:
-            continue
-
-        version = int(m.group(1)) if m.group(1) else 0
-        if version > best_version:
-            best_version = version
-            best_path = path
-
-    if not best_path:
-        return ""
-
-    try:
-        return site_root_url(best_path)
-    except Exception:
-        return ""
 
 
 def get_metadata(record: dict) -> dict:
@@ -224,7 +189,7 @@ def get_reference_links(record: dict, metadata: dict, page_docs_path: pathlib.Pa
         "body_anchor": make_image_link(record, refs.get("body_anchor", ""), page_docs_path),
         "anatomy_sheet": make_image_link(record, refs.get("anatomy_sheet", ""), page_docs_path),
         "silhouette_sheet": make_image_link(record, refs.get("silhouette_sheet", ""), page_docs_path),
-        "silhouette_front": resolve_latest_normalized_silhouette_front(pathlib.Path(record["dir"])),
+        "silhouette_front": make_chart_image_link(record, refs.get("silhouette_front", "")),
     }
 
 

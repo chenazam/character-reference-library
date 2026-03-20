@@ -37,7 +37,7 @@ physical:
   limb_profile: long_limbs
   posture_profile: confident_open
   silhouette_anchor: power_athlete
-  silhouette_emphasis: upper_body
+  silhouette_emphasis: balanced
   silhouette_keywords:
   - tall
   - broad

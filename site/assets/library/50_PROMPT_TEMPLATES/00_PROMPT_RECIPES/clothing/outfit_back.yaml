@@ -1,0 +1,45 @@
+name: outfit_back
+
+include:
+  # Global foundation
+  - blocks/global/reference_intent.md
+  - blocks/global/style/outfit_reference.md
+  - blocks/global/rendering_style.md
+  - blocks/global/linework.md
+  - blocks/global/color.md
+  - blocks/global/consistency.md
+  - blocks/global/camera_base.md
+  - blocks/global/cleanliness/background.md
+  - blocks/global/cleanliness/lighting.md
+
+  # Format
+  - blocks/asset/format/portrait_single.md
+
+  # Body foundation
+  - blocks/family/body/base.md
+
+  # View + pose
+  - blocks/asset/body/view/back.md
+  - blocks/asset/body/pose/neutral_back.md
+
+  # Constraints
+  - blocks/asset/body/constraint/posture_override_reference.md
+  - blocks/asset/body/constraint/outfit_reference_pose.md
+  - blocks/asset/body/constraint/body_preservation_clothing.md
+  - blocks/asset/body/constraint/styling_intent_override.md
+  - characters/{character_id}/constraints/body_bias.md
+
+  # Clothing system
+  - blocks/asset/body/styling/outfit_clothed.md
+  - characters/{character_id}/outfits/{outfit_id}.md
+
+  # Character identity
+  - characters/{character_id}/core.md
+  - characters/{character_id}/body.md
+  - characters/{character_id}/hair.md
+  - characters/{character_id}/wardrobe.md
+
+conditional:
+  references_attached:
+    - blocks/asset/body/constraint/outfit_reference_fidelity.md
+    - blocks/global/reference_fidelity.md

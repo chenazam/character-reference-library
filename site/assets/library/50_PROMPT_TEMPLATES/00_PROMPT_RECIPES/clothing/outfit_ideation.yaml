@@ -1,0 +1,22 @@
+name: outfit_ideation
+
+include:
+  # Minimal foundation (NO heavy reference constraints)
+  - blocks/global/style/outfit_reference.md
+  - blocks/global/rendering_style.md
+  - blocks/global/cleanliness/lighting.md
+
+  # Body (keep identity, drop rigidity)
+  - blocks/family/body/base.md
+  - characters/{character_id}/core.md
+  - characters/{character_id}/body.md
+  - characters/{character_id}/hair.md
+
+  # Keep silhouette bias (VERY important for Jasper)
+  - characters/{character_id}/constraints/body_bias.md
+
+  # Styling logic (CRITICAL)
+  - blocks/asset/body/constraint/styling_intent_override.md
+
+  # Outfit definition
+  - characters/{character_id}/outfits/{outfit_id}.md

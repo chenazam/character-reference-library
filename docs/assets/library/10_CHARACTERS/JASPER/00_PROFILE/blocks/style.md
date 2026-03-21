@@ -51,6 +51,7 @@ Neutrals:
 Secondary:
 
 - navy
+- burgundy
 - muted blue
 
 Accent:

@@ -253,6 +253,9 @@ def build_default_variables(args: argparse.Namespace) -> dict[str, str]:
     if args.region:
         variables.setdefault("region", args.region)
 
+    if getattr(args, "outfit", None):
+        variables.setdefault("outfit_id", args.outfit)
+
     if getattr(args, "character_a", None):
         variables.setdefault("character_a", args.character_a)
 
@@ -288,6 +291,10 @@ def main() -> None:
         "--var",
         action="append",
         help="Additional template variable as KEY=VALUE. Can be repeated.",
+    )
+    parser.add_argument(
+        "--outfit",
+        help="Outfit id used for characters/{character_id}/outfits/{outfit_id}.md",
     )
     parser.add_argument(
         "--enable",

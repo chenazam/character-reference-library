@@ -29,6 +29,8 @@ Compare one asset type across all characters. Use the selector to switch between
     <option value="silhouette-sheet">02 Body – Silhouette Sheet</option>
     <option value="silhouette-front">02 Body – Silhouette Front</option>
     <option value="turnaround-sheet">02 Body – Turnaround Sheet</option>
+    <option value="signature-outfit">04 Style – Signature Outfit Sheet</option>
+    <option value="outfit-sheet">04 Style – Outfit Sheet</option>
   </select>
 </div>
 
@@ -162,6 +164,20 @@ Compare one asset type across all characters. Use the selector to switch between
 <h2>02 Body – Turnaround Sheet</h2>
 
 --8<-- "snippets/comparisons/turnaround-sheet.md"
+
+</section>
+
+<section class="comparison-section" data-asset-type="signature-outfit" hidden="hidden">
+<h2>04 Style – Signature Outfit Sheet</h2>
+
+--8<-- "snippets/comparisons/signature-outfit.md"
+
+</section>
+
+<section class="comparison-section" data-asset-type="outfit-sheet" hidden="hidden">
+<h2>04 Style – Outfit Sheet</h2>
+
+--8<-- "snippets/comparisons/outfit-sheet.md"
 
 </section>
 

@@ -35,7 +35,7 @@ include:
   - blocks/global/identity/face_anchor_scene.md
 
   # Scene payload
-  - blocks/scene/input/scene_description.md
+  - blocks/scene/input/scene_block.md
 
 conditional:
   references_attached:

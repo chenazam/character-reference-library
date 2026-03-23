@@ -1,0 +1,29 @@
+name: catalog_thumbnail
+
+include:
+  # Global intent + rendering
+  - blocks/global/reference_intent_thumbnail.md
+  - blocks/global/style/gallery.md
+  - blocks/global/color.md
+  - blocks/global/linework.md
+  - blocks/global/consistency.md
+
+  # Studio presentation
+  - blocks/global/cleanliness/background_studio.md
+  - blocks/global/cleanliness/lighting.md
+
+  # Face asset framing
+  - blocks/asset/format/thumbnail_landscape.md
+  - blocks/asset/face/view/three_quarter_thumbnail.md
+  - blocks/asset/face/constraint/thumbnail_standardization.md
+
+  # Face foundation
+  - blocks/family/face/base.md
+
+  # Character identity
+  - characters/{character_id}/face.md
+  - characters/{character_id}/hair.md
+
+conditional:
+  references_attached:
+    - blocks/global/reference_fidelity.md

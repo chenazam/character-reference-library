@@ -1,0 +1,33 @@
+name: gallery_portrait
+
+include:
+  # Character identity
+  - characters/{character_id}/core.md
+  - characters/{character_id}/body.md
+
+  # Identity / stability
+  - blocks/global/consistency.md
+
+  # Rendering
+  - blocks/global/style/gallery.md
+  - blocks/global/rendering_style.md
+  - blocks/global/linework.md
+
+  # Studio presentation
+  - blocks/global/cleanliness/background_studio.md
+  - blocks/global/cleanliness/lighting.md
+
+  # Clothing
+  - blocks/asset/body/styling/outfit_clothed.md
+  - blocks/asset/body/pose/presentation_pose.md
+
+  # Outfit
+  - characters/{character_id}/outfits/{outfit_id}.md
+
+  # Constraints
+  - blocks/global/output_constraints.md
+  - blocks/asset/body/framing/full_body_framing.md
+
+conditional:
+  references_attached:
+    - blocks/global/reference_fidelity.md

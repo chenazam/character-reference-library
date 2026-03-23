@@ -19,6 +19,7 @@ include:
   - blocks/asset/format/portrait_face.md
   - blocks/asset/face/framing/standardized.md
   - blocks/asset/face/view/side.md
+  - blocks/asset/face/styling/neutral_basic_clothing.md
 
   # Character
   - characters/{character_id}/core.md

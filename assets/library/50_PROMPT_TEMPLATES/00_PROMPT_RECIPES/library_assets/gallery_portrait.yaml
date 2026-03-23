@@ -1,0 +1,26 @@
+name: gallery_portrait
+
+include:
+  # Intent + rendering (portrait-specific)
+  - blocks/global/reference_intent_portrait.md
+  - blocks/global/style/gallery.md
+
+  # Studio presentation
+  - blocks/global/cleanliness/background_studio.md
+  - blocks/global/cleanliness/lighting.md
+
+  # Output format
+  - blocks/asset/format/portrait_2_3.md
+
+  # Face presentation (RELAXED variants)
+  - blocks/asset/face/view/three_quarter_portrait.md
+  - blocks/asset/face/expression/portrait_relaxed.md
+
+  # Clothing
+  - blocks/asset/body/styling/outfit_clothed.md
+  - characters/{character_id}/outfits/{outfit_id}.md
+  - blocks/asset/face/framing/framing_portrait_strict.md
+
+conditional:
+  references_attached:
+    - blocks/global/reference_fidelity.md

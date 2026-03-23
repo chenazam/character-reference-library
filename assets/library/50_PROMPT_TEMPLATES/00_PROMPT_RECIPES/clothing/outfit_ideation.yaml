@@ -12,11 +12,12 @@ include:
   - characters/{character_id}/body.md
   - characters/{character_id}/hair.md
 
-  # Keep silhouette bias (VERY important for Jasper)
-  - characters/{character_id}/constraints/body_bias.md
-
   # Styling logic (CRITICAL)
   - blocks/asset/body/constraint/styling_intent_override.md
 
   # Outfit definition
   - characters/{character_id}/outfits/{outfit_id}.md
+
+optional:
+  # Keep silhouette bias (VERY important for Jasper)
+  - characters/{character_id}/constraints/body_bias.md

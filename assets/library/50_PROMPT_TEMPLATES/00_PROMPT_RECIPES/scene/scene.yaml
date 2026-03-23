@@ -1,0 +1,33 @@
+name: scene
+
+include:
+  # Character
+  - characters/{character_id}/core.md
+  - characters/{character_id}/body.md
+
+  # Identity / stability
+  - blocks/global/reference_fidelity.md
+  - blocks/global/consistency.md
+
+  # Scene foundation
+  - blocks/family/scene/base.md
+  - blocks/global/style/scene_realistic.md
+
+  # Identity anchoring for scenes
+  - blocks/global/identity/face_anchor_scene.md
+
+  # Scene content (variable)
+  - blocks/scene/input/scene_block.md
+
+  - blocks/scene/behavior/scene_candid_behavior.md
+  - blocks/scene/behavior/scene_environment_interaction.md
+
+  # Camera / lighting
+  - blocks/global/camera_scene.md
+  - blocks/global/cleanliness/lighting_scene.md
+
+  # Rendering
+  - blocks/global/rendering_scene.md
+
+  # Output
+  - blocks/global/output_constraints.md

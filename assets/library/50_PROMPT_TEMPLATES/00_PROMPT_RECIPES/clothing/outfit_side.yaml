@@ -27,7 +27,6 @@ include:
   - blocks/asset/body/constraint/outfit_reference_pose.md
   - blocks/asset/body/constraint/body_preservation_clothing.md
   - blocks/asset/body/constraint/styling_intent_override.md
-  - characters/{character_id}/constraints/body_bias.md
 
   # Clothing system
   - blocks/asset/body/styling/outfit_clothed.md
@@ -38,6 +37,9 @@ include:
   - characters/{character_id}/body.md
   - characters/{character_id}/hair.md
   - characters/{character_id}/wardrobe.md
+
+optional:
+  - characters/{character_id}/constraints/body_bias.md
 
 conditional:
   references_attached:

@@ -111,13 +111,13 @@ pipeline_status:
   body_anchor: complete
   silhouette_sheet: complete
   turnaround_sheet: not_started
-  expression_sheet: not_started
+  expression_sheet: complete
   hand_sheet: not_started
   ucs: not_started
   signature_outfit: complete
   design_language: not_started
   wardrobe: not_started
-  pose_sheet: not_started
+  pose_sheet: complete
   motion_sheet: not_started
   scale_sheet: not_started
   scene_anchors: not_started

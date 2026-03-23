@@ -1,0 +1,33 @@
+name: pose_panel
+
+include:
+  # Character
+  - characters/{character_id}/core.md
+  - characters/{character_id}/body.md
+
+  # Reference behavior
+  - blocks/global/reference_intent.md
+  - blocks/global/reference_fidelity.md
+  - blocks/global/consistency.md
+
+  # Rendering
+  - blocks/global/rendering_style.md
+  - blocks/global/linework.md
+
+  # Environment
+  - blocks/global/cleanliness/background.md
+  - blocks/global/cleanliness/lighting.md
+
+  # Format
+  - blocks/asset/format/portrait_single.md
+
+  # Body / visibility
+  - blocks/asset/body/styling/minimal_clothing.md
+  - blocks/asset/body/styling/barefoot.md
+  - blocks/asset/body/framing/full_body_framing.md
+
+  # Pose (variable)
+  - blocks/asset/body/pose/{pose_id}.md
+
+  # Output constraints
+  - blocks/global/output_constraints.md

@@ -1,0 +1,30 @@
+name: expression_panel
+
+include:
+  # Character
+  - characters/{character_id}/core.md
+
+  # Identity / stability
+  - blocks/global/reference_intent.md
+  - blocks/global/reference_fidelity.md
+  - blocks/global/consistency.md
+
+  # Rendering
+  - blocks/global/rendering_style.md
+  - blocks/global/linework.md
+
+  # Environment
+  - blocks/global/cleanliness/background.md
+  - blocks/global/cleanliness/lighting.md
+
+  # Format / framing
+  - blocks/asset/format/portrait_face.md
+
+  # Face view
+  - blocks/asset/face/view/front.md
+
+  # Expression (variable)
+  - blocks/asset/face/expression/{expression_id}.md
+
+  # Output constraints
+  - blocks/global/output_constraints_face.md

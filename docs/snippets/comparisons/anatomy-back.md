@@ -2,8 +2,8 @@
 
   <div class="comparison-card">
     <h3><a href="../../characters/blake/">Blake</a></h3>
-    <a href="../../assets/library/10_CHARACTERS/BLAKE/02_BODY/anatomy/blake_anatomy_back_v1.png" target="_blank">
-      <img src="../../assets/library/10_CHARACTERS/BLAKE/02_BODY/anatomy/blake_anatomy_back_v1.png" alt="Blake anatomy-back">
+    <a href="../../assets/library/10_CHARACTERS/BLAKE/02_BODY/anatomy/blake_anatomy_back_v2.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/BLAKE/02_BODY/anatomy/blake_anatomy_back_v2.png" alt="Blake anatomy-back">
     </a>
   </div>
 

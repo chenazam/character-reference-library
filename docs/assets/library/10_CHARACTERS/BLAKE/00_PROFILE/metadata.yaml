@@ -95,10 +95,10 @@ reference_files:
   anatomy_sheet: blake_anatomy_sheet_v1.png
   body_anchor: blake_body_anchor_v1.png
   ultimate_character_sheet: ''
-  signature_outfit_sheet: ''
-  silhouette_sheet: blake_silhouette_sheet_v1.png
+  signature_outfit_sheet: blake_signature_outfit_side_v1.png
+  silhouette_sheet: blake_silhouette_sheet_v3.png
   turnaround_sheet: ''
-  silhouette_front: blake_silhouette_front_v1_normalized.png
+  silhouette_front: blake_silhouette_front_v2.png
 pipeline_status:
   face_anchor: complete
   hair_sheet: complete
@@ -111,7 +111,7 @@ pipeline_status:
   expression_sheet: not_started
   hand_sheet: not_started
   ucs: not_started
-  signature_outfit: not_started
+  signature_outfit: complete
   design_language: not_started
   wardrobe: not_started
   pose_sheet: not_started

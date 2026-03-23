@@ -31,7 +31,7 @@ Constraints:
 
 - no three-quarter facial angle
 - no profile bias
-- no dramatic expression
+- no exaggerated or stylized facial distortion
 
 Framing constraint:
 

@@ -80,6 +80,12 @@
 
 ---
 
+## Style
+
+--8<-- "snippets/galleries/blake/style.md"
+
+---
+
 ## Scenes
 
 --8<-- "snippets/galleries/blake/scenes.md"

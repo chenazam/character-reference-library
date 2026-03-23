@@ -27,6 +27,8 @@ Styling behavior:
 - neckline exposure is a key visual element
 - sleeves may be slightly rolled or structured to enhance arms
 - overall styling must feel intentional, not default
+- shirt is tucked into the shorts
+- the waistband and belt area must remain visible
 
 Color hierarchy (STRICT):
 

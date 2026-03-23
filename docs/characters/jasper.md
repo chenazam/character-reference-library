@@ -86,6 +86,12 @@
 
 ---
 
+## Motion
+
+--8<-- "snippets/galleries/jasper/motion.md"
+
+---
+
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   var toggle = document.getElementById('show-all-versions-toggle');

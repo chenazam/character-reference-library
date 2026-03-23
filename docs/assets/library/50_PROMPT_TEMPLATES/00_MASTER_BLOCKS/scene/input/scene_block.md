@@ -1,3 +1,3 @@
 Scene description:
 
-{scene_description}
+{scene_block}

@@ -93,6 +93,18 @@ class PromptBuilderV2:
         self.recipes_root = self.prompts_root / RECIPES_DIRNAME
         self.characters_root = self.library_root / CHARACTERS_DIRNAME
 
+    def resolve_variable_values(self, variables: dict[str, str]) -> dict[str, str]:
+        resolved: dict[str, str] = {}
+
+        for key, value in variables.items():
+            if value.startswith("blocks/") or value.startswith("characters/"):
+                raw = self.load_block(value, variables)
+                resolved[key] = raw
+            else:
+                resolved[key] = value
+
+        return resolved
+
     def recipe_path(self, recipe_ref: str) -> Path:
         recipe_path = self.recipes_root / recipe_ref
         if recipe_path.suffix.lower() != ".yaml":
@@ -143,6 +155,7 @@ class PromptBuilderV2:
         enabled_conditionals: set[str] | None = None,
     ) -> str:
         enabled_conditionals = enabled_conditionals or set()
+        variables = self.resolve_variable_values(variables)
         recipe = load_yaml(self.recipe_path(recipe_ref))
 
         include_items = recipe.get("include", [])
@@ -256,6 +269,9 @@ def build_default_variables(args: argparse.Namespace) -> dict[str, str]:
     if getattr(args, "outfit", None):
         variables.setdefault("outfit_id", args.outfit)
 
+    if getattr(args, "scene_block", None):
+        variables.setdefault("scene_block", args.scene_block)
+
     if getattr(args, "character_a", None):
         variables.setdefault("character_a", args.character_a)
 
@@ -276,6 +292,7 @@ def main() -> None:
         required=True,
         help="Recipe path relative to 00_PROMPT_RECIPES, e.g. reference/anatomy_side.yaml",
     )
+    parser.add_argument("--scene-block", help="Scene block include ref, e.g. blocks/scene/descriptions/scene_neutral_presence.md")
     parser.add_argument(
         "--character",
         help="Character folder name / id used for characters/{character_id}/...",

@@ -1,7 +1,6 @@
 Clothing presence:
 
 - the character must be fully dressed according to the specified outfit block
-- all clothing elements defined in the outfit must be present
 - no substitutions or omissions are allowed
 
 Outfit fidelity:
@@ -10,6 +9,17 @@ Outfit fidelity:
 - do not reinterpret, redesign, or restyle any clothing element
 - do not change garment types, colors, or materials
 - maintain consistent appearance across all views
+
+Outfit framing override:
+
+- only the portion of the outfit within the defined framing should be visible
+- do not adjust camera framing to include additional parts of the outfit
+- it is acceptable for parts of the outfit to be cropped out by the frame
+- the image must not zoom out to preserve full outfit visibility
+
+Priority:
+
+- framing rules override outfit completeness
 
 Fit and interaction:
 

@@ -60,7 +60,7 @@ Browse characters in the reference library.
 
 <a class="character-card" href="jasper/">
 
-  <img src="..\assets\library\10_CHARACTERS\JASPER\01_IDENTITY\gallery\jasper_gallery_image_v1.png" alt="Jasper">
+  <img src="..\assets\library\10_CHARACTERS\JASPER\01_IDENTITY\gallery\jasper_fullbody_gallery_v1.png" alt="Jasper">
   <h3>Jasper</h3>
 
 </a>

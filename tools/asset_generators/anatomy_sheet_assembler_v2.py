@@ -96,6 +96,19 @@ def normalize_character_name(name: str) -> tuple[str, str]:
     return raw.lower(), raw.upper()
 
 
+def next_output_version(anatomy_dir: Path, character: str) -> str:
+    slug, _ = normalize_character_name(character)
+    candidates = list(anatomy_dir.glob(f"{slug}_body_anchor_v*.png"))
+
+    max_n = 0
+    for path in candidates:
+        m = re.match(rf"^{re.escape(slug)}_body_anchor_v(\d+)\.png$", path.name)
+        if m:
+            max_n = max(max_n, int(m.group(1)))
+
+    return f"v{max_n + 1}"
+
+
 def find_project_root(start_path: Path) -> Optional[Path]:
     current = start_path.resolve()
     if current.is_file():
@@ -112,6 +125,11 @@ def resolve_anatomy_dir(project_root: Path, character_name: str) -> Path:
     return project_root / CHAR_ROOT_RELATIVE / character_dir / "02_BODY" / "anatomy"
 
 
+def resolve_structure_dir(project_root: Path, character_name: str) -> Path:
+    _, character_dir = normalize_character_name(character_name)
+    return project_root / CHAR_ROOT_RELATIVE / character_dir / "02_BODY" / "structure"
+
+
 def build_paths(anatomy_dir: Path, character: str, version: str):
     slug, _ = normalize_character_name(character)
     suffix = f"_{version}" if version else ""
@@ -122,17 +140,34 @@ def build_paths(anatomy_dir: Path, character: str, version: str):
     }
 
 
-def choose_latest_version(anatomy_dir: Path, character: str) -> Optional[str]:
+def choose_latest_paths(anatomy_dir: Path, character: str) -> Dict[str, Path]:
     slug, _ = normalize_character_name(character)
+    resolved: Dict[str, Path] = {}
 
-    stems = [f"{slug}_anatomy_{p}" for p in PANELS]
-    versions = set()
+    def version_key(path: Path):
+        m = re.match(rf"^{re.escape(slug)}_anatomy_[a-z_]+(?:_(v\d+))?\.png$", path.name)
+        if not m:
+            return (-1, "")
+        version = m.group(1) or ""
+        if not version:
+            return (0, "")
+        vm = re.match(r"v(\d+)", version)
+        return (int(vm.group(1)) if vm else -1, version)
 
-    for stem in stems:
-        for file in anatomy_dir.glob(f"{stem}*.png"):
-            m = re.match(rf"^{re.escape(stem)}(?:_(v\d+))?\.png$", file.name)
-            if m:
-                versions.add(m.group(1) or "")
+    for panel in PANELS:
+        candidates = list(anatomy_dir.glob(f"{slug}_anatomy_{panel}*.png"))
+        candidates = [
+            p for p in candidates
+            if re.match(rf"^{re.escape(slug)}_anatomy_{re.escape(panel)}(?:_(v\d+))?\.png$", p.name)
+        ]
+        if not candidates:
+            raise FileNotFoundError(
+                f"Could not find any versions for panel '{panel}' in {anatomy_dir}"
+            )
+        candidates.sort(key=version_key)
+        resolved[panel] = candidates[-1]
+
+    return resolved
 
     def key(v):
         if not v:
@@ -299,6 +334,9 @@ def main():
         anatomy_dir = resolve_anatomy_dir(project_root, args.character)
         character = args.character
 
+        structure_dir = resolve_structure_dir(project_root, character)
+        structure_dir.mkdir(parents=True, exist_ok=True)
+
     else:
         raise ValueError("Provide either --character or --dir")
 
@@ -306,16 +344,14 @@ def main():
         raise FileNotFoundError(anatomy_dir)
 
     version = args.version
+
     if version is None:
-        version = choose_latest_version(anatomy_dir, character)
-        if version is None:
-            raise ValueError("Could not find complete panel set")
-
-    paths = build_paths(anatomy_dir, character, version)
-
-    for p in paths.values():
-        if not p.exists():
-            raise FileNotFoundError(p)
+        paths = choose_latest_paths(anatomy_dir, character)
+    else:
+        paths = build_paths(anatomy_dir, character, version)
+        for p in paths.values():
+            if not p.exists():
+                raise FileNotFoundError(p)
 
     data = {}
     for key in PANELS:
@@ -336,8 +372,9 @@ def main():
         processed[key] = Processed(img, bounds, scale, resized, px, py)
 
     slug, _ = normalize_character_name(character)
-    suffix = f"_{version}" if version else ""
-    out = anatomy_dir / f"{slug}_body_anchor{suffix}.png"
+
+    output_version = version if version is not None else next_output_version(structure_dir, character)
+    out = structure_dir / f"{slug}_body_anchor_{output_version}.png"
     render(processed, out)
 
     print(f"Saved: {out}")

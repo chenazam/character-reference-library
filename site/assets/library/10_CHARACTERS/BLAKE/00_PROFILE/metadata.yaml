@@ -114,7 +114,7 @@ pipeline_status:
   signature_outfit: complete
   design_language: not_started
   wardrobe: not_started
-  pose_sheet: not_started
+  pose_sheet: complete
   motion_sheet: not_started
   scale_sheet: not_started
   scene_anchors: not_started

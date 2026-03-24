@@ -506,96 +506,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/background-block/</loc>
-         <lastmod>2026-03-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/camera-block/</loc>
-         <lastmod>2026-03-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/character-block-template/</loc>
-         <lastmod>2026-03-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/face-panel-framing-block/</loc>
-         <lastmod>2026-03-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/face-panel-rendering-neutral/</loc>
-         <lastmod>2026-03-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/global-style-block/</loc>
-         <lastmod>2026-03-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/identity-preservation-block/</loc>
-         <lastmod>2026-03-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/labels-block/</loc>
-         <lastmod>2026-03-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/landscape-sheet-format-block/</loc>
-         <lastmod>2026-03-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/layout-block/</loc>
-         <lastmod>2026-03-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/lighting-block/</loc>
-         <lastmod>2026-03-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/panel-output-requirements/</loc>
-         <lastmod>2026-03-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/portrait-sheet-format-block/</loc>
-         <lastmod>2026-03-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/reference-attachment-block/</loc>
-         <lastmod>2026-03-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/reference-fidelity-block/</loc>
-         <lastmod>2026-03-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/reference-panel-block-stack/</loc>
-         <lastmod>2026-03-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/reference-sheet-block-stack/</loc>
-         <lastmod>2026-03-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/scene-block-stack/</loc>
-         <lastmod>2026-03-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/body/constraint/body_preservation_clothing/</loc>
          <lastmod>2026-03-24</lastmod>
          <changefreq>daily</changefreq>
@@ -811,7 +721,37 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/face/constraint/cross_view_structure/</loc>
+         <lastmod>2026-03-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/face/constraint/face_expression_constraints/</loc>
+         <lastmod>2026-03-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/face/constraint/identity_lock/</loc>
+         <lastmod>2026-03-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/face/constraint/identity_lock_3d/</loc>
+         <lastmod>2026-03-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/face/constraint/realism_constraint/</loc>
+         <lastmod>2026-03-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/face/constraint/three_quarter_integrity/</loc>
+         <lastmod>2026-03-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/face/constraint/three_quarter_validity/</loc>
          <lastmod>2026-03-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -826,12 +766,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/face/expression/expression_flirty/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/face/expression/expression_determined/</loc>
          <lastmod>2026-03-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/face/expression/expression_focused/</loc>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/face/expression/expression_flirty/</loc>
          <lastmod>2026-03-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -936,7 +876,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/face/view/side_photoreal/</loc>
+         <lastmod>2026-03-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/face/view/three_quarter/</loc>
+         <lastmod>2026-03-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/asset/face/view/three_quarter_photoreal/</loc>
          <lastmod>2026-03-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1007,6 +957,11 @@
     </url>
     <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/family/scene/base/</loc>
+         <lastmod>2026-03-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/global/anatomical_framing/</loc>
          <lastmod>2026-03-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1101,6 +1056,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/global/constraint/anti_generic_identity/</loc>
+         <lastmod>2026-03-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/global/identity/face_anchor_scene/</loc>
          <lastmod>2026-03-24</lastmod>
          <changefreq>daily</changefreq>
@@ -1122,6 +1082,11 @@
     </url>
     <url>
          <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/global/style/outfit_reference/</loc>
+         <lastmod>2026-03-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://charreflib.chenazam.com/assets/library/50_PROMPT_TEMPLATES/00_MASTER_BLOCKS/global/style/photoreal_identity/</loc>
          <lastmod>2026-03-24</lastmod>
          <changefreq>daily</changefreq>
     </url>

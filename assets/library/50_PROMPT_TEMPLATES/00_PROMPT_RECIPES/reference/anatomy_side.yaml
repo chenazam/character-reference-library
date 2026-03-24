@@ -1,39 +1,32 @@
-name: anatomy_side
+name: anatomy_side_minimal
 
 include:
-  # Global
+  # Global (keep only essentials)
   - blocks/global/reference_intent.md
   - blocks/global/style/character_reference.md
-  - blocks/global/linework.md
-  - blocks/global/color.md
-  - blocks/global/consistency.md
   - blocks/global/camera_base.md
   - blocks/global/cleanliness/lighting.md
   - blocks/global/cleanliness/background.md
-  - blocks/global/output_constraints.md
 
-  # Family
-  - blocks/family/body/base.md
-
-  # Asset
+  # Asset (core structure)
   - blocks/asset/format/portrait_single.md
+  - blocks/asset/body/framing/full_body_framing.md
   - blocks/asset/body/view/side.md
   - blocks/asset/body/pose/neutral_side.md
   - blocks/asset/body/styling/minimal_clothing.md
   - blocks/asset/body/styling/barefoot.md
 
-  # Character
-  - characters/{character_id}/core.md
-  - characters/{character_id}/body.md
-  - characters/{character_id}/hair.md
-  - characters/{character_id}/guardrails.md
+  # Light structure support (safe)
+  - blocks/family/body/base_neutral.md
 
-  # Override
-  - blocks/asset/body/constraint/posture_override_reference.md
+  # Override (important for consistency)
+  - blocks/asset/body/constraint/ignore_posture_cues.md
+
+  # Character
+  - characters/{character_id}/body.md
 
 optional:
-  - characters/{character_id}/specialized_anatomy/glutes.md
-  - characters/{character_id}/specialized_anatomy/upper_body.md
+  - characters/{character_id}/constraints/body_bias.md
 
 conditional:
   references_attached:

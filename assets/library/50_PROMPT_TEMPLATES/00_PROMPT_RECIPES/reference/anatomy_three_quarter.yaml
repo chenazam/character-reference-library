@@ -2,6 +2,7 @@ name: anatomy_three_quarter
 
 include:
   # Global
+  - blocks/global/anatomical_framing.md
   - blocks/global/reference_intent.md
   - blocks/global/style/character_reference.md
   - blocks/global/linework.md
@@ -18,6 +19,7 @@ include:
   # Asset
   - blocks/asset/format/portrait_single.md
   - blocks/asset/body/view/three_quarter_back.md
+  - blocks/asset/body/framing/full_body_framing.md
   - blocks/asset/body/pose/neutral_three_quarter.md
   - blocks/asset/body/styling/minimal_clothing.md
   - blocks/asset/body/styling/barefoot.md
@@ -25,7 +27,6 @@ include:
   # Character
   - characters/{character_id}/core.md
   - characters/{character_id}/body.md
-  - characters/{character_id}/hair.md
   - characters/{character_id}/guardrails.md
 
   # Override

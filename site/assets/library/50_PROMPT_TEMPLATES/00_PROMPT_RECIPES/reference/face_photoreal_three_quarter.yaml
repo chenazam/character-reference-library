@@ -1,0 +1,38 @@
+name: face_photoreal_three_quarter
+
+include:
+  # Global (clean base)
+  - blocks/global/reference_intent.md
+  - blocks/global/consistency.md
+  - blocks/global/camera_base.md
+  - blocks/global/cleanliness/lighting.md
+  - blocks/global/cleanliness/background.md
+  - blocks/global/output_constraints_face.md
+
+  # Family
+  - blocks/family/face/base.md
+
+  # Asset
+  - blocks/asset/format/portrait_face.md
+  - blocks/asset/face/framing/standardized.md
+  - blocks/asset/face/view/three_quarter_photoreal.md
+  - blocks/asset/face/expression/neutral_true.md
+
+  # Photoreal style
+  - blocks/global/style/photoreal_identity.md
+
+  # Identity lock
+  - blocks/asset/face/constraint/identity_lock_3d.md
+
+  # Clothing
+  - blocks/asset/face/styling/neutral_basic_clothing.md
+
+  # Character
+  - characters/{character_id}/core.md
+  - characters/{character_id}/face.md
+  - characters/{character_id}/hair.md
+  - characters/{character_id}/guardrails.md
+
+conditional:
+  references_attached:
+    - blocks/global/reference_fidelity.md

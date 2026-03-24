@@ -2,6 +2,7 @@ name: anatomy_back
 
 include:
   # Global
+  - blocks/global/anatomical_framing.md
   - blocks/global/reference_intent.md
   - blocks/global/style/character_reference.md
   - blocks/global/linework.md
@@ -25,10 +26,10 @@ include:
   # Character
   - characters/{character_id}/core.md
   - characters/{character_id}/body.md
-  - characters/{character_id}/hair.md
   - characters/{character_id}/guardrails.md
 
   # Override
+  - blocks/asset/body/constraint/ignore_posture_cues.md
   - blocks/asset/body/constraint/posture_override_reference.md
 
 optional:

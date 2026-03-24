@@ -23,6 +23,7 @@ include:
   - blocks/global/style/illustration_priority.md
   - blocks/asset/face/styling/neutral_basic_clothing.md
   - blocks/asset/face/constraint/face_expression_constraints.md
+  - blocks/asset/face/constraint/realism_constraint.md
 
   # Character
   - characters/{character_id}/core.md

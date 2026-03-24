@@ -19,6 +19,7 @@ include:
 
   # Format / framing
   - blocks/asset/format/portrait_face.md
+  - blocks/asset/face/constraint/face_expression_constraints.md
 
   # Face view
   - blocks/asset/face/view/front.md

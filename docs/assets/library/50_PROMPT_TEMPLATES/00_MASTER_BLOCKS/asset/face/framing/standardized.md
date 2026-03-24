@@ -28,3 +28,10 @@ Constraints:
 - no zoomed-out portrait composition
 - no fashion-style crop variation
 - no additional empty space around the subject beyond clean reference margins
+
+Lower framing limit (strict):
+
+- the frame must end at the upper chest, just below the collarbones
+- do not include full chest or pectoral area
+- the visible body area must not extend beyond the upper chest
+- eliminate any additional vertical space below this point

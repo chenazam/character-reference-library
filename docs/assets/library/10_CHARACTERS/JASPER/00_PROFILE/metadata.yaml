@@ -94,9 +94,9 @@ identity_rules:
   - thick-set physique
   - long shorts or baggy athletic wear
 reference_files:
-  face_anchor: jasper_face_anchor_v3.png
+  face_anchor: jasper_face_anchor_v6.png
   anatomy_sheet: jasper_anatomy_sheet_v1.png
-  body_anchor: jasper_body_anchor_v1.png
+  body_anchor: jasper_body_anchor_v3.png
   ultimate_character_sheet: ''
   signature_outfit_sheet: jasper_signature_outfit_side_v1.png
   silhouette_sheet: jasper_silhouette_sheet_v1.png
@@ -111,7 +111,7 @@ pipeline_status:
   body_anchor: complete
   silhouette_sheet: complete
   turnaround_sheet: not_started
-  expression_sheet: not_started
+  expression_sheet: complete
   hand_sheet: not_started
   ucs: not_started
   signature_outfit: complete

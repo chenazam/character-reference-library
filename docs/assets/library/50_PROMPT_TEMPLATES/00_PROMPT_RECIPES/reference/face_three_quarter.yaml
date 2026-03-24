@@ -19,6 +19,10 @@ include:
   - blocks/asset/format/portrait_face.md
   - blocks/asset/face/framing/standardized.md
   - blocks/asset/face/view/three_quarter.md
+  - blocks/asset/face/constraint/three_quarter_validity.md
+  - blocks/asset/face/constraint/cross_view_structure.md
+  - blocks/asset/face/constraint/three_quarter_integrity.md
+  - blocks/asset/face/expression/neutral_true.md
   - blocks/asset/face/styling/neutral_basic_clothing.md
 
   # Character

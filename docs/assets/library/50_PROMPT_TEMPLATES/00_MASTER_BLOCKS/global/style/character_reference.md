@@ -2,7 +2,10 @@ Style:
 
 - clean professional character design illustration
 - high-detail rendering with controlled linework
-- realistic proportions with slight idealization for clarity
+- realistic proportions with minimal idealization
+- avoid enhancement of muscle definition or body aesthetics
+- idealization must not alter facial structure, silhouette, or identity
+- do not improve or refine facial features beyond the reference
 - consistent rendering across all outputs
 
 Rendering characteristics:

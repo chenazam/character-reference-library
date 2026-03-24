@@ -153,6 +153,7 @@ class PromptBuilderV2:
         recipe_ref: str,
         variables: dict[str, str],
         enabled_conditionals: set[str] | None = None,
+        debug_blocks: bool = False,
     ) -> str:
         enabled_conditionals = enabled_conditionals or set()
         variables = self.resolve_variable_values(variables)
@@ -173,7 +174,15 @@ class PromptBuilderV2:
                 raise PromptBuildError(
                     f"All recipe include entries must be strings: {recipe_ref}"
                 )
-            pieces.append(self.load_block(item, variables))
+            content = self.load_block(item, variables)
+
+            if debug_blocks:
+                path = self.resolve_include_path(item, variables)
+                relative = path.relative_to(self.library_root)
+                header = f"\n--- BLOCK: {relative.as_posix()} ---\n"
+                pieces.append(header + content)
+            else:
+                pieces.append(content)
 
         for item in optional_items:
             if not isinstance(item, str):
@@ -182,7 +191,13 @@ class PromptBuilderV2:
                 )
             loaded = self.load_block_optional(item, variables)
             if loaded and loaded.strip():
-                pieces.append(loaded)
+                if debug_blocks:
+                    path = self.resolve_include_path(item, variables)
+                    relative = path.relative_to(self.library_root)
+                    header = f"\n--- BLOCK: {relative.as_posix()} ---\n"
+                    pieces.append(header + loaded)
+                else:
+                    pieces.append(loaded)
 
         conditional_map = recipe.get("conditional", {})
         if conditional_map:
@@ -205,7 +220,15 @@ class PromptBuilderV2:
                         raise PromptBuildError(
                             f"Conditional include entries must be strings: {recipe_ref}"
                         )
-                    pieces.append(self.load_block(item, variables))
+                    content = self.load_block(item, variables)
+
+                    if debug_blocks:
+                        path = self.resolve_include_path(item, variables)
+                        relative = path.relative_to(self.library_root)
+                        header = f"\n--- BLOCK: {relative.as_posix()} ---\n"
+                        pieces.append(header + content)
+                    else:
+                        pieces.append(content)
 
         final_text = "\n\n".join(piece.strip() for piece in pieces if piece.strip())
         return normalize_for_model(final_text)
@@ -345,6 +368,11 @@ def main() -> None:
         action="store_true",
         help="Do not copy final prompt to clipboard",
     )
+    parser.add_argument(
+        "--debug-blocks",
+        action="store_true",
+        help="Inject block filenames into prompt for debugging",
+    )
 
     args = parser.parse_args()
 
@@ -362,6 +390,7 @@ def main() -> None:
             recipe_ref=args.recipe,
             variables=variables,
             enabled_conditionals=enabled_conditionals,
+            debug_blocks=args.debug_blocks,
         )
 
         if args.output:

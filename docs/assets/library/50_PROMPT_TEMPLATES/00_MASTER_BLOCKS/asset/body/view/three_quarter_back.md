@@ -4,24 +4,46 @@ three-quarter back orientation
 
 Orientation:
 
-- body rotated to a clear three-quarter angle
-- character is turned partially away from the viewer
-- back remains the dominant visible surface
-- torso and hips turned consistently
-- body volume and structure clearly readable
+- body rotated approximately 45 degrees away from the viewer
+- the back is the dominant visible surface
+- the chest is only minimally visible and must not face the viewer
+
+- shoulders and hips are rotated together at the same angle
+- no twisting between upper and lower body
+
+- the near side of the body is more visible than the far side
+- the far side remains partially occluded but still readable
 
 Head alignment:
 
 - head rotation follows torso orientation
 - no excessive independent turning of the head toward camera
-- face may be only slightly visible and must remain consistent with body angle
-- avoid frontal face orientation when body is angled away
+- only a small portion of the face may be visible
+- the face must follow the body rotation and must not turn toward the viewer
+
+- no frontal facial visibility
+- no eye contact with the viewer
 
 Silhouette requirements:
 
-- glute projection must be clearly visible
-- lower-body mass must read as dominant
-- clear structural flow from torso to waist to glutes must remain readable
+- the gluteal region must form a clearly readable rearward mass
+- the transition from lower back into glutes and upper thigh must remain distinct
+
+- the lower body must read as the dominant mass center
+- the silhouette must not collapse into a flat or vertical profile
+
+- maintain clear structural flow from torso to waist to hips to thighs in three-quarter perspective
+
+Occlusion clarity:
+
+- one glute must be dominant and clearly visible
+- the second glute must be partially visible, not fully hidden
+
+- the far leg must be partially occluded by the near leg
+- both legs must remain readable and anatomically consistent
+
+- avoid full overlap that hides major body structures
+- avoid separation that makes the pose read as front-facing
 
 Constraints:
 

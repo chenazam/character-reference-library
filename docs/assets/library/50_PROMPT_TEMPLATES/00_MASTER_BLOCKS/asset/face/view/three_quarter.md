@@ -3,9 +3,10 @@ controlled three-quarter face reference
 
 Orientation:
 
-- head rotated to a clear three-quarter angle
-- angle must be strong enough to show facial volume clearly
-- angle must not drift into near-front view
+- head rotated to a true three-quarter angle (~35–45 degrees from front)
+- rotation must be clearly beyond shallow near-front angles
+- near-front rotations (~0–25 degrees) are not allowed
+- the angle must create clear depth between near and far facial planes
 - angle must not drift into side profile
 
 Head alignment:
@@ -24,24 +25,38 @@ Facial visibility:
 - nose bridge, cheek contour, jawline, and facial planes clearly visible
 - mouth fully visible and anatomically aligned
 
+Perspective requirements (strict):
+
+- far-side eye must be visibly smaller due to perspective
+- far-side cheek must be compressed relative to near side
+- nose must project clearly away from the face centerline
+- the centerline of the face must visibly shift toward the far side
+
 Gaze:
 
-- eyes directed straight toward the camera
+- gaze generally directed toward the camera without intensity
 - pupils centered relative to eye shape
 - no lateral gaze shift
-
-Expression:
-
-- neutral facial expression
-- relaxed facial muscles
-- no smirk, tension, or stylized emotion
 
 Identity requirements:
 
 - preserve exact facial identity from the front reference
 - preserve eye shape, nose shape, mouth shape, and jaw structure
 - preserve facial proportions under rotation
-- avoid beautification or reinterpretation of features
+
+Cross-view constraint:
+
+- the three-quarter view must match the same underlying structure as the front-facing reference
+- differences caused by perspective and rotation are expected and required
+
+Do not alter:
+
+- jaw softness or sharpness
+- chin projection or definition
+- nose bridge shape or refinement
+- facial plane transitions for added attractiveness
+
+- avoid beautification, reinterpretation, or silhouette cleanup
 
 Constraints:
 

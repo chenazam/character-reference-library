@@ -17,6 +17,11 @@ Do NOT copy or preserve:
 - weight distribution
 - any asymmetry present in the reference
 
+However:
+
+- the mass distribution and body proportions of the reference MUST be preserved
+- the lower-body-heavy structure must remain clearly visible in the final silhouette
+
 Important:
 
 The final silhouette MUST be newly constructed from the described proportions,

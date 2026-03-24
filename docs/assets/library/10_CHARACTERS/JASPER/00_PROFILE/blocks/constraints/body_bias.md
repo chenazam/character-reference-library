@@ -1,26 +1,26 @@
-Jasper body bias:
+Body bias correction:
 
-Jasper has a lower-body-dominant physique.
+The model may default toward a generic athletic physique. This should be corrected.
 
-- thighs and glutes must carry more visual mass than the torso
-- the torso must remain relatively light and less dominant
-- the upper body must remain athletic but secondary in emphasis
+Bias adjustments:
 
-Avoid:
+- reduce emphasis on upper-body mass if it becomes visually dominant
+- maintain a softer, less structured torso appearance
+- ensure the lower body carries more visual weight than the upper body
 
-- overly broad shoulders
-- exaggerated chest mass
-- sharply defined arms that rival the lower body
-- a balanced or upper-body-focused physique
-- defaulting to a generic athletic or fitness-model body
+Abdominal control:
 
-Silhouette priority:
+- abdominal area should remain smooth and not strongly segmented
+- avoid high contrast that artificially increases definition
 
-- narrow waist
-- clear lower-body dominance
-- strong thighs and prominent glutes
+Distribution correction:
 
-Additional constraint:
+- reinforce lower-body dominance
+- maintain visible difference between upper and lower body development
 
-- lower body must remain visually dominant even when clothing is present
-- shorts must clearly emphasize thigh volume and structure
+Template prevention:
+
+- avoid generating a balanced or evenly developed physique
+- avoid defaulting to a standard gym-trained body type
+
+If the result appears generic or evenly distributed, it should be corrected toward the intended proportions.

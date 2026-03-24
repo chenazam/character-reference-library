@@ -30,6 +30,19 @@ Identity requirements:
 - preserve facial proportions under profile rotation
 - avoid beautification or reinterpretation of features
 
+Profile accuracy requirement:
+
+- the profile must match the front-facing reference exactly in structure
+- do not refine, sharpen, or idealize features when translating to profile
+
+- avoid:
+  - stronger jawlines than seen in front view
+  - straighter or thinner nose bridges
+  - more pronounced chin projection
+  - cleaner or more stylized silhouette
+
+- the profile should feel like the same person rotated, not a cleaner or more idealized version
+
 Constraints:
 
 - no dramatic expression

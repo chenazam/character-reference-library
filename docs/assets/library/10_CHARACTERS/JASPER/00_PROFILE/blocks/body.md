@@ -1,43 +1,80 @@
 Body:
 
 - height: 5'7" (170 cm)
-- build: compact runner-style athletic physique with lower-body emphasis
-- shoulders: moderate width
-- torso: lighter, lean torso with only moderate upper-body definition
-- waist: narrow and naturally tapered
-- hips: balanced with strong glute development
-- limbs: long athletic legs with powerful runner thighs
+- build: compact physique with clear lower-body dominance
 
-Physique distribution:
+Core impression:
 
-- lower body is more developed than upper body
-- thighs and glutes are the primary areas of strength and mass
-- chest, shoulders, and arms remain lighter and secondary in emphasis
-- torso should read lean and athletic without heavy sculpting
+- the body should read as leg-driven rather than upper-body driven
+- overall appearance suggests active movement (running, sprinting), not strength training
 
-Muscle definition:
+---
 
-- overall definition is athletic but controlled
-- abdominal definition should be subtle rather than sharply segmented
-- avoid prominent six-pack emphasis
-- torso definition should remain softer and less pronounced than lower-body development
-- abdominal definition should remain subtle even when viewed from the front
+Lower body dominance (critical):
+
+- the lower body must visibly outweigh the upper body in mass and presence
+- the silhouette must clearly expand from waist into hips and thighs
+
+- the hips and glutes must form the widest and most dominant region in side view
+
+- if the upper and lower body appear balanced, the result is incorrect
+
+---
+
+Upper body:
+
+- shoulders: moderate width, not broad or dominant
+- arms: lightly developed and proportional
+- chest: flat to lightly defined
+
+- upper body should not appear prominently developed
+- avoid a balanced or evenly distributed physique
+
+---
+
+Torso suppression (critical):
+
+- abdominal structure must not form clearly separated segments
+- avoid visible six-pack patterns or geometric muscle separation
+
+- torso should read as smooth and continuous with only subtle surface variation
+
+- if abdominal definition draws attention, the result is incorrect
+
+---
+
+Lower body (primary focus):
+
+- thighs: strong, full, and visibly developed
+- quadriceps: rounded volume
+- inner and outer thigh mass should be clearly readable
+
+- glutes: rounded and clearly contributing to overall body mass
+- lower body should visibly influence the silhouette
+
+---
+
+Hip and waist relationship:
+
+- waist: naturally tapered
+- hips: slightly wider relative to the waist
+
+- clear transition from waist → hips → thighs
+- avoid straight vertical alignment through this region
+
+---
 
 Silhouette:
 
-- compact, leg-dominant athletic frame
-- strong emphasis on thighs and prominent rounded glutes
-- lighter upper body relative to lower body
+- lower body must read as the primary mass center
+- visible outward expansion from waist to hips to thighs
 
-Silhouette characteristics:
+- avoid upper-body-dominant or V-shaped proportions
+- overall silhouette should feel weighted toward the lower body
 
-- clear S-curve flow from chest to waist to glutes
-- pronounced outward projection at the glutes
-- visible inward taper at the waist
-- lower body reads as the primary mass center
+---
 
-Posture:
+Priority:
 
-- relaxed and casual
-- natural weight shifts
-- fluid and confident stance
+- the viewer should immediately read the character as leg-dominant
+- upper body must not compete with the lower body

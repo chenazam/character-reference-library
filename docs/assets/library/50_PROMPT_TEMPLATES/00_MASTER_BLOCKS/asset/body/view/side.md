@@ -14,11 +14,23 @@ Head alignment:
 - face shown strictly in side profile
 - no three-quarter facial visibility
 
-Silhouette requirements:
+Silhouette (critical priority):
 
-- glute projection must be clearly visible and pronounced
-- lower-body mass must read as dominant
-- clear S-curve from chest → waist → glutes must be preserved
+- side silhouette must clearly reflect the character’s anatomical mass distribution
+- major body masses (chest, waist, hips, glutes, thighs) must be distinctly readable
+
+- ensure clean and continuous transitions between:
+  - chest → waist
+  - waist → hips
+  - hips → thighs
+
+- avoid flat, ambiguous, or underdefined body contours
+- avoid defaulting to generic or averaged body shapes
+
+Priority:
+
+- the silhouette must accurately represent the intended body structure defined by the character references
+- if the silhouette appears generic or loses distinct anatomical features, the result is incorrect
 
 Pose constraints:
 
@@ -31,7 +43,7 @@ Pose constraints:
 Structure clarity:
 
 - spine alignment clearly readable
-- chest, waist, glute, and thigh transitions clearly defined
+- chest, waist, hip, and thigh transitions clearly defined
 - leg alignment clean and anatomically correct
 
 Framing:

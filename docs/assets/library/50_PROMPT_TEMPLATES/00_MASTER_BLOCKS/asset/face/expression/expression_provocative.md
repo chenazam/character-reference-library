@@ -2,17 +2,20 @@ Expression: Provocative inviting
 
 Core behavior:
 
-- subtly inviting, attention-aware expression
-- controlled sensual or engaging presence
+- attention-aware expression
+- subtle invitation or deliberate presence
+- controlled and intentional, not passive
 
 Facial features:
 
-- eyes engaged with direct or slightly softened gaze
-- mouth slightly parted or softly defined
-- facial tension minimal but intentional
+- eyes slightly lowered or with a soft, direct gaze
+- eyelids subtly relaxed (very slight narrowing)
+- mouth gently parted or softly defined with minimal tension
+- faint asymmetry in lips or gaze
 
 Constraints:
 
 - no exaggerated seduction
 - no open-mouth expression beyond subtle parting
-- no loss of realism or facial structure
+- no blank or neutral reading
+- must read as intentional, not accidental

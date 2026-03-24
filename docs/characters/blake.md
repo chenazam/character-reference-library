@@ -86,6 +86,12 @@
 
 ---
 
+## Motion
+
+--8<-- "snippets/galleries/blake/motion.md"
+
+---
+
 ## Scenes
 
 --8<-- "snippets/galleries/blake/scenes.md"

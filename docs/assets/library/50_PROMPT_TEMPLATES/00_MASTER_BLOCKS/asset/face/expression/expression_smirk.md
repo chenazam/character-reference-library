@@ -1,18 +1,20 @@
-Expression: Confident smirk
+Smirk intent refinement:
 
-Core behavior:
+- expression should feel self-contained and inward-facing
+- not socially inviting or engaging
 
-- subtle asymmetrical smile
-- controlled, self-assured expression
+Eyes:
 
-Facial features:
+- maintain a more neutral or slightly focused gaze
+- avoid soft or inviting eye expression
+- avoid lowered or "bedroom" eyelids
 
-- one corner of the mouth slightly raised
-- eyes focused with mild intensity
-- brows relaxed with slight attitude
+Head:
 
-Constraints:
+- keep head upright and aligned
+- avoid tilt toward the viewer
 
-- no full smile
-- no exaggerated asymmetry
-- no comedic or exaggerated expression
+Mouth:
+
+- smirk should feel slightly tighter and more controlled
+- less softness than a friendly or playful expression

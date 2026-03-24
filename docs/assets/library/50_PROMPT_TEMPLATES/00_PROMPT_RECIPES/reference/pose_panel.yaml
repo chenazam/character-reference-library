@@ -22,7 +22,7 @@ include:
   - blocks/asset/format/portrait_single.md
 
   # Body / visibility
-  - blocks/asset/body/styling/minimal_clothing.md
+  - blocks/asset/body/styling/pose_clothing.md
   - blocks/asset/body/styling/barefoot.md
   - blocks/asset/body/framing/full_body_framing.md
 

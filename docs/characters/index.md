@@ -11,7 +11,7 @@ Browse characters in the reference library.
 
 <a class="character-card" href="alek/">
 
-  <img src="..\assets\library\10_CHARACTERS\ALEK\01_IDENTITY\face\alek_face_anchor_v1.png" alt="Alek">
+  <img src="..\assets\library\10_CHARACTERS\ALEK\01_IDENTITY\gallery\alek_catalog_thumbnail_v1.png" alt="Alek">
   <h3>Alek</h3>
 
 </a>
@@ -25,7 +25,7 @@ Browse characters in the reference library.
 
 <a class="character-card" href="blake/">
 
-  <img src="..\assets\library\10_CHARACTERS\BLAKE\01_IDENTITY\gallery\blake-gallery-image.png" alt="Blake">
+  <img src="..\assets\library\10_CHARACTERS\BLAKE\01_IDENTITY\gallery\blake_catalog_thumbnail_v2.png" alt="Blake">
   <h3>Blake</h3>
 
 </a>
@@ -60,7 +60,7 @@ Browse characters in the reference library.
 
 <a class="character-card" href="jasper/">
 
-  <img src="..\assets\library\10_CHARACTERS\JASPER\01_IDENTITY\gallery\jasper_fullbody_gallery_v1.png" alt="Jasper">
+  <img src="..\assets\library\10_CHARACTERS\JASPER\01_IDENTITY\gallery\jasper_catalog_thumbnail_v1.png" alt="Jasper">
   <h3>Jasper</h3>
 
 </a>

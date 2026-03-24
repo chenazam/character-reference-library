@@ -1,24 +1,27 @@
-Pose: Forward stance
+Pose: Mid-step stance
 
 Core behavior:
 
-- one foot positioned slightly in front of the other
-- stance remains fully static and grounded
-- body reads as standing, not moving
+- one foot placed clearly forward, the other trailing behind
+- trailing heel slightly lifted off the ground
+- pose must read as a moment within a step, not a static stance
 
 Alignment:
 
-- front foot placed a short distance ahead
-- back foot supports the body evenly
-- weight remains balanced across both legs
-- torso upright and stable
-- shoulders level and relaxed
-- arms relaxed naturally at the sides
+- weight transitioning toward the front foot
+- hips subtly shifted forward
+- torso upright, not leaning excessively
+- shoulders remain level
+
+- arms naturally offset:
+  - one arm slightly forward
+  - one arm slightly back
+- hands relaxed
 
 Constraints:
 
-- no motion or movement implied
-- no stepping or walking behavior
-- no forward momentum
-- no exaggerated leg separation
-- no dynamic or action-oriented posture
+- no fully static stance
+- no evenly distributed weight
+- no symmetrical arm position
+- no exaggerated stride or action pose
+- must read as controlled, natural movement

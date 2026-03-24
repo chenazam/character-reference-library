@@ -125,19 +125,26 @@ def is_face_anchor_image(path: pathlib.Path) -> bool:
     )
 
 
-def score_hero_candidate(path: pathlib.Path) -> tuple[int, str]:
+def score_hero_candidate(path: pathlib.Path) -> tuple[int, int, str]:
     name = path.stem.lower()
+    asset_key, version = split_version(path.stem)
 
-    if "hero" in name:
-        return (0, name)
-    if "gallery" in name:
-        return (1, name)
-    if "portrait" in name:
-        return (2, name)
-    if "thumbnail" in name or "thumb" in name:
-        return (3, name)
+    if "gallery_portrait" in asset_key:
+        return (0, -version, name)
+    if "gallery_image" in asset_key:
+        return (1, -version, name)
+    if "face_anchor" in asset_key or ("anchor" in asset_key and "face" in asset_key):
+        return (2, -version, name)
+    if "catalog_thumbnail" in asset_key:
+        return (3, -version, name)
+    if "portrait" in asset_key:
+        return (4, -version, name)
+    if "thumbnail" in asset_key or "thumb" in asset_key:
+        return (5, -version, name)
+    if "hero" in asset_key:
+        return (6, -version, name)
 
-    return (9, name)
+    return (9, -version, name)
 
 
 def choose_hero_image(images: list[pathlib.Path]) -> pathlib.Path | None:

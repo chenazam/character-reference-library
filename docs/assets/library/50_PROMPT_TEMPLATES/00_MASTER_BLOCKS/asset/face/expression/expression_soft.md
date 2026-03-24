@@ -2,17 +2,17 @@ Expression: Soft relaxed
 
 Core behavior:
 
-- slightly softened facial expression
-- calm, approachable demeanor
+- calm, approachable, low-intensity expression
+- emotionally neutral but gentle
 
 Facial features:
 
-- eyes gently relaxed, not wide or intense
-- mouth neutral with a hint of softness
-- brows relaxed with no tension
+- eyes relaxed and open, no narrowing
+- mouth neutral with slight softness (no curve)
+- brows fully relaxed
 
 Constraints:
 
-- no visible smile or grin
-- no exaggerated warmth
-- no emotional intensity
+- no visible smile
+- no intensity or engagement
+- must read softer than neutral, not identical

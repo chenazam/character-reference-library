@@ -3,6 +3,7 @@ Reference fidelity:
 The attached reference images define the canonical appearance of the character.
 
 Strictly preserve:
+• preserve identity independently of rendering style; the subject must remain recognizable when translated into the defined illustration style
 • facial identity
 • hairstyle
 • body proportions

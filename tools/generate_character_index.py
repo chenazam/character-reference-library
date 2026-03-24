@@ -1,4 +1,5 @@
 import os
+import re
 import pathlib
 import yaml
 
@@ -7,11 +8,19 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 CHARACTERS_ROOT = ROOT / "docs/assets/library/10_CHARACTERS"
 DOCS_ROOT = ROOT / "docs"
 OUTPUT_FILE = ROOT / "docs/characters/index.md"
+VERSION_RE = re.compile(r"^(?P<base>.+?)_v(?P<version>\d+)$", re.IGNORECASE)
 
 
 def docs_rel_url(from_markdown_file: pathlib.Path, target_under_docs: pathlib.Path) -> str:
     rel = os.path.relpath(target_under_docs, start=from_markdown_file.parent)
     return pathlib.PurePosixPath(rel).as_posix()
+
+
+def split_version(stem: str) -> tuple[str, int]:
+    match = VERSION_RE.match(stem)
+    if not match:
+        return stem, 0
+    return match.group("base"), int(match.group("version"))
 
 
 def find_thumbnail(character_dir):
@@ -25,25 +34,25 @@ def find_thumbnail(character_dir):
         if p.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp"}
     ]
 
-    # Priority 1 — gallery image
-    for f in images:
-        name = f.name.lower()
-        if "gallery" in name:
-            return f
+    def score(path):
+        stem = path.stem.lower()
+        base, version = split_version(path.stem)
+        base = base.lower()
 
-    # Priority 2 — face anchor
-    for f in images:
-        name = f.name.lower()
-        if "face_anchor" in name:
-            return f
+        if "catalog_thumbnail" in base:
+            return (0, -version, stem)
+        if "gallery_image" in base:
+            return (1, -version, stem)
+        if "face_anchor" in base or ("anchor" in base and "face" in base):
+            return (2, -version, stem)
 
-    # Priority 3 — front face
-    for f in images:
-        name = f.name.lower()
-        if "front" in name:
-            return f
+        return (9, -version, stem)
 
-    return None
+    candidates = [p for p in images if score(p)[0] < 9]
+    if not candidates:
+        return None
+
+    return sorted(candidates, key=score)[0]
 
 
 def load_metadata(character_dir):

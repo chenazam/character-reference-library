@@ -117,6 +117,52 @@ def normalize_character_name(name: str) -> tuple[str, str]:
     return raw.lower(), raw.upper()
 
 
+def find_latest_view_file(face_dir: Path, character_name: str, view: str) -> Optional[Path]:
+    character_slug, _ = normalize_character_name(character_name)
+    stem = f"{character_slug}_{view}_face"
+
+    candidates: list[Path] = []
+    for file in face_dir.glob(f"{stem}*.png"):
+        match = re.match(rf"^{re.escape(stem)}(?:_(v\d+))?\.png$", file.name)
+        if match:
+            candidates.append(file)
+
+    if not candidates:
+        return None
+
+    return max(candidates, key=extract_version)
+
+
+def find_latest_inputs(face_dir: Path, character_name: str) -> dict[str, Path]:
+    result = {
+        "front": find_latest_view_file(face_dir, character_name, "front"),
+        "profile": find_latest_view_file(face_dir, character_name, "profile"),
+        "three_quarter": find_latest_view_file(face_dir, character_name, "three_quarter"),
+    }
+
+    missing = [key for key, path in result.items() if path is None]
+    if missing:
+        raise FileNotFoundError(
+            f"Could not find latest files for views: {', '.join(missing)} in {face_dir}"
+        )
+
+    return result  # type: ignore[return-value]
+
+
+def next_face_anchor_version(face_dir: Path, character_name: str) -> str:
+    character_slug, _ = normalize_character_name(character_name)
+    prefix = f"{character_slug}_face_anchor"
+
+    existing = []
+    for file in face_dir.glob(f"{prefix}*.png"):
+        match = re.match(rf"^{re.escape(prefix)}(?:_(v\d+))?\.png$", file.name)
+        if match:
+            existing.append(extract_version(file))
+
+    next_version = (max(existing) + 1) if existing else 1
+    return f"v{next_version}"
+
+
 def find_project_root(start_path: Path) -> Optional[Path]:
     current = start_path.resolve()
     if current.is_file():
@@ -783,21 +829,28 @@ def main() -> int:
         print(f"Error: face directory not found: {face_dir}", file=sys.stderr)
         return 1
 
-    version = args.version
-    if version is None:
-        version = choose_latest_version(face_dir, args.character)
-        if version is None:
-            print(
-                f"Error: Could not find a complete front/profile/three-quarter set in {face_dir}",
-                file=sys.stderr,
-            )
+    if args.version is not None:
+        version = args.version
+        paths = build_expected_paths(face_dir, args.character, version)
+        front_path = paths["front"]
+        profile_path = paths["profile"]
+        three_quarter_path = paths["three_quarter"]
+        output_version = version
+    else:
+        try:
+            latest_inputs = find_latest_inputs(face_dir, args.character)
+        except FileNotFoundError as exc:
+            print(f"Error: {exc}", file=sys.stderr)
             return 1
 
-    paths = build_expected_paths(face_dir, args.character, version)
-    front_path = paths["front"]
-    profile_path = paths["profile"]
-    three_quarter_path = paths["three_quarter"]
-    output_path = args.output.resolve() if args.output else paths["output"]
+        front_path = latest_inputs["front"]
+        profile_path = latest_inputs["profile"]
+        three_quarter_path = latest_inputs["three_quarter"]
+        output_version = next_face_anchor_version(face_dir, args.character)
+
+    character_slug, _ = normalize_character_name(args.character)
+    default_output = face_dir / f"{character_slug}_face_anchor_{output_version}.png"
+    output_path = args.output.resolve() if args.output else default_output
 
     for required_path in [front_path, profile_path, three_quarter_path]:
         if not required_path.exists():
@@ -909,7 +962,10 @@ def main() -> int:
     print("Done.")
     print(f"Character: {args.character}")
     print(f"Face directory: {face_dir}")
-    print(f"Version: {version if version else '(no suffix)'}")
+    print(f"Output version: {output_version}")
+    print(f"Front input version: v{extract_version(front_path)}")
+    print(f"Profile input version: v{extract_version(profile_path)}")
+    print(f"Three-quarter input version: v{extract_version(three_quarter_path)}")
     print(f"Front input: {front_path}")
     print(f"Profile input: {profile_path}")
     print(f"Three-quarter input: {three_quarter_path}")

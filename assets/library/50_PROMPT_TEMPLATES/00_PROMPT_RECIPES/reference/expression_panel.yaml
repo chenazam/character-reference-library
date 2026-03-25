@@ -3,6 +3,7 @@ name: expression_panel
 include:
   # Character
   - characters/{character_id}/core.md
+  - characters/{character_id}/expression.md
 
   # Identity / stability
   - blocks/global/reference_intent.md
@@ -10,8 +11,7 @@ include:
   - blocks/global/consistency.md
 
   # Rendering
-  - blocks/global/rendering_style.md
-  - blocks/global/linework.md
+  - blocks/global/style/photoreal_identity.md
 
   # Environment
   - blocks/global/cleanliness/background.md

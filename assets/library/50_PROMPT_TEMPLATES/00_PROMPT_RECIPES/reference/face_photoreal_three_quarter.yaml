@@ -16,13 +16,11 @@ include:
   - blocks/asset/format/portrait_face.md
   - blocks/asset/face/framing/standardized.md
   - blocks/asset/face/view/three_quarter_photoreal.md
+  - blocks/asset/face/constraint/three_quarter_validity.md
   - blocks/asset/face/expression/neutral_true.md
 
   # Photoreal style
   - blocks/global/style/photoreal_identity.md
-
-  # Identity lock
-  - blocks/asset/face/constraint/identity_lock_3d.md
 
   # Clothing
   - blocks/asset/face/styling/neutral_basic_clothing.md

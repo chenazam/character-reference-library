@@ -23,3 +23,4 @@ include:
 
 optional:
   - characters/{character_id}/specialized_anatomy/glutes.md
+  - characters/{character_id}/silhouette.md

@@ -20,6 +20,7 @@ include:
 
   # Format
   - blocks/asset/format/portrait_single.md
+  - blocks/asset/format/single_panel_only.md
 
   # Body / visibility
   - blocks/asset/body/styling/pose_clothing.md

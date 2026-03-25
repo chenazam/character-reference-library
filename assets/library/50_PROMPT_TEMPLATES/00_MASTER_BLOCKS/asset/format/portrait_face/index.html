@@ -2130,20 +2130,35 @@
 
   <h1>Portrait face</h1>
 
-<p>Output format:
-portrait single-image format
-consistent 2:3 portrait aspect ratio</p>
+<p>Output format (strict):</p>
+<ul>
+<li>vertical portrait orientation (height greater than width)</li>
+<li>aspect ratio must be portrait (2:3 or 3:4)</li>
+<li>do NOT use square or landscape orientation</li>
+</ul>
 <p>Canvas behavior:</p>
 <ul>
-<li>use a portrait-oriented canvas</li>
-<li>maintain the same tight crop scale as the canonical face reference format</li>
-<li>do not zoom out to show more of the body just because the canvas is taller</li>
+<li>canvas must be vertically oriented</li>
+<li>height must significantly exceed width</li>
+<li>do not reinterpret as square or horizontal framing</li>
 </ul>
 <p>Composition:</p>
 <ul>
 <li>subject centered</li>
-<li>clean margins</li>
+<li>tight portrait crop</li>
 <li>face and upper shoulders only</li>
+</ul>
+<p>Priority:</p>
+<ul>
+<li>portrait orientation is mandatory</li>
+<li>if the image is not vertical, the result is incorrect</li>
+</ul>
+<p>Framing priority (critical):</p>
+<ul>
+<li>the face must occupy ~70–80% of the vertical frame</li>
+<li>crop closer to the head</li>
+<li>reduce visible chest area</li>
+<li>shoulders may be partially cropped</li>
 </ul>
 
 

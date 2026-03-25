@@ -2132,14 +2132,33 @@
 
 <p>Priority rule:</p>
 <ul>
-<li>identity preservation overrides angle accuracy</li>
-<li>if a perfect three-quarter angle conflicts with identity fidelity, maintain identity and allow slight deviation from angle</li>
-<li>never alter facial structure to satisfy angle requirements</li>
+<li>identity must be preserved while satisfying the requested view</li>
+<li>the head must rotate as a rigid three-dimensional structure into the requested angle</li>
+<li>angle accuracy and identity preservation are both mandatory</li>
+<li>do not reduce rotation to preserve recognizability</li>
+<li>do not alter facial structure to avoid a true angle change</li>
+</ul>
+<p>Rotation-compatible identity rule:</p>
+<ul>
+<li>perspective changes caused by rotation are valid and required</li>
+<li>a correct three-quarter or profile view must introduce natural asymmetry from perspective</li>
+<li>
+<p>these perspective changes are not identity drift; they are the correct projection of the same face in 3D space</p>
+</li>
+<li>
+<p>allow the following when caused by rotation:</p>
+</li>
+<li>far eye appearing smaller or narrower</li>
+<li>nose shifting clearly off the facial centerline</li>
+<li>far cheek, far jaw, and far side of the mouth receding in depth</li>
+<li>visible asymmetry between near and far facial planes</li>
+<li>near-side facial volume becoming more dominant in the frame</li>
 </ul>
 <p>Selection constraint:</p>
 <ul>
-<li>if multiple valid solutions are possible, prefer the one with the highest identity fidelity, even if angle accuracy is slightly reduced</li>
-<li>do not produce alternative interpretations with improved angle but reduced identity fidelity</li>
+<li>if multiple valid solutions are possible, prefer the one that preserves identity while fully satisfying the requested rotation</li>
+<li>do not choose a near-frontal solution simply because it is safer or more recognizable</li>
+<li>recognizability must survive correct rotation, not replace it</li>
 </ul>
 <p>Identity lock:</p>
 <ul>
@@ -2160,29 +2179,30 @@
 <li>eye socket depth and eye placement within the skull</li>
 <li>ear placement relative to brow, nose, and jaw</li>
 </ul>
-<p>Three-quarter view constraint:</p>
+<p>Three-quarter and profile transformation rule:</p>
 <ul>
-<li>facial features must remain identical to the front reference when mentally projected into three-dimensional space</li>
+<li>facial features must remain consistent with the front reference when mentally projected into three-dimensional space</li>
+<li>preserve the same face while allowing correct perspective compression and depth change</li>
 <li>do not refine, idealize, or sharpen facial structure during rotation</li>
-<li>nose bridge, nose tip, and jawline must retain the same softness and irregularity as the front view</li>
-<li>avoid "correcting" asymmetry or smoothing perceived imperfections</li>
+<li>nose bridge, nose tip, and jawline must retain the same softness, irregularity, and structural character as the front view</li>
+<li>avoid "correcting" asymmetry or smoothing perceived imperfections during rotation</li>
 </ul>
 <p>Lower face anchoring:</p>
 <ul>
-<li>chin projection must match the front view exactly</li>
-<li>jaw depth must not increase or become more pronounced in profile</li>
-<li>avoid sharpening or extending the jawline</li>
+<li>chin projection must remain consistent with the front view when rotated into space</li>
+<li>jaw depth must remain structurally consistent with the same face viewed from a different angle</li>
+<li>avoid artificially sharpening, extending, or beautifying the jawline</li>
 <li>
-<p>avoid creating a stronger or more angular chin than in the front view</p>
+<p>avoid creating a stronger, cleaner, or more angular chin than the front view supports</p>
 </li>
 <li>
 <p>lip volume and projection must remain consistent with the front view</p>
 </li>
 <li>
-<p>avoid flattening or tightening the mouth in profile</p>
+<p>avoid flattening, tightening, or idealizing the mouth during rotation</p>
 </li>
 <li>
-<p>the lower face must not become more "model-like" or sculpted in side view</p>
+<p>the lower face must not become more "model-like" or sculpted in side or three-quarter view</p>
 </li>
 </ul>
 <p>Consistency behavior:</p>
@@ -2197,7 +2217,8 @@
 <li>face appears like a different person than reference</li>
 <li>features shift toward generic attractiveness</li>
 <li>multiple possible identities blended together</li>
-<li>side or three-quarter view reads as a newly invented profile</li>
+<li>side or three-quarter view reads as a newly invented face</li>
+<li>near-frontal fallback is used to preserve recognizability instead of performing correct rotation</li>
 </ul>
 
 

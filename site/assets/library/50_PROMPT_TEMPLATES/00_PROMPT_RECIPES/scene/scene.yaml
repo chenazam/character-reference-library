@@ -31,3 +31,6 @@ include:
 
   # Output
   - blocks/global/output_constraints.md
+
+optional:
+  - characters/{character_id}/outfits/{outfit_id}.md

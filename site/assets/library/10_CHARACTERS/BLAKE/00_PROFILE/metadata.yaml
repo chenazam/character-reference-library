@@ -91,8 +91,8 @@ identity_rules:
   - delicate limbs
   - small or lightweight silhouette
 reference_files:
-  face_anchor: blake_face_anchor_v2.png
-  anatomy_sheet: blake_anatomy_sheet_v1.png
+  face_anchor: blake_face_anchor_v3.png
+  anatomy_sheet: ''
   body_anchor: blake_body_anchor_v1.png
   ultimate_character_sheet: ''
   signature_outfit_sheet: blake_signature_outfit_side_v1.png
@@ -102,13 +102,13 @@ reference_files:
 pipeline_status:
   face_anchor: complete
   hair_sheet: complete
-  anatomy_sheet: complete
+  anatomy_sheet: not_started
   proportion_grid: not_started
   muscle_tension: not_started
   body_anchor: complete
   silhouette_sheet: complete
   turnaround_sheet: not_started
-  expression_sheet: not_started
+  expression_sheet: complete
   hand_sheet: not_started
   ucs: not_started
   signature_outfit: complete

@@ -7,6 +7,8 @@ Orientation:
 - no rotation to either side
 - no tilt
 - no upward or downward angle
+- head positioned upright or only minimally tilted
+- avoid pronounced head tilt or submissive angles
 
 Facial visibility:
 

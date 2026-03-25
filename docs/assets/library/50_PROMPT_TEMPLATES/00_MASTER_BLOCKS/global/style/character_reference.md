@@ -14,6 +14,8 @@ Rendering characteristics:
 - controlled, non-noisy shading
 - simplified lighting for readability
 - natural but slightly refined skin rendering
+- maintain clear structural definition in facial features
+- avoid overly soft or blended facial rendering
 
 Consistency requirements:
 

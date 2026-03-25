@@ -40,3 +40,7 @@ include:
 conditional:
   references_attached:
     - blocks/global/reference_fidelity.md
+
+optional:
+  - characters/{character_a}/outfits/{outfit_id}.md
+  - characters/{character_b}/outfits/{outfit_id}.md

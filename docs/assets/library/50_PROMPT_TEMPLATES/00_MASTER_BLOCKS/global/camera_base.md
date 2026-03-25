@@ -1,7 +1,7 @@
 Camera:
-orthographic reference camera
-eye-level perspective
-no perspective distortion
-consistent distance
-camera remains fixed; no tilt, no perspective exaggeration
-the subject is not viewed from above or below
+
+- neutral portrait lens (50mm–85mm equivalent)
+- eye-level perspective
+- natural perspective compression
+- no wide-angle distortion
+- maintain realistic depth

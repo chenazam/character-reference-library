@@ -109,19 +109,6 @@ Their emotional presentation also differs: **Blake** feels **Controlled**, while
   </div>
 </div>
 
-## Anatomy Sheet Comparison
-
-<div class="comparison-grid comparison-grid-2">
-  <div class="comparison-item">
-    <div class="comparison-label">Blake</div>
-    <img src="../../assets/library/10_CHARACTERS/BLAKE/02_BODY/anatomy/blake_anatomy_sheet_v1.png" alt="Blake Anatomy Sheet Comparison">
-  </div>
-  <div class="comparison-item">
-    <div class="comparison-label">Jasper</div>
-    <img src="../../assets/library/10_CHARACTERS/JASPER/02_BODY/anatomy/jasper_anatomy_sheet_v1.png" alt="Jasper Anatomy Sheet Comparison">
-  </div>
-</div>
-
 ## Silhouette Sheet Comparison
 
 <div class="comparison-grid comparison-grid-2">
@@ -132,6 +119,16 @@ Their emotional presentation also differs: **Blake** feels **Controlled**, while
   <div class="comparison-item">
     <div class="comparison-label">Jasper</div>
     <img src="../../assets/library/10_CHARACTERS/JASPER/02_BODY/structure/jasper_silhouette_sheet_v1.png" alt="Jasper Silhouette Sheet Comparison">
+  </div>
+</div>
+
+## Available References
+
+<div class="comparison-grid comparison-grid-2">
+
+  <div class="comparison-item">
+    <div class="comparison-label">Jasper — Anatomy Sheet</div>
+    <img src="../../assets/library/10_CHARACTERS/JASPER/02_BODY/anatomy/jasper_anatomy_sheet_v1.png" alt="Jasper Anatomy Sheet">
   </div>
 </div>
 

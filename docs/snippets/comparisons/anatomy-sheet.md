@@ -1,13 +1,6 @@
 <div class="asset-comparison-grid">
 
   <div class="comparison-card">
-    <h3><a href="../../characters/blake/">Blake</a></h3>
-    <a href="../../assets/library/10_CHARACTERS/BLAKE/02_BODY/anatomy/blake_anatomy_sheet_v1.png" target="_blank">
-      <img src="../../assets/library/10_CHARACTERS/BLAKE/02_BODY/anatomy/blake_anatomy_sheet_v1.png" alt="Blake anatomy-sheet">
-    </a>
-  </div>
-
-  <div class="comparison-card">
     <h3><a href="../../characters/daimon/">Daimon</a></h3>
     <a href="../../assets/library/10_CHARACTERS/DAIMON/02_BODY/anatomy/daimon_anatomy_sheet_v1.png" target="_blank">
       <img src="../../assets/library/10_CHARACTERS/DAIMON/02_BODY/anatomy/daimon_anatomy_sheet_v1.png" alt="Daimon anatomy-sheet">

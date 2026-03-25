@@ -8,13 +8,13 @@ Framing priority:
 Framing:
 standardized face reference framing
 
-- head centered horizontally
 - head occupies most of the frame height
 - small consistent margin above the hair
 - chin fully visible with a slightly larger lower margin
 - upper shoulders slightly visible at the bottom
-- eyes positioned slightly above center
-- framing must remain stable across face reference views
+- framing must remain consistent in scale, but composition may shift laterally to accommodate the requested angle
+- the head does not need to remain perfectly centered if a true three-quarter rotation requires asymmetrical placement
+- preserve a tight face crop while allowing visible asymmetry in the composition
 
 Vertical framing control:
 

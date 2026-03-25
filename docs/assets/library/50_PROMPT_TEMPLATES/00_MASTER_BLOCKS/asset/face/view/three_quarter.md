@@ -18,6 +18,7 @@ Head alignment:
 - no off-axis fashion pose
 - no tilted or thrown-back head position
 
+
 Facial visibility:
 
 - both eyes visible

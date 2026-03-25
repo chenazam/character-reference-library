@@ -12,7 +12,7 @@ Reference assets that still need to be generated.
 
 ## BLAKE
 
-- next: proportion_grid
+- next: anatomy_sheet
 
 ## CONNOR
 

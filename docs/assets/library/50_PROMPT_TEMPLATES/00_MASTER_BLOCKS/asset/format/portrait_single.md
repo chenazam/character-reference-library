@@ -1,5 +1,6 @@
 Output format (strict):
 
+- portrait single-image format
 - vertical portrait orientation (height greater than width)
 - aspect ratio must be portrait (e.g. 2:3 or 3:4)
 - do NOT use landscape orientation

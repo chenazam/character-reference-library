@@ -80,6 +80,18 @@
 
 ---
 
+## Style
+
+--8<-- "snippets/galleries/lucien/style.md"
+
+---
+
+## Motion
+
+--8<-- "snippets/galleries/lucien/motion.md"
+
+---
+
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   var toggle = document.getElementById('show-all-versions-toggle');

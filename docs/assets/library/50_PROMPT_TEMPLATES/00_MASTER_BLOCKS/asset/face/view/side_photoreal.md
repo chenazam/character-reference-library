@@ -24,10 +24,12 @@ Facial visibility:
 - nose bridge, nose tip, lips, chin, jawline, and forehead profile clearly readable
 - ear fully visible and naturally placed
 - profile silhouette must be clean and uninterrupted
+- the face must read as a clean silhouette with no visible frontal planes
 
 Identity requirements:
 
 - preserve exact facial identity from the primary photoreal front reference
+- preserve slight irregularity in jawline and chin; do not overly smooth the silhouette
 - the side view must match the same person as if physically rotated in space
 - do not reinterpret or redesign the face when changing angle
 

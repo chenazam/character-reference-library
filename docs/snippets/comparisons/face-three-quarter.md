@@ -2,8 +2,8 @@
 
   <div class="comparison-card">
     <h3><a href="../../characters/blake/">Blake</a></h3>
-    <a href="../../assets/library/10_CHARACTERS/BLAKE/01_IDENTITY/face/blake_three_quarter_face_v2.png" target="_blank">
-      <img src="../../assets/library/10_CHARACTERS/BLAKE/01_IDENTITY/face/blake_three_quarter_face_v2.png" alt="Blake face-three-quarter">
+    <a href="../../assets/library/10_CHARACTERS/BLAKE/01_IDENTITY/face/blake_three_quarter_face_v3.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/BLAKE/01_IDENTITY/face/blake_three_quarter_face_v3.png" alt="Blake face-three-quarter">
     </a>
   </div>
 
@@ -51,8 +51,8 @@
 
   <div class="comparison-card">
     <h3><a href="../../characters/lucien/">Lucien</a></h3>
-    <a href="../../assets/library/10_CHARACTERS/LUCIEN/01_IDENTITY/face/lucien_three_quarter_face_v1.png" target="_blank">
-      <img src="../../assets/library/10_CHARACTERS/LUCIEN/01_IDENTITY/face/lucien_three_quarter_face_v1.png" alt="Lucien face-three-quarter">
+    <a href="../../assets/library/10_CHARACTERS/LUCIEN/01_IDENTITY/face/lucien_three_quarter_face_v2.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/LUCIEN/01_IDENTITY/face/lucien_three_quarter_face_v2.png" alt="Lucien face-three-quarter">
     </a>
   </div>
 

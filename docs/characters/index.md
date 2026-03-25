@@ -81,7 +81,7 @@ Browse characters in the reference library.
 
 <a class="character-card" href="lucien/">
 
-  <img src="..\assets\library\10_CHARACTERS\LUCIEN\01_IDENTITY\gallery\lucien_gallery_image_v1.png" alt="Lucien">
+  <img src="..\assets\library\10_CHARACTERS\LUCIEN\01_IDENTITY\gallery\lucien_catalog_thumbnail_v1.png" alt="Lucien">
   <h3>Lucien</h3>
 
 </a>

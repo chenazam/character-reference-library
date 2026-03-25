@@ -24,10 +24,6 @@
     <img src="..\..\assets\library\10_CHARACTERS\BLAKE\02_BODY\anatomy\blake_anatomy_glutes_v1.png" alt="blake_anatomy_glutes (v1)">
   </a>
 
-  <a href="..\..\assets\library\10_CHARACTERS\BLAKE\02_BODY\anatomy\blake_anatomy_sheet_v1.png" target="_blank" class="character-gallery__item" data-asset-key="blake_anatomy_sheet" data-version="1" data-is-latest="true" title="blake_anatomy_sheet (v1)">
-    <img src="..\..\assets\library\10_CHARACTERS\BLAKE\02_BODY\anatomy\blake_anatomy_sheet_v1.png" alt="blake_anatomy_sheet (v1)">
-  </a>
-
   <a href="..\..\assets\library\10_CHARACTERS\BLAKE\02_BODY\anatomy\blake_anatomy_side_v1.png" target="_blank" class="character-gallery__item" data-asset-key="blake_anatomy_side" data-version="1" data-is-latest="false" title="blake_anatomy_side (v1)">
     <img src="..\..\assets\library\10_CHARACTERS\BLAKE\02_BODY\anatomy\blake_anatomy_side_v1.png" alt="blake_anatomy_side (v1)">
   </a>

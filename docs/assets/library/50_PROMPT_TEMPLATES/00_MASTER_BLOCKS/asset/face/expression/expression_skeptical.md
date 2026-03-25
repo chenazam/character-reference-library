@@ -8,6 +8,10 @@ Core behavior:
 
 Facial features:
 
+- one eyebrow must be clearly raised higher than the other
+- asymmetry must be visibly readable at first glance
+- avoid relying on head tilt to convey expression
+- expression must read through facial muscle movement, not pose
 - one brow slightly raised or asymmetrically engaged
 - eyes focused forward with mild scrutiny
 - mouth slightly tightened, pressed, or subtly offset

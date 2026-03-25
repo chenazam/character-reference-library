@@ -100,7 +100,7 @@ Facially, **Lucien** tends toward a **Calm Reserved** expression, while **Ragnar
 <div class="comparison-grid comparison-grid-2">
   <div class="comparison-item">
     <div class="comparison-label">Lucien</div>
-    <img src="../../assets/library/10_CHARACTERS/LUCIEN/02_BODY/structure/lucien_body_anchor_v1.png" alt="Lucien Body Anchor Comparison">
+    <img src="../../assets/library/10_CHARACTERS/LUCIEN/02_BODY/structure/lucien_body_anchor_v2.png" alt="Lucien Body Anchor Comparison">
   </div>
   <div class="comparison-item">
     <div class="comparison-label">Ragnar</div>

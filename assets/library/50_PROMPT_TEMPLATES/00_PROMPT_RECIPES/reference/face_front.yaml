@@ -31,6 +31,9 @@ include:
   - characters/{character_id}/hair.md
   - characters/{character_id}/guardrails.md
 
+optional:
+  - characters/{character_id}/intensity.md
+
 conditional:
   references_attached:
     - blocks/global/reference_fidelity.md

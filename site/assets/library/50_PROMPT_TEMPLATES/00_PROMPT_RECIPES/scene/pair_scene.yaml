@@ -2,14 +2,15 @@ name: pair_scene
 
 include:
   # Global
-  - blocks/global/reference_intent.md
   - blocks/global/style/scene_realistic.md
-  - blocks/global/linework.md
   - blocks/global/color.md
   - blocks/global/consistency.md
   - blocks/global/camera_base.md
-  - blocks/global/cleanliness/lighting.md
-  - blocks/global/cleanliness/background.md
+
+  # Scene
+  - blocks/scene/background_environment.md
+  - blocks/scene/lighting_environment.md
+  - blocks/scene/behavior/limb_clarity.md
 
   # Family
   - blocks/family/scene/base.md
@@ -20,6 +21,8 @@ include:
   - characters/{character_a}/face.md
   - characters/{character_a}/hair.md
   - characters/{character_a}/body.md
+  - characters/{character_a}/movement.md
+  - characters/{character_a}/expression.md
   - characters/{character_a}/style.md
   - characters/{character_a}/guardrails.md
 
@@ -28,19 +31,35 @@ include:
   - characters/{character_b}/face.md
   - characters/{character_b}/hair.md
   - characters/{character_b}/body.md
+  - characters/{character_b}/movement.md
+  - characters/{character_b}/expression.md
   - characters/{character_b}/style.md
   - characters/{character_b}/guardrails.md
+
+  # Pair identity
+  - pairs/{pair_id}/blocks/pair_core.md
+  - pairs/{pair_id}/blocks/pair_dynamic.md
+  - pairs/{pair_id}/blocks/pair_pose_rules.md
+  - pairs/{pair_id}/blocks/pair_expression.md
 
   # Identity reinforcement
   - blocks/global/identity/face_anchor_scene.md
 
-  # Scene payload
+optional:
+  # Per-character outfit selection
+  - characters/{character_a}/outfits/{outfit_a_id}.md
+  - characters/{character_b}/outfits/{outfit_b_id}.md
+  - blocks/scene/wardrobe_modes/{mode_a_id}.md
+  - blocks/scene/wardrobe_modes/{mode_b_id}.md
+
+  # Pair modifiers
+  - blocks/scene/intensity/{intensity_id}.md
+  - blocks/scene/scenarios/{scenario_id}.md
+  - pairs/{pair_id}/scenarios/{scenario_id}.md
+
+  # Optional freeform payload
   - blocks/scene/input/scene_block.md
 
 conditional:
   references_attached:
-    - blocks/global/reference_fidelity.md
-
-optional:
-  - characters/{character_a}/outfits/{outfit_id}.md
-  - characters/{character_b}/outfits/{outfit_id}.md
+    - blocks/global/reference_fidelity_scene.md

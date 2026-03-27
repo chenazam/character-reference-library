@@ -9,6 +9,7 @@ Hair:
 Hair behavior:
 
 - maintains volume and structure without appearing stiff
-- styling should feel intentional but not overworked
+- styling should feel intentional but not overly precise or rigid
+- slight natural variation or looseness is acceptable
 
 Maintain consistent hair shape, volume, and hairline across all outputs.

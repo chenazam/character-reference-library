@@ -79,6 +79,12 @@ This text is used directly for the character page overview.</p>
 
 ---
 
+## Style
+
+--8<-- "snippets/galleries/alek/style.md"
+
+---
+
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   var toggle = document.getElementById('show-all-versions-toggle');

@@ -1,42 +1,78 @@
-Body:
+# Body
 
-- height: 6'5" (195 cm)
-- build: lean muscular athletic physique with elongated proportions
-- shoulders: broad and structurally dominant
-- torso: athletic, defined, and well-proportioned without heavy bulk
-- waist: naturally tapered with a clean V-shape
-- hips: balanced and secondary to upper-body emphasis
-- limbs: long, well-proportioned limbs contributing to overall height and presence
+## Core build
 
-Physique distribution:
+- height: 6'5" (195 cm), and this height must read clearly at a glance
+- build: tall, lean muscular athletic physique with distinctly elongated proportions and visible physical agility
+- shoulders: broad, but carried with ease rather than rigid structure
+- torso: defined and athletic, with natural, functional musculature rather than sculpted perfection
+- waist: tapered, contributing to a strong V-shape without appearing overly structured
+- hips: balanced and fluid, allowing for natural, relaxed movement
+- limbs: noticeably long and well-proportioned, reinforcing reach, mobility, and physical presence
 
-- upper body is slightly emphasized through shoulder width and chest structure
-- musculature is evenly developed but reads strongest in shoulders and upper torso
-- lower body is athletic and proportional, not visually dominant
-- overall mass distribution remains balanced with a subtle upper-body bias
+---
 
-Muscle definition:
+## Proportion priorities
 
-- clear muscular definition across the body without excessive segmentation
-- abdominal structure should be visible but not sharply segmented
-- avoid extreme six-pack emphasis or bodybuilder-style sculpting
-- definition should read as natural athletic conditioning rather than competition-level conditioning
+- body must not read as average-height or compact
+- legs are slightly long relative to the torso
+- arms are slightly long relative to the torso, with hands sitting a little lower than average
+- head-to-body ratio should read slightly smaller than average, reinforcing height
+- vertical spacing through the torso should feel elongated rather than compact
+- overall proportions should immediately suggest a man who is very tall, not just moderately tall
+- legs must read visibly longer than average at a glance, with slightly elevated hip line
+- thigh and lower leg length should feel extended, not standard proportion
+- arms must read slightly longer than average, with hands resting lower on the thigh
+- head-to-body ratio should be subtly reduced to reinforce tall scale
+- avoid standard or average human proportions at all costs
+- if proportions read as average height, the result is incorrect
 
-Silhouette:
+---
 
-- tall, elongated athletic frame
-- broad shoulder line with clean taper through the waist
-- balanced proportions with slight upper-body emphasis
+## Physique distribution
 
-Silhouette characteristics:
+- upper body is visually strong but not rigidly emphasized
+- musculature appears naturally developed through movement and activity rather than deliberate sculpting
+- definition is present across the entire body, but reads as _alive_ rather than posed
+- overall distribution favors fluidity and mobility over static power
 
-- strong horizontal line across shoulders
-- visible taper from shoulders to waist
+---
+
+## Muscle definition
+
+- visible muscular definition with soft transitions between muscle groups
+- abdominal structure is present but not sharply segmented
+- avoid bodybuilder-style separation or overly clean lines
+- definition should feel natural, slightly uneven, and organic
+- body should read as capable, reactive, and physically expressive
+
+---
+
+## Silhouette
+
+- tall, elongated athletic frame with strong vertical presence
+- broad shoulders with a natural, unforced taper
+- silhouette should feel slightly dynamic even in neutral stance
+- overall read: tall, magnetic, and physically confident
+
+---
+
+## Silhouette characteristics
+
+- strong but relaxed shoulder line
+- visible taper from shoulders to waist without rigid symmetry
 - long vertical lines through torso and legs
-- overall silhouette reads as tall, broad, and imposing
+- slight asymmetry in posture is acceptable and desirable
+- silhouette should never feel stiff or overly posed
+- height should be reinforced by long leg line, long reach, and an elongated overall frame
 
-Posture:
+---
 
-- upright and controlled
-- open chest and relaxed but confident stance
-- natural stillness with subtle dominance in presence
+## Posture
+
+- relaxed but intentional
+- weight may shift naturally rather than being perfectly centered
+- chest open, but not held in a rigid or “presentational” way
+- subtle forward energy in stance, as if ready to move
+- presence reads as confident, slightly unpredictable, and physically aware
+- stance should not be perfectly symmetrical; allow slight natural asymmetry to enhance realism and vertical presence

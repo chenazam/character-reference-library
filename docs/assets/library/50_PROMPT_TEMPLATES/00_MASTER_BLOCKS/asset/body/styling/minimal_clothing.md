@@ -5,7 +5,7 @@ standardized anatomy reference clothing (required)
 
 Compression shorts:
 
-- fitted compression shorts
+- fitted athletic shorts (compression-style, mid-thigh length)
 - mid-thigh length
 - snug fit to preserve body shape readability
 - light desaturated neutral gray (consistent across all assets)
@@ -15,11 +15,10 @@ Compression shorts:
 
 Upper body constraint (critical):
 
-- torso visibility is maintained for anatomical reference
-- no shirt
-- no tank top
-- no undershirt
-- no compression top
+- upper body form must remain clearly readable
+- clothing must not obscure body structure
+- minimal, form-fitting presentation required
+- minimal upper-body coverage allowed only if required for policy compliance
 
 Additional constraints:
 

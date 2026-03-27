@@ -23,8 +23,8 @@
 
   <div class="comparison-card">
     <h3><a href="../../characters/hudson/">Hudson</a></h3>
-    <a href="../../assets/library/10_CHARACTERS/HUDSON/01_IDENTITY/face/hudson_profile_face.png" target="_blank">
-      <img src="../../assets/library/10_CHARACTERS/HUDSON/01_IDENTITY/face/hudson_profile_face.png" alt="Hudson face-profile">
+    <a href="../../assets/library/10_CHARACTERS/HUDSON/01_IDENTITY/face/hudson_profile_face_v1.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/HUDSON/01_IDENTITY/face/hudson_profile_face_v1.png" alt="Hudson face-profile">
     </a>
   </div>
 
@@ -37,8 +37,8 @@
 
   <div class="comparison-card">
     <h3><a href="../../characters/jonah/">Jonah</a></h3>
-    <a href="../../assets/library/10_CHARACTERS/JONAH/01_IDENTITY/face/jonah_profile_face_v2.png" target="_blank">
-      <img src="../../assets/library/10_CHARACTERS/JONAH/01_IDENTITY/face/jonah_profile_face_v2.png" alt="Jonah face-profile">
+    <a href="../../assets/library/10_CHARACTERS/JONAH/01_IDENTITY/face/jonah_profile_face_v3.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/JONAH/01_IDENTITY/face/jonah_profile_face_v3.png" alt="Jonah face-profile">
     </a>
   </div>
 
@@ -72,8 +72,8 @@
 
   <div class="comparison-card">
     <h3><a href="../../characters/alek/">Alek</a></h3>
-    <a href="../../assets/library/10_CHARACTERS/ALEK/01_IDENTITY/face/alek_profile_face_v1.png" target="_blank">
-      <img src="../../assets/library/10_CHARACTERS/ALEK/01_IDENTITY/face/alek_profile_face_v1.png" alt="Alek face-profile">
+    <a href="../../assets/library/10_CHARACTERS/ALEK/01_IDENTITY/face/alek_profile_face_v2.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/ALEK/01_IDENTITY/face/alek_profile_face_v2.png" alt="Alek face-profile">
     </a>
   </div>
 

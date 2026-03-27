@@ -23,8 +23,8 @@
 
   <div class="comparison-card">
     <h3><a href="../../characters/hudson/">Hudson</a></h3>
-    <a href="../../assets/library/10_CHARACTERS/HUDSON/01_IDENTITY/face/hudson_three_quarter_face.png" target="_blank">
-      <img src="../../assets/library/10_CHARACTERS/HUDSON/01_IDENTITY/face/hudson_three_quarter_face.png" alt="Hudson face-three-quarter">
+    <a href="../../assets/library/10_CHARACTERS/HUDSON/01_IDENTITY/face/hudson_three_quarter_face_v1.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/HUDSON/01_IDENTITY/face/hudson_three_quarter_face_v1.png" alt="Hudson face-three-quarter">
     </a>
   </div>
 
@@ -37,8 +37,8 @@
 
   <div class="comparison-card">
     <h3><a href="../../characters/jonah/">Jonah</a></h3>
-    <a href="../../assets/library/10_CHARACTERS/JONAH/01_IDENTITY/face/jonah_three_quarter_face_v2.png" target="_blank">
-      <img src="../../assets/library/10_CHARACTERS/JONAH/01_IDENTITY/face/jonah_three_quarter_face_v2.png" alt="Jonah face-three-quarter">
+    <a href="../../assets/library/10_CHARACTERS/JONAH/01_IDENTITY/face/jonah_three_quarter_face_v3.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/JONAH/01_IDENTITY/face/jonah_three_quarter_face_v3.png" alt="Jonah face-three-quarter">
     </a>
   </div>
 
@@ -72,8 +72,8 @@
 
   <div class="comparison-card">
     <h3><a href="../../characters/alek/">Alek</a></h3>
-    <a href="../../assets/library/10_CHARACTERS/ALEK/01_IDENTITY/face/alek_three_quarter_face_v1.png" target="_blank">
-      <img src="../../assets/library/10_CHARACTERS/ALEK/01_IDENTITY/face/alek_three_quarter_face_v1.png" alt="Alek face-three-quarter">
+    <a href="../../assets/library/10_CHARACTERS/ALEK/01_IDENTITY/face/alek_three_quarter_face_v2.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/ALEK/01_IDENTITY/face/alek_three_quarter_face_v2.png" alt="Alek face-three-quarter">
     </a>
   </div>
 

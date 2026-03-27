@@ -23,8 +23,8 @@
 
   <div class="comparison-card">
     <h3><a href="../../characters/hudson/">Hudson</a></h3>
-    <a href="../../assets/library/10_CHARACTERS/HUDSON/02_BODY/anatomy/hudson_anatomy_front_v1.png" target="_blank">
-      <img src="../../assets/library/10_CHARACTERS/HUDSON/02_BODY/anatomy/hudson_anatomy_front_v1.png" alt="Hudson anatomy-front">
+    <a href="../../assets/library/10_CHARACTERS/HUDSON/02_BODY/anatomy/hudson_anatomy_front_v2.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/HUDSON/02_BODY/anatomy/hudson_anatomy_front_v2.png" alt="Hudson anatomy-front">
     </a>
   </div>
 
@@ -37,8 +37,8 @@
 
   <div class="comparison-card">
     <h3><a href="../../characters/jonah/">Jonah</a></h3>
-    <a href="../../assets/library/10_CHARACTERS/JONAH/02_BODY/anatomy/jonah_anatomy_front_v1.png" target="_blank">
-      <img src="../../assets/library/10_CHARACTERS/JONAH/02_BODY/anatomy/jonah_anatomy_front_v1.png" alt="Jonah anatomy-front">
+    <a href="../../assets/library/10_CHARACTERS/JONAH/02_BODY/anatomy/jonah_anatomy_front_v2.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/JONAH/02_BODY/anatomy/jonah_anatomy_front_v2.png" alt="Jonah anatomy-front">
     </a>
   </div>
 
@@ -72,8 +72,8 @@
 
   <div class="comparison-card">
     <h3><a href="../../characters/alek/">Alek</a></h3>
-    <a href="../../assets/library/10_CHARACTERS/ALEK/02_BODY/anatomy/alek_anatomy_front_v1.png" target="_blank">
-      <img src="../../assets/library/10_CHARACTERS/ALEK/02_BODY/anatomy/alek_anatomy_front_v1.png" alt="Alek anatomy-front">
+    <a href="../../assets/library/10_CHARACTERS/ALEK/02_BODY/anatomy/alek_anatomy_front_v2.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/ALEK/02_BODY/anatomy/alek_anatomy_front_v2.png" alt="Alek anatomy-front">
     </a>
   </div>
 

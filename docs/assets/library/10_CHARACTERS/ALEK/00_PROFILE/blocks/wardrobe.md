@@ -1,48 +1,66 @@
-Wardrobe:
+# Wardrobe
 
-Clothing should emphasize:
+## Clothing should emphasize
 
 - tall, elongated proportions
-- broad shoulders and strong upper-body structure
+- long leg line and vertical presence
+- broad shoulders with relaxed structure
 - clean taper through the waist
-- overall polished and controlled silhouette
+- overall silhouette that feels intentional, not static
 
-Core wardrobe logic:
+---
 
-- clothing should reinforce structure and presence rather than exaggerate or distract
-- emphasis on fit, material quality, and clean lines
-- outfits should feel intentional and composed even in casual contexts
+## Core wardrobe logic
 
-Common elements:
+- clothing reinforces presence and physical awareness rather than pure structure
+- emphasis on fit, material quality, and silhouette clarity
+- outfits should feel composed, but never rigid or overly controlled
+- subtle asymmetry or relaxed elements are acceptable and desirable
 
-- fitted or tailored shirts
-- linen shirts or lightweight structured tops
-- leather jackets or refined outerwear
+---
+
+## Common elements
+
+- fitted or tailored shirts with slight ease
+- linen shirts, often worn slightly open at the collar
+- leather jackets with strong structure and presence
 - well-fitted trousers or clean-cut casual pants
-- minimal, high-quality footwear
+- minimal, high-quality footwear with understated design
 
-Signature elements:
+---
 
-- leather jacket as a defining outerwear piece
-- neutral-toned fitted shirts with clean structure
+## Signature elements
 
-Exposure rules:
+- leather jacket as a defining piece, often used to anchor the look
+- neutral-toned fitted tops with slight openness (neckline, sleeves, or drape)
+- occasional contrast between structured outerwear and softer inner layers
 
-- body exposure should be selective and intentional
-- avoid constant or casual overexposure
-- when present, exposure should feel confident and controlled rather than attention-seeking
+---
 
-Style tone:
+## Exposure rules
+
+- body exposure is selective and intentional
+- never constant or casual
+- when present, exposure should feel deliberate and confident
+- exposure should enhance tension, not reduce it
+
+---
+
+## Style tone
 
 - confident
 - controlled
-- polished
-- subtly dominant
+- magnetic
+- subtly dangerous
+- physically aware
 
-Avoid:
+---
+
+## Avoid
 
 - oversized or baggy silhouettes
-- loud colors or saturated palettes
-- velvet or ornate luxury fabrics
-- overly layered or visually busy outfits
-- sloppy or low-effort casual styling
+- loud or saturated colors
+- overly clean, sterile minimalism
+- overly rigid or “perfect” styling
+- excessive layering or visual noise
+- anything that removes tension or edge from the silhouette

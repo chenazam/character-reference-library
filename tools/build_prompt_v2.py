@@ -6,6 +6,9 @@ import re
 import sys
 from pathlib import Path
 from typing import Any
+from dataclasses import dataclass
+
+
 
 try:
     import yaml  # pip install pyyaml
@@ -20,11 +23,20 @@ DEFAULT_LIBRARY_ROOT = ROOT / "docs" / "assets" / "library"
 
 PROMPTS_DIRNAME = "50_PROMPT_TEMPLATES"
 CHARACTERS_DIRNAME = "10_CHARACTERS"
+PAIRS_DIRNAME = "20_CHARACTER_PAIRS"
 MASTER_BLOCKS_DIRNAME = "00_MASTER_BLOCKS"
 RECIPES_DIRNAME = "00_PROMPT_RECIPES"
 
 WHITESPACE_RE = re.compile(r"[ \t]+")
 BLANKS_RE = re.compile(r"\n{3,}")
+
+
+@dataclass
+class DebugEvent:
+    status: str   # LOAD, MISS, FAIL, SKIP
+    label: str
+    path: str | None = None
+    detail: str | None = None
 
 
 class PromptBuildError(RuntimeError):
@@ -92,6 +104,67 @@ class PromptBuilderV2:
         self.blocks_root = self.prompts_root / MASTER_BLOCKS_DIRNAME
         self.recipes_root = self.prompts_root / RECIPES_DIRNAME
         self.characters_root = self.library_root / CHARACTERS_DIRNAME
+        self.pairs_root = self.library_root / PAIRS_DIRNAME
+        self.debug_events: list[DebugEvent] = []
+
+
+    def _record_event(self, status: str, label: str, path: Path | None = None, detail: str | None = None) -> None:
+        self.debug_events.append(
+            DebugEvent(
+                status=status,
+                label=label,
+                path=str(path) if path else None,
+                detail=detail,
+            )
+        )
+
+    def _scoped_label_for_include(
+        self, include_ref: str, variables: dict[str, str]
+    ) -> tuple[str | None, str]:
+        # Avoid hard failure on unresolved optional placeholders
+        try:
+            rendered = render_string(include_ref, variables)
+        except PromptBuildError:
+            rendered = include_ref
+
+        char_a = variables.get("character_a", "A")
+        char_b = variables.get("character_b", "B")
+
+        # Character-specific outfit blocks
+        if include_ref.startswith("characters/{character_a}/outfits/"):
+            return ("A", f"Character A ({char_a}) - Outfit")
+
+        if include_ref.startswith("characters/{character_b}/outfits/"):
+            return ("B", f"Character B ({char_b}) - Outfit")
+
+        # Character-specific wardrobe modes
+        if include_ref.startswith("blocks/scene/wardrobe_modes/"):
+            if "{mode_a_id}" in include_ref:
+                return ("A", f"Character A ({char_a}) - Wardrobe mode")
+            if "{mode_b_id}" in include_ref:
+                return ("B", f"Character B ({char_b}) - Wardrobe mode")
+            return (None, "Wardrobe mode")
+
+        # Intensity
+        if include_ref.startswith("blocks/scene/intensity/"):
+            if "{intensity_a_id}" in include_ref:
+                return ("A", f"Character A ({char_a}) - Intensity")
+            if "{intensity_b_id}" in include_ref:
+                return ("B", f"Character B ({char_b}) - Intensity")
+            return (None, "Scene intensity")
+
+        # Scenarios
+        if rendered.startswith("blocks/scene/scenarios/") or rendered.startswith(
+            f"pairs/{variables.get('pair_id', '')}/scenarios/"
+        ):
+            scenario = variables.get("scenario_id", "unknown")
+            return (None, f"Scenario ({scenario})")
+
+        return (None, rendered)
+
+    def _wrap_scoped_block(self, include_ref: str, content: str, variables: dict[str, str]) -> str:
+        _, label = self._scoped_label_for_include(include_ref, variables)
+        return f"Apply the following only to {label}:\n{content.strip()}"
 
     def resolve_variable_values(self, variables: dict[str, str]) -> dict[str, str]:
         resolved: dict[str, str] = {}
@@ -131,6 +204,18 @@ class PromptBuilderV2:
             _, character_id, *rest = parts
             return self.characters_root / character_id / "00_PROFILE" / "blocks" / Path(*rest)
 
+        if rendered.startswith("pairs/"):
+            # shorthand:
+            # pairs/{pair_id}/pair_core.md
+            # -> 20_PAIRS/{pair_id}/pair_core.md
+            parts = rendered_path.parts
+            if len(parts) < 3:
+                raise PromptBuildError(
+                    f"Pair include must be at least pairs/<id>/<file>: {rendered}"
+                )
+            _, pair_id, *rest = parts
+            return self.pairs_root / pair_id / Path(*rest)
+
         raise PromptBuildError(
             f"Unsupported include prefix in '{include_ref}'. "
             "Use 'blocks/...' or 'characters/...'."
@@ -141,12 +226,24 @@ class PromptBuilderV2:
         raw = strip_code_fence(read_text(path))
         return render_string(raw, variables)
 
-    def load_block_optional(self, include_ref: str, variables: dict[str, str]) -> str | None:
-        path = self.resolve_include_path(include_ref, variables)
+    def load_block_optional_with_status(self, include_ref: str, variables: dict[str, str]) -> tuple[str | None, str, Path | None, str | None]:
+        try:
+            path = self.resolve_include_path(include_ref, variables)
+        except PromptBuildError as exc:
+            return None, "fail", None, str(exc)
+
         if not path.exists():
-            return None
+            return None, "miss", path, "file not found"
+
         raw = strip_code_fence(read_text(path))
-        return render_string(raw, variables)
+
+        try:
+            rendered = render_string(raw, variables)
+            if not rendered.strip():
+                return None, "skip", path, "rendered empty"
+            return rendered, "load", path, None
+        except PromptBuildError as exc:
+            return None, "fail", path, str(exc)
 
     def build_prompt(
         self,
@@ -189,15 +286,28 @@ class PromptBuilderV2:
                 raise PromptBuildError(
                     f"All recipe optional entries must be strings: {recipe_ref}"
                 )
-            loaded = self.load_block_optional(item, variables)
-            if loaded and loaded.strip():
+
+            loaded, status, path, detail = self.load_block_optional_with_status(item, variables)
+
+            label = self._scoped_label_for_include(item, variables)[1]
+
+            if status == "load" and loaded:
+                wrapped = self._wrap_scoped_block(item, loaded, variables)
+
                 if debug_blocks:
-                    path = self.resolve_include_path(item, variables)
-                    relative = path.relative_to(self.library_root)
-                    header = f"\n--- BLOCK: {relative.as_posix()} ---\n"
-                    pieces.append(header + loaded)
+                    relative = path.relative_to(self.library_root) if path else None
+                    header = f"\n--- BLOCK: {relative.as_posix()} ---\n" if relative else "\n--- BLOCK: <unknown> ---\n"
+                    pieces.append(header + wrapped)
                 else:
-                    pieces.append(loaded)
+                    pieces.append(wrapped)
+
+                self._record_event("LOAD", label, path)
+            elif status == "miss":
+                self._record_event("MISS", label, path, detail)
+            elif status == "fail":
+                self._record_event("FAIL", label, path, detail)
+            else:
+                self._record_event("SKIP", label, path, detail)
 
         conditional_map = recipe.get("conditional", {})
         if conditional_map:
@@ -291,6 +401,25 @@ def build_default_variables(args: argparse.Namespace) -> dict[str, str]:
 
     if getattr(args, "outfit", None):
         variables.setdefault("outfit_id", args.outfit)
+        variables.setdefault("outfit_a_id", args.outfit)
+        variables.setdefault("outfit_b_id", args.outfit)
+
+    if getattr(args, "outfit_a", None):
+        variables.setdefault("outfit_a_id", args.outfit_a)
+
+    if getattr(args, "outfit_b", None):
+        variables.setdefault("outfit_b_id", args.outfit_b)
+
+    if getattr(args, "mode", None):
+        variables.setdefault("mode_id", args.mode)
+        variables.setdefault("mode_a_id", args.mode)
+        variables.setdefault("mode_b_id", args.mode)
+
+    if getattr(args, "mode_a", None):
+        variables.setdefault("mode_a_id", args.mode_a)
+
+    if getattr(args, "mode_b", None):
+        variables.setdefault("mode_b_id", args.mode_b)
 
     if getattr(args, "scene_block", None):
         variables.setdefault("scene_block", args.scene_block)
@@ -300,6 +429,15 @@ def build_default_variables(args: argparse.Namespace) -> dict[str, str]:
 
     if getattr(args, "character_b", None):
         variables.setdefault("character_b", args.character_b)
+
+    if getattr(args, "pair", None):
+        variables.setdefault("pair_id", args.pair)
+
+    if getattr(args, "scenario", None):
+        variables.setdefault("scenario_id", args.scenario)
+
+    if getattr(args, "intensity", None):
+        variables.setdefault("intensity_id", args.intensity)    
 
     if getattr(args, "scene_description", None):
         variables.setdefault("scene_description", args.scene_description)
@@ -373,6 +511,46 @@ def main() -> None:
         action="store_true",
         help="Inject block filenames into prompt for debugging",
     )
+    parser.add_argument(
+        "--pair", 
+        help="Pair id"
+    )
+    parser.add_argument(
+        "--scenario", 
+        help="Scenario id, e.g. grounding_hip_pull"
+    )
+    parser.add_argument(
+        "--intensity", 
+        help="Intensity id, e.g. level_3_charged"
+    )
+    parser.add_argument(
+        "--intensity-a", 
+        help="Intensity id for character A"
+    )
+    parser.add_argument(
+        "--intensity-b", 
+        help="Intensity id for character B"
+    )
+    parser.add_argument(
+        "--outfit-a", 
+        help="Outfit id for character A"
+    )
+    parser.add_argument(
+        "--outfit-b", 
+        help="Outfit id for character B"
+    )
+    parser.add_argument(
+        "--mode", 
+        help="Wardrobe mode id for single-character scene"
+    )
+    parser.add_argument(
+        "--mode-a", 
+        help="Wardrobe mode id for character A"
+    )
+    parser.add_argument(
+        "--mode-b", 
+        help="Wardrobe mode id for character B"
+    )
 
     args = parser.parse_args()
 
@@ -396,6 +574,16 @@ def main() -> None:
         if args.output:
             args.output.parent.mkdir(parents=True, exist_ok=True)
             args.output.write_text(final_prompt, encoding="utf-8")
+
+        if args.debug_blocks and builder.debug_events:
+            print("\n\n=== DEBUG BLOCK STATUS ===", file=sys.stderr)
+            for event in builder.debug_events:
+                msg = f"[{event.status}] {event.label}"
+                if event.path:
+                    msg += f" -> {event.path}"
+                if event.detail:
+                    msg += f" ({event.detail})"
+                print(msg, file=sys.stderr)
 
         if args.stdout:
             print(final_prompt)

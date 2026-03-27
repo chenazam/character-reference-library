@@ -5,35 +5,19 @@ panel_sheet_assembler.py
 Generalized sheet assembler for ordered panel sets such as:
 - pose sheets
 - expression sheets
+- UCS sheets
 
 Design goals:
 - versioned input/output
 - configurable ordered panel IDs
-- preset defaults for pose/expression
+- preset defaults for pose/expression/UCS
 - "contain" fit mode (never crop source images)
 - configurable grid, panel ratio, spacing, margins, labels
-
-Default source/output locations:
-- expression:
-  /docs/assets/library/10_CHARACTERS/[CHARACTER_NAME]/01_IDENTITY/expression
-- pose:
-  /docs/assets/library/10_CHARACTERS/[CHARACTER_NAME]/05_MOTION/poses
-
-Expected input filename pattern:
-  {character}_{sheet_type}_{panel_id}_v{N}.png
-
-Example:
-  jasper_pose_balanced_v1.png
-  jasper_expression_smirk_v2.png
-
-Output filename pattern:
-  {character}_{sheet_type}_sheet_v{N}.png
 """
 
 from __future__ import annotations
 
 import argparse
-import math
 import re
 from dataclasses import dataclass
 from pathlib import Path
@@ -47,25 +31,68 @@ VERSION_RE = re.compile(r"_v(\d+)\.png$", re.IGNORECASE)
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_LIBRARY_ROOT = PROJECT_ROOT / "docs" / "assets" / "library" / "10_CHARACTERS"
 
+DEFAULT_POSE_PANEL_IDS = [
+    "balanced",
+    "grounded",
+    "casual",
+    "rotation",
+    "mid_step",
+    "open_gesture",
+]
+
+DEFAULT_EXPRESSION_PANEL_IDS = [
+    "neutral",
+    "smile",
+    "flirty",
+    "smirk",
+    "determined",
+    "skeptical",
+    "surprised",
+    "vulnerable",
+]
+
 POSE_LABELS = {
     "balanced": "BALANCED",
-    "contrapposto": "CONTRAPPOSTO",
     "grounded": "GROUNDED",
-    "relaxed": "RELAXED",
-    "step": "STEP",
+    "casual": "CASUAL",
     "rotation": "ROTATION",
+    "mid_step": "MID-STEP",
+    "open_gesture": "OPEN GESTURE",
 }
 
 EXPRESSION_LABELS = {
     "neutral": "NEUTRAL",
-    "soft": "SOFT",
     "smile": "SMILE",
+    "flirty": "FLIRTY",
     "smirk": "SMIRK",
-    "playful": "PLAYFUL",
-    "focused": "FOCUSED",
-    "serious": "SERIOUS",
-    "provocative": "PROVOCATIVE",
+    "determined": "DETERMINED",
+    "skeptical": "SKEPTICAL",
+    "surprised": "SURPRISED",
+    "vulnerable": "VULNERABLE",
 }
+
+# Relative to character root, without version suffix.
+def build_ucs_panels(
+    name: str,
+    expression_id: str,
+    outfit_id: str,
+    outfit_label: Optional[str] = None,
+) -> List[Tuple[str, str]]:
+    if outfit_id == "signature":
+        outfit_rel = f"04_STYLE/signature/{name}_outfit_signature_front"
+        outfit_panel_label = outfit_label or "SIGNATURE"
+    else:
+        outfit_rel = f"04_STYLE/wardrobes/{name}_outfit_{outfit_id}_front"
+        outfit_panel_label = outfit_label or outfit_id.replace("_", " ").upper()
+
+    return [
+        (f"01_IDENTITY/face/{name}_front_face", "FRONT FACE"),
+        (f"01_IDENTITY/face/{name}_three_quarter_face", "3/4 FACE"),
+        (f"01_IDENTITY/face/{name}_front_face_photoreal", "PHOTOREAL"),
+        (f"02_BODY/anatomy/{name}_anatomy_front", "BODY"),
+        (outfit_rel, outfit_panel_label),
+        (f"01_IDENTITY/expression/{name}_expression_{expression_id}", "EXPRESSION"),
+    ]
 
 
 @dataclass(frozen=True)
@@ -119,6 +146,22 @@ PRESETS: Dict[str, Preset] = {
         label_color="#3a3a3a",
         source_subdir=Path("01_IDENTITY/expression"),
     ),
+    "ucs": Preset(
+        rows=2,
+        cols=3,
+        panel_ratio=(4, 5),
+        sheet_width=2600,
+        margin=90,
+        gap=45,
+        panel_padding=20,
+        labels=True,
+        label_font_size=30,
+        label_gap=18,
+        bg_color="#efefef",
+        panel_bg_color="#f8f8f8",
+        label_color="#3a3a3a",
+        source_subdir=Path("."),  # unused for UCS
+    ),
 }
 
 
@@ -135,7 +178,7 @@ def resolve_character_dir(library_root: Path, character: str) -> Path:
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Assemble pose/expression panel sheets.")
+    parser = argparse.ArgumentParser(description="Assemble pose/expression/UCS panel sheets.")
 
     parser.add_argument("--character", required=True, help="Character name, e.g. jasper")
     parser.add_argument(
@@ -146,8 +189,8 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--panel-ids",
-        required=True,
-        help="Comma-separated ordered panel IDs, e.g. balanced,contrapposto,...",
+        default=None,
+        help="Comma-separated ordered panel IDs, e.g. balanced,contrapposto,... Required for pose/expression. Ignored for ucs.",
     )
 
     parser.add_argument(
@@ -163,7 +206,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output-dir",
         default=None,
-        help="Optional explicit output directory override. Defaults to source-dir.",
+        help="Optional explicit output directory override. Defaults to source-dir (or character root for UCS).",
     )
     parser.add_argument(
         "--version",
@@ -231,10 +274,21 @@ def parse_args() -> argparse.Namespace:
         default=None,
         help='Label text color, e.g. "#5f5f5f"',
     )
+
     parser.add_argument(
-        "--character-dir",
+        "--expression-id",
+        help="Expression id for UCS (default: smirk)",
+    )
+
+    parser.add_argument(
+        "--outfit-id",
+        default="signature",
+        help="Outfit id for UCS. Default: signature. Non-signature outfits are resolved from 04_STYLE/wardrobes.",
+    )
+    parser.add_argument(
+        "--outfit-label",
         default=None,
-        help="Optional character directory name override, e.g. JASPER",
+        help="Optional custom UCS label for the outfit panel. Defaults to SIGNATURE or the uppercase outfit id.",
     )
 
     return parser.parse_args()
@@ -253,7 +307,7 @@ def parse_ratio(value: Optional[str], fallback: Tuple[int, int]) -> Tuple[int, i
 
 
 def normalize_character_name(name: str) -> str:
-    return name.strip()
+    return name.strip().lower()
 
 
 def make_panel_filename(character: str, sheet_type: str, panel_id: str, version: int) -> str:
@@ -265,6 +319,8 @@ def make_panel_glob(character: str, sheet_type: str, panel_id: str) -> str:
 
 
 def make_output_filename(character: str, sheet_type: str, version: int) -> str:
+    if sheet_type == "ucs":
+        return f"{character}_ucs_v{version}.png"
     return f"{character}_{sheet_type}_sheet_v{version}.png"
 
 
@@ -273,11 +329,13 @@ def extract_version(path: Path) -> Optional[int]:
     return int(match.group(1)) if match else None
 
 
-def resolve_source_dir(character: str, sheet_type: str, library_root: Path, source_dir: Optional[str]) -> Path:
+def resolve_source_dir(character_dir: Path, sheet_type: str, source_dir: Optional[str]) -> Path:
     if source_dir:
         return Path(source_dir)
     preset = PRESETS[sheet_type]
-    return library_root / character / preset.source_subdir
+    if sheet_type == "ucs":
+        return character_dir
+    return character_dir / preset.source_subdir
 
 
 def resolve_output_dir(source_dir: Path, output_dir: Optional[str]) -> Path:
@@ -309,8 +367,62 @@ def resolve_panel_file(
     return candidates[-1]
 
 
+def resolve_latest_version_file(base_path: Path) -> Path:
+    parent = base_path.parent
+    stem = base_path.name
+    candidates = list(parent.glob(f"{stem}_v*.png"))
+    candidates = [p for p in candidates if extract_version(p) is not None]
+
+    if not candidates:
+        raise FileNotFoundError(f"No versions found for UCS panel base: {base_path}")
+
+    candidates.sort(key=lambda p: extract_version(p) or -1)
+    return candidates[-1]
+
+
+def resolve_ucs_panels(
+    character_dir: Path,
+    character_name: str,
+    expression_id: str,
+    outfit_id: str,
+    outfit_label: Optional[str],
+    explicit_version: Optional[int],
+) -> Tuple[List[Path], List[str], List[str]]:
+    panel_paths: List[Path] = []
+    panel_ids: List[str] = []
+    panel_labels: List[str] = []
+
+    ucs_panels = build_ucs_panels(
+    name=character_name,
+    expression_id=expression_id,
+    outfit_id=outfit_id,
+    outfit_label=outfit_label,
+    )
+
+    for rel_base, label in ucs_panels:
+        rel = rel_base.format(name=character_name, expression_id=expression_id)
+        base_path = character_dir / rel
+
+        if explicit_version is not None:
+            path = Path(f"{base_path}_v{explicit_version}.png")
+            if not path.exists():
+                raise FileNotFoundError(f"Missing UCS panel file: {path}")
+        else:
+            path = resolve_latest_version_file(base_path)
+
+        panel_paths.append(path)
+        panel_ids.append(base_path.name)
+        panel_labels.append(label)
+
+    return panel_paths, panel_ids, panel_labels
+
+
 def next_output_version(output_dir: Path, character: str, sheet_type: str) -> int:
-    candidates = list(output_dir.glob(f"{character}_{sheet_type}_sheet_v*.png"))
+    if sheet_type == "ucs":
+        candidates = list(output_dir.glob(f"{character}_ucs_v*.png"))
+    else:
+        candidates = list(output_dir.glob(f"{character}_{sheet_type}_sheet_v*.png"))
+
     versions = [extract_version(p) for p in candidates]
     versions = [v for v in versions if v is not None]
     return (max(versions) + 1) if versions else 1
@@ -436,6 +548,7 @@ def draw_centered_image(
 def assemble_sheet(
     panel_paths: Sequence[Path],
     panel_ids: Sequence[str],
+    panel_labels: Optional[Sequence[str]],
     character: str,
     sheet_type: str,
     output_path: Path,
@@ -495,7 +608,11 @@ def assemble_sheet(
         sheet.paste(panel_img, (slot_x, slot_y))
 
         if labels:
-            label_text = get_label(sheet_type, panel_id)
+            if panel_labels is not None:
+                label_text = panel_labels[index]
+            else:
+                label_text = get_label(sheet_type, panel_id)
+
             try:
                 bbox = draw.textbbox((0, 0), label_text, font=font)
                 text_w = bbox[2] - bbox[0]
@@ -511,8 +628,9 @@ def assemble_sheet(
     print(f"Saved sheet: {output_path}")
 
     print("\nResolved input panels:")
-    for panel_id, panel_path in zip(panel_ids, panel_paths):
-        print(f"  {panel_id:<16} -> {panel_path.name}")
+    for i, (panel_id, panel_path) in enumerate(zip(panel_ids, panel_paths)):
+        label_info = f" [{panel_labels[i]}]" if panel_labels is not None else ""
+        print(f"  {panel_id:<28} -> {panel_path.name}{label_info}")
 
 
 def main() -> None:
@@ -520,9 +638,6 @@ def main() -> None:
 
     character = normalize_character_name(args.character)
     sheet_type = args.sheet_type
-    panel_ids = [p.strip() for p in args.panel_ids.split(",") if p.strip()]
-    if not panel_ids:
-        raise SystemExit("No panel IDs supplied.")
 
     preset = PRESETS[sheet_type]
 
@@ -534,11 +649,14 @@ def main() -> None:
     gap = args.gap if args.gap is not None else preset.gap
     panel_padding = args.panel_padding if args.panel_padding is not None else preset.panel_padding
     labels = args.labels if args.labels is not None else preset.labels
-    base_width = 2000  # reference baseline
+    base_width = 2000
     scale = sheet_width / base_width
 
-    default_font_size = int(round(preset.label_font_size * scale))
+    expression_id = args.expression_id or "smirk"
+    outfit_id = args.outfit_id or "signature"
+    outfit_label = args.outfit_label
 
+    default_font_size = int(round(preset.label_font_size * scale))
     label_font_size = (
         args.label_font_size if args.label_font_size is not None else default_font_size
     )
@@ -553,9 +671,8 @@ def main() -> None:
     character_dir = resolve_character_dir(library_root, character)
 
     source_dir = resolve_source_dir(
-        character=character_dir.name,
+        character_dir=character_dir,
         sheet_type=sheet_type,
-        library_root=library_root,
         source_dir=args.source_dir,
     )
     output_dir = resolve_output_dir(source_dir=source_dir, output_dir=args.output_dir)
@@ -563,16 +680,39 @@ def main() -> None:
     if not source_dir.exists():
         raise SystemExit(f"Source directory does not exist: {source_dir}")
 
-    panel_paths = [
-        resolve_panel_file(
-            source_dir=source_dir,
-            character=character,
-            sheet_type=sheet_type,
-            panel_id=panel_id,
+    if sheet_type == "ucs":
+        panel_paths, panel_ids, panel_labels = resolve_ucs_panels(
+            character_dir=character_dir,
+            character_name=character,
+            expression_id=expression_id,
+            outfit_id=outfit_id,
+            outfit_label=outfit_label,
             explicit_version=args.version,
         )
-        for panel_id in panel_ids
-    ]
+    else:
+            if args.panel_ids:
+                panel_ids = [p.strip() for p in args.panel_ids.split(",") if p.strip()]
+                if not panel_ids:
+                    raise SystemExit("No panel IDs supplied.")
+            else:
+                if sheet_type == "pose":
+                    panel_ids = DEFAULT_POSE_PANEL_IDS
+                elif sheet_type == "expression":
+                    panel_ids = DEFAULT_EXPRESSION_PANEL_IDS
+                else:
+                    raise SystemExit("--panel-ids is required for this sheet type.")
+
+            panel_paths = [
+                resolve_panel_file(
+                    source_dir=source_dir,
+                    character=character,
+                    sheet_type=sheet_type,
+                    panel_id=panel_id,
+                    explicit_version=args.version,
+                )
+                for panel_id in panel_ids
+            ]
+            panel_labels = None
 
     output_version = next_output_version(output_dir, character, sheet_type)
     output_path = output_dir / make_output_filename(character, sheet_type, output_version)
@@ -582,6 +722,7 @@ def main() -> None:
     assemble_sheet(
         panel_paths=panel_paths,
         panel_ids=panel_ids,
+        panel_labels=panel_labels,
         character=character,
         sheet_type=sheet_type,
         output_path=output_path,

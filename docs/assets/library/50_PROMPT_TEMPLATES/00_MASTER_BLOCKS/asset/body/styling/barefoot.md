@@ -1,6 +1,5 @@
 Lower body state:
 
-- barefoot
 - no shoes
 - no socks
 - no sandals
@@ -9,6 +8,7 @@ Lower body state:
 
 Feet:
 
-- feet fully visible
+- feet visible and unobstructed when in frame
+- no footwear required
 - feet unobstructed
 - toes and foot shape readable when visible in frame

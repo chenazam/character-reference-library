@@ -1,59 +1,84 @@
-Style:
+# Style
 
-Aesthetic:
+## Aesthetic
 
 - athletic_luxury
-- streetwear
+- refined_edge
+- controlled_sensuality
 
-Core style direction:
+---
 
-Alek’s style is polished, intentional, and quietly high-end.
-He presents himself with a refined, body-aware approach that emphasizes fit, material quality, and controlled simplicity rather than visual noise.
+## Core style direction
 
-Clothing tendencies:
+Alek’s style is intentional, refined, and subtly provocative.
+
+He presents himself with a body-aware approach that emphasizes fit, material quality, and silhouette — but with an undercurrent of tension and unpredictability.
+
+His appearance is polished, but never passive. There is always a sense that the control is deliberate, not inherent.
+
+---
+
+## Clothing tendencies
 
 - clean, fitted silhouettes that follow the body without excessive tightness
-- structured outerwear such as leather jackets
-- minimal layering with strong individual pieces
-- occasional partial exposure of the torso, but never overly casual or sloppy
+- structured outerwear with presence (especially leather jackets)
+- minimal layering, but each piece carries visual weight
+- occasional, intentional exposure of the torso or neckline
+- pieces may appear slightly undone or relaxed in a controlled way (e.g. open collar, pushed sleeves)
 
-Fit priorities:
+---
+
+## Fit priorities
 
 - tailored or well-fitted
-- structured but comfortable
-- emphasizes shoulder line and overall frame
+- emphasizes shoulder line and vertical proportions
+- reinforces tall, elongated frame
+- never sloppy, but not overly rigid
 
-Materials:
+---
 
+## Materials
+
+- leather (signature)
 - linen
 - silk
-- leather
+- soft structured cotton
 
-Color palette:
+materials should feel tactile and real, not decorative
 
-Core tones:
+---
+
+## Color palette
+
+### Core tones
 
 - black
-- white
+- off-white
 - beige
 - gray
 
-Variations:
+### Variations
 
-- lighter and darker shades within the neutral range
+- warm neutrals and desaturated tones
+- occasional deeper contrast within neutral range
 
-Accent:
+### Accent
 
-- subtle metallic or deep charcoal tones
+- deep charcoal
+- muted metallics
 
-Overall palette:
+### Overall palette
 
-- neutral
 - restrained
-- high-end minimal
+- grounded
+- slightly warm
+- high-end minimal with subtle contrast
 
-Presentation logic:
+---
 
-- outward appearance remains controlled, refined, and composed
-- styling should suggest confidence and capability without overt display
-- sensuality, when present, is understated and implied rather than explicit
+## Presentation logic
+
+- outward appearance is controlled, but not emotionally distant
+- style suggests confidence, capability, and intentional presence
+- there is a subtle sense of danger or unpredictability beneath the refinement
+- sensuality is present, but expressed through tension, not display

@@ -1,28 +1,35 @@
 Movement:
 
-- deliberate, controlled, and precise
-- efficient and grounded with minimal unnecessary motion
-- physical presence feels restrained but capable of sudden intensity
+- controlled but fluid rather than rigid or overly precise
+- movement feels natural, confident, and unforced
+- physical presence carries ease with underlying capability
 
 Posture tendencies:
 
 - upright and open stance
-- shoulders set and chest open
-- relaxed but dominant physical presence
+- shoulders relaxed but broad, chest open
+- posture feels effortless rather than deliberately maintained
 
 Gesture style:
 
-- minimal and intentional
-- broad and confident when used
-- avoids excessive expressiveness
+- minimal but not restrained
+- gestures are intentional, relaxed, and confident
+- may include slight asymmetry or casual positioning
+
+Spatial behavior:
+
+- comfortable closing distance with others rather than maintaining strict separation
+- physical presence can feel encroaching in a controlled and intentional way
+- positioning tends to subtly claim shared space
 
 Duality:
 
-- movement should feel controlled and measured in neutral contexts
-- underlying physical power should be implied rather than constantly expressed
+- movement appears relaxed and unbothered at baseline
+- underlying physical intensity becomes more apparent through proximity and presence rather than speed or force
 
 Avoid:
 
-- restless or overly energetic motion
-- playful or performative gestures
+- overly rigid, perfectly controlled posture
+- purely efficient or mechanical movement patterns
+- restless or chaotic motion
 - exaggerated or theatrical posing

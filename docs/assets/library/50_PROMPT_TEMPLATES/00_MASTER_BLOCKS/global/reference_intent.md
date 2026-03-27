@@ -1,14 +1,15 @@
 Reference intent:
 
-This is a character design reference asset.
+This is a neutral character reference.
 
 Prioritize:
-• clarity
-• consistency
-• anatomical accuracy
-• reusability across prompts
+
+- structural clarity
+- consistent proportions
+- reusability across prompts
 
 Avoid:
-• cinematic stylization
-• dramatic composition
-• unnecessary visual noise
+
+- cinematic stylization
+- dramatic composition
+- unnecessary visual noise

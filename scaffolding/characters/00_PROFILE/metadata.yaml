@@ -1,8 +1,8 @@
-name: [CHARACTER_NAME]
-slug: [character_slug]
+name: '[CHARACTER_NAME]'
+slug: '[CHARACTER_SLUG]'
 
 status: active
-project: [PROJECT_NAME]
+project: '[PROJECT_NAME]'
 exclude_from_comparisons: false
 site_visibility:
   list_in_character_index: true
@@ -11,91 +11,91 @@ site_visibility:
   include_in_prompt_builder: true
 
 core_identity:
-  short_summary: [brief one-sentence identity summary]
+  short_summary: '[brief one-sentence identity summary]'
   role_archetype:
-    - [archetype]
+    - '[archetype]'
   aesthetic_tags:
-    - [tag]
-    - [tag]
+    - '[tag]'
+    - '[tag]'
 
 physical:
-  height_cm: [HEIGHT_CM]
-  height_imperial: '[HEIGHT_IMPERIAL]'
-  height_visual_category: [profile_keyword]
+  height_cm:
+  height_imperial: ''
+  height_visual_category: '[profile_keyword]'
 
-  build_category: [build_type]
-  frame_proportion: [profile_keyword]
-  body_fat_range: [profile_keyword]
-  body_softness_distribution: [profile_keyword]
+  build_category: '[build_type]'
+  frame_proportion: '[profile_keyword]'
+  body_fat_range: '[profile_keyword]'
+  body_softness_distribution: '[profile_keyword]'
 
   build_notes: >
     [Brief description of physique and how it should read.]
 
-  shoulder_profile: [profile_keyword]
-  torso_profile: [profile_keyword]
-  limb_profile: [profile_keyword]
-  posture_profile: [profile_keyword]
+  shoulder_profile: '[profile_keyword]'
+  torso_profile: '[profile_keyword]'
+  limb_profile: '[profile_keyword]'
+  posture_profile: '[profile_keyword]'
 
-  silhouette_anchor: [profile_keyword]
-  silhouette_emphasis: [profile_keyword]
+  silhouette_anchor: '[profile_keyword]'
+  silhouette_emphasis: '[profile_keyword]'
   silhouette_keywords:
-    - [keyword]
-    - [keyword]
-    - [keyword]
+    - '[keyword]'
+    - '[keyword]'
+    - '[keyword]'
 
 face:
-  face_shape: [face_shape_keyword]
-  jawline: [jawline_keyword]
+  face_shape: '[face_shape_keyword]'
+  jawline: '[jawline_keyword]'
 
-  eye_description: [brief description]
-  hair_description: [brief description]
-  skin_description: [brief description]
+  eye_description: '[brief description]'
+  hair_description: '[brief description]'
+  skin_description: '[brief description]'
 
   distinctive_features:
-    - [feature]
-    - [feature]
+    - '[feature]'
+    - '[feature]'
 
-hair_color: [hair_color_keyword]
+hair_color: '[hair_color_keyword]'
 
 style:
-  primary_aesthetic: [primary_aesthetic]
+  primary_aesthetic: '[primary_aesthetic]'
 
   secondary_aesthetic:
-    - [secondary_aesthetic]
+    - '[secondary_aesthetic]'
 
   materials:
-    - [material]
-    - [material]
+    - '[material]'
+    - '[material]'
 
   primary_colors:
-    - [color]
-    - [color]
+    - '[color]'
+    - '[color]'
 
   accent_colors:
-    - [accent_color]
+    - '[accent_color]'
 
   recurring_accessories:
-    - [accessory]
+    - '[accessory]'
 
 expression:
-  default_expression: [expression_keyword]
-  smile_type: [smile_keyword]
-  emotional_tone: [tone_keyword]
+  default_expression: '[expression_keyword]'
+  smile_type: '[smile_keyword]'
+  emotional_tone: '[tone_keyword]'
 
 movement:
-  movement_style: [movement_keyword]
-  gesture_style: [gesture_keyword]
-  body_language: [body_language_keyword]
-  spatial_presence: [movement_keyword]
+  movement_style: '[movement_keyword]'
+  gesture_style: '[gesture_keyword]'
+  body_language: '[body_language_keyword]'
+  spatial_presence: '[movement_keyword]'
 
 identity_rules:
   preserve:
-    - [preserve_rule]
-    - [preserve_rule]
+    - '[preserve_rule]'
+    - '[preserve_rule]'
 
   avoid:
-    - [avoid_rule]
-    - [avoid_rule]
+    - '[avoid_rule]'
+    - '[avoid_rule]'
 
 reference_files:
   face_anchor: ''

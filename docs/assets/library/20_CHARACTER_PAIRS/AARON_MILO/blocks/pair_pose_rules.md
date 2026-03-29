@@ -1,66 +1,55 @@
-# Pose relationship rules
+## Physical contrast (critical)
 
-## Distance
-
-- close but comfortable proximity
-- no forced compression or tension
+- Milo is significantly taller and more physically substantial than Aaron
+- the height and mass difference must remain visible in all compositions
 
 ---
 
-## Orientation
+## Height relationship
 
-- natural inward orientation
-- bodies often angled toward each other, but not tightly closed
-
----
-
-## Hierarchy
-
-- no strong dominance hierarchy
-- Milo reads as stable anchor
-- Aaron reads as lighter and more dynamic
+- Milo’s shoulder line sits clearly above Aaron’s
+- Aaron’s head height typically aligns around Milo’s upper chest to lower shoulder level
 
 ---
 
-## Positioning
+## Non-dominant asymmetry
+
+- physical difference must NOT be interpreted as dominance
+- Milo remains grounded and stable, not imposing or controlling
+- Aaron remains lighter and more dynamic, not subordinate
+
+---
+
+## Interaction behavior (scale-aware)
+
+- Aaron may:
+  - lean upward toward Milo
+  - shift closer into Milo’s space
+  - angle body slightly upward in close interaction
 
 - Milo:
-  - grounded, stable stance
-  - slightly more centered or rooted
-
-- Aaron:
-  - slightly more dynamic posture
-  - may lean or shift toward Milo
-  - slightly more open body language
+  - remains upright and grounded
+  - does not collapse posture to match Aaron’s height
 
 ---
 
-## Contact rules
+## Composition constraints
 
-- casual and natural contact preferred
-- contact should feel effortless, not deliberate
-
----
-
-## Contact examples
-
-- light touch at arm or shoulder
-- relaxed proximity with slight overlap
-- leaning into shared space
-- casual side-by-side contact
+- do NOT equalize head height for framing
+- do NOT compress vertical difference for symmetry
+- avoid staging that removes visible height contrast
 
 ---
 
-## Framing
+## Visual priority
 
-- avoid rigid symmetry
-- allow natural spacing with slight overlap
-- composition should feel open and breathable
+- preserve height and mass difference even in close proximity
+- asymmetry is required, symmetry is not
 
 ---
 
 ## Avoid
 
-- tight, compressed, or tension-heavy framing
-- dominance-based positioning
-- large emotional or physical distance
+- equal head height
+- perfectly level eye alignment
+- mirrored or symmetrical positioning that removes size contrast

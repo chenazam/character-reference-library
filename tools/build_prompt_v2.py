@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import shutil
 import sys
 from pathlib import Path
 from typing import Any
@@ -95,6 +96,104 @@ def render_string(template: str, variables: dict[str, str]) -> str:
         raise PromptBuildError(
             f"Missing variable '{missing}' while rendering: {template}"
         ) from exc
+
+
+def resolve_latest_ucs(characters_root: Path, character: str) -> Path | None:
+    base = characters_root / character
+    if not base.exists():
+        return None
+
+    files = list(base.glob("*ucs*_v*.png"))
+    if not files:
+        return None
+
+    def extract_version(p: Path):
+        match = re.search(r"_v(\d+)", p.name)
+        return int(match.group(1)) if match else -1
+
+    return max(files, key=extract_version)
+
+
+def resolve_latest_face_anchor(characters_root: Path, character: str) -> Path | None:
+    base = characters_root / character / "01_IDENTITY" / "face"
+    if not base.exists():
+        return None
+
+    files = list(base.glob("*face_anchor*_v*.png"))
+    if not files:
+        return None
+
+    def extract_version(p: Path):
+        match = re.search(r"_v(\d+)", p.name)
+        return int(match.group(1)) if match else -1
+
+    return max(files, key=extract_version)
+
+
+def resolve_latest_height_sheet(pairs_root: Path, pair_id: str) -> Path | None:
+    base = pairs_root / pair_id
+    if not base.exists():
+        return None
+
+    files = list(base.glob("*height_comparison_v*.png"))
+    if not files:
+        return None
+
+    def extract_version(p: Path):
+        match = re.search(r"_v(\d+)", p.name)
+        return int(match.group(1)) if match else -1
+
+    return max(files, key=extract_version)
+
+
+def stage_inputs(
+    root: Path,
+    characters_root: Path,
+    pairs_root: Path,
+    variables: dict[str, str],
+    prompt_text: str,
+):
+    staging_dir = root / "tmp" / "prompt_inputs"
+
+    # Clean folder
+    if staging_dir.exists():
+        shutil.rmtree(staging_dir)
+    staging_dir.mkdir(parents=True, exist_ok=True)
+
+    # Characters
+    for key in ["character_id", "character_a", "character_b"]:
+        char = variables.get(key)
+        if not char:
+            continue
+
+        ucs = resolve_latest_ucs(characters_root, char)
+        if ucs:
+            shutil.copy2(ucs, staging_dir / ucs.name)
+            print(f"[STAGE] Copied UCS: {ucs.name}")
+        else:
+            print(f"[STAGE] Missing UCS for {char}")
+
+        face_anchor = resolve_latest_face_anchor(characters_root, char)
+        if face_anchor:
+            shutil.copy2(face_anchor, staging_dir / face_anchor.name)
+            print(f"[STAGE] Copied face anchor: {face_anchor.name}")
+        else:
+            print(f"[STAGE] Missing face anchor for {char}")
+
+    # Pair
+    pair_id = variables.get("pair_id")
+    if pair_id:
+        sheet = resolve_latest_height_sheet(pairs_root, pair_id)
+        if sheet:
+            shutil.copy2(sheet, staging_dir / sheet.name)
+            print(f"[STAGE] Copied height sheet: {sheet.name}")
+        else:
+            print(f"[STAGE] Missing height sheet for {pair_id}")
+
+    # Prompt file
+    (staging_dir / "00_prompt.txt").write_text(prompt_text, encoding="utf-8")
+
+    print(f"[STAGE] Ready: {staging_dir}")
 
 
 class PromptBuilderV2:
@@ -589,6 +688,11 @@ def main() -> None:
         "--trigger",
         help="Trigger id for scene or pair interaction, e.g. attention_lock"
     )
+    parser.add_argument(
+        "--stage-inputs",
+        action="store_true",
+        help="Copy required input assets (UCS, pair height sheets) into staging folder",
+    )
 
     args = parser.parse_args()
 
@@ -608,6 +712,15 @@ def main() -> None:
             enabled_conditionals=enabled_conditionals,
             debug_blocks=args.debug_blocks,
         )
+
+        if args.stage_inputs:
+            stage_inputs(
+                root=ROOT,
+                characters_root=builder.characters_root,
+                pairs_root=builder.pairs_root,
+                variables=variables,
+                prompt_text=final_prompt,
+            )
 
         if args.output:
             args.output.parent.mkdir(parents=True, exist_ok=True)

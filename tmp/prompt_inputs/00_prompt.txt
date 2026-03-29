@@ -1,0 +1,870 @@
+Style:
+
+- high-quality realistic scene rendering
+- naturalistic human appearance with believable materials, lighting, and depth
+- realistic proportions and facial structure
+- visually cohesive scene rendering rather than reference-sheet presentation
+
+Rendering characteristics:
+
+- soft, natural transitions in light and shadow
+- believable skin, fabric, hair, and environmental materials
+- realistic depth, atmosphere, and spatial separation
+- detailed but natural surface rendering without diagrammatic sharpness
+
+Scene rendering priorities:
+
+- preserve character identity while integrating the characters naturally into the scene
+- maintain believable interaction between characters, clothing, props, and environment
+- prioritize realism, mood, and visual cohesion over asset-style readability
+- allow natural variation in lighting, perspective, and rendering appropriate to the scene
+
+Consistency requirements:
+
+- the character must still read as the same person
+- preserve recognizable facial structure, hairstyle, body proportions, and overall silhouette
+- maintain internal scene consistency in lighting, color, and material rendering
+- ensure all characters feel like they belong in the same environment and image
+
+Avoid:
+
+- reference-sheet or technical illustration presentation
+- overly simplified lighting intended only for readability
+- excessively hard contour emphasis or diagrammatic linework
+- painterly abstraction or heavy stylization
+- anime, comic, or cartoon stylization
+- plastic skin, artificial airbrushing, or over-smoothed materials
+
+Goal:
+
+- preserve character identity within a believable, visually cohesive, realistic scene
+- balance realism, attractiveness, and narrative atmosphere without drifting into stylization
+
+Color:
+natural realistic colors
+consistent palette
+
+Consistency constraints:
+
+- preserve facial identity
+- maintain body proportions
+- maintain hairstyle and hairline
+- ensure the same character is depicted consistently
+
+Camera:
+
+- neutral portrait lens (50mm-85mm equivalent)
+- eye-level perspective
+- natural perspective compression
+- no wide-angle distortion
+- maintain realistic depth
+
+Background and environment:
+
+- place the characters in a believable scene environment
+- allow natural spatial depth and atmospheric separation
+- background should support the mood and setting of the scene
+- avoid flat studio backdrops unless explicitly requested
+
+Lighting:
+
+- lighting should match the scene environment and mood
+- allow directional light, shadow, contrast, and atmosphere where appropriate
+- preserve facial identity under naturalistic scene lighting
+- avoid flat studio lighting unless explicitly requested
+
+Limb clarity:
+
+- each visible limb must have a clear anatomical origin
+- hands must be visibly connected to their respective arms
+- avoid extra or duplicated hands, arms, or fingers
+
+- when characters overlap:
+- limb ownership must remain unambiguous
+- avoid partially hidden limbs that cannot be clearly traced
+
+Contact constraints:
+
+- if one character is touching the other:
+- limit contact to clearly defined points (e.g. one hand on waist)
+- avoid multiple overlapping or stacked hands in the same region
+
+Avoid:
+
+- extra hands or arms
+- disembodied or floating hands
+- overlapping limbs that cannot be visually resolved
+
+Scene priorities:
+
+- preserve the identity of all characters
+- maintain consistent body proportions, facial identity, and hairstyle
+- keep both characters clearly readable within the composition
+- avoid merging, distortion, or identity drift
+- preserve clothing and silhouette clarity where visible
+
+Pair scene requirements:
+
+- depict two distinct characters clearly
+- maintain each character's individual identity and proportions
+- avoid averaging or blending features between the characters
+- ensure both characters remain recognizable as separate individuals
+- body scale and relative proportions must remain believable
+
+Ragnar is an extremely tall man (208 cm / 6'10") with a massive, dense muscular build and a strongly shoulder-dominant frame.
+
+His physique is defined by extremely broad shoulders, a thick powerful chest, and heavily muscled arms, creating a silhouette that reads as physically overwhelming and upper-body dominant. His posture is grounded and stable, with a calm, controlled physical presence.
+
+His overall appearance communicates strength, density, and physical weight rather than agility or leanness.
+
+Ragnar has a square facial structure with strong angular bone structure and a sharp, well-defined jawline.
+
+His eyes are calm blue with a steady, watchful gaze. His expression is naturally composed and controlled.
+
+His skin has a light tone with a rugged masculine texture.
+
+He has a short blond beard and mustache that frame his jaw and reinforce his rugged appearance.
+
+Ragnar has long blond hair that falls to approximately shoulder length.
+
+The hair has natural volume with a slightly wavy structure, forming a consistent, recognizable silhouette. It is typically worn loose and flows naturally around the head and neck.
+
+Hair volume is distributed along the mid-length rather than concentrated at the crown, and remains consistent across different views.
+
+Avoid stylization, excessive smoothing, or shortening of the hair.
+
+Ragnar has a massive, dense muscular build with a strongly shoulder-dominant frame.
+
+His shoulders are extremely broad, forming the dominant element of his silhouette. His chest is thick and powerful, and his arms are heavily muscled.
+
+His torso is dense and solid, with visible mass and weight. His legs are strong and athletic but visually secondary to the heavy upper-body mass.
+
+His overall proportions emphasize upper-body dominance, physical density, and structural strength rather than agility or leanness.
+
+Ragnar moves with slow, deliberate, and controlled physical motion.
+
+His movement style is grounded and powerful, with minimal unnecessary motion. Actions feel efficient and heavy rather than quick or reactive.
+
+His posture remains stable and balanced at all times, with a strong sense of physical weight and presence.
+
+Ragnar's default expression is calm, serious, and controlled.
+
+His gaze is steady and focused, with minimal visible emotional fluctuation. His facial expression remains composed and restrained in most situations.
+
+When he smiles, it is rare and subtle, briefly softening his otherwise stoic demeanor without becoming overly expressive.
+
+Ragnar's visual aesthetic is rugged and utilitarian with subtle military and gothic influences.
+
+His clothing emphasizes function, durability, and physical protection rather than decoration. Materials typically include leather and aged metal, with surfaces that appear worn and practical.
+
+The color palette is dominated by dark, muted tones such as black and dark brown, with occasional accents of deep red or steel.
+
+Overall styling should feel grounded, practical, and battle-ready rather than ornate or ceremonial.
+
+Always preserve:
+
+- extremely tall height and imposing scale
+- massive, dense muscular build
+- strongly shoulder-dominant frame
+- extremely broad shoulders and thick chest mass
+- square facial structure and strong jawline
+- long blond shoulder-length hair
+- short blond beard
+- grounded, stable posture
+- calm, controlled expression
+- rugged utilitarian aesthetic
+
+Avoid:
+
+- lean, slender, or lightly athletic body types
+- reducing shoulder width or upper-body mass
+- shortening or simplifying the hair silhouette
+- removing the beard
+- softening facial structure into a narrow or youthful appearance
+- ornate or decorative fantasy styling
+- lightweight or fashionable modern clothing that undermines physical presence
+
+Lucien is a slender young man in his mid-twenties with refined features, a lightly built frame, and a calm, quietly self-possessed presence.
+
+He stands at average height, but his silhouette reads as narrow, graceful, and leg-dominant rather than compact or sturdy. His overall impression is thoughtful, composed, and slightly enigmatic, with a quiet, controlled intensity rather than overt mischief or playfulness.
+
+His visual identity blends modern occultism, scholarly refinement, and understated gothic influence. He should feel intelligent, restrained, and ritual-aware rather than flashy, dramatic, or costume-like.
+
+Maintain consistent facial identity, hairstyle, body proportions, and overall silhouette across all views.
+
+Face:
+
+- narrow, refined face shape with visible bone structure
+- clearly defined jawline, but not heavy or rugged
+- slight cheek hollowness that adds subtle angularity
+- straight, clean nose
+- dark brown observant eyes with a slightly heavy-lidded, focused look
+- light skin with subtle freckles across the nose and cheeks
+
+Facial character:
+
+- calm, controlled, and guarded by default
+- emotionally restrained rather than soft or open
+- observant and slightly inward-facing
+- carries a quiet sense of knowing rather than warmth
+- jawline should be clearly defined with visible structure, not rounded or softened
+- slight cheek hollowing to reduce facial softness
+- chin should be clean and structured, not small or tapered-soft
+
+Structural priorities:
+
+- preserve a defined but elegant jawline (not soft, not square-heavy)
+- maintain facial narrowness and slight angularity
+- keep subtle tension in the face - avoid over-relaxation
+- preserve freckles as identity detail
+
+Avoid:
+
+- overly soft or rounded facial structure
+- "pretty boy" softness
+- rugged or bulky masculinity
+- exaggerated sharpness or model-like hyper-definition
+- overly warm or approachable facial reads
+
+Hair:
+
+- dark brown naturally curly hair
+- short to medium length
+- soft natural volume
+- irregular natural hairline
+- texture should remain visible and slightly organic rather than overly groomed or artificially perfect
+
+Hair behavior:
+
+- curls should feel natural, lived-in, and slightly unruly in a controlled way
+- shape should frame the face softly without becoming fluffy or chaotic
+- maintain an understated scholarly-occult feel rather than trendy fashion-hair polish
+
+Avoid:
+
+- straightened or flattened hair
+- buzzcuts or very short cropped styles
+- overly sharp barbered styling
+- generic polished "male model" hair
+
+Height: 5'7"
+
+Body:
+
+- slender, narrow-framed physique
+- average height with lightly built proportions
+- overall silhouette reads slim and understated
+- shoulders are narrow and relaxed
+- upper body has low visual mass
+- chest is flat with minimal definition
+- arms are slim and lightly built
+- waist is natural and not strongly tapered
+- lower body remains proportionate and natural, with a soft but clearly readable side-profile contour through the hips and seat
+- overall build appears lightly constructed and not physically imposing
+
+Body read:
+
+- soft-slender, not athletic
+- relaxed, not tense
+- natural, not sculpted
+- understated, not stylized
+
+Silhouette priorities:
+
+- maintain a narrow, lightweight upper body
+- keep proportions natural and balanced
+- avoid strong shaping or exaggeration
+- preserve a clean and simple silhouette
+
+Proportion rules:
+
+- no visible muscle definition
+- no exaggerated proportions
+- maintain natural anatomical balance
+
+Avoid:
+
+- athletic or muscular physiques
+- broad shoulders or strong taper
+- defined abs, chest, or arms
+- exaggerated or stylized body shapes
+
+Movement:
+
+- deliberate and precise
+- restrained, measured gestures
+- upright, controlled posture
+- calm composed body language
+- neutral spatial presence with subtle self-possession
+
+Movement quality:
+
+- Lucien should move like someone who chooses his actions carefully
+- gestures should feel intentional rather than loose, animated, or impulsive
+- even when relaxed, his body language should retain quiet control
+- he should read as thoughtful and observant rather than socially performative
+
+Avoid:
+
+- broad expressive gestures
+- athletic dynamism
+- playful physicality
+- loose casual sprawl
+- stiffness that makes him feel lifeless or robotic
+
+Expression:
+
+- default expression is neutral, controlled, and slightly guarded
+- emotional changes are subtle and primarily visible in the eyes
+- mouth movement is minimal and rarely fully expressive
+
+Expression character:
+
+- inward-facing rather than outwardly expressive
+- observant rather than reactive
+- controlled rather than warm
+- carries a quiet sense of tension or thoughtfulness
+- maintain subtle tension in the mouth at rest
+- avoid overly relaxed or soft neutral expressions
+
+Typical reads:
+
+- neutral (baseline)
+- slight curiosity (eyes only)
+- restrained skepticism
+- minimal amusement (barely lifted corner of the mouth)
+- quiet focus
+
+Expression behavior:
+
+- expressions should feel contained, not broadcast
+- emotion should appear as micro-adjustments, not full facial shifts
+- intensity comes from stillness, not exaggeration
+
+Avoid:
+
+- wide smiles or visible teeth
+- exaggerated expressions
+- playful or flirty baseline reads
+- overly sad or vulnerable collapse unless explicitly intended
+- blank expressionlessness (he is controlled, not empty)
+
+Style:
+
+Lucien's aesthetic is occult, scholarly, and subtly gothic.
+
+His clothing and styling should feel intelligent, restrained, and ritual-aware rather than flashy, decadent, or costume-like. The overall impression should be arcane and refined, with quiet intention in layering, silhouette, texture, and accessories.
+His aesthetic should suggest quiet involvement with occult or ritual practices, not just interest. The styling should feel lived-in and intentional, as if each piece has meaning or history.
+
+Preferred design language:
+
+- dark layered garments
+- soft structured silhouettes
+- elegant long lines
+- high collars
+- antique jewelry
+- rings
+- talismans
+- muted symbolic details
+- soft textured fabrics such as wool and velvet
+- antique-metal accents
+
+Color direction:
+
+- black
+- charcoal
+- deep plum
+- muted dark neutrals
+- silver-toned metal details
+
+Avoid:
+
+- generic casual streetwear
+- bright modern basics that erase the occult-scholar read
+- flashy or theatrical gothic costuming
+- overly trendy styling
+- anything that feels loud, performative, or costume-shop dramatic
+
+Identity preservation:
+
+Always preserve:
+
+- mid-twenties age read
+- slender narrow-framed physique
+- lightly built upper body with minimal visible musculature
+- leg-dominant silhouette
+- rounded glute-emphasized lower body
+- narrow shoulders and soft torso
+- refined facial structure
+- dark brown naturally curly hair with a natural irregular hairline
+- subtle freckles across the nose and cheeks
+- calm, restrained, quietly confident presence
+- occult, scholarly, subtly gothic style direction
+
+Behavioral guardrails:
+
+- he should read as composed rather than dramatic
+- expressive range should stay controlled and intelligent rather than large or theatrical
+- slight mischief is allowed, but it should remain understated
+- presence should feel observant and self-possessed rather than dominant, shy, or overly warm
+
+Avoid:
+
+- making him athletic, broad, or visibly muscular
+- widening the shoulders or torso
+- flattening or reducing glute projection
+- turning him into a generic slim male template
+- ruggedizing the face
+- making the jaw square or harsh
+- straightening the hair or removing its natural texture
+- erasing the freckles
+- turning the style into generic modern casualwear
+- making the occult/scholarly styling overly theatrical or costume-heavy
+- exaggerating expressions into cartoonish or highly performative reads
+
+Critical identity constraint:
+
+- Lucien must not read as "soft-pretty" or overly approachable
+- maintain a balance of refinement and subtle sharpness
+- preserve emotional restraint and guarded presence
+
+Priority:
+
+- preserve refined narrow softness and controlled presence over conventional masculine defaulting
+- preserve silhouette specificity over generic anatomy
+- preserve occult-scholar identity over trend-driven fashion drift
+
+Identity priority:
+
+- preserve exact facial identity for each character
+- facial structure, eye shape, nose, mouth, and jawline must remain consistent with the character reference
+- do not alter or reinterpret facial features under different lighting or angles
+
+Scene-specific constraints:
+
+- lighting and environment must not significantly change perceived identity
+- maintain recognizable likeness even under warm, low-light, or directional lighting
+- avoid softening, reshaping, or idealizing facial structure
+
+Multi-character requirement:
+
+- each character must remain clearly distinguishable
+- do not blend or average facial features between characters
+- ensure both faces remain individually recognizable at a glance
+
+Goal:
+
+- maintain strong facial identity while allowing natural scene rendering
+
+Apply the following only to pairs/lucien_ragnar/blocks/pair_dynamic.md:
+# Interaction behavior
+
+## Baseline behavior (public)
+
+- constant awareness of each other
+- interaction feels grounded and focused rather than performative
+
+---
+
+## Ragnar (dominant physical presence)
+
+- presence is calm, heavy, and physically imposing
+- does not need to assert dominance actively - it is inherent
+- movement is minimal and controlled
+
+---
+
+## Lucien (lighter presence)
+
+- more physically reactive
+- adjusts position relative to Ragnar's size and presence
+- often moves within Ragnar's space rather than beside him
+
+---
+
+## Physical dynamic
+
+- interaction emphasizes contrast in size and physical presence
+- Lucien's movements feel lighter and more flexible
+- Ragnar's presence feels steady and unyielding
+
+---
+
+## Touch behavior
+
+- touch reinforces scale difference
+
+- Ragnar:
+ - broad, grounding contact
+ - hand placement covers more surface area
+
+- Lucien:
+ - more precise, smaller contact points
+ - often reaches upward or inward
+
+---
+
+## Core interactions
+
+- Lucien stepping closer into Ragnar's space
+- Ragnar enclosing or anchoring space around Lucien
+- subtle guiding or stabilizing contact
+
+---
+
+## Escalation behavior
+
+- escalation is quiet but intense
+
+- Ragnar:
+ - reduces space through presence rather than movement
+
+- Lucien:
+ - responds by closing distance and focusing attention upward
+
+---
+
+## Avoid
+
+- equal physical presence
+- interaction that ignores size difference
+- both characters moving or behaving with the same physical weight
+
+Apply the following only to pairs/lucien_ragnar/blocks/pair_pose_rules.md:
+# Pose relationship rules
+
+## Distance
+
+- close proximity preferred
+- distance often reduced gradually rather than immediately
+
+---
+
+## Orientation
+
+- strong inward orientation
+- bodies angled toward each other
+- Lucien frequently turns upward toward Ragnar due to height difference
+
+---
+
+## Hierarchy (physical)
+
+- Ragnar is significantly taller and larger in overall mass
+- the height difference must remain clearly visible in all compositions
+- Ragnar's shoulder line sits far above Lucien's
+
+---
+
+## Positioning
+
+- Ragnar:
+ - grounded, dominant vertical presence
+ - occupies more visual space
+ - posture reads stable and immovable
+
+- Lucien:
+ - smaller, lighter physical presence
+ - often positioned slightly closer to Ragnar's torso rather than shoulder level
+ - head height typically aligns around Ragnar's upper chest or below
+
+---
+
+## Contact rules
+
+- physical contact must reinforce scale difference
+
+---
+
+## Contact examples
+
+- Lucien's hand placed on Ragnar's chest or lower torso
+- Ragnar's arm resting across Lucien's upper back or shoulders
+- contact points should emphasize difference in reach and hand size
+
+---
+
+## Framing
+
+- avoid compositions that visually equalize height
+- do not align heads at the same vertical level unless explicitly required
+- allow overlap where Ragnar visually dominates frame space
+
+---
+
+## Critical scale rules
+
+- Lucien must not appear near Ragnar's eye level
+- Lucien should read clearly smaller in both height and width
+- Ragnar's limbs (arms, hands) should appear noticeably larger in proportion
+
+---
+
+## Avoid
+
+- equal head height
+- symmetrical positioning
+- compositions that minimize size contrast
+- perspective tricks that flatten the height difference
+
+Apply the following only to Character A (ragnar) - Wardrobe mode:
+## Wardrobe Mode - Bold
+
+Push the outfit toward a more confident and attention-drawing presentation.
+
+- allow more form-fitting or body-emphasizing silhouettes
+- increase contrast, clarity, or visual impact
+- materials may feel slightly more striking or defined
+- styling can feel intentional and self-aware
+
+Avoid:
+
+- costume-like exaggeration
+- impractical or theatrical elements
+- loss of natural wearability
+
+Apply the following only to Character B (lucien) - Wardrobe mode:
+## Wardrobe Mode - Playful
+
+Increase lightness, spontaneity, and expressiveness in the outfit.
+
+- allow slightly more relaxed or revealing cuts where appropriate
+- prioritize movement-friendly silhouettes
+- introduce warmth or softness in color where possible
+- styling should feel effortless, slightly teasing, and unforced
+
+Avoid:
+
+- heavy layering or rigid structure
+- overly curated or editorial styling
+- anything that feels stiff or overly controlled
+
+Apply the following only to blocks/scene/environment/environment_base.md:
+Environment context:
+
+- defines the level of privacy and social exposure
+- influences behavioral expression and interaction intensity
+- determines how aware characters are of their surroundings
+
+Important:
+
+- characters must behave in a way that is appropriate to the environment
+- behavioral intensity must not exceed what the environment realistically allows
+- the environment directly constrains or enables emotional and physical expression
+
+Apply the following only to blocks/scene/environment/semi_private.md:
+Environment: semi-private or transitional space
+
+- characters are momentarily alone or removed from active observation
+- surroundings are quiet, low-pressure, and not socially demanding
+- sense of privacy is emerging but not absolute
+
+Behavioral effects:
+
+- social constraints begin to drop
+- attention between characters intensifies
+- physical proximity becomes more intentional
+
+Allowed:
+
+- increased physical closeness
+- focused attention on each other
+- early signs of instinctive or unfiltered behavior
+
+Behavioral tone:
+
+- narrowing awareness
+- emotionally and physically charged
+- shifting from controlled to instinctive
+
+Apply the following only to blocks/scene/environment/semi_private.md:
+Environment: semi-private or transitional space
+
+- characters are momentarily alone or removed from active observation
+- surroundings are quiet, low-pressure, and not socially demanding
+- sense of privacy is emerging but not absolute
+
+Behavioral effects:
+
+- social constraints begin to drop
+- attention between characters intensifies
+- physical proximity becomes more intentional
+
+Allowed:
+
+- increased physical closeness
+- focused attention on each other
+- early signs of instinctive or unfiltered behavior
+
+Behavioral tone:
+
+- narrowing awareness
+- emotionally and physically charged
+- shifting from controlled to instinctive
+
+Apply the following only to blocks/scene/environment/semi_private.md:
+Environment: semi-private or transitional space
+
+- characters are momentarily alone or removed from active observation
+- surroundings are quiet, low-pressure, and not socially demanding
+- sense of privacy is emerging but not absolute
+
+Behavioral effects:
+
+- social constraints begin to drop
+- attention between characters intensifies
+- physical proximity becomes more intentional
+
+Allowed:
+
+- increased physical closeness
+- focused attention on each other
+- early signs of instinctive or unfiltered behavior
+
+Behavioral tone:
+
+- narrowing awareness
+- emotionally and physically charged
+- shifting from controlled to instinctive
+
+Apply the following only to blocks/scene/behavior/default_pair_affectionate.md:
+Default affectionate two-character behavior:
+
+This scene contains two distinct characters with a soft, comfortable, and mutually warm connection.
+
+Interaction baseline:
+
+- interaction should feel naturally affectionate, but not highly specialized or intense
+- closeness should read as mutual, easy, and unforced
+- do not imply extreme tension, dominance, or highly charged intimacy unless explicitly instructed elsewhere
+- do not invent a highly specific relationship dynamic beyond gentle affection and familiarity
+
+Connection quality:
+
+- relaxed physical and emotional comfort
+- easy familiarity
+- light attentiveness toward each other
+- natural warmth rather than dramatic chemistry
+
+Pose behavior:
+
+- allow close proximity and light contact
+- contact should feel casual and believable rather than staged
+- avoid mirrored posing unless explicitly requested
+- avoid highly theatrical, exaggerated, or romance-cover-style composition
+
+Contact examples:
+
+- light touch at arm, shoulder, upper back, or hand
+- relaxed leaning into shared space
+- standing or sitting close without tension
+- subtle body orientation toward each other
+
+Expression behavior:
+
+- soft, warm, or lightly engaged expressions
+- natural eye contact is allowed, but not required
+- expressions should remain understated and believable
+- avoid intense staring, exaggerated flirtation, or highly dramatic emotion
+
+Character preservation:
+
+- each character must remain visually distinct
+- preserve each character's facial structure, body proportions, clothing logic, and movement behavior
+- do not let one character drift toward the proportions or styling of the other
+- do not merge silhouettes or obscure identity through excessive overlap
+
+Composition behavior:
+
+- both characters should remain individually readable
+- allow moderate overlap only when identity, anatomy, and clothing remain clear
+- preserve limb clarity and body readability
+- framing should feel open, natural, and balanced
+
+Default emotional tone:
+
+- warm
+- calm
+- affectionate
+- familiar
+- unforced
+
+If no pair-specific block is provided, prioritize mutual comfort, clarity, and believable soft connection over intense chemistry or specialized interaction.
+
+Apply the following only to Scene intensity:
+Intensity: Charged
+
+- strong emotional and physical tension
+- reduced distance between characters
+- eye contact carries weight
+- interaction feels focused and anticipatory
+- external environment becomes secondary
+
+Apply the following only to Scenario (claimed_space):
+Scene:
+
+ragnar clearly occupies and controls the shared space.
+
+lucien exists within that space rather than defining it.
+
+Behavior:
+
+- ragnar posture is confident, relaxed, and assured
+- lucien adapts position relative to them
+
+Interaction:
+
+- physical positioning suggests ownership of space (not aggression)
+- lucien may lean, align, or orbit slightly around ragnar
+
+Roles:
+
+- ragnar = dominant presence
+- lucien = responsive presence
+
+Composition:
+
+- ragnar more central or visually anchored
+- lucien slightly offset or angled toward them
+
+Tone:
+
+- confident, controlled, slightly possessive
+- emphasis on presence over action
+
+Apply the following only to blocks/scene/triggers/trigger_base.md:
+Trigger logic:
+
+- defines the immediate event or cue that causes the interaction dynamic to shift
+- controls how quickly attention, posture, and behavior change between characters
+- affects whether the scene remains social, affectionate, charged, or fully focused
+
+Important:
+
+- the trigger must feel natural within the scene
+- the behavioral shift should emerge from the trigger rather than appearing arbitrary
+- stronger triggers produce faster and more visible changes in attention and body language
+
+Reference fidelity:
+
+The attached references define the canonical appearance of each character.
+
+Strictly preserve:
+
+- facial identity
+- hairstyle and hairline
+- body proportions
+- age and facial maturity
+- recognizable features
+
+Scene-specific requirement:
+
+- preserve identity while allowing natural scene lighting, perspective, and environmental integration
+- do not blend or average features between characters
+- each character must remain individually recognizable
+
+Avoid:
+
+- over-literal reference-sheet translation
+- technical panel styling
+- flattening the scene to preserve reference clarity

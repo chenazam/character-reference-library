@@ -69,3 +69,11 @@
 - controlling or directive interaction
 - high-intensity or tension-driven escalation
 - emotionally distant or neutral behavior
+
+---
+
+## Physical dynamic reinforcement
+
+- interaction naturally reflects difference in physical presence
+- Milo provides spatial stability through size and stillness
+- Aaron provides movement and responsiveness within that space

@@ -35,3 +35,11 @@ include:
 optional:
   - characters/{character_id}/outfits/{outfit_id}.md
   - blocks/scene/wardrobe_modes/{mode_id}.md
+
+  # Environment context
+  - blocks/scene/environment/environment_base.md
+  - blocks/scene/environment/{environment_id}.md
+
+  - blocks/scene/triggers/trigger_base.md
+  - blocks/scene/triggers/{trigger_id}.md
+  - pairs/{pair_id}/triggers/{trigger_id}.md

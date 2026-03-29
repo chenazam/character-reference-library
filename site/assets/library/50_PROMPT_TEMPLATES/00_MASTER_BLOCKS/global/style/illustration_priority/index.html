@@ -302,6 +302,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -361,6 +365,27 @@
 
               
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../characters/aaron/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aaron
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -585,6 +610,27 @@
   
   <span class="md-ellipsis">
     Lucien
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../characters/milo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Milo
   </span>
   
 
@@ -838,6 +884,8 @@
       
         
       
+        
+      
     
     
       
@@ -922,6 +970,27 @@
   
   <span class="md-ellipsis">
     Blake vs Jasper
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../comparisons/character_slug-vs-character_slug/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Character Slug vs Character Slug
   </span>
   
 
@@ -1121,10 +1190,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_13" >
         
           
-          <label class="md-nav__link" for="__nav_2_4_12" id="__nav_2_4_12_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_4_13" id="__nav_2_4_13_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1135,8 +1204,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_12_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4_12">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_13">
             <span class="md-nav__icon md-icon"></span>
             Lineups
           </label>
@@ -2130,33 +2199,31 @@
 
   <h1>Illustration priority</h1>
 
-<p>Style priority override:</p>
+<p>Style priority override (CRITICAL):</p>
+<p>This asset MUST be rendered in the canonical character reference illustration style.</p>
+<p>This requirement OVERRIDES any photorealistic interpretation from reference images.</p>
+<p>Interpretation rules:</p>
 <ul>
-<li>render this asset in the canonical character reference illustration style</li>
-<li>do not reproduce photographic rendering from attached reference images</li>
-<li>preserve identity while translating the subject into the defined reference-sheet rendering style</li>
+<li>reference images define identity ONLY (facial structure, proportions, features)</li>
+<li>reference images MUST NOT define rendering style, shading behavior, or texture</li>
 </ul>
-<p>Rendering requirements:</p>
+<p>Rendering enforcement (MANDATORY):</p>
 <ul>
-<li>visible clean linework around facial features, hair, and silhouette</li>
-<li>controlled graphic shading rather than soft photographic shading</li>
-<li>simplified, readable forms with clear edge definition</li>
-<li>skin rendering must remain refined and illustrative, not fully photorealistic</li>
+<li>convert photographic input into clean illustration rendering</li>
+<li>enforce visible, controlled linework around facial features, hair, and silhouette</li>
+<li>replace photographic shading with simplified, graphic shading</li>
+<li>remove photographic skin texture and noise</li>
+<li>maintain clear, readable edge definition</li>
 </ul>
-<p>Priority rules:</p>
+<p>Hard constraints:</p>
 <ul>
-<li>style consistency with other face reference assets takes precedence over photorealism from source references</li>
-<li>the result must match the same visual language as the side and three-quarter face references</li>
-<li>attached references define identity, not rendering medium</li>
-<li>identity must be preserved through facial structure and proportions, not through photorealistic rendering</li>
-<li>do not copy rendering style, lighting behavior, or material response from reference images</li>
+<li>the result MUST NOT appear as a photograph</li>
+<li>the result MUST NOT retain photographic lighting behavior</li>
+<li>the result MUST match the same illustration style as existing face reference assets</li>
 </ul>
-<p>Avoid:</p>
+<p>Failure condition:</p>
 <ul>
-<li>fully photorealistic skin rendering</li>
-<li>soft photographic edges</li>
-<li>painterly blending without line definition</li>
-<li>realistic photo-texture dominating the illustration style</li>
+<li>if the output appears photorealistic, it is incorrect</li>
 </ul>
 
 

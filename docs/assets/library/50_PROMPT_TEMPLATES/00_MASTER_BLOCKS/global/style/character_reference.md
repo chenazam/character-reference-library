@@ -1,3 +1,8 @@
+Rendering mode:
+
+- this is an illustration, not a photograph
+- all outputs must be rendered in illustration style regardless of reference input type
+
 Style:
 
 - clean professional character design illustration

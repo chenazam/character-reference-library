@@ -88,7 +88,7 @@ identity_rules:
   - turning the armor into ornate fantasy costume
   - exaggerating facial expressions
 reference_files:
-  face_anchor: ragnar_face_anchor_v1.png
+  face_anchor: ragnar_face_anchor_v2.png
   anatomy_sheet: ragnar_anatomy_sheet_v2.png
   body_anchor: ragnar_body_anchor_v1.png
   silhouette_sheet: ragnar_silhouette_sheet_v1.png

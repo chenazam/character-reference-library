@@ -9,8 +9,9 @@ Browse characters in the reference library.
 
 <div class="character-index-grid">
 
-<a class="character-card" href="['character_slug']/">
+<a class="character-card" href="character_slug/">
 
+  <img src="..\assets\library\10_CHARACTERS\AARON\01_IDENTITY\face\aaron_face_anchor_v1.png" alt="Aaron">
   <h3>Aaron</h3>
 
 </a>
@@ -92,15 +93,16 @@ Browse characters in the reference library.
 
 </a>
 
-<a class="character-card" href="['character_slug']/">
+<a class="character-card" href="character_slug/">
 
+  <img src="..\assets\library\10_CHARACTERS\MILO\01_IDENTITY\face\milo_face_anchor_v1.png" alt="Milo">
   <h3>Milo</h3>
 
 </a>
 
 <a class="character-card" href="ragnar/">
 
-  <img src="..\assets\library\10_CHARACTERS\RAGNAR\01_IDENTITY\face\ragnar_face_anchor_v1.png" alt="Ragnar">
+  <img src="..\assets\library\10_CHARACTERS\RAGNAR\01_IDENTITY\face\ragnar_face_anchor_v2.png" alt="Ragnar">
   <h3>Ragnar</h3>
 
 </a>

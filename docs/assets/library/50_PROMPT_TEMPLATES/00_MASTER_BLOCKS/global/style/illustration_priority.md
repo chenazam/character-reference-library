@@ -1,27 +1,28 @@
-Style priority override:
+Style priority override (CRITICAL):
 
-- render this asset in the canonical character reference illustration style
-- do not reproduce photographic rendering from attached reference images
-- preserve identity while translating the subject into the defined reference-sheet rendering style
+This asset MUST be rendered in the canonical character reference illustration style.
 
-Rendering requirements:
+This requirement OVERRIDES any photorealistic interpretation from reference images.
 
-- visible clean linework around facial features, hair, and silhouette
-- controlled graphic shading rather than soft photographic shading
-- simplified, readable forms with clear edge definition
-- skin rendering must remain refined and illustrative, not fully photorealistic
+Interpretation rules:
 
-Priority rules:
+- reference images define identity ONLY (facial structure, proportions, features)
+- reference images MUST NOT define rendering style, shading behavior, or texture
 
-- style consistency with other face reference assets takes precedence over photorealism from source references
-- the result must match the same visual language as the side and three-quarter face references
-- attached references define identity, not rendering medium
-- identity must be preserved through facial structure and proportions, not through photorealistic rendering
-- do not copy rendering style, lighting behavior, or material response from reference images
+Rendering enforcement (MANDATORY):
 
-Avoid:
+- convert photographic input into clean illustration rendering
+- enforce visible, controlled linework around facial features, hair, and silhouette
+- replace photographic shading with simplified, graphic shading
+- remove photographic skin texture and noise
+- maintain clear, readable edge definition
 
-- fully photorealistic skin rendering
-- soft photographic edges
-- painterly blending without line definition
-- realistic photo-texture dominating the illustration style
+Hard constraints:
+
+- the result MUST NOT appear as a photograph
+- the result MUST NOT retain photographic lighting behavior
+- the result MUST match the same illustration style as existing face reference assets
+
+Failure condition:
+
+- if the output appears photorealistic, it is incorrect

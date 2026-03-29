@@ -2,6 +2,10 @@
 
 Reference assets that still need to be generated.
 
+## AARON
+
+- next: hair_sheet
+
 ## ALEK
 
 - next: hair_sheet
@@ -45,6 +49,10 @@ Reference assets that still need to be generated.
 ## LUCIEN
 
 - next: ucs_core
+
+## MILO
+
+- next: hair_sheet
 
 ## RAGNAR
 

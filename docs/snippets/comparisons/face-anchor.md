@@ -16,8 +16,8 @@
 
   <div class="comparison-card">
     <h3><a href="../../characters/danny/">Danny</a></h3>
-    <a href="../../assets/library/10_CHARACTERS/DANNY/01_IDENTITY/face/danny_face_anchor_v1.png" target="_blank">
-      <img src="../../assets/library/10_CHARACTERS/DANNY/01_IDENTITY/face/danny_face_anchor_v1.png" alt="Danny face-anchor">
+    <a href="../../assets/library/10_CHARACTERS/DANNY/01_IDENTITY/face/danny_face_anchor_v2.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/DANNY/01_IDENTITY/face/danny_face_anchor_v2.png" alt="Danny face-anchor">
     </a>
   </div>
 
@@ -44,8 +44,8 @@
 
   <div class="comparison-card">
     <h3><a href="../../characters/luca/">Luca</a></h3>
-    <a href="../../assets/library/10_CHARACTERS/LUCA/01_IDENTITY/face/luca_face_anchor_v1.png" target="_blank">
-      <img src="../../assets/library/10_CHARACTERS/LUCA/01_IDENTITY/face/luca_face_anchor_v1.png" alt="Luca face-anchor">
+    <a href="../../assets/library/10_CHARACTERS/LUCA/01_IDENTITY/face/luca_face_anchor_v2.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/LUCA/01_IDENTITY/face/luca_face_anchor_v2.png" alt="Luca face-anchor">
     </a>
   </div>
 
@@ -58,8 +58,8 @@
 
   <div class="comparison-card">
     <h3><a href="../../characters/ragnar/">Ragnar</a></h3>
-    <a href="../../assets/library/10_CHARACTERS/RAGNAR/01_IDENTITY/face/ragnar_face_anchor_v1.png" target="_blank">
-      <img src="../../assets/library/10_CHARACTERS/RAGNAR/01_IDENTITY/face/ragnar_face_anchor_v1.png" alt="Ragnar face-anchor">
+    <a href="../../assets/library/10_CHARACTERS/RAGNAR/01_IDENTITY/face/ragnar_face_anchor_v2.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/RAGNAR/01_IDENTITY/face/ragnar_face_anchor_v2.png" alt="Ragnar face-anchor">
     </a>
   </div>
 
@@ -67,6 +67,13 @@
     <h3><a href="../../characters/tommy/">Tommy</a></h3>
     <a href="../../assets/library/10_CHARACTERS/TOMMY/01_IDENTITY/face/tommy_face_anchor_v1.png" target="_blank">
       <img src="../../assets/library/10_CHARACTERS/TOMMY/01_IDENTITY/face/tommy_face_anchor_v1.png" alt="Tommy face-anchor">
+    </a>
+  </div>
+
+  <div class="comparison-card">
+    <h3><a href="../../characters/aaron/">Aaron</a></h3>
+    <a href="../../assets/library/10_CHARACTERS/AARON/01_IDENTITY/face/aaron_face_anchor_v1.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/AARON/01_IDENTITY/face/aaron_face_anchor_v1.png" alt="Aaron face-anchor">
     </a>
   </div>
 
@@ -79,15 +86,22 @@
 
   <div class="comparison-card">
     <h3><a href="../../characters/alexander/">Alexander</a></h3>
-    <a href="../../assets/library/10_CHARACTERS/ALEXANDER/01_IDENTITY/face/alexander_face_anchor_v1.png" target="_blank">
-      <img src="../../assets/library/10_CHARACTERS/ALEXANDER/01_IDENTITY/face/alexander_face_anchor_v1.png" alt="Alexander face-anchor">
+    <a href="../../assets/library/10_CHARACTERS/ALEXANDER/01_IDENTITY/face/alexander_face_anchor_v2.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/ALEXANDER/01_IDENTITY/face/alexander_face_anchor_v2.png" alt="Alexander face-anchor">
     </a>
   </div>
 
   <div class="comparison-card">
     <h3><a href="../../characters/connor/">Connor</a></h3>
-    <a href="../../assets/library/10_CHARACTERS/CONNOR/01_IDENTITY/face/connor_face_anchor_v1.png" target="_blank">
-      <img src="../../assets/library/10_CHARACTERS/CONNOR/01_IDENTITY/face/connor_face_anchor_v1.png" alt="Connor face-anchor">
+    <a href="../../assets/library/10_CHARACTERS/CONNOR/01_IDENTITY/face/connor_face_anchor_v2.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/CONNOR/01_IDENTITY/face/connor_face_anchor_v2.png" alt="Connor face-anchor">
+    </a>
+  </div>
+
+  <div class="comparison-card">
+    <h3><a href="../../characters/milo/">Milo</a></h3>
+    <a href="../../assets/library/10_CHARACTERS/MILO/01_IDENTITY/face/milo_face_anchor_v1.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/MILO/01_IDENTITY/face/milo_face_anchor_v1.png" alt="Milo face-anchor">
     </a>
   </div>
 

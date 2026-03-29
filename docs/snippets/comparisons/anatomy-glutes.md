@@ -44,8 +44,8 @@
 
   <div class="comparison-card">
     <h3><a href="../../characters/luca/">Luca</a></h3>
-    <a href="../../assets/library/10_CHARACTERS/LUCA/02_BODY/anatomy/luca_anatomy_glutes_01.png" target="_blank">
-      <img src="../../assets/library/10_CHARACTERS/LUCA/02_BODY/anatomy/luca_anatomy_glutes_01.png" alt="Luca anatomy-glutes">
+    <a href="../../assets/library/10_CHARACTERS/LUCA/02_BODY/anatomy/luca_anatomy_glutes_v1.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/LUCA/02_BODY/anatomy/luca_anatomy_glutes_v1.png" alt="Luca anatomy-glutes">
     </a>
   </div>
 

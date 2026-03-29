@@ -4,11 +4,11 @@ This page is regenerated during the library rebuild pipeline.
 
 ## Current Build
 
-- **Local build time:** 2026-03-27 11:34:12 Mitteleuropäische Zeit
-- **UTC build time:** 2026-03-27 10:34:12 UTC
+- **Local build time:** 2026-03-29 10:54:01 Mitteleuropäische Sommerzeit
+- **UTC build time:** 2026-03-29 08:54:01 UTC
 - **Git branch:** `main`
-- **Git commit (short):** `787ba4f0`
-- **Git commit (full):** `787ba4f09ddedb4d375066511728c7f9560a0b4b`
+- **Git commit (short):** `e40bb851`
+- **Git commit (full):** `e40bb851d100a1d165b49e5f7aadf2b30b7ade76`
 - **Working tree dirty at build time:** `yes`
 
 ## Purpose

@@ -160,6 +160,14 @@ class PromptBuilderV2:
             scenario = variables.get("scenario_id", "unknown")
             return (None, f"Scenario ({scenario})")
 
+        # Environment context
+        if include_ref.startswith("blocks/global/context/environment/"):
+            if "{environment_a_id}" in include_ref:
+                return ("A", f"Character A ({char_a}) - Environment context")
+            if "{environment_b_id}" in include_ref:
+                return ("B", f"Character B ({char_b}) - Environment context")
+            return (None, "Environment context")
+
         return (None, rendered)
 
     def _wrap_scoped_block(self, include_ref: str, content: str, variables: dict[str, str]) -> str:
@@ -421,6 +429,17 @@ def build_default_variables(args: argparse.Namespace) -> dict[str, str]:
     if getattr(args, "mode_b", None):
         variables.setdefault("mode_b_id", args.mode_b)
 
+    if getattr(args, "environment", None):
+        variables.setdefault("environment_id", args.environment)
+        variables.setdefault("environment_a_id", args.environment)
+        variables.setdefault("environment_b_id", args.environment)
+
+    if getattr(args, "environment_a", None):
+        variables.setdefault("environment_a_id", args.environment_a)
+
+    if getattr(args, "environment_b", None):
+        variables.setdefault("environment_b_id", args.environment_b)
+
     if getattr(args, "scene_block", None):
         variables.setdefault("scene_block", args.scene_block)
 
@@ -441,6 +460,9 @@ def build_default_variables(args: argparse.Namespace) -> dict[str, str]:
 
     if getattr(args, "scene_description", None):
         variables.setdefault("scene_description", args.scene_description)
+
+    if getattr(args, "trigger", None):
+        variables.setdefault("trigger_id", args.trigger)
 
     return variables
 
@@ -550,6 +572,22 @@ def main() -> None:
     parser.add_argument(
         "--mode-b", 
         help="Wardrobe mode id for character B"
+    )
+    parser.add_argument(
+        "--environment",
+        help="Environment context id for single-character scene or shared pair scene, e.g. semi_private"
+    )
+    parser.add_argument(
+        "--environment-a",
+        help="Environment context id for character A"
+    )
+    parser.add_argument(
+        "--environment-b",
+        help="Environment context id for character B"
+    )
+    parser.add_argument(
+        "--trigger",
+        help="Trigger id for scene or pair interaction, e.g. attention_lock"
     )
 
     args = parser.parse_args()

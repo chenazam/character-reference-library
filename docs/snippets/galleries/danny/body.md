@@ -4,8 +4,12 @@
     <img src="..\..\assets\library\10_CHARACTERS\DANNY\02_BODY\anatomy\danny_anatomy_back_v1.png" alt="danny_anatomy_back (v1)">
   </a>
 
-  <a href="..\..\assets\library\10_CHARACTERS\DANNY\02_BODY\anatomy\danny_anatomy_front_v1.png" target="_blank" class="character-gallery__item" data-asset-key="danny_anatomy_front" data-version="1" data-is-latest="true" title="danny_anatomy_front (v1)">
+  <a href="..\..\assets\library\10_CHARACTERS\DANNY\02_BODY\anatomy\danny_anatomy_front_v1.png" target="_blank" class="character-gallery__item" data-asset-key="danny_anatomy_front" data-version="1" data-is-latest="false" title="danny_anatomy_front (v1)">
     <img src="..\..\assets\library\10_CHARACTERS\DANNY\02_BODY\anatomy\danny_anatomy_front_v1.png" alt="danny_anatomy_front (v1)">
+  </a>
+
+  <a href="..\..\assets\library\10_CHARACTERS\DANNY\02_BODY\anatomy\danny_anatomy_front_v2.png" target="_blank" class="character-gallery__item" data-asset-key="danny_anatomy_front" data-version="2" data-is-latest="true" title="danny_anatomy_front (v2)">
+    <img src="..\..\assets\library\10_CHARACTERS\DANNY\02_BODY\anatomy\danny_anatomy_front_v2.png" alt="danny_anatomy_front (v2)">
   </a>
 
   <a href="..\..\assets\library\10_CHARACTERS\DANNY\02_BODY\anatomy\danny_anatomy_glutes_v1.png" target="_blank" class="character-gallery__item" data-asset-key="danny_anatomy_glutes" data-version="1" data-is-latest="true" title="danny_anatomy_glutes (v1)">

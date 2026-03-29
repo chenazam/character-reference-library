@@ -80,12 +80,12 @@ identity_rules:
   - avoid broadening shoulders or adding upper-body bulk
   - avoid rigid, dominant, or overly confident posture
 reference_files:
-  face_anchor: connor_face_anchor_v1.png
+  face_anchor: connor_face_anchor_v2.png
   anatomy_sheet: connor_anatomy_sheet_v2.png
   body_anchor: ''
   silhouette_sheet: ''
   turnaround_sheet: ''
-  ultimate_character_sheet: ''
+  ultimate_character_sheet: connor_outfit_ucs_front_v1.png
   signature_outfit_sheet: ''
   silhouette_front: ''
 pipeline_status:
@@ -100,7 +100,7 @@ pipeline_status:
   turnaround_sheet: not_started
   expression_sheet: not_started
   hand_sheet: not_started
-  ucs: not_started
+  ucs: complete
   signature_outfit: not_started
   design_language: not_started
   wardrobe: not_started

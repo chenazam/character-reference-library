@@ -1,3 +1,5 @@
+Height: 5'7"
+
 Body:
 
 - slender, narrow-framed physique

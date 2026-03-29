@@ -1,6 +1,17 @@
-Reference fidelity:
+The attached reference images define the canonical identity of the character.
 
-The attached reference images define the canonical appearance of the character.
+They must be used to preserve:
+
+- facial structure
+- proportions
+- recognizable features
+
+They must NOT dictate:
+
+- rendering style
+- shading behavior
+- level of realism
+- lighting interpretation
 
 Strictly preserve:
 • preserve identity independently of rendering style; the subject must remain recognizable when translated into the target rendering style

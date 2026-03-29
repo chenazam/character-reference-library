@@ -113,7 +113,7 @@ Their body language pushes this contrast further: **Jonah** appears **Open Confi
   </div>
   <div class="comparison-item">
     <div class="comparison-label">Luca</div>
-    <img src="../../assets/library/10_CHARACTERS/LUCA/02_BODY/anatomy/luca_anatomy_sheet_01.png" alt="Luca Anatomy Sheet Comparison">
+    <img src="../../assets/library/10_CHARACTERS/LUCA/02_BODY/anatomy/luca_anatomy_sheet_v1.png" alt="Luca Anatomy Sheet Comparison">
   </div>
 </div>
 

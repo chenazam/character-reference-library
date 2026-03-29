@@ -16,8 +16,8 @@
 
   <div class="comparison-card">
     <h3><a href="../../characters/danny/">Danny</a></h3>
-    <a href="../../assets/library/10_CHARACTERS/DANNY/02_BODY/anatomy/danny_anatomy_front_v1.png" target="_blank">
-      <img src="../../assets/library/10_CHARACTERS/DANNY/02_BODY/anatomy/danny_anatomy_front_v1.png" alt="Danny anatomy-front">
+    <a href="../../assets/library/10_CHARACTERS/DANNY/02_BODY/anatomy/danny_anatomy_front_v2.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/DANNY/02_BODY/anatomy/danny_anatomy_front_v2.png" alt="Danny anatomy-front">
     </a>
   </div>
 
@@ -44,8 +44,8 @@
 
   <div class="comparison-card">
     <h3><a href="../../characters/luca/">Luca</a></h3>
-    <a href="../../assets/library/10_CHARACTERS/LUCA/02_BODY/anatomy/luca_anatomy_front_01.png" target="_blank">
-      <img src="../../assets/library/10_CHARACTERS/LUCA/02_BODY/anatomy/luca_anatomy_front_01.png" alt="Luca anatomy-front">
+    <a href="../../assets/library/10_CHARACTERS/LUCA/02_BODY/anatomy/luca_anatomy_front_v2.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/LUCA/02_BODY/anatomy/luca_anatomy_front_v2.png" alt="Luca anatomy-front">
     </a>
   </div>
 
@@ -58,8 +58,8 @@
 
   <div class="comparison-card">
     <h3><a href="../../characters/ragnar/">Ragnar</a></h3>
-    <a href="../../assets/library/10_CHARACTERS/RAGNAR/02_BODY/anatomy/ragnar_anatomy_front_v2.png" target="_blank">
-      <img src="../../assets/library/10_CHARACTERS/RAGNAR/02_BODY/anatomy/ragnar_anatomy_front_v2.png" alt="Ragnar anatomy-front">
+    <a href="../../assets/library/10_CHARACTERS/RAGNAR/02_BODY/anatomy/ragnar_anatomy_front_v3.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/RAGNAR/02_BODY/anatomy/ragnar_anatomy_front_v3.png" alt="Ragnar anatomy-front">
     </a>
   </div>
 
@@ -67,6 +67,13 @@
     <h3><a href="../../characters/tommy/">Tommy</a></h3>
     <a href="../../assets/library/10_CHARACTERS/TOMMY/02_BODY/anatomy/tommy_anatomy_front_v1.png" target="_blank">
       <img src="../../assets/library/10_CHARACTERS/TOMMY/02_BODY/anatomy/tommy_anatomy_front_v1.png" alt="Tommy anatomy-front">
+    </a>
+  </div>
+
+  <div class="comparison-card">
+    <h3><a href="../../characters/aaron/">Aaron</a></h3>
+    <a href="../../assets/library/10_CHARACTERS/AARON/02_BODY/anatomy/aaron_anatomy_front_v1.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/AARON/02_BODY/anatomy/aaron_anatomy_front_v1.png" alt="Aaron anatomy-front">
     </a>
   </div>
 
@@ -79,15 +86,22 @@
 
   <div class="comparison-card">
     <h3><a href="../../characters/alexander/">Alexander</a></h3>
-    <a href="../../assets/library/10_CHARACTERS/ALEXANDER/02_BODY/anatomy/alexander_anatomy_front_v1.png" target="_blank">
-      <img src="../../assets/library/10_CHARACTERS/ALEXANDER/02_BODY/anatomy/alexander_anatomy_front_v1.png" alt="Alexander anatomy-front">
+    <a href="../../assets/library/10_CHARACTERS/ALEXANDER/02_BODY/anatomy/alexander_anatomy_front_v2.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/ALEXANDER/02_BODY/anatomy/alexander_anatomy_front_v2.png" alt="Alexander anatomy-front">
     </a>
   </div>
 
   <div class="comparison-card">
     <h3><a href="../../characters/connor/">Connor</a></h3>
-    <a href="../../assets/library/10_CHARACTERS/CONNOR/02_BODY/anatomy/connor_anatomy_front_v2.png" target="_blank">
-      <img src="../../assets/library/10_CHARACTERS/CONNOR/02_BODY/anatomy/connor_anatomy_front_v2.png" alt="Connor anatomy-front">
+    <a href="../../assets/library/10_CHARACTERS/CONNOR/02_BODY/anatomy/connor_anatomy_front_v3.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/CONNOR/02_BODY/anatomy/connor_anatomy_front_v3.png" alt="Connor anatomy-front">
+    </a>
+  </div>
+
+  <div class="comparison-card">
+    <h3><a href="../../characters/milo/">Milo</a></h3>
+    <a href="../../assets/library/10_CHARACTERS/MILO/02_BODY/anatomy/milo_anatomy_front_v1.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/MILO/02_BODY/anatomy/milo_anatomy_front_v1.png" alt="Milo anatomy-front">
     </a>
   </div>
 

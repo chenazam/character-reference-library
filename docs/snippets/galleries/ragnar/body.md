@@ -12,8 +12,12 @@
     <img src="..\..\assets\library\10_CHARACTERS\RAGNAR\02_BODY\anatomy\ragnar_anatomy_front_v1.png" alt="ragnar_anatomy_front (v1)">
   </a>
 
-  <a href="..\..\assets\library\10_CHARACTERS\RAGNAR\02_BODY\anatomy\ragnar_anatomy_front_v2.png" target="_blank" class="character-gallery__item" data-asset-key="ragnar_anatomy_front" data-version="2" data-is-latest="true" title="ragnar_anatomy_front (v2)">
+  <a href="..\..\assets\library\10_CHARACTERS\RAGNAR\02_BODY\anatomy\ragnar_anatomy_front_v2.png" target="_blank" class="character-gallery__item" data-asset-key="ragnar_anatomy_front" data-version="2" data-is-latest="false" title="ragnar_anatomy_front (v2)">
     <img src="..\..\assets\library\10_CHARACTERS\RAGNAR\02_BODY\anatomy\ragnar_anatomy_front_v2.png" alt="ragnar_anatomy_front (v2)">
+  </a>
+
+  <a href="..\..\assets\library\10_CHARACTERS\RAGNAR\02_BODY\anatomy\ragnar_anatomy_front_v3.png" target="_blank" class="character-gallery__item" data-asset-key="ragnar_anatomy_front" data-version="3" data-is-latest="true" title="ragnar_anatomy_front (v3)">
+    <img src="..\..\assets\library\10_CHARACTERS\RAGNAR\02_BODY\anatomy\ragnar_anatomy_front_v3.png" alt="ragnar_anatomy_front (v3)">
   </a>
 
   <a href="..\..\assets\library\10_CHARACTERS\RAGNAR\02_BODY\anatomy\ragnar_anatomy_glutes_v1.png" target="_blank" class="character-gallery__item" data-asset-key="ragnar_anatomy_glutes" data-version="1" data-is-latest="true" title="ragnar_anatomy_glutes (v1)">

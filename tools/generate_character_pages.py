@@ -121,11 +121,14 @@ def load_metadata(character_dir: pathlib.Path) -> dict:
 def build_height_context_section(record: dict, metadata: dict) -> str:
     height_cm = get_nested(metadata, "physical", "height_cm", default=0)
     height_imperial = get_nested(metadata, "physical", "height_imperial", default="")
+    if not isinstance(height_cm, (int, float)):
+        height_cm = 0
     if not height_cm:
         return ""
 
     reference_height = 180
     reference_imperial = "5'11\""
+    print(f"[HEIGHT DEBUG] {record['dir']} -> {height_cm} ({type(height_cm)})")
     max_height = max(height_cm, reference_height)
 
     def pct(height: int) -> float:

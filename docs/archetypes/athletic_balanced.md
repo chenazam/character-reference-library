@@ -18,14 +18,17 @@ hide:
 
 ## Common Metadata Signals
 
-**Build categories:** -  
-**Anchors:** -  
-**Emphasis:** -
+**Build categories:** build_type  
+**Anchors:** profile_keyword  
+**Emphasis:** profile_keyword
 
 
 A proportional athletic silhouette with moderate shoulder width and balanced lower body.
 
 ## Characters
 
-_No characters currently mapped to this archetype._
+| Character | Build | Anchor | Emphasis |
+|---|---|---|---|
+| Aaron | build_type | profile_keyword | profile_keyword |
+| Milo | - | - | - |
 

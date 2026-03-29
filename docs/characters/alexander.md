@@ -80,6 +80,12 @@
 
 ---
 
+## Style
+
+--8<-- "snippets/galleries/alexander/style.md"
+
+---
+
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   var toggle = document.getElementById('show-all-versions-toggle');

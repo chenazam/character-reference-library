@@ -1,0 +1,40 @@
+name: [PAIR_NAME]
+slug: [pair_slug]
+
+members:
+  - [CHARACTER_1]
+  - [CHARACTER_2]
+
+display_order:
+  - [CHARACTER_1]
+  - [CHARACTER_2]
+
+dynamic_type:
+  - [dynamic_keyword]
+
+relationship_keywords:
+  - [keyword]
+  - [keyword]
+  - [keyword]
+
+visual_keywords:
+  - [keyword]
+  - [keyword]
+  - [keyword]
+
+style_keywords:
+  - [keyword]
+  - [keyword]
+
+height_relationship: '[CHARACTER_1] is [height relationship] than [CHARACTER_2]'
+build_relationship: '[brief build contrast or similarity]'
+
+shared_aesthetic: [shared_style_description]
+contrast_notes: [brief visual contrast description]
+
+reference_files:
+  height_comparison_sheet: ''
+  interaction_anchor_sheet: ''
+  dynamics_sheet: ''
+  shared_style_sheet: ''
+  lifestyle_scene_anchor_sheet: ''

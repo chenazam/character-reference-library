@@ -1,7 +1,7 @@
 name: Milo
-slug: character_slug
+slug: milo
 status: active
-project: PROJECT_NAME
+project: milo_aaron
 exclude_from_comparisons: false
 site_visibility:
   list_in_character_index: true
@@ -9,69 +9,86 @@ site_visibility:
   generate_page: true
   include_in_prompt_builder: true
 core_identity:
-  short_summary: brief one-sentence identity summary
-  role_archetype: archetype
+  short_summary: A tall, solidly built young man with a grounded, physically substantial
+    presence and a calm, reassuring demeanor.
+  role_archetype:
+  - grounded_anchor
   aesthetic_tags:
-  - tag
-  - tag
-  height_visual_category: profile_keyword
-  build_category: build_type
-  frame_proportion: profile_keyword
-  body_fat_range: profile_keyword
-  body_softness_distribution: profile_keyword
-  build_notes: '[Brief description of physique and how it should read.]
+  - domestic_soft
+  - athletic
+physical:
+  height_cm: 193
+  height_imperial: 6'4"
+  height_visual_category: tall
+  build_category: balanced_athletic
+  frame_proportion: balanced_frame
+  body_fat_range: athletic
+  body_softness_distribution: balanced_softness
+  build_notes: 'Solid, athletic build with clear physical density and natural muscle
+    definition. Broad shoulders, full chest, and thick limbs create a strong and grounded
+    silhouette. Muscle definition remains visible but soft and organic, avoiding sharp
+    separation or stylized anatomy. Overall mass reads as substantial and physically
+    capable without becoming exaggerated or bodybuilder-like.
 
     '
-  shoulder_profile: profile_keyword
-  torso_profile: profile_keyword
-  limb_profile: profile_keyword
-  posture_profile: profile_keyword
-  silhouette_anchor: profile_keyword
-  silhouette_emphasis: profile_keyword
+  shoulder_profile: broad_shoulders
+  torso_profile: athletic_torso
+  limb_profile: thick_limbs
+  posture_profile: grounded_stable
+  silhouette_anchor: power_athlete
+  silhouette_emphasis: upper_body
   silhouette_keywords:
-  - keyword
-  - keyword
-  - keyword
+  - imposing
+  - broad
+  - heavy_set
 face:
-  face_shape: face_shape_keyword
-  jawline: jawline_keyword
-  eye_description: brief description
-  hair_description: brief description
-  skin_description: brief description
+  face_shape: soft_round
+  jawline: defined_jawline
+  eye_description: soft, steady eyes with a calm and open gaze
+  hair_description: medium-length ginger hair with soft volume and natural, slightly
+    tousled structure
+  skin_description: natural skin with visible texture and a dense freckle pattern
   distinctive_features:
-  - feature
-  - feature
-hair_color: hair_color_keyword
+  - dense freckle pattern across face and nose
+  - softly weighted jaw and lower face
+  - light natural stubble
+hair_color: ginger
 style:
-  primary_aesthetic: primary_aesthetic
+  primary_aesthetic: domestic_soft
   secondary_aesthetic:
-  - secondary_aesthetic
+  - athletic
   materials:
-  - material
-  - material
+  - cotton
+  - linen
   primary_colors:
-  - color
-  - color
+  - green
+  - beige
   accent_colors:
-  - accent_color
+  - brown
   recurring_accessories:
-  - accessory
+  - none
 expression:
-  default_expression: expression_keyword
-  smile_type: smile_keyword
-  emotional_tone: tone_keyword
+  default_expression: soft_neutral
+  smile_type: warm_smile
+  emotional_tone: gentle
 movement:
-  movement_style: movement_keyword
-  gesture_style: gesture_keyword
-  body_language: body_language_keyword
-  spatial_presence: movement_keyword
+  movement_style: relaxed_natural
+  gesture_style: restrained
+  body_language: calm_composed
+  spatial_presence: grounded
 identity_rules:
   preserve:
-  - preserve_rule
-  - preserve_rule
+  - solid, physically substantial athletic build with visible natural muscle
+  - broad shoulders and strong upper-body structure
+  - soft but dense facial structure with visible freckles
+  - medium-length natural ginger hair with soft volume
+  - calm, grounded, and reassuring presence
   avoid:
-  - avoid_rule
-  - avoid_rule
+  - overly lean or narrow physique
+  - sharp, sculpted, or model-like facial structure
+  - excessive muscular definition or bodybuilder proportions
+  - loss of freckles or skin texture
+  - restless, highly expressive, or high-energy movement
 reference_files:
   face_anchor: milo_face_anchor_v1.png
   anatomy_sheet: ''
@@ -104,4 +121,4 @@ pipeline_status:
   prop_sheet: not_started
   gallery_image: not_started
 notes: ''
-last_updated: '[YYYY-MM-DD]'
+last_updated: '2026-03-29'

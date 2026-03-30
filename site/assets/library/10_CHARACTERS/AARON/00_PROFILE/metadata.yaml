@@ -1,7 +1,7 @@
 name: Aaron
-slug: character_slug
+slug: aaron
 status: active
-project: PROJECT_NAME
+project: milo_aaron
 exclude_from_comparisons: false
 site_visibility:
   list_in_character_index: true
@@ -9,72 +9,85 @@ site_visibility:
   generate_page: true
   include_in_prompt_builder: true
 core_identity:
-  short_summary: brief one-sentence identity summary
-  role_archetype: archetype
+  short_summary: A lean, lightly athletic young man with an agile, expressive presence
+    and a clean, slightly intentional visual style.
+  role_archetype:
+  - agile_charmer
   aesthetic_tags:
-  - tag
-  - tag
+  - playful_athletic
+  - athletic
 physical:
   height_cm: 178
   height_imperial: 5'10"
-  height_visual_category: profile_keyword
-  build_category: build_type
-  frame_proportion: profile_keyword
-  body_fat_range: profile_keyword
-  body_softness_distribution: profile_keyword
-  build_notes: '[Brief description of physique and how it should read.]
+  height_visual_category: medium
+  build_category: light_athletic
+  frame_proportion: balanced_frame
+  body_fat_range: athletic
+  body_softness_distribution: balanced
+  build_notes: 'Lean, lightly athletic physique with a streamlined and balanced structure.
+    Shoulders are moderate rather than broad, chest is lightly defined, arms are slim
+    with subtle tone, and the waist is narrow. Overall proportions read as light,
+    agile, and slightly elongated without becoming fragile or adolescent.
 
     '
-  shoulder_profile: profile_keyword
-  torso_profile: profile_keyword
-  limb_profile: profile_keyword
-  posture_profile: profile_keyword
-  silhouette_anchor: profile_keyword
-  silhouette_emphasis: profile_keyword
+  shoulder_profile: moderate_shoulders
+  torso_profile: athletic_torso
+  limb_profile: athletic_limbs
+  posture_profile: relaxed_neutral
+  silhouette_anchor: elongated_slender
+  silhouette_emphasis: balanced
   silhouette_keywords:
-  - keyword
-  - keyword
-  - keyword
+  - agile
+  - tall
+  - leg_dominant
 face:
-  face_shape: face_shape_keyword
-  jawline: jawline_keyword
-  eye_description: brief description
-  hair_description: brief description
-  skin_description: brief description
+  face_shape: oval
+  jawline: defined_jawline
+  eye_description: clear and expressive with a slightly open, attentive gaze
+  hair_description: short to medium-length hair with natural volume and lightly tousled
+    structure
+  skin_description: smooth skin with light natural texture
   distinctive_features:
-  - feature
-  - feature
-hair_color: hair_color_keyword
+  - slightly wide-set attentive eyes
+  - gently tapered lower face
+  - subtle playful knowingness in expression
+hair_color: brown
 style:
-  primary_aesthetic: primary_aesthetic
+  primary_aesthetic: playful_athletic
   secondary_aesthetic:
-  - secondary_aesthetic
+  - athletic
   materials:
-  - material
-  - material
+  - cotton
+  - linen
   primary_colors:
-  - color
-  - color
+  - black
+  - orange
   accent_colors:
-  - accent_color
+  - orange
   recurring_accessories:
-  - accessory
+  - none
 expression:
-  default_expression: expression_keyword
-  smile_type: smile_keyword
-  emotional_tone: tone_keyword
+  default_expression: confident_neutral
+  smile_type: subtle_smile
+  emotional_tone: open_warm
 movement:
-  movement_style: movement_keyword
-  gesture_style: gesture_keyword
-  body_language: body_language_keyword
-  spatial_presence: movement_keyword
+  movement_style: restless_quick
+  gesture_style: expressive
+  body_language: open_confident
+  spatial_presence: energetic
 identity_rules:
   preserve:
-  - preserve_rule
-  - preserve_rule
+  - lean lightly athletic adult-male physique with balanced proportions
+  - slightly refined facial structure with subtle angularity
+  - expressive attentive eyes and responsive expression
+  - short to medium tousled hair with natural realistic volume
+  - light agile socially aware overall presence
   avoid:
-  - avoid_rule
-  - avoid_rule
+  - teenage softness or underdeveloped proportions
+  - excessive muscle mass or broad heavy structure
+  - generic model-like perfection or airbrushed rendering
+  - rigid static posture or emotionally blank expressions
+  - overlap with Milo's denser heavier physical identity
 reference_files:
   face_anchor: aaron_face_anchor_v1.png
   anatomy_sheet: ''
@@ -107,4 +120,4 @@ pipeline_status:
   prop_sheet: not_started
   gallery_image: not_started
 notes: ''
-last_updated: '[YYYY-MM-DD]'
+last_updated: '2026-03-29'

@@ -99,9 +99,23 @@
   </div>
 
   <div class="comparison-card">
+    <h3><a href="../../characters/hunter/">Hunter</a></h3>
+    <a href="../../assets/library/10_CHARACTERS/HUNTER/02_BODY/anatomy/hunter_anatomy_front_v1.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/HUNTER/02_BODY/anatomy/hunter_anatomy_front_v1.png" alt="Hunter anatomy-front">
+    </a>
+  </div>
+
+  <div class="comparison-card">
     <h3><a href="../../characters/milo/">Milo</a></h3>
     <a href="../../assets/library/10_CHARACTERS/MILO/02_BODY/anatomy/milo_anatomy_front_v1.png" target="_blank">
       <img src="../../assets/library/10_CHARACTERS/MILO/02_BODY/anatomy/milo_anatomy_front_v1.png" alt="Milo anatomy-front">
+    </a>
+  </div>
+
+  <div class="comparison-card">
+    <h3><a href="../../characters/noel/">Noel</a></h3>
+    <a href="../../assets/library/10_CHARACTERS/NOEL/02_BODY/anatomy/noel_anatomy_front_v1.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/NOEL/02_BODY/anatomy/noel_anatomy_front_v1.png" alt="Noel anatomy-front">
     </a>
   </div>
 

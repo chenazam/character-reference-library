@@ -111,328 +111,874 @@ Pair scene requirements:
 - ensure both characters remain recognizable as separate individuals
 - body scale and relative proportions must remain believable
 
-Ragnar is an extremely tall man (208 cm / 6'10") with a massive, dense muscular build and a strongly shoulder-dominant frame.
+# CORE - HUNTER
 
-His physique is defined by extremely broad shoulders, a thick powerful chest, and heavily muscled arms, creating a silhouette that reads as physically overwhelming and upper-body dominant. His posture is grounded and stable, with a calm, controlled physical presence.
+## Core Identity
 
-His overall appearance communicates strength, density, and physical weight rather than agility or leanness.
+Hunter embodies control, stability, and quiet dominance.
 
-Ragnar has a square facial structure with strong angular bone structure and a sharp, well-defined jawline.
+He does not perform power or masculinity - he naturally carries them.
+His presence is grounded, contained, and decisive.
 
-His eyes are calm blue with a steady, watchful gaze. His expression is naturally composed and controlled.
+## Personality Expression (Visual)
 
-His skin has a light tone with a rugged masculine texture.
+- calm and controlled
+- rarely reactive
+- emotionally contained
+- observant rather than expressive
 
-He has a short blond beard and mustache that frame his jaw and reinforce his rugged appearance.
+## Social Presence
 
-Ragnar has long blond hair that falls to approximately shoulder length.
+- naturally commands attention without seeking it
+- others adjust to him rather than the reverse
+- occupies space with ease and certainty
 
-The hair has natural volume with a slightly wavy structure, forming a consistent, recognizable silhouette. It is typically worn loose and flows naturally around the head and neck.
+## Energy Profile
 
-Hair volume is distributed along the mid-length rather than concentrated at the crown, and remains consistent across different views.
+- low volatility
+- high control
+- steady, grounded intensity
 
-Avoid stylization, excessive smoothing, or shortening of the hair.
+## Contrast to Noel
 
-Ragnar has a massive, dense muscular build with a strongly shoulder-dominant frame.
+- Noel expresses -> Hunter contains
+- Noel moves dynamically -> Hunter stabilizes
+- Noel invites interaction -> Hunter defines boundaries
 
-His shoulders are extremely broad, forming the dominant element of his silhouette. His chest is thick and powerful, and his arms are heavily muscled.
+## Visual Priorities
 
-His torso is dense and solid, with visible mass and weight. His legs are strong and athletic but visually secondary to the heavy upper-body mass.
+- grounded physical presence
+- controlled expression
+- minimal, deliberate movement
+- natural, non-performative masculinity
 
-His overall proportions emphasize upper-body dominance, physical density, and structural strength rather than agility or leanness.
+## Identity Anchor
 
-Ragnar moves with slow, deliberate, and controlled physical motion.
+Hunter must always read as:
 
-His movement style is grounded and powerful, with minimal unnecessary motion. Actions feel efficient and heavy rather than quick or reactive.
+- in control of himself
+- physically and socially dominant
+- stable, reliable, and grounded
+- emotionally contained but aware
 
-His posture remains stable and balanced at all times, with a strong sense of physical weight and presence.
+# FACE - HUNTER
 
-Ragnar's default expression is calm, serious, and controlled.
+## Core Principle
 
-His gaze is steady and focused, with minimal visible emotional fluctuation. His facial expression remains composed and restrained in most situations.
+Hunter's face reflects control, maturity, and grounded masculinity.
 
-When he smiles, it is rare and subtle, briefly softening his otherwise stoic demeanor without becoming overly expressive.
+It should feel structured, stable, and subtly intense - never soft or overly expressive.
 
-Ragnar's visual aesthetic is rugged and utilitarian with subtle military and gothic influences.
+## Structure
 
-His clothing emphasizes function, durability, and physical protection rather than decoration. Materials typically include leather and aged metal, with surfaces that appear worn and practical.
+- face shape: square-leaning oval
+- strong, defined jawline
+- solid chin with clear structure
+- balanced but masculine proportions
 
-The color palette is dominated by dark, muted tones such as black and dark brown, with occasional accents of deep red or steel.
+## Brow & Eyes
 
-Overall styling should feel grounded, practical, and battle-ready rather than ornate or ceremonial.
+- slightly heavy brow
+- deep-set eyes
+- gaze is steady, focused, and assessing
+- eyelids relaxed, not wide or expressive
 
-Always preserve:
+## Nose
 
-- extremely tall height and imposing scale
-- massive, dense muscular build
-- strongly shoulder-dominant frame
-- extremely broad shoulders and thick chest mass
-- square facial structure and strong jawline
-- long blond shoulder-length hair
-- short blond beard
-- grounded, stable posture
-- calm, controlled expression
-- rugged utilitarian aesthetic
+- straight and proportionate
+- natural, not stylized or sharp
+
+## Mouth
+
+- neutral resting position
+- lips neither overly full nor thin
+- minimal movement in default expression
+
+## Skin & Texture
+
+- natural skin texture (not overly smooth or stylized)
+- subtle ruggedness
+- avoid "perfect" or airbrushed look
+
+## Facial Hair
+
+- can support light stubble or very short beard
+- never overly styled or decorative
+- reinforces grounded masculinity
+
+## Expression Behavior
+
+- default: neutral, composed
+- emotional expression is subtle and controlled
+- micro-expressions preferred over visible changes
+
+## Contrast to Noel
+
+- Noel: soft, expressive, readable -> Hunter: structured, controlled, contained
+- Noel: emotional clarity -> Hunter: emotional restraint
+
+## Identity Lock
+
+Hunter's face must always read as:
+
+- stable and grounded
+- quietly dominant
+- controlled and self-contained
+
+## Avoid
+
+- soft or delicate facial structure
+- overly youthful or boyish features
+- exaggerated masculinity (caricatured jaw, etc.)
+- expressive or reactive facial behavior
+- "model face" perfection without character
+
+# HAIR - HUNTER
+
+## Core Principle
+
+Hunter's hair is controlled, natural, and understated.
+
+It should reinforce structure and masculinity without drawing attention.
+
+## Length & Shape
+
+- short to medium length
+- slightly longer on top, shorter on sides
+- maintains a clean, controlled silhouette
+
+## Texture
+
+- dense, slightly wavy
+- natural movement, but not loose or messy
+- hair should feel substantial and grounded
+
+## Styling
+
+- minimal styling product
+- controlled but not "styled" in a visible way
+- no exaggerated volume or fashion-forward shaping
+
+## Hairline
+
+- natural, slightly mature hairline
+- avoid overly sharp or artificial edges
+
+## Color
+
+- dark brown
+- rich, natural tone
+- avoid overly glossy or stylized rendering
+
+## Behavior in Motion
+
+- remains mostly in place
+- minimal bounce or exaggerated movement
+
+## Contrast to Noel
+
+- Noel: soft, expressive, stylized -> Hunter: controlled, natural, restrained
+- Noel's hair adds personality -> Hunter's hair reinforces structure
+
+## Identity Lock
+
+Hair must always read as:
+
+- controlled
+- masculine
+- understated
+- effortless
+
+## Avoid
+
+- overly styled or trendy cuts
+- excessive volume or fluffiness
+- soft, delicate, or "pretty" hair presentation
+- messy or chaotic appearance
+
+# BODY - HUNTER
+
+## Core Principle
+
+Hunter's body communicates power through density and control, not exaggeration.
+
+He is clearly strong and physically capable, but does not appear sculpted for display.
+His physique reads as functional, grounded, and inevitable.
+
+## Overall Build
+
+- tall with a broad, dominant upper body
+- dense musculature with natural proportions
+- visible strength without exaggerated definition
+- body reads heavy and grounded rather than light or agile
+
+## Muscle Definition
+
+- moderate, natural definition
+- visible chest, shoulder, and arm structure
+- abdominal definition present but not sharply cut
+- avoid extreme separation or "bodybuilder" striations
+
+## Mass Distribution
+
+- upper body dominant (shoulders, chest, upper back)
+- torso feels thick and stable
+- limbs are strong and proportional, not oversized
+
+## Surface Quality
+
+- natural skin texture
+- subtle softness over muscle (not dry or hyper-defined)
+- visible body hair (especially chest) contributes to grounded masculinity
+
+## Proportions
+
+- broad shoulders relative to waist
+- moderate taper, not extreme V-shape
+- legs proportional, not emphasized over upper body
+
+## Posture
+
+- upright but relaxed
+- shoulders naturally set, not artificially pulled back
+- stance feels stable and rooted
+
+## Movement Read (important for generation)
+
+Even in a neutral pose, the body should imply:
+
+- strength without tension
+- readiness without stiffness
+- control without effort
+
+## Contrast to Noel
+
+- Noel: elongated, light, soft -> Hunter: dense, grounded, powerful
+- Noel: elegant proportions -> Hunter: structural presence
+- Noel: visually expressive -> Hunter: visually stable
+
+## Avoid
+
+- extreme leanness or dryness
+- exaggerated V-taper
+- stylized or "heroic" anatomy proportions
+- overly smooth or hairless presentation
+
+# MOVEMENT - HUNTER
+
+## Core Principle
+
+Hunter moves with deliberate efficiency.
+
+No movement is wasted.
+No gesture is accidental.
+
+## Movement Style
+
+- slow to moderate pace
+- deliberate and controlled
+- physically grounded
+
+## Weight & Presence
+
+- steps feel heavy and stable
+- center of gravity remains low and controlled
+- body reads as anchored in space
+
+## Gesture Behavior
+
+- minimal gestures
+- precise, intentional movements
+- no fidgeting or unnecessary motion
+
+## Interaction with Space
+
+- occupies space naturally
+- does not adjust to others - others adjust to him
+- movement defines the environment rather than reacting to it
+
+## Contrast to Noel
+
+- Noel moves fluidly -> Hunter moves decisively
+- Noel fills space dynamically -> Hunter stabilizes space
+- Noel reacts -> Hunter dictates
+
+## Interaction with Noel
+
+- allows Noel's movement to play around him
+- remains stable while Noel is expressive
+- creates a visual anchor point in shared scenes
+
+## Overall Read
+
+Hunter should always feel like:
+
+- he knows exactly what he is doing
+- he never hesitates
+- he never rushes
+
+# EXPRESSION - HUNTER
+
+## Core Principle
+
+Hunter's expression is controlled and restrained.
+
+Emotion exists, but is rarely displayed.
+
+## Default Expression
+
+- neutral, composed
+- relaxed but unreadable
+- slight tension in the eyes
+
+## Emotional Range
+
+- low external variance
+- internal emotion does not translate into overt expression
+
+## Smile Behavior
+
+- rare
+- subtle
+- often asymmetrical or brief
+
+## Eye Behavior
+
+- steady, direct gaze
+- assessing rather than reacting
+- maintains eye contact comfortably
+
+## Facial Movement
+
+- minimal
+- no exaggerated reactions
+- micro-expressions over visible shifts
+
+## Contrast to Noel
+
+- Noel expresses emotion openly -> Hunter contains it
+- Noel's face is readable -> Hunter's is controlled
+- Noel reacts -> Hunter observes
+
+## Interaction with Noel
+
+- allows Noel to be expressive without matching intensity
+- slight softening only in close/intimate contexts
+- emotional shifts are subtle but meaningful
+
+## Overall Read
+
+Hunter should feel like:
+
+- he is always in control of himself
+- nothing escapes unintentionally
+- his attention is focused and deliberate
+
+# STYLE - HUNTER
+
+## Core Principle
+
+Hunter's style is controlled, restrained, and intentional.
+
+He does not dress to attract attention.
+He dresses to establish presence.
+
+Everything is clean, structured, and quietly expensive.
+
+## Aesthetic Direction
+
+- modern minimal masculine
+- quiet luxury
+- structured simplicity
+- controlled refinement
+
+## Visual Characteristics
+
+- clean silhouettes with strong structure
+- minimal layering, but precise fit
+- no unnecessary detailing or decoration
+- materials carry the visual weight, not design complexity
+
+## Contrast to Noel
+
+- Noel explores expression -> Hunter reduces to essentials
+- Noel plays with aesthetics -> Hunter stabilizes them
+- Noel is visually dynamic -> Hunter is visually anchored
+
+## Material Behavior
+
+- matte or low-sheen surfaces preferred
+- fabrics should feel substantial and grounded
+- avoid anything overly soft, flowy, or delicate
+
+## Color Logic
+
+- dark neutrals dominate (black, charcoal, navy)
+- occasional controlled contrast (white, muted tones)
+- no bright or playful colors
+
+## Overall Read
+
+Hunter should always read as:
+
+- controlled
+- grounded
+- expensive without trying
+- physically and socially dominant
+
+# GUARDRAILS - HUNTER
+
+## Core Identity Lock
+
+Hunter must always read as:
+
+- physically powerful
+- grounded and stable
+- controlled and self-contained
+- naturally dominant without performance
+
+## Body Guardrails
+
+### MUST PRESERVE
+
+- dense, natural musculature
+- strong upper body presence (shoulders, chest)
+- moderate, realistic definition
+- subtle softness over muscle (not dry or shredded)
+- visible body hair for grounded masculinity
+
+### MUST AVOID
+
+- bodybuilder aesthetics (over-defined, striated, overly lean)
+- exaggerated muscle size or proportions
+- hyper-stylized "fitness model" look
+- overly smooth, hairless torso
+- fragile or lightweight body appearance
+
+## Proportion Guardrails
+
+### MUST PRESERVE
+
+- broad shoulders with moderate taper
+- thick, stable torso
+- proportional limbs
+
+### MUST AVOID
+
+- extreme V-shape torso
+- narrow or delicate frame
+- overly long or stylized limbs
+- cartoonishly heroic proportions
+
+## Expression & Presence Guardrails
+
+### MUST PRESERVE
+
+- neutral, controlled expression
+- minimal emotional leakage
+- steady, focused gaze
+
+### MUST AVOID
+
+- expressive or reactive facial behavior
+- exaggerated emotion
+- playful or soft demeanor (outside Noel interaction)
+
+## Movement Guardrails
+
+### MUST PRESERVE
+
+- deliberate, economical movement
+- grounded physical presence
+- minimal gestures
+
+### MUST AVOID
+
+- fidgeting or unnecessary motion
+- exaggerated posing
+- dynamic or overly expressive movement
+
+## Interaction Guardrails (CRITICAL FOR SCENES)
+
+### WITH NOEL
+
+- Hunter remains the stable anchor
+- does not mirror Noel's expressiveness
+- subtle softening only in close/intimate contexts
+- dominance is implicit, not acted out
+
+## Rendering Guardrails
+
+### MUST PRESERVE
+
+- natural human anatomy
+- believable muscle structure
+- realistic surface variation
+
+### MUST AVOID
+
+- hyper-polished or plastic skin
+- stylized anatomy exaggeration
+- artificial symmetry or perfection
+
+## Failure Modes to Watch For
+
+- "Gym model" -> too aesthetic, too posed
+- "Bodybuilder" -> too defined, too dry
+- "Generic male base" -> loses density and presence
+- "Softened Hunter" -> drifts toward Noel's space
+
+If any of these occur, regenerate with emphasis on:
+"natural density", "controlled power", "non-performative masculinity"
+
+# CORE - NOEL
+
+Young adult male with a tall, elongated frame and model-like proportions.
+
+Lightly athletic build with subtle softness; body reads refined and naturally fit rather than muscular or bulky.
+
+Long limbs and balanced proportions create an elegant, fashion-oriented silhouette.
+
+Overall presence blends soft masculine beauty with playful confidence.
+
+Energy:
+
+- playful
+- self-aware
+- slightly bratty in a flirtatious, teasing way
+- confident without being dominant
+
+Visual identity priorities:
+
+- maintain youthful softness in face and body
+- preserve elongated proportions and long limbs
+- avoid adding excessive muscle mass or ruggedness
+- ensure he reads as fashion-aware and visually polished
+
+# FACE - NOEL
+
+Face shape:
+
+- oval structure with balanced proportions
+- softly defined bone structure without harsh angularity
+
+Jaw:
+
+- defined but not sharp
+- clean structure without heavy squaring
+
+Features:
+
+- youthful, smooth facial structure
+- no ruggedness, no weathering
+- overall softness must be preserved
+
+Eyes:
+
+- soft, lively eyes with a slightly playful, self-aware gaze
+- expression should feel engaged and subtly teasing rather than distant
+
+Brows:
+
+- natural, moderately defined
+- not overly heavy or sharp
+
+Lips:
+
+- naturally full to medium fullness
+- relaxed, often slightly parted or hinting at expression
+
+Skin:
+
+- smooth, even, youthful
+- no harsh texture or exaggerated detail
+
+Expression baseline:
+
+- soft neutral with underlying playfulness
+- can shift into subtle or playful smile easily
 
 Avoid:
 
-- lean, slender, or lightly athletic body types
-- reducing shoulder width or upper-body mass
-- shortening or simplifying the hair silhouette
-- removing the beard
-- softening facial structure into a narrow or youthful appearance
-- ornate or decorative fantasy styling
-- lightweight or fashionable modern clothing that undermines physical presence
+- aging the face
+- sharpening features into harsh angles
+- rugged, hardened, or overly masculine reinterpretation
 
-Lucien is a slender young man in his mid-twenties with refined features, a lightly built frame, and a calm, quietly self-possessed presence.
+# HAIR - NOEL
 
-He stands at average height, but his silhouette reads as narrow, graceful, and leg-dominant rather than compact or sturdy. His overall impression is thoughtful, composed, and slightly enigmatic, with a quiet, controlled intensity rather than overt mischief or playfulness.
+Length:
 
-His visual identity blends modern occultism, scholarly refinement, and understated gothic influence. He should feel intelligent, restrained, and ritual-aware rather than flashy, dramatic, or costume-like.
+- short to medium length
 
-Maintain consistent facial identity, hairstyle, body proportions, and overall silhouette across all views.
+Structure:
 
-Face:
+- naturally wavy with slight curl pattern
+- soft, airy volume throughout
+- not flat, not tightly controlled
 
-- narrow, refined face shape with visible bone structure
-- clearly defined jawline, but not heavy or rugged
-- slight cheek hollowness that adds subtle angularity
-- straight, clean nose
-- dark brown observant eyes with a slightly heavy-lidded, focused look
-- light skin with subtle freckles across the nose and cheeks
+Styling:
 
-Facial character:
+- slightly tousled, effortless appearance
+- controlled enough to feel styled, but never rigid or over-structured
 
-- calm, controlled, and guarded by default
-- emotionally restrained rather than soft or open
-- observant and slightly inward-facing
-- carries a quiet sense of knowing rather than warmth
-- jawline should be clearly defined with visible structure, not rounded or softened
-- slight cheek hollowing to reduce facial softness
-- chin should be clean and structured, not small or tapered-soft
+Silhouette:
 
-Structural priorities:
+- adds softness and movement to the head shape
+- should enhance youthful and romantic qualities
 
-- preserve a defined but elegant jawline (not soft, not square-heavy)
-- maintain facial narrowness and slight angularity
-- keep subtle tension in the face - avoid over-relaxation
-- preserve freckles as identity detail
+Hairline:
+
+- natural, clean, not exaggerated
+
+Color:
+
+- dark brown
+
+Behavior:
+
+- retains volume and texture across views
+- does not collapse into flat or overly neat shapes
 
 Avoid:
 
-- overly soft or rounded facial structure
-- "pretty boy" softness
-- rugged or bulky masculinity
-- exaggerated sharpness or model-like hyper-definition
-- overly warm or approachable facial reads
+- overly short or tight cuts that remove volume
+- overly styled, gelled, or rigid shapes
+- straightening out the natural wave completely
+
+# BODY - NOEL
+
+Height:
+
+- 5'11" (180 cm)
+- reads as tall in most social contexts
+
+Proportions:
+
+- elongated frame with long limbs
+- legs proportionally long relative to torso
+- narrow, refined overall proportions
+- silhouette reads elegant rather than athletic
+
+Build:
+
+- soft slender build with minimal musculature
+- body reads smooth, refined, and lightly structured
+- no visible bulk or athletic mass
+
+Musculature:
+
+- very low visible muscle definition
+- soft transitions across all muscle groups
+- no separation or sharp definition
+
+Body fat:
+
+- soft_average
+- slight natural softness distributed evenly
+
+Torso:
+
+- smooth and lightly shaped
+- no visible abdominal segmentation
+- chest softly defined without pronounced mass
+
+Arms:
+
+- slender with minimal definition
+- smooth contours without vascularity or hardness
+
+Legs:
+
+- long and refined
+- subtle shaping but no muscular emphasis
+
+Shoulders:
+
+- moderate to slightly narrow
+- no broad or dominant upper-body presence
+
+Neck:
+
+- slender and elongated
+- contributes to overall elegant vertical line
+
+Posture:
+
+- relaxed, natural, slightly open
+- reads effortless rather than grounded or powerful
+
+Silhouette:
+
+- elongated and vertical
+- light, elegant, and slightly delicate in presence
+- no dense or heavy visual weight
+
+Scale behavior:
+
+- should read visibly taller than average characters
+- maintains long vertical proportions in group compositions
+- should not visually compete with more dominant or muscular characters
+
+Contrast intent:
+
+- designed to read softer, lighter, and less physically dominant in contrast scenarios
+- especially when paired with larger, more muscular, or more grounded characters
+
+Avoid:
+
+- adding visible muscle definition or tone
+- introducing athletic or fitness-oriented body language
+- widening shoulders or thickening torso
+- compressing vertical proportions
+- shifting toward masculine bulk or physical dominance
+
+# MOVEMENT - NOEL
+
+General movement:
+
+- relaxed, fluid, and unhurried
+- light and effortless rather than grounded or forceful
+
+Posture:
+
+- upright but not rigid
+- slightly open, never tense or defensive
+
+Gestures:
+
+- soft, controlled, and expressive
+- uses subtle movement rather than large gestures
+
+Energy:
+
+- calm and self-assured
+- not physically imposing
+- presence comes from ease, not force
+
+Interaction style:
+
+- comfortable in close proximity
+- naturally responsive rather than initiating dominance
+
+Physical presence:
+
+- reads light and agile
+- never heavy, planted, or aggressive
+
+Avoid:
+
+- sharp, forceful, or abrupt movement
+- rigid or militaristic posture
+- exaggerated physical dominance
+
+# EXPRESSION - NOEL
+
+Baseline expression:
+
+- soft, neutral, and composed
+- slight natural warmth
+
+Emotional tone:
+
+- playful and subtly teasing
+- expressive without exaggeration
+
+Facial behavior:
+
+- small shifts in expression rather than large changes
+- eyes carry most of the emotional nuance
+
+Signature traits:
+
+- faint, knowing smiles
+- slightly amused or curious expressions
+- occasional soft "bratty" undertone
+
+Presence:
+
+- inviting rather than intimidating
+- emotionally open but controlled
+
+Range:
+
+- can shift between calm, playful, and quietly affectionate
+- rarely intense or aggressive
+
+Avoid:
+
+- hard, stoic, or emotionally closed expressions
+- exaggerated or cartoonish reactions
+- aggressive or confrontational facial language
+
+# STYLE - NOEL
+
+Overall aesthetic:
+
+- refined, modern, fashion-aware
+- clean and composed with a soft, effortless finish
+- reads curated rather than casual
+
+Visual impression:
+
+- light, elegant, and slightly delicate
+- never rugged or heavy
+- avoids visual density or harsh contrast
+
+Details:
+
+- smooth skin rendering with subtle tonal variation
+- clean lines and soft edges
+- no exaggerated texture or surface noise
 
 Hair:
 
-- dark brown naturally curly hair
-- short to medium length
-- soft natural volume
-- irregular natural hairline
-- texture should remain visible and slightly organic rather than overly groomed or artificially perfect
+- styled but natural
+- soft volume with controlled shape
+- slightly tousled rather than rigid
 
-Hair behavior:
+Color presence:
 
-- curls should feel natural, lived-in, and slightly unruly in a controlled way
-- shape should frame the face softly without becoming fluffy or chaotic
-- maintain an understated scholarly-occult feel rather than trendy fashion-hair polish
+- favors soft neutrals and muted tones
+- avoids overly saturated or aggressive color palettes
 
 Avoid:
 
-- straightened or flattened hair
-- buzzcuts or very short cropped styles
-- overly sharp barbered styling
-- generic polished "male model" hair
+- rugged, gritty, or overly masculine styling
+- heavy contrast or harsh shadowing
+- messy or unstructured presentation
 
-Height: 5'7"
+# IDENTITY GUARDRAILS - NOEL
 
-Body:
+## Preserve
 
-- slender, narrow-framed physique
-- average height with lightly built proportions
-- overall silhouette reads slim and understated
-- shoulders are narrow and relaxed
-- upper body has low visual mass
-- chest is flat with minimal definition
-- arms are slim and lightly built
-- waist is natural and not strongly tapered
-- lower body remains proportionate and natural, with a soft but clearly readable side-profile contour through the hips and seat
-- overall build appears lightly constructed and not physically imposing
+- soft, youthful facial structure with model-like refinement
+- natural wavy hair with volume and slight curl pattern
+- elongated proportions and long limbs
+- lightly athletic body with subtle softness (no bulk)
+- playful, confident, slightly bratty emotional tone
+- fashion-aware presentation with a polished, intentional look
 
-Body read:
+## Avoid
 
-- soft-slender, not athletic
-- relaxed, not tense
-- natural, not sculpted
-- understated, not stylized
+- adding heavy muscle mass or thickening the frame
+- shifting into rugged, mature, or hardened masculinity
+- flattening hair into short, rigid, or overly clean styles
+- removing softness from face or body
+- neutralizing personality into cold, distant, or expressionless presence
+- generic casual styling that loses the luxury/fashion-aware edge
 
-Silhouette priorities:
+## Drift Risks
 
-- maintain a narrow, lightweight upper body
-- keep proportions natural and balanced
-- avoid strong shaping or exaggeration
-- preserve a clean and simple silhouette
+- drifting toward generic athletic male (too muscular, too defined)
+- drifting toward "boy-next-door plain" (losing fashion identity)
+- drifting toward overly soft/childlike (losing confidence and presence)
+- hair losing volume and becoming flat or simplified
 
-Proportion rules:
+## Reinforcement Notes
 
-- no visible muscle definition
-- no exaggerated proportions
-- maintain natural anatomical balance
-
-Avoid:
-
-- athletic or muscular physiques
-- broad shoulders or strong taper
-- defined abs, chest, or arms
-- exaggerated or stylized body shapes
-
-Movement:
-
-- deliberate and precise
-- restrained, measured gestures
-- upright, controlled posture
-- calm composed body language
-- neutral spatial presence with subtle self-possession
-
-Movement quality:
-
-- Lucien should move like someone who chooses his actions carefully
-- gestures should feel intentional rather than loose, animated, or impulsive
-- even when relaxed, his body language should retain quiet control
-- he should read as thoughtful and observant rather than socially performative
-
-Avoid:
-
-- broad expressive gestures
-- athletic dynamism
-- playful physicality
-- loose casual sprawl
-- stiffness that makes him feel lifeless or robotic
-
-Expression:
-
-- default expression is neutral, controlled, and slightly guarded
-- emotional changes are subtle and primarily visible in the eyes
-- mouth movement is minimal and rarely fully expressive
-
-Expression character:
-
-- inward-facing rather than outwardly expressive
-- observant rather than reactive
-- controlled rather than warm
-- carries a quiet sense of tension or thoughtfulness
-- maintain subtle tension in the mouth at rest
-- avoid overly relaxed or soft neutral expressions
-
-Typical reads:
-
-- neutral (baseline)
-- slight curiosity (eyes only)
-- restrained skepticism
-- minimal amusement (barely lifted corner of the mouth)
-- quiet focus
-
-Expression behavior:
-
-- expressions should feel contained, not broadcast
-- emotion should appear as micro-adjustments, not full facial shifts
-- intensity comes from stillness, not exaggeration
-
-Avoid:
-
-- wide smiles or visible teeth
-- exaggerated expressions
-- playful or flirty baseline reads
-- overly sad or vulnerable collapse unless explicitly intended
-- blank expressionlessness (he is controlled, not empty)
-
-Style:
-
-Lucien's aesthetic is occult, scholarly, and subtly gothic.
-
-His clothing and styling should feel intelligent, restrained, and ritual-aware rather than flashy, decadent, or costume-like. The overall impression should be arcane and refined, with quiet intention in layering, silhouette, texture, and accessories.
-His aesthetic should suggest quiet involvement with occult or ritual practices, not just interest. The styling should feel lived-in and intentional, as if each piece has meaning or history.
-
-Preferred design language:
-
-- dark layered garments
-- soft structured silhouettes
-- elegant long lines
-- high collars
-- antique jewelry
-- rings
-- talismans
-- muted symbolic details
-- soft textured fabrics such as wool and velvet
-- antique-metal accents
-
-Color direction:
-
-- black
-- charcoal
-- deep plum
-- muted dark neutrals
-- silver-toned metal details
-
-Avoid:
-
-- generic casual streetwear
-- bright modern basics that erase the occult-scholar read
-- flashy or theatrical gothic costuming
-- overly trendy styling
-- anything that feels loud, performative, or costume-shop dramatic
-
-Identity preservation:
-
-Always preserve:
-
-- mid-twenties age read
-- slender narrow-framed physique
-- lightly built upper body with minimal visible musculature
-- leg-dominant silhouette
-- rounded glute-emphasized lower body
-- narrow shoulders and soft torso
-- refined facial structure
-- dark brown naturally curly hair with a natural irregular hairline
-- subtle freckles across the nose and cheeks
-- calm, restrained, quietly confident presence
-- occult, scholarly, subtly gothic style direction
-
-Behavioral guardrails:
-
-- he should read as composed rather than dramatic
-- expressive range should stay controlled and intelligent rather than large or theatrical
-- slight mischief is allowed, but it should remain understated
-- presence should feel observant and self-possessed rather than dominant, shy, or overly warm
-
-Avoid:
-
-- making him athletic, broad, or visibly muscular
-- widening the shoulders or torso
-- flattening or reducing glute projection
-- turning him into a generic slim male template
-- ruggedizing the face
-- making the jaw square or harsh
-- straightening the hair or removing its natural texture
-- erasing the freckles
-- turning the style into generic modern casualwear
-- making the occult/scholarly styling overly theatrical or costume-heavy
-- exaggerating expressions into cartoonish or highly performative reads
-
-Critical identity constraint:
-
-- Lucien must not read as "soft-pretty" or overly approachable
-- maintain a balance of refinement and subtle sharpness
-- preserve emotional restraint and guarded presence
-
-Priority:
-
-- preserve refined narrow softness and controlled presence over conventional masculine defaulting
-- preserve silhouette specificity over generic anatomy
-- preserve occult-scholar identity over trend-driven fashion drift
+- always re-anchor proportions through long limbs and vertical elegance
+- ensure expression carries subtle playfulness, not neutrality
+- maintain a sense of intentional styling even in casual looks
 
 Identity priority:
 
@@ -456,158 +1002,25 @@ Goal:
 
 - maintain strong facial identity while allowing natural scene rendering
 
-Apply the following only to pairs/lucien_ragnar/blocks/pair_dynamic.md:
-# Interaction behavior
+Apply the following only to Character A (hunter) - Wardrobe mode:
+## Wardrobe Mode - Elevated
 
-## Baseline behavior (public)
+Refine the outfit toward a more polished and intentional presentation.
 
-- constant awareness of each other
-- interaction feels grounded and focused rather than performative
+- silhouettes remain clean but slightly more structured
+- fabrics appear higher quality or more refined
+- color combinations should feel deliberate and balanced
 
----
+- styling becomes more composed without losing naturalness
+- details should be subtle but intentional
 
-## Ragnar (dominant physical presence)
+Avoid:
 
-- presence is calm, heavy, and physically imposing
-- does not need to assert dominance actively - it is inherent
-- movement is minimal and controlled
+- overly formal or rigid clothing
+- heavy layering or complex styling
+- anything that feels like a fashion editorial or costume
 
----
-
-## Lucien (lighter presence)
-
-- more physically reactive
-- adjusts position relative to Ragnar's size and presence
-- often moves within Ragnar's space rather than beside him
-
----
-
-## Physical dynamic
-
-- interaction emphasizes contrast in size and physical presence
-- Lucien's movements feel lighter and more flexible
-- Ragnar's presence feels steady and unyielding
-
----
-
-## Touch behavior
-
-- touch reinforces scale difference
-
-- Ragnar:
- - broad, grounding contact
- - hand placement covers more surface area
-
-- Lucien:
- - more precise, smaller contact points
- - often reaches upward or inward
-
----
-
-## Core interactions
-
-- Lucien stepping closer into Ragnar's space
-- Ragnar enclosing or anchoring space around Lucien
-- subtle guiding or stabilizing contact
-
----
-
-## Escalation behavior
-
-- escalation is quiet but intense
-
-- Ragnar:
- - reduces space through presence rather than movement
-
-- Lucien:
- - responds by closing distance and focusing attention upward
-
----
-
-## Avoid
-
-- equal physical presence
-- interaction that ignores size difference
-- both characters moving or behaving with the same physical weight
-
-Apply the following only to pairs/lucien_ragnar/blocks/pair_pose_rules.md:
-# Pose relationship rules
-
-## Distance
-
-- close proximity preferred
-- distance often reduced gradually rather than immediately
-
----
-
-## Orientation
-
-- strong inward orientation
-- bodies angled toward each other
-- Lucien frequently turns upward toward Ragnar due to height difference
-
----
-
-## Hierarchy (physical)
-
-- Ragnar is significantly taller and larger in overall mass
-- the height difference must remain clearly visible in all compositions
-- Ragnar's shoulder line sits far above Lucien's
-
----
-
-## Positioning
-
-- Ragnar:
- - grounded, dominant vertical presence
- - occupies more visual space
- - posture reads stable and immovable
-
-- Lucien:
- - smaller, lighter physical presence
- - often positioned slightly closer to Ragnar's torso rather than shoulder level
- - head height typically aligns around Ragnar's upper chest or below
-
----
-
-## Contact rules
-
-- physical contact must reinforce scale difference
-
----
-
-## Contact examples
-
-- Lucien's hand placed on Ragnar's chest or lower torso
-- Ragnar's arm resting across Lucien's upper back or shoulders
-- contact points should emphasize difference in reach and hand size
-
----
-
-## Framing
-
-- avoid compositions that visually equalize height
-- do not align heads at the same vertical level unless explicitly required
-- allow overlap where Ragnar visually dominates frame space
-
----
-
-## Critical scale rules
-
-- Lucien must not appear near Ragnar's eye level
-- Lucien should read clearly smaller in both height and width
-- Ragnar's limbs (arms, hands) should appear noticeably larger in proportion
-
----
-
-## Avoid
-
-- equal head height
-- symmetrical positioning
-- compositions that minimize size contrast
-- perspective tricks that flatten the height difference
-
-Apply the following only to Character A (ragnar) - Wardrobe mode:
+Apply the following only to Character B (noel) - Wardrobe mode:
 ## Wardrobe Mode - Bold
 
 Push the outfit toward a more confident and attention-drawing presentation.
@@ -622,22 +1035,6 @@ Avoid:
 - costume-like exaggeration
 - impractical or theatrical elements
 - loss of natural wearability
-
-Apply the following only to Character B (lucien) - Wardrobe mode:
-## Wardrobe Mode - Playful
-
-Increase lightness, spontaneity, and expressiveness in the outfit.
-
-- allow slightly more relaxed or revealing cuts where appropriate
-- prioritize movement-friendly silhouettes
-- introduce warmth or softness in color where possible
-- styling should feel effortless, slightly teasing, and unforced
-
-Avoid:
-
-- heavy layering or rigid structure
-- overly curated or editorial styling
-- anything that feels stiff or overly controlled
 
 Apply the following only to blocks/scene/environment/environment_base.md:
 Environment context:
@@ -803,29 +1200,29 @@ Intensity: Charged
 Apply the following only to Scenario (claimed_space):
 Scene:
 
-ragnar clearly occupies and controls the shared space.
+hunter clearly occupies and controls the shared space.
 
-lucien exists within that space rather than defining it.
+noel exists within that space rather than defining it.
 
 Behavior:
 
-- ragnar posture is confident, relaxed, and assured
-- lucien adapts position relative to them
+- hunter posture is confident, relaxed, and assured
+- noel adapts position relative to them
 
 Interaction:
 
 - physical positioning suggests ownership of space (not aggression)
-- lucien may lean, align, or orbit slightly around ragnar
+- noel may lean, align, or orbit slightly around hunter
 
 Roles:
 
-- ragnar = dominant presence
-- lucien = responsive presence
+- hunter = dominant presence
+- noel = responsive presence
 
 Composition:
 
-- ragnar more central or visually anchored
-- lucien slightly offset or angled toward them
+- hunter more central or visually anchored
+- noel slightly offset or angled toward them
 
 Tone:
 

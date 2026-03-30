@@ -9,7 +9,7 @@ Browse characters in the reference library.
 
 <div class="character-index-grid">
 
-<a class="character-card" href="character_slug/">
+<a class="character-card" href="aaron/">
 
   <img src="..\assets\library\10_CHARACTERS\AARON\01_IDENTITY\face\aaron_face_anchor_v1.png" alt="Aaron">
   <h3>Aaron</h3>
@@ -65,6 +65,13 @@ Browse characters in the reference library.
 
 </a>
 
+<a class="character-card" href="hunter/">
+
+  <img src="..\assets\library\10_CHARACTERS\HUNTER\01_IDENTITY\face\hunter_face_anchor_v1.png" alt="Hunter">
+  <h3>Hunter</h3>
+
+</a>
+
 <a class="character-card" href="jasper/">
 
   <img src="..\assets\library\10_CHARACTERS\JASPER\01_IDENTITY\gallery\jasper_catalog_thumbnail_v1.png" alt="Jasper">
@@ -93,10 +100,17 @@ Browse characters in the reference library.
 
 </a>
 
-<a class="character-card" href="character_slug/">
+<a class="character-card" href="milo/">
 
   <img src="..\assets\library\10_CHARACTERS\MILO\01_IDENTITY\face\milo_face_anchor_v1.png" alt="Milo">
   <h3>Milo</h3>
+
+</a>
+
+<a class="character-card" href="noel/">
+
+  <img src="..\assets\library\10_CHARACTERS\NOEL\01_IDENTITY\face\noel_face_anchor_v1.png" alt="Noel">
+  <h3>Noel</h3>
 
 </a>
 

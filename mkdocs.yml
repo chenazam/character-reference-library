@@ -32,11 +32,13 @@ nav:
     - Daimon: characters/daimon.md
     - Danny: characters/danny.md
     - Hudson: characters/hudson.md
+    - Hunter: characters/hunter.md
     - Jasper: characters/jasper.md
     - Jonah: characters/jonah.md
     - Luca: characters/luca.md
     - Lucien: characters/lucien.md
     - Milo: characters/milo.md
+    - Noel: characters/noel.md
     - Ragnar: characters/ragnar.md
     - Tommy: characters/tommy.md
     - Character Page Template: characters/character-page-template.md
@@ -47,6 +49,7 @@ nav:
     - Index: groups/index.md
   - Comparison Pages:
     - Asset Comparison: comparisons/assets.md
+    - Aaron vs Milo: comparisons/aaron-vs-milo.md
     - Alexander vs Connor: comparisons/alexander-vs-connor.md
     - Blake vs Jasper: comparisons/blake-vs-jasper.md
     - Character Slug vs Character Slug: comparisons/character_slug-vs-character_slug.md
@@ -56,6 +59,7 @@ nav:
     - Danny vs Luca: comparisons/danny-vs-luca.md
     - Hudson vs Jonah: comparisons/hudson-vs-jonah.md
     - Hudson vs Luca: comparisons/hudson-vs-luca.md
+    - Hunter vs Noel: comparisons/hunter-vs-noel.md
     - Jonah vs Luca: comparisons/jonah-vs-luca.md
     - Lucien vs Ragnar: comparisons/lucien-vs-ragnar.md
     - Lineups:

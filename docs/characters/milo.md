@@ -13,21 +13,50 @@ This text is used directly for the character page overview.</p>
 
 <div class="character-stats">
 <ul>
-  <li><strong>Face:</strong> face shape keyword and jawline keyword</li>
-  <li><strong>Hair:</strong> brief description</li>
-  <li><strong>Eyes:</strong> brief description</li>
-  <li><strong>Style:</strong> primary aesthetic and secondary aesthetic</li>
-  <li><strong>Palette:</strong> color and color</li>
-  <li><strong>Materials:</strong> material and material</li>
-  <li><strong>Expression:</strong> expression keyword and tone keyword</li>
-  <li><strong>Movement:</strong> movement keyword</li>
-  <li><strong>Presence:</strong> movement keyword</li>
+  <li><strong>Height:</strong> 193 cm / 6&#x27;4&quot;</li>
+  <li><strong>Build:</strong> balanced athletic</li>
+  <li><strong>Silhouette:</strong> balanced frame</li>
+  <li><strong>Face:</strong> soft round and defined jawline</li>
+  <li><strong>Hair:</strong> medium-length ginger hair with soft volume and natural, slightly tousled structure</li>
+  <li><strong>Eyes:</strong> soft, steady eyes with a calm and open gaze</li>
+  <li><strong>Style:</strong> domestic soft and athletic</li>
+  <li><strong>Palette:</strong> green and beige</li>
+  <li><strong>Materials:</strong> cotton and linen</li>
+  <li><strong>Expression:</strong> soft neutral and gentle</li>
+  <li><strong>Movement:</strong> relaxed natural</li>
+  <li><strong>Presence:</strong> grounded</li>
 </ul>
 </div>
 
 </div>
 
 </div>
+
+---
+
+## Height Context
+
+<div class="height-lineup height-lineup--character-context">
+  <div class="height-lineup__baseline" aria-hidden="true"></div>
+
+  <div class="height-lineup__figure height-lineup__figure--ref">
+    <div class="height-lineup__stage">
+      <div class="height-lineup__placeholder height-lineup__placeholder--athletic_balanced height-lineup__placeholder--reference" style="height: 93.26%"></div>
+    </div>
+    <div class="height-lineup__label">Reference</div>
+    <div class="height-lineup__meta">180 cm / 5'11"</div>
+  </div>
+
+  <div class="height-lineup__figure height-lineup__figure--a">
+    <div class="height-lineup__stage">
+      <div class="height-lineup__placeholder height-lineup__placeholder--athletic_balanced height-lineup__placeholder--elongated height-lineup__placeholder--dense" style="height: 100.00%"></div>
+    </div>
+    <div class="height-lineup__label">Milo</div>
+    <div class="height-lineup__meta">193 cm / 6'4"</div>
+  </div>
+</div>
+
+
 
 ---
 

@@ -8,100 +8,87 @@ site_visibility:
   include_in_nav: true
   generate_page: true
   include_in_prompt_builder: true
-
 core_identity:
-  short_summary: A tall, solidly built young man with a grounded, physically substantial presence and a calm, reassuring demeanor.
+  short_summary: A tall, solidly built young man with a grounded, physically substantial
+    presence and a calm, reassuring demeanor.
   role_archetype:
-    - grounded_anchor
+  - grounded_anchor
   aesthetic_tags:
-    - domestic_soft
-    - athletic
-
+  - domestic_soft
+  - athletic
 physical:
   height_cm: 193
-  height_imperial: '6''4"'
+  height_imperial: 6'4"
   height_visual_category: tall
-
   build_category: balanced_athletic
   frame_proportion: balanced_frame
   body_fat_range: athletic
   body_softness_distribution: balanced_softness
+  build_notes: 'Solid, athletic build with clear physical density and natural muscle
+    definition. Broad shoulders, full chest, and thick limbs create a strong and grounded
+    silhouette. Muscle definition remains visible but soft and organic, avoiding sharp
+    separation or stylized anatomy. Overall mass reads as substantial and physically
+    capable without becoming exaggerated or bodybuilder-like.
 
-  build_notes: >
-    Solid, athletic build with clear physical density and natural muscle definition.
-    Broad shoulders, full chest, and thick limbs create a strong and grounded silhouette.
-    Muscle definition remains visible but soft and organic, avoiding sharp separation or stylized anatomy.
-    Overall mass reads as substantial and physically capable without becoming exaggerated or bodybuilder-like.
-
+    '
   shoulder_profile: broad_shoulders
   torso_profile: athletic_torso
   limb_profile: thick_limbs
   posture_profile: grounded_stable
-
   silhouette_anchor: power_athlete
   silhouette_emphasis: upper_body
   silhouette_keywords:
-    - imposing
-    - broad
-    - heavy_set
-
+  - imposing
+  - broad
+  - heavy_set
 face:
   face_shape: soft_round
   jawline: defined_jawline
   eye_description: soft, steady eyes with a calm and open gaze
-  hair_description: medium-length ginger hair with soft volume and natural, slightly tousled structure
+  hair_description: medium-length ginger hair with soft volume and natural, slightly
+    tousled structure
   skin_description: natural skin with visible texture and a dense freckle pattern
   distinctive_features:
-    - dense freckle pattern across face and nose
-    - softly weighted jaw and lower face
-    - light natural stubble
-
+  - dense freckle pattern across face and nose
+  - softly weighted jaw and lower face
+  - light natural stubble
 hair_color: ginger
-
 style:
   primary_aesthetic: domestic_soft
   secondary_aesthetic:
-    - athletic
-
+  - athletic
   materials:
-    - cotton
-    - linen
-
+  - cotton
+  - linen
   primary_colors:
-    - green
-    - beige
-
+  - green
+  - beige
   accent_colors:
-    - brown
-
+  - brown
   recurring_accessories:
-    - none
-
+  - none
 expression:
   default_expression: soft_neutral
   smile_type: warm_smile
   emotional_tone: gentle
-
 movement:
   movement_style: relaxed_natural
   gesture_style: restrained
   body_language: calm_composed
   spatial_presence: grounded
-
 identity_rules:
   preserve:
-    - solid, physically substantial athletic build with visible natural muscle
-    - broad shoulders and strong upper-body structure
-    - soft but dense facial structure with visible freckles
-    - medium-length natural ginger hair with soft volume
-    - calm, grounded, and reassuring presence
+  - solid, physically substantial athletic build with visible natural muscle
+  - broad shoulders and strong upper-body structure
+  - soft but dense facial structure with visible freckles
+  - medium-length natural ginger hair with soft volume
+  - calm, grounded, and reassuring presence
   avoid:
-    - overly lean or narrow physique
-    - sharp, sculpted, or model-like facial structure
-    - excessive muscular definition or bodybuilder proportions
-    - loss of freckles or skin texture
-    - restless, highly expressive, or high-energy movement
-
+  - overly lean or narrow physique
+  - sharp, sculpted, or model-like facial structure
+  - excessive muscular definition or bodybuilder proportions
+  - loss of freckles or skin texture
+  - restless, highly expressive, or high-energy movement
 reference_files:
   face_anchor: milo_face_anchor_v1.png
   anatomy_sheet: ''
@@ -111,7 +98,6 @@ reference_files:
   ultimate_character_sheet: milo_outfit_ucs_front_v1.png
   signature_outfit_sheet: ''
   silhouette_front: ''
-
 pipeline_status:
   face_anchor: complete
   hair_sheet: not_started
@@ -134,6 +120,5 @@ pipeline_status:
   scene_anchors: not_started
   prop_sheet: not_started
   gallery_image: not_started
-
 notes: ''
 last_updated: '2026-03-29'

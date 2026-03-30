@@ -99,9 +99,23 @@
   </div>
 
   <div class="comparison-card">
+    <h3><a href="../../characters/hunter/">Hunter</a></h3>
+    <a href="../../assets/library/10_CHARACTERS/HUNTER/01_IDENTITY/face/hunter_front_face_v1.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/HUNTER/01_IDENTITY/face/hunter_front_face_v1.png" alt="Hunter face-front">
+    </a>
+  </div>
+
+  <div class="comparison-card">
     <h3><a href="../../characters/milo/">Milo</a></h3>
     <a href="../../assets/library/10_CHARACTERS/MILO/01_IDENTITY/face/milo_front_face_v1.png" target="_blank">
       <img src="../../assets/library/10_CHARACTERS/MILO/01_IDENTITY/face/milo_front_face_v1.png" alt="Milo face-front">
+    </a>
+  </div>
+
+  <div class="comparison-card">
+    <h3><a href="../../characters/noel/">Noel</a></h3>
+    <a href="../../assets/library/10_CHARACTERS/NOEL/01_IDENTITY/face/noel_front_face_v1.png" target="_blank">
+      <img src="../../assets/library/10_CHARACTERS/NOEL/01_IDENTITY/face/noel_front_face_v1.png" alt="Noel face-front">
     </a>
   </div>
 

@@ -34,6 +34,10 @@ Reference assets that still need to be generated.
 
 - next: proportion_grid
 
+## HUNTER
+
+- next: hair_sheet
+
 ## JASPER
 
 - next: proportion_grid
@@ -51,6 +55,10 @@ Reference assets that still need to be generated.
 - next: ucs_core
 
 ## MILO
+
+- next: hair_sheet
+
+## NOEL
 
 - next: hair_sheet
 

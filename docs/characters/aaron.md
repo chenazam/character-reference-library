@@ -14,17 +14,17 @@ This text is used directly for the character page overview.</p>
 <div class="character-stats">
 <ul>
   <li><strong>Height:</strong> 178 cm / 5&#x27;10&quot;</li>
-  <li><strong>Build:</strong> build type</li>
-  <li><strong>Silhouette:</strong> profile keyword</li>
-  <li><strong>Face:</strong> face shape keyword and jawline keyword</li>
-  <li><strong>Hair:</strong> brief description</li>
-  <li><strong>Eyes:</strong> brief description</li>
-  <li><strong>Style:</strong> primary aesthetic and secondary aesthetic</li>
-  <li><strong>Palette:</strong> color and color</li>
-  <li><strong>Materials:</strong> material and material</li>
-  <li><strong>Expression:</strong> expression keyword and tone keyword</li>
-  <li><strong>Movement:</strong> movement keyword</li>
-  <li><strong>Presence:</strong> movement keyword</li>
+  <li><strong>Build:</strong> light athletic</li>
+  <li><strong>Silhouette:</strong> balanced frame</li>
+  <li><strong>Face:</strong> oval and defined jawline</li>
+  <li><strong>Hair:</strong> short to medium-length hair with natural volume and lightly tousled structure</li>
+  <li><strong>Eyes:</strong> clear and expressive with a slightly open, attentive gaze</li>
+  <li><strong>Style:</strong> playful athletic and athletic</li>
+  <li><strong>Palette:</strong> black and orange</li>
+  <li><strong>Materials:</strong> cotton and linen</li>
+  <li><strong>Expression:</strong> confident neutral and open warm</li>
+  <li><strong>Movement:</strong> restless quick</li>
+  <li><strong>Presence:</strong> energetic</li>
 </ul>
 </div>
 
